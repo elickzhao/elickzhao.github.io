@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>elickzhao&#39;s Blog</title>
+  <subtitle>与其临渊羡鱼 不如退而结网!</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://elickzhao.github.io/"/>
+  <updated>2016-04-15T04:15:15.185Z</updated>
+  <id>http://elickzhao.github.io/</id>
+  
+  <author>
+    <name>elickzhao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在VirtualBox和Vagrant中安装Docker</title>
+    <link href="http://elickzhao.github.io/2016/04/%E5%9C%A8VirtualBox%E5%92%8CVagrant%E4%B8%AD%E5%AE%89%E8%A3%85Docker/"/>
+    <id>http://elickzhao.github.io/2016/04/在VirtualBox和Vagrant中安装Docker/</id>
+    <published>2016-04-13T17:18:48.000Z</published>
+    <updated>2016-04-15T04:15:15.185Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;参考文章&quot;&gt;&lt;a href=&quot;#参考文章&quot; class=&quot;headerlink&quot; title=&quot;参考文章&quot;&gt;&lt;/a&gt;参考文章&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.jdon.com/artichect/docker-install.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在VirtualBox和Vagrant中安装Docker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/V36R3y&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OSX下使用vagrant和docker管理创建虚拟环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://rmingwang.com/vagrant-commands-and-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vagrant简介和安装配置&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ninghao.net/blog/1566&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 Vagrant 搭建本地开发环境的教程&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.oschina.net/translate/unsuck-your-vagrant-developing-in-one-vm-with-vagrant-and-docker&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 Vagrant 和 Docker 在一个 VM 中进行开发&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cloud.51cto.com/art/201503/470256_all.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_72ef7bea0102vucz.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vagrant运行Docker的几种方法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/ac1985482/p/4029315.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vagrant在windows下的使用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.blogjava.net/yongboy/archive/2013/08/26/403325.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;服务器操作系统CoreOS初体验&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://betacz.com/series/%E5%BD%93%E6%B5%81%E6%B5%AA%E8%80%85(Vagrant&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;‘当流浪者(Vagrant)遇见码头工人(Docker)’ 系列&lt;/a&gt;%E9%81%87%E8%A7%81%E7%A0%81%E5%A4%B4%E5%B7%A5%E4%BA%BA(Docker)/)&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;自我理解&quot;&gt;&lt;a href=&quot;#自我理解&quot; class=&quot;headerlink&quot; title=&quot;自我理解&quot;&gt;&lt;/a&gt;自我理解&lt;/h1&gt;&lt;p&gt;用boot2docker启动docker 容器一直会卡在 &lt;code&gt;default: Syncing folders to the host VM...&lt;/code&gt; 看了下&lt;a href=&quot;https://www.vagrantup.com/docs/docker/basics.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Synced folder note: Vagrant will attempt to use the “best” synced folder implementation it can. For boot2docker, this is often rsync. In this case, make sure you have rsync installed on your host machine. Vagrant will give you a human-friendly error message if it is not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;del&gt;这尿性是要安装一个rsync的同步软件 这鸟东西安装起来蛮麻烦的 而且基本用不到 所以不装了  毕竟就算是生产环境肯定用不到这个 linux版本 所以开发的时候还得装别的版本 以达到和生产环境同步 所以算了&lt;br&gt;直接搞个 CoreOS 这个试试吧 这个挺新的比较有趣&lt;/del&gt;&lt;br&gt;最后还是测试了rsync这个软件,因为使用CoreOS加载docker镜像 也会出现卡在同步文件夹那 所以看来问题不在boot2docker &lt;/p&gt;
+&lt;h1 id=&quot;得到升华&quot;&gt;&lt;a href=&quot;#得到升华&quot; class=&quot;headerlink&quot; title=&quot;得到升华&quot;&gt;&lt;/a&gt;得到升华&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;我找到个方法 可以解决这个问题 但是并不是十全十美的方法&lt;/strong&gt;&lt;br&gt;就是屏蔽同步文件夹&lt;br&gt;&lt;figure class=&quot;highlight vb&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Vagrant.configure(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; |config|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  config.vm.synced_folder &lt;span class=&quot;string&quot;&gt;&quot;.&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;/vagrant&quot;&lt;/span&gt;, disabled: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;  &lt;span class=&quot;meta&quot;&gt;#这一句就是&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  config.vm.provider &lt;span class=&quot;string&quot;&gt;&quot;docker&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; |d|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d.image = &lt;span class=&quot;string&quot;&gt;&quot;tknerr/baseimage-ubuntu:14.04&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d.has_ssh = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;#这句是新加的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;#d.vagrant_machine = &quot;dockerhost&quot; &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   	&lt;span class=&quot;meta&quot;&gt;#d.vagrant_vagrantfile = &quot;../coreos/Vagrantfile&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;#config.vm.box = &quot;coreos-stable&quot; &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  config.vm.provision &lt;span class=&quot;string&quot;&gt;&quot;shell&quot;&lt;/span&gt;, inline: &lt;span class=&quot;string&quot;&gt;&quot;echo &#39;hello docker!&#39;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;惊喜发现&quot;&gt;&lt;a href=&quot;#惊喜发现&quot; class=&quot;headerlink&quot; title=&quot;惊喜发现&quot;&gt;&lt;/a&gt;惊喜发现&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;这个简直太省地方了:&lt;/strong&gt; 利用boot2docker 加载 tknerr/baseimage-ubuntu:14.04 这个基础镜像 最后生成的虚拟机才有400M coreOS是900M多  而Homestead 已经是2.67G了&lt;br&gt;&lt;img src=&quot;/image/16-4/1.png&quot; alt=&quot;hello&quot;&gt;&lt;/p&gt;
+&lt;p&gt;而且使用的box也非常省 boot2docker只有20M而已&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      生命不息,折腾不止!
+    
+    </summary>
+    
+      <category term="blog" scheme="http://elickzhao.github.io/categories/blog/"/>
+    
+    
+      <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
+    
+      <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://elickzhao.github.io/2016/04/hello-world/"/>
+    <id>http://elickzhao.github.io/2016/04/hello-world/</id>
+    <published>2016-04-13T10:20:40.504Z</published>
+    <updated>2016-04-13T10:20:40.505Z</updated>
+    
+    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
