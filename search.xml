@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[在VirtualBox和Vagrant中安装Docker]]></title>
+      <url>http://elickzhao.github.io/2016/04/%E5%9C%A8VirtualBox%E5%92%8CVagrant%E4%B8%AD%E5%AE%89%E8%A3%85Docker/</url>
+      <content type="html"><![CDATA[<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="http://www.jdon.com/artichect/docker-install.html" target="_blank" rel="external">在VirtualBox和Vagrant中安装Docker</a><br><a href="http://www.tuicool.com/articles/V36R3y" target="_blank" rel="external">OSX下使用vagrant和docker管理创建虚拟环境</a><br><a href="http://rmingwang.com/vagrant-commands-and-config.html" target="_blank" rel="external">Vagrant简介和安装配置</a><br><a href="http://ninghao.net/blog/1566" target="_blank" rel="external">使用 Vagrant 搭建本地开发环境的教程</a><br><a href="http://www.oschina.net/translate/unsuck-your-vagrant-developing-in-one-vm-with-vagrant-and-docker" target="_blank" rel="external">使用 Vagrant 和 Docker 在一个 VM 中进行开发</a><br><a href="http://cloud.51cto.com/art/201503/470256_all.htm" target="_blank" rel="external">1+1&gt;2:用Docker和Vagrant构建简洁高效开发环境</a><br><a href="http://blog.sina.com.cn/s/blog_72ef7bea0102vucz.html" target="_blank" rel="external">Vagrant运行Docker的几种方法</a><br><a href="http://www.cnblogs.com/ac1985482/p/4029315.html" target="_blank" rel="external">vagrant在windows下的使用</a><br><a href="http://www.blogjava.net/yongboy/archive/2013/08/26/403325.html" target="_blank" rel="external">服务器操作系统CoreOS初体验</a><br><a href="http://betacz.com/series/%E5%BD%93%E6%B5%81%E6%B5%AA%E8%80%85(Vagrant" target="_blank" rel="external">‘当流浪者(Vagrant)遇见码头工人(Docker)’ 系列</a>%E9%81%87%E8%A7%81%E7%A0%81%E5%A4%B4%E5%B7%A5%E4%BA%BA(Docker)/)</p>
+<a id="more"></a>
+<h1 id="自我理解"><a href="#自我理解" class="headerlink" title="自我理解"></a>自我理解</h1><p>用boot2docker启动docker 容器一直会卡在 <code>default: Syncing folders to the host VM...</code> 看了下<a href="https://www.vagrantup.com/docs/docker/basics.html" target="_blank" rel="external">官方文档</a></p>
+<blockquote>
+<p>Synced folder note: Vagrant will attempt to use the “best” synced folder implementation it can. For boot2docker, this is often rsync. In this case, make sure you have rsync installed on your host machine. Vagrant will give you a human-friendly error message if it is not.</p>
+</blockquote>
+<p><del>这尿性是要安装一个rsync的同步软件 这鸟东西安装起来蛮麻烦的 而且基本用不到 所以不装了  毕竟就算是生产环境肯定用不到这个 linux版本 所以开发的时候还得装别的版本 以达到和生产环境同步 所以算了<br>直接搞个 CoreOS 这个试试吧 这个挺新的比较有趣</del><br>最后还是测试了rsync这个软件,因为使用CoreOS加载docker镜像 也会出现卡在同步文件夹那 所以看来问题不在boot2docker </p>
+<h1 id="得到升华"><a href="#得到升华" class="headerlink" title="得到升华"></a>得到升华</h1><p><strong>我找到个方法 可以解决这个问题 但是并不是十全十美的方法</strong><br>就是屏蔽同步文件夹<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.synced_folder <span class="string">"."</span>, <span class="string">"/vagrant"</span>, disabled: <span class="literal">true</span>  <span class="meta">#这一句就是</span></span><br><span class="line">  config.vm.provider <span class="string">"docker"</span> <span class="keyword">do</span> |d|</span><br><span class="line">    d.image = <span class="string">"tknerr/baseimage-ubuntu:14.04"</span></span><br><span class="line">    d.has_ssh = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#这句是新加的</span></span><br><span class="line">    <span class="meta">#d.vagrant_machine = "dockerhost" </span></span><br><span class="line">   	<span class="meta">#d.vagrant_vagrantfile = "../coreos/Vagrantfile"</span></span><br><span class="line">    <span class="meta">#config.vm.box = "coreos-stable" </span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  config.vm.provision <span class="string">"shell"</span>, inline: <span class="string">"echo 'hello docker!'"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="惊喜发现"><a href="#惊喜发现" class="headerlink" title="惊喜发现"></a>惊喜发现</h2><p><strong>这个简直太省地方了:</strong> 利用boot2docker 加载 tknerr/baseimage-ubuntu:14.04 这个基础镜像 最后生成的虚拟机才有400M coreOS是900M多  而Homestead 已经是2.67G了<br><img src="/image/16-4/1.png" alt="hello"></p>
+<p>而且使用的box也非常省 boot2docker只有20M而已</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>http://elickzhao.github.io/2016/04/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
