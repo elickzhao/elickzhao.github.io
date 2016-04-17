@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-04-15T04:15:15.185Z</updated>
+  <updated>2016-04-15T17:27:01.236Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://elickzhao.github.io/2016/04/%E5%9C%A8VirtualBox%E5%92%8CVagrant%E4%B8%AD%E5%AE%89%E8%A3%85Docker/"/>
     <id>http://elickzhao.github.io/2016/04/在VirtualBox和Vagrant中安装Docker/</id>
     <published>2016-04-13T17:18:48.000Z</published>
-    <updated>2016-04-15T04:15:15.185Z</updated>
+    <updated>2016-04-15T17:27:01.236Z</updated>
     
     <content type="html">&lt;h1 id=&quot;参考文章&quot;&gt;&lt;a href=&quot;#参考文章&quot; class=&quot;headerlink&quot; title=&quot;参考文章&quot;&gt;&lt;/a&gt;参考文章&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.jdon.com/artichect/docker-install.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在VirtualBox和Vagrant中安装Docker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/V36R3y&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OSX下使用vagrant和docker管理创建虚拟环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://rmingwang.com/vagrant-commands-and-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vagrant简介和安装配置&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ninghao.net/blog/1566&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 Vagrant 搭建本地开发环境的教程&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.oschina.net/translate/unsuck-your-vagrant-developing-in-one-vm-with-vagrant-and-docker&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 Vagrant 和 Docker 在一个 VM 中进行开发&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cloud.51cto.com/art/201503/470256_all.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_72ef7bea0102vucz.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vagrant运行Docker的几种方法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/ac1985482/p/4029315.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vagrant在windows下的使用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.blogjava.net/yongboy/archive/2013/08/26/403325.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;服务器操作系统CoreOS初体验&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://betacz.com/series/%E5%BD%93%E6%B5%81%E6%B5%AA%E8%80%85(Vagrant&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;‘当流浪者(Vagrant)遇见码头工人(Docker)’ 系列&lt;/a&gt;%E9%81%87%E8%A7%81%E7%A0%81%E5%A4%B4%E5%B7%A5%E4%BA%BA(Docker)/)&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -36,7 +36,7 @@
     
     <summary type="html">
     
-      生命不息,折腾不止!
+      &lt;h1 id=&quot;参考文章&quot;&gt;&lt;a href=&quot;#参考文章&quot; class=&quot;headerlink&quot; title=&quot;参考文章&quot;&gt;&lt;/a&gt;参考文章&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.jdon.com/artichect/docker-install.html&quot;&gt;在VirtualBox和Vagrant中安装Docker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/V36R3y&quot;&gt;OSX下使用vagrant和docker管理创建虚拟环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://rmingwang.com/vagrant-commands-and-config.html&quot;&gt;Vagrant简介和安装配置&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ninghao.net/blog/1566&quot;&gt;使用 Vagrant 搭建本地开发环境的教程&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.oschina.net/translate/unsuck-your-vagrant-developing-in-one-vm-with-vagrant-and-docker&quot;&gt;使用 Vagrant 和 Docker 在一个 VM 中进行开发&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cloud.51cto.com/art/201503/470256_all.htm&quot;&gt;1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_72ef7bea0102vucz.html&quot;&gt;Vagrant运行Docker的几种方法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/ac1985482/p/4029315.html&quot;&gt;vagrant在windows下的使用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.blogjava.net/yongboy/archive/2013/08/26/403325.html&quot;&gt;服务器操作系统CoreOS初体验&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://betacz.com/series/%E5%BD%93%E6%B5%81%E6%B5%AA%E8%80%85(Vagrant&quot;&gt;‘当流浪者(Vagrant)遇见码头工人(Docker)’ 系列&lt;/a&gt;%E9%81%87%E8%A7%81%E7%A0%81%E5%A4%B4%E5%B7%A5%E4%BA%BA(Docker)/)&lt;/p&gt;
     
     </summary>
     
@@ -46,33 +46,6 @@
       <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
     
       <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://elickzhao.github.io/2016/04/hello-world/"/>
-    <id>http://elickzhao.github.io/2016/04/hello-world/</id>
-    <published>2016-04-13T10:20:40.504Z</published>
-    <updated>2016-04-13T10:20:40.505Z</updated>
-    
-    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
     
   </entry>
   

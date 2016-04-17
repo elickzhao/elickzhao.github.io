@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://elickzhao.github.io/about/index.html</loc>
+    
+    <lastmod>2016-04-17T06:35:00.355Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://elickzhao.github.io/tags/index.html</loc>
+    
+    <lastmod>2016-04-17T06:34:49.898Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://elickzhao.github.io/categories/index.html</loc>
+    
+    <lastmod>2016-04-17T06:34:05.276Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://elickzhao.github.io/2016/04/%E5%9C%A8VirtualBox%E5%92%8CVagrant%E4%B8%AD%E5%AE%89%E8%A3%85Docker/</loc>
+    
+    <lastmod>2016-04-15T17:27:01.236Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://elickzhao.github.io/README.html</loc>
     
     <lastmod>2016-04-15T13:56:14.849Z</lastmod>
@@ -12,27 +40,6 @@
     <loc>http://elickzhao.github.io/404.html</loc>
     
     <lastmod>2016-04-15T09:39:30.861Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://elickzhao.github.io/about/index.html</loc>
-    
-    <lastmod>2016-04-15T08:00:52.279Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://elickzhao.github.io/2016/04/%E5%9C%A8VirtualBox%E5%92%8CVagrant%E4%B8%AD%E5%AE%89%E8%A3%85Docker/</loc>
-    
-    <lastmod>2016-04-15T04:15:15.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://elickzhao.github.io/2016/04/hello-world/</loc>
-    
-    <lastmod>2016-04-13T10:20:40.505Z</lastmod>
     
   </url>
   
