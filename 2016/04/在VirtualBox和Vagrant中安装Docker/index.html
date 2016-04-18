@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,Blog" />
+  <meta name="keywords" content="服务器相关技术,linux,vagrant," />
 
 
 
@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="elickzhao's Blog">
 <meta property="og:description" content="参考文章在VirtualBox和Vagrant中安装DockerOSX下使用vagrant和docker管理创建虚拟环境Vagrant简介和安装配置使用 Vagrant 搭建本地开发环境的教程使用 Vagrant 和 Docker 在一个 VM 中进行开发1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境Vagrant运行Docker的几种方法vagrant在windows下的使">
 <meta property="og:image" content="http://elickzhao.github.io/image/16-4/1.png">
-<meta property="og:updated_time" content="2016-04-15T17:27:01.236Z">
+<meta property="og:updated_time" content="2016-04-18T15:08:09.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在VirtualBox和Vagrant中安装Docker">
 <meta name="twitter:description" content="参考文章在VirtualBox和Vagrant中安装DockerOSX下使用vagrant和docker管理创建虚拟环境Vagrant简介和安装配置使用 Vagrant 搭建本地开发环境的教程使用 Vagrant 和 Docker 在一个 VM 中进行开发1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境Vagrant运行Docker的几种方法vagrant在windows下的使">
@@ -286,7 +286,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T01:18:48+08:00" content="2016-04-14">
+            <time itemprop="dateCreated" datetime="2016-04-14T01:18:48+09:00" content="2016-04-14">
               2016-04-14
             </time>
           </span>
@@ -300,8 +300,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
+                  <a href="/categories/服务器端/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器端</span>
                   </a>
                 </span>
 
@@ -350,6 +350,16 @@
 <h1 id="得到升华"><a href="#得到升华" class="headerlink" title="得到升华"></a>得到升华</h1><p><strong>我找到个方法 可以解决这个问题 但是并不是十全十美的方法</strong><br>就是屏蔽同步文件夹<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.synced_folder <span class="string">"."</span>, <span class="string">"/vagrant"</span>, disabled: <span class="literal">true</span>  <span class="meta">#这一句就是</span></span><br><span class="line">  config.vm.provider <span class="string">"docker"</span> <span class="keyword">do</span> |d|</span><br><span class="line">    d.image = <span class="string">"tknerr/baseimage-ubuntu:14.04"</span></span><br><span class="line">    d.has_ssh = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#这句是新加的</span></span><br><span class="line">    <span class="meta">#d.vagrant_machine = "dockerhost" </span></span><br><span class="line">   	<span class="meta">#d.vagrant_vagrantfile = "../coreos/Vagrantfile"</span></span><br><span class="line">    <span class="meta">#config.vm.box = "coreos-stable" </span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  config.vm.provision <span class="string">"shell"</span>, inline: <span class="string">"echo 'hello docker!'"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="惊喜发现"><a href="#惊喜发现" class="headerlink" title="惊喜发现"></a>惊喜发现</h2><p><strong>这个简直太省地方了:</strong> 利用boot2docker 加载 tknerr/baseimage-ubuntu:14.04 这个基础镜像 最后生成的虚拟机才有400M coreOS是900M多  而Homestead 已经是2.67G了<br><img src="/image/16-4/1.png" alt="hello"></p>
 <p>而且使用的box也非常省 boot2docker只有20M而已</p>
+<h2 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h2><p><strong>C:\Users\elick.vagrant.d</strong> 这是vagrant的根目录 最主要有两个目录</p>
+<ul>
+<li>boxes<br> 这个是存放box的目录,所有你下载的各种box都在这里 </li>
+<li>data<br> 这个是存放host的一些信息的地方<ul>
+<li>docker-host<br>  这个就是用docker,而没有加载box的时候 自动下载的boot2docker</li>
+<li>machine-index<br>  存着建立多少个host和host状态的信息 就是那个index 如果在virtualbox删除了host 这里还显示可以在这里手动删了</li>
+</ul>
+</li>
+</ul>
+<p><strong>C:\Users\elick\VirtualBox VMs</strong> 就是virtualbox存放虚拟机的位置</p>
 
       
     </div>
@@ -370,13 +380,29 @@
       
         <div class="post-tags">
           
+            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
+          
             <a href="/tags/linux/" rel="tag">#linux</a>
           
-            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
+            <a href="/tags/vagrant/" rel="tag">#vagrant</a>
           
         </div>
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/解决ln -s 软链接产生Too many levels of symbolic links错误/" rel="prev" title="解决ln -s 软链接产生Too many levels of symbolic links错误">
+                解决ln -s 软链接产生Too many levels of symbolic links错误 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -483,7 +509,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -500,7 +526,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -565,7 +591,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自我理解"><span class="nav-number">2.</span> <span class="nav-text">自我理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#得到升华"><span class="nav-number">3.</span> <span class="nav-text">得到升华</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#惊喜发现"><span class="nav-number">3.1.</span> <span class="nav-text">惊喜发现</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自我理解"><span class="nav-number">2.</span> <span class="nav-text">自我理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#得到升华"><span class="nav-number">3.</span> <span class="nav-text">得到升华</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#惊喜发现"><span class="nav-number">3.1.</span> <span class="nav-text">惊喜发现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录说明"><span class="nav-number">3.2.</span> <span class="nav-text">目录说明</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
