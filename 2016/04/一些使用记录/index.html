@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="composer 一些使用记录," />
 
 
 
@@ -88,16 +88,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://elickzhao.github.io/categories/index.html">
+<meta name="description" content="12345678910111213141516171819202122composer selfupdate                      composer require &quot;foo/bar:1.0.0&quot;                    安装一个库composer update foo/bar                             更新单个库composer c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="composer 一些使用记录">
+<meta property="og:url" content="http://elickzhao.github.io/2016/04/一些使用记录/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-04-17T06:34:05.276Z">
+<meta property="og:description" content="12345678910111213141516171819202122composer selfupdate                      composer require &quot;foo/bar:1.0.0&quot;                    安装一个库composer update foo/bar                             更新单个库composer c">
+<meta property="og:updated_time" content="2016-04-19T07:12:52.731Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description">
+<meta name="twitter:title" content="composer 一些使用记录">
+<meta name="twitter:description" content="12345678910111213141516171819202122composer selfupdate                      composer require &quot;foo/bar:1.0.0&quot;                    安装一个库composer update foo/bar                             更新单个库composer c">
 
 
 
@@ -115,13 +115,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    分类 | elickzhao's Blog
-  
-</title>
+  <title> composer 一些使用记录 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -142,7 +136,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,16 +259,163 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 1 个分类
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                composer 一些使用记录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-19T01:01:32+09:00" content="2016-04-19">
+              2016-04-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/一些使用记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/一些使用记录/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/服务器端/">服务器端</a><span class="category-list-count">4</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">composer selfupdate                      </span><br><span class="line">composer require "foo/bar:1.0.0"                    安装一个库</span><br><span class="line">composer <span class="keyword">update</span> foo/bar                             更新单个库</span><br><span class="line">composer <span class="keyword">create</span>-<span class="keyword">project</span> laravel/laravel myapp <span class="comment">--prefer-dist 创建laravel项目</span></span><br><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com 配置仓库镜像</span><br><span class="line">composer <span class="keyword">global</span> require <span class="string">"laravel/installer=~1.1"</span>    全局安装laravel安装器</span><br><span class="line"></span><br><span class="line">composer <span class="keyword">install</span> <span class="keyword">update</span> <span class="comment">--prefer-dist               后面这个参数是强制使用压缩包</span></span><br><span class="line">composer <span class="keyword">install</span> <span class="comment">--profile                          后面这个参数是显示安装时间</span></span><br><span class="line">composer dump-autoload <span class="comment">--optimize                   生产环境优化</span></span><br><span class="line">composer <span class="keyword">update</span> symfony/yaml <span class="comment">--prefer-source        强制克隆代码 用于修改库文件</span></span><br><span class="line"></span><br><span class="line">当你更新一个修改的库的时候 会提示你是否放弃修改</span><br><span class="line"><span class="comment">----------------------------------------------------------------------------------------------------</span></span><br><span class="line">$ composer <span class="keyword">update</span></span><br><span class="line">Loading composer repositories <span class="keyword">with</span> <span class="keyword">package</span> information  </span><br><span class="line">Updating dependencies  </span><br><span class="line">  - Updating symfony/symfony v2<span class="number">.2</span><span class="number">.0</span> (v2<span class="number">.2</span><span class="number">.0</span>- =&gt; v2<span class="number">.2</span><span class="number">.0</span>)</span><br><span class="line">    The <span class="keyword">package</span> has modified files:</span><br><span class="line">    M Dumper.php</span><br><span class="line">    Discard changes [y,n,v,s,?]?</span><br><span class="line"><span class="comment">----------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+<p><strong>全局配置目录</strong><br>C:\Users\elick\AppData\Roaming\Composer</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/composer-一些使用记录/" rel="tag">#composer 一些使用记录</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/Docker常用命令/" rel="next" title="Docker常用命令">
+                <i class="fa fa-chevron-left"></i> Docker常用命令
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -283,6 +424,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/一些使用记录/"
+           data-title="composer 一些使用记录" data-url="http://elickzhao.github.io/2016/04/一些使用记录/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -302,8 +451,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -389,6 +547,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -492,6 +661,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

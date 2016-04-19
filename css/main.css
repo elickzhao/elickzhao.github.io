@@ -509,14 +509,14 @@ pre,
   overflow: auto;
   margin: 20px 0;
   padding: 15px;
-  font-size: 13px;
-  color: #eaeaea;
-  background: #000;
+  font-size: 15px;
+  color: #f8f8f2;
+  background: #282828;
   line-height: 1.6;
 }
 pre,
 code {
-  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+  font-family: 'SourceCodePro-Bold', consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
 code {
   padding: 2px 4px;
@@ -524,11 +524,11 @@ code {
   color: #555;
   background: #eee;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 15px;
 }
 pre code {
   padding: 0;
-  color: #eaeaea;
+  color: #f8f8f2;
   background: none;
   text-shadow: none;
 }
@@ -548,7 +548,7 @@ pre code {
 }
 .highlight figcaption {
   font-size: 0.85em;
-  color: #969896;
+  color: #75715e;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -572,7 +572,7 @@ pre code {
   height: 20px;
 }
 pre .comment {
-  color: #969896;
+  color: #75715e;
 }
 pre .variable,
 pre .attribute,
@@ -586,7 +586,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #d54e53;
+  color: #f92672;
 }
 pre .number,
 pre .preprocessor,
@@ -595,7 +595,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #e78c45;
+  color: #fd971f;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -608,11 +608,11 @@ pre .xml .cdata,
 pre .special,
 pre .number,
 pre .formula {
-  color: #b9ca4a;
+  color: #e6db74;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #70c0b1;
+  color: #66d9ef;
 }
 pre .function,
 pre .python .decorator,
@@ -622,11 +622,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #7aa6da;
+  color: #66d9ef;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #c397d8;
+  color: #f92672;
 }
 .full-image.full-image.full-image {
   border: none;
@@ -1535,7 +1535,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4e16;
+  background: #ffff47;
 }
 .links-of-blogroll {
   font-size: 13px;

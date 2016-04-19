@@ -49,11 +49,17 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|SourceCodePro-Bold:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -274,6 +280,108 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/一些使用记录/" itemprop="url">
+                  composer 一些使用记录
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-19T01:01:32+09:00" content="2016-04-19">
+              2016-04-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/一些使用记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/一些使用记录/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">composer selfupdate                      </span><br><span class="line">composer require "foo/bar:1.0.0"                    安装一个库</span><br><span class="line">composer <span class="keyword">update</span> foo/bar                             更新单个库</span><br><span class="line">composer <span class="keyword">create</span>-<span class="keyword">project</span> laravel/laravel myapp <span class="comment">--prefer-dist 创建laravel项目</span></span><br><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com 配置仓库镜像</span><br><span class="line">composer <span class="keyword">global</span> require <span class="string">"laravel/installer=~1.1"</span>    全局安装laravel安装器</span><br><span class="line"></span><br><span class="line">composer <span class="keyword">install</span> <span class="keyword">update</span> <span class="comment">--prefer-dist               后面这个参数是强制使用压缩包</span></span><br><span class="line">composer <span class="keyword">install</span> <span class="comment">--profile                          后面这个参数是显示安装时间</span></span><br><span class="line">composer dump-autoload <span class="comment">--optimize                   生产环境优化</span></span><br><span class="line">composer <span class="keyword">update</span> symfony/yaml <span class="comment">--prefer-source        强制克隆代码 用于修改库文件</span></span><br><span class="line"></span><br><span class="line">当你更新一个修改的库的时候 会提示你是否放弃修改</span><br><span class="line"><span class="comment">----------------------------------------------------------------------------------------------------</span></span><br><span class="line">$ composer <span class="keyword">update</span></span><br><span class="line">Loading composer repositories <span class="keyword">with</span> <span class="keyword">package</span> information  </span><br><span class="line">Updating dependencies  </span><br><span class="line">  - Updating symfony/symfony v2<span class="number">.2</span><span class="number">.0</span> (v2<span class="number">.2</span><span class="number">.0</span>- =&gt; v2<span class="number">.2</span><span class="number">.0</span>)</span><br><span class="line">    The <span class="keyword">package</span> has modified files:</span><br><span class="line">    M Dumper.php</span><br><span class="line">    Discard changes [y,n,v,s,?]?</span><br><span class="line"><span class="comment">----------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+<p><strong>全局配置目录</strong><br>C:\Users\elick\AppData\Roaming\Composer</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/Docker常用命令/" itemprop="url">
                   Docker常用命令
                 </a>
@@ -343,8 +451,8 @@
 
       
         
-          <h1 id="查看docker信息（version、info）"><a href="#查看docker信息（version、info）" class="headerlink" title="查看docker信息（version、info）"></a>查看docker信息（version、info）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查看docker版本  </span><br><span class="line">$docker version  </span><br><span class="line">  </span><br><span class="line"># 显示docker系统的信息  </span><br><span class="line">$docker info</span><br></pre></td></tr></table></figure>
-<h1 id="对image的操作（search、pull、images、rmi、history）"><a href="#对image的操作（search、pull、images、rmi、history）" class="headerlink" title="对image的操作（search、pull、images、rmi、history）"></a>对image的操作（search、pull、images、rmi、history）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 检索image  </span><br><span class="line">$docker search image_name  </span><br><span class="line">  </span><br><span class="line"># 下载image  </span><br><span class="line">$docker pull image_name  </span><br><span class="line">  </span><br><span class="line"># 列出镜像列表; -a, --all=false Show all images; --no-trunc=false Don&apos;t truncate output; -q, --quiet=false Only show numeric IDs  </span><br><span class="line">$docker images  </span><br><span class="line">  </span><br><span class="line"># 删除一个或者多个镜像; -f, --force=false Force; --no-prune=false Do not delete untagged parents  </span><br><span class="line">$docker rmi image_name  </span><br><span class="line">  </span><br><span class="line"># 显示一个镜像的历史; --no-trunc=false Don&apos;t truncate output; -q, --quiet=false Only show numeric IDs  </span><br><span class="line">$docker history image_name</span><br></pre></td></tr></table></figure>
+          <h1 id="查看docker信息（version、info"><a href="#查看docker信息（version、info" class="headerlink" title="查看docker信息（version、info)"></a>查看docker信息（version、info)</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看docker版本  </span></span><br><span class="line"><span class="variable">$docker</span> version  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 显示docker系统的信息  </span></span><br><span class="line"><span class="variable">$docker</span> info</span><br></pre></td></tr></table></figure>
+<h1 id="对image的操作（search、pull、images、rmi、history）"><a href="#对image的操作（search、pull、images、rmi、history）" class="headerlink" title="对image的操作（search、pull、images、rmi、history）"></a>对image的操作（search、pull、images、rmi、history）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检索image  </span></span><br><span class="line"><span class="variable">$docker</span> search image_name  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 下载image  </span></span><br><span class="line"><span class="variable">$docker</span> pull image_name  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 列出镜像列表; -a, --all=false Show all images; --no-trunc=false Don't truncate output; -q, --quiet=false Only show numeric IDs  </span></span><br><span class="line"><span class="variable">$docker</span> images  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 删除一个或者多个镜像; -f, --force=false Force; --no-prune=false Do not delete untagged parents  </span></span><br><span class="line"><span class="variable">$docker</span> rmi image_name  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 显示一个镜像的历史; --no-trunc=false Don't truncate output; -q, --quiet=false Only show numeric IDs  </span></span><br><span class="line"><span class="variable">$docker</span> <span class="built_in">history</span> image_name</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/04/Docker常用命令/#more" rel="contents">
               阅读全文 &raquo;
@@ -788,7 +896,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -805,7 +913,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
