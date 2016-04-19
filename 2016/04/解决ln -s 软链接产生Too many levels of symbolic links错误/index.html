@@ -98,7 +98,7 @@
 <meta property="og:description" content="今天生成软连接发生这个报错,查了一下,原来是因为使用了相对路径,改成绝对路径就没有问题了1ln -s /cygdrive/f/Vagrant /home/elick/vagrant
 
 命令解析:ln -s 源目录 目标目录">
-<meta property="og:updated_time" content="2016-04-18T14:52:59.919Z">
+<meta property="og:updated_time" content="2016-04-19T07:29:03.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决ln -s 软链接产生Too many levels of symbolic links错误">
 <meta name="twitter:description" content="今天生成软连接发生这个报错,查了一下,原来是因为使用了相对路径,改成绝对路径就没有问题了1ln -s /cygdrive/f/Vagrant /home/elick/vagrant
@@ -350,7 +350,7 @@
       
 
       
-        <p>今天生成软连接发生这个报错,查了一下,原来是因为使用了相对路径,改成绝对路径就没有问题了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /cygdrive/f/Vagrant /home/elick/vagrant</span><br></pre></td></tr></table></figure></p>
+        <p>今天生成软连接发生这个报错,查了一下,原来是因为使用了相对路径,改成绝对路径就没有问题了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln <span class="_">-s</span> /cygdrive/f/Vagrant /home/elick/vagrant</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>命令解析:<br>ln -s 源目录 目标目录</p>
 </blockquote>
