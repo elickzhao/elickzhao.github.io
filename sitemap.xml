@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://elickzhao.github.io/2016/04/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2016-04-20T07:37:25.656Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://elickzhao.github.io/2016/04/%E5%BA%94%E7%94%A8TortoiseGit%E4%B8%BAgithub%E8%B4%A6%E5%8F%B7%E6%B7%BB%E5%8A%A0SSH%20keys/</loc>
     
     <lastmod>2016-04-19T09:36:56.356Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://elickzhao.github.io/2016/04/%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2016-04-19T07:12:52.731Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://elickzhao.github.io/2016/04/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2016-04-19T03:15:42.310Z</lastmod>
     
   </url>
   
