@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="docker,服务器相关技术," />
 
 
 
@@ -88,16 +88,31 @@
 
 
 
-<meta name="description" content="详细地址都在下面连接 ubuntu国内官网源列表">
+<meta name="description" content="elick     发布    新文稿         
+Dockerfile VOLUME 和 -v 的区别
+docker 服务器相关技术
+找到了官方的userguide： https://docs.docker.com/engine/userguide…
+从中了解了一点：VOLUME并非只是声明，它会把指定路径重新加载一遍，我通过inspect容器也发现了这一点。
+这是在Dockerfile指">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" ubuntu 国内源列表">
-<meta property="og:url" content="http://elickzhao.github.io/2016/04/ubuntu-国内源列表/index.html">
+<meta property="og:title" content="Dockerfile VOLUME 和 -v 的区别">
+<meta property="og:url" content="http://elickzhao.github.io/2016/04/Dockerfile VOLUME 和 -v 的区别/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description" content="详细地址都在下面连接 ubuntu国内官网源列表">
-<meta property="og:updated_time" content="2016-04-21T07:03:25.398Z">
+<meta property="og:description" content="elick     发布    新文稿         
+Dockerfile VOLUME 和 -v 的区别
+docker 服务器相关技术
+找到了官方的userguide： https://docs.docker.com/engine/userguide…
+从中了解了一点：VOLUME并非只是声明，它会把指定路径重新加载一遍，我通过inspect容器也发现了这一点。
+这是在Dockerfile指">
+<meta property="og:updated_time" content="2016-04-21T12:38:03.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" ubuntu 国内源列表">
-<meta name="twitter:description" content="详细地址都在下面连接 ubuntu国内官网源列表">
+<meta name="twitter:title" content="Dockerfile VOLUME 和 -v 的区别">
+<meta name="twitter:description" content="elick     发布    新文稿         
+Dockerfile VOLUME 和 -v 的区别
+docker 服务器相关技术
+找到了官方的userguide： https://docs.docker.com/engine/userguide…
+从中了解了一点：VOLUME并非只是声明，它会把指定路径重新加载一遍，我通过inspect容器也发现了这一点。
+这是在Dockerfile指">
 
 
 
@@ -115,7 +130,7 @@
   };
 </script>
 
-  <title>  ubuntu 国内源列表 | elickzhao's Blog </title>
+  <title> Dockerfile VOLUME 和 -v 的区别 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,7 +293,7 @@
             
             
               
-                 ubuntu 国内源列表
+                Dockerfile VOLUME 和 -v 的区别
               
             
           </h1>
@@ -290,7 +305,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-21T15:56:00+09:00" content="2016-04-21">
+            <time itemprop="dateCreated" datetime="2016-04-21T21:27:05+09:00" content="2016-04-21">
               2016-04-21
             </time>
           </span>
@@ -320,8 +335,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/ubuntu-国内源列表/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/ubuntu-国内源列表/" itemprop="commentsCount"></span>
+                <a href="/2016/04/Dockerfile VOLUME 和 -v 的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/Dockerfile VOLUME 和 -v 的区别/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -344,7 +359,21 @@
       
 
       
-        <p>详细地址都在下面连接 ubuntu国内官网<br><a href="http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8" target="_blank" rel="external">源列表</a></p>
+        <p>elick     发布    新文稿         </p>
+<p>Dockerfile VOLUME 和 -v 的区别</p>
+<p>docker 服务器相关技术</p>
+<p>找到了官方的userguide： <a href="https://docs.docker.com/engine/userguide" target="_blank" rel="external">https://docs.docker.com/engine/userguide</a>…</p>
+<p>从中了解了一点：VOLUME并非只是声明，它会把指定路径重新加载一遍，我通过inspect容器也发现了这一点。</p>
+<p>这是在Dockerfile指定了VOLUME，并没有指定-v，查看容器的Mounts信息：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">"Mounts":</span> [</span><br><span class="line">        &#123;</span><br><span class="line"><span class="attr">            "Name":</span> <span class="string">"b3e2dcacd3f9f40b43ccd5773d45ca74f0f49b02d3da17749cb378ff9f59bb67"</span>,</span><br><span class="line"><span class="attr">            "Source":</span> <span class="string">"/var/lib/docker/volumes/b3e2dcacd3f9f40b43ccd5773d45ca74f0f49b02d3da17749cb378ff9f59bb67/_data"</span>,</span><br><span class="line"><span class="attr">            "Destination":</span> <span class="string">"/etc"</span>,</span><br><span class="line"><span class="attr">            "Driver":</span> <span class="string">"local"</span>,</span><br><span class="line"><span class="attr">            "Mode":</span> <span class="string">""</span>,</span><br><span class="line"><span class="attr">            "RW":</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br></pre></td></tr></table></figure></p>
+<p>这是在上一个的基础上，指定了-v，查看容器的Mounts信息：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">"Mounts":</span> [</span><br><span class="line">       &#123;</span><br><span class="line"><span class="attr">           "Source":</span> <span class="string">"/etc"</span>,</span><br><span class="line"><span class="attr">           "Destination":</span> <span class="string">"/etc"</span>,</span><br><span class="line"><span class="attr">           "Mode":</span> <span class="string">""</span>,</span><br><span class="line"><span class="attr">           "RW":</span> <span class="literal">true</span></span><br><span class="line">       &#125;</span><br><span class="line">   ],</span><br></pre></td></tr></table></figure>
+<p>然后你去<code>/var/lib/docker/volumes/b3e2dcacd3f9f40b43ccd5773d45ca74f0f49b02d3da17749cb378ff9f59bb67/_data</code>目录下看一下，大致就清楚了。当Dockerfile里设置的VOLUME目录存在文件,那么在这个目录里就会出现 如用用了-v再指向这个VOLUME目录,又会被host目录覆盖掉</p>
+<p>你可以把VOLUME理解为，从镜像中复制指定卷的文件夹到本地/var/lib/docker/volumes/xxxxxxxxx/文件夹，然后把本地的该文件夹挂载到容器里面去。</p>
+<p>本质上还是相当于一个本地文件夹挂载而已。</p>
+<p>继续补充，因为VOLUME实际上就是在本地新建了一个文件夹挂载了，那么实际上容器内部的文件夹有三种情况：<br>1、没有指定VOLUME也没有指定-v，这种是普通文件夹。<br>2、指定了VOLUME没有指定-v，这种文件夹可以在不同容器之间共享，但是无法在本地修改。<br>3、指定了-v的文件夹，这种文件夹可以在不同容器之间共享，且可以在本地修改。</p>
+<p>那就列举一种需要在不同容器之间共享且不需要在本地修改的情况。</p>
+<p>首先，我们先了解容器中获取动态数据的方式：<br>1、本地提供，挂载到容器<br>2、远程提供，从远程下载<br>3、生成提供，在容器内部生成</p>
+<p>后面两种命令都不需要在本地修改，但是他们生成的动态数据却可能需要共享。<br>下载命令，比如git clone直接从git服务器拉取代码，不需要挂载本地文件夹。<br>生成命令，比如jekyll（静态网站生成器），你可能挂载一个代码文件夹，然后build目录里生成的静态网页文件需要提供给Apache服务器，那么你需要指定build目录为VOLUME。</p>
 
       
     </div>
@@ -365,7 +394,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag">#linux</a>
+            <a href="/tags/docker/" rel="tag">#docker</a>
+          
+            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
           
         </div>
       
@@ -374,17 +405,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/常用的vagrant命令/" rel="next" title="常用的vagrant命令">
-                <i class="fa fa-chevron-left"></i> 常用的vagrant命令
+              <a href="/2016/04/ubuntu-国内源列表/" rel="next" title=" ubuntu 国内源列表">
+                <i class="fa fa-chevron-left"></i>  ubuntu 国内源列表
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/Dockerfile VOLUME 和 -v 的区别/" rel="prev" title="Dockerfile VOLUME 和 -v 的区别">
-                Dockerfile VOLUME 和 -v 的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -448,8 +475,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/ubuntu-国内源列表/"
-           data-title=" ubuntu 国内源列表" data-url="http://elickzhao.github.io/2016/04/ubuntu-国内源列表/">
+      <div class="ds-thread" data-thread-key="2016/04/Dockerfile VOLUME 和 -v 的区别/"
+           data-title="Dockerfile VOLUME 和 -v 的区别" data-url="http://elickzhao.github.io/2016/04/Dockerfile VOLUME 和 -v 的区别/">
       </div>
     
   </div>
