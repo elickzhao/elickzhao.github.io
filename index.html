@@ -280,6 +280,133 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/linux mount命令的用法详细解析/" itemprop="url">
+                  linux mount命令的用法详细解析
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-21T23:52:53+09:00" content="2016-04-21">
+              2016-04-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/服务器端/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/linux mount命令的用法详细解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/linux mount命令的用法详细解析/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="挂接命令-mount"><a href="#挂接命令-mount" class="headerlink" title="挂接命令(mount)"></a>挂接命令(mount)</h1><p>首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。<br>命令格式：mount [-t vfstype] [-o options] device dir<br>其中：</p>
+<ol>
+<li>-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：<br>光盘或光盘镜像：iso9660<br>DOS fat16文件系统：msdos<br>Windows 9x fat32文件系统：vfat<br>Windows NT ntfs文件系统：ntfs<br>Mount Windows文件网络共享：smbfs<br>UNIX(LINUX) 文件网络共享：nfs</li>
+<li>-o options 主要用来描述设备或档案的挂接方式。常用的参数有：<br>loop：用来把一个文件当成硬盘分区挂接上系统<br>ro：采用只读方式挂接设备<br>rw：采用读写方式挂接设备<br>iocharset：指定访问文件系统所用字符集</li>
+<li>device 要挂接(mount)的设备。</li>
+<li>dir设备在系统上的挂接点(mount point)。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/linux mount命令的用法详细解析/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/Dockerfile VOLUME 和 -v 的区别/" itemprop="url">
                   Dockerfile VOLUME 和 -v 的区别
                 </a>
@@ -604,7 +731,7 @@
       
         
           
-            <p>常用的vagrant命令:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vagrant box add NAME URL    <span class="comment">#添加一个box</span></span><br><span class="line"><span class="variable">$ </span>vagrant box list            <span class="comment">#查看本地已添加的box</span></span><br><span class="line"><span class="variable">$ </span>vagrant box remove NAME virtualbox <span class="comment">#删除本地已添加的box，如若是版本1.0.x，执行$ vagrant box remove  NAME</span></span><br><span class="line"><span class="variable">$ </span>vagrant init NAME          <span class="comment">#初始化，实质应是创建Vagrantfile文件</span></span><br><span class="line"><span class="variable">$ </span>vagrant up                   <span class="comment">#启动虚拟机</span></span><br><span class="line"><span class="variable">$ </span>vagrant halt                 <span class="comment">#关闭虚拟机</span></span><br><span class="line"><span class="variable">$ </span>vagrant destroy            <span class="comment">#销毁虚拟机</span></span><br><span class="line"><span class="variable">$ </span>vagrant reload             <span class="comment">#重启虚拟机</span></span><br><span class="line"><span class="variable">$ </span>vagrant package            <span class="comment">#当前正在运行的VirtualBox虚拟环境打包成一个可重复使用的box</span></span><br><span class="line"><span class="variable">$ </span>vagrant ssh                 <span class="comment">#进入虚拟环境</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$ </span>vagrant init laravel/homestead <span class="comment">#初始化并下载box</span></span><br><span class="line"><span class="variable">$ </span>vagrant box add base precise64.box <span class="comment">#base 表示指定默认的box，也可以为box指定名称，使用base时，之后可以直接使用 vagrant init 进行初始化，如果自行指定名称，则初始化的时候需要指定box的名称。</span></span><br></pre></td></tr></table></figure></p>
+            <p>常用的vagrant命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add NAME URL    #添加一个box</span><br><span class="line">$ vagrant box list            #查看本地已添加的box</span><br><span class="line">$ vagrant box remove NAME virtualbox #删除本地已添加的box，如若是版本1.0.x，执行$ vagrant box remove  NAME</span><br><span class="line">$ vagrant init NAME          #初始化，实质应是创建Vagrantfile文件</span><br><span class="line">$ vagrant up                   #启动虚拟机</span><br><span class="line">$ vagrant halt                 #关闭虚拟机</span><br><span class="line">$ vagrant destroy            #销毁虚拟机</span><br><span class="line">$ vagrant reload             #重启虚拟机</span><br><span class="line">$ vagrant package            #当前正在运行的VirtualBox虚拟环境打包成一个可重复使用的box</span><br><span class="line">$ vagrant ssh                 #进入虚拟环境</span><br><span class="line"></span><br><span class="line">$ vagrant init laravel/homestead #初始化并下载box</span><br><span class="line">$ vagrant box add base precise64.box #base 表示指定默认的box，也可以为box指定名称，使用base时，之后可以直接使用 vagrant init 进行初始化，如果自行指定名称，则初始化的时候需要指定box的名称。</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -735,108 +862,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/一些使用记录/" itemprop="url">
-                  composer 一些使用记录
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-19T01:01:32+09:00" content="2016-04-19">
-              2016-04-19
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/一些使用记录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/一些使用记录/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">composer selfupdate                      </span><br><span class="line">composer require "foo/bar:1.0.0"                    安装一个库</span><br><span class="line">composer <span class="keyword">update</span> foo/bar                             更新单个库</span><br><span class="line">composer <span class="keyword">create</span>-<span class="keyword">project</span> laravel/laravel myapp <span class="comment">--prefer-dist 创建laravel项目</span></span><br><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com 配置仓库镜像</span><br><span class="line">composer <span class="keyword">global</span> require <span class="string">"laravel/installer=~1.1"</span>    全局安装laravel安装器</span><br><span class="line"></span><br><span class="line">composer <span class="keyword">install</span> <span class="keyword">update</span> <span class="comment">--prefer-dist               后面这个参数是强制使用压缩包</span></span><br><span class="line">composer <span class="keyword">install</span> <span class="comment">--profile                          后面这个参数是显示安装时间</span></span><br><span class="line">composer dump-autoload <span class="comment">--optimize                   生产环境优化</span></span><br><span class="line">composer <span class="keyword">update</span> symfony/yaml <span class="comment">--prefer-source        强制克隆代码 用于修改库文件</span></span><br><span class="line"></span><br><span class="line">当你更新一个修改的库的时候 会提示你是否放弃修改</span><br><span class="line"><span class="comment">----------------------------------------------------------------------------------------------------</span></span><br><span class="line">$ composer <span class="keyword">update</span></span><br><span class="line">Loading composer repositories <span class="keyword">with</span> <span class="keyword">package</span> information  </span><br><span class="line">Updating dependencies  </span><br><span class="line">  - Updating symfony/symfony v2<span class="number">.2</span><span class="number">.0</span> (v2<span class="number">.2</span><span class="number">.0</span>- =&gt; v2<span class="number">.2</span><span class="number">.0</span>)</span><br><span class="line">    The <span class="keyword">package</span> has modified files:</span><br><span class="line">    M Dumper.php</span><br><span class="line">    Discard changes [y,n,v,s,?]?</span><br><span class="line"><span class="comment">----------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
-<p><strong>全局配置目录</strong><br>C:\Users\elick\AppData\Roaming\Composer</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -882,7 +907,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

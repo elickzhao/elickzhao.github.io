@@ -576,6 +576,7 @@ pre .comment {
 }
 pre .variable,
 pre .attribute,
+pre .attr,
 pre .tag,
 pre .regexp,
 pre .ruby .constant,
@@ -1535,7 +1536,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #81deff;
+  background: #f2a8d5;
 }
 .links-of-blogroll {
   font-size: 13px;

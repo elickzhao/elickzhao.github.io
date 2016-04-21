@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="服务器相关技术,linux,vagrant," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -88,18 +88,22 @@
 
 
 
-<meta name="description" content="参考文章在VirtualBox和Vagrant中安装DockerOSX下使用vagrant和docker管理创建虚拟环境Vagrant简介和安装配置使用 Vagrant 搭建本地开发环境的教程使用 Vagrant 和 Docker 在一个 VM 中进行开发1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境Vagrant运行Docker的几种方法vagrant在windows下的使">
+<meta name="description" content="挂接命令(mount)首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。命令格式：mount [-t vfstype] [-o options] device dir其中：
+
+-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：光盘或光盘镜像：iso9660DOS fat16文件系统：msdo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在VirtualBox和Vagrant中安装Docker">
-<meta property="og:url" content="http://elickzhao.github.io/2016/04/在VirtualBox和Vagrant中安装Docker/index.html">
+<meta property="og:title" content="linux mount命令的用法详细解析">
+<meta property="og:url" content="http://elickzhao.github.io/2016/04/linux mount命令的用法详细解析/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description" content="参考文章在VirtualBox和Vagrant中安装DockerOSX下使用vagrant和docker管理创建虚拟环境Vagrant简介和安装配置使用 Vagrant 搭建本地开发环境的教程使用 Vagrant 和 Docker 在一个 VM 中进行开发1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境Vagrant运行Docker的几种方法vagrant在windows下的使">
-<meta property="og:image" content="http://elickzhao.github.io/image/16-4/1.png">
-<meta property="og:updated_time" content="2016-04-20T10:26:36.296Z">
+<meta property="og:description" content="挂接命令(mount)首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。命令格式：mount [-t vfstype] [-o options] device dir其中：
+
+-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：光盘或光盘镜像：iso9660DOS fat16文件系统：msdo">
+<meta property="og:updated_time" content="2016-04-21T15:10:32.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在VirtualBox和Vagrant中安装Docker">
-<meta name="twitter:description" content="参考文章在VirtualBox和Vagrant中安装DockerOSX下使用vagrant和docker管理创建虚拟环境Vagrant简介和安装配置使用 Vagrant 搭建本地开发环境的教程使用 Vagrant 和 Docker 在一个 VM 中进行开发1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境Vagrant运行Docker的几种方法vagrant在windows下的使">
-<meta name="twitter:image" content="http://elickzhao.github.io/image/16-4/1.png">
+<meta name="twitter:title" content="linux mount命令的用法详细解析">
+<meta name="twitter:description" content="挂接命令(mount)首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。命令格式：mount [-t vfstype] [-o options] device dir其中：
+
+-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：光盘或光盘镜像：iso9660DOS fat16文件系统：msdo">
 
 
 
@@ -117,7 +121,7 @@
   };
 </script>
 
-  <title> 在VirtualBox和Vagrant中安装Docker | elickzhao's Blog </title>
+  <title> linux mount命令的用法详细解析 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +284,7 @@
             
             
               
-                在VirtualBox和Vagrant中安装Docker
+                linux mount命令的用法详细解析
               
             
           </h1>
@@ -292,8 +296,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T01:18:48+09:00" content="2016-04-14">
-              2016-04-14
+            <time itemprop="dateCreated" datetime="2016-04-21T23:52:53+09:00" content="2016-04-21">
+              2016-04-21
             </time>
           </span>
 
@@ -322,8 +326,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/在VirtualBox和Vagrant中安装Docker/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/在VirtualBox和Vagrant中安装Docker/" itemprop="commentsCount"></span>
+                <a href="/2016/04/linux mount命令的用法详细解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/linux mount命令的用法详细解析/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -346,26 +350,66 @@
       
 
       
-        <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="http://www.jdon.com/artichect/docker-install.html" target="_blank" rel="external">在VirtualBox和Vagrant中安装Docker</a><br><a href="http://www.tuicool.com/articles/V36R3y" target="_blank" rel="external">OSX下使用vagrant和docker管理创建虚拟环境</a><br><a href="http://rmingwang.com/vagrant-commands-and-config.html" target="_blank" rel="external">Vagrant简介和安装配置</a><br><a href="http://ninghao.net/blog/1566" target="_blank" rel="external">使用 Vagrant 搭建本地开发环境的教程</a><br><a href="http://www.oschina.net/translate/unsuck-your-vagrant-developing-in-one-vm-with-vagrant-and-docker" target="_blank" rel="external">使用 Vagrant 和 Docker 在一个 VM 中进行开发</a><br><a href="http://cloud.51cto.com/art/201503/470256_all.htm" target="_blank" rel="external">1+1&gt;2:用Docker和Vagrant构建简洁高效开发环境</a><br><a href="http://blog.sina.com.cn/s/blog_72ef7bea0102vucz.html" target="_blank" rel="external">Vagrant运行Docker的几种方法</a><br><a href="http://www.cnblogs.com/ac1985482/p/4029315.html" target="_blank" rel="external">vagrant在windows下的使用</a><br><a href="http://www.blogjava.net/yongboy/archive/2013/08/26/403325.html" target="_blank" rel="external">服务器操作系统CoreOS初体验</a><br><a href="http://betacz.com/series/%E5%BD%93%E6%B5%81%E6%B5%AA%E8%80%85%28Vagrant%29%E9%81%87%E8%A7%81%E7%A0%81%E5%A4%B4%E5%B7%A5%E4%BA%BA%28Docker%29/" target="_blank" rel="external">‘当流浪者(Vagrant)遇见码头工人(Docker)’系列</a></p>
-<a id="more"></a>
-<h1 id="自我理解"><a href="#自我理解" class="headerlink" title="自我理解"></a>自我理解</h1><p>用boot2docker启动docker 容器一直会卡在 <code>default: Syncing folders to the host VM...</code> 看了下<a href="https://www.vagrantup.com/docs/docker/basics.html" target="_blank" rel="external">官方文档</a></p>
-<blockquote>
-<p>Synced folder note: Vagrant will attempt to use the “best” synced folder implementation it can. For boot2docker, this is often rsync. In this case, make sure you have rsync installed on your host machine. Vagrant will give you a human-friendly error message if it is not.</p>
-</blockquote>
-<p><del>这尿性是要安装一个rsync的同步软件 这鸟东西安装起来蛮麻烦的 而且基本用不到 所以不装了  毕竟就算是生产环境肯定用不到这个 linux版本 所以开发的时候还得装别的版本 以达到和生产环境同步 所以算了<br>直接搞个 CoreOS 这个试试吧 这个挺新的比较有趣</del><br>最后还是测试了rsync这个软件,因为使用CoreOS加载docker镜像 也会出现卡在同步文件夹那 所以看来问题不在boot2docker </p>
-<h1 id="得到升华"><a href="#得到升华" class="headerlink" title="得到升华"></a>得到升华</h1><p><strong>我找到个方法 可以解决这个问题 但是并不是十全十美的方法</strong><br>就是屏蔽同步文件夹<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.synced_folder <span class="string">"."</span>, <span class="string">"/vagrant"</span>, disabled: <span class="literal">true</span>  <span class="meta">#这一句就是</span></span><br><span class="line">  config.vm.provider <span class="string">"docker"</span> <span class="keyword">do</span> |d|</span><br><span class="line">    d.image = <span class="string">"tknerr/baseimage-ubuntu:14.04"</span></span><br><span class="line">    d.has_ssh = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#这句是新加的</span></span><br><span class="line">    <span class="meta">#d.vagrant_machine = "dockerhost" </span></span><br><span class="line">   	<span class="meta">#d.vagrant_vagrantfile = "../coreos/Vagrantfile"</span></span><br><span class="line">    <span class="meta">#config.vm.box = "coreos-stable" </span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  config.vm.provision <span class="string">"shell"</span>, inline: <span class="string">"echo 'hello docker!'"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="惊喜发现"><a href="#惊喜发现" class="headerlink" title="惊喜发现"></a>惊喜发现</h2><p><strong>这个简直太省地方了:</strong> 利用boot2docker 加载 tknerr/baseimage-ubuntu:14.04 这个基础镜像 最后生成的虚拟机才有400M coreOS是900M多  而Homestead 已经是2.67G了<br><img src="/image/16-4/1.png" alt="hello"></p>
-<p>而且使用的box也非常省 boot2docker只有20M而已</p>
-<h2 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h2><p><strong>C:\Users\elick.vagrant.d</strong> 这是vagrant的根目录 最主要有两个目录</p>
+        <h1 id="挂接命令-mount"><a href="#挂接命令-mount" class="headerlink" title="挂接命令(mount)"></a>挂接命令(mount)</h1><p>首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。<br>命令格式：mount [-t vfstype] [-o options] device dir<br>其中：</p>
+<ol>
+<li>-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：<br>光盘或光盘镜像：iso9660<br>DOS fat16文件系统：msdos<br>Windows 9x fat32文件系统：vfat<br>Windows NT ntfs文件系统：ntfs<br>Mount Windows文件网络共享：smbfs<br>UNIX(LINUX) 文件网络共享：nfs</li>
+<li>-o options 主要用来描述设备或档案的挂接方式。常用的参数有：<br>loop：用来把一个文件当成硬盘分区挂接上系统<br>ro：采用只读方式挂接设备<br>rw：采用读写方式挂接设备<br>iocharset：指定访问文件系统所用字符集</li>
+<li>device 要挂接(mount)的设备。</li>
+<li>dir设备在系统上的挂接点(mount point)。<a id="more"></a>
+</li>
+</ol>
+<h1 id="挂接光盘镜像文件"><a href="#挂接光盘镜像文件" class="headerlink" title="挂接光盘镜像文件"></a>挂接光盘镜像文件</h1><ol>
+<li><p>从光盘制作光盘镜像文件。将光盘放入光驱，执行下面的命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cp /dev/cdrom /home/sunky/mydisk.iso 或</span><br><span class="line">$ dd <span class="keyword">if</span>=/dev/cdrom of=/home/sunky/mydisk.iso</span><br><span class="line"><span class="comment"># 注：执行上面的任何一条命令都可将当前光驱里的光盘制作成光盘镜像文件/home/sunky/mydisk.iso</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将文件和目录制作成光盘镜像文件，执行下面的命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkisofs -r -J -V mydisk -o /home/sunky/mydisk.iso /home/sunky/ mydir</span><br><span class="line"><span class="comment"># 注：这条命令将/home/sunky/mydir目录下所有的目录和文件制作成光盘镜像文件/home/sunky/mydisk.iso，光盘卷标为：mydisk</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>光盘镜像文件的挂接(mount)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /mnt/vcdrom</span><br><span class="line"><span class="comment"># 注：建立一个目录用来作挂接点(mount point)</span></span><br><span class="line"></span><br><span class="line">$ mount -o loop -t iso9660 /home/sunky/mydisk.iso /mnt/vcdrom</span><br><span class="line"><span class="comment"># 注：使用/mnt/vcdrom就可以访问盘镜像文件mydisk.iso里的所有文件了。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="挂接移动硬盘"><a href="#挂接移动硬盘" class="headerlink" title="挂接移动硬盘"></a>挂接移动硬盘</h1><p>对linux系统而言，USB接口的移动硬盘是当作SCSI设备对待的。插入移动硬盘之前，应先用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root at pldyrouter /]#  fdisk -l</span><br></pre></td></tr></table></figure></p>
+<p>接好移动硬盘后，再用fdisk –l 或 more<br>/proc/partitions查看系统的硬盘和硬盘分区情况.应该可以发现多了一个SCSI硬盘/dev/sdc和它的两个磁盘分区/dev/sdc1?、/dev/sdc2,其中/dev/sdc5是/dev/sdc2分区的逻辑分区。我们可以使用下面的命令挂接/dev/sdc1和/dev/sdc5。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$mkdir</span> -p /mnt/usbhd1</span><br><span class="line"><span class="variable">$mkdir</span> -p /mnt/usbhd2</span><br><span class="line"><span class="comment"># 注：建立目录用来作挂接点(mount point)</span></span><br><span class="line"></span><br><span class="line">$ mount -t ntfs /dev/sdc1 /mnt/usbhd1</span><br><span class="line">$ mount -t vfat /dev/sdc5 /mnt/usbhd2</span><br><span class="line"><span class="comment"># 注：对ntfs格式的磁盘分区应使用-t ntfs 参数，对fat32格式的磁盘分区应使用-t vfat参数。若汉字文件名显示为乱码或不显示，可以使用下面的命令格式。</span></span><br><span class="line"></span><br><span class="line">$ mount -t ntfs -o iocharset=cp936 /dev/sdc1 /mnt/usbhd1</span><br><span class="line">$ mount -t vfat -o iocharset=cp936 /dev/sdc5 /mnt/usbhd2</span><br><span class="line"><span class="comment"># linux系统下使用fdisk分区命令和mkfs文件系统创建命令可以将移动硬盘的分区制作成linux系统所特有的ext2、ext3格式。这样，在linux下使用就更方便了。使用下面的命令直接挂接即可。</span></span><br><span class="line"></span><br><span class="line">$ mount /dev/sdc1 /mnt/usbhd1</span><br></pre></td></tr></table></figure>
+<h1 id="挂接U盘"><a href="#挂接U盘" class="headerlink" title="挂接U盘"></a>挂接U盘</h1><p>和USB接口的移动硬盘一样对linux系统而言U盘也是当作SCSI设备对待的。使用方法和移动硬盘完全一样。插入U盘之前，应先用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root at pldyrouter root]<span class="comment">#  fdisk -l</span></span><br></pre></td></tr></table></figure></p>
+<p>插入U盘后，再用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root at pldyrouter root]<span class="comment">#  fdisk -l</span></span><br></pre></td></tr></table></figure></p>
+<p>系统多了一个SCSI硬盘/dev/sdd和一个磁盘分区/dev/sdd1,/dev/sdd1就是我们要挂接的U盘。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p /mnt/usb</span><br><span class="line"><span class="comment"># 注：建立一个目录用来作挂接点(mount point)</span></span><br><span class="line">$ mount -t vfat /dev/sdd1 /mnt/usb</span><br><span class="line"><span class="comment"># 注：现在可以通过/mnt/usb来访问U盘了, 若汉字文件名显示为乱码或不显示，可以使用下面的命令。</span></span><br><span class="line">$ mount -t vfat -o iocharset=cp936 /dev/sdd1 /mnt/usb</span><br></pre></td></tr></table></figure></p>
+<h1 id="挂接Windows文件共享"><a href="#挂接Windows文件共享" class="headerlink" title="挂接Windows文件共享"></a>挂接Windows文件共享</h1><p>Windows网络共享的核心是SMB/CIFS，在linux下要挂接(mount)windows的磁盘共享，就必须安装和使用samba 软件包。现在流行的linux发行版绝大多数已经包含了samba软件包，如果安装linux系统时未安装samba请首先安装samba。当然也可以到 www.samba.org网站下载……新的版本是3.0.10版。<br>当windows系统共享设置好以后，就可以在linux客户端挂接(mount)了，具体操作如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir –p /mnt/samba</span><br><span class="line"><span class="comment"># 注：建立一个目录用来作挂接点(mount point)</span></span><br><span class="line">$ mount -t smbfs -o username=administrator,password=pldy123 //10.140.133.23/c$ /mnt/samba</span><br><span class="line"><span class="comment"># 注：administrator 和 pldy123 是ip地址为10.140.133.23</span></span><br></pre></td></tr></table></figure></p>
+<p>windows计算机的一个用户名和密码，c$是这台计算机的一个磁盘共享<br>如此就可以在linux系统上通过/mnt/samba来访问windows系统磁盘上的文件了。以上操作在redhat as server 3、redflag server 4.1、suse server 9以及windows NT 4.0、windows 2000、windows xp、windows 2003环境下测试通过。</p>
+<h1 id="挂接UNIX系统NFS文件共享"><a href="#挂接UNIX系统NFS文件共享" class="headerlink" title="挂接UNIX系统NFS文件共享"></a>挂接UNIX系统NFS文件共享</h1><p>类似于windows的网络共享，UNIX(Linux)系统也有自己的网络共享，那就是NFS(网络文件系统)，下面我们就以SUN Solaris2.8和REDHAT as server 3 为例简单介绍一下在linux下如何mount nfs网络共享。<br>在linux客户端挂接(mount)NFS磁盘共享之前，必须先配置好NFS服务端。</p>
+<ol>
+<li><p>Solaris系统NFS服务端配置方法如下：</p>
 <ul>
-<li>boxes<br> 这个是存放box的目录,所有你下载的各种box都在这里 </li>
-<li>data<br> 这个是存放host的一些信息的地方<ul>
-<li>docker-host<br>  这个就是用docker,而没有加载box的时候 自动下载的boot2docker</li>
-<li>machine-index<br>  存着建立多少个host和host状态的信息 就是那个index 如果在virtualbox删除了host 这里还显示可以在这里手动删了</li>
-</ul>
+<li><p>修改 /etc/dfs/dfstab, 增加共享目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">share -F nfs -o rw /<span class="built_in">export</span>/home/sunky</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动nfs服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /etc/init.d/nfs.server start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NFS服务启动以后，也可以使用下面的命令增加新的共享</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ share /<span class="built_in">export</span>/home/sunky1</span><br><span class="line">$ share /<span class="built_in">export</span>/home/sunky2</span><br><span class="line"><span class="comment"># 注：/export/home/sunky和/export/home/sunky1是准备共享的目录</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><strong>C:\Users\elick\VirtualBox VMs</strong> 就是virtualbox存放虚拟机的位置</p>
+</li>
+<li><p>linux系统NFS服务端配置方法如下：</p>
+<ul>
+<li><p>修改 /etc/exports,增加共享目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">export</span>/home/sunky 10.140.133.23(rw)</span><br><span class="line">/<span class="built_in">export</span>/home/sunky1 *(rw)</span><br><span class="line">/<span class="built_in">export</span>/home/sunky2 linux-client(rw)</span><br><span class="line"><span class="comment"># 注：/export/home/目录下的sunky、sunky1、sunky2是准备共享的目录，10.140.133.23、*、 linux-client是被允许挂接此共享linux客户机的IP地址或主机名。如果要使用主机名linux-client必须在服务端主机 /etc/hosts文件里增加linux-client主机ip定义。格式如下：</span></span><br><span class="line">10.140.133.23 linux-client</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动与停止NFS服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/etc/rc.d/init.d/portmap start (在REDHAT中PORTMAP是默认启动的)</span><br><span class="line">/etc/rc.d/init.d/nfs start 启动NFS服务</span><br><span class="line">/etc/rc.d/init.d/nfs stop 停止NFS服务</span><br><span class="line"><span class="comment"># 注：若修改/etc/export文件增加新的共享，应先停止NFS服务，再启动NFS服务方能使新增加的共享起作用。使用命令exportfs -rv也可以达到同样的效果。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>linux客户端挂接(mount)其他linux系统或UNIX系统的NFS共享</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir –p /mnt/nfs</span><br><span class="line"><span class="comment"># 注：建立一个目录用来作挂接点(mount point)</span></span><br><span class="line">$ mount -t nfs -o rw 10.140.133.9:/<span class="built_in">export</span>/home/sunky /mnt/nfs</span><br><span class="line"><span class="comment"># 注：这里我们假设10.140.133.9是NFS服务端的主机IP地址，当然这里也可以使用主机名，但必须在本机/etc/hosts文件里增加服务端ip定义。/export/home/sunky为服务端共享的目录。</span></span><br><span class="line">如此就可以在linux客户端通过/mnt/nfs来访问其它linux系统或UNIX系统以NFS方式共享出来的文件了。以上操作在 redhat as server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>redflag server4.1、suse server 9以及Solaris 7、Solaris 8、Solaris 9 for x86&amp;sparc环境下测试通过</p>
+</li>
+</ol>
+<h1 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h1><p>linux加载光驱<br>（1）使用光驱前，要先mount一下：＃mount /dev/cdrom /mnt/cdrom，然后您就可以进入/mnt/cdrom目录下读取光盘内容了；</p>
+<p>（2）当您想退出光盘时，须使用umout命令，否则光驱就会一直处于死锁状态：＃umount /mnt/cdrom。</p>
 
       
     </div>
@@ -386,11 +430,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
-          
             <a href="/tags/linux/" rel="tag">#linux</a>
-          
-            <a href="/tags/vagrant/" rel="tag">#vagrant</a>
           
         </div>
       
@@ -399,13 +439,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/Dockerfile VOLUME 和 -v 的区别/" rel="next" title="Dockerfile VOLUME 和 -v 的区别">
+                <i class="fa fa-chevron-left"></i> Dockerfile VOLUME 和 -v 的区别
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/解决ln -s 软链接产生Too many levels of symbolic links错误/" rel="prev" title="解决ln -s 软链接产生Too many levels of symbolic links错误">
-                解决ln -s 软链接产生Too many levels of symbolic links错误 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,8 +509,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/在VirtualBox和Vagrant中安装Docker/"
-           data-title="在VirtualBox和Vagrant中安装Docker" data-url="http://elickzhao.github.io/2016/04/在VirtualBox和Vagrant中安装Docker/">
+      <div class="ds-thread" data-thread-key="2016/04/linux mount命令的用法详细解析/"
+           data-title="linux mount命令的用法详细解析" data-url="http://elickzhao.github.io/2016/04/linux mount命令的用法详细解析/">
       </div>
     
   </div>
@@ -597,7 +637,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自我理解"><span class="nav-number">2.</span> <span class="nav-text">自我理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#得到升华"><span class="nav-number">3.</span> <span class="nav-text">得到升华</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#惊喜发现"><span class="nav-number">3.1.</span> <span class="nav-text">惊喜发现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录说明"><span class="nav-number">3.2.</span> <span class="nav-text">目录说明</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接命令-mount"><span class="nav-number">1.</span> <span class="nav-text">挂接命令(mount)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接光盘镜像文件"><span class="nav-number">2.</span> <span class="nav-text">挂接光盘镜像文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接移动硬盘"><span class="nav-number">3.</span> <span class="nav-text">挂接移动硬盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接U盘"><span class="nav-number">4.</span> <span class="nav-text">挂接U盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接Windows文件共享"><span class="nav-number">5.</span> <span class="nav-text">挂接Windows文件共享</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接UNIX系统NFS文件共享"><span class="nav-number">6.</span> <span class="nav-text">挂接UNIX系统NFS文件共享</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补充："><span class="nav-number">7.</span> <span class="nav-text">补充：</span></a></li></ol></div>
             
           </div>
         </section>
