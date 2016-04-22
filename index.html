@@ -351,7 +351,7 @@
         
           <h1 id="挂接命令-mount"><a href="#挂接命令-mount" class="headerlink" title="挂接命令(mount)"></a>挂接命令(mount)</h1><p>首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。<br>命令格式：mount [-t vfstype] [-o options] device dir<br>其中：</p>
 <ol>
-<li>-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：<br>光盘或光盘镜像：iso9660<br>DOS fat16文件系统：msdos<br>Windows 9x fat32文件系统：vfat<br>Windows NT ntfs文件系统：ntfs<br>Mount Windows文件网络共享：smbfs<br>UNIX(LINUX) 文件网络共享：nfs</li>
+<li>-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：<br>光盘或光盘镜像：iso9660<br>DOS fat16文件系统：msdos<br>Windows 9x fat32文件系统：vfat<br>Windows NT ntfs文件系统：ntfs<br>Mount Windows文件网络共享：smbfs<br>UNIX(LINUX) 文件网络共享：nfs<br>VirtualBox 文件网络共享: vboxsf</li>
 <li>-o options 主要用来描述设备或档案的挂接方式。常用的参数有：<br>loop：用来把一个文件当成硬盘分区挂接上系统<br>ro：采用只读方式挂接设备<br>rw：采用读写方式挂接设备<br>iocharset：指定访问文件系统所用字符集</li>
 <li>device 要挂接(mount)的设备。</li>
 <li>dir设备在系统上的挂接点(mount point)。
