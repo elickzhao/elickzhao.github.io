@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://elickzhao.github.io/2016/04/%E7%94%A8docker%E6%90%AD%E5%BB%BAlaravel%E7%8E%AF%E5%A2%83%20(Docker%20for%20the%20Laravel%20framework)/</loc>
+    
+    <lastmod>2016-04-25T14:56:52.286Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://elickzhao.github.io/2016/04/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2016-04-22T09:25:37.818Z</lastmod>
