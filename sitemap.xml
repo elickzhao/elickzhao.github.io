@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://elickzhao.github.io/2016/04/ubuntu%20%E5%9B%BD%E5%86%85%E6%BA%90%E5%88%97%E8%A1%A8/</loc>
+    
+    <lastmod>2016-04-26T14:41:53.372Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://elickzhao.github.io/2016/04/%E7%94%A8docker%E6%90%AD%E5%BB%BAlaravel%E7%8E%AF%E5%A2%83%20(Docker%20for%20the%20Laravel%20framework)/</loc>
     
     <lastmod>2016-04-25T15:00:58.669Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://elickzhao.github.io/2016/04/Dockerfile%20VOLUME%20%E5%92%8C%20-v%20%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     
     <lastmod>2016-04-21T12:38:03.494Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://elickzhao.github.io/2016/04/ubuntu-%E5%9B%BD%E5%86%85%E6%BA%90%E5%88%97%E8%A1%A8/</loc>
-    
-    <lastmod>2016-04-21T07:03:25.398Z</lastmod>
     
   </url>
   
