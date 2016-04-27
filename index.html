@@ -280,6 +280,110 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/linux sed 批量替换字符串/" itemprop="url">
+                  linux sed 批量替换字符串
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-27T22:25:04+09:00" content="2016-04-27">
+              2016-04-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/linux sed 批量替换字符串/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/linux sed 批量替换字符串/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Linux下批量替换多个文件中的字符串的简单方法。用sed命令可以批量替换多个文件中的字符串。<br>命令如下：sed -i “s/原字符串/新字符串/g” <code>grep 原字符串 -rl 所在目录</code><br>例如：我要把 charset=gb2312 替换为 charset=UTF-8，执行命令：sed -i “s/charset=gb2312/charset=UTF-8/g” ‘grep charset=gb2312 -rl /www’ 即可。</p>
+<p>解释一下：<br>    -i 表示inplace edit，就地修改文件<br>    -r 表示搜索子目录<br>    -l 表示输出匹配的文件名<br>    这个命令组合很强大，要注意备份文件。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/linux sed 批量替换字符串/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/ubuntu 国内源列表/" itemprop="url">
                   ubuntu 国内源列表
                 </a>
@@ -747,126 +851,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/常用的vagrant命令/" itemprop="url">
-                  常用的vagrant命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-20T22:28:00+09:00" content="2016-04-20">
-              2016-04-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/服务器端/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器端</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/常用的vagrant命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/常用的vagrant命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>常用的vagrant命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add NAME URL    #添加一个box</span><br><span class="line">$ vagrant box list            #查看本地已添加的box</span><br><span class="line">$ vagrant box remove NAME virtualbox #删除本地已添加的box，如若是版本1.0.x，执行$ vagrant box remove  NAME</span><br><span class="line">$ vagrant init NAME          #初始化，实质应是创建Vagrantfile文件</span><br><span class="line">$ vagrant up                   #启动虚拟机</span><br><span class="line">$ vagrant halt                 #关闭虚拟机</span><br><span class="line">$ vagrant destroy            #销毁虚拟机</span><br><span class="line">$ vagrant reload             #重启虚拟机</span><br><span class="line">$ vagrant package            #当前正在运行的VirtualBox虚拟环境打包成一个可重复使用的box</span><br><span class="line">$ vagrant ssh                 #进入虚拟环境</span><br><span class="line"></span><br><span class="line">$ vagrant init laravel/homestead #初始化并下载box</span><br><span class="line">$ vagrant box add base precise64.box #base 表示指定默认的box，也可以为box指定名称，使用base时，之后可以直接使用 vagrant init 进行初始化，如果自行指定名称，则初始化的时候需要指定box的名称。</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -912,7 +896,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
