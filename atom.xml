@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-04-28T14:34:16.828Z</updated>
+  <updated>2016-04-28T14:50:55.612Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -16,22 +16,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>shell脚本报错：#!binbash 没有那个文件或目录</title>
-    <link href="http://elickzhao.github.io/2016/04/shell%E8%84%9A%E6%9C%AC%E6%8A%A5%E9%94%99%EF%BC%9A#!binbash%20%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/"/>
-    <id>http://elickzhao.github.io/2016/04/shell脚本报错：#!binbash 没有那个文件或目录/</id>
+    <title>脚本报错没有那个文件或目录</title>
+    <link href="http://elickzhao.github.io/2016/04/%E8%84%9A%E6%9C%AC%E6%8A%A5%E9%94%99%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/"/>
+    <id>http://elickzhao.github.io/2016/04/脚本报错没有那个文件或目录/</id>
     <published>2016-04-28T14:26:00.000Z</published>
-    <updated>2016-04-28T14:34:16.828Z</updated>
+    <updated>2016-04-28T14:50:55.612Z</updated>
     
-    <content type="html">&lt;p&gt;在Windows下编辑的，文件每行末尾会多出^M，所以先转格式： linux下有个 dos2unix 脚本文件 可以转换&lt;/p&gt;
+    <content type="html">&lt;p&gt;shell脚本报错：#!binbash 没有那个文件或目录&lt;/p&gt;
+&lt;p&gt;在Windows下编辑的，文件每行末尾会多出^M，所以先转格式： linux下有个 dos2unix 脚本文件 可以转换&lt;/p&gt;
 &lt;p&gt;windows下可以使用 Notepad++ 编辑文件 或者 使用 菜单-&amp;gt;编辑-&amp;gt;文档格式转换  来转换文件格式&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/image/16-4/5.png&quot; alt=&quot;转换格式&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;在Windows下编辑的，文件每行末尾会多出^M，所以先转格式： linux下有个 dos2unix 脚本文件 可以转换&lt;/p&gt;
-&lt;p&gt;windows下可以使用 Notepad++ 编辑文件 或者 使用 菜单-&amp;gt;编辑-&amp;gt;文档格式转换  来转换文件格式&lt;/p&gt;
-&lt;
+      &lt;p&gt;shell脚本报错：#!binbash 没有那个文件或目录&lt;/p&gt;
+&lt;p&gt;在Windows下编辑的，文件每行末尾会多出^M，所以先转格式： linux下有个 dos2unix 脚本文件 可以转换&lt;/p&gt;
+&lt;p&gt;windows下可以使用 Notepad++ 编辑文件 或者 使
     
     </summary>
     
