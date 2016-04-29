@@ -16,20 +16,55 @@
     <entry>
       <title><![CDATA[总结 Dockerfile 一些命令说明]]></title>
       <url>http://elickzhao.github.io/2016/04/%E6%80%BB%E7%BB%93%20Dockerfile%20%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E8%AF%B4%E6%98%8E/</url>
-      <content type="html"><![CDATA[<h1 id="CMD-命令"><a href="#CMD-命令" class="headerlink" title="CMD 命令"></a>CMD 命令</h1><p>有三种格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] (like an exec, preferred form)</span><br><span class="line">CMD [&quot;param1&quot;,&quot;param2&quot;] (as default parameters to ENTRYPOINT)</span><br><span class="line">CMD command param1 param2 (as a shell)</span><br></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<blockquote>
+<p>Dockerfile是一个镜像的表示，可以通过Dockerfile来描述构建镜像的步骤，并自动构建一个容器<br>所有的 Dockerfile 命令格式都是:<br>INSTRUCTION arguments<br>虽然指令忽略大小写，但是建议使用大写。</p>
+</blockquote>
+<h1 id="FROM-命令"><a href="#FROM-命令" class="headerlink" title="FROM 命令"></a>FROM 命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;</span><br></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这个设置基本的镜像，为后续的命令使用，所以应该作为Dockerfile的第一条指令。</p>
+<p>比如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu</span><br></pre></td></tr></table></figure></p>
+<p>如果没有指定 tag ，则默认tag是latest，如果都没有则会报错。</p>
+<h1 id="CMD-命令"><a href="#CMD-命令" class="headerlink" title="CMD 命令"></a>CMD 命令</h1><p>有三种格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] (like an exec, preferred form)</span><br><span class="line">CMD [&quot;param1&quot;,&quot;param2&quot;] (as default parameters to ENTRYPOINT)</span><br><span class="line">CMD command param1 param2 (as a shell)</span><br></pre></td></tr></table></figure></p>
 <p>一个Dockerfile里只能有一个CMD，如果有多个，只有最后一个生效。这是为了引用镜像时避免启动服务器而无法配置 所以你可以在最后再写个CMD从而屏蔽原镜像的命令</p>
+<a id="more"></a>
 <h1 id="RUN-命令"><a href="#RUN-命令" class="headerlink" title="RUN 命令"></a>RUN 命令</h1><p>RUN命令会在上面FROM指定的镜像里执行任何命令，然后提交(commit)结果，提交的镜像会在后面继续用到。</p>
 <p>两种格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RUN &lt;command&gt; (the command is run in a shell - `/bin/sh -c`)</span><br></pre></td></tr></table></figure></p>
 <p>或:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot; ... ]  (exec form)</span><br><span class="line">#RUN命令等价于:</span><br><span class="line"></span><br><span class="line">docker run image command</span><br><span class="line">docker commit container_id</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
 <p>#ENTRYPOINT 命令</p>
 <p>有两种语法格式，一种就是上面的(shell方式):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT cmd param1 param2 ...</span><br></pre></td></tr></table></figure></p>
 <p>第二种是 exec 格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT [&quot;cmd&quot;, &quot;param1&quot;, &quot;param2&quot;...]</span><br></pre></td></tr></table></figure></p>
 <p>如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT [&quot;echo&quot;, &quot;Whale you be my container&quot;]</span><br></pre></td></tr></table></figure></p>
-<p>ENTRYPOINT 命令设置在容器启动时执行命令</p>
+<p>ENTRYPOINT 命令设置在容器启动时执行命令 这样 –link 的其他容器环境变量用这个命令将会取得</p>
 <blockquote>
-<p>这个可能是 和 RUN最大区别 RUN是生成容器时执行一次,又一次使用sed命令时 RUN可以用 ENTRYPOINT 虽然能生成容器但是却启动不起来 那次用的Docker-composer 所以也不知道和那个是否有关<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@tankywoo-docker:~# cat Dockerfile</span><br><span class="line">FROM ubuntu</span><br><span class="line">ENTRYPOINT echo &quot;Welcome!&quot;</span><br><span class="line"></span><br><span class="line">root@tankywoo-docker:~# docker run 62fda5e450d5</span><br><span class="line">Welcome!</span><br></pre></td></tr></table></figure></p>
+<p>这个可能是 和 RUN最大区别 RUN是生成容器时执行一次,还有个区别就是 ENTRYPOINT 和 CMD 一样只执行最后一个  RUN是可以执行多次的<br><del>有一次使用sed命令时 RUN可以用 ENTRYPOINT 虽然能生成容器但是却启动不起来 那次用的Docker-composer 所以也不知道和那个是否有关</del><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@tankywoo-docker:~# cat Dockerfile</span><br><span class="line">FROM ubuntu</span><br><span class="line">ENTRYPOINT echo &quot;Welcome!&quot;</span><br><span class="line"></span><br><span class="line">root@tankywoo-docker:~# docker run 62fda5e450d5</span><br><span class="line">Welcome!</span><br></pre></td></tr></table></figure></p>
 </blockquote>
+<p><img src="/image/16-4/6.png" alt="启动执行ENTRYPOINT"></p>
+<blockquote>
+<p><strong>简要说明:</strong><br>RUN是在building image时会运行的指令, 在Dockerfile中可以写多条RUN指令.<br>CMD和ENTRYPOINT则是在运行container 时会运行的指令, 都只能写一条, 如果写了多条, 则最后一条生效.<br>CMD和ENTRYPOINT的区别是:<br>CMD在运行时会被command覆盖, ENTRYPOINT不会被运行时的command覆盖, 但是也可以指定.</p>
+</blockquote>
+<h1 id="ADD-命令"><a href="#ADD-命令" class="headerlink" title="ADD 命令"></a>ADD 命令</h1><p>从src复制文件到container的dest路径:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ADD &lt;src&gt; &lt;dest&gt;</span><br></pre></td></tr></table></figure></p>
+<p><code>&lt;src&gt;</code> 是相对被构建的源目录的相对路径，可以是文件或目录的路径，也可以是一个远程的文件url<br><code>&lt;dest&gt;</code> 是container中的绝对路径</p>
+<h1 id="VOLUME-命令"><a href="#VOLUME-命令" class="headerlink" title="VOLUME 命令"></a>VOLUME 命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VOLUME [&quot;&lt;mountpoint&gt;&quot;]</span><br></pre></td></tr></table></figure>
+<p>如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VOLUME [&quot;/data&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>创建一个挂载点用于共享目录</p>
+<p>#USER 命令</p>
+<p>比如指定 memcached 的运行用户，可以使用上面的 ENTRYPOINT 来实现:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT [&quot;memcached&quot;, &quot;-u&quot;, &quot;daemon&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>更好的方式是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT [&quot;memcached&quot;]</span><br><span class="line">USER daemon</span><br></pre></td></tr></table></figure></p>
+<p>#MAINTAINER 命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MAINTAINER &lt;name&gt;</span><br></pre></td></tr></table></figure>
+<p>MAINTAINER命令用来指定维护者的姓名和联系方式</p>
+<h1 id="EXPOSE-命令"><a href="#EXPOSE-命令" class="headerlink" title="EXPOSE 命令"></a>EXPOSE 命令</h1><p>EXPOSE 命令可以设置一个端口在运行的镜像中暴露在外<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EXPOSE &lt;port&gt; [&lt;port&gt;...]</span><br></pre></td></tr></table></figure></p>
+<p>比如Nginx使用端口 80，可以把这个端口暴露在外，这样容器外可以看到这个端口并与其通信。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure></p>
+<p>详细内容可以看这篇文章 -&gt; <a href="http://www.open-open.com/lib/view/open1435126385232.html" target="_blank" rel="external">Docker网络原则入门：EXPOSE，-p，-P，-link</a></p>
+<h1 id="WORKDIR-命令"><a href="#WORKDIR-命令" class="headerlink" title="WORKDIR 命令"></a>WORKDIR 命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WORKDIR /opt/bin</span><br></pre></td></tr></table></figure>
+<p>配置RUN, CMD, ENTRYPOINT 命令设置当前工作路径</p>
+<p>可以设置多次，如果是相对路径，则相对前一个 WORKDIR 命令</p>
+<p>比如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WORKDIR /opt/bin</span><br><span class="line">RUN pwd</span><br></pre></td></tr></table></figure></p>
+<p>其实是在 /opt/bin 下执行 pwd</p>
+<h1 id="ENV-命令"><a href="#ENV-命令" class="headerlink" title="ENV 命令"></a>ENV 命令</h1><p>用于设置环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENV &lt;key&gt; &lt;value&gt;</span><br></pre></td></tr></table></figure></p>
+<p>设置了后，后续的RUN命令都可以使用</p>
+<p>使用此dockerfile生成的image新建container，可以通过 docker inspect 看到这个环境变量:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">root@tankywoo-docker:~# docker inspect 49bfc7a9817f</span><br><span class="line">    ...</span><br><span class="line">    &quot;Env&quot;: [</span><br><span class="line">        &quot;name=tanky&quot;,</span><br><span class="line">        &quot;HOME=/&quot;,</span><br><span class="line">        &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span><br><span class="line">    ],</span><br><span class="line">    ...</span><br><span class="line">```    </span><br><span class="line">里面的name=tanky就是设置的。</span><br><span class="line"></span><br><span class="line">也可以通过在docker run时设置或修改环境变量:</span><br></pre></td></tr></table></figure></p>
+<p>docker run -i -t –env name=”tanky” ubuntu:newtest /bin/bash<br>```</p>
 ]]></content>
     </entry>
     

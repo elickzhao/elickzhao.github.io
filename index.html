@@ -453,11 +453,16 @@
 
       
         
-          <h1 id="CMD-命令"><a href="#CMD-命令" class="headerlink" title="CMD 命令"></a>CMD 命令</h1><p>有三种格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] (like an exec, preferred form)</span><br><span class="line">CMD [&quot;param1&quot;,&quot;param2&quot;] (as default parameters to ENTRYPOINT)</span><br><span class="line">CMD command param1 param2 (as a shell)</span><br></pre></td></tr></table></figure></p>
+          <blockquote>
+<p>Dockerfile是一个镜像的表示，可以通过Dockerfile来描述构建镜像的步骤，并自动构建一个容器<br>所有的 Dockerfile 命令格式都是:<br>INSTRUCTION arguments<br>虽然指令忽略大小写，但是建议使用大写。</p>
+</blockquote>
+<h1 id="FROM-命令"><a href="#FROM-命令" class="headerlink" title="FROM 命令"></a>FROM 命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;</span><br></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这个设置基本的镜像，为后续的命令使用，所以应该作为Dockerfile的第一条指令。</p>
+<p>比如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu</span><br></pre></td></tr></table></figure></p>
+<p>如果没有指定 tag ，则默认tag是latest，如果都没有则会报错。</p>
+<h1 id="CMD-命令"><a href="#CMD-命令" class="headerlink" title="CMD 命令"></a>CMD 命令</h1><p>有三种格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] (like an exec, preferred form)</span><br><span class="line">CMD [&quot;param1&quot;,&quot;param2&quot;] (as default parameters to ENTRYPOINT)</span><br><span class="line">CMD command param1 param2 (as a shell)</span><br></pre></td></tr></table></figure></p>
 <p>一个Dockerfile里只能有一个CMD，如果有多个，只有最后一个生效。这是为了引用镜像时避免启动服务器而无法配置 所以你可以在最后再写个CMD从而屏蔽原镜像的命令</p>
-<h1 id="RUN-命令"><a href="#RUN-命令" class="headerlink" title="RUN 命令"></a>RUN 命令</h1><p>RUN命令会在上面FROM指定的镜像里执行任何命令，然后提交(commit)结果，提交的镜像会在后面继续用到。</p>
-<p>两种格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RUN &lt;command&gt; (the command is run in a shell - `/bin/sh -c`)</span><br></pre></td></tr></table></figure></p>
-<p>或:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot; ... ]  (exec form)</span><br><span class="line">#RUN命令等价于:</span><br><span class="line"></span><br><span class="line">docker run image command</span><br><span class="line">docker commit container_id</span><br></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/04/总结 Dockerfile 一些命令说明/#more" rel="contents">
               阅读全文 &raquo;
