@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="linux,ubuntu," />
 
 
 
@@ -88,16 +88,25 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://elickzhao.github.io/categories/index.html">
+<meta name="description" content="apt-get update：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。
+apt-get install packagename：安装一个新软件包
+apt-get remove packagename：卸载一个已安装的软件包（保留配置文件）
+apt-get remove pac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的apt-get命令">
+<meta property="og:url" content="http://elickzhao.github.io/2016/05/常用的apt-get命令/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-04-17T06:34:05.276Z">
+<meta property="og:description" content="apt-get update：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。
+apt-get install packagename：安装一个新软件包
+apt-get remove packagename：卸载一个已安装的软件包（保留配置文件）
+apt-get remove pac">
+<meta property="og:updated_time" content="2016-04-30T15:17:19.209Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description">
+<meta name="twitter:title" content="常用的apt-get命令">
+<meta name="twitter:description" content="apt-get update：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。
+apt-get install packagename：安装一个新软件包
+apt-get remove packagename：卸载一个已安装的软件包（保留配置文件）
+apt-get remove pac">
 
 
 
@@ -115,13 +124,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    分类 | elickzhao's Blog
-  
-</title>
+  <title> 常用的apt-get命令 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -142,7 +145,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,16 +268,183 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 1 个分类
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                常用的apt-get命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-01T00:15:51+09:00" content="2016-05-01">
+              2016-05-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/常用的apt-get命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/常用的apt-get命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/服务器端/">服务器端</a><span class="category-list-count">9</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>apt-get update</strong>：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。</p>
+<p><strong>apt-get install packagename</strong>：安装一个新软件包</p>
+<p><strong>apt-get remove packagename</strong>：卸载一个已安装的软件包（保留配置文件）</p>
+<p><strong>apt-get remove package - - purge</strong>: 删除包，包括删除配置文件等 </p>
+<p><strong>apt-get clean</strong>：这个命令会把安装的软件的备份也删除，不过这样不会影响软件的使用的。</p>
+<p><strong>apt-get upgrade</strong>：更新所有已安装的软件包</p>
+<p><strong>apt-get dist-upgrade</strong>：将系统升级到新版本</p>
+<p><strong>apt-cache search package</strong> 搜索包 </p>
+<a id="more"></a>
+<p><strong>apt-cache show package</strong> 获取包的相关信息，如说明、大小、版本等 </p>
+<p><strong>apt-get install package - - reinstall</strong> 重新安装包 </p>
+<p><strong>apt-get -f install</strong> 修复安装”-f = ——fix-missing” </p>
+<p><strong>apt-get install build-essential</strong> 配置c/c++ compile环境  </p>
+<p><strong>apt-cache depends package</strong> 了解使用依赖 </p>
+<p><strong>apt-cache rdepends package</strong> 是查看该包被哪些包依赖 </p>
+<p><strong>apt-get build-dep package</strong> 安装相关的编译环境 </p>
+<p><strong>apt-get source package</strong> 下载该包的源代码 </p>
+<p><strong>apt-get check</strong> 检查是否有损坏的依赖</p>
+<p><strong>apt-get autoclean</strong>：定期运行这个命令来清除那些已经卸载的软件包的.deb文件。 </p>
+<p><strong>apt-get autoremove</strong> :自动清除不需要的程序包。</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+            <a href="/tags/ubuntu/" rel="tag">#ubuntu</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/Linux下怎样搜索文件/" rel="next" title="Linux下怎样搜索文件">
+                <i class="fa fa-chevron-left"></i> Linux下怎样搜索文件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -283,6 +453,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/常用的apt-get命令/"
+           data-title="常用的apt-get命令" data-url="http://elickzhao.github.io/2016/05/常用的apt-get命令/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -302,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -389,6 +576,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -492,6 +690,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

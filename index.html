@@ -280,6 +280,116 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/常用的apt-get命令/" itemprop="url">
+                  常用的apt-get命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-01T00:15:51+09:00" content="2016-05-01">
+              2016-05-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/常用的apt-get命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/常用的apt-get命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>apt-get update</strong>：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。</p>
+<p><strong>apt-get install packagename</strong>：安装一个新软件包</p>
+<p><strong>apt-get remove packagename</strong>：卸载一个已安装的软件包（保留配置文件）</p>
+<p><strong>apt-get remove package - - purge</strong>: 删除包，包括删除配置文件等 </p>
+<p><strong>apt-get clean</strong>：这个命令会把安装的软件的备份也删除，不过这样不会影响软件的使用的。</p>
+<p><strong>apt-get upgrade</strong>：更新所有已安装的软件包</p>
+<p><strong>apt-get dist-upgrade</strong>：将系统升级到新版本</p>
+<p><strong>apt-cache search package</strong> 搜索包 </p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/常用的apt-get命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/Linux下怎样搜索文件/" itemprop="url">
                   Linux下怎样搜索文件
                 </a>
@@ -706,110 +816,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/linux sed 批量替换字符串/" itemprop="url">
-                  linux sed 批量替换字符串
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-27T22:25:04+09:00" content="2016-04-27">
-              2016-04-27
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/linux sed 批量替换字符串/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/linux sed 批量替换字符串/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Linux下批量替换多个文件中的字符串的简单方法。用sed命令可以批量替换多个文件中的字符串。<br>命令如下：sed -i “s/原字符串/新字符串/g” <code>grep 原字符串 -rl 所在目录</code><br>例如：我要把 charset=gb2312 替换为 charset=UTF-8，执行命令：sed -i “s/charset=gb2312/charset=UTF-8/g” ‘grep charset=gb2312 -rl /www’ 即可。</p>
-<p>解释一下：<br>    -i 表示inplace edit，就地修改文件<br>    -r 表示搜索子目录<br>    -l 表示输出匹配的文件名<br>    这个命令组合很强大，要注意备份文件。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/linux sed 批量替换字符串/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -855,7 +861,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -872,7 +878,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
