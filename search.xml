@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title><![CDATA[windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版]]></title>
+      <url>http://elickzhao.github.io/2016/05/windows%E4%B8%8B%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%20github%20%E5%92%8C%20gitoschina%20%E7%9A%84%20ssh%20%E5%85%AC%E9%92%A5%20--%20%E6%9B%B4%E6%96%B0%E7%89%88/</url>
+      <content type="html"><![CDATA[<ol>
+<li>安装git，从程序目录打开 “Git Bash” </li>
+<li>键入命令：ssh-keygen -t rsa -C “email@email.com”<br>“email@email.com”是github账号</li>
+<li>提醒你输入key的名称，输入如id_rsa</li>
+<li>在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub</li>
+<li>把4中生成的密钥文件复制到C:\Documents and Settings\Administrator.ssh\ 目 录下。</li>
+<li>用记事本打开id_rsa.pub文件，复制内容，在github.com的网站上到ssh密钥管理页面，添加新公钥，随便取个名字，内容粘贴刚</li>
+</ol>
+<p>才复制的内容。</p>
+<ol>
+<li>^_^ OK了</li>
+</ol>
+<p>需要注意步骤2中产生的密钥文件在当前用户的根目录，必须把这两个文件放到当前用户目录的“.ssh”目录下才能生效。<br>在windows中只能在命令行下输入创建”.”开头的文件夹。命令为 mkdir .ssh</p>
+<a id="more"></a>
+<hr>
+<p><strong>以上的方法有可能存在问题</strong><br>使用 Git Bash 生成的公钥与私钥 放到github 经过测试 <code>ssh -T git@github.com</code> 却返回禁止访问</p>
+<p>这次因为用Vagrant ssh 需要ssh程序所以下载了 cygwin <code>注意:cygwin的ssh也不是默认的 需要选择下载</code>  用这里的ssh生成的密钥就可以了 生成的方法跟上面是一致的 不过这个密钥的存放位置需要找一下 就是在cygwin的安装目录下的/home里面 <code>/home/elick/.ssh/id_rsa</code> 这里是cygwin默认的家目录<br>然后把公钥复制到github和oschina 用命令测试 <code>ssh -T git@git.oschina.net</code> 返回欢迎就ok了<br><a href="http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="external">参考文档</a></p>
+<p><del>但还有个问题 Git Tortoise用的是putty密钥 所以这个密钥虽然测试成功 但是不能用客户端来用 这个有空看看怎么办</del></p>
+<p>上面那个问题已经 解决了 <a href="http://elickzhao.github.io/2016/04/%E5%BA%94%E7%94%A8TortoiseGit%E4%B8%BAgithub%E8%B4%A6%E5%8F%B7%E6%B7%BB%E5%8A%A0SSH%20keys/">解决的文章在这里</a></p>
+<p>简单说明一下 就是 Git Tortoise 会自带一个 putty 密码生成工具 用这个工具转换 这个密码 并用 Git Tortoise 另一个工具 Pageant 把密码填进去 以后提交git时 这个工具帮你自动转换putty密码了 详情还是看上面的那个文章</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[常用的apt-get命令]]></title>
       <url>http://elickzhao.github.io/2016/05/%E5%B8%B8%E7%94%A8%E7%9A%84apt-get%E5%91%BD%E4%BB%A4/</url>
       <content type="html"><![CDATA[<p><strong>apt-get update</strong>：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。</p>

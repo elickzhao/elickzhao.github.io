@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="docker,服务器相关技术," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -88,25 +88,15 @@
 
 
 
-<meta name="description" content="boot2docker转发端口问题  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 docker run -dp 8080:8080 php进行转发 但是还需要修改虚拟机的端口转发才可以 
-
-命令解析:  docker -d 后台执行 -p 转发端口">
-<meta property="og:type" content="article">
-<meta property="og:title" content="docker及boot2docker相关研究">
-<meta property="og:url" content="http://elickzhao.github.io/2016/04/docker及boot2docker相关研究/index.html">
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="elickzhao's Blog">
+<meta property="og:url" content="http://elickzhao.github.io/tags/ssh/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description" content="boot2docker转发端口问题  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 docker run -dp 8080:8080 php进行转发 但是还需要修改虚拟机的端口转发才可以 
-
-命令解析:  docker -d 后台执行 -p 转发端口">
-<meta property="og:image" content="http://elickzhao.github.io/image/16-4/2.png">
-<meta property="og:image" content="http://elickzhao.github.io/image/16-4/3.png">
-<meta property="og:updated_time" content="2016-04-20T08:12:12.265Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker及boot2docker相关研究">
-<meta name="twitter:description" content="boot2docker转发端口问题  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 docker run -dp 8080:8080 php进行转发 但是还需要修改虚拟机的端口转发才可以 
-
-命令解析:  docker -d 后台执行 -p 转发端口">
-<meta name="twitter:image" content="http://elickzhao.github.io/image/16-4/2.png">
+<meta name="twitter:title" content="elickzhao's Blog">
+<meta name="twitter:description">
 
 
 
@@ -124,7 +114,7 @@
   };
 </script>
 
-  <title> docker及boot2docker相关研究 | elickzhao's Blog </title>
+  <title> 标签: ssh | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -145,7 +135,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,198 +256,46 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                docker及boot2docker相关研究
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-18T23:51:49+09:00" content="2016-04-18">
-              2016-04-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/服务器端/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器端</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/docker及boot2docker相关研究/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/docker及boot2docker相关研究/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="boot2docker转发端口问题"><a href="#boot2docker转发端口问题" class="headerlink" title="boot2docker转发端口问题"></a>boot2docker转发端口问题</h1><p>  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 <code>docker run -dp 8080:8080 php</code>进行转发 但是还需要修改虚拟机的端口转发才可以 </p>
-<blockquote>
-<p>命令解析:<br>  docker -d 后台执行 -p 转发端口</p>
-</blockquote>
-<p>  <img src="/image/16-4/2.png" alt="虚拟机转发端口"></p>
-<a id="more"></a>
-<h1 id="boot2docker数据卷问题"><a href="#boot2docker数据卷问题" class="headerlink" title="boot2docker数据卷问题"></a>boot2docker数据卷问题</h1><p>  这个就更恶心了,使用在windows下的boot2docker命令行就会报错,只有进入virtualbox 使用命令 <code>docker run -dp 8080:8080 --name test1 -v /c/Users/elick/www:/var/www elick/php</code>才可以 真是醉了<br>  <strong>需要注意的一点:</strong> boot2docker建立的虚拟机有个自启动共享目录 <code>c/Users C:\Users</code> 在虚拟机里的根目录下能看到这个目录 所以windows上的目录的根目录是/c/开始的<br><img src="/image/16-4/3.png" alt="共享目录"></p>
-<h1 id="boot2docker使用总结"><a href="#boot2docker使用总结" class="headerlink" title="boot2docker使用总结"></a>boot2docker使用总结</h1><p>  从上面两点来看,虽然省略了配置vagrantfile的麻烦,但是还得去弄虚拟机从这点看,貌似还不如使用vagrant来的简单些</p>
-<h1 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h1><p><a href="http://avnpc.com/pages/build-php-develop-env-by-docker" target="_blank" rel="external">Docker在PHP项目开发环境中的应用</a><br><a href="http://www.tuicool.com/articles/uYzeAnz" target="_blank" rel="external">{译} 深入理解 Docker Volume（一）</a><br><a href="http://my.oschina.net/mfk123/blog/292425" target="_blank" rel="external">Dockers 快速学习（四）Docker 容器的使用</a><br><a href="http://www.linuxdown.net/install/soft/2016/0303/4906.html" target="_blank" rel="external">Docker安装_Ubuntu 15.10 &amp; 14.04 LTS上安装和管理Docker</a><br><a href="http://blog.csdn.net/halcyonbaby/article/details/46884605" target="_blank" rel="external">Docker exec与Docker attach</a><br><a href="http://blog.chinaunix.net/uid-10915175-id-4443127.html" target="_blank" rel="external">Docker之常用命令</a><br><a href="http://www.tuicool.com/articles/7V7vYn" target="_blank" rel="external">Docker学习笔记(2)–Docker常用命令</a><br><a href="http://tech.uc.cn/?p=2726" target="_blank" rel="external">利用Docker构建开发环境</a><br><a href="http://snoopyxdy.blog.163.com/blog/static/6011744020147187542090" target="_blank" rel="external">利用docker快速部署应用</a><br><a href="http://blog.csdn.net/junjun16818/article/details/30655543" target="_blank" rel="external">Docker volume使用</a><br><a href="http://my.oschina.net/piorcn/blog/324202" target="_blank" rel="external">Docker学习—挂载本地目录</a></p>
-
-      
-    </div>
-    
-    <div>
-      
-        
-      
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        ssh
+        <small>标签</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-      
-    </div>
+            <a class="post-title-link" href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/" itemprop="url">
+              
+                <span itemprop="name">windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版</span>
+              
+            </a>
+        
+      </h1>
 
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/docker/" rel="tag">#docker</a>
-          
-            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
-          
-        </div>
-      
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-05-01T20:54:10+09:00"
+              content="2016-05-01" >
+          05-01
+        </time>
+      </div>
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/04/解决ln -s 软链接产生Too many levels of symbolic links错误/" rel="next" title="解决ln -s 软链接产生Too many levels of symbolic links错误">
-                <i class="fa fa-chevron-left"></i> 解决ln -s 软链接产生Too many levels of symbolic links错误
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/Docker常用命令/" rel="prev" title="Docker常用命令">
-                Docker常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-        
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
+    
   </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
 
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
-    </div>
-  </div>
+  
 
 
           </div>
@@ -465,14 +303,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/04/docker及boot2docker相关研究/"
-           data-title="docker及boot2docker相关研究" data-url="http://elickzhao.github.io/2016/04/docker及boot2docker相关研究/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -492,17 +322,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -588,17 +409,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#boot2docker转发端口问题"><span class="nav-number">1.</span> <span class="nav-text">boot2docker转发端口问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#boot2docker数据卷问题"><span class="nav-number">2.</span> <span class="nav-text">boot2docker数据卷问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#boot2docker使用总结"><span class="nav-number">3.</span> <span class="nav-text">boot2docker使用总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关资料"><span class="nav-number">4.</span> <span class="nav-text">相关资料</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -702,10 +512,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 

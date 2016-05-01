@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-04-30T15:17:19.209Z</updated>
+  <updated>2016-05-01T12:03:03.674Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版</title>
+    <link href="http://elickzhao.github.io/2016/05/windows%E4%B8%8B%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%20github%20%E5%92%8C%20gitoschina%20%E7%9A%84%20ssh%20%E5%85%AC%E9%92%A5%20--%20%E6%9B%B4%E6%96%B0%E7%89%88/"/>
+    <id>http://elickzhao.github.io/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/</id>
+    <published>2016-05-01T11:54:10.000Z</published>
+    <updated>2016-05-01T12:03:03.674Z</updated>
+    
+    <content type="html">&lt;ol&gt;
+&lt;li&gt;安装git，从程序目录打开 “Git Bash” &lt;/li&gt;
+&lt;li&gt;键入命令：ssh-keygen -t rsa -C “email@email.com”&lt;br&gt;“email@email.com”是github账号&lt;/li&gt;
+&lt;li&gt;提醒你输入key的名称，输入如id_rsa&lt;/li&gt;
+&lt;li&gt;在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub&lt;/li&gt;
+&lt;li&gt;把4中生成的密钥文件复制到C:\Documents and Settings\Administrator.ssh\ 目 录下。&lt;/li&gt;
+&lt;li&gt;用记事本打开id_rsa.pub文件，复制内容，在github.com的网站上到ssh密钥管理页面，添加新公钥，随便取个名字，内容粘贴刚&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;才复制的内容。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;^_^ OK了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;需要注意步骤2中产生的密钥文件在当前用户的根目录，必须把这两个文件放到当前用户目录的“.ssh”目录下才能生效。&lt;br&gt;在windows中只能在命令行下输入创建”.”开头的文件夹。命令为 mkdir .ssh&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;以上的方法有可能存在问题&lt;/strong&gt;&lt;br&gt;使用 Git Bash 生成的公钥与私钥 放到github 经过测试 &lt;code&gt;ssh -T git@github.com&lt;/code&gt; 却返回禁止访问&lt;/p&gt;
+&lt;p&gt;这次因为用Vagrant ssh 需要ssh程序所以下载了 cygwin &lt;code&gt;注意:cygwin的ssh也不是默认的 需要选择下载&lt;/code&gt;  用这里的ssh生成的密钥就可以了 生成的方法跟上面是一致的 不过这个密钥的存放位置需要找一下 就是在cygwin的安装目录下的/home里面 &lt;code&gt;/home/elick/.ssh/id_rsa&lt;/code&gt; 这里是cygwin默认的家目录&lt;br&gt;然后把公钥复制到github和oschina 用命令测试 &lt;code&gt;ssh -T git@git.oschina.net&lt;/code&gt; 返回欢迎就ok了&lt;br&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;但还有个问题 Git Tortoise用的是putty密钥 所以这个密钥虽然测试成功 但是不能用客户端来用 这个有空看看怎么办&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;上面那个问题已经 解决了 &lt;a href=&quot;http://elickzhao.github.io/2016/04/%E5%BA%94%E7%94%A8TortoiseGit%E4%B8%BAgithub%E8%B4%A6%E5%8F%B7%E6%B7%BB%E5%8A%A0SSH%20keys/&quot;&gt;解决的文章在这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;简单说明一下 就是 Git Tortoise 会自带一个 putty 密码生成工具 用这个工具转换 这个密码 并用 Git Tortoise 另一个工具 Pageant 把密码填进去 以后提交git时 这个工具帮你自动转换putty密码了 详情还是看上面的那个文章&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;安装git，从程序目录打开 “Git Bash” &lt;/li&gt;
+&lt;li&gt;键入命令：ssh-keygen -t rsa -C “email@email.com”&lt;br&gt;“email@email.com”是github账号&lt;/li&gt;
+&lt;li&gt;提醒你输入key的名称，输入如id_rsa&lt;/li&gt;
+&lt;li&gt;在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub&lt;/li&gt;
+&lt;li&gt;把4中生成的密钥文件复制到C:\Documents and Settings\Administrator.ssh\ 目 录下。&lt;/li&gt;
+&lt;li&gt;用记事本打开id_rsa.pub文件，复制内容，在github.com的网站上到ssh密钥管理页面，添加新公钥，随便取个名字，内容粘贴刚&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;才复制的内容。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;^_^ OK了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;需要注意步骤2中产生的密钥文件在当前用户的根目录，必须把这两个文件放到当前用户目录的“.ssh”目录下才能生效。&lt;br&gt;在windows中只能在命令行下输入创建”.”开头的文件夹。命令为 mkdir .ssh&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="http://elickzhao.github.io/tags/Git/"/>
+    
+      <category term="ssh" scheme="http://elickzhao.github.io/tags/ssh/"/>
+    
+  </entry>
   
   <entry>
     <title>常用的apt-get命令</title>
@@ -387,9 +441,9 @@
     </summary>
     
     
-      <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
-    
       <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
+    
+      <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
     
   </entry>
   

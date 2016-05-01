@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="docker,服务器相关技术," />
+  <meta name="keywords" content="Git,ssh," />
 
 
 
@@ -88,25 +88,28 @@
 
 
 
-<meta name="description" content="boot2docker转发端口问题  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 docker run -dp 8080:8080 php进行转发 但是还需要修改虚拟机的端口转发才可以 
-
-命令解析:  docker -d 后台执行 -p 转发端口">
+<meta name="description" content="安装git，从程序目录打开 “Git Bash” 
+键入命令：ssh-keygen -t rsa -C “email@email.com”“email@email.com”是github账号
+提醒你输入key的名称，输入如id_rsa
+在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub
+把4中生成的密钥文件复制到C">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker及boot2docker相关研究">
-<meta property="og:url" content="http://elickzhao.github.io/2016/04/docker及boot2docker相关研究/index.html">
+<meta property="og:title" content="windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版">
+<meta property="og:url" content="http://elickzhao.github.io/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description" content="boot2docker转发端口问题  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 docker run -dp 8080:8080 php进行转发 但是还需要修改虚拟机的端口转发才可以 
-
-命令解析:  docker -d 后台执行 -p 转发端口">
-<meta property="og:image" content="http://elickzhao.github.io/image/16-4/2.png">
-<meta property="og:image" content="http://elickzhao.github.io/image/16-4/3.png">
-<meta property="og:updated_time" content="2016-04-20T08:12:12.265Z">
+<meta property="og:description" content="安装git，从程序目录打开 “Git Bash” 
+键入命令：ssh-keygen -t rsa -C “email@email.com”“email@email.com”是github账号
+提醒你输入key的名称，输入如id_rsa
+在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub
+把4中生成的密钥文件复制到C">
+<meta property="og:updated_time" content="2016-05-01T12:03:03.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker及boot2docker相关研究">
-<meta name="twitter:description" content="boot2docker转发端口问题  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 docker run -dp 8080:8080 php进行转发 但是还需要修改虚拟机的端口转发才可以 
-
-命令解析:  docker -d 后台执行 -p 转发端口">
-<meta name="twitter:image" content="http://elickzhao.github.io/image/16-4/2.png">
+<meta name="twitter:title" content="windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版">
+<meta name="twitter:description" content="安装git，从程序目录打开 “Git Bash” 
+键入命令：ssh-keygen -t rsa -C “email@email.com”“email@email.com”是github账号
+提醒你输入key的名称，输入如id_rsa
+在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub
+把4中生成的密钥文件复制到C">
 
 
 
@@ -124,7 +127,7 @@
   };
 </script>
 
-  <title> docker及boot2docker相关研究 | elickzhao's Blog </title>
+  <title> windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +290,7 @@
             
             
               
-                docker及boot2docker相关研究
+                windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版
               
             
           </h1>
@@ -299,38 +302,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-18T23:51:49+09:00" content="2016-04-18">
-              2016-04-18
+            <time itemprop="dateCreated" datetime="2016-05-01T20:54:10+09:00" content="2016-05-01">
+              2016-05-01
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/服务器端/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器端</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/docker及boot2docker相关研究/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/docker及boot2docker相关研究/" itemprop="commentsCount"></span>
+                <a href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -353,15 +337,26 @@
       
 
       
-        <h1 id="boot2docker转发端口问题"><a href="#boot2docker转发端口问题" class="headerlink" title="boot2docker转发端口问题"></a>boot2docker转发端口问题</h1><p>  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 <code>docker run -dp 8080:8080 php</code>进行转发 但是还需要修改虚拟机的端口转发才可以 </p>
-<blockquote>
-<p>命令解析:<br>  docker -d 后台执行 -p 转发端口</p>
-</blockquote>
-<p>  <img src="/image/16-4/2.png" alt="虚拟机转发端口"></p>
+        <ol>
+<li>安装git，从程序目录打开 “Git Bash” </li>
+<li>键入命令：ssh-keygen -t rsa -C “email@email.com”<br>“email@email.com”是github账号</li>
+<li>提醒你输入key的名称，输入如id_rsa</li>
+<li>在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub</li>
+<li>把4中生成的密钥文件复制到C:\Documents and Settings\Administrator.ssh\ 目 录下。</li>
+<li>用记事本打开id_rsa.pub文件，复制内容，在github.com的网站上到ssh密钥管理页面，添加新公钥，随便取个名字，内容粘贴刚</li>
+</ol>
+<p>才复制的内容。</p>
+<ol>
+<li>^_^ OK了</li>
+</ol>
+<p>需要注意步骤2中产生的密钥文件在当前用户的根目录，必须把这两个文件放到当前用户目录的“.ssh”目录下才能生效。<br>在windows中只能在命令行下输入创建”.”开头的文件夹。命令为 mkdir .ssh</p>
 <a id="more"></a>
-<h1 id="boot2docker数据卷问题"><a href="#boot2docker数据卷问题" class="headerlink" title="boot2docker数据卷问题"></a>boot2docker数据卷问题</h1><p>  这个就更恶心了,使用在windows下的boot2docker命令行就会报错,只有进入virtualbox 使用命令 <code>docker run -dp 8080:8080 --name test1 -v /c/Users/elick/www:/var/www elick/php</code>才可以 真是醉了<br>  <strong>需要注意的一点:</strong> boot2docker建立的虚拟机有个自启动共享目录 <code>c/Users C:\Users</code> 在虚拟机里的根目录下能看到这个目录 所以windows上的目录的根目录是/c/开始的<br><img src="/image/16-4/3.png" alt="共享目录"></p>
-<h1 id="boot2docker使用总结"><a href="#boot2docker使用总结" class="headerlink" title="boot2docker使用总结"></a>boot2docker使用总结</h1><p>  从上面两点来看,虽然省略了配置vagrantfile的麻烦,但是还得去弄虚拟机从这点看,貌似还不如使用vagrant来的简单些</p>
-<h1 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h1><p><a href="http://avnpc.com/pages/build-php-develop-env-by-docker" target="_blank" rel="external">Docker在PHP项目开发环境中的应用</a><br><a href="http://www.tuicool.com/articles/uYzeAnz" target="_blank" rel="external">{译} 深入理解 Docker Volume（一）</a><br><a href="http://my.oschina.net/mfk123/blog/292425" target="_blank" rel="external">Dockers 快速学习（四）Docker 容器的使用</a><br><a href="http://www.linuxdown.net/install/soft/2016/0303/4906.html" target="_blank" rel="external">Docker安装_Ubuntu 15.10 &amp; 14.04 LTS上安装和管理Docker</a><br><a href="http://blog.csdn.net/halcyonbaby/article/details/46884605" target="_blank" rel="external">Docker exec与Docker attach</a><br><a href="http://blog.chinaunix.net/uid-10915175-id-4443127.html" target="_blank" rel="external">Docker之常用命令</a><br><a href="http://www.tuicool.com/articles/7V7vYn" target="_blank" rel="external">Docker学习笔记(2)–Docker常用命令</a><br><a href="http://tech.uc.cn/?p=2726" target="_blank" rel="external">利用Docker构建开发环境</a><br><a href="http://snoopyxdy.blog.163.com/blog/static/6011744020147187542090" target="_blank" rel="external">利用docker快速部署应用</a><br><a href="http://blog.csdn.net/junjun16818/article/details/30655543" target="_blank" rel="external">Docker volume使用</a><br><a href="http://my.oschina.net/piorcn/blog/324202" target="_blank" rel="external">Docker学习—挂载本地目录</a></p>
+<hr>
+<p><strong>以上的方法有可能存在问题</strong><br>使用 Git Bash 生成的公钥与私钥 放到github 经过测试 <code>ssh -T git@github.com</code> 却返回禁止访问</p>
+<p>这次因为用Vagrant ssh 需要ssh程序所以下载了 cygwin <code>注意:cygwin的ssh也不是默认的 需要选择下载</code>  用这里的ssh生成的密钥就可以了 生成的方法跟上面是一致的 不过这个密钥的存放位置需要找一下 就是在cygwin的安装目录下的/home里面 <code>/home/elick/.ssh/id_rsa</code> 这里是cygwin默认的家目录<br>然后把公钥复制到github和oschina 用命令测试 <code>ssh -T git@git.oschina.net</code> 返回欢迎就ok了<br><a href="http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="external">参考文档</a></p>
+<p><del>但还有个问题 Git Tortoise用的是putty密钥 所以这个密钥虽然测试成功 但是不能用客户端来用 这个有空看看怎么办</del></p>
+<p>上面那个问题已经 解决了 <a href="http://elickzhao.github.io/2016/04/%E5%BA%94%E7%94%A8TortoiseGit%E4%B8%BAgithub%E8%B4%A6%E5%8F%B7%E6%B7%BB%E5%8A%A0SSH%20keys/">解决的文章在这里</a></p>
+<p>简单说明一下 就是 Git Tortoise 会自带一个 putty 密码生成工具 用这个工具转换 这个密码 并用 Git Tortoise 另一个工具 Pageant 把密码填进去 以后提交git时 这个工具帮你自动转换putty密码了 详情还是看上面的那个文章</p>
 
       
     </div>
@@ -382,9 +377,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/docker/" rel="tag">#docker</a>
+            <a href="/tags/Git/" rel="tag">#Git</a>
           
-            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
+            <a href="/tags/ssh/" rel="tag">#ssh</a>
           
         </div>
       
@@ -393,17 +388,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/解决ln -s 软链接产生Too many levels of symbolic links错误/" rel="next" title="解决ln -s 软链接产生Too many levels of symbolic links错误">
-                <i class="fa fa-chevron-left"></i> 解决ln -s 软链接产生Too many levels of symbolic links错误
+              <a href="/2016/05/常用的apt-get命令/" rel="next" title="常用的apt-get命令">
+                <i class="fa fa-chevron-left"></i> 常用的apt-get命令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/Docker常用命令/" rel="prev" title="Docker常用命令">
-                Docker常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,8 +458,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/docker及boot2docker相关研究/"
-           data-title="docker及boot2docker相关研究" data-url="http://elickzhao.github.io/2016/04/docker及boot2docker相关研究/">
+      <div class="ds-thread" data-thread-key="2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/"
+           data-title="windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版" data-url="http://elickzhao.github.io/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/">
       </div>
     
   </div>
@@ -595,7 +586,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#boot2docker转发端口问题"><span class="nav-number">1.</span> <span class="nav-text">boot2docker转发端口问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#boot2docker数据卷问题"><span class="nav-number">2.</span> <span class="nav-text">boot2docker数据卷问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#boot2docker使用总结"><span class="nav-number">3.</span> <span class="nav-text">boot2docker使用总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关资料"><span class="nav-number">4.</span> <span class="nav-text">相关资料</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
