@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="docker," />
 
 
 
@@ -88,16 +88,16 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao's Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="一般情况的用法12345678910111213141516171819202122232425mysql:  build: ./mysql  volumes_from:    - myapp-data   environment:        - MYSQL_ROOT_PASSWORD=123456php:    build: ./php  expose:    - &amp;quot;9000:90">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker Compose 配置文件 yaml  参数简单介绍">
+<meta property="og:url" content="http://elickzhao.github.io/2016/05/Docker Compose 配置文件 yaml  参数简单介绍/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description" content="404 | HelloDog">
-<meta property="og:updated_time" content="2016-04-15T09:39:30.861Z">
+<meta property="og:description" content="一般情况的用法12345678910111213141516171819202122232425mysql:  build: ./mysql  volumes_from:    - myapp-data   environment:        - MYSQL_ROOT_PASSWORD=123456php:    build: ./php  expose:    - &amp;quot;9000:90">
+<meta property="og:updated_time" content="2016-05-02T14:38:42.362Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao's Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="Docker Compose 配置文件 yaml  参数简单介绍">
+<meta name="twitter:description" content="一般情况的用法12345678910111213141516171819202122232425mysql:  build: ./mysql  volumes_from:    - myapp-data   environment:        - MYSQL_ROOT_PASSWORD=123456php:    build: ./php  expose:    - &amp;quot;9000:90">
 
 
 
@@ -115,13 +115,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> Docker Compose 配置文件 yaml  参数简单介绍 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -142,7 +136,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,17 +259,315 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Docker Compose 配置文件 yaml  参数简单介绍
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-02T23:35:58+09:00" content="2016-05-02">
+              2016-05-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/Docker Compose 配置文件 yaml  参数简单介绍/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/Docker Compose 配置文件 yaml  参数简单介绍/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一般情况的用法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">mysql:</span><br><span class="line">  build: ./mysql</span><br><span class="line">  volumes_from:</span><br><span class="line">    - myapp-data </span><br><span class="line">  environment:</span><br><span class="line">        - MYSQL_ROOT_PASSWORD=123456</span><br><span class="line">php:  </span><br><span class="line">  build: ./php</span><br><span class="line">  expose:</span><br><span class="line">    - &quot;9000:9000&quot;</span><br><span class="line">  volumes_from:</span><br><span class="line">    - myapp-data</span><br><span class="line">  links:</span><br><span class="line">    - mysql</span><br><span class="line">  privileged: true</span><br><span class="line"></span><br><span class="line">nginx:  </span><br><span class="line">  build: ./nginx</span><br><span class="line">  volumes_from:</span><br><span class="line">    - myapp-data</span><br><span class="line">  links:</span><br><span class="line">    - php:php</span><br><span class="line">  ports:</span><br><span class="line">    - &quot;80:80&quot;</span><br><span class="line">  privileged: true</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>配置参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td style="text-align:left">从镜像的构建容器</td>
+</tr>
+<tr>
+<td>build</td>
+<td style="text-align:left">直接从pwd的Dockerfile来build，而非通过image选项来pull</td>
+</tr>
+<tr>
+<td>links</td>
+<td style="text-align:left">连接到那些容器。每个占一行，格式为SERVICE[:ALIAS],例如 – db[:database] 如果不写别名 就是一致的 这个别名 会写在hosts里 当作服务器名 这样可以直接用于连接容器服务</td>
+</tr>
+<tr>
+<td>external_links</td>
+<td style="text-align:left">连接到该compose.yaml文件之外的容器中，比如是提供共享或者通用服务的容器服务。格式同links</td>
+</tr>
+<tr>
+<td>command</td>
+<td style="text-align:left">替换默认的command命令</td>
+</tr>
+<tr>
+<td>ports</td>
+<td style="text-align:left">导出端口 主机端口:容器端口</td>
+</tr>
+<tr>
+<td>expose</td>
+<td style="text-align:left">导出端口，但不映射到宿主机的端口上。它仅对links的容器开放。格式直接指定端口号即可。</td>
+</tr>
+<tr>
+<td>volumes</td>
+<td style="text-align:left">加载路径作为卷, 主机路径:容器路径:rw(读写属性) 容器路径必须是绝对路径</td>
+</tr>
+<tr>
+<td>volumes_from</td>
+<td style="text-align:left">加载其他容器 服务所有卷</td>
+</tr>
+<tr>
+<td>env_file</td>
+<td style="text-align:left">从一个文件中导入环境变量，文件的格式为RACK_ENV=development</td>
+</tr>
+<tr>
+<td>extends</td>
+<td style="text-align:left">扩展另一个服务，可以覆盖其中的一些选项 看下面 例1</td>
+</tr>
+<tr>
+<td>net</td>
+<td style="text-align:left">容器的网络模式，可以为”bridge”, “none”, “container:[name or id]”, “host”中的一个。</td>
+</tr>
+<tr>
+<td>dns</td>
+<td style="text-align:left">可以设置一个或多个自定义的DNS地址。</td>
+</tr>
+<tr>
+<td>dns_search</td>
+<td style="text-align:left">可以设置一个或多个DNS的扫描域。</td>
+</tr>
+<tr>
+<td>orking_dir, entrypoint, user, hostname, domainname, mem_limit, privileged, restart, stdin_open, tty, cpu_shares，docker run</td>
+<td style="text-align:left">这些命令都是单行的命令,效果和Dockerfile是一样的  看例2</td>
+</tr>
+</tbody>
+</table>
+<p>例1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">common.yml</span><br><span class="line">webapp:</span><br><span class="line">  build:./webapp</span><br><span class="line">  environment:- DEBUG=false- SEND_EMAILS=false</span><br><span class="line"></span><br><span class="line">----------------------------------------------------------</span><br><span class="line"></span><br><span class="line">development.yml</span><br><span class="line">web:extends:</span><br><span class="line">    file: common.yml</span><br><span class="line">    service: webapp</span><br><span class="line">  ports:-&quot;8000:8000&quot;</span><br><span class="line">  links:- db</span><br><span class="line">  environment:- DEBUG=true</span><br><span class="line">db:</span><br><span class="line">  image: postgres</span><br></pre></td></tr></table></figure></p>
+<p>例2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cpu_shares:73</span><br><span class="line">working_dir:/code</span><br><span class="line">entrypoint: /code/entrypoint.sh</span><br><span class="line">user: postgresql</span><br><span class="line">hostname: foo</span><br><span class="line">domainname: foo.com</span><br><span class="line">mem_limit:1000000000</span><br><span class="line">privileged:true</span><br><span class="line">restart: always</span><br><span class="line">stdin_open:true</span><br><span class="line">tty:true</span><br></pre></td></tr></table></figure></p>
+<p>常用命令说明</p>
+<table>
+<thead>
+<tr>
+<th>命令参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker-compose up</td>
+<td>启动服务器</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>以daemon(守护进程)方式启动容器</td>
+</tr>
+<tr>
+<td>–verbose</td>
+<td>输出详细信息</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>制定一个非docker-compose.yml命名的yaml文件</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>设置一个项目名称（默认是directory名）</td>
+</tr>
+<tr>
+<td>build</td>
+<td>构建服务</td>
+</tr>
+<tr>
+<td>kill -s SIGINT</td>
+<td>给服务发送特定的信号</td>
+</tr>
+<tr>
+<td>logs</td>
+<td>输出日志</td>
+</tr>
+<tr>
+<td>port</td>
+<td>输出绑定的端口</td>
+</tr>
+<tr>
+<td>ps</td>
+<td>输出运行的容器</td>
+</tr>
+<tr>
+<td>pull</td>
+<td>pull服务的image</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>删除停止的容器</td>
+</tr>
+<tr>
+<td>run</td>
+<td>运行某个服务，例如docker-compose run web python manage.py shell</td>
+</tr>
+<tr>
+<td>start</td>
+<td>运行某个服务中存在的容器</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>停止某个服务中存在的容器</td>
+</tr>
+<tr>
+<td>up</td>
+<td>create + run + attach容器到服务</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>设置服务运行的容器数量。例如：docker-compose scale web=2 worker=3</td>
+</tr>
+</tbody>
+</table>
+<p>感觉有些命令和docker命令重合 所以感觉有些命令没什么用处</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/docker/" rel="tag">#docker</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/" rel="next" title="windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版">
+                <i class="fa fa-chevron-left"></i> windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -286,8 +578,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/05/Docker Compose 配置文件 yaml  参数简单介绍/"
+           data-title="Docker Compose 配置文件 yaml  参数简单介绍" data-url="http://elickzhao.github.io/2016/05/Docker Compose 配置文件 yaml  参数简单介绍/">
       </div>
     
   </div>
@@ -311,8 +603,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -398,6 +699,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -501,6 +813,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

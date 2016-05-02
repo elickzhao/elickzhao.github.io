@@ -280,6 +280,133 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/linux mount命令的用法详细解析/" itemprop="url">
+                  linux mount命令的用法详细解析
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-21T23:52:53+09:00" content="2016-04-21">
+              2016-04-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/服务器端/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/linux mount命令的用法详细解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/linux mount命令的用法详细解析/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="挂接命令-mount"><a href="#挂接命令-mount" class="headerlink" title="挂接命令(mount)"></a>挂接命令(mount)</h1><p>首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。<br>命令格式：mount [-t vfstype] [-o options] device dir<br>其中：</p>
+<ol>
+<li>-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：<br>光盘或光盘镜像：iso9660<br>DOS fat16文件系统：msdos<br>Windows 9x fat32文件系统：vfat<br>Windows NT ntfs文件系统：ntfs<br>Mount Windows文件网络共享：smbfs<br>UNIX(LINUX) 文件网络共享：nfs<br>VirtualBox 文件网络共享: vboxsf</li>
+<li>-o options 主要用来描述设备或档案的挂接方式。常用的参数有：<br>loop：用来把一个文件当成硬盘分区挂接上系统<br>ro：采用只读方式挂接设备<br>rw：采用读写方式挂接设备<br>iocharset：指定访问文件系统所用字符集</li>
+<li>device 要挂接(mount)的设备。</li>
+<li>dir设备在系统上的挂接点(mount point)。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/linux mount命令的用法详细解析/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/Dockerfile VOLUME 和 -v 的区别/" itemprop="url">
                   Dockerfile VOLUME 和 -v 的区别
                 </a>
@@ -717,138 +844,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/Docker常用命令/" itemprop="url">
-                  Docker常用命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-19T00:42:00+09:00" content="2016-04-19">
-              2016-04-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/服务器端/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器端</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/Docker常用命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/Docker常用命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="查看docker信息（version、info）"><a href="#查看docker信息（version、info）" class="headerlink" title="查看docker信息（version、info）"></a>查看docker信息（version、info）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看docker版本  </span></span><br><span class="line"><span class="variable">$docker</span> version  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 显示docker系统的信息  </span></span><br><span class="line"><span class="variable">$docker</span> info</span><br></pre></td></tr></table></figure>
-<h1 id="对image的操作（search、pull、images、rmi、history）"><a href="#对image的操作（search、pull、images、rmi、history）" class="headerlink" title="对image的操作（search、pull、images、rmi、history）"></a>对image的操作（search、pull、images、rmi、history）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检索image  </span></span><br><span class="line"><span class="variable">$docker</span> search image_name  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 下载image  </span></span><br><span class="line"><span class="variable">$docker</span> pull image_name  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 列出镜像列表; -a, --all=false Show all images; --no-trunc=false Don't truncate output; -q, --quiet=false Only show numeric IDs  </span></span><br><span class="line"><span class="variable">$docker</span> images  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 删除一个或者多个镜像; -f, --force=false Force; --no-prune=false Do not delete untagged parents  </span></span><br><span class="line"><span class="variable">$docker</span> rmi image_name  </span><br><span class="line"></span><br><span class="line"><span class="comment">#删除所有镜像</span></span><br><span class="line">docker rmi $(docker images | grep none | awk <span class="string">'&#123;print $3&#125;'</span> | sort -r)</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 显示一个镜像的历史; --no-trunc=false Don't truncate output; -q, --quiet=false Only show numeric IDs  </span></span><br><span class="line"><span class="variable">$docker</span> <span class="built_in">history</span> image_name </span><br><span class="line"></span><br><span class="line"><span class="comment">#导出容器到本地镜像库：</span></span><br><span class="line"><span class="variable">$docker</span> <span class="built_in">export</span> container_id &gt; centos.tar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#导入容器快照为镜像(docker import)：</span></span><br><span class="line"><span class="comment">#(1)容器在本地：</span></span><br><span class="line">cat centos.tar | docker import - registry.intra.weibo.com/yushuang3/centos:v2.0</span><br><span class="line"></span><br><span class="line"><span class="comment">#(2)容器在网络上：</span></span><br><span class="line">docker import http://example.com/exampleimage.tgz registry.intra.weibo.com/yushuang3/centos:v2.0</span><br><span class="line"></span><br><span class="line">Note：</span><br><span class="line">用户既可以使用 docker load 来导入镜像存储文件到本地镜像库，</span><br><span class="line">也可以使用 docker import 来导入一个容器快照到本地镜像库。</span><br><span class="line">这两者的区别在于容器快照文件将丢弃所有的历史记录和元数据信息（即仅保存容器当时的快照状态），</span><br><span class="line">而镜像存储文件将保存完整记录，体积也要大。此外，从容器快照文件导入时可以重新指定标签等元数据信息。</span><br></pre></td></tr></table></figure>
-<h1 id="启动容器（run）"><a href="#启动容器（run）" class="headerlink" title="启动容器（run）"></a>启动容器（run）</h1><p>docker容器可以理解为在沙盒中运行的进程。这个沙盒包含了该进程运行所必须的资源，包括文件系统、系统类库、shell 环境等等。但这个沙盒默认是不会运行任何程序的。你需要在沙盒中运行一个进程来启动某一个容器。这个进程是该容器的唯一进程，所以当该进程结束的时候，容器也会完全的停止。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在容器中运行"echo"命令，输出"hello word"  </span></span><br><span class="line"><span class="variable">$docker</span> run image_name <span class="built_in">echo</span> <span class="string">"hello word"</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment">#命名容器</span></span><br><span class="line"><span class="variable">$docker</span> run --name <span class="built_in">test</span> image_name</span><br><span class="line">Note: 这个很有用 这样删除容器等一些操作直接用名称就可以 不用去看ID了</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 交互式进入容器中  </span></span><br><span class="line"><span class="variable">$docker</span> run -i -t image_name /bin/bash  </span><br><span class="line">Note: 如果镜像有tag，需要在image后加:tag名 （-t 选项让Docker分配一个伪终端（pseudo-tty）并绑定到容器的标准输入上， -i 则让容器的标准输入保持打开）</span><br><span class="line"></span><br><span class="line"><span class="comment">#后台执行容器</span></span><br><span class="line"><span class="variable">$docker</span> run <span class="_">-d</span> image_name </span><br><span class="line"></span><br><span class="line"><span class="comment">#转发端口</span></span><br><span class="line"><span class="variable">$docker</span> run -p 8080:8080 image_name  </span><br><span class="line">Note:  主机端口(host port) : 容器端口(container post)</span><br><span class="line"></span><br><span class="line"><span class="comment">#挂载指定的主机目录</span></span><br><span class="line">$ docker run -v /c/Users/elick/www:/var/www</span><br><span class="line">Note: 主机目录 : 容器目录 挂载指定主机目录 这个是Dockerfile VOLUME没法办到的 因为考虑的Dockerfile的迁移问题 主机目录是不确定的,所这个指定目录只能用命令行来执行 而Dockerfile VOLUME 只是挂载了容器内一个目录 还有个问题是 这个挂载是吧主机目录完全复制到容器目录 但不是双向的 会把容器目录内容删除 **两个地址都必须是绝对地址 还有容器内的目录可以没有 会自动添加的**</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 在容器中安装新的程序  </span></span><br><span class="line"><span class="variable">$docker</span> run image_name apt-get install -y app_name  </span><br><span class="line"></span><br><span class="line">Note：  在执行apt-get 命令的时候，要带上-y参数。如果不指定-y参数的话，apt-get命令会进入交互模式，需要用户输入命令来进行确认，但在docker环境中是无法响应这种交互的。apt-get 命令执行完毕之后，容器就会停止，但对容器的改动不会丢失。</span><br><span class="line"></span><br><span class="line"><span class="comment"># container内的root拥有真正的root权限。</span></span><br><span class="line">docker run --privileged=<span class="literal">false</span>         </span><br><span class="line"></span><br><span class="line">Note: 使用该参数，container内的root拥有真正的root权限。</span><br><span class="line">否则，container内的root只是外部的一个普通用户权限。</span><br><span class="line">否则，container内的root只是外部的一个普通用户权限。</span><br><span class="line">privileged启动的容器，可以看到很多host上的设备，并且可以执行mount。</span><br><span class="line">甚至允许你在docker容器中启动docker容器。</span><br></pre></td></tr></table></figure>
-<h1 id="查看容器（ps）"><a href="#查看容器（ps）" class="headerlink" title="查看容器（ps）"></a>查看容器（ps）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出当前所有正在运行的container  </span></span><br><span class="line"><span class="variable">$docker</span> ps  </span><br><span class="line"><span class="comment"># 列出所有的container  </span></span><br><span class="line"><span class="variable">$docker</span> ps <span class="_">-a</span>  </span><br><span class="line"><span class="comment"># 列出最近一次启动的container  </span></span><br><span class="line"><span class="variable">$docker</span> ps <span class="_">-l</span></span><br></pre></td></tr></table></figure>
-<h1 id="保存对容器的修改（commit）"><a href="#保存对容器的修改（commit）" class="headerlink" title="保存对容器的修改（commit）"></a>保存对容器的修改（commit）</h1><p>当你对某一个容器做了修改之后（通过在容器中运行某一个命令），可以把对容器的修改保存下来，这样下次可以从保存后的最新状态运行该容器。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 保存对容器的修改; -a, --author="" Author; -m, --message="" Commit message  </span></span><br><span class="line"><span class="variable">$docker</span> commit <span class="_">-a</span> <span class="string">'author'</span> ID new_image_name  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Note：  image相当于类，container相当于实例，不过可以动态给实例安装新软件，然后把这个container用commit命令固化成一个image。</span><br></pre></td></tr></table></figure>
-<h1 id="对容器的操作（rm、stop、start、kill、logs、diff、top、cp、restart、attach、exec、rename、logs、link）"><a href="#对容器的操作（rm、stop、start、kill、logs、diff、top、cp、restart、attach、exec、rename、logs、link）" class="headerlink" title="对容器的操作（rm、stop、start、kill、logs、diff、top、cp、restart、attach、exec、rename、logs、link）"></a>对容器的操作（rm、stop、start、kill、logs、diff、top、cp、restart、attach、exec、rename、logs、link）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除所有容器  </span></span><br><span class="line"><span class="variable">$docker</span> rm `docker ps <span class="_">-a</span> -q`  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 删除单个容器; -f, --force=false; -l, --link=false Remove the specified link and not the underlying container; -v, --volumes=false Remove the volumes associated to the container  </span></span><br><span class="line"><span class="variable">$docker</span> rm Name/ID  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 停止、启动、杀死一个容器  </span></span><br><span class="line"><span class="variable">$docker</span> stop Name/ID  </span><br><span class="line"><span class="variable">$docker</span> start Name/ID  </span><br><span class="line"><span class="variable">$docker</span> <span class="built_in">kill</span> Name/ID  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 从一个容器中取日志; -f, --follow=false Follow log output; -t, --timestamps=false Show timestamps  </span></span><br><span class="line"><span class="variable">$docker</span> logs Name/ID  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 列出一个容器里面被改变的文件或者目录，list列表会显示出三种事件，A 增加的，D 删除的，C 被改变的  </span></span><br><span class="line"><span class="variable">$docker</span> diff Name/ID  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 显示一个运行的容器里面的进程信息  </span></span><br><span class="line"><span class="variable">$docker</span> top Name/ID  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 从容器里面拷贝文件/目录到本地一个路径  </span></span><br><span class="line"><span class="variable">$docker</span> cp Name:/container_path to_path  </span><br><span class="line"><span class="variable">$docker</span> cp ID:/container_path to_path  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 重启一个正在运行的容器; -t, --time=10 Number of seconds to try to stop for before killing the container, Default=10  </span></span><br><span class="line"><span class="variable">$docker</span> restart Name/ID  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 附加到一个运行的容器上面; --no-stdin=false Do not attach stdin; --sig-proxy=true Proxify all received signal to the process  </span></span><br><span class="line"><span class="variable">$docker</span> attach ID  </span><br><span class="line"></span><br><span class="line">Note： attach命令允许你查看或者影响一个运行的容器。你可以在同一时间attach同一个容器。你也可以从一个容器中脱离出来，是从CTRL-C。但是脱离出来后 容器也就停止了</span><br><span class="line"></span><br><span class="line"><span class="comment">#进入容器</span></span><br><span class="line"><span class="variable">$docker</span> <span class="built_in">exec</span> -it container_name /bin/bash</span><br><span class="line">Note: <span class="built_in">exec</span> 使用-it时，和我们平常操作console界面类似。而且也不会像attach方式因为退出，导致 </span><br><span class="line">整个容器退出。（-t 选项让Docker分配一个伪终端（pseudo-tty）并绑定到容器的标准输入上， -i 则让容器的标准输入保持打开） 和run -it 一样后面必须接上要执行的命令 比如 /bin/bash 否则会报错</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改容器名</span></span><br><span class="line"><span class="variable">$docker</span> rename old容器名  new容器名</span><br><span class="line"></span><br><span class="line"><span class="comment">#要获取容器的输出信息:</span></span><br><span class="line"><span class="variable">$docker</span> logs <span class="_">-f</span> &lt;容器名orID&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看容器的root用户密码</span></span><br><span class="line"><span class="variable">$docker</span> logs &lt;容器名orID&gt; 2&gt;&amp;1 | grep <span class="string">'^User: '</span> | tail -n1</span><br><span class="line"></span><br><span class="line"><span class="comment">#一个容器连接到另一个容器</span></span><br><span class="line"><span class="variable">$docker</span> run -i -t --name sonar <span class="_">-d</span> -link mmysql:db   tpires/sonar-server</span><br><span class="line">Note: sonar容器连接到mmysql容器，并将mmysql容器重命名为db。这样，sonar容器就可以使用db的相关的环境变量了。如下查看环境变量就可以看到mmysql相关环境变量</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root@665f1bdc5913:/<span class="comment"># env</span></span><br><span class="line">HOSTNAME=665f1bdc5913</span><br><span class="line">DB_NAME=/compassionate_pasteur/db</span><br><span class="line">TERM=xterm</span><br><span class="line">DB_PORT=tcp://172.17.0.2:11211</span><br><span class="line">DB_PORT_3306_TCP_PROTO=tcp</span><br><span class="line">DB_PORT_3306_TCP_ADDR=172.17.0.2</span><br><span class="line">PATH=/usr/<span class="built_in">local</span>/sbin:/usr/<span class="built_in">local</span>/bin:/usr/sbin:/usr/bin:/sbin:/bin</span><br><span class="line">PWD=/</span><br><span class="line">SHLVL=1</span><br><span class="line">HOME=/</span><br><span class="line">DB_PORT_3306_TCP_PORT=3306</span><br><span class="line">DB_PORT_3306_TCP=tcp://172.17.0.2:3306</span><br><span class="line">container=lxc</span><br><span class="line">_=/usr/bin/env</span><br></pre></td></tr></table></figure>
-<h1 id="保存和加载镜像（save、load）"><a href="#保存和加载镜像（save、load）" class="headerlink" title="保存和加载镜像（save、load）"></a>保存和加载镜像（save、load）</h1><p>当需要把一台机器上的镜像迁移到另一台机器的时候，需要保存镜像与加载镜像。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 保存镜像到一个tar包; -o, --output="" Write to an file  </span></span><br><span class="line"><span class="variable">$docker</span> save image_name -o file_path  </span><br><span class="line"><span class="comment"># 加载一个tar包格式的镜像; -i, --input="" Read from a tar archive file  </span></span><br><span class="line"><span class="variable">$docker</span> load -i file_path  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 机器a  </span></span><br><span class="line"><span class="variable">$docker</span> save image_name &gt; /home/save.tar  </span><br><span class="line"><span class="comment"># 使用scp将save.tar拷到机器b上，然后：  </span></span><br><span class="line"><span class="variable">$docker</span> load &lt; /home/save.tar</span><br></pre></td></tr></table></figure></p>
-<h1 id="登录registry-server（login）"><a href="#登录registry-server（login）" class="headerlink" title="登录registry server（login）"></a>登录registry server（login）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 登陆registry server; -e, --email="" Email; -p, --password="" Password; -u, --username="" Username  </span></span><br><span class="line"><span class="variable">$docker</span> login</span><br></pre></td></tr></table></figure>
-<h1 id="发布image（push）"><a href="#发布image（push）" class="headerlink" title="发布image（push）"></a>发布image（push）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 发布docker镜像  </span></span><br><span class="line"><span class="variable">$docker</span> push new_image_name</span><br></pre></td></tr></table></figure>
-<h1 id="根据Dockerfile-构建出一个容器"><a href="#根据Dockerfile-构建出一个容器" class="headerlink" title="根据Dockerfile 构建出一个容器"></a>根据Dockerfile 构建出一个容器</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#build  </span></span><br><span class="line">      --no-cache=<span class="literal">false</span> Do not use cache when building the image  </span><br><span class="line">      -q, --quiet=<span class="literal">false</span> Suppress the verbose output generated by the containers  </span><br><span class="line">      --rm=<span class="literal">true</span> Remove intermediate containers after a successful build  </span><br><span class="line">      -t, --tag=<span class="string">""</span> Repository name (and optionally a tag) to be applied to the resulting image <span class="keyword">in</span> <span class="keyword">case</span> of success  </span><br><span class="line"><span class="variable">$docker</span> build -t image_name Dockerfile_path</span><br></pre></td></tr></table></figure>
-<p><a href="http://blog.tankywoo.com/docker/2014/05/08/docker-2-dockerfile.html" target="_blank" rel="external">Docker 2 – 关于Dockerfile</a><br><a href="http://blog.tankywoo.com/docker/2014/05/08/docker-4-summary.html" target="_blank" rel="external">Docker 4 – 总结</a><br><a href="http://www.tuicool.com/articles/uYzeAnz" target="_blank" rel="external">深入理解 Docker Volume（一）</a><br><a href="http://blog.csdn.net/qinyushuang/article/details/43342091" target="_blank" rel="external">docker 容器相关命令</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -894,7 +889,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
