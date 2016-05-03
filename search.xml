@@ -4,6 +4,15 @@
   
     
     <entry>
+      <title><![CDATA[Github 更新标签]]></title>
+      <url>http://elickzhao.github.io/2016/05/Github%20%E6%9B%B4%E6%96%B0%E6%A0%87%E7%AD%BE/</url>
+      <content type="html"><![CDATA[<p>不知道为什么 我用TortoiseGit在本地打上了标签 但是同步的时候 Github却不显示 使用了 git bash 命令 推送了一下就好使了  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --tags</span><br></pre></td></tr></table></figure>
+<p>参考文章:<br><a href="http://zengrong.net/post/1746.htm" target="_blank" rel="external">Git查看、删除、重命名远程分支和tag</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[连接容器 --link 简要说明]]></title>
       <url>http://elickzhao.github.io/2016/05/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%20--link%20%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E/</url>
       <content type="html"><![CDATA[<p><a href="http://blog.csdn.net/halcyonbaby/article/details/42112325" target="_blank" rel="external">docker容器互联的两种方式</a><br><a href="http://get.ftqq.com/26.get" target="_blank" rel="external">连接容器 | Docker中文指南</a><br><a href="https://segmentfault.com/a/1190000002949036" target="_blank" rel="external">Docker多容器连接-以Nginx+PHP为例</a><br><a href="http://www.tuicool.com/articles/RfQRny" target="_blank" rel="external">Docker学习总结之跨主机进行link</a><br><a href="http://www.open-open.com/lib/view/open1428540315869.html#" target="_blank" rel="external">Docker Machine + Compose + Swarm</a><br><a href="http://os.51cto.com/art/201411/456204.htm" target="_blank" rel="external">让Docker功能更强大的10个开源工具</a></p>
@@ -169,6 +178,7 @@
 </tbody>
 </table>
 <p>感觉有些命令和docker命令重合 所以感觉有些命令没什么用处</p>
+<p><a href="http://codecloud.net/docker-compose-yaml-5232.html" target="_blank" rel="external">Docker Compose YAML 模板文件</a></p>
 ]]></content>
     </entry>
     
@@ -788,7 +798,7 @@
       <url>http://elickzhao.github.io/2016/04/%E8%A7%A3%E5%86%B3ln%20-s%20%E8%BD%AF%E9%93%BE%E6%8E%A5%E4%BA%A7%E7%94%9FToo%20many%20levels%20of%20symbolic%20links%E9%94%99%E8%AF%AF/</url>
       <content type="html"><![CDATA[<p>今天生成软连接发生这个报错,查了一下,原来是因为使用了相对路径,改成绝对路径就没有问题了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ln</span> <span class="_">-s</span> /cygdrive/f/Vagrant /home/elick/vagrant</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>命令解析:<br>ln -s 源目录 目标目录</p>
+<p>命令解析:<br>ln [参数][源文件或目录][目标文件或目录]</p>
 </blockquote>
 ]]></content>
     </entry>

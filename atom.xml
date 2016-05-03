@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-02T16:17:33.657Z</updated>
+  <updated>2016-05-03T14:03:11.163Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github 更新标签</title>
+    <link href="http://elickzhao.github.io/2016/05/Github%20%E6%9B%B4%E6%96%B0%E6%A0%87%E7%AD%BE/"/>
+    <id>http://elickzhao.github.io/2016/05/Github 更新标签/</id>
+    <published>2016-05-03T14:02:25.000Z</published>
+    <updated>2016-05-03T14:03:11.163Z</updated>
+    
+    <content type="html">&lt;p&gt;不知道为什么 我用TortoiseGit在本地打上了标签 但是同步的时候 Github却不显示 使用了 git bash 命令 推送了一下就好使了  &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git push --tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;参考文章:&lt;br&gt;&lt;a href=&quot;http://zengrong.net/post/1746.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git查看、删除、重命名远程分支和tag&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不知道为什么 我用TortoiseGit在本地打上了标签 但是同步的时候 Github却不显示 使用了 git bash 命令 推送了一下就好使了  &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="http://elickzhao.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>连接容器 --link 简要说明</title>
@@ -43,7 +67,7 @@
     <link href="http://elickzhao.github.io/2016/05/Docker%20Compose%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%20yaml%20%20%E5%8F%82%E6%95%B0%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
     <id>http://elickzhao.github.io/2016/05/Docker Compose 配置文件 yaml  参数简单介绍/</id>
     <published>2016-05-02T14:35:58.000Z</published>
-    <updated>2016-05-02T14:38:42.362Z</updated>
+    <updated>2016-05-03T10:05:08.441Z</updated>
     
     <content type="html">&lt;p&gt;一般情况的用法&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mysql:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  environment:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        - MYSQL_ROOT_PASSWORD=123456&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;php:  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./php&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  expose:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - &amp;quot;9000:9000&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  links:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  privileged: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nginx:  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./nginx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  links:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - php:php&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ports:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - &amp;quot;80:80&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  privileged: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -199,6 +223,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;感觉有些命令和docker命令重合 所以感觉有些命令没什么用处&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://codecloud.net/docker-compose-yaml-5232.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker Compose YAML 模板文件&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -638,9 +663,9 @@
     </summary>
     
     
-      <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
-    
       <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
+    
+      <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
     
   </entry>
   
@@ -1143,11 +1168,11 @@
     <link href="http://elickzhao.github.io/2016/04/%E8%A7%A3%E5%86%B3ln%20-s%20%E8%BD%AF%E9%93%BE%E6%8E%A5%E4%BA%A7%E7%94%9FToo%20many%20levels%20of%20symbolic%20links%E9%94%99%E8%AF%AF/"/>
     <id>http://elickzhao.github.io/2016/04/解决ln -s 软链接产生Too many levels of symbolic links错误/</id>
     <published>2016-04-18T02:50:14.000Z</published>
-    <updated>2016-04-19T07:35:48.463Z</updated>
+    <updated>2016-05-03T09:32:47.614Z</updated>
     
     <content type="html">&lt;p&gt;今天生成软连接发生这个报错,查了一下,原来是因为使用了相对路径,改成绝对路径就没有问题了&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$ln&lt;/span&gt; &lt;span class=&quot;_&quot;&gt;-s&lt;/span&gt; /cygdrive/f/Vagrant /home/elick/vagrant&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;命令解析:&lt;br&gt;ln -s 源目录 目标目录&lt;/p&gt;
+&lt;p&gt;命令解析:&lt;br&gt;ln [参数][源文件或目录][目标文件或目录]&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
@@ -1163,52 +1188,6 @@
       <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
     
       <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在VirtualBox和Vagrant中安装Docker</title>
-    <link href="http://elickzhao.github.io/2016/04/%E5%9C%A8VirtualBox%E5%92%8CVagrant%E4%B8%AD%E5%AE%89%E8%A3%85Docker/"/>
-    <id>http://elickzhao.github.io/2016/04/在VirtualBox和Vagrant中安装Docker/</id>
-    <published>2016-04-13T16:18:48.000Z</published>
-    <updated>2016-04-20T10:26:36.296Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;参考文章&quot;&gt;&lt;a href=&quot;#参考文章&quot; class=&quot;headerlink&quot; title=&quot;参考文章&quot;&gt;&lt;/a&gt;参考文章&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.jdon.com/artichect/docker-install.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在VirtualBox和Vagrant中安装Docker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/V36R3y&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OSX下使用vagrant和docker管理创建虚拟环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://rmingwang.com/vagrant-commands-and-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vagrant简介和安装配置&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ninghao.net/blog/1566&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 Vagrant 搭建本地开发环境的教程&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.oschina.net/translate/unsuck-your-vagrant-developing-in-one-vm-with-vagrant-and-docker&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 Vagrant 和 Docker 在一个 VM 中进行开发&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cloud.51cto.com/art/201503/470256_all.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_72ef7bea0102vucz.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vagrant运行Docker的几种方法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/ac1985482/p/4029315.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vagrant在windows下的使用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.blogjava.net/yongboy/archive/2013/08/26/403325.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;服务器操作系统CoreOS初体验&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://betacz.com/series/%E5%BD%93%E6%B5%81%E6%B5%AA%E8%80%85%28Vagrant%29%E9%81%87%E8%A7%81%E7%A0%81%E5%A4%B4%E5%B7%A5%E4%BA%BA%28Docker%29/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;‘当流浪者(Vagrant)遇见码头工人(Docker)’系列&lt;/a&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;自我理解&quot;&gt;&lt;a href=&quot;#自我理解&quot; class=&quot;headerlink&quot; title=&quot;自我理解&quot;&gt;&lt;/a&gt;自我理解&lt;/h1&gt;&lt;p&gt;用boot2docker启动docker 容器一直会卡在 &lt;code&gt;default: Syncing folders to the host VM...&lt;/code&gt; 看了下&lt;a href=&quot;https://www.vagrantup.com/docs/docker/basics.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Synced folder note: Vagrant will attempt to use the “best” synced folder implementation it can. For boot2docker, this is often rsync. In this case, make sure you have rsync installed on your host machine. Vagrant will give you a human-friendly error message if it is not.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;del&gt;这尿性是要安装一个rsync的同步软件 这鸟东西安装起来蛮麻烦的 而且基本用不到 所以不装了  毕竟就算是生产环境肯定用不到这个 linux版本 所以开发的时候还得装别的版本 以达到和生产环境同步 所以算了&lt;br&gt;直接搞个 CoreOS 这个试试吧 这个挺新的比较有趣&lt;/del&gt;&lt;br&gt;最后还是测试了rsync这个软件,因为使用CoreOS加载docker镜像 也会出现卡在同步文件夹那 所以看来问题不在boot2docker &lt;/p&gt;
-&lt;h1 id=&quot;得到升华&quot;&gt;&lt;a href=&quot;#得到升华&quot; class=&quot;headerlink&quot; title=&quot;得到升华&quot;&gt;&lt;/a&gt;得到升华&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;我找到个方法 可以解决这个问题 但是并不是十全十美的方法&lt;/strong&gt;&lt;br&gt;就是屏蔽同步文件夹&lt;br&gt;&lt;figure class=&quot;highlight vb&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Vagrant.configure(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; |config|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  config.vm.synced_folder &lt;span class=&quot;string&quot;&gt;&quot;.&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;/vagrant&quot;&lt;/span&gt;, disabled: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;  &lt;span class=&quot;meta&quot;&gt;#这一句就是&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  config.vm.provider &lt;span class=&quot;string&quot;&gt;&quot;docker&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; |d|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d.image = &lt;span class=&quot;string&quot;&gt;&quot;tknerr/baseimage-ubuntu:14.04&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d.has_ssh = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;#这句是新加的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;#d.vagrant_machine = &quot;dockerhost&quot; &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   	&lt;span class=&quot;meta&quot;&gt;#d.vagrant_vagrantfile = &quot;../coreos/Vagrantfile&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;#config.vm.box = &quot;coreos-stable&quot; &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  config.vm.provision &lt;span class=&quot;string&quot;&gt;&quot;shell&quot;&lt;/span&gt;, inline: &lt;span class=&quot;string&quot;&gt;&quot;echo &#39;hello docker!&#39;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;惊喜发现&quot;&gt;&lt;a href=&quot;#惊喜发现&quot; class=&quot;headerlink&quot; title=&quot;惊喜发现&quot;&gt;&lt;/a&gt;惊喜发现&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;这个简直太省地方了:&lt;/strong&gt; 利用boot2docker 加载 tknerr/baseimage-ubuntu:14.04 这个基础镜像 最后生成的虚拟机才有400M coreOS是900M多  而Homestead 已经是2.67G了&lt;br&gt;&lt;img src=&quot;/image/16-4/1.png&quot; alt=&quot;hello&quot;&gt;&lt;/p&gt;
-&lt;p&gt;而且使用的box也非常省 boot2docker只有20M而已&lt;/p&gt;
-&lt;h2 id=&quot;目录说明&quot;&gt;&lt;a href=&quot;#目录说明&quot; class=&quot;headerlink&quot; title=&quot;目录说明&quot;&gt;&lt;/a&gt;目录说明&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;C:\Users\elick.vagrant.d&lt;/strong&gt; 这是vagrant的根目录 最主要有两个目录&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;boxes&lt;br&gt; 这个是存放box的目录,所有你下载的各种box都在这里 &lt;/li&gt;
-&lt;li&gt;data&lt;br&gt; 这个是存放host的一些信息的地方&lt;ul&gt;
-&lt;li&gt;docker-host&lt;br&gt;  这个就是用docker,而没有加载box的时候 自动下载的boot2docker&lt;/li&gt;
-&lt;li&gt;machine-index&lt;br&gt;  存着建立多少个host和host状态的信息 就是那个index 如果在virtualbox删除了host 这里还显示可以在这里手动删了&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;C:\Users\elick\VirtualBox VMs&lt;/strong&gt; 就是virtualbox存放虚拟机的位置&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;参考文章&quot;&gt;&lt;a href=&quot;#参考文章&quot; class=&quot;headerlink&quot; title=&quot;参考文章&quot;&gt;&lt;/a&gt;参考文章&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://www.jdon.com/artichect/docker-install.html&quot;&gt;在VirtualBox和Vagrant中安装Docker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/V36R3y&quot;&gt;OSX下使用vagrant和docker管理创建虚拟环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://rmingwang.com/vagrant-commands-and-config.html&quot;&gt;Vagrant简介和安装配置&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ninghao.net/blog/1566&quot;&gt;使用 Vagrant 搭建本地开发环境的教程&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.oschina.net/translate/unsuck-your-vagrant-developing-in-one-vm-with-vagrant-and-docker&quot;&gt;使用 Vagrant 和 Docker 在一个 VM 中进行开发&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cloud.51cto.com/art/201503/470256_all.htm&quot;&gt;1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_72ef7bea0102vucz.html&quot;&gt;Vagrant运行Docker的几种方法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/ac1985482/p/4029315.html&quot;&gt;vagrant在windows下的使用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.blogjava.net/yongboy/archive/2013/08/26/403325.html&quot;&gt;服务器操作系统CoreOS初体验&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://betacz.com/series/%E5%BD%93%E6%B5%81%E6%B5%AA%E8%80%85%28Vagrant%29%E9%81%87%E8%A7%81%E7%A0%81%E5%A4%B4%E5%B7%A5%E4%BA%BA%28Docker%29/&quot;&gt;‘当流浪者(Vagrant)遇见码头工人(Docker)’系列&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="服务器端" scheme="http://elickzhao.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"/>
-    
-    
-      <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
-    
-      <category term="vagrant" scheme="http://elickzhao.github.io/tags/vagrant/"/>
     
   </entry>
   
