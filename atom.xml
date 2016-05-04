@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-04T08:57:39.491Z</updated>
+  <updated>2016-05-04T09:56:26.801Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -16,11 +16,104 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>windows 下安装VirtualBox , Vagrant 和 Homestead</title>
+    <link href="http://elickzhao.github.io/2016/05/windows%20%E4%B8%8B%E5%AE%89%E8%A3%85VirtualBox%20,%20Vagrant%20%E5%92%8C%20Homestead/"/>
+    <id>http://elickzhao.github.io/2016/05/windows 下安装VirtualBox , Vagrant 和 Homestead/</id>
+    <published>2016-05-04T09:54:01.000Z</published>
+    <updated>2016-05-04T09:56:26.801Z</updated>
+    
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;下载 VirtualBox 并安装 这个不用说一顿下一步就好了 &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载安装 Vagrant 这个也是跟上面一样 &lt;a href=&quot;https://www.vagrantup.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;下载地址&lt;/a&gt; 哦 记得重启电脑要不命令不好使的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载 Homestead Vagrant Box  这里你可以使用命令 &lt;code&gt;vagrant box add laravel/homestead&lt;/code&gt;  慢慢等 大概20分钟左右吧 &lt;code&gt;(使用命令时会让你选择 记得要选择 virtualbox 如果你装的VM那就选另一个就好了)&lt;/code&gt;&lt;br&gt;也可以看到下载地址自己下 就是在输入命令后 开始下载时 果断 Ctrl+C &lt;img src=&quot;https://dn-phphub.qbox.me/uploads/images/201502/22/1/MK7b6C67N1.png&quot; alt=&quot;就是这里&quot;&gt;&lt;br&gt;通过地址我发现 &lt;a href=&quot;https://atlas.hashicorp.com/laravel/boxes/homestead&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;直接去浏览版本&lt;/a&gt; 然后进入版本后在后面 接上这个 &lt;code&gt;providers/virtualbox.box&lt;/code&gt; 就可以下载了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我试了下下载速度其实快不了多少 但是有个好处可以断点续传 而使用命令是不可以的 如果失败了 是比较麻烦的&lt;br&gt;&lt;a href=&quot;https://atlas.hashicorp.com/laravel/boxes/homestead/versions/0.4.2/providers/virtualbox.box&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://atlas.hashicorp.com/laravel/boxes/homestead/versions/0.4.2/providers/virtualbox.box&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;失败了…  唉下载那种方式我失败了 总说文件无法打开 也不知道为啥 但是别人都成功了 算了不管了 以后再说吧 还是直接用命令下 反正时间也没差多少&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;命令执行后 会在 C:\Users\ &lt;code&gt;你的用户名&lt;/code&gt; \.vagrant.d\boxes 下面增加这个box (名字是laravel-VAGRANTSLASH-homestead) 如果想删除可以直接上这里删除 (而且上次操作时不知道为什么出来两个版本 一个0.4.2 一个0.3.0 不知道是不是跟我建立了两个虚拟机有关 以后测试下) 不过现在光有box 还没有建立虚拟机&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下面是下载 laravel/Homestead命令 &lt;code&gt;composer global require &amp;quot;laravel/homestead=~2.0&amp;quot;&lt;/code&gt; 如果你没装composer 可以直接用git clone 来下载 &lt;code&gt;git clone https://github.com/laravel/homestead.git Homestead&lt;/code&gt; 可以任选其一 &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;初始化 配置文件 Homestead.yaml 这个有很三个方法 &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;去克隆下来文件夹,找到init.bat点击执行就可以了 就会生成默认配置文件 (composer global 下载的文件位置在 C:\Users\ &lt;code&gt;你的用户名&lt;/code&gt; \AppData\Roaming\Composer\vendor\laravel\homestead)&lt;/li&gt;
+&lt;li&gt;还是去到克隆的那个文件夹 使用 bash init.sh 来生成 但是这个需要你安装Git 并且把Git下的bin目录放到环境变量里才可以 否则找不到这个bash命令的&lt;/li&gt;
+&lt;li&gt;使用homestead init 来生成默认配置 但是同样 需要配置环境变量 否则无法使用, 建议还是把composer配置到环境变量,因为其他一些项目有时也需要执行一些命令 这样可以一劳永逸 比如laravel-install (配置环境变量的目录 C:\Users\ &lt;code&gt;你的用户名&lt;/code&gt;\AppData\Roaming\Composer\vendor\bin)&lt;br&gt;&lt;strong&gt;&lt;del&gt;第三个方法又失败了 可能windows下不能使用 只有在linux才能使用 反正提示没有init这个命令 而且 -h 也没有 找到这个命令&lt;/del&gt;&lt;/strong&gt;  可以了原来是 laravel/Homestea 版本问题 如果是3.0版本就没有这个命令 2.0的版本就有这个命令 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;好了 这种方式是全局安装 接下来就是配置这个 主机的配置了 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种方式是全局安装，即同一主机上所有项目共享该Homestead盒子，当然你也可以为每个项目单独指定Homestead盒子，可参考&lt;a href=&quot;http://laravelacademy.org/post/51.html#ipt_kb_toc_51_6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Laravel Homestead相应的文档&lt;/a&gt;，这里不再赘述。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 虚拟主机ip 这个默认就可以不需要改&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ip: &amp;quot;192.168.10.10&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 虚拟主机 使用内存&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;memory: 2048&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 虚拟主机 使用CPU核心数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cpus: 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 使用哪个 Vagrant 提供者： virtualbox 、 vmware_fushion 或者 vmware_workstation 我们下载的是virtualbox版 所以默认就是这个了&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;provider: virtualbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 私有SSH KEY 这个我没有 也能登录和使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;authorize: ~/.ssh/id_rsa.pub&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;keys:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - ~/.ssh/id_rsa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 共享文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;folders:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - map: F:\phpStudy\WWW\homestead&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      to: /home/vagrant&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - map: F:\phpStudy\WWW\homestead\laravelapp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      to: /home/vagrant/laravelapp  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 站点配置 这个需要配置本地host&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sites:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - map: homestead.app&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      to: /home/vagrant&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - map: laravel.app&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      to: /home/vagrant/laravelapp/public&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      //hhvm: true  这个必须对齐to 要不会报错&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#多站点可以这么写&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 数据库名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;databases:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - homestead&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 数据库对应.env环境变量 也就是laravel项目.env配置文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;variables:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - key: APP_ENV&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      value: local&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#黑火测试配置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# blackfire:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#     - id: foo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#       token: bar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#       client-id: foo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#       client-token: bar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#端口映射 可以把虚拟机端口&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# ports:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#     - send: 93000&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#       to: 9300&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#     - send: 7777&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#       to: 777&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#       protocol: udp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#测试一则 这里必须有空格 方向别搞反了&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ports:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - send: 8080&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      to: 80&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;启动并初始化 homestead 虚拟机 进入自己的目录 使用命令  &lt;code&gt;Homestead up&lt;/code&gt;  &lt;strong&gt;这个命令是2.0版本才有 3.0版本是没有的 而且使用前必须使用homestead init 要不即使有配置文件也会出错 还有个问题就是这个版本会找0.3.0那个版本的box 也就是说我上面下载的0.4.2那个没用了 也就是为什么上面说会出现两个版本 看来还得用新的3.0 Homestead试一下&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;有几个问题需要注意 共享目录如果配置错误 更改配置文件 居然也不好使 只能销毁重新建立虚拟机 不知道为什么 其他设置均可以 可能我这个机器Vagrant现在也有些问题 而且还有个问题共享目录php文件不显示 只显示laravel项目 很诡异 我在根目录放歌index.php文件就不显示 但是laravel项目指定域名就可以&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;这个新版本的3.0 很是麻烦 去掉了很多命令 就剩了一个make  &lt;del&gt;全局的虚拟机好像不好使了&lt;/del&gt; 只有项目的虚拟机可以用 而且比较简单 只要在项目里 &lt;code&gt;composer require laravel/homestead&lt;/code&gt; 并在项目根目录执行 &lt;code&gt;homestead make&lt;/code&gt;  然后启动就可以了 &lt;code&gt;vagrant up&lt;/code&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;全局的虚拟机可以使用 步骤是&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先安装 VirtualBox 和 Vagrant &lt;/li&gt;
+&lt;li&gt;到用户目录 也就是进入 &lt;code&gt;C:\Users\elick&lt;/code&gt; 以后 &lt;code&gt;git clone https://github.com/laravel/homestead.git Homestead&lt;/code&gt; 最好不要用composer 用Git吧 这个比较方便 和上个版本不一样了&lt;/li&gt;
+&lt;li&gt;进入 Homestead 用命令生成配置文件 &lt;code&gt;bash init.sh&lt;/code&gt; 或者点击init.bat 这样生成C:\Users\ &lt;code&gt;你的用户名&lt;/code&gt; .homestead 目录并且在目录下生成配置文件&lt;/li&gt;
+&lt;li&gt;然后这步很关键了 进入刚才git clone下来的 Homestead 目录 在这个目录下 vagrant up 其他目录使用这个命令是没用的 只有在这个目录里使用才可以 这样就生成了全局虚拟机&lt;/li&gt;
+&lt;li&gt;几个有用的命令&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vagrant destroy --force     //删除命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vagrant reload --provision  //更新配置文件 好像说是更新网站配置文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一些文章地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/small_rice_/article/details/45366299&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;windows 安装laravel Homestead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://lovelace.blog.51cto.com/1028430/1423343&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vagrant打造自己的开发环境~~我也来一发&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cloud.51cto.com/art/201503/470256_all.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://laravelacademy.org/post/2749.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;{Laravel 5.2 文档}  开始 —— Laravel Homestead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://laravel.com/docs/5.2/homestead&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Laravel Homestead&lt;/a&gt;  学院翻译的不完全 下面半段没翻译 所以还得看原版&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;下载 VirtualBox 并安装 这个不用说一顿下一步就好了 &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载安装 Vagrant 这个也是跟上面一样 &lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;下载地址&lt;/a&gt; 哦 记得重启电脑要不命令不好使的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载 Homestead Vagrant Box  这里你可以使用命令 &lt;code&gt;vagrant box add laravel/homestead&lt;/code&gt;  慢慢等 大概20分钟左右吧 &lt;code&gt;(使用命令时会让你选择 记得要选择 virtualbox 如果你装的VM那就选另一个就好了)&lt;/code&gt;&lt;br&gt;也可以看到下载地址自己下 就是在输入命令后 开始下载时 果断 Ctrl+C &lt;img src=&quot;https://dn-phphub.qbox.me/uploads/images/201502/22/1/MK7b6C67N1.png&quot; alt=&quot;就是这里&quot;&gt;&lt;br&gt;通过地址我发现 &lt;a href=&quot;https://atlas.hashicorp.com/laravel/boxes/homestead&quot;&gt;直接去浏览版本&lt;/a&gt; 然后进入版本后在后面 接上这个 &lt;code&gt;providers/virtualbox.box&lt;/code&gt; 就可以下载了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我试了下下载速度其实快不了多少 但是有个好处可以断点续传 而使用命令是不可以的 如果失败了 是比较麻烦的&lt;br&gt;&lt;a href=&quot;https://atlas.hashicorp.com/laravel/boxes/homestead/versions/0.4.2/providers/virtualbox.box&quot;&gt;https://atlas.hashicorp.com/laravel/boxes/homestead/versions/0.4.2/providers/virtualbox.box&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;失败了…  唉下载那种方式我失败了 总说文件无法打开 也不知道为啥 但是别人都成功了 算了不管了 以后再说吧 还是直接用命令下 反正时间也没差多少&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="vagrant" scheme="http://elickzhao.github.io/tags/vagrant/"/>
+    
+      <category term="laravel" scheme="http://elickzhao.github.io/tags/laravel/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自己的docker开发环境 -- 自我版</title>
     <link href="http://elickzhao.github.io/2016/05/%E8%87%AA%E5%B7%B1%E7%9A%84docker%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%20--%20%E8%87%AA%E6%88%91%E7%89%88/"/>
     <id>http://elickzhao.github.io/2016/05/自己的docker开发环境 -- 自我版/</id>
     <published>2016-05-04T08:49:40.000Z</published>
-    <updated>2016-05-04T08:57:39.491Z</updated>
+    <updated>2016-05-04T09:58:07.442Z</updated>
     
     <content type="html">&lt;p&gt;这世界变化快啊 我刚学会这个 又出新东西了&lt;br&gt;&lt;a href=&quot;http://www.csdn.net/article/2014-12-24/2823292-Docker-Kubernetes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;基于Kubernetes构建Docker集群管理详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.open-open.com/lib/view/open1428540315869.html#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker Machine + Compose + Swarm&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://os.51cto.com/art/201411/456204.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;让Docker功能更强大的10个开源工具&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://elickzhao.github.io/2016/05/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%20--link%20%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E/&quot;&gt;连接容器 –link 简要说明&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;懒人的最爱-–-下载快速用&quot;&gt;&lt;a href=&quot;#懒人的最爱-–-下载快速用&quot; class=&quot;headerlink&quot; title=&quot;懒人的最爱 – 下载快速用&quot;&gt;&lt;/a&gt;懒人的最爱 – 下载快速用&lt;/h1&gt;&lt;p&gt;为了方便急用的同志们,把仓库和配置方法放在最前面,如果想学习的请往下看&lt;/p&gt;
@@ -111,7 +204,9 @@
     </summary>
     
     
-      <category term="docker 服务器相关技术" scheme="http://elickzhao.github.io/tags/docker-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
+      <category term="docker" scheme="http://elickzhao.github.io/tags/docker/"/>
+    
+      <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -1214,43 +1309,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;查看docker信息（version、info）&quot;&gt;&lt;a href=&quot;#查看docker信息（version、info）&quot; class=&quot;headerlink&quot; title=&quot;查看docker信息（version、info）&quot;&gt;&lt;/a&gt;查看docker信息（ver
-    
-    </summary>
-    
-      <category term="服务器端" scheme="http://elickzhao.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"/>
-    
-    
-      <category term="docker" scheme="http://elickzhao.github.io/tags/docker/"/>
-    
-      <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker及boot2docker相关研究</title>
-    <link href="http://elickzhao.github.io/2016/04/docker%E5%8F%8Aboot2docker%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6/"/>
-    <id>http://elickzhao.github.io/2016/04/docker及boot2docker相关研究/</id>
-    <published>2016-04-18T14:51:49.000Z</published>
-    <updated>2016-04-20T08:12:12.265Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;boot2docker转发端口问题&quot;&gt;&lt;a href=&quot;#boot2docker转发端口问题&quot; class=&quot;headerlink&quot; title=&quot;boot2docker转发端口问题&quot;&gt;&lt;/a&gt;boot2docker转发端口问题&lt;/h1&gt;&lt;p&gt;  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 &lt;code&gt;docker run -dp 8080:8080 php&lt;/code&gt;进行转发 但是还需要修改虚拟机的端口转发才可以 &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;命令解析:&lt;br&gt;  docker -d 后台执行 -p 转发端口&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;  &lt;img src=&quot;/image/16-4/2.png&quot; alt=&quot;虚拟机转发端口&quot;&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;boot2docker数据卷问题&quot;&gt;&lt;a href=&quot;#boot2docker数据卷问题&quot; class=&quot;headerlink&quot; title=&quot;boot2docker数据卷问题&quot;&gt;&lt;/a&gt;boot2docker数据卷问题&lt;/h1&gt;&lt;p&gt;  这个就更恶心了,使用在windows下的boot2docker命令行就会报错,只有进入virtualbox 使用命令 &lt;code&gt;docker run -dp 8080:8080 --name test1 -v /c/Users/elick/www:/var/www elick/php&lt;/code&gt;才可以 真是醉了&lt;br&gt;  &lt;strong&gt;需要注意的一点:&lt;/strong&gt; boot2docker建立的虚拟机有个自启动共享目录 &lt;code&gt;c/Users C:\Users&lt;/code&gt; 在虚拟机里的根目录下能看到这个目录 所以windows上的目录的根目录是/c/开始的&lt;br&gt;&lt;img src=&quot;/image/16-4/3.png&quot; alt=&quot;共享目录&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;boot2docker使用总结&quot;&gt;&lt;a href=&quot;#boot2docker使用总结&quot; class=&quot;headerlink&quot; title=&quot;boot2docker使用总结&quot;&gt;&lt;/a&gt;boot2docker使用总结&lt;/h1&gt;&lt;p&gt;  从上面两点来看,虽然省略了配置vagrantfile的麻烦,但是还得去弄虚拟机从这点看,貌似还不如使用vagrant来的简单些&lt;/p&gt;
-&lt;h1 id=&quot;相关资料&quot;&gt;&lt;a href=&quot;#相关资料&quot; class=&quot;headerlink&quot; title=&quot;相关资料&quot;&gt;&lt;/a&gt;相关资料&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://avnpc.com/pages/build-php-develop-env-by-docker&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker在PHP项目开发环境中的应用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/uYzeAnz&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;{译} 深入理解 Docker Volume（一）&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://my.oschina.net/mfk123/blog/292425&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dockers 快速学习（四）Docker 容器的使用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.linuxdown.net/install/soft/2016/0303/4906.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker安装_Ubuntu 15.10 &amp;amp; 14.04 LTS上安装和管理Docker&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/halcyonbaby/article/details/46884605&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker exec与Docker attach&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.chinaunix.net/uid-10915175-id-4443127.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker之常用命令&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/7V7vYn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker学习笔记(2)–Docker常用命令&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://tech.uc.cn/?p=2726&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;利用Docker构建开发环境&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://snoopyxdy.blog.163.com/blog/static/6011744020147187542090&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;利用docker快速部署应用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/junjun16818/article/details/30655543&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker volume使用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://my.oschina.net/piorcn/blog/324202&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker学习—挂载本地目录&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;boot2docker转发端口问题&quot;&gt;&lt;a href=&quot;#boot2docker转发端口问题&quot; class=&quot;headerlink&quot; title=&quot;boot2docker转发端口问题&quot;&gt;&lt;/a&gt;boot2docker转发端口问题&lt;/h1&gt;&lt;p&gt;  这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 &lt;code&gt;docker run -dp 8080:8080 php&lt;/code&gt;进行转发 但是还需要修改虚拟机的端口转发才可以 &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;命令解析:&lt;br&gt;  docker -d 后台执行 -p 转发端口&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;  &lt;img src=&quot;/image/16-4/2.png&quot; alt=&quot;虚拟机转发端口&quot;&gt;&lt;/p&gt;
     
     </summary>
     

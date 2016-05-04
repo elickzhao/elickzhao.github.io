@@ -4,6 +4,70 @@
   
     
     <entry>
+      <title><![CDATA[windows 下安装VirtualBox , Vagrant 和 Homestead]]></title>
+      <url>http://elickzhao.github.io/2016/05/windows%20%E4%B8%8B%E5%AE%89%E8%A3%85VirtualBox%20,%20Vagrant%20%E5%92%8C%20Homestead/</url>
+      <content type="html"><![CDATA[<ul>
+<li><p>下载 VirtualBox 并安装 这个不用说一顿下一步就好了 <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">下载地址</a></p>
+</li>
+<li><p>下载安装 Vagrant 这个也是跟上面一样 <a href="https://www.vagrantup.com/" target="_blank" rel="external">下载地址</a> 哦 记得重启电脑要不命令不好使的</p>
+</li>
+<li><p>下载 Homestead Vagrant Box  这里你可以使用命令 <code>vagrant box add laravel/homestead</code>  慢慢等 大概20分钟左右吧 <code>(使用命令时会让你选择 记得要选择 virtualbox 如果你装的VM那就选另一个就好了)</code><br>也可以看到下载地址自己下 就是在输入命令后 开始下载时 果断 Ctrl+C <img src="https://dn-phphub.qbox.me/uploads/images/201502/22/1/MK7b6C67N1.png" alt="就是这里"><br>通过地址我发现 <a href="https://atlas.hashicorp.com/laravel/boxes/homestead" target="_blank" rel="external">直接去浏览版本</a> 然后进入版本后在后面 接上这个 <code>providers/virtualbox.box</code> 就可以下载了</p>
+<blockquote>
+<p>我试了下下载速度其实快不了多少 但是有个好处可以断点续传 而使用命令是不可以的 如果失败了 是比较麻烦的<br><a href="https://atlas.hashicorp.com/laravel/boxes/homestead/versions/0.4.2/providers/virtualbox.box" target="_blank" rel="external">https://atlas.hashicorp.com/laravel/boxes/homestead/versions/0.4.2/providers/virtualbox.box</a></p>
+</blockquote>
+</li>
+</ul>
+<p><strong>失败了…  唉下载那种方式我失败了 总说文件无法打开 也不知道为啥 但是别人都成功了 算了不管了 以后再说吧 还是直接用命令下 反正时间也没差多少</strong><br><a id="more"></a></p>
+<ul>
+<li><p>命令执行后 会在 C:\Users\ <code>你的用户名</code> \.vagrant.d\boxes 下面增加这个box (名字是laravel-VAGRANTSLASH-homestead) 如果想删除可以直接上这里删除 (而且上次操作时不知道为什么出来两个版本 一个0.4.2 一个0.3.0 不知道是不是跟我建立了两个虚拟机有关 以后测试下) 不过现在光有box 还没有建立虚拟机</p>
+</li>
+<li><p>下面是下载 laravel/Homestead命令 <code>composer global require &quot;laravel/homestead=~2.0&quot;</code> 如果你没装composer 可以直接用git clone 来下载 <code>git clone https://github.com/laravel/homestead.git Homestead</code> 可以任选其一 </p>
+</li>
+<li><p>初始化 配置文件 Homestead.yaml 这个有很三个方法 </p>
+<ol>
+<li>去克隆下来文件夹,找到init.bat点击执行就可以了 就会生成默认配置文件 (composer global 下载的文件位置在 C:\Users\ <code>你的用户名</code> \AppData\Roaming\Composer\vendor\laravel\homestead)</li>
+<li>还是去到克隆的那个文件夹 使用 bash init.sh 来生成 但是这个需要你安装Git 并且把Git下的bin目录放到环境变量里才可以 否则找不到这个bash命令的</li>
+<li>使用homestead init 来生成默认配置 但是同样 需要配置环境变量 否则无法使用, 建议还是把composer配置到环境变量,因为其他一些项目有时也需要执行一些命令 这样可以一劳永逸 比如laravel-install (配置环境变量的目录 C:\Users\ <code>你的用户名</code>\AppData\Roaming\Composer\vendor\bin)<br><strong><del>第三个方法又失败了 可能windows下不能使用 只有在linux才能使用 反正提示没有init这个命令 而且 -h 也没有 找到这个命令</del></strong>  可以了原来是 laravel/Homestea 版本问题 如果是3.0版本就没有这个命令 2.0的版本就有这个命令 </li>
+</ol>
+</li>
+<li><p>好了 这种方式是全局安装 接下来就是配置这个 主机的配置了 </p>
+<blockquote>
+<p>这种方式是全局安装，即同一主机上所有项目共享该Homestead盒子，当然你也可以为每个项目单独指定Homestead盒子，可参考<a href="http://laravelacademy.org/post/51.html#ipt_kb_toc_51_6" target="_blank" rel="external">Laravel Homestead相应的文档</a>，这里不再赘述。</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"># 虚拟主机ip 这个默认就可以不需要改</span><br><span class="line">ip: &quot;192.168.10.10&quot;</span><br><span class="line"></span><br><span class="line"># 虚拟主机 使用内存</span><br><span class="line">memory: 2048</span><br><span class="line"></span><br><span class="line"># 虚拟主机 使用CPU核心数</span><br><span class="line">cpus: 1</span><br><span class="line"></span><br><span class="line"># 使用哪个 Vagrant 提供者： virtualbox 、 vmware_fushion 或者 vmware_workstation 我们下载的是virtualbox版 所以默认就是这个了</span><br><span class="line">provider: virtualbox</span><br><span class="line"></span><br><span class="line"># 私有SSH KEY 这个我没有 也能登录和使用</span><br><span class="line">authorize: ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">keys:</span><br><span class="line">    - ~/.ssh/id_rsa</span><br><span class="line"># 共享文件夹</span><br><span class="line">folders:</span><br><span class="line">    - map: F:\phpStudy\WWW\homestead</span><br><span class="line">      to: /home/vagrant</span><br><span class="line">    - map: F:\phpStudy\WWW\homestead\laravelapp</span><br><span class="line">      to: /home/vagrant/laravelapp  </span><br><span class="line">      </span><br><span class="line"># 站点配置 这个需要配置本地host</span><br><span class="line">sites:</span><br><span class="line">    - map: homestead.app</span><br><span class="line">      to: /home/vagrant</span><br><span class="line">    - map: laravel.app</span><br><span class="line">      to: /home/vagrant/laravelapp/public</span><br><span class="line">      //hhvm: true  这个必须对齐to 要不会报错</span><br><span class="line">      </span><br><span class="line">#多站点可以这么写</span><br><span class="line">      </span><br><span class="line"># 数据库名</span><br><span class="line">databases:</span><br><span class="line">    - homestead</span><br><span class="line"></span><br><span class="line"># 数据库对应.env环境变量 也就是laravel项目.env配置文件</span><br><span class="line">variables:</span><br><span class="line">    - key: APP_ENV</span><br><span class="line">      value: local</span><br><span class="line"></span><br><span class="line">#黑火测试配置</span><br><span class="line"># blackfire:</span><br><span class="line">#     - id: foo</span><br><span class="line">#       token: bar</span><br><span class="line">#       client-id: foo</span><br><span class="line">#       client-token: bar</span><br><span class="line"></span><br><span class="line">#端口映射 可以把虚拟机端口</span><br><span class="line"># ports:</span><br><span class="line">#     - send: 93000</span><br><span class="line">#       to: 9300</span><br><span class="line">#     - send: 7777</span><br><span class="line">#       to: 777</span><br><span class="line">#       protocol: udp</span><br><span class="line">#测试一则 这里必须有空格 方向别搞反了</span><br><span class="line">ports:</span><br><span class="line">    - send: 8080</span><br><span class="line">      to: 80</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>启动并初始化 homestead 虚拟机 进入自己的目录 使用命令  <code>Homestead up</code>  <strong>这个命令是2.0版本才有 3.0版本是没有的 而且使用前必须使用homestead init 要不即使有配置文件也会出错 还有个问题就是这个版本会找0.3.0那个版本的box 也就是说我上面下载的0.4.2那个没用了 也就是为什么上面说会出现两个版本 看来还得用新的3.0 Homestead试一下</strong></p>
+</li>
+<li><p><strong>有几个问题需要注意 共享目录如果配置错误 更改配置文件 居然也不好使 只能销毁重新建立虚拟机 不知道为什么 其他设置均可以 可能我这个机器Vagrant现在也有些问题 而且还有个问题共享目录php文件不显示 只显示laravel项目 很诡异 我在根目录放歌index.php文件就不显示 但是laravel项目指定域名就可以</strong></p>
+</li>
+<li><p>这个新版本的3.0 很是麻烦 去掉了很多命令 就剩了一个make  <del>全局的虚拟机好像不好使了</del> 只有项目的虚拟机可以用 而且比较简单 只要在项目里 <code>composer require laravel/homestead</code> 并在项目根目录执行 <code>homestead make</code>  然后启动就可以了 <code>vagrant up</code> </p>
+</li>
+<li><p>全局的虚拟机可以使用 步骤是</p>
+<ol>
+<li>先安装 VirtualBox 和 Vagrant </li>
+<li>到用户目录 也就是进入 <code>C:\Users\elick</code> 以后 <code>git clone https://github.com/laravel/homestead.git Homestead</code> 最好不要用composer 用Git吧 这个比较方便 和上个版本不一样了</li>
+<li>进入 Homestead 用命令生成配置文件 <code>bash init.sh</code> 或者点击init.bat 这样生成C:\Users\ <code>你的用户名</code> .homestead 目录并且在目录下生成配置文件</li>
+<li>然后这步很关键了 进入刚才git clone下来的 Homestead 目录 在这个目录下 vagrant up 其他目录使用这个命令是没用的 只有在这个目录里使用才可以 这样就生成了全局虚拟机</li>
+<li>几个有用的命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vagrant destroy --force     //删除命令</span><br><span class="line">vagrant reload --provision  //更新配置文件 好像说是更新网站配置文件</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>一些文章地址</p>
+</li>
+</ul>
+<ol>
+<li><a href="http://blog.csdn.net/small_rice_/article/details/45366299" target="_blank" rel="external">windows 安装laravel Homestead</a></li>
+<li><a href="http://lovelace.blog.51cto.com/1028430/1423343" target="_blank" rel="external">vagrant打造自己的开发环境~~我也来一发</a></li>
+<li><a href="http://cloud.51cto.com/art/201503/470256_all.htm" target="_blank" rel="external">1+1&gt;2:用Docker和Vagrant构建简洁高效开发环境</a></li>
+<li><a href="http://laravelacademy.org/post/2749.html" target="_blank" rel="external">{Laravel 5.2 文档}  开始 —— Laravel Homestead</a></li>
+<li><a href="https://laravel.com/docs/5.2/homestead" target="_blank" rel="external">Laravel Homestead</a>  学院翻译的不完全 下面半段没翻译 所以还得看原版</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[自己的docker开发环境 -- 自我版]]></title>
       <url>http://elickzhao.github.io/2016/05/%E8%87%AA%E5%B7%B1%E7%9A%84docker%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%20--%20%E8%87%AA%E6%88%91%E7%89%88/</url>
       <content type="html"><![CDATA[<p>这世界变化快啊 我刚学会这个 又出新东西了<br><a href="http://www.csdn.net/article/2014-12-24/2823292-Docker-Kubernetes" target="_blank" rel="external">基于Kubernetes构建Docker集群管理详解</a><br><a href="http://www.open-open.com/lib/view/open1428540315869.html#" target="_blank" rel="external">Docker Machine + Compose + Swarm</a><br><a href="http://os.51cto.com/art/201411/456204.htm" target="_blank" rel="external">让Docker功能更强大的10个开源工具</a><br><a href="http://elickzhao.github.io/2016/05/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%20--link%20%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E/">连接容器 –link 简要说明</a></p>

@@ -280,6 +280,121 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/" itemprop="url">
+                  windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-01T20:54:10+09:00" content="2016-05-01">
+              2016-05-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ol>
+<li>安装git，从程序目录打开 “Git Bash” </li>
+<li>键入命令：ssh-keygen -t rsa -C “email@email.com”<br>“email@email.com”是github账号</li>
+<li>提醒你输入key的名称，输入如id_rsa</li>
+<li>在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub</li>
+<li>把4中生成的密钥文件复制到C:\Documents and Settings\Administrator.ssh\ 目 录下。</li>
+<li>用记事本打开id_rsa.pub文件，复制内容，在github.com的网站上到ssh密钥管理页面，添加新公钥，随便取个名字，内容粘贴刚</li>
+</ol>
+<p>才复制的内容。</p>
+<ol>
+<li>^_^ OK了</li>
+</ol>
+<p>需要注意步骤2中产生的密钥文件在当前用户的根目录，必须把这两个文件放到当前用户目录的“.ssh”目录下才能生效。<br>在windows中只能在命令行下输入创建”.”开头的文件夹。命令为 mkdir .ssh</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/常用的apt-get命令/" itemprop="url">
                   常用的apt-get命令
                 </a>
@@ -685,137 +800,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/总结 Dockerfile 一些命令说明/" itemprop="url">
-                  总结 Dockerfile 一些命令说明
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-27T23:44:57+09:00" content="2016-04-27">
-              2016-04-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/服务器端/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器端</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/总结 Dockerfile 一些命令说明/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/总结 Dockerfile 一些命令说明/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>Dockerfile是一个镜像的表示，可以通过Dockerfile来描述构建镜像的步骤，并自动构建一个容器<br>所有的 Dockerfile 命令格式都是:<br>INSTRUCTION arguments<br>虽然指令忽略大小写，但是建议使用大写。</p>
-</blockquote>
-<h1 id="FROM-命令"><a href="#FROM-命令" class="headerlink" title="FROM 命令"></a>FROM 命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;</span><br></pre></td></tr></table></figure>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这个设置基本的镜像，为后续的命令使用，所以应该作为Dockerfile的第一条指令。</p>
-<p>比如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu</span><br></pre></td></tr></table></figure></p>
-<p>如果没有指定 tag ，则默认tag是latest，如果都没有则会报错。</p>
-<h1 id="CMD-命令"><a href="#CMD-命令" class="headerlink" title="CMD 命令"></a>CMD 命令</h1><p>有三种格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] (like an exec, preferred form)</span><br><span class="line">CMD [&quot;param1&quot;,&quot;param2&quot;] (as default parameters to ENTRYPOINT)</span><br><span class="line">CMD command param1 param2 (as a shell)</span><br></pre></td></tr></table></figure></p>
-<p>一个Dockerfile里只能有一个CMD，如果有多个，只有最后一个生效。这是为了引用镜像时避免启动服务器而无法配置 所以你可以在最后再写个CMD从而屏蔽原镜像的命令</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/总结 Dockerfile 一些命令说明/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -861,7 +845,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -878,7 +862,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
