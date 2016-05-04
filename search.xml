@@ -44,8 +44,7 @@
 </li>
 <li><p>这个新版本的3.0 很是麻烦 去掉了很多命令 就剩了一个make  <del>全局的虚拟机好像不好使了</del> 只有项目的虚拟机可以用 而且比较简单 只要在项目里 <code>composer require laravel/homestead</code> 并在项目根目录执行 <code>homestead make</code>  然后启动就可以了 <code>vagrant up</code> </p>
 </li>
-<li><p>全局的虚拟机可以使用 步骤是</p>
-<ol>
+<li>全局的虚拟机可以使用 步骤是<ol>
 <li>先安装 VirtualBox 和 Vagrant </li>
 <li>到用户目录 也就是进入 <code>C:\Users\elick</code> 以后 <code>git clone https://github.com/laravel/homestead.git Homestead</code> 最好不要用composer 用Git吧 这个比较方便 和上个版本不一样了</li>
 <li>进入 Homestead 用命令生成配置文件 <code>bash init.sh</code> 或者点击init.bat 这样生成C:\Users\ <code>你的用户名</code> .homestead 目录并且在目录下生成配置文件</li>
@@ -54,8 +53,11 @@
 </li>
 </ol>
 </li>
-<li><p>一些文章地址</p>
-</li>
+</ul>
+<p><strong>注意:</strong>  <code>vagrant up</code> 必须在 Homestead 目录下使用,还有就是直接启动虚拟机的话,那么 <code>Homestead.yaml</code>的配置就会失效,所以必须用 <code>vagrant up</code> 来启动虚拟机. </p>
+<p><strong>*说明:</strong> 其实主要是挂载共享目录问题,端口是没问题的,只不过是默认端口,不是你配置的那个.所以你需要进入虚拟机后 手动挂载共享目录,这样也可以用的,只不过何必跟自己找麻烦,还是老实用<code>vagrant up</code>吧</p>
+<ul>
+<li>一些文章地址</li>
 </ul>
 <ol>
 <li><a href="http://blog.csdn.net/small_rice_/article/details/45366299" target="_blank" rel="external">windows 安装laravel Homestead</a></li>

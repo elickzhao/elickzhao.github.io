@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-04T09:56:26.801Z</updated>
+  <updated>2016-05-04T10:22:41.215Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://elickzhao.github.io/2016/05/windows%20%E4%B8%8B%E5%AE%89%E8%A3%85VirtualBox%20,%20Vagrant%20%E5%92%8C%20Homestead/"/>
     <id>http://elickzhao.github.io/2016/05/windows 下安装VirtualBox , Vagrant 和 Homestead/</id>
     <published>2016-05-04T09:54:01.000Z</published>
-    <updated>2016-05-04T09:56:26.801Z</updated>
+    <updated>2016-05-04T10:22:41.215Z</updated>
     
     <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;下载 VirtualBox 并安装 这个不用说一顿下一步就好了 &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
@@ -60,8 +60,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;这个新版本的3.0 很是麻烦 去掉了很多命令 就剩了一个make  &lt;del&gt;全局的虚拟机好像不好使了&lt;/del&gt; 只有项目的虚拟机可以用 而且比较简单 只要在项目里 &lt;code&gt;composer require laravel/homestead&lt;/code&gt; 并在项目根目录执行 &lt;code&gt;homestead make&lt;/code&gt;  然后启动就可以了 &lt;code&gt;vagrant up&lt;/code&gt; &lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;全局的虚拟机可以使用 步骤是&lt;/p&gt;
-&lt;ol&gt;
+&lt;li&gt;全局的虚拟机可以使用 步骤是&lt;ol&gt;
 &lt;li&gt;先安装 VirtualBox 和 Vagrant &lt;/li&gt;
 &lt;li&gt;到用户目录 也就是进入 &lt;code&gt;C:\Users\elick&lt;/code&gt; 以后 &lt;code&gt;git clone https://github.com/laravel/homestead.git Homestead&lt;/code&gt; 最好不要用composer 用Git吧 这个比较方便 和上个版本不一样了&lt;/li&gt;
 &lt;li&gt;进入 Homestead 用命令生成配置文件 &lt;code&gt;bash init.sh&lt;/code&gt; 或者点击init.bat 这样生成C:\Users\ &lt;code&gt;你的用户名&lt;/code&gt; .homestead 目录并且在目录下生成配置文件&lt;/li&gt;
@@ -70,8 +69,11 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;一些文章地址&lt;/p&gt;
-&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt;  &lt;code&gt;vagrant up&lt;/code&gt; 必须在 Homestead 目录下使用,还有就是直接启动虚拟机的话,那么 &lt;code&gt;Homestead.yaml&lt;/code&gt;的配置就会失效,所以必须用 &lt;code&gt;vagrant up&lt;/code&gt; 来启动虚拟机. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;*说明:&lt;/strong&gt; 其实主要是挂载共享目录问题,端口是没问题的,只不过是默认端口,不是你配置的那个.所以你需要进入虚拟机后 手动挂载共享目录,这样也可以用的,只不过何必跟自己找麻烦,还是老实用&lt;code&gt;vagrant up&lt;/code&gt;吧&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一些文章地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/small_rice_/article/details/45366299&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;windows 安装laravel Homestead&lt;/a&gt;&lt;/li&gt;
