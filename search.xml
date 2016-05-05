@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[一个图片说明开源许可协议]]></title>
+      <url>http://elickzhao.github.io/2016/05/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE%E4%BB%8B%E7%BB%8D/</url>
+      <content type="html"><![CDATA[<p><img src="image/16-5/1.jpg" alt="开源协议"></p>
+<p><strong>参考文章:</strong><br><a href="http://down.chinaz.com/server/201105/552_1.htm" target="_blank" rel="external">常用开源许可协议介绍</a><br><a href="http://git.oschina.net/oschina/git-osc/wikis/License" target="_blank" rel="external">开源许可证的一些介绍</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[git 删除右键菜单]]></title>
       <url>http://elickzhao.github.io/2016/05/git%20%E5%88%A0%E9%99%A4%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/</url>
       <content type="html"><![CDATA[<p>首先，我表示git默认的右键菜单很烦，太多项了，而我们平时用的最多的无非是一个Git Bash！<br>删除msGit右键菜单</p>

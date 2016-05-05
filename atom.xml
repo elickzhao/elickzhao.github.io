@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-04T13:07:01.430Z</updated>
+  <updated>2016-05-05T04:15:33.408Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个图片说明开源许可协议</title>
+    <link href="http://elickzhao.github.io/2016/05/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://elickzhao.github.io/2016/05/常用开源许可协议介绍/</id>
+    <published>2016-05-05T04:09:58.000Z</published>
+    <updated>2016-05-05T04:15:33.408Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;image/16-5/1.jpg&quot; alt=&quot;开源协议&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考文章:&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;http://down.chinaz.com/server/201105/552_1.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;常用开源许可协议介绍&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://git.oschina.net/oschina/git-osc/wikis/License&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开源许可证的一些介绍&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;image/16-5/1.jpg&quot; alt=&quot;开源协议&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考文章:&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;http://down.chinaz.com/server/201105/552_1.htm&quot; target=
+    
+    </summary>
+    
+    
+      <category term="小百科" scheme="http://elickzhao.github.io/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/"/>
+    
+  </entry>
   
   <entry>
     <title>git 删除右键菜单</title>
@@ -1287,28 +1310,6 @@
     
     
       <category term="Git" scheme="http://elickzhao.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>composer 一些使用记录</title>
-    <link href="http://elickzhao.github.io/2016/04/composer%20%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
-    <id>http://elickzhao.github.io/2016/04/composer 一些使用记录/</id>
-    <published>2016-04-18T16:01:32.000Z</published>
-    <updated>2016-05-04T12:05:03.737Z</updated>
-    
-    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;composer selfupdate                      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer require &amp;quot;foo/bar:1.0.0&amp;quot;                    安装一个库&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer update foo/bar                             更新单个库&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer create-project laravel/laravel myapp --prefer-dist 创建laravel项目&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer config -g repo.packagist composer https://packagist.phpcomposer.com 配置仓库镜像&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer global require &amp;quot;laravel/installer=~1.1&amp;quot;    全局安装laravel安装器&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer install update --prefer-dist               后面这个参数是强制使用压缩包&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer install --profile                          后面这个参数是显示安装时间&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer dump-autoload --optimize                   生产环境优化&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer update symfony/yaml --prefer-source        强制克隆代码 用于修改库文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;当你更新一个修改的库的时候 会提示你是否放弃修改&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;----------------------------------------------------------------------------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ composer update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Loading composer repositories with package information  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Updating dependencies  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  - Updating symfony/symfony v2.2.0 (v2.2.0- =&amp;gt; v2.2.0)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    The package has modified files:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    M Dumper.php&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Discard changes [y,n,v,s,?]?&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;----------------------------------------------------------------------------------------------------&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;全局配置目录&lt;/strong&gt;&lt;br&gt;C:\Users\elick\AppData\Roaming\Composer&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
-    
-    </summary>
-    
-    
-      <category term="composer" scheme="http://elickzhao.github.io/tags/composer/"/>
     
   </entry>
   
