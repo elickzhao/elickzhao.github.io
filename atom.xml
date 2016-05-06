@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-06T07:44:40.797Z</updated>
+  <updated>2016-05-06T08:31:49.821Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>composer 一些常用命令及使用心得</title>
+    <link href="http://elickzhao.github.io/2016/05/composer%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/"/>
+    <id>http://elickzhao.github.io/2016/05/composer 一些常用命令及使用心得/</id>
+    <published>2016-05-06T08:30:51.000Z</published>
+    <updated>2016-05-06T08:31:49.821Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;composer selfupdate                      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer require &amp;quot;foo/bar:1.0.0&amp;quot;                    安装一个库&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer update foo/bar                             更新单个库&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer create-project laravel/laravel myapp --prefer-dist 创建laravel项目&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer config -g repo.packagist composer https://packagist.phpcomposer.com 配置仓库镜像&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer global require &amp;quot;laravel/installer=~1.1&amp;quot;    全局安装laravel安装器&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer install update --prefer-dist               后面这个参数是强制使用压缩包&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer install --profile                          后面这个参数是显示安装时间&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer dump-autoload --optimize                   生产环境优化&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;composer update symfony/yaml --prefer-source        强制克隆代码 用于修改库文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;当你更新一个修改的库的时候 会提示你是否放弃修改&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;----------------------------------------------------------------------------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ composer update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Loading composer repositories with package information  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Updating dependencies  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  - Updating symfony/symfony v2.2.0 (v2.2.0- =&amp;gt; v2.2.0)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    The package has modified files:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    M Dumper.php&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Discard changes [y,n,v,s,?]?&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;----------------------------------------------------------------------------------------------------&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;全局配置目录&lt;/strong&gt;&lt;br&gt;C:\Users\elick\AppData\Roaming\Composer&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+    
+    </summary>
+    
+    
+      <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
+    
+      <category term="composer" scheme="http://elickzhao.github.io/tags/composer/"/>
+    
+  </entry>
   
   <entry>
     <title>webstorm 和 phpstorm 个人喜爱的设置</title>
@@ -1289,31 +1313,6 @@
       <category term="docker" scheme="http://elickzhao.github.io/tags/docker/"/>
     
       <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用的vagrant命令</title>
-    <link href="http://elickzhao.github.io/2016/04/%E5%B8%B8%E7%94%A8%E7%9A%84vagrant%E5%91%BD%E4%BB%A4/"/>
-    <id>http://elickzhao.github.io/2016/04/常用的vagrant命令/</id>
-    <published>2016-04-20T13:28:00.000Z</published>
-    <updated>2016-04-20T13:38:27.299Z</updated>
-    
-    <content type="html">&lt;p&gt;常用的vagrant命令:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant box add NAME URL    #添加一个box&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant box list            #查看本地已添加的box&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant box remove NAME virtualbox #删除本地已添加的box，如若是版本1.0.x，执行$ vagrant box remove  NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant init NAME          #初始化，实质应是创建Vagrantfile文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant up                   #启动虚拟机&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant halt                 #关闭虚拟机&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant destroy            #销毁虚拟机&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant reload             #重启虚拟机&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant package            #当前正在运行的VirtualBox虚拟环境打包成一个可重复使用的box&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant ssh                 #进入虚拟环境&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant init laravel/homestead #初始化并下载box&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ vagrant box add base precise64.box #base 表示指定默认的box，也可以为box指定名称，使用base时，之后可以直接使用 vagrant init 进行初始化，如果自行指定名称，则初始化的时候需要指定box的名称。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;常用的vagrant命令:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/
-    
-    </summary>
-    
-      <category term="服务器端" scheme="http://elickzhao.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"/>
-    
-    
-      <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="vagrant" scheme="http://elickzhao.github.io/tags/vagrant/"/>
     
   </entry>
   
