@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-06T08:31:49.821Z</updated>
+  <updated>2016-05-06T13:49:32.392Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nodejs npm常用命令</title>
+    <link href="http://elickzhao.github.io/2016/05/nodejs%20npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://elickzhao.github.io/2016/05/nodejs npm常用命令/</id>
+    <published>2016-05-06T13:47:16.000Z</published>
+    <updated>2016-05-06T13:49:32.392Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;npm search &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 搜索包&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 安装nodejs的依赖包&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt; -g&lt;/name&gt;&lt;/strong&gt;  将包安装到全局环境中&lt;br&gt;但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt; –save&lt;/name&gt;&lt;/strong&gt;  安装的同时，将信息写入package.json中&lt;/p&gt;
+&lt;p&gt;项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包&lt;br&gt;这样代码提交到github时，就不用提交node_modules这个文件夹了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm init&lt;/strong&gt;  会引导你创建一个package.json文件，包括名称、版本、作者这些信息等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm ls&lt;/strong&gt;  列出当前安装的了所有包&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm ls -g&lt;/strong&gt; 查看全局安装的模块及依赖&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;npm root&lt;/strong&gt; 查看当前包的安装路径&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm root -g&lt;/strong&gt;  查看全局的包的安装路径&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm update &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 更新&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm remove &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 移除&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm uninstall xxx  (-g)&lt;/strong&gt; 卸载模块&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm cache clean&lt;/strong&gt; 清理缓存&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm help&lt;/strong&gt;  帮助，如果要单独查看install命令的帮助，可以使用的npm help install&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm view moudleName dependencies&lt;/strong&gt;：查看包的依赖关系&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm view moduleName repository.url&lt;/strong&gt;：查看包的源文件地址&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm view moduleName engines&lt;/strong&gt;：查看包所依赖的Node的版本&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm help folders&lt;/strong&gt;：查看npm使用的所有文件夹&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm rebuild moduleName&lt;/strong&gt;：用于更改包内容后进行重建&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm outdated&lt;/strong&gt;：检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;npm search &lt;name&gt;&lt;/strong&gt; 搜索包&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt;&lt;/strong&gt; 安装nodejs的依赖包&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt; -g&lt;/strong&gt;  将包安装到全局环境中&lt;br&gt;但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt; –save&lt;/strong&gt;  安装的同时，将信息写入package.json中&lt;/p&gt;
+&lt;p&gt;项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包&lt;br&gt;这样代码提交到github时，就不用提交node_modules这个文件夹了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm init&lt;/strong&gt;  会引导你创建一个package.json文件，包括名称、版本、作者这些信息等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm ls&lt;/strong&gt;  列出当前安装的了所有包&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm ls -g&lt;/strong&gt; 查看全局安装的模块及依赖&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端技术" scheme="http://elickzhao.github.io/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="npm" scheme="http://elickzhao.github.io/tags/npm/"/>
+    
+      <category term="node.js" scheme="http://elickzhao.github.io/tags/node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>composer 一些常用命令及使用心得</title>
@@ -1271,48 +1324,6 @@
     
     
       <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dockerfile VOLUME 和 -v 的区别</title>
-    <link href="http://elickzhao.github.io/2016/04/Dockerfile%20VOLUME%20%E5%92%8C%20-v%20%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://elickzhao.github.io/2016/04/Dockerfile VOLUME 和 -v 的区别/</id>
-    <published>2016-04-21T12:27:05.000Z</published>
-    <updated>2016-04-21T12:38:03.494Z</updated>
-    
-    <content type="html">&lt;p&gt;elick     发布    新文稿         &lt;/p&gt;
-&lt;p&gt;Dockerfile VOLUME 和 -v 的区别&lt;/p&gt;
-&lt;p&gt;docker 服务器相关技术&lt;/p&gt;
-&lt;p&gt;找到了官方的userguide： &lt;a href=&quot;https://docs.docker.com/engine/userguide&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://docs.docker.com/engine/userguide&lt;/a&gt;…&lt;/p&gt;
-&lt;p&gt;从中了解了一点：VOLUME并非只是声明，它会把指定路径重新加载一遍，我通过inspect容器也发现了这一点。&lt;/p&gt;
-&lt;p&gt;这是在Dockerfile指定了VOLUME，并没有指定-v，查看容器的Mounts信息：&lt;br&gt;&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;&quot;Mounts&quot;:&lt;/span&gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;            &quot;Name&quot;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;b3e2dcacd3f9f40b43ccd5773d45ca74f0f49b02d3da17749cb378ff9f59bb67&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;            &quot;Source&quot;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;/var/lib/docker/volumes/b3e2dcacd3f9f40b43ccd5773d45ca74f0f49b02d3da17749cb378ff9f59bb67/_data&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;            &quot;Destination&quot;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;/etc&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;            &quot;Driver&quot;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;local&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;            &quot;Mode&quot;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;            &quot;RW&quot;:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ],&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;这是在上一个的基础上，指定了-v，查看容器的Mounts信息：&lt;/p&gt;
-&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;&quot;Mounts&quot;:&lt;/span&gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;           &quot;Source&quot;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;/etc&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;           &quot;Destination&quot;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;/etc&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;           &quot;Mode&quot;:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;           &quot;RW&quot;:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   ],&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;然后你去&lt;code&gt;/var/lib/docker/volumes/b3e2dcacd3f9f40b43ccd5773d45ca74f0f49b02d3da17749cb378ff9f59bb67/_data&lt;/code&gt;目录下看一下，大致就清楚了。当Dockerfile里设置的VOLUME目录存在文件,那么在这个目录里就会出现 如用用了-v再指向这个VOLUME目录,又会被host目录覆盖掉&lt;/p&gt;
-&lt;p&gt;你可以把VOLUME理解为，从镜像中复制指定卷的文件夹到本地/var/lib/docker/volumes/xxxxxxxxx/文件夹，然后把本地的该文件夹挂载到容器里面去。&lt;/p&gt;
-&lt;p&gt;本质上还是相当于一个本地文件夹挂载而已。&lt;/p&gt;
-&lt;p&gt;继续补充，因为VOLUME实际上就是在本地新建了一个文件夹挂载了，那么实际上容器内部的文件夹有三种情况：&lt;br&gt;1、没有指定VOLUME也没有指定-v，这种是普通文件夹。&lt;br&gt;2、指定了VOLUME没有指定-v，这种文件夹可以在不同容器之间共享，但是无法在本地修改。&lt;br&gt;3、指定了-v的文件夹，这种文件夹可以在不同容器之间共享，且可以在本地修改。&lt;/p&gt;
-&lt;p&gt;那就列举一种需要在不同容器之间共享且不需要在本地修改的情况。&lt;/p&gt;
-&lt;p&gt;首先，我们先了解容器中获取动态数据的方式：&lt;br&gt;1、本地提供，挂载到容器&lt;br&gt;2、远程提供，从远程下载&lt;br&gt;3、生成提供，在容器内部生成&lt;/p&gt;
-&lt;p&gt;后面两种命令都不需要在本地修改，但是他们生成的动态数据却可能需要共享。&lt;br&gt;下载命令，比如git clone直接从git服务器拉取代码，不需要挂载本地文件夹。&lt;br&gt;生成命令，比如jekyll（静态网站生成器），你可能挂载一个代码文件夹，然后build目录里生成的静态网页文件需要提供给Apache服务器，那么你需要指定build目录为VOLUME。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;elick     发布    新文稿         &lt;/p&gt;
-&lt;p&gt;Dockerfile VOLUME 和 -v 的区别&lt;/p&gt;
-&lt;p&gt;docker 服务器相关技术&lt;/p&gt;
-&lt;p&gt;找到了官方的userguide： &lt;a href=&quot;https://docs.docker
-    
-    </summary>
-    
-      <category term="服务器端" scheme="http://elickzhao.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"/>
-    
-    
-      <category term="docker" scheme="http://elickzhao.github.io/tags/docker/"/>
-    
-      <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

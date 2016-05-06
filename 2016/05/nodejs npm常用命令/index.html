@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="npm,node.js," />
 
 
 
@@ -88,15 +88,28 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao's Blog">
-<meta property="og:url" content="http://elickzhao.github.io/page/3/index.html">
+<meta name="description" content="npm search  搜索包
+npm install  安装nodejs的依赖包
+npm install  -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令
+npm install  –save  安装的同时，将信息写入package.json中
+项">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs npm常用命令">
+<meta property="og:url" content="http://elickzhao.github.io/2016/05/nodejs npm常用命令/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description">
+<meta property="og:description" content="npm search  搜索包
+npm install  安装nodejs的依赖包
+npm install  -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令
+npm install  –save  安装的同时，将信息写入package.json中
+项">
+<meta property="og:updated_time" content="2016-05-06T13:49:32.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="nodejs npm常用命令">
+<meta name="twitter:description" content="npm search  搜索包
+npm install  安装nodejs的依赖包
+npm install  -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令
+npm install  –save  安装的同时，将信息写入package.json中
+项">
 
 
 
@@ -114,7 +127,7 @@
   };
 </script>
 
-  <title> elickzhao's Blog </title>
+  <title> nodejs npm常用命令 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -135,9 +148,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,9 +268,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -279,10 +290,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/" itemprop="url">
-                  windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版
-                </a>
+                nodejs npm常用命令
               
             
           </h1>
@@ -294,19 +302,38 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-01T20:54:10+09:00" content="2016-05-01">
-              2016-05-01
+            <time itemprop="dateCreated" datetime="2016-05-06T22:47:16+09:00" content="2016-05-06">
+              2016-05-06
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/" itemprop="commentsCount"></span>
+                <a href="/2016/05/nodejs npm常用命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/nodejs npm常用命令/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -329,484 +356,120 @@
       
 
       
-        
-          <ol>
-<li>安装git，从程序目录打开 “Git Bash” </li>
-<li>键入命令：ssh-keygen -t rsa -C “email@email.com”<br>“email@email.com”是github账号</li>
-<li>提醒你输入key的名称，输入如id_rsa</li>
-<li>在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub</li>
-<li>把4中生成的密钥文件复制到C:\Documents and Settings\Administrator.ssh\ 目 录下。</li>
-<li>用记事本打开id_rsa.pub文件，复制内容，在github.com的网站上到ssh密钥管理页面，添加新公钥，随便取个名字，内容粘贴刚</li>
-</ol>
-<p>才复制的内容。</p>
-<ol>
-<li>^_^ OK了</li>
-</ol>
-<p>需要注意步骤2中产生的密钥文件在当前用户的根目录，必须把这两个文件放到当前用户目录的“.ssh”目录下才能生效。<br>在windows中只能在命令行下输入创建”.”开头的文件夹。命令为 mkdir .ssh</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <p><strong>npm search <name></name></strong> 搜索包</p>
+<p><strong>npm install <name></name></strong> 安装nodejs的依赖包</p>
+<p><strong>npm install <name> -g</name></strong>  将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令</p>
+<p><strong>npm install <name> –save</name></strong>  安装的同时，将信息写入package.json中</p>
+<p>项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包<br>这样代码提交到github时，就不用提交node_modules这个文件夹了。</p>
+<p><strong>npm init</strong>  会引导你创建一个package.json文件，包括名称、版本、作者这些信息等</p>
+<p><strong>npm ls</strong>  列出当前安装的了所有包</p>
+<p><strong>npm ls -g</strong> 查看全局安装的模块及依赖</p>
+<a id="more"></a>
+<p><strong>npm root</strong> 查看当前包的安装路径</p>
+<p><strong>npm root -g</strong>  查看全局的包的安装路径</p>
+<p><strong>npm update <name></name></strong> 更新</p>
+<p><strong>npm remove <name></name></strong> 移除</p>
+<p><strong>npm uninstall xxx  (-g)</strong> 卸载模块</p>
+<p><strong>npm cache clean</strong> 清理缓存</p>
+<p><strong>npm help</strong>  帮助，如果要单独查看install命令的帮助，可以使用的npm help install</p>
+<p><strong>npm view moudleName dependencies</strong>：查看包的依赖关系</p>
+<p><strong>npm view moduleName repository.url</strong>：查看包的源文件地址</p>
+<p><strong>npm view moduleName engines</strong>：查看包所依赖的Node的版本</p>
+<p><strong>npm help folders</strong>：查看npm使用的所有文件夹</p>
+<p><strong>npm rebuild moduleName</strong>：用于更改包内容后进行重建</p>
+<p><strong>npm outdated</strong>：检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新</p>
+
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/常用的apt-get命令/" itemprop="url">
-                  常用的apt-get命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-01T00:15:51+09:00" content="2016-05-01">
-              2016-05-01
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/npm/" rel="tag">#npm</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/常用的apt-get命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/常用的apt-get命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/node-js/" rel="tag">#node.js</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p><strong>apt-get update</strong>：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。</p>
-<p><strong>apt-get install packagename</strong>：安装一个新软件包</p>
-<p><strong>apt-get remove packagename</strong>：卸载一个已安装的软件包（保留配置文件）</p>
-<p><strong>apt-get remove package - - purge</strong>: 删除包，包括删除配置文件等 </p>
-<p><strong>apt-get clean</strong>：这个命令会把安装的软件的备份也删除，不过这样不会影响软件的使用的。</p>
-<p><strong>apt-get upgrade</strong>：更新所有已安装的软件包</p>
-<p><strong>apt-get dist-upgrade</strong>：将系统升级到新版本</p>
-<p><strong>apt-cache search package</strong> 搜索包 </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/常用的apt-get命令/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/composer 一些常用命令及使用心得/" rel="next" title="composer 一些常用命令及使用心得">
+                <i class="fa fa-chevron-left"></i> composer 一些常用命令及使用心得
+              </a>
+            
           </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/Linux下怎样搜索文件/" itemprop="url">
-                  Linux下怎样搜索文件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-30T21:39:59+09:00" content="2016-04-30">
-              2016-04-30
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/Linux下怎样搜索文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/Linux下怎样搜索文件/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <blockquote>
-<p>使用linux系统难免会忘记文件所在的位置，可以使用以下命令对系统中的文件进行搜索。搜索文件的命令为”find“；”locate“；”whereis“；”which“；”type“</p>
-</blockquote>
-<h1 id="find"><a href="#find" class="headerlink" title="find"></a>find</h1><p>linux下最强大的搜索命令为”find“。<br>它的格式为 <code>find &lt;指定目录&gt; &lt;指定条件&gt; &lt;指定动作&gt;</code>；<br>比如使用find命令搜索在根目录下的所有interfaces文件所在位置，<br>命令格式为 <code>find / -name  &#39;interfaces&#39;</code></p>
-<p>查找当前目录下以@开头的文件或者目录，搜索深度为一级也就是只在当前目录找，不进入子目录<br><code>find . -maxdepth 1 -name &quot;@*&quot;</code></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/Linux下怎样搜索文件/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/PHP 获取服务器详细信息代码/" itemprop="url">
-                  PHP 获取服务器详细信息代码
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-29T23:37:15+09:00" content="2016-04-29">
-              2016-04-29
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/PHP 获取服务器详细信息代码/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/PHP 获取服务器详细信息代码/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+    <div class="post-spread">
       
         
-          <blockquote>
-<p>说明一下为什么写这个.因为docker的link时需要取得环境变量里面的mysql容器的IP地址,所以想用php取得容器的环境变量.原本想用 <code>$_ENV[]</code> 发现没有内容 原来需要修改 <strong>php.ini</strong> 里面 <code>variables_order = &quot;EGPCS&quot;</code><br>上述配置表示PHP 接受的外部变量来源及顺序，EGPCS 是Environment、Get、Post、Cookies 和Server 的缩写。如果variables_order 的配置中缺少E ，则PHP 无法接受环境变量，那么<code>$_ENV</code> 也就为空了。 后来想到用 php 执行 shell 命令 使用exec , system , shell_exec  但还是获取不到 好赖用 system(env) 才发现原来是我登录的用户为 www-data 所以根本获取不到额外的环境变量 所以这个想法只能作罢, 至于下面 是顺手总结的 一些全局变量的用法</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/PHP 获取服务器详细信息代码/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
       
     </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/脚本报错没有那个文件或目录/" itemprop="url">
-                  脚本报错没有那个文件或目录
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-28T23:26:00+09:00" content="2016-04-28">
-              2016-04-28
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/脚本报错没有那个文件或目录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/脚本报错没有那个文件或目录/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>shell脚本报错：#!binbash 没有那个文件或目录</p>
-<p>在Windows下编辑的，文件每行末尾会多出^M，所以先转格式： linux下有个 dos2unix 脚本文件 可以转换</p>
-<p>windows下可以使用 Notepad++ 编辑文件 或者 使用 菜单-&gt;编辑-&gt;文档格式转换  来转换文件格式</p>
-<p><img src="/image/16-4/5.png" alt="转换格式"></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+  </div>
 
 
           </div>
@@ -814,6 +477,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/nodejs npm常用命令/"
+           data-title="nodejs npm常用命令" data-url="http://elickzhao.github.io/2016/05/nodejs npm常用命令/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -833,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -920,6 +600,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1023,6 +714,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

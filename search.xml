@@ -4,6 +4,34 @@
   
     
     <entry>
+      <title><![CDATA[nodejs npm常用命令]]></title>
+      <url>http://elickzhao.github.io/2016/05/nodejs%20npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      <content type="html"><![CDATA[<p><strong>npm search <name></name></strong> 搜索包</p>
+<p><strong>npm install <name></name></strong> 安装nodejs的依赖包</p>
+<p><strong>npm install <name> -g</name></strong>  将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令</p>
+<p><strong>npm install <name> –save</name></strong>  安装的同时，将信息写入package.json中</p>
+<p>项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包<br>这样代码提交到github时，就不用提交node_modules这个文件夹了。</p>
+<p><strong>npm init</strong>  会引导你创建一个package.json文件，包括名称、版本、作者这些信息等</p>
+<p><strong>npm ls</strong>  列出当前安装的了所有包</p>
+<p><strong>npm ls -g</strong> 查看全局安装的模块及依赖</p>
+<a id="more"></a>
+<p><strong>npm root</strong> 查看当前包的安装路径</p>
+<p><strong>npm root -g</strong>  查看全局的包的安装路径</p>
+<p><strong>npm update <name></name></strong> 更新</p>
+<p><strong>npm remove <name></name></strong> 移除</p>
+<p><strong>npm uninstall xxx  (-g)</strong> 卸载模块</p>
+<p><strong>npm cache clean</strong> 清理缓存</p>
+<p><strong>npm help</strong>  帮助，如果要单独查看install命令的帮助，可以使用的npm help install</p>
+<p><strong>npm view moudleName dependencies</strong>：查看包的依赖关系</p>
+<p><strong>npm view moduleName repository.url</strong>：查看包的源文件地址</p>
+<p><strong>npm view moduleName engines</strong>：查看包所依赖的Node的版本</p>
+<p><strong>npm help folders</strong>：查看npm使用的所有文件夹</p>
+<p><strong>npm rebuild moduleName</strong>：用于更改包内容后进行重建</p>
+<p><strong>npm outdated</strong>：检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[composer 一些常用命令及使用心得]]></title>
       <url>http://elickzhao.github.io/2016/05/composer%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/</url>
       <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">composer selfupdate                      </span><br><span class="line">composer require &quot;foo/bar:1.0.0&quot;                    安装一个库</span><br><span class="line">composer update foo/bar                             更新单个库</span><br><span class="line">composer create-project laravel/laravel myapp --prefer-dist 创建laravel项目</span><br><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com 配置仓库镜像</span><br><span class="line">composer global require &quot;laravel/installer=~1.1&quot;    全局安装laravel安装器</span><br><span class="line"></span><br><span class="line">composer install update --prefer-dist               后面这个参数是强制使用压缩包</span><br><span class="line">composer install --profile                          后面这个参数是显示安装时间</span><br><span class="line">composer dump-autoload --optimize                   生产环境优化</span><br><span class="line">composer update symfony/yaml --prefer-source        强制克隆代码 用于修改库文件</span><br><span class="line"></span><br><span class="line">当你更新一个修改的库的时候 会提示你是否放弃修改</span><br><span class="line">----------------------------------------------------------------------------------------------------</span><br><span class="line">$ composer update</span><br><span class="line">Loading composer repositories with package information  </span><br><span class="line">Updating dependencies  </span><br><span class="line">  - Updating symfony/symfony v2.2.0 (v2.2.0- =&gt; v2.2.0)</span><br><span class="line">    The package has modified files:</span><br><span class="line">    M Dumper.php</span><br><span class="line">    Discard changes [y,n,v,s,?]?</span><br><span class="line">----------------------------------------------------------------------------------------------------</span><br></pre></td></tr></table></figure>
