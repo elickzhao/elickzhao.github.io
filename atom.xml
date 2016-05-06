@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-05T04:15:33.408Z</updated>
+  <updated>2016-05-06T07:44:40.797Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webstorm 和 phpstorm 个人喜爱的设置</title>
+    <link href="http://elickzhao.github.io/2016/05/webstorm%20%E5%92%8C%20phpstorm%20%E4%B8%AA%E4%BA%BA%E5%96%9C%E7%88%B1%E7%9A%84%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://elickzhao.github.io/2016/05/webstorm 和 phpstorm 个人喜爱的设置/</id>
+    <published>2016-05-06T07:43:45.000Z</published>
+    <updated>2016-05-06T07:44:40.797Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;编辑器主题&quot;&gt;&lt;a href=&quot;#编辑器主题&quot; class=&quot;headerlink&quot; title=&quot;编辑器主题&quot;&gt;&lt;/a&gt;编辑器主题&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;首先去 &lt;a href=&quot;http://color-themes.com/?view=index&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Color Themes &lt;/a&gt; 下载我最爱的 sublime text2 主题, 用 文件 -&amp;gt; 导入设置 安装后重启&lt;/li&gt;
+&lt;li&gt;修改字体大小及宽度, 设置-&amp;gt;编辑器-&amp;gt;颜色和字体-&amp;gt;font 我一般喜欢用 &lt;strong&gt;Consolas&lt;/strong&gt; 这个是自带里面最好的,其次是 &lt;strong&gt;Dejavu Sans Mono&lt;/strong&gt; &lt;strong&gt;Source Code Pro&lt;/strong&gt; 不过后面两个需要下载. 字体大小 一般选 15 自宽 1.4  这样看着没那么累 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;配置界面颜色&quot;&gt;&lt;a href=&quot;#配置界面颜色&quot; class=&quot;headerlink&quot; title=&quot;配置界面颜色&quot;&gt;&lt;/a&gt;配置界面颜色&lt;/h1&gt;&lt;p&gt;好了 如果你是默认主题的话 就会发现左侧 侧边栏 跟右侧颜色不是一样的.&lt;br&gt;对于一个强迫症患者来说这是不能接受的. 如何解决呢.&lt;br&gt;就是去plugins 去下载一个插件 color IDE 激活重启以后 世界和谐了&lt;/p&gt;
+&lt;h1 id=&quot;细节调整&quot;&gt;&lt;a href=&quot;#细节调整&quot; class=&quot;headerlink&quot; title=&quot;细节调整&quot;&gt;&lt;/a&gt;细节调整&lt;/h1&gt;&lt;p&gt;这个主题变成颜色是很满意,但是还是有些蛋疼的地方.&lt;br&gt;比如说,搜索结果是一大块白色,根本看不清是什么内容,选中相同代码,背景是黑色,很难辨识,&lt;br&gt;这里就通过 File -&amp;gt; Settings -&amp;gt; editor -&amp;gt;color&amp;amp;fonts-&amp;gt;general 这里慢慢调了 &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;编辑器主题&quot;&gt;&lt;a href=&quot;#编辑器主题&quot; class=&quot;headerlink&quot; title=&quot;编辑器主题&quot;&gt;&lt;/a&gt;编辑器主题&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;首先去 &lt;a href=&quot;http://color-themes.com/?view=index&quot; ta
+    
+    </summary>
+    
+    
+      <category term="phpstorm" scheme="http://elickzhao.github.io/tags/phpstorm/"/>
+    
+  </entry>
   
   <entry>
     <title>一个图片说明开源许可协议</title>
@@ -1287,29 +1314,6 @@
       <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
     
       <category term="vagrant" scheme="http://elickzhao.github.io/tags/vagrant/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>应用TortoiseGit为github账号添加SSH keys</title>
-    <link href="http://elickzhao.github.io/2016/04/%E5%BA%94%E7%94%A8TortoiseGit%E4%B8%BAgithub%E8%B4%A6%E5%8F%B7%E6%B7%BB%E5%8A%A0SSH%20keys/"/>
-    <id>http://elickzhao.github.io/2016/04/应用TortoiseGit为github账号添加SSH keys/</id>
-    <published>2016-04-19T09:35:30.000Z</published>
-    <updated>2016-04-19T09:36:56.356Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;strong&gt;呵呵 我算是比较懒的 不过避免重复造轮子这种降低效率的事 还是直接引入别人写得详细的文章吧&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/63f236280f7e750209ab3d60.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;文章地址&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;呵呵 我算是比较懒的 不过避免重复造轮子这种降低效率的事 还是直接引入别人写得详细的文章吧&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/63f236280f7e750209ab3d60.
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="http://elickzhao.github.io/tags/Git/"/>
     
   </entry>
   

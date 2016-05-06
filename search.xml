@@ -4,6 +4,18 @@
   
     
     <entry>
+      <title><![CDATA[webstorm 和 phpstorm 个人喜爱的设置]]></title>
+      <url>http://elickzhao.github.io/2016/05/webstorm%20%E5%92%8C%20phpstorm%20%E4%B8%AA%E4%BA%BA%E5%96%9C%E7%88%B1%E7%9A%84%E8%AE%BE%E7%BD%AE/</url>
+      <content type="html"><![CDATA[<h1 id="编辑器主题"><a href="#编辑器主题" class="headerlink" title="编辑器主题"></a>编辑器主题</h1><ul>
+<li>首先去 <a href="http://color-themes.com/?view=index" target="_blank" rel="external">Color Themes </a> 下载我最爱的 sublime text2 主题, 用 文件 -&gt; 导入设置 安装后重启</li>
+<li>修改字体大小及宽度, 设置-&gt;编辑器-&gt;颜色和字体-&gt;font 我一般喜欢用 <strong>Consolas</strong> 这个是自带里面最好的,其次是 <strong>Dejavu Sans Mono</strong> <strong>Source Code Pro</strong> 不过后面两个需要下载. 字体大小 一般选 15 自宽 1.4  这样看着没那么累 </li>
+</ul>
+<h1 id="配置界面颜色"><a href="#配置界面颜色" class="headerlink" title="配置界面颜色"></a>配置界面颜色</h1><p>好了 如果你是默认主题的话 就会发现左侧 侧边栏 跟右侧颜色不是一样的.<br>对于一个强迫症患者来说这是不能接受的. 如何解决呢.<br>就是去plugins 去下载一个插件 color IDE 激活重启以后 世界和谐了</p>
+<h1 id="细节调整"><a href="#细节调整" class="headerlink" title="细节调整"></a>细节调整</h1><p>这个主题变成颜色是很满意,但是还是有些蛋疼的地方.<br>比如说,搜索结果是一大块白色,根本看不清是什么内容,选中相同代码,背景是黑色,很难辨识,<br>这里就通过 File -&gt; Settings -&gt; editor -&gt;color&amp;fonts-&gt;general 这里慢慢调了 </p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[一个图片说明开源许可协议]]></title>
       <url>http://elickzhao.github.io/2016/05/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE%E4%BB%8B%E7%BB%8D/</url>
       <content type="html"><![CDATA[<p><img src="image/16-5/1.jpg" alt="开源协议"></p>
