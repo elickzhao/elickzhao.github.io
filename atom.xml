@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-06T13:49:32.392Z</updated>
+  <updated>2016-05-07T03:40:01.259Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -16,11 +16,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>npm 及 node.js 升级自己</title>
+    <link href="http://elickzhao.github.io/2016/05/npm%20%E5%8F%8A%20node.js%20%E5%8D%87%E7%BA%A7%E8%87%AA%E5%B7%B1%20/"/>
+    <id>http://elickzhao.github.io/2016/05/npm 及 node.js 升级自己 /</id>
+    <published>2016-05-07T03:38:53.000Z</published>
+    <updated>2016-05-07T03:40:01.259Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;npm-自身升级&quot;&gt;&lt;a href=&quot;#npm-自身升级&quot; class=&quot;headerlink&quot; title=&quot;npm 自身升级&quot;&gt;&lt;/a&gt;npm 自身升级&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm -g install npm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;node-js-自身升级&quot;&gt;&lt;a href=&quot;#node-js-自身升级&quot; class=&quot;headerlink&quot; title=&quot;node.js 自身升级&quot;&gt;&lt;/a&gt;node.js 自身升级&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# node有一个模块叫n（这名字可够短的。。。），是专门用来管理node.js的版本的。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 首先安装n模块：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g n &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#升级node.js到最新稳定版&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n stable&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# n 后面也可以跟随版本号比如： &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n v0.10.26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;npm-自身升级&quot;&gt;&lt;a href=&quot;#npm-自身升级&quot; class=&quot;headerlink&quot; title=&quot;npm 自身升级&quot;&gt;&lt;/a&gt;npm 自身升级&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
+    
+    </summary>
+    
+      <category term="前段技术" scheme="http://elickzhao.github.io/categories/%E5%89%8D%E6%AE%B5%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="npm" scheme="http://elickzhao.github.io/tags/npm/"/>
+    
+      <category term="node.js" scheme="http://elickzhao.github.io/tags/node-js/"/>
+    
+      <category term="小百科" scheme="http://elickzhao.github.io/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>nodejs npm常用命令</title>
     <link href="http://elickzhao.github.io/2016/05/nodejs%20npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://elickzhao.github.io/2016/05/nodejs npm常用命令/</id>
     <published>2016-05-06T13:47:16.000Z</published>
-    <updated>2016-05-06T13:49:32.392Z</updated>
+    <updated>2016-05-06T13:51:44.584Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;npm search &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 搜索包&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm install &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 安装nodejs的依赖包&lt;/p&gt;
@@ -44,6 +71,7 @@
 &lt;p&gt;&lt;strong&gt;npm help folders&lt;/strong&gt;：查看npm使用的所有文件夹&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm rebuild moduleName&lt;/strong&gt;：用于更改包内容后进行重建&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm outdated&lt;/strong&gt;：检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/linjiqin/p/3765772.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.cnblogs.com/linjiqin/p/3765772.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://my.oschina.net/robinjiang/blog/168732&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://my.oschina.net/robinjiang/blog/168732&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -1237,93 +1265,6 @@
       <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
     
       <category term="laravel" scheme="http://elickzhao.github.io/tags/laravel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux mount命令的用法详细解析</title>
-    <link href="http://elickzhao.github.io/2016/04/linux%20mount%E5%91%BD%E4%BB%A4%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E7%BB%86%E8%A7%A3%E6%9E%90/"/>
-    <id>http://elickzhao.github.io/2016/04/linux mount命令的用法详细解析/</id>
-    <published>2016-04-21T14:52:53.000Z</published>
-    <updated>2016-04-21T15:14:23.322Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;挂接命令-mount&quot;&gt;&lt;a href=&quot;#挂接命令-mount&quot; class=&quot;headerlink&quot; title=&quot;挂接命令(mount)&quot;&gt;&lt;/a&gt;挂接命令(mount)&lt;/h1&gt;&lt;p&gt;首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。&lt;br&gt;命令格式：mount [-t vfstype] [-o options] device dir&lt;br&gt;其中：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：&lt;br&gt;光盘或光盘镜像：iso9660&lt;br&gt;DOS fat16文件系统：msdos&lt;br&gt;Windows 9x fat32文件系统：vfat&lt;br&gt;Windows NT ntfs文件系统：ntfs&lt;br&gt;Mount Windows文件网络共享：smbfs&lt;br&gt;UNIX(LINUX) 文件网络共享：nfs&lt;br&gt;VirtualBox 文件网络共享: vboxsf&lt;/li&gt;
-&lt;li&gt;-o options 主要用来描述设备或档案的挂接方式。常用的参数有：&lt;br&gt;loop：用来把一个文件当成硬盘分区挂接上系统&lt;br&gt;ro：采用只读方式挂接设备&lt;br&gt;rw：采用读写方式挂接设备&lt;br&gt;iocharset：指定访问文件系统所用字符集&lt;/li&gt;
-&lt;li&gt;device 要挂接(mount)的设备。&lt;/li&gt;
-&lt;li&gt;dir设备在系统上的挂接点(mount point)。&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;挂接光盘镜像文件&quot;&gt;&lt;a href=&quot;#挂接光盘镜像文件&quot; class=&quot;headerlink&quot; title=&quot;挂接光盘镜像文件&quot;&gt;&lt;/a&gt;挂接光盘镜像文件&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;从光盘制作光盘镜像文件。将光盘放入光驱，执行下面的命令。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cp /dev/cdrom /home/sunky/mydisk.iso 或&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ dd &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;=/dev/cdrom of=/home/sunky/mydisk.iso&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：执行上面的任何一条命令都可将当前光驱里的光盘制作成光盘镜像文件/home/sunky/mydisk.iso&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;将文件和目录制作成光盘镜像文件，执行下面的命令。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkisofs -r -J -V mydisk -o /home/sunky/mydisk.iso /home/sunky/ mydir&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：这条命令将/home/sunky/mydir目录下所有的目录和文件制作成光盘镜像文件/home/sunky/mydisk.iso，光盘卷标为：mydisk&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;光盘镜像文件的挂接(mount)&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir /mnt/vcdrom&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：建立一个目录用来作挂接点(mount point)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -o loop -t iso9660 /home/sunky/mydisk.iso /mnt/vcdrom&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：使用/mnt/vcdrom就可以访问盘镜像文件mydisk.iso里的所有文件了。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;挂接移动硬盘&quot;&gt;&lt;a href=&quot;#挂接移动硬盘&quot; class=&quot;headerlink&quot; title=&quot;挂接移动硬盘&quot;&gt;&lt;/a&gt;挂接移动硬盘&lt;/h1&gt;&lt;p&gt;对linux系统而言，USB接口的移动硬盘是当作SCSI设备对待的。插入移动硬盘之前，应先用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root at pldyrouter /]#  fdisk -l&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;接好移动硬盘后，再用fdisk –l 或 more&lt;br&gt;/proc/partitions查看系统的硬盘和硬盘分区情况.应该可以发现多了一个SCSI硬盘/dev/sdc和它的两个磁盘分区/dev/sdc1?、/dev/sdc2,其中/dev/sdc5是/dev/sdc2分区的逻辑分区。我们可以使用下面的命令挂接/dev/sdc1和/dev/sdc5。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$mkdir&lt;/span&gt; -p /mnt/usbhd1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$mkdir&lt;/span&gt; -p /mnt/usbhd2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：建立目录用来作挂接点(mount point)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -t ntfs /dev/sdc1 /mnt/usbhd1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -t vfat /dev/sdc5 /mnt/usbhd2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：对ntfs格式的磁盘分区应使用-t ntfs 参数，对fat32格式的磁盘分区应使用-t vfat参数。若汉字文件名显示为乱码或不显示，可以使用下面的命令格式。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -t ntfs -o iocharset=cp936 /dev/sdc1 /mnt/usbhd1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -t vfat -o iocharset=cp936 /dev/sdc5 /mnt/usbhd2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# linux系统下使用fdisk分区命令和mkfs文件系统创建命令可以将移动硬盘的分区制作成linux系统所特有的ext2、ext3格式。这样，在linux下使用就更方便了。使用下面的命令直接挂接即可。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount /dev/sdc1 /mnt/usbhd1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;挂接U盘&quot;&gt;&lt;a href=&quot;#挂接U盘&quot; class=&quot;headerlink&quot; title=&quot;挂接U盘&quot;&gt;&lt;/a&gt;挂接U盘&lt;/h1&gt;&lt;p&gt;和USB接口的移动硬盘一样对linux系统而言U盘也是当作SCSI设备对待的。使用方法和移动硬盘完全一样。插入U盘之前，应先用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root at pldyrouter root]&lt;span class=&quot;comment&quot;&gt;#  fdisk -l&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;插入U盘后，再用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root at pldyrouter root]&lt;span class=&quot;comment&quot;&gt;#  fdisk -l&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;系统多了一个SCSI硬盘/dev/sdd和一个磁盘分区/dev/sdd1,/dev/sdd1就是我们要挂接的U盘。&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir -p /mnt/usb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：建立一个目录用来作挂接点(mount point)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -t vfat /dev/sdd1 /mnt/usb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：现在可以通过/mnt/usb来访问U盘了, 若汉字文件名显示为乱码或不显示，可以使用下面的命令。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -t vfat -o iocharset=cp936 /dev/sdd1 /mnt/usb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h1 id=&quot;挂接Windows文件共享&quot;&gt;&lt;a href=&quot;#挂接Windows文件共享&quot; class=&quot;headerlink&quot; title=&quot;挂接Windows文件共享&quot;&gt;&lt;/a&gt;挂接Windows文件共享&lt;/h1&gt;&lt;p&gt;Windows网络共享的核心是SMB/CIFS，在linux下要挂接(mount)windows的磁盘共享，就必须安装和使用samba 软件包。现在流行的linux发行版绝大多数已经包含了samba软件包，如果安装linux系统时未安装samba请首先安装samba。当然也可以到 www.samba.org网站下载……新的版本是3.0.10版。&lt;br&gt;当windows系统共享设置好以后，就可以在linux客户端挂接(mount)了，具体操作如下：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir –p /mnt/samba&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：建立一个目录用来作挂接点(mount point)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -t smbfs -o username=administrator,password=pldy123 //10.140.133.23/c$ /mnt/samba&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：administrator 和 pldy123 是ip地址为10.140.133.23&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;windows计算机的一个用户名和密码，c$是这台计算机的一个磁盘共享&lt;br&gt;如此就可以在linux系统上通过/mnt/samba来访问windows系统磁盘上的文件了。以上操作在redhat as server 3、redflag server 4.1、suse server 9以及windows NT 4.0、windows 2000、windows xp、windows 2003环境下测试通过。&lt;/p&gt;
-&lt;h1 id=&quot;挂接UNIX系统NFS文件共享&quot;&gt;&lt;a href=&quot;#挂接UNIX系统NFS文件共享&quot; class=&quot;headerlink&quot; title=&quot;挂接UNIX系统NFS文件共享&quot;&gt;&lt;/a&gt;挂接UNIX系统NFS文件共享&lt;/h1&gt;&lt;p&gt;类似于windows的网络共享，UNIX(Linux)系统也有自己的网络共享，那就是NFS(网络文件系统)，下面我们就以SUN Solaris2.8和REDHAT as server 3 为例简单介绍一下在linux下如何mount nfs网络共享。&lt;br&gt;在linux客户端挂接(mount)NFS磁盘共享之前，必须先配置好NFS服务端。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Solaris系统NFS服务端配置方法如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;修改 /etc/dfs/dfstab, 增加共享目录&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;share -F nfs -o rw /&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt;/home/sunky&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;启动nfs服务&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ /etc/init.d/nfs.server start&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;NFS服务启动以后，也可以使用下面的命令增加新的共享&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ share /&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt;/home/sunky1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ share /&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt;/home/sunky2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：/export/home/sunky和/export/home/sunky1是准备共享的目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;linux系统NFS服务端配置方法如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;修改 /etc/exports,增加共享目录&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt;/home/sunky 10.140.133.23(rw)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt;/home/sunky1 *(rw)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt;/home/sunky2 linux-client(rw)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：/export/home/目录下的sunky、sunky1、sunky2是准备共享的目录，10.140.133.23、*、 linux-client是被允许挂接此共享linux客户机的IP地址或主机名。如果要使用主机名linux-client必须在服务端主机 /etc/hosts文件里增加linux-client主机ip定义。格式如下：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10.140.133.23 linux-client&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;启动与停止NFS服务&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc.d/init.d/portmap start (在REDHAT中PORTMAP是默认启动的)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc.d/init.d/nfs start 启动NFS服务&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc.d/init.d/nfs stop 停止NFS服务&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：若修改/etc/export文件增加新的共享，应先停止NFS服务，再启动NFS服务方能使新增加的共享起作用。使用命令exportfs -rv也可以达到同样的效果。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;linux客户端挂接(mount)其他linux系统或UNIX系统的NFS共享&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir –p /mnt/nfs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：建立一个目录用来作挂接点(mount point)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mount -t nfs -o rw 10.140.133.9:/&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt;/home/sunky /mnt/nfs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 注：这里我们假设10.140.133.9是NFS服务端的主机IP地址，当然这里也可以使用主机名，但必须在本机/etc/hosts文件里增加服务端ip定义。/export/home/sunky为服务端共享的目录。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;如此就可以在linux客户端通过/mnt/nfs来访问其它linux系统或UNIX系统以NFS方式共享出来的文件了。以上操作在 redhat as server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;redflag server4.1、suse server 9以及Solaris 7、Solaris 8、Solaris 9 for x86&amp;amp;sparc环境下测试通过&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;补充：&quot;&gt;&lt;a href=&quot;#补充：&quot; class=&quot;headerlink&quot; title=&quot;补充：&quot;&gt;&lt;/a&gt;补充：&lt;/h1&gt;&lt;p&gt;linux加载光驱&lt;br&gt;（1）使用光驱前，要先mount一下：＃mount /dev/cdrom /mnt/cdrom，然后您就可以进入/mnt/cdrom目录下读取光盘内容了；&lt;/p&gt;
-&lt;p&gt;（2）当您想退出光盘时，须使用umout命令，否则光驱就会一直处于死锁状态：＃umount /mnt/cdrom。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;挂接命令-mount&quot;&gt;&lt;a href=&quot;#挂接命令-mount&quot; class=&quot;headerlink&quot; title=&quot;挂接命令(mount)&quot;&gt;&lt;/a&gt;挂接命令(mount)&lt;/h1&gt;&lt;p&gt;首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。&lt;br&gt;命令格式：mount [-t vfstype] [-o options] device dir&lt;br&gt;其中：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：&lt;br&gt;光盘或光盘镜像：iso9660&lt;br&gt;DOS fat16文件系统：msdos&lt;br&gt;Windows 9x fat32文件系统：vfat&lt;br&gt;Windows NT ntfs文件系统：ntfs&lt;br&gt;Mount Windows文件网络共享：smbfs&lt;br&gt;UNIX(LINUX) 文件网络共享：nfs&lt;br&gt;VirtualBox 文件网络共享: vboxsf&lt;/li&gt;
-&lt;li&gt;-o options 主要用来描述设备或档案的挂接方式。常用的参数有：&lt;br&gt;loop：用来把一个文件当成硬盘分区挂接上系统&lt;br&gt;ro：采用只读方式挂接设备&lt;br&gt;rw：采用读写方式挂接设备&lt;br&gt;iocharset：指定访问文件系统所用字符集&lt;/li&gt;
-&lt;li&gt;device 要挂接(mount)的设备。&lt;/li&gt;
-&lt;li&gt;dir设备在系统上的挂接点(mount point)。
-    
-    </summary>
-    
-      <category term="服务器端" scheme="http://elickzhao.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"/>
-    
-    
-      <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
     
   </entry>
   

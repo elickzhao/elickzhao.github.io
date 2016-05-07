@@ -4,6 +4,13 @@
   
     
     <entry>
+      <title><![CDATA[npm 及 node.js 升级自己]]></title>
+      <url>http://elickzhao.github.io/2016/05/npm%20%E5%8F%8A%20node.js%20%E5%8D%87%E7%BA%A7%E8%87%AA%E5%B7%B1%20/</url>
+      <content type="html"><![CDATA[<h1 id="npm-自身升级"><a href="#npm-自身升级" class="headerlink" title="npm 自身升级"></a>npm 自身升级</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -g install npm</span><br></pre></td></tr></table></figure>
+<h1 id="node-js-自身升级"><a href="#node-js-自身升级" class="headerlink" title="node.js 自身升级"></a>node.js 自身升级</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># node有一个模块叫n（这名字可够短的。。。），是专门用来管理node.js的版本的。</span><br><span class="line"># 首先安装n模块：</span><br><span class="line">npm install -g n </span><br><span class="line"></span><br><span class="line">#升级node.js到最新稳定版</span><br><span class="line">n stable</span><br><span class="line"></span><br><span class="line"># n 后面也可以跟随版本号比如： </span><br><span class="line">n v0.10.26</span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[nodejs npm常用命令]]></title>
       <url>http://elickzhao.github.io/2016/05/nodejs%20npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
       <content type="html"><![CDATA[<p><strong>npm search <name></name></strong> 搜索包</p>
@@ -28,6 +35,7 @@
 <p><strong>npm help folders</strong>：查看npm使用的所有文件夹</p>
 <p><strong>npm rebuild moduleName</strong>：用于更改包内容后进行重建</p>
 <p><strong>npm outdated</strong>：检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新</p>
+<p><a href="http://www.cnblogs.com/linjiqin/p/3765772.html" target="_blank" rel="external">http://www.cnblogs.com/linjiqin/p/3765772.html</a><br><a href="http://my.oschina.net/robinjiang/blog/168732" target="_blank" rel="external">http://my.oschina.net/robinjiang/blog/168732</a></p>
 ]]></content>
     </entry>
     
