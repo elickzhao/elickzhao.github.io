@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[2]]></title>
+      <url>http://elickzhao.github.io/2016/05/npm%20package.json%20%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[npm 及 node.js 升级自己]]></title>
       <url>http://elickzhao.github.io/2016/05/npm%20%E5%8F%8A%20node.js%20%E5%8D%87%E7%BA%A7%E8%87%AA%E5%B7%B1%20/</url>
       <content type="html"><![CDATA[<h1 id="npm-自身升级"><a href="#npm-自身升级" class="headerlink" title="npm 自身升级"></a>npm 自身升级</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -g install npm</span><br></pre></td></tr></table></figure>
@@ -13,10 +19,10 @@
     <entry>
       <title><![CDATA[nodejs npm常用命令]]></title>
       <url>http://elickzhao.github.io/2016/05/nodejs%20npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-      <content type="html"><![CDATA[<p><strong>npm search <name></name></strong> 搜索包</p>
-<p><strong>npm install <name></name></strong> 安装nodejs的依赖包</p>
-<p><strong>npm install <name> -g</name></strong>  将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令</p>
-<p><strong>npm install <name> –save</name></strong>  安装的同时，将信息写入package.json中</p>
+      <content type="html"><![CDATA[<p><strong>npm search [name]</strong> 搜索包</p>
+<p><strong>npm install [name] [@指定版本号]</strong> 安装nodejs的依赖包 版本号是可选参数 不过与composer不一样需要@开头</p>
+<p><strong>npm install [name] -g</strong>  将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令</p>
+<p><strong>npm install [name] –save</strong>  安装的同时，将信息写入package.json中</p>
 <p>项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包<br>这样代码提交到github时，就不用提交node_modules这个文件夹了。</p>
 <p><strong>npm init</strong>  会引导你创建一个package.json文件，包括名称、版本、作者这些信息等</p>
 <p><strong>npm ls</strong>  列出当前安装的了所有包</p>
@@ -24,8 +30,8 @@
 <a id="more"></a>
 <p><strong>npm root</strong> 查看当前包的安装路径</p>
 <p><strong>npm root -g</strong>  查看全局的包的安装路径</p>
-<p><strong>npm update <name></name></strong> 更新</p>
-<p><strong>npm remove <name></name></strong> 移除</p>
+<p><strong>npm update [name]</strong> 更新</p>
+<p><strong>npm remove [name]</strong> 移除</p>
 <p><strong>npm uninstall xxx  (-g)</strong> 卸载模块</p>
 <p><strong>npm cache clean</strong> 清理缓存</p>
 <p><strong>npm help</strong>  帮助，如果要单独查看install命令的帮助，可以使用的npm help install</p>

@@ -88,28 +88,22 @@
 
 
 
-<meta name="description" content="npm search  搜索包
-npm install  安装nodejs的依赖包
-npm install  -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令
-npm install  –save  安装的同时，将信息写入package.json中
-项">
+<meta name="description" content="npm search [name] 搜索包
+npm install [name] [@指定版本号] 安装nodejs的依赖包 版本号是可选参数 不过与composer不一样需要@开头
+npm install [name] -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodejs npm常用命令">
 <meta property="og:url" content="http://elickzhao.github.io/2016/05/nodejs npm常用命令/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description" content="npm search  搜索包
-npm install  安装nodejs的依赖包
-npm install  -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令
-npm install  –save  安装的同时，将信息写入package.json中
-项">
-<meta property="og:updated_time" content="2016-05-06T13:51:44.584Z">
+<meta property="og:description" content="npm search [name] 搜索包
+npm install [name] [@指定版本号] 安装nodejs的依赖包 版本号是可选参数 不过与composer不一样需要@开头
+npm install [name] -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行">
+<meta property="og:updated_time" content="2016-05-08T12:47:20.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs npm常用命令">
-<meta name="twitter:description" content="npm search  搜索包
-npm install  安装nodejs的依赖包
-npm install  -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令
-npm install  –save  安装的同时，将信息写入package.json中
-项">
+<meta name="twitter:description" content="npm search [name] 搜索包
+npm install [name] [@指定版本号] 安装nodejs的依赖包 版本号是可选参数 不过与composer不一样需要@开头
+npm install [name] -g  将包安装到全局环境中但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行">
 
 
 
@@ -356,10 +350,10 @@ npm install  –save  安装的同时，将信息写入package.json中
       
 
       
-        <p><strong>npm search <name></name></strong> 搜索包</p>
-<p><strong>npm install <name></name></strong> 安装nodejs的依赖包</p>
-<p><strong>npm install <name> -g</name></strong>  将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令</p>
-<p><strong>npm install <name> –save</name></strong>  安装的同时，将信息写入package.json中</p>
+        <p><strong>npm search [name]</strong> 搜索包</p>
+<p><strong>npm install [name] [@指定版本号]</strong> 安装nodejs的依赖包 版本号是可选参数 不过与composer不一样需要@开头</p>
+<p><strong>npm install [name] -g</strong>  将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令</p>
+<p><strong>npm install [name] –save</strong>  安装的同时，将信息写入package.json中</p>
 <p>项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包<br>这样代码提交到github时，就不用提交node_modules这个文件夹了。</p>
 <p><strong>npm init</strong>  会引导你创建一个package.json文件，包括名称、版本、作者这些信息等</p>
 <p><strong>npm ls</strong>  列出当前安装的了所有包</p>
@@ -367,8 +361,8 @@ npm install  –save  安装的同时，将信息写入package.json中
 <a id="more"></a>
 <p><strong>npm root</strong> 查看当前包的安装路径</p>
 <p><strong>npm root -g</strong>  查看全局的包的安装路径</p>
-<p><strong>npm update <name></name></strong> 更新</p>
-<p><strong>npm remove <name></name></strong> 移除</p>
+<p><strong>npm update [name]</strong> 更新</p>
+<p><strong>npm remove [name]</strong> 移除</p>
 <p><strong>npm uninstall xxx  (-g)</strong> 卸载模块</p>
 <p><strong>npm cache clean</strong> 清理缓存</p>
 <p><strong>npm help</strong>  帮助，如果要单独查看install命令的帮助，可以使用的npm help install</p>
@@ -530,7 +524,7 @@ npm install  –save  安装的同时，将信息写入package.json中
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

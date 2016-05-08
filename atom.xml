@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-07T03:40:01.259Z</updated>
+  <updated>2016-05-08T14:06:01.178Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2</title>
+    <link href="http://elickzhao.github.io/2016/05/npm%20package.json%20%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/"/>
+    <id>http://elickzhao.github.io/2016/05/npm package.json 配置说明/</id>
+    <published>2016-05-08T14:06:01.000Z</published>
+    <updated>2016-05-08T14:06:01.178Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>npm 及 node.js 升级自己</title>
@@ -47,12 +63,12 @@
     <link href="http://elickzhao.github.io/2016/05/nodejs%20npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://elickzhao.github.io/2016/05/nodejs npm常用命令/</id>
     <published>2016-05-06T13:47:16.000Z</published>
-    <updated>2016-05-06T13:51:44.584Z</updated>
+    <updated>2016-05-08T12:47:20.794Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;strong&gt;npm search &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 搜索包&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 安装nodejs的依赖包&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt; -g&lt;/name&gt;&lt;/strong&gt;  将包安装到全局环境中&lt;br&gt;但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt; –save&lt;/name&gt;&lt;/strong&gt;  安装的同时，将信息写入package.json中&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;npm search [name]&lt;/strong&gt; 搜索包&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install [name] [@指定版本号]&lt;/strong&gt; 安装nodejs的依赖包 版本号是可选参数 不过与composer不一样需要@开头&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install [name] -g&lt;/strong&gt;  将包安装到全局环境中&lt;br&gt;但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install [name] –save&lt;/strong&gt;  安装的同时，将信息写入package.json中&lt;/p&gt;
 &lt;p&gt;项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包&lt;br&gt;这样代码提交到github时，就不用提交node_modules这个文件夹了。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm init&lt;/strong&gt;  会引导你创建一个package.json文件，包括名称、版本、作者这些信息等&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm ls&lt;/strong&gt;  列出当前安装的了所有包&lt;/p&gt;
@@ -60,8 +76,8 @@
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;&lt;strong&gt;npm root&lt;/strong&gt; 查看当前包的安装路径&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm root -g&lt;/strong&gt;  查看全局的包的安装路径&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;npm update &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 更新&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;npm remove &lt;name&gt;&lt;/name&gt;&lt;/strong&gt; 移除&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm update [name]&lt;/strong&gt; 更新&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm remove [name]&lt;/strong&gt; 移除&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm uninstall xxx  (-g)&lt;/strong&gt; 卸载模块&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm cache clean&lt;/strong&gt; 清理缓存&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm help&lt;/strong&gt;  帮助，如果要单独查看install命令的帮助，可以使用的npm help install&lt;/p&gt;
@@ -76,10 +92,10 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;npm search &lt;name&gt;&lt;/strong&gt; 搜索包&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt;&lt;/strong&gt; 安装nodejs的依赖包&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt; -g&lt;/strong&gt;  将包安装到全局环境中&lt;br&gt;但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;npm install &lt;name&gt; –save&lt;/strong&gt;  安装的同时，将信息写入package.json中&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;npm search [name]&lt;/strong&gt; 搜索包&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install [name] [@指定版本号]&lt;/strong&gt; 安装nodejs的依赖包 版本号是可选参数 不过与composer不一样需要@开头&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install [name] -g&lt;/strong&gt;  将包安装到全局环境中&lt;br&gt;但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;npm install [name] –save&lt;/strong&gt;  安装的同时，将信息写入package.json中&lt;/p&gt;
 &lt;p&gt;项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包&lt;br&gt;这样代码提交到github时，就不用提交node_modules这个文件夹了。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm init&lt;/strong&gt;  会引导你创建一个package.json文件，包括名称、版本、作者这些信息等&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;npm ls&lt;/strong&gt;  列出当前安装的了所有包&lt;/p&gt;
@@ -1041,9 +1057,9 @@
     </summary>
     
     
-      <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
-    
       <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
+    
+      <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
     
   </entry>
   
@@ -1214,57 +1230,6 @@
     
     
       <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用docker搭建laravel环境 (Docker for the Laravel framework)</title>
-    <link href="http://elickzhao.github.io/2016/04/%E7%94%A8docker%E6%90%AD%E5%BB%BAlaravel%E7%8E%AF%E5%A2%83%20(Docker%20for%20the%20Laravel%20framework)/"/>
-    <id>http://elickzhao.github.io/2016/04/用docker搭建laravel环境 (Docker for the Laravel framework)/</id>
-    <published>2016-04-25T14:54:28.000Z</published>
-    <updated>2016-04-25T15:00:58.669Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;最近一直想搭建个自己的docker开发环境,找了不少资料.在docker-hub上发现这个,虽然内容老一点,不过思路还是很好的.而且发现用docker搭建原来是如此的so easy! 好吧,让我们开始吧.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;首先来看看布局结构&quot;&gt;&lt;a href=&quot;#首先来看看布局结构&quot; class=&quot;headerlink&quot; title=&quot;首先来看看布局结构&quot;&gt;&lt;/a&gt;首先来看看布局结构&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/image/16-4/4.png&quot; alt=&quot;布局图&quot;&gt;&lt;/p&gt;
-&lt;p&gt;简单说明下.每一个服务用了一个容器.所有容器的数据都指向数据容器.这样统一管理的同时,也方便修改和报错.这里原作者把artisan和composer也放在一个容器里,但是我个人感觉这样不是太好.当然为了保持宿主主机的纯净度来讲,这是个正确的选择,就是操作起来太费事了.&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;下载所有镜像&quot;&gt;&lt;a href=&quot;#下载所有镜像&quot; class=&quot;headerlink&quot; title=&quot;下载所有镜像&quot;&gt;&lt;/a&gt;下载所有镜像&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ docker pull dylanlindgren/docker-laravel-data &amp;amp;&amp;amp; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  docker pull dylanlindgren/docker-laravel-composer &amp;amp;&amp;amp; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  docker pull dylanlindgren/docker-laravel-artisan &amp;amp;&amp;amp; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  docker pull dylanlindgren/docker-laravel-phpfpm &amp;amp;&amp;amp; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  docker pull dylanlindgren/docker-laravel-nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/dylanlindgren/docker-laravel-nginx&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nginx这个镜像的Github地址&lt;/a&gt;,其他的我就不放了,因为这个仓库的首页上都有.所以如果你想去详细了解文件内容可以去看看.&lt;/p&gt;
-&lt;h1 id=&quot;下载虚拟机并建立共享目录&quot;&gt;&lt;a href=&quot;#下载虚拟机并建立共享目录&quot; class=&quot;headerlink&quot; title=&quot;下载虚拟机并建立共享目录&quot;&gt;&lt;/a&gt;下载虚拟机并建立共享目录&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;要说明一点我用的是windows,所以下面的操作讲的都是windows下的操作经过.OS X 大致类似,linux是最简单的完全不需要虚拟机的,只要建立共享目录就可以了.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;下载docker toolbox并安装 (原文是boot2docker 但是貌似不更新了 而且用不了docker composer 所以用新的吧)&lt;/li&gt;
-&lt;li&gt;建立共享目录并与虚拟机设置共享&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#首先进入 virtualbox的目录 使用命令创建共享目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;VBoxManage sharedfolder add boot2docker-vm --name myapp --hostpath C:\Users\dylan\myapp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#创建转发端口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;VBoxManage modifyvm boot2docker-vm --natpf1 &lt;span class=&quot;string&quot;&gt;&quot;web,tcp,,80,,80&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#当然你还可以直接在virtualbox设置里直接设置这些不用命令&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#进入linux挂载刚才的共享目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ boot2docker ssh &amp;apos;sudo mkdir /data&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ boot2docker ssh &amp;apos;sudo mount -t vboxsf -o &amp;quot;defaults,uid=33,gid=33,rw&amp;quot; myapp /data&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#共享目录我个人感觉没用,因为每次都得进入linux挂载一次可用,而且只用启动容器时 使用 -v 直接挂载目录就可以了 也不需要这个.当然你可以按着步骤一步一步做 这样肯定能成功!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;万事俱备-启动容器&quot;&gt;&lt;a href=&quot;#万事俱备-启动容器&quot; class=&quot;headerlink&quot; title=&quot;万事俱备 启动容器&quot;&gt;&lt;/a&gt;万事俱备 启动容器&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启动数据容器 原本好像有点问题 必须这么写要不启动不起来 至于原因嘛 可能跟 bash有关 比较懒没仔细查&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;`docker run --name myapp-data -v /Users/dylan/myapp:/data:rw -id dylanlindgren/docker-laravel-data /bin/bash ` &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启动php容器 --privileged=true 这个必须要不无法创建目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker run --privileged=&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; --name myapp-php --volumes-from myapp-data &lt;span class=&quot;_&quot;&gt;-d&lt;/span&gt; dylanlindgren/docker-laravel-phpfpm &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启动Nginx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker run --privileged=&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; --name myapp-web --volumes-from myapp-data -p 80:80 --link myapp-php:fpm &lt;span class=&quot;_&quot;&gt;-d&lt;/span&gt; dylanlindgren/docker-laravel-nginx  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#剩下两个 不想写了 因为感觉没用 如果你想用可以看下面 有原文链接 到那里看一下就会了 跟上面大同小异&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;检查浏览器成功与否&quot;&gt;&lt;a href=&quot;#检查浏览器成功与否&quot; class=&quot;headerlink&quot; title=&quot;检查浏览器成功与否&quot;&gt;&lt;/a&gt;检查浏览器成功与否&lt;/h1&gt;&lt;p&gt;进入&lt;code&gt;http://localhost&lt;/code&gt;查看是否有你想要的内容.这里提个醒因为是laravel环境,所以做了地址改写,把根目录指向了public下,我第一次也是找半天,后来看Github源代码才搞懂. 所以你只要把代码放到你的共享目录,也就是上面C:\Users\dylan\myapp\www\public下就ok了.&lt;/p&gt;
-&lt;h1 id=&quot;打完收工&quot;&gt;&lt;a href=&quot;#打完收工&quot; class=&quot;headerlink&quot; title=&quot;打完收工&quot;&gt;&lt;/a&gt;打完收工&lt;/h1&gt;&lt;p&gt;到此为止你有了个全新的laravel环境了.不过这还不是我想要的,毕竟版本都很低了,而且有些设置不太合我的心意,所以会自己弄一个环境出来的.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://dylanlindgren.com/docker-for-the-laravel-framework/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;想看原文的点这里……&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;最近一直想搭建个自己的docker开发环境,找了不少资料.在docker-hub上发现这个,虽然内容老一点,不过思路还是很好的.而且发现用docker搭建原来是如此的so easy! 好吧,让我们开始吧.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;首先来看看布局结构&quot;&gt;&lt;a href=&quot;#首先来看看布局结构&quot; class=&quot;headerlink&quot; title=&quot;首先来看看布局结构&quot;&gt;&lt;/a&gt;首先来看看布局结构&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/image/16-4/4.png&quot; alt=&quot;布局图&quot;&gt;&lt;/p&gt;
-&lt;p&gt;简单说明下.每一个服务用了一个容器.所有容器的数据都指向数据容器.这样统一管理的同时,也方便修改和报错.这里原作者把artisan和composer也放在一个容器里,但是我个人感觉这样不是太好.当然为了保持宿主主机的纯净度来讲,这是个正确的选择,就是操作起来太费事了.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="服务器端" scheme="http://elickzhao.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"/>
-    
-    
-      <category term="docker" scheme="http://elickzhao.github.io/tags/docker/"/>
-    
-      <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="laravel" scheme="http://elickzhao.github.io/tags/laravel/"/>
     
   </entry>
   
