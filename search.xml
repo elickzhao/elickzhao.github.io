@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title><![CDATA[phpstrom快捷键及使用技巧]]></title>
+      <url>http://elickzhao.github.io/2016/05/phpstrom%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+      <content type="html"><![CDATA[<p><code>Alt+Shift+X</code><br>命令行工具 (这个和Terminal有区别这个是laravel自带一些命令 这个好像的装laravel插件才可以用)</p>
+<p><code>Ctrl+F12</code><br>呼叫出方法列表</p>
+<p><code>Ctrl+Alt+S</code><br>呼出配置</p>
+<p><code>Ctrl+P</code><br>快速打开文件</p>
+<p><code>Ctrl+Shift+A</code><br>搜索所有配置选项</p>
+<p><code>Ctrl+Shift+Z</code><br>撤销刚才的撤销也就是windows上的 Ctrl+Y</p>
+<p><code>Ctrl+Q</code><br>显示代码注释</p>
+<p><code>Ctrl+E</code><br>最近打开文件</p>
+<a id="more"></a>
+<p><code>Ctrl + Shift +小键盘+</code><br>展开全部</p>
+<p><code>Alt+Enter</code><br>切换编辑语音 比如在php中要编辑html 用这个就可以打开 html编辑然后使用zendcoding快速编辑了</p>
+<p><code>Ctrl + Tab</code><br>键切换选项卡和工具窗口</p>
+<p><code>Alt + ＃[0-9]</code><br>打开相应的工具窗口 Ctrl+Tab里 能看到各个窗口编号 1 项目目录 3 Terminal</p>
+<p><code>CTRL+ALT+F12</code>  资源管理器打开文件夹，跳转至当前文件在磁盘上的位置</p>
+<p><code>CTRL+ALT ←/→</code>  返回上次编辑的位置</p>
+<p><code>CTRL+ []</code>   光标移动到 {}[]开头或结尾位置</p>
+<p><code>CTRL+SHIFT+[]</code>    选中块代码，可以快速复制</p>
+<p><code>CTRL+ALT+L</code>  格式化代码</p>
+<p><code>CTRL+ALT+I</code>  自动缩进</p>
+<p><code>F3</code>   查找下一个</p>
+<p><code>SHIFT+F3</code>  查找上一个</p>
+<p><code>CTRL+R</code>  当前窗口替换文本</p>
+<blockquote>
+<p>把两个项目放到一起显示<br>用设置-&gt;项目-&gt; directories 然后添加项目目录就可以了</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>当写完一个方法的时候 在方法头部可以用 /** + 回车 然后IDE会自动完成备注 很是方便</p>
+</blockquote>
+<hr>
+<p><a href="http://www.myext.cn/php/a_2818.html" target="_blank" rel="external">详细连接 ： http://www.myext.cn/php/a_2818.html</a><br><a href="http://www.cr173.com/html/66775_1.html" target="_blank" rel="external">PhpStorm 快捷键大全 PhpStorm 常用快捷键和配置</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[gulp学习]]></title>
       <url>http://elickzhao.github.io/2016/05/gulp%E5%AD%A6%E4%B9%A0/</url>
       <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">gulp #目录结构</span><br><span class="line">├─.idea</span><br><span class="line">├─app</span><br><span class="line">│  └─assets</span><br><span class="line">│      ├─css</span><br><span class="line">│      │  └─font</span><br><span class="line">│      ├─images</span><br><span class="line">│      └─js</span><br><span class="line">├─build</span><br><span class="line">└─js</span><br></pre></td></tr></table></figure>

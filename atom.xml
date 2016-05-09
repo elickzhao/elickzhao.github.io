@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-08T15:25:39.467Z</updated>
+  <updated>2016-05-09T06:10:01.781Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>phpstrom快捷键及使用技巧</title>
+    <link href="http://elickzhao.github.io/2016/05/phpstrom%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://elickzhao.github.io/2016/05/phpstrom快捷键及使用技巧/</id>
+    <published>2016-05-09T06:05:58.000Z</published>
+    <updated>2016-05-09T06:10:01.781Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;code&gt;Alt+Shift+X&lt;/code&gt;&lt;br&gt;命令行工具 (这个和Terminal有区别这个是laravel自带一些命令 这个好像的装laravel插件才可以用)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+F12&lt;/code&gt;&lt;br&gt;呼叫出方法列表&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+Alt+S&lt;/code&gt;&lt;br&gt;呼出配置&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+P&lt;/code&gt;&lt;br&gt;快速打开文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+Shift+A&lt;/code&gt;&lt;br&gt;搜索所有配置选项&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+Shift+Z&lt;/code&gt;&lt;br&gt;撤销刚才的撤销也就是windows上的 Ctrl+Y&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+Q&lt;/code&gt;&lt;br&gt;显示代码注释&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+E&lt;/code&gt;&lt;br&gt;最近打开文件&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;code&gt;Ctrl + Shift +小键盘+&lt;/code&gt;&lt;br&gt;展开全部&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Alt+Enter&lt;/code&gt;&lt;br&gt;切换编辑语音 比如在php中要编辑html 用这个就可以打开 html编辑然后使用zendcoding快速编辑了&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl + Tab&lt;/code&gt;&lt;br&gt;键切换选项卡和工具窗口&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Alt + ＃[0-9]&lt;/code&gt;&lt;br&gt;打开相应的工具窗口 Ctrl+Tab里 能看到各个窗口编号 1 项目目录 3 Terminal&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CTRL+ALT+F12&lt;/code&gt;  资源管理器打开文件夹，跳转至当前文件在磁盘上的位置&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CTRL+ALT ←/→&lt;/code&gt;  返回上次编辑的位置&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CTRL+ []&lt;/code&gt;   光标移动到 {}[]开头或结尾位置&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CTRL+SHIFT+[]&lt;/code&gt;    选中块代码，可以快速复制&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CTRL+ALT+L&lt;/code&gt;  格式化代码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CTRL+ALT+I&lt;/code&gt;  自动缩进&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;F3&lt;/code&gt;   查找下一个&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SHIFT+F3&lt;/code&gt;  查找上一个&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CTRL+R&lt;/code&gt;  当前窗口替换文本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把两个项目放到一起显示&lt;br&gt;用设置-&amp;gt;项目-&amp;gt; directories 然后添加项目目录就可以了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当写完一个方法的时候 在方法头部可以用 /** + 回车 然后IDE会自动完成备注 很是方便&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.myext.cn/php/a_2818.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详细连接 ： http://www.myext.cn/php/a_2818.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cr173.com/html/66775_1.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PhpStorm 快捷键大全 PhpStorm 常用快捷键和配置&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;Alt+Shift+X&lt;/code&gt;&lt;br&gt;命令行工具 (这个和Terminal有区别这个是laravel自带一些命令 这个好像的装laravel插件才可以用)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+F12&lt;/code&gt;&lt;br&gt;呼叫出方法列表&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+Alt+S&lt;/code&gt;&lt;br&gt;呼出配置&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+P&lt;/code&gt;&lt;br&gt;快速打开文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+Shift+A&lt;/code&gt;&lt;br&gt;搜索所有配置选项&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+Shift+Z&lt;/code&gt;&lt;br&gt;撤销刚才的撤销也就是windows上的 Ctrl+Y&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+Q&lt;/code&gt;&lt;br&gt;显示代码注释&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+E&lt;/code&gt;&lt;br&gt;最近打开文件&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="php开发" scheme="http://elickzhao.github.io/categories/php%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
+    
+      <category term="phpstorm" scheme="http://elickzhao.github.io/tags/phpstorm/"/>
+    
+      <category term="ide" scheme="http://elickzhao.github.io/tags/ide/"/>
+    
+  </entry>
   
   <entry>
     <title>gulp学习</title>
@@ -170,7 +234,7 @@
     <link href="http://elickzhao.github.io/2016/05/npm%20%E5%8F%8A%20node.js%20%E5%8D%87%E7%BA%A7%E8%87%AA%E5%B7%B1%20/"/>
     <id>http://elickzhao.github.io/2016/05/npm 及 node.js 升级自己 /</id>
     <published>2016-05-07T03:38:53.000Z</published>
-    <updated>2016-05-07T03:40:01.259Z</updated>
+    <updated>2016-05-09T05:43:14.711Z</updated>
     
     <content type="html">&lt;h1 id=&quot;npm-自身升级&quot;&gt;&lt;a href=&quot;#npm-自身升级&quot; class=&quot;headerlink&quot; title=&quot;npm 自身升级&quot;&gt;&lt;/a&gt;npm 自身升级&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm -g install npm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;node-js-自身升级&quot;&gt;&lt;a href=&quot;#node-js-自身升级&quot; class=&quot;headerlink&quot; title=&quot;node.js 自身升级&quot;&gt;&lt;/a&gt;node.js 自身升级&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# node有一个模块叫n（这名字可够短的。。。），是专门用来管理node.js的版本的。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 首先安装n模块：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g n &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#升级node.js到最新稳定版&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n stable&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# n 后面也可以跟随版本号比如： &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n v0.10.26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
@@ -181,7 +245,7 @@
     
     </summary>
     
-      <category term="前段技术" scheme="http://elickzhao.github.io/categories/%E5%89%8D%E6%AE%B5%E6%8A%80%E6%9C%AF/"/>
+      <category term="前端技术" scheme="http://elickzhao.github.io/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="npm" scheme="http://elickzhao.github.io/tags/npm/"/>
@@ -1304,44 +1368,6 @@
       <category term="docker" scheme="http://elickzhao.github.io/tags/docker/"/>
     
       <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux sed 批量替换字符串</title>
-    <link href="http://elickzhao.github.io/2016/04/linux%20sed%20%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>http://elickzhao.github.io/2016/04/linux sed 批量替换字符串/</id>
-    <published>2016-04-27T13:25:04.000Z</published>
-    <updated>2016-04-27T13:28:06.178Z</updated>
-    
-    <content type="html">&lt;p&gt;Linux下批量替换多个文件中的字符串的简单方法。用sed命令可以批量替换多个文件中的字符串。&lt;br&gt;命令如下：sed -i “s/原字符串/新字符串/g” &lt;code&gt;grep 原字符串 -rl 所在目录&lt;/code&gt;&lt;br&gt;例如：我要把 charset=gb2312 替换为 charset=UTF-8，执行命令：sed -i “s/charset=gb2312/charset=UTF-8/g” ‘grep charset=gb2312 -rl /www’ 即可。&lt;/p&gt;
-&lt;p&gt;解释一下：&lt;br&gt;    -i 表示inplace edit，就地修改文件&lt;br&gt;    -r 表示搜索子目录&lt;br&gt;    -l 表示输出匹配的文件名&lt;br&gt;    这个命令组合很强大，要注意备份文件。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;#关于 sed 的更多说明：&lt;br&gt;&lt;strong&gt;sed ‘y/1234567890/ABCDEFGHIJ/’ test_sed&lt;/strong&gt;&lt;br&gt;    test_sed的内容是：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1234567890&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2345678901&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3456789012&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 4567890123&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;执行后，test_sed的内容是：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ABCDEFGHIJ&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;BCDEFGHIJA&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CDEFGHIJAB&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DEFGHIJABC&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;注意变换关系是按两个list的位置对应变换&lt;/p&gt;
-&lt;p&gt;替换每行所有匹配 &lt;strong&gt;sed ‘s/01/Ab/g’ test_sed&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1234567890&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23456789Ab&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3456789Ab2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;456789Ab23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;注意：第一行的0，1没有分别替换为A,b&lt;br&gt;删除：d命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘2d’ example—–删除example文件的第二行。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘2,$d’ example—–删除example文件的第二行到末尾所有行。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘$d’ example—–删除example文件的最后一行。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘/test/’d example—–删除example文件所有包含test的行。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;替换：s命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘s/test/mytest/g’ example—–在整行范围内把test替换为mytest。如果没有g标记，则只有每行第一个匹配的test被替换成mytest。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed -n ‘s/^test/mytest/p’ example—–(-n)选项和p标志一起使用表示只打印那些发生替换的行。也就是说，如果某一行开头的test被替换成mytest，就打印它。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘s/^192.168.0.1/&amp;amp;localhost/’example—–&amp;amp;符号表示替换换字符串中被找到的部份。所有以192.168.0.1开头的行都会被替换成它自已加localhost，变成192.168.0.1localhost。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed -n ‘s/\(love\)able/\1rs/p’ example—–love被标记为1，所有loveable会被替换成lovers，而且替换的行会被打印出来。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘s#10#100#g’ example—–不论什么字符，紧跟着s命令的都被认为是新的分隔符，所以，“#”在这里是分隔符，代替了默认的“/”分隔符。表示把所有10替换成100。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;选定行的范围：逗号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed -n ‘/test/,/check/p’ example—–所有在模板test和check所确定的范围内的行都被打印。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed -n ‘5,/^test/p’ example—–打印从第五行开始到第一个包含以test开始的行之间的所有行。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘/test/,/check/s/$/sed test/’ example—–对于模板test和west之间的行，每行的末尾用字符串sed test替换。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;多点编辑：e命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed -e ‘1,5d’ -e ‘s/test/check/’example—–(-e)选项允许在同一行里执行多条命令。如例子所示，第一条命令删除1至5行，第二条命令用check替换test。命令的执行顺序对结果有影响。如果两个命令都是替换命令，那么第一个替换命令将影响第二个替换命令的结果。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed –expression=’s/test/check/’ –expression=’/love/d’ example—–一个比-e更好的命令是–expression。它能给sed表达式赋值。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;从文件读入：r命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘/test/r file’ example—–file里的内容被读进来，显示在与test匹配的行后面，如果匹配多行，则file的内容将显示在所有匹配行的下面。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;写入文件：w命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed -n ‘/test/w file’ example—–在example中所有包含test的行都被写入file里。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;追加命令：a命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘/^test/a\\—&amp;gt;this is a example’ example&amp;lt;—–‘this is a example’被追加到以test开头的行后面，sed要求命令a后面有一个反斜杠。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;插入：i命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘/test/i\\&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;new line&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;————————-‘ example&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;如果test被匹配，则把反斜杠后面的文本插入到匹配行的前面。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;下一个：n命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘/test/&amp;#123; n; s/aa/bb/; &amp;#125;’ example—–如果test被匹配，则移动到匹配行的下一行，替换这一行的aa，变为bb，并打印该行，然后继续。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;变形：y命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed ‘1,10y/abcde/ABCDE/’ example—–把1–10行内所有abcde转变为大写，注意，正则表达式元字符不能使用这个命令。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;退出：q命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed ’10q’ example—–打印完第10行后，退出sed。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;保持和获取：h命令和G命令&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sed -e ‘/test/h’ -e ‘$Gexample—–在sed处理文件的时候，每一行都被保存在一个叫模式空间的临时缓冲区中，除非行被删除或者输出被取消，否则所有被处理的行都将打印在屏幕上。接着模式空间被清空，并存入新的一行等待处理。在这个例子里，匹配test的行被找到后，将存入模式空间，h命令将其复制并存入一个称为保持缓存区的特殊缓冲区内。第二条语句的意思是，当到达最后一行后，G命令取出保持缓冲区的行，然后把它放回模式空间中，且追加到现在已经存在于模式空间中的行的末尾。在这个例子中就是追加到最后一行。简单来说，任何包含test的行都被复制并追加到该文件的末尾。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;保持和互换：h命令和x命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sed -e ‘/test/h’ -e ‘/check/x’ example —–互换模式空间和保持缓冲区的内容。也就是把包含test与check的行互换。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.frostsky.com/2014/01/linux-sed-command/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文地址: http://www.frostsky.com/2014/01/linux-sed-command/&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Linux下批量替换多个文件中的字符串的简单方法。用sed命令可以批量替换多个文件中的字符串。&lt;br&gt;命令如下：sed -i “s/原字符串/新字符串/g” &lt;code&gt;grep 原字符串 -rl 所在目录&lt;/code&gt;&lt;br&gt;例如：我要把 charset=gb2312 替换为 charset=UTF-8，执行命令：sed -i “s/charset=gb2312/charset=UTF-8/g” ‘grep charset=gb2312 -rl /www’ 即可。&lt;/p&gt;
-&lt;p&gt;解释一下：&lt;br&gt;    -i 表示inplace edit，就地修改文件&lt;br&gt;    -r 表示搜索子目录&lt;br&gt;    -l 表示输出匹配的文件名&lt;br&gt;    这个命令组合很强大，要注意备份文件。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
     
   </entry>
   
