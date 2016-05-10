@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[gulp+bower]]></title>
+      <url>http://elickzhao.github.io/2016/05/gulp+bower/</url>
+      <content type="html"><![CDATA[<p>gulp+bower 使用必须用 wiredep</p>
+<p>手动wiredep才可以</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[github开博客]]></title>
       <url>http://elickzhao.github.io/2016/05/github%E5%BC%80%E5%8D%9A%E5%AE%A2/</url>
       <content type="html"><![CDATA[<p><strong>hexo方法</strong><br><a href="https://yangjian.me/workspace/building-blog-with-hexo/" target="_blank" rel="external">使用hexo搭建博客</a><br><a href="http://c4fun.cn/blog/2014/03/03/use-hexo-blog/" target="_blank" rel="external">使用Hexo搭建个人博客</a><br><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a><br><a href="https://yangjian.me/workspace/building-blog-with-hexo/" target="_blank" rel="external">使用hexo搭建博客</a></p>
@@ -1015,7 +1023,13 @@
       <title><![CDATA[ubuntu 国内源列表]]></title>
       <url>http://elickzhao.github.io/2016/04/ubuntu%20%E5%9B%BD%E5%86%85%E6%BA%90%E5%88%97%E8%A1%A8/</url>
       <content type="html"><![CDATA[<p>详细地址都在下面连接 ubuntu国内官网<br><a href="http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8" target="_blank" rel="external">源列表</a></p>
-]]></content>
+<pre><code>&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;label&gt;商城&lt;/label&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;label&gt;商务合作&lt;/label&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;label&gt;申请开店&lt;/label&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;label&gt;下载App&lt;/label&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;label&gt;联系我吗&lt;/label&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;label&gt;会员登录&lt;/label&gt;&lt;/a&gt;&lt;/li&gt;
+</code></pre>]]></content>
     </entry>
     
     <entry>
