@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title><![CDATA[github开博客]]></title>
+      <url>http://elickzhao.github.io/2016/05/github%E5%BC%80%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<p><strong>hexo方法</strong><br><a href="https://yangjian.me/workspace/building-blog-with-hexo/" target="_blank" rel="external">使用hexo搭建博客</a><br><a href="http://c4fun.cn/blog/2014/03/03/use-hexo-blog/" target="_blank" rel="external">使用Hexo搭建个人博客</a><br><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a><br><a href="https://yangjian.me/workspace/building-blog-with-hexo/" target="_blank" rel="external">使用hexo搭建博客</a></p>
+<h1 id="简明步骤"><a href="#简明步骤" class="headerlink" title="简明步骤"></a>简明步骤</h1><ul>
+<li>下载 node.js</li>
+<li>安装npm</li>
+<li>下载Hexo</li>
+<li>创建github新的仓库</li>
+<li>配置ssh</li>
+<li>配置Hexo配置文件 记得repo:地址是SSH 因为gtihub仓库有两个地址一个https 一个 git 一定要用git那个 那样才能用到ssh的自动上传</li>
+<li><p>上传测试</p>
+</li>
+<li><p>安装主题 修改细节<br><a href="http://wsgzao.github.io/post/hexo-jacman/#" target="_blank" rel="external">http://wsgzao.github.io/post/hexo-jacman/#</a><br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">http://wuchong.me/blog/2014/11/20/how-to-use-jacman/</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[phpstrom快捷键及使用技巧]]></title>
       <url>http://elickzhao.github.io/2016/05/phpstrom%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
       <content type="html"><![CDATA[<p><code>Alt+Shift+X</code><br>命令行工具 (这个和Terminal有区别这个是laravel自带一些命令 这个好像的装laravel插件才可以用)</p>
