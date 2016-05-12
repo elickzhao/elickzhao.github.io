@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Emmet,小百科," />
 
 
 
@@ -88,15 +88,40 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao's Blog">
-<meta property="og:url" content="http://elickzhao.github.io/page/5/index.html">
+<meta name="description" content="这里就写几个主要的,详细请看这篇文章 http://www.iteye.com/news/27580使用Emmet加速Web前端开发
+
+初始化 
+
+HTML文档需要包含一些固定的标签，比如、、等，现在你只需要1秒钟就可以输入这些标签。比如输入“!”或“html:5”，然后按Tab键：
+
+嵌套 
+
+现在你只需要1行代码就可以实现标签的嵌套。123&amp;gt;: 子元素符号，表示嵌套的元素+：同级标签符号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Emmet：HTMLCSS 简明介绍">
+<meta property="og:url" content="http://elickzhao.github.io/2016/05/Emmet：HTMLCSS 简明介绍/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description">
+<meta property="og:description" content="这里就写几个主要的,详细请看这篇文章 http://www.iteye.com/news/27580使用Emmet加速Web前端开发
+
+初始化 
+
+HTML文档需要包含一些固定的标签，比如、、等，现在你只需要1秒钟就可以输入这些标签。比如输入“!”或“html:5”，然后按Tab键：
+
+嵌套 
+
+现在你只需要1行代码就可以实现标签的嵌套。123&amp;gt;: 子元素符号，表示嵌套的元素+：同级标签符号">
+<meta property="og:updated_time" content="2016-05-12T16:05:11.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Emmet：HTMLCSS 简明介绍">
+<meta name="twitter:description" content="这里就写几个主要的,详细请看这篇文章 http://www.iteye.com/news/27580使用Emmet加速Web前端开发
+
+初始化 
+
+HTML文档需要包含一些固定的标签，比如、、等，现在你只需要1秒钟就可以输入这些标签。比如输入“!”或“html:5”，然后按Tab键：
+
+嵌套 
+
+现在你只需要1行代码就可以实现标签的嵌套。123&amp;gt;: 子元素符号，表示嵌套的元素+：同级标签符号">
 
 
 
@@ -114,7 +139,7 @@
   };
 </script>
 
-  <title> elickzhao's Blog </title>
+  <title> Emmet：HTMLCSS 简明介绍 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -135,9 +160,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,9 +280,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -279,10 +302,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/04/PHP 获取服务器详细信息代码/" itemprop="url">
-                  PHP 获取服务器详细信息代码
-                </a>
+                Emmet：HTMLCSS 简明介绍
               
             
           </h1>
@@ -294,217 +314,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-29T23:37:15+09:00" content="2016-04-29">
-              2016-04-29
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/PHP 获取服务器详细信息代码/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/PHP 获取服务器详细信息代码/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>说明一下为什么写这个.因为docker的link时需要取得环境变量里面的mysql容器的IP地址,所以想用php取得容器的环境变量.原本想用 <code>$_ENV[]</code> 发现没有内容 原来需要修改 <strong>php.ini</strong> 里面 <code>variables_order = &quot;EGPCS&quot;</code><br>上述配置表示PHP 接受的外部变量来源及顺序，EGPCS 是Environment、Get、Post、Cookies 和Server 的缩写。如果variables_order 的配置中缺少E ，则PHP 无法接受环境变量，那么<code>$_ENV</code> 也就为空了。 后来想到用 php 执行 shell 命令 使用exec , system , shell_exec  但还是获取不到 好赖用 system(env) 才发现原来是我登录的用户为 www-data 所以根本获取不到额外的环境变量 所以这个想法只能作罢, 至于下面 是顺手总结的 一些全局变量的用法</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/PHP 获取服务器详细信息代码/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/脚本报错没有那个文件或目录/" itemprop="url">
-                  脚本报错没有那个文件或目录
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-28T23:26:00+09:00" content="2016-04-28">
-              2016-04-28
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/脚本报错没有那个文件或目录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/脚本报错没有那个文件或目录/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>shell脚本报错：#!binbash 没有那个文件或目录</p>
-<p>在Windows下编辑的，文件每行末尾会多出^M，所以先转格式： linux下有个 dos2unix 脚本文件 可以转换</p>
-<p>windows下可以使用 Notepad++ 编辑文件 或者 使用 菜单-&gt;编辑-&gt;文档格式转换  来转换文件格式</p>
-<p><img src="/image/16-4/5.png" alt="转换格式"></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/总结 Dockerfile 一些命令说明/" itemprop="url">
-                  总结 Dockerfile 一些命令说明
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-27T23:44:57+09:00" content="2016-04-27">
-              2016-04-27
+            <time itemprop="dateCreated" datetime="2016-05-13T01:03:28+09:00" content="2016-05-13">
+              2016-05-13
             </time>
           </span>
 
@@ -517,8 +328,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/服务器端/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器端</span>
+                  <a href="/categories/前段技术/" itemprop="url" rel="index">
+                    <span itemprop="name">前段技术</span>
                   </a>
                 </span>
 
@@ -533,8 +344,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/总结 Dockerfile 一些命令说明/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/总结 Dockerfile 一些命令说明/" itemprop="commentsCount"></span>
+                <a href="/2016/05/Emmet：HTMLCSS 简明介绍/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/Emmet：HTMLCSS 简明介绍/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -557,260 +368,175 @@
       
 
       
-        
-          <blockquote>
-<p>Dockerfile是一个镜像的表示，可以通过Dockerfile来描述构建镜像的步骤，并自动构建一个容器<br>所有的 Dockerfile 命令格式都是:<br>INSTRUCTION arguments<br>虽然指令忽略大小写，但是建议使用大写。</p>
-</blockquote>
-<h1 id="FROM-命令"><a href="#FROM-命令" class="headerlink" title="FROM 命令"></a>FROM 命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;</span><br></pre></td></tr></table></figure>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这个设置基本的镜像，为后续的命令使用，所以应该作为Dockerfile的第一条指令。</p>
-<p>比如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu</span><br></pre></td></tr></table></figure></p>
-<p>如果没有指定 tag ，则默认tag是latest，如果都没有则会报错。</p>
-<h1 id="CMD-命令"><a href="#CMD-命令" class="headerlink" title="CMD 命令"></a>CMD 命令</h1><p>有三种格式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] (like an exec, preferred form)</span><br><span class="line">CMD [&quot;param1&quot;,&quot;param2&quot;] (as default parameters to ENTRYPOINT)</span><br><span class="line">CMD command param1 param2 (as a shell)</span><br></pre></td></tr></table></figure></p>
-<p>一个Dockerfile里只能有一个CMD，如果有多个，只有最后一个生效。这是为了引用镜像时避免启动服务器而无法配置 所以你可以在最后再写个CMD从而屏蔽原镜像的命令</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/总结 Dockerfile 一些命令说明/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <p>这里就写几个主要的,详细请看这篇文章 <a href="http://www.iteye.com/news/27580" target="_blank" rel="external">http://www.iteye.com/news/27580</a><br><a href="http://www.w3cplus.com/tools/using-emmet-speed-front-end-web-development.html" target="_blank" rel="external">使用Emmet加速Web前端开发</a></p>
+<ul>
+<li>初始化 </li>
+</ul>
+<p>HTML文档需要包含一些固定的标签，比如<html>、<head>、</head><body>等，现在你只需要1秒钟就可以输入这些标签。比如输入“!”或“html:5”，然后按Tab键：</body></html></p>
+<ul>
+<li>嵌套 </li>
+</ul>
+<p>现在你只需要1行代码就可以实现标签的嵌套。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;: 子元素符号，表示嵌套的元素</span><br><span class="line">+：同级标签符号</span><br><span class="line">^：可以使该符号前的标签提升一行</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>分组 </li>
+</ul>
+<p>你可以通过嵌套和括号来快速生成一些代码块，比如输入(.foo&gt;h1)+(.bar&gt;h2)，会自动生成如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;foo&quot;&gt;</span><br><span class="line">  &lt;h1&gt;&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;bar&quot;&gt;</span><br><span class="line">  &lt;h2&gt;&lt;/h2&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>快速添加类名、ID、文本和属性</p>
+<ol>
+<li>使用E#ID添加ID名</li>
+<li>使用E.class添加类名</li>
+<li>使用E[attr]添加属性</li>
+<li>使用E{text}添加文本</li>
+</ol>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>隐式标签 </li>
+</ul>
+<p>声明一个带类的标签，只需输入div.item，就会生成<div class="item"></div>。 </p>
+<p>在过去版本中，可以省略掉div，即输入.item即可生成<code>&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;</code>。现在如果只输入.item，则Emmet会根据父标签进行判定。比如在<code>&lt;ul&gt;</code>中输入.item，就会生成<code>&lt;li class=&quot;item&quot;&gt;&lt;/li&gt;</code>。</p>
+<ul>
+<li>定义多个元素 </li>
+</ul>
+<p>要定义多个元素，可以使用<em>符号。比如，ul&gt;li</em>3可以生成如下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>定义多个带属性的元素 </li>
+</ul>
+<p>如果输入 ul&gt;li.item$*3，将会生成如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="emmet-和-css"><a href="#emmet-和-css" class="headerlink" title="emmet 和 css"></a>emmet 和 css</h1><ul>
+<li><p>简写<br>width: 100px : w100<br>border-bottom : bdb<br>border-top: bdt<br>font-size : fz</p>
+</li>
+<li><p>单位:<br>   px→ 默认<br>   p→ %<br>   e→ em<br>   r→ rem<br>   x→ ex</p>
+</li>
+<li><p>多个单位</p>
+</li>
+</ul>
+<p>CSS中的某些属笥，比如margin，允许多个值。在Emmet中要做到这一点，只需要每个值之间使用破折号(-)。来看看下面的例子，给body定义margin的四个值：</p>
+<p>颜色</p>
+<ul>
+<li><p>在Emmet中使用#前缀，后面紧跟颜色值，但不同的字符数将会输出不同的十六进制代码。来看一些例子：</p>
+<p>＃1→ ＃111111<br>＃E0→ ＃e0e0e0<br>＃FC0→ ＃FFCC00</p>
+</li>
+<li><p>!important</p>
+</li>
+</ul>
+<p>尽管在CSS中!important并不经常使用，但在Emmet也带有一定的缩写。添加!就可以自动生成：</p>
+<ul>
+<li>多属性</li>
+</ul>
+<p>现在我们具Emmet的CSS特性的一个基本了解，也是将它们放在一起的时候。就类似于Emmet和HTML中的相邻元素的功能。可以使用加号+运算符来创建多个属性。我们来看一个简单的示例：</p>
+<ul>
+<li>模糊匹配 </li>
+</ul>
+<p>如果有些缩写你拿不准，Emmet会根据你的输入内容匹配最接近的语法，比如输入ov:h、ov-h、ovh和oh，生成的代码是相同的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">overflow: hidden;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>供应商前缀 </li>
+</ul>
+<p>如果输入非W3C标准的CSS属性，Emmet会自动加上供应商前缀，比如输入trs，则会生成： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform: ;  </span><br><span class="line">-moz-transform: ;  </span><br><span class="line">-ms-transform: ;  </span><br><span class="line">-o-transform: ;  </span><br><span class="line">transform: ;</span><br></pre></td></tr></table></figure>
+<p>你也可以在任意属性前加上“-”符号，也可以为该属性加上前缀。比如输入-super-foo：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-webkit-super-foo: ;</span><br><span class="line">-moz-super-foo: ;</span><br><span class="line">-ms-super-foo: ;</span><br><span class="line">-o-super-foo: ;</span><br><span class="line">super-foo: ;</span><br></pre></td></tr></table></figure></p>
+<p>如果不希望加上所有前缀，可以使用缩写来指定，比如-wm-trf表示只加上-webkit和-moz前缀：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform: ;</span><br><span class="line">-moz-transform: ;</span><br><span class="line">transform: ;</span><br></pre></td></tr></table></figure></p>
+<p>w 表示 -webkit-<br>m 表示 -moz-<br>s 表示 -ms-<br>o 表示 -o-</p>
+<ul>
+<li>渐变 </li>
+</ul>
+<p>输入lg(left, #fff 50%, #000)，会生成如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.5, #fff), to(#000));</span><br><span class="line">background-image: -webkit-linear-gradient(left, #fff 50%, #000);</span><br><span class="line">background-image: -moz-linear-gradient(left, #fff 50%, #000);</span><br><span class="line">background-image: -o-linear-gradient(left, #fff 50%, #000);</span><br><span class="line">background-image: linear-gradient(left, #fff 50%, #000);</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/linux sed 批量替换字符串/" itemprop="url">
-                  linux sed 批量替换字符串
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-27T22:25:04+09:00" content="2016-04-27">
-              2016-04-27
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Emmet/" rel="tag">#Emmet</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/linux sed 批量替换字符串/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/linux sed 批量替换字符串/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/小百科/" rel="tag">#小百科</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Linux下批量替换多个文件中的字符串的简单方法。用sed命令可以批量替换多个文件中的字符串。<br>命令如下：sed -i “s/原字符串/新字符串/g” <code>grep 原字符串 -rl 所在目录</code><br>例如：我要把 charset=gb2312 替换为 charset=UTF-8，执行命令：sed -i “s/charset=gb2312/charset=UTF-8/g” ‘grep charset=gb2312 -rl /www’ 即可。</p>
-<p>解释一下：<br>    -i 表示inplace edit，就地修改文件<br>    -r 表示搜索子目录<br>    -l 表示输出匹配的文件名<br>    这个命令组合很强大，要注意备份文件。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/linux sed 批量替换字符串/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/gulp+bower/" rel="next" title="gulp+bower">
+                <i class="fa fa-chevron-left"></i> gulp+bower
+              </a>
+            
           </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/ubuntu 国内源列表/" itemprop="url">
-                  ubuntu 国内源列表
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-26T23:40:34+09:00" content="2016-04-26">
-              2016-04-26
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/ubuntu 国内源列表/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/ubuntu 国内源列表/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>详细地址都在下面连接 ubuntu国内官网<br><a href="http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8" target="_blank" rel="external">源列表</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
 
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -818,6 +544,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/Emmet：HTMLCSS 简明介绍/"
+           data-title="Emmet：HTMLCSS 简明介绍" data-url="http://elickzhao.github.io/2016/05/Emmet：HTMLCSS 简明介绍/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -837,8 +571,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -924,6 +667,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#emmet-和-css"><span class="nav-number">1.</span> <span class="nav-text">emmet 和 css</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1027,6 +781,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
