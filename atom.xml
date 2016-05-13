@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-12T16:05:11.381Z</updated>
+  <updated>2016-05-13T15:03:15.358Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -16,13 +16,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>FIREFOX 和 chrome中 如何 禁止鼠标拖拽图片</title>
+    <link href="http://elickzhao.github.io/2016/05/FIREFOX%20%E5%92%8C%20chrome%E4%B8%AD%20%E5%A6%82%E4%BD%95%20%E7%A6%81%E6%AD%A2%E9%BC%A0%E6%A0%87%E6%8B%96%E6%8B%BD%E5%9B%BE%E7%89%87/"/>
+    <id>http://elickzhao.github.io/2016/05/FIREFOX 和 chrome中 如何 禁止鼠标拖拽图片/</id>
+    <published>2016-05-13T15:01:58.000Z</published>
+    <updated>2016-05-13T15:03:15.358Z</updated>
+    
+    <content type="html">&lt;p&gt;##三种办法&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;language&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    document.images[i].ondragstart=function ()&amp;#123;return false;&amp;#125;;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    e.preventDefault(); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    document.ondragstart=function() &amp;#123;return false;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;我用过第三个 ondragstart 这个好使&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##三种办法&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br
+    
+    </summary>
+    
+      <category term="前端技术" scheme="http://elickzhao.github.io/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="小百科" scheme="http://elickzhao.github.io/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Emmet：HTMLCSS 简明介绍</title>
     <link href="http://elickzhao.github.io/2016/05/Emmet%EF%BC%9AHTMLCSS%20%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/"/>
     <id>http://elickzhao.github.io/2016/05/Emmet：HTMLCSS 简明介绍/</id>
     <published>2016-05-12T16:03:28.000Z</published>
-    <updated>2016-05-12T16:05:11.381Z</updated>
+    <updated>2016-05-12T16:05:50.730Z</updated>
     
-    <content type="html">&lt;p&gt;这里就写几个主要的,详细请看这篇文章 &lt;a href=&quot;http://www.iteye.com/news/27580&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.iteye.com/news/27580&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.w3cplus.com/tools/using-emmet-speed-front-end-web-development.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用Emmet加速Web前端开发&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;这里就写几个主要的,详细请看这篇文章:&lt;br&gt;&lt;a href=&quot;http://www.iteye.com/news/27580&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.iteye.com/news/27580&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.w3cplus.com/tools/using-emmet-speed-front-end-web-development.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用Emmet加速Web前端开发&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;初始化 &lt;/li&gt;
 &lt;/ul&gt;
@@ -34,7 +58,7 @@
 &lt;ul&gt;
 &lt;li&gt;分组 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;你可以通过嵌套和括号来快速生成一些代码块，比如输入(.foo&amp;gt;h1)+(.bar&amp;gt;h2)，会自动生成如下代码&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;foo&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;bar&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;你可以通过嵌套和括号来快速生成一些代码块，比如输入(.foo&amp;gt;h1)+(.bar&amp;gt;h2)，会自动生成如下代码&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;foo&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;bar&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;h2&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;h2&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;快速添加类名、ID、文本和属性&lt;/p&gt;
 &lt;ol&gt;
@@ -103,7 +127,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;这里就写几个主要的,详细请看这篇文章 &lt;a href=&quot;http://www.iteye.com/news/27580&quot;&gt;http://www.iteye.com/news/27580&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.w3cplus.com/tools/using-emmet-speed-front-end-web-development.html&quot;&gt;使用Emmet加速Web前端开发&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;这里就写几个主要的,详细请看这篇文章:&lt;br&gt;&lt;a href=&quot;http://www.iteye.com/news/27580&quot;&gt;http://www.iteye.com/news/27580&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.w3cplus.com/tools/using-emmet-speed-front-end-web-development.html&quot;&gt;使用Emmet加速Web前端开发&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;初始化 &lt;/li&gt;
 &lt;/ul&gt;
@@ -115,7 +139,7 @@
 &lt;ul&gt;
 &lt;li&gt;分组 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;你可以通过嵌套和括号来快速生成一些代码块，比如输入(.foo&amp;gt;h1)+(.bar&amp;gt;h2)，会自动生成如下代码&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;foo&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;bar&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;你可以通过嵌套和括号来快速生成一些代码块，比如输入(.foo&amp;gt;h1)+(.bar&amp;gt;h2)，会自动生成如下代码&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;foo&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;bar&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;h2&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;h2&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;快速添加类名、ID、文本和属性&lt;/p&gt;
 &lt;ol&gt;
@@ -1130,40 +1154,6 @@
       <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
     
       <category term="ubuntu" scheme="http://elickzhao.github.io/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下怎样搜索文件</title>
-    <link href="http://elickzhao.github.io/2016/04/Linux%E4%B8%8B%E6%80%8E%E6%A0%B7%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6/"/>
-    <id>http://elickzhao.github.io/2016/04/Linux下怎样搜索文件/</id>
-    <published>2016-04-30T12:39:59.000Z</published>
-    <updated>2016-04-30T12:41:54.548Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;使用linux系统难免会忘记文件所在的位置，可以使用以下命令对系统中的文件进行搜索。搜索文件的命令为”find“；”locate“；”whereis“；”which“；”type“&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;find&quot;&gt;&lt;a href=&quot;#find&quot; class=&quot;headerlink&quot; title=&quot;find&quot;&gt;&lt;/a&gt;find&lt;/h1&gt;&lt;p&gt;linux下最强大的搜索命令为”find“。&lt;br&gt;它的格式为 &lt;code&gt;find &amp;lt;指定目录&amp;gt; &amp;lt;指定条件&amp;gt; &amp;lt;指定动作&amp;gt;&lt;/code&gt;；&lt;br&gt;比如使用find命令搜索在根目录下的所有interfaces文件所在位置，&lt;br&gt;命令格式为 &lt;code&gt;find / -name  &amp;#39;interfaces&amp;#39;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;查找当前目录下以@开头的文件或者目录，搜索深度为一级也就是只在当前目录找，不进入子目录&lt;br&gt;&lt;code&gt;find . -maxdepth 1 -name &amp;quot;@*&amp;quot;&lt;/code&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;locate&quot;&gt;&lt;a href=&quot;#locate&quot; class=&quot;headerlink&quot; title=&quot;locate&quot;&gt;&lt;/a&gt;locate&lt;/h1&gt;&lt;p&gt;使用locate搜索linux系统中的文件，它比find命令快。&lt;br&gt;因为它查询的是数据库(/var/lib/locatedb)，数据库包含本地所有的文件信息。&lt;br&gt;使用locate命令在根目录下搜索interfaces文件的命令为 &lt;code&gt;locate interfaces&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id=&quot;whereis&quot;&gt;&lt;a href=&quot;#whereis&quot; class=&quot;headerlink&quot; title=&quot;whereis&quot;&gt;&lt;/a&gt;whereis&lt;/h1&gt;&lt;p&gt;使用”whereis“命令可以搜索linux系统中的所有可执行文件即二进制文件。&lt;br&gt;使用whereis命令搜索grep二进制文件的命令为 &lt;code&gt;whereis grep&lt;/code&gt;。&lt;/p&gt;
-&lt;h1 id=&quot;which&quot;&gt;&lt;a href=&quot;#which&quot; class=&quot;headerlink&quot; title=&quot;which&quot;&gt;&lt;/a&gt;which&lt;/h1&gt;&lt;p&gt;使用which命令查看系统命令是否存在，并返回系统命令所在的位置。&lt;br&gt;使用which命令查看grep命令是否存在以及存在的目录的命令为 &lt;code&gt;which grep&lt;/code&gt;。&lt;/p&gt;
-&lt;h1 id=&quot;type&quot;&gt;&lt;a href=&quot;#type&quot; class=&quot;headerlink&quot; title=&quot;type&quot;&gt;&lt;/a&gt;type&lt;/h1&gt;&lt;p&gt;使用type命令查看系统中的某个命令是否为系统自带的命令。&lt;br&gt;使用type命令查看cd命令是否为系统自带的命令；查看grep 是否为系统自带的命令。&lt;br&gt;&lt;code&gt;type cd&lt;/code&gt; &lt;code&gt;type grep&lt;/code&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;使用linux系统难免会忘记文件所在的位置，可以使用以下命令对系统中的文件进行搜索。搜索文件的命令为”find“；”locate“；”whereis“；”which“；”type“&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;find&quot;&gt;&lt;a href=&quot;#find&quot; class=&quot;headerlink&quot; title=&quot;find&quot;&gt;&lt;/a&gt;find&lt;/h1&gt;&lt;p&gt;linux下最强大的搜索命令为”find“。&lt;br&gt;它的格式为 &lt;code&gt;find &amp;lt;指定目录&amp;gt; &amp;lt;指定条件&amp;gt; &amp;lt;指定动作&amp;gt;&lt;/code&gt;；&lt;br&gt;比如使用find命令搜索在根目录下的所有interfaces文件所在位置，&lt;br&gt;命令格式为 &lt;code&gt;find / -name  &amp;#39;interfaces&amp;#39;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;查找当前目录下以@开头的文件或者目录，搜索深度为一级也就是只在当前目录找，不进入子目录&lt;br&gt;&lt;code&gt;find . -maxdepth 1 -name &amp;quot;@*&amp;quot;&lt;/code&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
     
   </entry>
   
