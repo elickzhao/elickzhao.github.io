@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-13T15:03:15.358Z</updated>
+  <updated>2016-05-15T13:11:13.297Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>laravel 银联支付一点总结</title>
+    <link href="http://elickzhao.github.io/2016/05/laravel%20%E9%93%B6%E8%81%94%E6%94%AF%E4%BB%98%E4%B8%80%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    <id>http://elickzhao.github.io/2016/05/laravel 银联支付一点总结/</id>
+    <published>2016-05-15T13:08:05.000Z</published>
+    <updated>2016-05-15T13:11:13.297Z</updated>
+    
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;第一步开通测试&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在我的产品中 点击为测试 然后添加要测试的项目 要不然会提示无权限 这里选择网关支付&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载测试证书&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;测试证书要从 个人中心 测试参数哪里下载  &lt;a href=&quot;https://open.unionpay.com/ajweb/account/testPara&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://open.unionpay.com/ajweb/account/testPara&lt;/a&gt;&lt;br&gt;商户私钥证书 必须安装一下 要不会会出错&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编写代码&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;config\laravel-omnipay.php&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// The default gateway to use&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;string&quot;&gt;&#39;default&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;paypal&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// Add in each gateway here&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;string&quot;&gt;&#39;gateways&#39;&lt;/span&gt; =&amp;gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;string&quot;&gt;&#39;unionpay&#39;&lt;/span&gt; =&amp;gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;string&quot;&gt;&#39;driver&#39;&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;UnionPay_Express&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;string&quot;&gt;&#39;options&#39;&lt;/span&gt; =&amp;gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;merId&#39;&lt;/span&gt;			 =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;777290058128659&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;certPath&#39;&lt;/span&gt;		 =&amp;gt;	storage_path(&lt;span class=&quot;string&quot;&gt;&#39;app/unionpay/certs/700000000000001_acp.pfx&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;certPassword&#39;&lt;/span&gt;	 =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;000000&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;certDir&#39;&lt;/span&gt;		 =&amp;gt;	 storage_path(&lt;span class=&quot;string&quot;&gt;&#39;app/unionpay/certs&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;comment&quot;&gt;//付款完成后跳转会商家页面地址 两个好像可以写同一个地址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;returnUrl&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;http://114.254.183.127/omnipay/public/unionpay/return&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;notifyUrl&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;http://114.254.183.127/omnipay/public/unionpay/notify&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;routes.php&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回调的方式不要写错了 是 &lt;strong&gt;POST&lt;/strong&gt;   &lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//银联支付处理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Route::get(&lt;span class=&quot;string&quot;&gt;&#39;unionpay/pay&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;UnionpayController@pay&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//支付后回调页面&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Route::post(&lt;span class=&quot;string&quot;&gt;&#39;unionpay/return&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;UnionpayController@result&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UnionpayController.php&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意引用的 一定是 Omnipay的门面 因为会自动加载 Omnipay\Omnipay这个类 这是错的 会找不到gateway()方法的&lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;App&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Http&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Controllers&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Illuminate&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Http&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Request&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;App&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Http&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Requests&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;App&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Http&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Controllers&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Controller&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Omnipay&lt;/span&gt;;     &lt;span class=&quot;comment&quot;&gt;//****************  就是这里千万不要搞错 引用的是这个门面&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//现在返回还有点问题 但是无关大雅了 支付流程已经完成了 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;UnionpayController&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Controller&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;pay&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $gateway = Omnipay::gateway(&lt;span class=&quot;string&quot;&gt;&#39;unionpay&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $order = [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&#39;orderId&#39;&lt;/span&gt;   =&amp;gt;  date(&lt;span class=&quot;string&quot;&gt;&#39;YmdHis&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&#39;txnTime&#39;&lt;/span&gt;   =&amp;gt;  date(&lt;span class=&quot;string&quot;&gt;&#39;YmdHis&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&#39;orderDesc&#39;&lt;/span&gt; =&amp;gt;  &lt;span class=&quot;string&quot;&gt;&#39;My test order title&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&#39;txnAmt&#39;&lt;/span&gt;    =&amp;gt;  &lt;span class=&quot;string&quot;&gt;&#39;100&#39;&lt;/span&gt;   &lt;span class=&quot;comment&quot;&gt;//订单价格&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//        dump(config(&#39;laravel-omnipay.gateways&#39;));&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//        dd(storage_path(&#39;app/unionpay/certs/acp_test_sign.pfx&#39;));&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $response = $gateway-&amp;gt;purchase($order)-&amp;gt;send();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $response-&amp;gt;redirect();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $gateway = Omnipay::getFactory(&lt;span class=&quot;string&quot;&gt;&#39;unionpay&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $response = $gateway-&amp;gt;completePurchase([&lt;span class=&quot;string&quot;&gt;&#39;request_params&#39;&lt;/span&gt;=&amp;gt;$_REQUEST])-&amp;gt;send();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ($response-&amp;gt;isPaid()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;支付成功！&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;支付失败！&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;  &lt;span class=&quot;title&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;hhhh&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;测试同调&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有一点一定要记住  &lt;strong&gt;点击获取短信&lt;/strong&gt; 后,再填写验证码 要不有可能会提示验证码错误,或者系统忙&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;第一步开通测试&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在我的产品中 点击为测试 然后添加要测试的项目 要不然会提示无权限 这里选择网关支付&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载测试证书&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;测试证书要从 个人中心 测试参数哪里下载  &lt;a href=&quot;https://open.unionpay.com/ajweb/account/testPara&quot;&gt;https://open.unionpay.com/ajweb/account/testPara&lt;/a&gt;&lt;br&gt;商户私钥证书 必须安装一下 要不会会出错&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编写代码&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;config\laravel-omnipay.php&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;?php&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// The default gateway to use&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;string&quot;&gt;&#39;default&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;paypal&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// Add in each gateway here&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;string&quot;&gt;&#39;gateways&#39;&lt;/span&gt; =&amp;gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;string&quot;&gt;&#39;unionpay&#39;&lt;/span&gt; =&amp;gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;string&quot;&gt;&#39;driver&#39;&lt;/span&gt;  =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;UnionPay_Express&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;string&quot;&gt;&#39;options&#39;&lt;/span&gt; =&amp;gt; [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;merId&#39;&lt;/span&gt;			 =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;777290058128659&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;certPath&#39;&lt;/span&gt;		 =&amp;gt;	storage_path(&lt;span class=&quot;string&quot;&gt;&#39;app/unionpay/certs/700000000000001_acp.pfx&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;certPassword&#39;&lt;/span&gt;	 =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;000000&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;certDir&#39;&lt;/span&gt;		 =&amp;gt;	 storage_path(&lt;span class=&quot;string&quot;&gt;&#39;app/unionpay/certs&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;comment&quot;&gt;//付款完成后跳转会商家页面地址 两个好像可以写同一个地址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;returnUrl&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;http://114.254.183.127/omnipay/public/unionpay/return&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;string&quot;&gt;&#39;notifyUrl&#39;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;http://114.254.183.127/omnipay/public/unionpay/notify&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="php开发" scheme="http://elickzhao.github.io/categories/php%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="laravel" scheme="http://elickzhao.github.io/tags/laravel/"/>
+    
+  </entry>
   
   <entry>
     <title>FIREFOX 和 chrome中 如何 禁止鼠标拖拽图片</title>
@@ -44,7 +121,7 @@
     <link href="http://elickzhao.github.io/2016/05/Emmet%EF%BC%9AHTMLCSS%20%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/"/>
     <id>http://elickzhao.github.io/2016/05/Emmet：HTMLCSS 简明介绍/</id>
     <published>2016-05-12T16:03:28.000Z</published>
-    <updated>2016-05-12T16:05:50.730Z</updated>
+    <updated>2016-05-15T13:09:23.416Z</updated>
     
     <content type="html">&lt;p&gt;这里就写几个主要的,详细请看这篇文章:&lt;br&gt;&lt;a href=&quot;http://www.iteye.com/news/27580&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.iteye.com/news/27580&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.w3cplus.com/tools/using-emmet-speed-front-end-web-development.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用Emmet加速Web前端开发&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -153,7 +230,7 @@
     
     </summary>
     
-      <category term="前段技术" scheme="http://elickzhao.github.io/categories/%E5%89%8D%E6%AE%B5%E6%8A%80%E6%9C%AF/"/>
+      <category term="前端技术" scheme="http://elickzhao.github.io/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="Emmet" scheme="http://elickzhao.github.io/tags/Emmet/"/>
@@ -553,9 +630,9 @@
     </summary>
     
     
-      <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
-    
       <category term="composer" scheme="http://elickzhao.github.io/tags/composer/"/>
+    
+      <category term="php" scheme="http://elickzhao.github.io/tags/php/"/>
     
   </entry>
   
@@ -724,9 +801,9 @@
     
       <category term="服务器相关技术" scheme="http://elickzhao.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="vagrant" scheme="http://elickzhao.github.io/tags/vagrant/"/>
-    
       <category term="laravel" scheme="http://elickzhao.github.io/tags/laravel/"/>
+    
+      <category term="vagrant" scheme="http://elickzhao.github.io/tags/vagrant/"/>
     
   </entry>
   
@@ -1105,55 +1182,6 @@
       <category term="Git" scheme="http://elickzhao.github.io/tags/Git/"/>
     
       <category term="ssh" scheme="http://elickzhao.github.io/tags/ssh/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用的apt-get命令</title>
-    <link href="http://elickzhao.github.io/2016/05/%E5%B8%B8%E7%94%A8%E7%9A%84apt-get%E5%91%BD%E4%BB%A4/"/>
-    <id>http://elickzhao.github.io/2016/05/常用的apt-get命令/</id>
-    <published>2016-04-30T15:15:51.000Z</published>
-    <updated>2016-04-30T15:17:19.209Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;strong&gt;apt-get update&lt;/strong&gt;：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get install packagename&lt;/strong&gt;：安装一个新软件包&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get remove packagename&lt;/strong&gt;：卸载一个已安装的软件包（保留配置文件）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get remove package - - purge&lt;/strong&gt;: 删除包，包括删除配置文件等 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get clean&lt;/strong&gt;：这个命令会把安装的软件的备份也删除，不过这样不会影响软件的使用的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get upgrade&lt;/strong&gt;：更新所有已安装的软件包&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get dist-upgrade&lt;/strong&gt;：将系统升级到新版本&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-cache search package&lt;/strong&gt; 搜索包 &lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;strong&gt;apt-cache show package&lt;/strong&gt; 获取包的相关信息，如说明、大小、版本等 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get install package - - reinstall&lt;/strong&gt; 重新安装包 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get -f install&lt;/strong&gt; 修复安装”-f = ——fix-missing” &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get install build-essential&lt;/strong&gt; 配置c/c++ compile环境  &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-cache depends package&lt;/strong&gt; 了解使用依赖 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-cache rdepends package&lt;/strong&gt; 是查看该包被哪些包依赖 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get build-dep package&lt;/strong&gt; 安装相关的编译环境 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get source package&lt;/strong&gt; 下载该包的源代码 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get check&lt;/strong&gt; 检查是否有损坏的依赖&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get autoclean&lt;/strong&gt;：定期运行这个命令来清除那些已经卸载的软件包的.deb文件。 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get autoremove&lt;/strong&gt; :自动清除不需要的程序包。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;apt-get update&lt;/strong&gt;：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get install packagename&lt;/strong&gt;：安装一个新软件包&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get remove packagename&lt;/strong&gt;：卸载一个已安装的软件包（保留配置文件）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get remove package - - purge&lt;/strong&gt;: 删除包，包括删除配置文件等 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get clean&lt;/strong&gt;：这个命令会把安装的软件的备份也删除，不过这样不会影响软件的使用的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get upgrade&lt;/strong&gt;：更新所有已安装的软件包&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-get dist-upgrade&lt;/strong&gt;：将系统升级到新版本&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;apt-cache search package&lt;/strong&gt; 搜索包 &lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://elickzhao.github.io/tags/linux/"/>
-    
-      <category term="ubuntu" scheme="http://elickzhao.github.io/tags/ubuntu/"/>
     
   </entry>
   

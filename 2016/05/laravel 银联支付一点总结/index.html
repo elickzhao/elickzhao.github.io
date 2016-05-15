@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="composer,php," />
+  <meta name="keywords" content="laravel," />
 
 
 
@@ -88,16 +88,58 @@
 
 
 
-<meta name="description" content="12345678910111213141516171819202122composer selfupdate                      composer require &amp;quot;foo/bar:1.0.0&amp;quot;                    安装一个库composer update foo/bar                             更新单个库">
+<meta name="description" content="第一步开通测试
+
+在我的产品中 点击为测试 然后添加要测试的项目 要不然会提示无权限 这里选择网关支付
+
+
+下载测试证书
+
+测试证书要从 个人中心 测试参数哪里下载  https://open.unionpay.com/ajweb/account/testPara商户私钥证书 必须安装一下 要不会会出错
+
+
+编写代码
+
+
+
+config\laravel-omnipay.php1234567891">
 <meta property="og:type" content="article">
-<meta property="og:title" content="composer 一些常用命令及使用心得">
-<meta property="og:url" content="http://elickzhao.github.io/2016/05/composer 一些常用命令及使用心得/index.html">
+<meta property="og:title" content="laravel 银联支付一点总结">
+<meta property="og:url" content="http://elickzhao.github.io/2016/05/laravel 银联支付一点总结/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description" content="12345678910111213141516171819202122composer selfupdate                      composer require &amp;quot;foo/bar:1.0.0&amp;quot;                    安装一个库composer update foo/bar                             更新单个库">
-<meta property="og:updated_time" content="2016-05-06T08:31:49.821Z">
+<meta property="og:description" content="第一步开通测试
+
+在我的产品中 点击为测试 然后添加要测试的项目 要不然会提示无权限 这里选择网关支付
+
+
+下载测试证书
+
+测试证书要从 个人中心 测试参数哪里下载  https://open.unionpay.com/ajweb/account/testPara商户私钥证书 必须安装一下 要不会会出错
+
+
+编写代码
+
+
+
+config\laravel-omnipay.php1234567891">
+<meta property="og:updated_time" content="2016-05-15T13:11:13.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="composer 一些常用命令及使用心得">
-<meta name="twitter:description" content="12345678910111213141516171819202122composer selfupdate                      composer require &amp;quot;foo/bar:1.0.0&amp;quot;                    安装一个库composer update foo/bar                             更新单个库">
+<meta name="twitter:title" content="laravel 银联支付一点总结">
+<meta name="twitter:description" content="第一步开通测试
+
+在我的产品中 点击为测试 然后添加要测试的项目 要不然会提示无权限 这里选择网关支付
+
+
+下载测试证书
+
+测试证书要从 个人中心 测试参数哪里下载  https://open.unionpay.com/ajweb/account/testPara商户私钥证书 必须安装一下 要不会会出错
+
+
+编写代码
+
+
+
+config\laravel-omnipay.php1234567891">
 
 
 
@@ -115,7 +157,7 @@
   };
 </script>
 
-  <title> composer 一些常用命令及使用心得 | elickzhao's Blog </title>
+  <title> laravel 银联支付一点总结 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,7 +320,7 @@
             
             
               
-                composer 一些常用命令及使用心得
+                laravel 银联支付一点总结
               
             
           </h1>
@@ -290,19 +332,38 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-06T17:30:51+09:00" content="2016-05-06">
-              2016-05-06
+            <time itemprop="dateCreated" datetime="2016-05-15T22:08:05+09:00" content="2016-05-15">
+              2016-05-15
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/php开发/" itemprop="url" rel="index">
+                    <span itemprop="name">php开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/composer 一些常用命令及使用心得/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/composer 一些常用命令及使用心得/" itemprop="commentsCount"></span>
+                <a href="/2016/05/laravel 银联支付一点总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/laravel 银联支付一点总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,8 +386,44 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">composer selfupdate                      </span><br><span class="line">composer require &quot;foo/bar:1.0.0&quot;                    安装一个库</span><br><span class="line">composer update foo/bar                             更新单个库</span><br><span class="line">composer create-project laravel/laravel myapp --prefer-dist 创建laravel项目</span><br><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com 配置仓库镜像</span><br><span class="line">composer global require &quot;laravel/installer=~1.1&quot;    全局安装laravel安装器</span><br><span class="line"></span><br><span class="line">composer install update --prefer-dist               后面这个参数是强制使用压缩包</span><br><span class="line">composer install --profile                          后面这个参数是显示安装时间</span><br><span class="line">composer dump-autoload --optimize                   生产环境优化</span><br><span class="line">composer update symfony/yaml --prefer-source        强制克隆代码 用于修改库文件</span><br><span class="line"></span><br><span class="line">当你更新一个修改的库的时候 会提示你是否放弃修改</span><br><span class="line">----------------------------------------------------------------------------------------------------</span><br><span class="line">$ composer update</span><br><span class="line">Loading composer repositories with package information  </span><br><span class="line">Updating dependencies  </span><br><span class="line">  - Updating symfony/symfony v2.2.0 (v2.2.0- =&gt; v2.2.0)</span><br><span class="line">    The package has modified files:</span><br><span class="line">    M Dumper.php</span><br><span class="line">    Discard changes [y,n,v,s,?]?</span><br><span class="line">----------------------------------------------------------------------------------------------------</span><br></pre></td></tr></table></figure>
-<p><strong>全局配置目录</strong><br>C:\Users\elick\AppData\Roaming\Composer</p>
+        <ul>
+<li><p>第一步开通测试</p>
+<blockquote>
+<p>在我的产品中 点击为测试 然后添加要测试的项目 要不然会提示无权限 这里选择网关支付</p>
+</blockquote>
+</li>
+<li><p>下载测试证书</p>
+<blockquote>
+<p>测试证书要从 个人中心 测试参数哪里下载  <a href="https://open.unionpay.com/ajweb/account/testPara" target="_blank" rel="external">https://open.unionpay.com/ajweb/account/testPara</a><br>商户私钥证书 必须安装一下 要不会会出错</p>
+</blockquote>
+</li>
+<li><p>编写代码</p>
+</li>
+</ul>
+<ol>
+<li>config\laravel-omnipay.php<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> [</span><br><span class="line"></span><br><span class="line">	<span class="comment">// The default gateway to use</span></span><br><span class="line">	<span class="string">'default'</span> =&gt; <span class="string">'paypal'</span>,</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Add in each gateway here</span></span><br><span class="line">	<span class="string">'gateways'</span> =&gt; [</span><br><span class="line">		<span class="string">'unionpay'</span> =&gt; [</span><br><span class="line">			<span class="string">'driver'</span>  =&gt; <span class="string">'UnionPay_Express'</span>,</span><br><span class="line">			<span class="string">'options'</span> =&gt; [</span><br><span class="line">				<span class="string">'merId'</span>			 =&gt; <span class="string">'777290058128659'</span>,</span><br><span class="line">				<span class="string">'certPath'</span>		 =&gt;	storage_path(<span class="string">'app/unionpay/certs/700000000000001_acp.pfx'</span>),</span><br><span class="line">				<span class="string">'certPassword'</span>	 =&gt; <span class="string">'000000'</span>,</span><br><span class="line">				<span class="string">'certDir'</span>		 =&gt;	 storage_path(<span class="string">'app/unionpay/certs'</span>),</span><br><span class="line">				<span class="comment">//付款完成后跳转会商家页面地址 两个好像可以写同一个地址</span></span><br><span class="line">				<span class="string">'returnUrl'</span> =&gt; <span class="string">'http://114.254.183.127/omnipay/public/unionpay/return'</span>,</span><br><span class="line">				<span class="string">'notifyUrl'</span> =&gt; <span class="string">'http://114.254.183.127/omnipay/public/unionpay/notify'</span></span><br><span class="line"></span><br><span class="line">			]</span><br><span class="line">		]</span><br><span class="line">	]</span><br><span class="line"></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li><p>routes.php</p>
+<blockquote>
+<p>回调的方式不要写错了 是 <strong>POST</strong>   </p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//银联支付处理</span></span><br><span class="line">Route::get(<span class="string">'unionpay/pay'</span>,<span class="string">'UnionpayController@pay'</span>);</span><br><span class="line"><span class="comment">//支付后回调页面</span></span><br><span class="line">Route::post(<span class="string">'unionpay/return'</span>,<span class="string">'UnionpayController@result'</span>);</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>UnionpayController.php</p>
+<blockquote>
+<p>注意引用的 一定是 Omnipay的门面 因为会自动加载 Omnipay\Omnipay这个类 这是错的 会找不到gateway()方法的</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">Controllers</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Http</span>\<span class="title">Request</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">Requests</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">Controllers</span>\<span class="title">Controller</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Omnipay</span>;     <span class="comment">//****************  就是这里千万不要搞错 引用的是这个门面</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//现在返回还有点问题 但是无关大雅了 支付流程已经完成了 </span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnionpayController</span> <span class="keyword">extends</span> <span class="title">Controller</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">pay</span><span class="params">()</span></span>&#123;</span><br><span class="line">        $gateway = Omnipay::gateway(<span class="string">'unionpay'</span>);</span><br><span class="line"></span><br><span class="line">        $order = [</span><br><span class="line">            <span class="string">'orderId'</span>   =&gt;  date(<span class="string">'YmdHis'</span>),</span><br><span class="line">            <span class="string">'txnTime'</span>   =&gt;  date(<span class="string">'YmdHis'</span>),</span><br><span class="line">            <span class="string">'orderDesc'</span> =&gt;  <span class="string">'My test order title'</span>,</span><br><span class="line">            <span class="string">'txnAmt'</span>    =&gt;  <span class="string">'100'</span>   <span class="comment">//订单价格</span></span><br><span class="line">        ];</span><br><span class="line"><span class="comment">//        dump(config('laravel-omnipay.gateways'));</span></span><br><span class="line"><span class="comment">//        dd(storage_path('app/unionpay/certs/acp_test_sign.pfx'));</span></span><br><span class="line">        $response = $gateway-&gt;purchase($order)-&gt;send();</span><br><span class="line">        $response-&gt;redirect();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">result</span><span class="params">()</span></span>&#123;</span><br><span class="line">        $gateway = Omnipay::getFactory(<span class="string">'unionpay'</span>);</span><br><span class="line">        $response = $gateway-&gt;completePurchase([<span class="string">'request_params'</span>=&gt;$_REQUEST])-&gt;send();</span><br><span class="line">        <span class="keyword">if</span> ($response-&gt;isPaid()) &#123;</span><br><span class="line">            <span class="keyword">exit</span>(<span class="string">'支付成功！'</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">exit</span>(<span class="string">'支付失败！'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span>  <span class="title">notify</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'hhhh'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>测试同调</p>
+<blockquote>
+<p>有一点一定要记住  <strong>点击获取短信</strong> 后,再填写验证码 要不有可能会提示验证码错误,或者系统忙</p>
+</blockquote>
+</li>
+</ol>
 
       
     </div>
@@ -347,9 +444,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/composer/" rel="tag">#composer</a>
-          
-            <a href="/tags/php/" rel="tag">#php</a>
+            <a href="/tags/laravel/" rel="tag">#laravel</a>
           
         </div>
       
@@ -358,17 +453,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/webstorm 和 phpstorm 个人喜爱的设置/" rel="next" title="webstorm 和 phpstorm 个人喜爱的设置">
-                <i class="fa fa-chevron-left"></i> webstorm 和 phpstorm 个人喜爱的设置
+              <a href="/2016/05/FIREFOX 和 chrome中 如何 禁止鼠标拖拽图片/" rel="next" title="FIREFOX 和 chrome中 如何 禁止鼠标拖拽图片">
+                <i class="fa fa-chevron-left"></i> FIREFOX 和 chrome中 如何 禁止鼠标拖拽图片
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/nodejs npm常用命令/" rel="prev" title="nodejs npm常用命令">
-                nodejs npm常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -432,8 +523,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/composer 一些常用命令及使用心得/"
-           data-title="composer 一些常用命令及使用心得" data-url="http://elickzhao.github.io/2016/05/composer 一些常用命令及使用心得/">
+      <div class="ds-thread" data-thread-key="2016/05/laravel 银联支付一点总结/"
+           data-title="laravel 银联支付一点总结" data-url="http://elickzhao.github.io/2016/05/laravel 银联支付一点总结/">
       </div>
     
   </div>
