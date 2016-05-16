@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[前端开发环境简介]]></title>
+      <url>http://elickzhao.github.io/2016/05/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B/</url>
+      <content type="html"><![CDATA[<p>这篇文章 只是简单介绍 几个框架的主要作用,并不涉及详细用法.</p>
+<h1 id="npm-老大中的老大"><a href="#npm-老大中的老大" class="headerlink" title="npm 老大中的老大"></a>npm 老大中的老大</h1><p>npm 不用多说什么 这是一切基础中的基础</p>
+<h1 id="yeoman-快速构建项目目录"><a href="#yeoman-快速构建项目目录" class="headerlink" title="yeoman 快速构建项目目录"></a>yeoman 快速构建项目目录</h1><p>其实很多项目开发的时候,目录结构及需要的插件都有一定规律.所以yeoman是解放懒人的又一利器.他的主要作用就是,当你开始一个新项目时不用自己再手动各个目录和安装那些插件,一切都为你准备好,只要一个命令 <code>yo</code>找到你要开发项目,接下来只需等待yeoman帮你建立好所需的一切</p>
+<h1 id="bower-找轮子利器"><a href="#bower-找轮子利器" class="headerlink" title="bower 找轮子利器"></a>bower 找轮子利器</h1><p>自己遭轮子虽然有成就感,不过别人写好的东西又何必再去浪费时间.所以bower又是懒人必不可少的.之所以选择bower是因为比npm搜索跟人性化,对我来说目前是这样,我更喜欢bower</p>
+<h1 id="gulp-让你更专注的写东西-其他的事情交给gulp吧"><a href="#gulp-让你更专注的写东西-其他的事情交给gulp吧" class="headerlink" title="gulp 让你更专注的写东西 其他的事情交给gulp吧"></a>gulp 让你更专注的写东西 其他的事情交给gulp吧</h1><p>bower是需要实现一些功能的时候去搜索这个功能的插件,比如slider. 而gulp所用的插件是为了给你开发带来便利,并不是你网页上的功能.比如压缩css,js. 比如 sass直接编译好显示.这些都是提供你写代码时的方便.有了gulp 我就不在需要dw了,用sublime就好了.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[laravel 银联支付一点总结]]></title>
       <url>http://elickzhao.github.io/2016/05/laravel%20%E9%93%B6%E8%81%94%E6%94%AF%E4%BB%98%E4%B8%80%E7%82%B9%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<ul>
