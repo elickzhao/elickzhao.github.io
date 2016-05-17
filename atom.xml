@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://elickzhao.github.io/"/>
-  <updated>2016-05-16T13:10:03.178Z</updated>
+  <updated>2016-05-17T12:20:11.554Z</updated>
   <id>http://elickzhao.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bootstrap 该死的IE兼容</title>
+    <link href="http://elickzhao.github.io/2016/05/bootstrap%20%E8%AF%A5%E6%AD%BB%E7%9A%84IE%E5%85%BC%E5%AE%B9/"/>
+    <id>http://elickzhao.github.io/2016/05/bootstrap 该死的IE兼容/</id>
+    <published>2016-05-17T12:18:46.000Z</published>
+    <updated>2016-05-17T12:20:11.554Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;前面碎碎念&quot;&gt;&lt;a href=&quot;#前面碎碎念&quot; class=&quot;headerlink&quot; title=&quot;前面碎碎念&quot;&gt;&lt;/a&gt;前面碎碎念&lt;/h1&gt;&lt;p&gt;真是不搞页面,不知道弄兼容如此的恶心.当然你一板一眼的写,能避免很多的麻烦,可是利用框架,插件来做,这是烦的要死了.&lt;/p&gt;
+&lt;p&gt;这次利用了 yoesman+gulp+bower 快速搭建了个项目 其中还用到swiper插件 这个插件 3代主要面对手机 可是有些新特性 2代还没有 真是麻烦 用了3代 兼容性就有麻烦了.&lt;/p&gt;
+&lt;h1 id=&quot;基本解决问题&quot;&gt;&lt;a href=&quot;#基本解决问题&quot; class=&quot;headerlink&quot; title=&quot;基本解决问题&quot;&gt;&lt;/a&gt;基本解决问题&lt;/h1&gt;&lt;p&gt;bower里有个很好的插件 bootstrap-ie8  &lt;code&gt;bower install --save bootstrap-ie8&lt;/code&gt;  安装好后 他能帮你解决大多数的兼容问题&lt;/p&gt;
+&lt;h1 id=&quot;细微修改&quot;&gt;&lt;a href=&quot;#细微修改&quot; class=&quot;headerlink&quot; title=&quot;细微修改&quot;&gt;&lt;/a&gt;细微修改&lt;/h1&gt;&lt;p&gt;IE 9  不兼容 classList 这个属性 所以需要如下代码&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!(&lt;span class=&quot;string&quot;&gt;&quot;classList&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.documentElement)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//兼容ie8  HTMLElement&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.HTMLElement = &lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.HTMLElement || Element;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//兼容ie9 classlist&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.defineProperty(HTMLElement.prototype, &lt;span class=&quot;string&quot;&gt;&#39;classList&#39;&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      get: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; self = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;update&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;fn&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;value&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; classes = self.className.split(&lt;span class=&quot;regexp&quot;&gt;/\s+/g&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              index = classes.indexOf(value);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            fn(classes, index, value);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            self.className = classes.join(&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          add: update(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;classes, index, value&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!~index) classes.push(value);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#125;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          remove: update(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;classes, index&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (~index) classes.splice(index, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#125;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          toggle: update(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;classes, index, value&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (~index)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              classes.splice(index, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;              classes.push(value);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#125;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          contains: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;value&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; !!~self.className.split(&lt;span class=&quot;regexp&quot;&gt;/\s+/g&lt;/span&gt;).indexOf(value);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          item: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;i&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; self.className.split(&lt;span class=&quot;regexp&quot;&gt;/\s+/g&lt;/span&gt;)[i] || &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&lt;span class=&quot;regexp&quot;&gt;/script&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;IE 8 不兼容 window.HTMLElement 所以第一行还得加上这一句 IE浏览器也真是够够的了&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//兼容ie8  HTMLElement&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.HTMLElement = &lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.HTMLElement || Element;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前面碎碎念&quot;&gt;&lt;a href=&quot;#前面碎碎念&quot; class=&quot;headerlink&quot; title=&quot;前面碎碎念&quot;&gt;&lt;/a&gt;前面碎碎念&lt;/h1&gt;&lt;p&gt;真是不搞页面,不知道弄兼容如此的恶心.当然你一板一眼的写,能避免很多的麻烦,可是利用框架,插件来做,这是烦的要死了.
+    
+    </summary>
+    
+      <category term="前端技术" scheme="http://elickzhao.github.io/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="bootstrap" scheme="http://elickzhao.github.io/tags/bootstrap/"/>
+    
+      <category term="前端" scheme="http://elickzhao.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="浏览器兼容" scheme="http://elickzhao.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>前端开发环境简介</title>
@@ -980,181 +1011,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/halcyonbaby/article/details/42112325&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;docker容器互联的两种方式&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http:/
-    
-    </summary>
-    
-    
-      <category term="docker" scheme="http://elickzhao.github.io/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker Compose 配置文件 yaml  参数简单介绍</title>
-    <link href="http://elickzhao.github.io/2016/05/Docker%20Compose%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%20yaml%20%20%E5%8F%82%E6%95%B0%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://elickzhao.github.io/2016/05/Docker Compose 配置文件 yaml  参数简单介绍/</id>
-    <published>2016-05-02T14:35:58.000Z</published>
-    <updated>2016-05-03T10:05:08.441Z</updated>
-    
-    <content type="html">&lt;p&gt;一般情况的用法&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mysql:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  environment:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        - MYSQL_ROOT_PASSWORD=123456&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;php:  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./php&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  expose:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - &amp;quot;9000:9000&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  links:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  privileged: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nginx:  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./nginx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  links:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - php:php&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ports:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - &amp;quot;80:80&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  privileged: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;配置参数&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;image&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;从镜像的构建容器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;build&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;直接从pwd的Dockerfile来build，而非通过image选项来pull&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;links&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;连接到那些容器。每个占一行，格式为SERVICE[:ALIAS],例如 – db[:database] 如果不写别名 就是一致的 这个别名 会写在hosts里 当作服务器名 这样可以直接用于连接容器服务&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;external_links&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;连接到该compose.yaml文件之外的容器中，比如是提供共享或者通用服务的容器服务。格式同links&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;command&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;替换默认的command命令&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ports&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;导出端口 主机端口:容器端口&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;expose&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;导出端口，但不映射到宿主机的端口上。它仅对links的容器开放。格式直接指定端口号即可。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;volumes&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;加载路径作为卷, 主机路径:容器路径:rw(读写属性) 容器路径必须是绝对路径&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;volumes_from&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;加载其他容器 服务所有卷&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;env_file&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;从一个文件中导入环境变量，文件的格式为RACK_ENV=development&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;extends&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;扩展另一个服务，可以覆盖其中的一些选项 看下面 例1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;net&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;容器的网络模式，可以为”bridge”, “none”, “container:[name or id]”, “host”中的一个。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;dns&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;可以设置一个或多个自定义的DNS地址。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;dns_search&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;可以设置一个或多个DNS的扫描域。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;orking_dir, entrypoint, user, hostname, domainname, mem_limit, privileged, restart, stdin_open, tty, cpu_shares，docker run&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;这些命令都是单行的命令,效果和Dockerfile是一样的  看例2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;例1&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;common.yml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;webapp:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build:./webapp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  environment:- DEBUG=false- SEND_EMAILS=false&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;----------------------------------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;development.yml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;web:extends:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    file: common.yml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    service: webapp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ports:-&amp;quot;8000:8000&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  links:- db&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  environment:- DEBUG=true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  image: postgres&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;例2&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cpu_shares:73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;working_dir:/code&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;entrypoint: /code/entrypoint.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;user: postgresql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hostname: foo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;domainname: foo.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mem_limit:1000000000&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;privileged:true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;restart: always&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;stdin_open:true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tty:true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;常用命令说明&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令参数&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;docker-compose up&lt;/td&gt;
-&lt;td&gt;启动服务器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;-d&lt;/td&gt;
-&lt;td&gt;以daemon(守护进程)方式启动容器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;–verbose&lt;/td&gt;
-&lt;td&gt;输出详细信息&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;-f&lt;/td&gt;
-&lt;td&gt;制定一个非docker-compose.yml命名的yaml文件&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;-p&lt;/td&gt;
-&lt;td&gt;设置一个项目名称（默认是directory名）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;build&lt;/td&gt;
-&lt;td&gt;构建服务&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;kill -s SIGINT&lt;/td&gt;
-&lt;td&gt;给服务发送特定的信号&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;logs&lt;/td&gt;
-&lt;td&gt;输出日志&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;port&lt;/td&gt;
-&lt;td&gt;输出绑定的端口&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ps&lt;/td&gt;
-&lt;td&gt;输出运行的容器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;pull&lt;/td&gt;
-&lt;td&gt;pull服务的image&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;rm&lt;/td&gt;
-&lt;td&gt;删除停止的容器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;run&lt;/td&gt;
-&lt;td&gt;运行某个服务，例如docker-compose run web python manage.py shell&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;start&lt;/td&gt;
-&lt;td&gt;运行某个服务中存在的容器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;stop&lt;/td&gt;
-&lt;td&gt;停止某个服务中存在的容器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;up&lt;/td&gt;
-&lt;td&gt;create + run + attach容器到服务&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;scale&lt;/td&gt;
-&lt;td&gt;设置服务运行的容器数量。例如：docker-compose scale web=2 worker=3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;感觉有些命令和docker命令重合 所以感觉有些命令没什么用处&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://codecloud.net/docker-compose-yaml-5232.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Docker Compose YAML 模板文件&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一般情况的用法&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mysql:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  environment:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        - MYSQL_ROOT_PASSWORD=123456&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;php:  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./php&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  expose:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - &amp;quot;9000:9000&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  links:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  privileged: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nginx:  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  build: ./nginx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  volumes_from:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - myapp-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  links:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - php:php&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ports:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - &amp;quot;80:80&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  privileged: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
