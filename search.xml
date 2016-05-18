@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title><![CDATA[bower 简介]]></title>
+      <url>http://elickzhao.github.io/2016/05/bower%20%E7%AE%80%E4%BB%8B/</url>
+      <content type="html"><![CDATA[<p>详细内容 请参考这篇文章<br><a href="http://my.oschina.net/Nealyang/blog/632930?fromerr=3goAA2bF" target="_blank" rel="external">Bower的简单使用教程</a></p>
+<hr>
+<p><code>bower init</code> 生成 bower.json 这个是项目安装的组件包<br><code>bower --save XXX</code> 这是本项目安装组件 并记录在bower.json</p>
+<p>bowerrc文件简单说明</p>
+<blockquote>
+<p>directory:是值第三方依赖包下载所在的位置<br>proxy：在很多公司，为了保护公司内网的安全性，是需要配置这个代理的。所以这里一般要配置公司的代理<br>timeout：默认的连接为60000ms，但是当网速不好的时候，可以设置10分钟，”timeout”:600000<br>还有很多大家可以自行查一查哈</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[bootstrap 该死的IE兼容]]></title>
       <url>http://elickzhao.github.io/2016/05/bootstrap%20%E8%AF%A5%E6%AD%BB%E7%9A%84IE%E5%85%BC%E5%AE%B9/</url>
       <content type="html"><![CDATA[<h1 id="前面碎碎念"><a href="#前面碎碎念" class="headerlink" title="前面碎碎念"></a>前面碎碎念</h1><p>真是不搞页面,不知道弄兼容如此的恶心.当然你一板一眼的写,能避免很多的麻烦,可是利用框架,插件来做,这是烦的要死了.</p>
@@ -22,6 +35,8 @@
 <h1 id="yeoman-快速构建项目目录"><a href="#yeoman-快速构建项目目录" class="headerlink" title="yeoman 快速构建项目目录"></a>yeoman 快速构建项目目录</h1><p>其实很多项目开发的时候,目录结构及需要的插件都有一定规律.所以yeoman是解放懒人的又一利器.他的主要作用就是,当你开始一个新项目时不用自己再手动各个目录和安装那些插件,一切都为你准备好,只要一个命令 <code>yo</code>找到你要开发项目,接下来只需等待yeoman帮你建立好所需的一切</p>
 <h1 id="bower-找轮子利器"><a href="#bower-找轮子利器" class="headerlink" title="bower 找轮子利器"></a>bower 找轮子利器</h1><p>自己遭轮子虽然有成就感,不过别人写好的东西又何必再去浪费时间.所以bower又是懒人必不可少的.之所以选择bower是因为比npm搜索跟人性化,对我来说目前是这样,我更喜欢bower</p>
 <h1 id="gulp-让你更专注的写东西-其他的事情交给gulp吧"><a href="#gulp-让你更专注的写东西-其他的事情交给gulp吧" class="headerlink" title="gulp 让你更专注的写东西 其他的事情交给gulp吧"></a>gulp 让你更专注的写东西 其他的事情交给gulp吧</h1><p>bower是需要实现一些功能的时候去搜索这个功能的插件,比如slider. 而gulp所用的插件是为了给你开发带来便利,并不是你网页上的功能.比如压缩css,js. 比如 sass直接编译好显示.这些都是提供你写代码时的方便.有了gulp 我就不在需要dw了,用sublime就好了.</p>
+<hr>
+<p>#参考文章:<br><a href="http://www.ruanyifeng.com/blog/2014/09/package-management.html" target="_blank" rel="external">前端模块管理器简介</a><br><a href="http://blog.jobbole.com/65399/" target="_blank" rel="external">Yeoman官方教程：用Yeoman和AngularJS做Web应用</a></p>
 ]]></content>
     </entry>
     
