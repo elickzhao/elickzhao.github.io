@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://elickzhao.github.io/2016/05/gulp+bower/</loc>
+    
+    <lastmod>2016-05-18T09:23:14.146Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://elickzhao.github.io/2016/05/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B/</loc>
     
-    <lastmod>2016-05-18T07:13:35.243Z</lastmod>
+    <lastmod>2016-05-18T09:17:25.862Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://elickzhao.github.io/2016/05/gulp%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2016-05-18T09:14:59.190Z</lastmod>
     
   </url>
   
@@ -51,23 +65,9 @@
   </url>
   
   <url>
-    <loc>http://elickzhao.github.io/2016/05/gulp+bower/</loc>
-    
-    <lastmod>2016-05-10T16:01:02.845Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://elickzhao.github.io/2016/05/github%E5%BC%80%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2016-05-10T13:09:58.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://elickzhao.github.io/2016/05/gulp%E5%AD%A6%E4%B9%A0/</loc>
-    
-    <lastmod>2016-05-09T16:08:18.204Z</lastmod>
     
   </url>
   
