@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php,laravel," />
 
 
 
@@ -88,15 +88,31 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao's Blog">
-<meta property="og:url" content="http://elickzhao.github.io/index.html">
+<meta name="description" content="ContactServiceProvider 服务提供者
+这里面 registerContact() 其实是没用的 应该是调用其他服务功能时才有用.但是这个简单功能完全可通过router和controller完全能实现所以 感觉不需要写个什么服务了.暂时这么理解吧
+
+
+
+123456789101112131415161718192021222324252627282930313233343536">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel 包开发的一些思路">
+<meta property="og:url" content="http://elickzhao.github.io/2016/05/laravel 包开发的一些思路/index.html">
 <meta property="og:site_name" content="elickzhao's Blog">
-<meta property="og:description">
+<meta property="og:description" content="ContactServiceProvider 服务提供者
+这里面 registerContact() 其实是没用的 应该是调用其他服务功能时才有用.但是这个简单功能完全可通过router和controller完全能实现所以 感觉不需要写个什么服务了.暂时这么理解吧
+
+
+
+123456789101112131415161718192021222324252627282930313233343536">
+<meta property="og:updated_time" content="2016-05-21T13:55:22.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="laravel 包开发的一些思路">
+<meta name="twitter:description" content="ContactServiceProvider 服务提供者
+这里面 registerContact() 其实是没用的 应该是调用其他服务功能时才有用.但是这个简单功能完全可通过router和controller完全能实现所以 感觉不需要写个什么服务了.暂时这么理解吧
+
+
+
+123456789101112131415161718192021222324252627282930313233343536">
 
 
 
@@ -114,7 +130,7 @@
   };
 </script>
 
-  <title> elickzhao's Blog </title>
+  <title> laravel 包开发的一些思路 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -135,9 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,9 +271,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -279,10 +293,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/05/laravel 包开发的一些思路/" itemprop="url">
-                  laravel 包开发的一些思路
-                </a>
+                laravel 包开发的一些思路
               
             
           </h1>
@@ -348,567 +359,154 @@
       
 
       
-        
-          <ul>
+        <ul>
 <li>ContactServiceProvider 服务提供者<blockquote>
 <p>这里面 registerContact() 其实是没用的 应该是调用其他服务功能时才有用.<br>但是这个简单功能完全可通过router和controller完全能实现所以 感觉不需要写个什么服务了.<br>暂时这么理解吧</p>
 </blockquote>
 </li>
 </ul>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">namespace</span> <span class="title">Jai</span>\<span class="title">Contact</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Support</span>\<span class="title">ServiceProvider</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Routing</span>\<span class="title">Router</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ContactServiceProvider</span> <span class="keyword">extends</span> <span class="title">ServiceProvider</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> $defer = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">boot</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="comment">//注册模版地址 这里一定要使用realpath() 不是绝对路径就会出错</span></span><br><span class="line">        $this-&gt;loadViewsFrom(realpath(<span class="keyword">__DIR__</span>.<span class="string">'/../views'</span>), <span class="string">'contact'</span>);</span><br><span class="line">        <span class="comment">//注册包路由</span></span><br><span class="line">        $this-&gt;setupRoutes($this-&gt;app-&gt;router);</span><br><span class="line">        <span class="comment">// this for conig</span></span><br><span class="line">        $this-&gt;publishes([</span><br><span class="line">            <span class="keyword">__DIR__</span>.<span class="string">'/config/contact.php'</span> =&gt; config_path(<span class="string">'contact.php'</span>),</span><br><span class="line">        ]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * Define the routes for the application.</span><br><span class="line">     *</span><br><span class="line">     * <span class="doctag">@param</span> \Illuminate\Routing\Router $router</span><br><span class="line">     * <span class="doctag">@return</span> void</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">setupRoutes</span><span class="params">(Router $router)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="comment">//设置路由命名空间</span></span><br><span class="line">        $router-&gt;group([<span class="string">'namespace'</span> =&gt; <span class="string">'Jai\Contact\Http\Controllers'</span>], <span class="function"><span class="keyword">function</span><span class="params">($router)</span></span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">require</span> <span class="keyword">__DIR__</span>.<span class="string">'/Http/routes.php'</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">register</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        $this-&gt;registerContact();</span><br><span class="line">        config([</span><br><span class="line">            <span class="string">'config/contact.php'</span>,</span><br><span class="line">        ]);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//这两句是从stripe里摘出来的 绑定名称 以后注入用</span></span><br><span class="line">        $this-&gt;app-&gt;singleton(<span class="string">'command.cashier.table'</span>, <span class="function"><span class="keyword">function</span> <span class="params">($app)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> CashierTableCommand;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">//这里相当于注册一个command命令 参数:这里就用到上边的绑定注入了</span></span><br><span class="line">        $this-&gt;commands(<span class="string">'command.cashier.table'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">registerContact</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        $this-&gt;app-&gt;bind(<span class="string">'contact'</span>,<span class="function"><span class="keyword">function</span><span class="params">($app)</span></span>&#123;</span><br><span class="line">            <span class="comment">//这个绑定毫无意义 也许可能是没有用到</span></span><br><span class="line">            <span class="comment">//return new Contact($app);</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> elick($app);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/laravel 包开发的一些思路/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/bower 简介/" itemprop="url">
-                  bower 简介
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-18T16:00:08+09:00" content="2016-05-18">
-              2016-05-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端技术/" itemprop="url" rel="index">
-                    <span itemprop="name">前端技术</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/bower 简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/bower 简介/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>详细内容 请参考这篇文章<br><a href="http://my.oschina.net/Nealyang/blog/632930?fromerr=3goAA2bF" target="_blank" rel="external">Bower的简单使用教程</a></p>
-<hr>
-<p><code>bower init</code> 生成 bower.json 这个是项目安装的组件包<br><code>bower --save XXX</code> 这是本项目安装组件 并记录在bower.json</p>
-<p>bowerrc文件简单说明</p>
+<a id="more"></a>
+<ul>
+<li><p>command 命令</p>
 <blockquote>
-<p>directory:是值第三方依赖包下载所在的位置<br>proxy：在很多公司，为了保护公司内网的安全性，是需要配置这个代理的。所以这里一般要配置公司的代理<br>timeout：默认的连接为60000ms，但是当网速不好的时候，可以设置10分钟，”timeout”:600000<br>还有很多大家可以自行查一查哈</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/bootstrap 该死的IE兼容/" itemprop="url">
-                  bootstrap 该死的IE兼容
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-17T21:18:46+09:00" content="2016-05-17">
-              2016-05-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端技术/" itemprop="url" rel="index">
-                    <span itemprop="name">前端技术</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/bootstrap 该死的IE兼容/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/bootstrap 该死的IE兼容/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="前面碎碎念"><a href="#前面碎碎念" class="headerlink" title="前面碎碎念"></a>前面碎碎念</h1><p>真是不搞页面,不知道弄兼容如此的恶心.当然你一板一眼的写,能避免很多的麻烦,可是利用框架,插件来做,这是烦的要死了.</p>
-<p>这次利用了 yoesman+gulp+bower 快速搭建了个项目 其中还用到swiper插件 这个插件 3代主要面对手机 可是有些新特性 2代还没有 真是麻烦 用了3代 兼容性就有麻烦了.</p>
-<h1 id="基本解决问题"><a href="#基本解决问题" class="headerlink" title="基本解决问题"></a>基本解决问题</h1><p>bower里有个很好的插件 bootstrap-ie8  <code>bower install --save bootstrap-ie8</code>  安装好后 他能帮你解决大多数的兼容问题</p>
-<h1 id="细微修改"><a href="#细微修改" class="headerlink" title="细微修改"></a>细微修改</h1><p>IE 9  不兼容 classList 这个属性 所以需要如下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(<span class="string">"classList"</span> <span class="keyword">in</span> <span class="built_in">document</span>.documentElement)) &#123;</span><br><span class="line">    <span class="comment">//兼容ie8  HTMLElement</span></span><br><span class="line">    <span class="built_in">window</span>.HTMLElement = <span class="built_in">window</span>.HTMLElement || Element;</span><br><span class="line">    <span class="comment">//兼容ie9 classlist</span></span><br><span class="line">    <span class="built_in">Object</span>.defineProperty(HTMLElement.prototype, <span class="string">'classList'</span>, &#123;</span><br><span class="line">      get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> self = <span class="keyword">this</span>;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">update</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> classes = self.className.split(<span class="regexp">/\s+/g</span>),</span><br><span class="line">              index = classes.indexOf(value);</span><br><span class="line"></span><br><span class="line">            fn(classes, index, value);</span><br><span class="line">            self.className = classes.join(<span class="string">" "</span>);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          add: update(<span class="function"><span class="keyword">function</span>(<span class="params">classes, index, value</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!~index) classes.push(value);</span><br><span class="line">          &#125;),</span><br><span class="line"></span><br><span class="line">          remove: update(<span class="function"><span class="keyword">function</span>(<span class="params">classes, index</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (~index) classes.splice(index, <span class="number">1</span>);</span><br><span class="line">          &#125;),</span><br><span class="line"></span><br><span class="line">          toggle: update(<span class="function"><span class="keyword">function</span>(<span class="params">classes, index, value</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (~index)</span><br><span class="line">              classes.splice(index, <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">              classes.push(value);</span><br><span class="line">          &#125;),</span><br><span class="line"></span><br><span class="line">          contains: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> !!~self.className.split(<span class="regexp">/\s+/g</span>).indexOf(value);</span><br><span class="line">          &#125;,</span><br><span class="line"></span><br><span class="line">          item: <span class="function"><span class="keyword">function</span>(<span class="params">i</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> self.className.split(<span class="regexp">/\s+/g</span>)[i] || <span class="literal">null</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>IE 8 不兼容 window.HTMLElement 所以第一行还得加上这一句 IE浏览器也真是够够的了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//兼容ie8  HTMLElement</span></span><br><span class="line"><span class="built_in">window</span>.HTMLElement = <span class="built_in">window</span>.HTMLElement || Element;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/前端开发环境简介/" itemprop="url">
-                  前端开发环境简介
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-16T22:08:57+09:00" content="2016-05-16">
-              2016-05-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端技术/" itemprop="url" rel="index">
-                    <span itemprop="name">前端技术</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/前端开发环境简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/前端开发环境简介/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>这篇文章 只是简单介绍 几个框架的主要作用,并不涉及详细用法.</p>
-<h1 id="npm-老大中的老大"><a href="#npm-老大中的老大" class="headerlink" title="npm 老大中的老大"></a>npm 老大中的老大</h1><p>npm 不用多说什么 这是一切基础中的基础</p>
-<h1 id="yeoman-快速构建项目目录"><a href="#yeoman-快速构建项目目录" class="headerlink" title="yeoman 快速构建项目目录"></a>yeoman 快速构建项目目录</h1><p>其实很多项目开发的时候,目录结构及需要的插件都有一定规律.所以yeoman是解放懒人的又一利器.他的主要作用就是,当你开始一个新项目时不用自己再手动各个目录和安装那些插件,一切都为你准备好,只要一个命令 <code>yo</code>找到你要开发项目,接下来只需等待yeoman帮你建立好所需的一切</p>
-<h1 id="bower-找轮子利器"><a href="#bower-找轮子利器" class="headerlink" title="bower 找轮子利器"></a>bower 找轮子利器</h1><p>自己遭轮子虽然有成就感,不过别人写好的东西又何必再去浪费时间.所以bower又是懒人必不可少的.之所以选择bower是因为比npm搜索跟人性化,对我来说目前是这样,我更喜欢bower</p>
-<h1 id="gulp-让你更专注的写东西-其他的事情交给gulp吧"><a href="#gulp-让你更专注的写东西-其他的事情交给gulp吧" class="headerlink" title="gulp 让你更专注的写东西 其他的事情交给gulp吧"></a>gulp 让你更专注的写东西 其他的事情交给gulp吧</h1><p>bower是需要实现一些功能的时候去搜索这个功能的插件,比如slider. 而gulp所用的插件是为了给你开发带来便利,并不是你网页上的功能.比如压缩css,js. 比如 sass直接编译好显示.这些都是提供你写代码时的方便.有了gulp 我就不在需要dw了,用sublime就好了.</p>
-<hr>
-<p>#参考文章:<br><a href="http://www.ruanyifeng.com/blog/2014/09/package-management.html" target="_blank" rel="external">前端模块管理器简介</a><br><a href="http://blog.jobbole.com/65399/" target="_blank" rel="external">Yeoman官方教程：用Yeoman和AngularJS做Web应用</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/laravel 银联支付一点总结/" itemprop="url">
-                  laravel 银联支付一点总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-15T22:08:05+09:00" content="2016-05-15">
-              2016-05-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/php开发/" itemprop="url" rel="index">
-                    <span itemprop="name">php开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/laravel 银联支付一点总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/laravel 银联支付一点总结/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ul>
-<li><p>第一步开通测试</p>
-<blockquote>
-<p>在我的产品中 点击为测试 然后添加要测试的项目 要不然会提示无权限 这里选择网关支付</p>
+<p>这个是把stripe里的CashierTableCommand类直接粘过来.<br>简单的来说 就是在database\mrigration 创建个迁移文件 然后把内容复制进去 平并且添加这个命令<br>等安装的时候执行这个命令 并执行 artisan migrate 就安装到数据库里了 并不是自动执行一次性完成的<br>$this-&gt;laravel[]里有很多有用的东西 以后得看看</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace Laravel\Cashier;</span><br><span class="line"></span><br><span class="line">use Illuminate\Console\Command;</span><br><span class="line">use Symfony\Component\Console\Input\InputArgument;</span><br><span class="line"></span><br><span class="line">class CashierTableCommand extends Command</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * The console command name.</span><br><span class="line">     *</span><br><span class="line">     * @var string</span><br><span class="line">     */</span><br><span class="line">    protected $name = &apos;cashier:table&apos;;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * The console command description.</span><br><span class="line">     *</span><br><span class="line">     * @var string</span><br><span class="line">     */</span><br><span class="line">    protected $description = &apos;Create a migration for the Cashier database columns&apos;;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Execute the console command.</span><br><span class="line">     *</span><br><span class="line">     * @return void</span><br><span class="line">     */</span><br><span class="line">    public function fire()</span><br><span class="line">    &#123;</span><br><span class="line">        //建立迁移文件</span><br><span class="line">        $fullPath = $this-&gt;createBaseMigration();</span><br><span class="line">        //填充迁移文件内容</span><br><span class="line">        file_put_contents($fullPath, $this-&gt;getMigrationStub());</span><br><span class="line"></span><br><span class="line">        $this-&gt;info(&apos;Migration created successfully!&apos;);</span><br><span class="line">        //刷新autoload</span><br><span class="line">        $this-&gt;laravel[&apos;composer&apos;]-&gt;dumpAutoloads();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Create a base migration file for the reminders.</span><br><span class="line">     *</span><br><span class="line">     * @return string</span><br><span class="line">     */</span><br><span class="line">    protected function createBaseMigration()</span><br><span class="line">    &#123;</span><br><span class="line">        $name = &apos;add_cashier_columns&apos;;</span><br><span class="line"></span><br><span class="line">        $path = $this-&gt;laravel[&apos;path.database&apos;].&apos;/migrations&apos;;</span><br><span class="line"></span><br><span class="line">        return $this-&gt;laravel[&apos;migration.creator&apos;]-&gt;create($name, $path);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the contents of the reminder migration stub.</span><br><span class="line">     *</span><br><span class="line">     * @return string</span><br><span class="line">     */</span><br><span class="line">    protected function getMigrationStub()</span><br><span class="line">    &#123;</span><br><span class="line">        $stub = file_get_contents(__DIR__.&apos;/stubs/migration.stub&apos;);</span><br><span class="line"></span><br><span class="line">        return str_replace(&apos;cashier_table&apos;, $this-&gt;argument(&apos;table&apos;), $stub);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the console command arguments.</span><br><span class="line">     *</span><br><span class="line">     * @return array</span><br><span class="line">     */</span><br><span class="line">    protected function getArguments()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            [&apos;table&apos;, InputArgument::REQUIRED, &apos;The name of your billable table.&apos;],</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p>下载测试证书</p>
+<li><p>routes 路由表</p>
 <blockquote>
-<p>测试证书要从 个人中心 测试参数哪里下载  <a href="https://open.unionpay.com/ajweb/account/testPara">https://open.unionpay.com/ajweb/account/testPara</a><br>商户私钥证书 必须安装一下 要不会会出错</p>
+<p>上面已经注册了路由地址和命名空间,所以编写路由分配controller就好了</p>
 </blockquote>
-</li>
-<li><p>编写代码</p>
 </li>
 </ul>
-<ol>
-<li>config\laravel-omnipay.php<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> [</span><br><span class="line"></span><br><span class="line">	<span class="comment">// The default gateway to use</span></span><br><span class="line">	<span class="string">'default'</span> =&gt; <span class="string">'paypal'</span>,</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Add in each gateway here</span></span><br><span class="line">	<span class="string">'gateways'</span> =&gt; [</span><br><span class="line">		<span class="string">'unionpay'</span> =&gt; [</span><br><span class="line">			<span class="string">'driver'</span>  =&gt; <span class="string">'UnionPay_Express'</span>,</span><br><span class="line">			<span class="string">'options'</span> =&gt; [</span><br><span class="line">				<span class="string">'merId'</span>			 =&gt; <span class="string">'777290058128659'</span>,</span><br><span class="line">				<span class="string">'certPath'</span>		 =&gt;	storage_path(<span class="string">'app/unionpay/certs/700000000000001_acp.pfx'</span>),</span><br><span class="line">				<span class="string">'certPassword'</span>	 =&gt; <span class="string">'000000'</span>,</span><br><span class="line">				<span class="string">'certDir'</span>		 =&gt;	 storage_path(<span class="string">'app/unionpay/certs'</span>),</span><br><span class="line">				<span class="comment">//付款完成后跳转会商家页面地址 两个好像可以写同一个地址</span></span><br><span class="line">				<span class="string">'returnUrl'</span> =&gt; <span class="string">'http://114.254.183.127/omnipay/public/unionpay/return'</span>,</span><br><span class="line">				<span class="string">'notifyUrl'</span> =&gt; <span class="string">'http://114.254.183.127/omnipay/public/unionpay/notify'</span></span><br><span class="line"></span><br><span class="line">			]</span><br><span class="line">		]</span><br><span class="line">	]</span><br><span class="line"></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">/**</span><br><span class="line"> * Created by PhpStorm.</span><br><span class="line"> * User: elick</span><br><span class="line"> * Date: 2016/4/1</span><br><span class="line"> * Time: 18:15</span><br><span class="line"> */</span><br><span class="line">//因为使用router-&gt;group()这里连命名空间都不用写了</span><br><span class="line">Route::get(&apos;contact&apos;,&apos;ContactController@index&apos;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>controller 控制器<blockquote>
+<p>这个也很简单 从这个来看 可以使用原本App的模型.但是如何使用自带模型呢?<br><del>我现在的想法是和config一样通过publishes 把model直接复制到App\Models下,<br>也许根本不用,因为现在这个composer已经搜索这个目录 也许直接就可以加载</del><br>放在目录下可以直接加载 只要继承了<br>use Eloquent;<br>use Illuminate\Database\Eloquent\Model;<br>这两个都可以 其实Eloquent 相当于快捷方式 引用的也是下面那个类<br><del>但是还有个问题就是如果有自定义数据库怎么插入数据库 这个一会实验下<br>安装数据库还没看 找到好的包时看一下</del><br>通过stripe包 看到他的方法 看上面命令</p>
+</blockquote>
 </li>
-</ol>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/laravel 银联支付一点总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">/**</span><br><span class="line"> * Created by PhpStorm.</span><br><span class="line"> * User: elick</span><br><span class="line"> * Date: 2016/4/1</span><br><span class="line"> * Time: 18:17</span><br><span class="line"> */</span><br><span class="line">namespace Jai\Contact\Http\Controllers;</span><br><span class="line"></span><br><span class="line">use App\Http\Controllers\Controller;</span><br><span class="line">use App\Models\Post;</span><br><span class="line">use Illuminate\Support\Facades\Config;</span><br><span class="line">use Jai\Contact\Models\Test;</span><br><span class="line">use View;</span><br><span class="line"></span><br><span class="line">class ContactController extends Controller&#123;</span><br><span class="line">    public function index()&#123;</span><br><span class="line">        echo __DIR__.&apos;/../../config&apos;;</span><br><span class="line">        echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">        echo realpath(__DIR__.&apos;/../../config&apos;);</span><br><span class="line">        echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">        echo &quot;这就是realpath()的区别&quot;;</span><br><span class="line"></span><br><span class="line">        $t = Test::all()-&gt;toArray();</span><br><span class="line">        dump($t);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        $posts = Post::all()-&gt;toArray();</span><br><span class="line">        dump($posts);</span><br><span class="line">        dump(Config::get(&apos;contact.message&apos;));</span><br><span class="line">        return view(&apos;contact::contact&apos;);</span><br><span class="line">        //eturn View::make(&apos;contact::contact&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>model</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php namespace Jai\Contact\Models;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by PhpStorm.</span><br><span class="line"> * User: elick</span><br><span class="line"> * Date: 2016/4/5</span><br><span class="line"> * Time: 13:55</span><br><span class="line"> */</span><br><span class="line">use Eloquent;</span><br><span class="line">use Illuminate\Database\Eloquent\Model;</span><br><span class="line">class Test extends Model</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>contact.blad.php 模版</p>
+<blockquote>
+<p>其实模版就没啥写的 就是模版文件 上面的服务提供者provider只要写对路径 剩下就是前端页面的事了 很简单</p>
+</blockquote>
+</li>
+<li><p>config 配置文件</p>
+<blockquote>
+<p>这里的配置文件没写什么<br>其实关键也就在于如何调用配置文件 使用Config::get()这个方法 然后判断配置内容 根据内容写出逻辑</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">/**</span><br><span class="line"> * Created by PhpStorm.</span><br><span class="line"> * User: elick</span><br><span class="line"> * Date: 2016/4/1</span><br><span class="line"> * Time: 18:21</span><br><span class="line"> */</span><br><span class="line">return [</span><br><span class="line">    &quot;message&quot; =&gt; &quot;Welcome to My new package&quot;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>改写composer.json<blockquote>
+<p>这里命名空间一定要搞对,因为服务提供者provider 使用的命名空间是 <code>Jai\Contact\</code> 而他的真实路径是 <code>packages/jai/contact/src</code> 所以要这么写</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;autoload&quot;: &#123;</span><br><span class="line">    &quot;classmap&quot;: [</span><br><span class="line">        &quot;database&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;psr-4&quot;: &#123;</span><br><span class="line">        &quot;App\\&quot;: &quot;app/&quot;,</span><br><span class="line">        &quot;Jai\\Contact\\&quot;:&quot;packages/jai/contact/src&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<ul>
+<li>接下来两个命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//更新Composer的autoloader</span><br><span class="line">composer dump-autoload</span><br><span class="line"></span><br><span class="line">//将自定义包的配置文件发布到应用根目录的config目录下以便可以访问。</span><br><span class="line">php artisan vendor:publish</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+            <a href="/tags/laravel/" rel="tag">#laravel</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/bower 简介/" rel="next" title="bower 简介">
+                <i class="fa fa-chevron-left"></i> bower 简介
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
 
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -916,6 +514,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/laravel 包开发的一些思路/"
+           data-title="laravel 包开发的一些思路" data-url="http://elickzhao.github.io/2016/05/laravel 包开发的一些思路/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -935,8 +541,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -1022,6 +637,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1125,6 +751,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
