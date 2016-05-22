@@ -280,6 +280,113 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/laravel 一些经验/" itemprop="url">
+                  laravel 一些经验
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-22T21:06:18+09:00" content="2016-05-22">
+              2016-05-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/laravel 一些经验/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/laravel 一些经验/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>TaskRepository 分担查询数据库内容的工作 其实放到model也可以 不过这样解耦 以后方便改吧</p>
+<p>RouteServiceProvider –&gt; $router-&gt;model(‘task’,’App\Task’); 路由绑定模型 还得需要前边 路由的配合<br>Route::delete(‘tasks/{task}’,’TaskController@destroy’);  再说明一次 task是指第一个参数 也就是起得名字</p>
+<p>AuthServiceProvider –&gt;     protected $policies = [<br>        ‘App\Model’ =&gt; ‘App\Policies\ModelPolicy’,<br>        ‘App\Task’ =&gt; ‘App\Policies\TaskPolicy’,<br>    ];</p>
+<p>关联策略的 策略是用于检查是否有权限进行这个操作<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">destroy</span><span class="params">(User $user, Task $task)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> $user-&gt;id === $task-&gt;user_id;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;authorize(<span class="string">'destroy'</span>,$task);</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/laravel 一些经验/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/laravel 包开发的一些思路/" itemprop="url">
                   laravel 包开发的一些思路
                 </a>
@@ -763,145 +870,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/laravel 银联支付一点总结/" itemprop="url">
-                  laravel 银联支付一点总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-15T22:08:05+09:00" content="2016-05-15">
-              2016-05-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/php开发/" itemprop="url" rel="index">
-                    <span itemprop="name">php开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/laravel 银联支付一点总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/laravel 银联支付一点总结/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ul>
-<li><p>第一步开通测试</p>
-<blockquote>
-<p>在我的产品中 点击为测试 然后添加要测试的项目 要不然会提示无权限 这里选择网关支付</p>
-</blockquote>
-</li>
-<li><p>下载测试证书</p>
-<blockquote>
-<p>测试证书要从 个人中心 测试参数哪里下载  <a href="https://open.unionpay.com/ajweb/account/testPara">https://open.unionpay.com/ajweb/account/testPara</a><br>商户私钥证书 必须安装一下 要不会会出错</p>
-</blockquote>
-</li>
-<li><p>编写代码</p>
-</li>
-</ul>
-<ol>
-<li>config\laravel-omnipay.php<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> [</span><br><span class="line"></span><br><span class="line">	<span class="comment">// The default gateway to use</span></span><br><span class="line">	<span class="string">'default'</span> =&gt; <span class="string">'paypal'</span>,</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Add in each gateway here</span></span><br><span class="line">	<span class="string">'gateways'</span> =&gt; [</span><br><span class="line">		<span class="string">'unionpay'</span> =&gt; [</span><br><span class="line">			<span class="string">'driver'</span>  =&gt; <span class="string">'UnionPay_Express'</span>,</span><br><span class="line">			<span class="string">'options'</span> =&gt; [</span><br><span class="line">				<span class="string">'merId'</span>			 =&gt; <span class="string">'777290058128659'</span>,</span><br><span class="line">				<span class="string">'certPath'</span>		 =&gt;	storage_path(<span class="string">'app/unionpay/certs/700000000000001_acp.pfx'</span>),</span><br><span class="line">				<span class="string">'certPassword'</span>	 =&gt; <span class="string">'000000'</span>,</span><br><span class="line">				<span class="string">'certDir'</span>		 =&gt;	 storage_path(<span class="string">'app/unionpay/certs'</span>),</span><br><span class="line">				<span class="comment">//付款完成后跳转会商家页面地址 两个好像可以写同一个地址</span></span><br><span class="line">				<span class="string">'returnUrl'</span> =&gt; <span class="string">'http://114.254.183.127/omnipay/public/unionpay/return'</span>,</span><br><span class="line">				<span class="string">'notifyUrl'</span> =&gt; <span class="string">'http://114.254.183.127/omnipay/public/unionpay/notify'</span></span><br><span class="line"></span><br><span class="line">			]</span><br><span class="line">		]</span><br><span class="line">	]</span><br><span class="line"></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/laravel 银联支付一点总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -947,7 +915,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-count">42</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
