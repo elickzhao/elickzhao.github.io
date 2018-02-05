@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vue," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="因为vue控制的是body部分,所以没法修改header里的title这个比较麻烦而且不美观. 现在新的 vue-router 可以解决这个问题了.用钩子方法来做. 12345//这是钩子进入页面之前,就修改titlerouter.beforeEach((to, from, next) =&amp;gt; &amp;#123;  document.title = to.meta.title    //这 to.m">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue及vue-router程序的title修改">
+<meta property="og:url" content="http://elickzhao.github.io/2017/07/vue及vue-router程序的title修改/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="因为vue控制的是body部分,所以没法修改header里的title这个比较麻烦而且不美观. 现在新的 vue-router 可以解决这个问题了.用钩子方法来做. 12345//这是钩子进入页面之前,就修改titlerouter.beforeEach((to, from, next) =&amp;gt; &amp;#123;  document.title = to.meta.title    //这 to.m">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="vue及vue-router程序的title修改">
+<meta name="twitter:description" content="因为vue控制的是body部分,所以没法修改header里的title这个比较麻烦而且不美观. 现在新的 vue-router 可以解决这个问题了.用钩子方法来做. 12345//这是钩子进入页面之前,就修改titlerouter.beforeEach((to, from, next) =&amp;gt; &amp;#123;  document.title = to.meta.title    //这 to.m">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> vue及vue-router程序的title修改 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,170 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                vue及vue-router程序的title修改
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-07-22T14:02:38+08:00" content="2017-07-22">
+              2017-07-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/07/vue及vue-router程序的title修改/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/vue及vue-router程序的title修改/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>因为<code>vue</code>控制的是<code>body</code>部分,所以没法修改<code>header</code>里的<code>title</code>这个比较麻烦而且不美观.</p>
+<p>现在新的 <code>vue-router</code> 可以解决这个问题了.用钩子方法来做.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是钩子进入页面之前,就修改title</span></span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">document</span>.title = to.meta.title    <span class="comment">//这 to.meta.title 是在router里设置的</span></span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>这是vue-router设置<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routers = [&#123;</span><br><span class="line">    path: <span class="string">'/'</span>,</span><br><span class="line">    meta: &#123;</span><br><span class="line">        title: <span class="string">'后台登录'</span>   <span class="comment">//这个就是上面设置</span></span><br><span class="line">    &#125;,</span><br><span class="line">    component: <span class="function">(<span class="params">resolve</span>) =&gt;</span> <span class="built_in">require</span>([<span class="string">'./views/login.vue'</span>], resolve)</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    path: <span class="string">'/main'</span>,</span><br><span class="line">    meta: &#123;</span><br><span class="line">        title: <span class="string">'后台管理中心'</span> <span class="comment">//这个是title标题</span></span><br><span class="line">    &#125;,</span><br><span class="line">    component: <span class="function">(<span class="params">resolve</span>) =&gt;</span> <span class="built_in">require</span>([<span class="string">'./views/main.vue'</span>], resolve)</span><br><span class="line"></span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://segmentfault.com/q/1010000007739026?_ea=1441360" target="_blank" rel="noopener">vue-router2.0设置title</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag">#vue</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/vue-router的学习笔记/" rel="next" title="vue-router的学习笔记">
+                <i class="fa fa-chevron-left"></i> vue-router的学习笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/GSAP的TimelineMax时间轴及TweenMax缓动学习 /" rel="prev" title="GSAP的TimelineMax时间轴及TweenMax缓动学习">
+                GSAP的TimelineMax时间轴及TweenMax缓动学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +435,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2017/07/vue及vue-router程序的title修改/"
+           data-title="vue及vue-router程序的title修改" data-url="http://elickzhao.github.io/2017/07/vue及vue-router程序的title修改/">
       </div>
     
   </div>
@@ -312,8 +460,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +556,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">1.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +670,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

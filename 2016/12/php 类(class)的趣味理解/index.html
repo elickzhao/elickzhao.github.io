@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="类是什么类是抽象的一个定义,只是定义不能用.class.php12345678910111213141516171819202122232425262728293031323334353637383940&amp;lt;?php    //枪的类class gun&amp;#123;    // 弹匣不同的枪有不同弹匣和装弹数量    protected $magazine =&apos;&apos;;    //初始化弹夹,也就是">
+<meta name="keywords" content="php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php 类(class)的趣味理解">
+<meta property="og:url" content="http://elickzhao.github.io/2016/12/php 类(class)的趣味理解/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="类是什么类是抽象的一个定义,只是定义不能用.class.php12345678910111213141516171819202122232425262728293031323334353637383940&amp;lt;?php    //枪的类class gun&amp;#123;    // 弹匣不同的枪有不同弹匣和装弹数量    protected $magazine =&apos;&apos;;    //初始化弹夹,也就是">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="php 类(class)的趣味理解">
+<meta name="twitter:description" content="类是什么类是抽象的一个定义,只是定义不能用.class.php12345678910111213141516171819202122232425262728293031323334353637383940&amp;lt;?php    //枪的类class gun&amp;#123;    // 弹匣不同的枪有不同弹匣和装弹数量    protected $magazine =&apos;&apos;;    //初始化弹夹,也就是">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> php 类(class)的趣味理解 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,170 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                php 类(class)的趣味理解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-03T22:43:22+08:00" content="2016-12-03">
+              2016-12-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/php 类(class)的趣味理解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/php 类(class)的趣味理解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="类是什么"><a href="#类是什么" class="headerlink" title="类是什么"></a>类是什么</h2><p>类是抽象的一个定义,只是定义不能用.<br><strong>class.php</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>    </span><br><span class="line"></span><br><span class="line"><span class="comment">//枪的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">gun</span></span>&#123;</span><br><span class="line">    <span class="comment">// 弹匣不同的枪有不同弹匣和装弹数量</span></span><br><span class="line">    <span class="keyword">protected</span> $magazine =<span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化弹夹,也就是给抢上弹夹</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span>  <span class="title">__construct</span><span class="params">(int $magazine=<span class="number">0</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;magazine = $magazine;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//开火,单发点射.消耗弹夹子弹量.</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">fire</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;magazine--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getMagazine</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;magazine;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//游戏开始 先买一把AWP</span></span><br><span class="line"><span class="comment">//echo 'I am AWP';  //有趣带 , 的 echo 前面不能有 echo 否则不显示</span></span><br><span class="line">$AWP = <span class="keyword">new</span> gun(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"Use AWP\n"</span>,$AWP-&gt;getMagazine(),<span class="string">"\n"</span>;</span><br><span class="line">$AWP-&gt;fire();</span><br><span class="line"><span class="keyword">echo</span> $AWP-&gt;getMagazine(),<span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//再买一把AK</span></span><br><span class="line">$AK47 = <span class="keyword">new</span> gun(<span class="number">30</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"Use AK\n"</span>,$AK47-&gt;getMagazine(),<span class="string">"\n"</span>;</span><br><span class="line">$AK47-&gt;fire();</span><br><span class="line">$AK47-&gt;fire();</span><br><span class="line">$AK47-&gt;fire();</span><br><span class="line"><span class="keyword">echo</span> $AK47-&gt;getMagazine(),<span class="string">"\n"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>运行命令 <code>php class.php</code> 得输出结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Use AWP</span><br><span class="line">10</span><br><span class="line">9</span><br><span class="line">Use AK</span><br><span class="line">30</span><br><span class="line">27</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>从上面的例子可以看出,类和类的实例是一个什么样的关系.<br>类就是一项事物的抽象总结.他是个概念,不能用于实际操作,只是定义了一类物品统一的属性与功能.<br>上面<code>枪</code>类的属性就是<code>弹夹</code>,功能就是<code>开火</code>.<br>而实例呢就是真家伙了.利用类<code>枪</code>类这个图纸,做出了<code>AWP</code>和<code>AK</code>.这两个是两个家伙,虽然有共同的属性和方法,但是他们的确是两个家伙,所以开火以后剩余的子弹数是不一样的.所以说为什么<code>类</code>是个图纸,如果两个地方用到类,属性是同一个那岂不完蛋.<br><strong>所以要记住,类是图纸,实例才是工具</strong></p>
+</blockquote>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/一个计算php页面运行时间的函数/" rel="next" title="一个计算php页面运行时间的函数">
+                <i class="fa fa-chevron-left"></i> 一个计算php页面运行时间的函数
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/vue-admin 启动服务器测试报错 require not define 解决/" rel="prev" title="vue-admin 启动服务器测试报错 require not define 解决">
+                vue-admin 启动服务器测试报错 require not define 解决 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +435,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/12/php 类(class)的趣味理解/"
+           data-title="php 类(class)的趣味理解" data-url="http://elickzhao.github.io/2016/12/php 类(class)的趣味理解/">
       </div>
     
   </div>
@@ -312,8 +460,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +556,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#类是什么"><span class="nav-number">1.</span> <span class="nav-text">类是什么</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +670,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

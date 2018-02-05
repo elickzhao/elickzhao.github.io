@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="小程序," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="参考了下别的文章,很多人都用scroll-view来做.当然这完全可以,而且也是比较简单,但是效果不是那么特别满意.因为是使用的是触及底边才加载,看上去不是那么美.我希望的效果是,距离底边一段距离就开始加载了.仔细研究了小程序的文档,有了方案. 但是这里先讲一下 scroll-view 容易跌入的坑. scroll-view 有几个常用方法 1234567891011121314151617181">
+<meta name="keywords" content="小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序下拉刷新及上滑加载更多">
+<meta property="og:url" content="http://elickzhao.github.io/2018/01/小程序下拉刷新及上滑加载更多/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="参考了下别的文章,很多人都用scroll-view来做.当然这完全可以,而且也是比较简单,但是效果不是那么特别满意.因为是使用的是触及底边才加载,看上去不是那么美.我希望的效果是,距离底边一段距离就开始加载了.仔细研究了小程序的文档,有了方案. 但是这里先讲一下 scroll-view 容易跌入的坑. scroll-view 有几个常用方法 1234567891011121314151617181">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="小程序下拉刷新及上滑加载更多">
+<meta name="twitter:description" content="参考了下别的文章,很多人都用scroll-view来做.当然这完全可以,而且也是比较简单,但是效果不是那么特别满意.因为是使用的是触及底边才加载,看上去不是那么美.我希望的效果是,距离底边一段距离就开始加载了.仔细研究了小程序的文档,有了方案. 但是这里先讲一下 scroll-view 容易跌入的坑. scroll-view 有几个常用方法 1234567891011121314151617181">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> 小程序下拉刷新及上滑加载更多 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,173 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                小程序下拉刷新及上滑加载更多
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-01-05T22:57:42+08:00" content="2018-01-05">
+              2018-01-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/01/小程序下拉刷新及上滑加载更多/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/小程序下拉刷新及上滑加载更多/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>参考了下别的文章,很多人都用<code>scroll-view</code>来做.当然这完全可以,而且也是比较简单,但是效果不是那么特别满意.<br>因为是使用的是触及底边才加载,看上去不是那么美.<br>我希望的效果是,距离底边一段距离就开始加载了.<br>仔细研究了小程序的文档,有了方案. 但是这里先讲一下 <code>scroll-view</code> 容易跌入的坑.</p>
+<p><code>scroll-view</code> 有几个常用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">bindscrolltoupper   //滚动顶边触发</span><br><span class="line">bindscrolltolower   //滚动到底边触发</span><br><span class="line"></span><br><span class="line">//这两个比较特殊 因为有滚动方向问题 向下滚动只会触发 距离底边 向上滚动只能触发距离顶边</span><br><span class="line">//于是就不是我想要的效果了 我想的是 向下滚动距离多少 就触发一个效果 所以只能用下面的 bindscroll</span><br><span class="line">//还有就是他们触发的是 bindscrolltoupper和bindscrolltolower 所绑定的事件 而没有自己的方法</span><br><span class="line">upper-threshold     //距离顶边触发 参数是数字</span><br><span class="line">lower-threshold     //距离底边触发 参数是数字</span><br><span class="line"></span><br><span class="line">//这个比较简单了 实时监听滚动距离</span><br><span class="line">bindscroll</span><br><span class="line"></span><br><span class="line">//wxml中使用中的事例</span><br><span class="line">//&lt;scroll-view scroll-y style=&quot;height: 200px;&quot; bindscrolltoupper=&quot;upper&quot; bindscrolltolower=&quot;lower&quot; bindscroll=&quot;scroll&quot; scroll-into-view=&quot;&#123;&#123;toView&#125;&#125;&quot; scroll-top=&quot;&#123;&#123;scrollTop&#125;&#125;&quot; upper-threshold=&quot;1000&quot; lower-threshold=&quot;500&quot;&gt; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//其他一些不主要的方法</span><br><span class="line">scroll-into-view        //滚动到指定id元素的位置</span><br><span class="line">scroll-top              //滚动到距离头部的指定位置</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>好了说会本体</p>
+<p>小程序里有个设置 可以使 <code>view</code> 能监听滚动到底边的距离.但是这里需要在 页面的 <code>json</code> 里设置开启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//这个可以全局设置 也可以单个页面设置</span><br><span class="line">&#123;</span><br><span class="line">  &quot;enablePullDownRefresh&quot;: true,    //开启下拉刷新</span><br><span class="line">  &quot;backgroundColor&quot;: &quot;#eeeeee&quot;,     //下拉刷新底部也没的颜色</span><br><span class="line">  &quot;backgroundTextStyle&quot;: &quot;dark&quot;,    //字体样式 只有 dark和light</span><br><span class="line">  &quot;onReachBottomDistance&quot;: 60       // 就是这个了 监听距离底边多少px 执行方法 onReachBottom</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-----------------------------------------------</span><br><span class="line"></span><br><span class="line">//然后在js里写方法就可以了</span><br><span class="line">  onReachBottom: function () &#123;</span><br><span class="line">    console.log(&quot;触底效果!&quot;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://blog.csdn.net/michael_ouyang/article/details/56846185" target="_blank" rel="noopener"> 微信小程序之加载更多（分页加载）实例 —— 微信小程序实战系列（2）</a><br><a href="http://blog.csdn.net/qq_19558705/article/details/61414164" target="_blank" rel="noopener"> 微信小程序入门五上滑加载下拉刷新</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/小程序/" rel="tag">#小程序</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/小程序使用模块/" rel="next" title="小程序使用模块">
+                <i class="fa fa-chevron-left"></i> 小程序使用模块
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/小程序转发功能/" rel="prev" title="小程序转发功能">
+                小程序转发功能 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +438,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2018/01/小程序下拉刷新及上滑加载更多/"
+           data-title="小程序下拉刷新及上滑加载更多" data-url="http://elickzhao.github.io/2018/01/小程序下拉刷新及上滑加载更多/">
       </div>
     
   </div>
@@ -312,8 +463,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +559,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">1.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +673,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

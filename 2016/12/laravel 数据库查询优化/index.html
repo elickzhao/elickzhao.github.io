@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php,laravel," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="1234567891011121314151617// 使用 Cache::remember 缓存结果是个不错的选择,能大大优化访问速度    $cid = &apos;分类ID&apos;;    $cat = Cache::remember(&apos;cat-&apos; . $cid, Carbon::now()-&amp;gt;addMinutes(60), function () use ($cid) &amp;#123;">
+<meta name="keywords" content="php,laravel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel 数据库查询优化">
+<meta property="og:url" content="http://elickzhao.github.io/2016/12/laravel 数据库查询优化/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="1234567891011121314151617// 使用 Cache::remember 缓存结果是个不错的选择,能大大优化访问速度    $cid = &apos;分类ID&apos;;    $cat = Cache::remember(&apos;cat-&apos; . $cid, Carbon::now()-&amp;gt;addMinutes(60), function () use ($cid) &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="laravel 数据库查询优化">
+<meta name="twitter:description" content="1234567891011121314151617// 使用 Cache::remember 缓存结果是个不错的选择,能大大优化访问速度    $cid = &apos;分类ID&apos;;    $cat = Cache::remember(&apos;cat-&apos; . $cid, Carbon::now()-&amp;gt;addMinutes(60), function () use ($cid) &amp;#123;">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> laravel 数据库查询优化 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,169 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                laravel 数据库查询优化
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-01T23:28:44+08:00" content="2016-12-01">
+              2016-12-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/laravel 数据库查询优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/laravel 数据库查询优化/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 Cache::remember 缓存结果是个不错的选择,能大大优化访问速度</span></span><br><span class="line">    $cid = <span class="string">'分类ID'</span>;</span><br><span class="line">    $cat = Cache::remember(<span class="string">'cat-'</span> . $cid, Carbon::now()-&gt;addMinutes(<span class="number">60</span>), <span class="function"><span class="keyword">function</span> <span class="params">()</span> <span class="title">use</span> <span class="params">($cid)</span> </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> Category::where([[<span class="string">'parent_id'</span>, $cid], [<span class="string">'is_show'</span>, <span class="number">1</span>]])</span><br><span class="line">          -&gt;select(<span class="string">'cat_id'</span>, <span class="string">'cat_name'</span>, <span class="string">'parent_id'</span>, <span class="string">'style'</span>)</span><br><span class="line">          -&gt;orderBy(<span class="string">'sort_order'</span>)</span><br><span class="line">          -&gt;get();</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    $allCat = Cache::remember(<span class="string">'allCat'</span>, Carbon::now()-&gt;addHour(<span class="number">3</span>), <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> Category::where(<span class="string">'is_show'</span>, <span class="number">1</span>)</span><br><span class="line">            -&gt;select(<span class="string">'cat_id'</span>, <span class="string">'cat_name'</span>, <span class="string">'parent_id'</span>)</span><br><span class="line">            -&gt;orderBy(<span class="string">'sort_order'</span>)</span><br><span class="line">            -&gt;get()</span><br><span class="line">            -&gt;toArray();</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.cnblogs.com/wish123/p/5503870.html" target="_blank" rel="noopener">Laravel 5 性能优化技巧</a><br><a href="https://laravel-china.org/topics/301" target="_blank" rel="noopener">使用 OpCache 提升 PHP 5.5+ 程序性能</a><br><a href="http://www.ithao123.cn/content-960653.html" target="_blank" rel="noopener">大数据量高并发的数据库优化</a><br><a href="http://www.tuicool.com/articles/bIVBFj" target="_blank" rel="noopener">使用 Laravel 的服务容器来优化读写数据库中的 options</a><br><a href="http://blog.csdn.net/geniuslinchao/article/details/51491308" target="_blank" rel="noopener">Laravel大量数据库查询导致php进程内存耗尽</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+            <a href="/tags/laravel/" rel="tag">#laravel</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/Nginxconflicting server name  0.0.0.080, ignored/" rel="next" title="Nginxconflicting server name  0.0.0.080, ignored">
+                <i class="fa fa-chevron-left"></i> Nginxconflicting server name  0.0.0.080, ignored
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/一个计算php页面运行时间的函数/" rel="prev" title="一个计算php页面运行时间的函数">
+                一个计算php页面运行时间的函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +434,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/12/laravel 数据库查询优化/"
+           data-title="laravel 数据库查询优化" data-url="http://elickzhao.github.io/2016/12/laravel 数据库查询优化/">
       </div>
     
   </div>
@@ -312,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +555,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +669,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

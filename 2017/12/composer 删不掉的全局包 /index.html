@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="composer," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="今天安装 php-cs-fixer 遇到个讨厌的情况.一直提示我需要卸载 symfony/console 12345Problem 1    - Installation request for friendsofphp/php-cs-fixer ^2.9 -&amp;gt; satisfiable by friendsofphp/php-cs-fixer[v2.9.0].    - Conclusion">
+<meta name="keywords" content="composer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="composer 删不掉的全局包">
+<meta property="og:url" content="http://elickzhao.github.io/2017/12/composer 删不掉的全局包 /index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="今天安装 php-cs-fixer 遇到个讨厌的情况.一直提示我需要卸载 symfony/console 12345Problem 1    - Installation request for friendsofphp/php-cs-fixer ^2.9 -&amp;gt; satisfiable by friendsofphp/php-cs-fixer[v2.9.0].    - Conclusion">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="composer 删不掉的全局包">
+<meta name="twitter:description" content="今天安装 php-cs-fixer 遇到个讨厌的情况.一直提示我需要卸载 symfony/console 12345Problem 1    - Installation request for friendsofphp/php-cs-fixer ^2.9 -&amp;gt; satisfiable by friendsofphp/php-cs-fixer[v2.9.0].    - Conclusion">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> composer 删不掉的全局包 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,172 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                composer 删不掉的全局包
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-18T22:18:40+08:00" content="2017-12-18">
+              2017-12-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/12/composer 删不掉的全局包 /#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/composer 删不掉的全局包 /" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天安装 <code>php-cs-fixer</code> 遇到个讨厌的情况.一直提示我需要卸载 <code>symfony/console</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Problem 1</span><br><span class="line">    - Installation request for friendsofphp/php-cs-fixer ^2.9 -&gt; satisfiable by friendsofphp/php-cs-fixer[v2.9.0].</span><br><span class="line">    - Conclusion: remove symfony/console v2.8.32</span><br><span class="line">    - Conclusion: don&apos;t install symfony/console v2.8.32</span><br><span class="line">    - friendsofphp/php-cs-fixer v2.9.0 requires symfony/console ^3.2 || ^4.0 -&gt; satisfiable by symfony/console[v3.2.0, v3.2.1, v3.2.10, v3.2.11, v3.2.12, v3.2.13, v3.2.14, v3.2.2, v3.2.3, v3.2.4, v3.2.5, v3.2.6, v3.2.7, v3.2.8, v3.2.9, v3.3.0, v3.3.1, v3.3.10, v3.3.11, v3.3.12, v3.3.13, v3.3.14, v3.3.2, v3.3.3, v3.3.4, v3.3.5, v3.3.6, v3.3.7, v3.3.8, v3.3.9, v3.4.0, v3.4.1, v3.4.2, v4.0.0, v4.0.1, v4.0.2].</span><br></pre></td></tr></table></figure>
+<p>可是 <code>composer remove symfony/console -g</code> 却提示说根本没有安装<br>而且在<code>C:\Users\elick\AppData\Roaming\Composer</code>的 <code>composer.json</code> 也确实没有啊 这就晕了</p>
+<p>最后无奈更新了下 <code>composer update</code> 结果在更新的信息里的确发现了 <code>symfony/console</code></p>
+<p>后来才终于找到 原来在这里安装着呢 <code>C:\Users\elick\AppData\Roaming\Composer\vendor\composer</code>的 <code>installed.json</code> </p>
+<p>这可能是<code>composer</code>自带的插件或者依赖的插件吧 可能我用了好久一直没更新 于是出现了这个错误 </p>
+<p>看来以后安装插件的时候,提前更新下 是个好操作啊.</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/composer/" rel="tag">#composer</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/让人遭心的  MySql enum字段使用问题/" rel="next" title="让人遭心的  MySql enum字段使用问题">
+                <i class="fa fa-chevron-left"></i> 让人遭心的  MySql enum字段使用问题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/小程序中引用import和include区别/" rel="prev" title="小程序中引用import和include区别">
+                小程序中引用import和include区别 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +437,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2017/12/composer 删不掉的全局包 /"
+           data-title="composer 删不掉的全局包" data-url="http://elickzhao.github.io/2017/12/composer 删不掉的全局包 /">
       </div>
     
   </div>
@@ -312,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +558,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +672,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

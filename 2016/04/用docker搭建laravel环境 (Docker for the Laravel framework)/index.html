@@ -1,0 +1,895 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|SourceCodePro-Bold:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="docker,服务器相关技术,laravel," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="elickzhao's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="前言 最近一直想搭建个自己的docker开发环境,找了不少资料.在docker-hub上发现这个,虽然内容老一点,不过思路还是很好的.而且发现用docker搭建原来是如此的so easy! 好吧,让我们开始吧.  首先来看看布局结构 简单说明下.每一个服务用了一个容器.所有容器的数据都指向数据容器.这样统一管理的同时,也方便修改和报错.这里原作者把artisan和composer也放在一个容器里,">
+<meta name="keywords" content="docker,服务器相关技术,laravel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用docker搭建laravel环境 (Docker for the Laravel framework)">
+<meta property="og:url" content="http://elickzhao.github.io/2016/04/用docker搭建laravel环境 (Docker for the Laravel framework)/index.html">
+<meta property="og:site_name" content="elickzhao&#39;s Blog">
+<meta property="og:description" content="前言 最近一直想搭建个自己的docker开发环境,找了不少资料.在docker-hub上发现这个,虽然内容老一点,不过思路还是很好的.而且发现用docker搭建原来是如此的so easy! 好吧,让我们开始吧.  首先来看看布局结构 简单说明下.每一个服务用了一个容器.所有容器的数据都指向数据容器.这样统一管理的同时,也方便修改和报错.这里原作者把artisan和composer也放在一个容器里,">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://elickzhao.github.io/image/16-4/4.png">
+<meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用docker搭建laravel环境 (Docker for the Laravel framework)">
+<meta name="twitter:description" content="前言 最近一直想搭建个自己的docker开发环境,找了不少资料.在docker-hub上发现这个,虽然内容老一点,不过思路还是很好的.而且发现用docker搭建原来是如此的so easy! 好吧,让我们开始吧.  首先来看看布局结构 简单说明下.每一个服务用了一个容器.所有容器的数据都指向数据容器.这样统一管理的同时,也方便修改和报错.这里原作者把artisan和composer也放在一个容器里,">
+<meta name="twitter:image" content="http://elickzhao.github.io/image/16-4/4.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6231321221577836000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 用docker搭建laravel环境 (Docker for the Laravel framework) | elickzhao's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">elickzhao's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">与其临渊羡鱼 不如退而结网!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                用docker搭建laravel环境 (Docker for the Laravel framework)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-25T23:54:28+08:00" content="2016-04-25">
+              2016-04-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/服务器端/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/用docker搭建laravel环境 (Docker for the Laravel framework)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/用docker搭建laravel环境 (Docker for the Laravel framework)/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>最近一直想搭建个自己的docker开发环境,找了不少资料.在docker-hub上发现这个,虽然内容老一点,不过思路还是很好的.而且发现用docker搭建原来是如此的so easy! 好吧,让我们开始吧.</p>
+</blockquote>
+<h1 id="首先来看看布局结构"><a href="#首先来看看布局结构" class="headerlink" title="首先来看看布局结构"></a>首先来看看布局结构</h1><p><img src="/image/16-4/4.png" alt="布局图"></p>
+<p>简单说明下.每一个服务用了一个容器.所有容器的数据都指向数据容器.这样统一管理的同时,也方便修改和报错.这里原作者把artisan和composer也放在一个容器里,但是我个人感觉这样不是太好.当然为了保持宿主主机的纯净度来讲,这是个正确的选择,就是操作起来太费事了.</p>
+<a id="more"></a>
+<h1 id="下载所有镜像"><a href="#下载所有镜像" class="headerlink" title="下载所有镜像"></a>下载所有镜像</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull dylanlindgren/docker-laravel-data &amp;&amp; \</span><br><span class="line">  docker pull dylanlindgren/docker-laravel-composer &amp;&amp; \</span><br><span class="line">  docker pull dylanlindgren/docker-laravel-artisan &amp;&amp; \</span><br><span class="line">  docker pull dylanlindgren/docker-laravel-phpfpm &amp;&amp; \</span><br><span class="line">  docker pull dylanlindgren/docker-laravel-nginx</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/dylanlindgren/docker-laravel-nginx" target="_blank" rel="noopener">Nginx这个镜像的Github地址</a>,其他的我就不放了,因为这个仓库的首页上都有.所以如果你想去详细了解文件内容可以去看看.</p>
+<h1 id="下载虚拟机并建立共享目录"><a href="#下载虚拟机并建立共享目录" class="headerlink" title="下载虚拟机并建立共享目录"></a>下载虚拟机并建立共享目录</h1><blockquote>
+<p>要说明一点我用的是windows,所以下面的操作讲的都是windows下的操作经过.OS X 大致类似,linux是最简单的完全不需要虚拟机的,只要建立共享目录就可以了.</p>
+</blockquote>
+<ul>
+<li>下载docker toolbox并安装 (原文是boot2docker 但是貌似不更新了 而且用不了docker composer 所以用新的吧)</li>
+<li>建立共享目录并与虚拟机设置共享</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先进入 virtualbox的目录 使用命令创建共享目录</span></span><br><span class="line">VBoxManage sharedfolder add boot2docker-vm --name myapp --hostpath C:\Users\dylan\myapp</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建转发端口</span></span><br><span class="line">VBoxManage modifyvm boot2docker-vm --natpf1 <span class="string">"web,tcp,,80,,80"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#当然你还可以直接在virtualbox设置里直接设置这些不用命令</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#进入linux挂载刚才的共享目录</span><br><span class="line">$ boot2docker ssh &apos;sudo mkdir /data&apos;</span><br><span class="line">$ boot2docker ssh &apos;sudo mount -t vboxsf -o &quot;defaults,uid=33,gid=33,rw&quot; myapp /data&apos;</span><br><span class="line"></span><br><span class="line">#共享目录我个人感觉没用,因为每次都得进入linux挂载一次可用,而且只用启动容器时 使用 -v 直接挂载目录就可以了 也不需要这个.当然你可以按着步骤一步一步做 这样肯定能成功!</span><br></pre></td></tr></table></figure>
+<h1 id="万事俱备-启动容器"><a href="#万事俱备-启动容器" class="headerlink" title="万事俱备 启动容器"></a>万事俱备 启动容器</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动数据容器 原本好像有点问题 必须这么写要不启动不起来 至于原因嘛 可能跟 bash有关 比较懒没仔细查</span></span><br><span class="line">`docker run --name myapp-data -v /Users/dylan/myapp:/data:rw -id dylanlindgren/docker-laravel-data /bin/bash ` </span><br><span class="line"></span><br><span class="line"><span class="comment">#启动php容器 --privileged=true 这个必须要不无法创建目录</span></span><br><span class="line">docker run --privileged=<span class="literal">true</span> --name myapp-php --volumes-from myapp-data -d dylanlindgren/docker-laravel-phpfpm </span><br><span class="line"></span><br><span class="line"><span class="comment">#启动Nginx</span></span><br><span class="line">docker run --privileged=<span class="literal">true</span> --name myapp-web --volumes-from myapp-data -p 80:80 --link myapp-php:fpm -d dylanlindgren/docker-laravel-nginx  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#剩下两个 不想写了 因为感觉没用 如果你想用可以看下面 有原文链接 到那里看一下就会了 跟上面大同小异</span></span><br></pre></td></tr></table></figure>
+<h1 id="检查浏览器成功与否"><a href="#检查浏览器成功与否" class="headerlink" title="检查浏览器成功与否"></a>检查浏览器成功与否</h1><p>进入<code>http://localhost</code>查看是否有你想要的内容.这里提个醒因为是laravel环境,所以做了地址改写,把根目录指向了public下,我第一次也是找半天,后来看Github源代码才搞懂. 所以你只要把代码放到你的共享目录,也就是上面C:\Users\dylan\myapp\www\public下就ok了.</p>
+<h1 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h1><p>到此为止你有了个全新的laravel环境了.不过这还不是我想要的,毕竟版本都很低了,而且有些设置不太合我的心意,所以会自己弄一个环境出来的.</p>
+<p><a href="http://dylanlindgren.com/docker-for-the-laravel-framework/" target="_blank" rel="noopener">想看原文的点这里……</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/docker/" rel="tag">#docker</a>
+          
+            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
+          
+            <a href="/tags/laravel/" rel="tag">#laravel</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/linux mount命令的用法详细解析/" rel="next" title="linux mount命令的用法详细解析">
+                <i class="fa fa-chevron-left"></i> linux mount命令的用法详细解析
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/ubuntu 国内源列表/" rel="prev" title="ubuntu 国内源列表">
+                ubuntu 国内源列表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/用docker搭建laravel环境 (Docker for the Laravel framework)/"
+           data-title="用docker搭建laravel环境 (Docker for the Laravel framework)" data-url="http://elickzhao.github.io/2016/04/用docker搭建laravel环境 (Docker for the Laravel framework)/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/image/touxiang.jpg"
+               alt="elickzhao" />
+          <p class="site-author-name" itemprop="name">elickzhao</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">63</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://elickzhao.github.io/" target="_blank" title="LinkLabel">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  LinkLabel
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/elickzhao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="2004015545" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#首先来看看布局结构"><span class="nav-number">2.</span> <span class="nav-text">首先来看看布局结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载所有镜像"><span class="nav-number">3.</span> <span class="nav-text">下载所有镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载虚拟机并建立共享目录"><span class="nav-number">4.</span> <span class="nav-text">下载虚拟机并建立共享目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#万事俱备-启动容器"><span class="nav-number">5.</span> <span class="nav-text">万事俱备 启动容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查浏览器成功与否"><span class="nav-number">6.</span> <span class="nav-text">检查浏览器成功与否</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打完收工"><span class="nav-number">7.</span> <span class="nav-text">打完收工</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">elickzhao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"elickblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+
+</body>
+</html>

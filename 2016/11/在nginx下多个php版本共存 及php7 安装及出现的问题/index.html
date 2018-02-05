@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php,小百科,服务器相关技术," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="在nginx下多个php版本的时候,需要启动两个php-fpm,在配置时php7把当前服务的配置放在了usr/local/etc/php-fpm.d/下了,默认里面有个default,不过需要改成 www.conf 否则就会出现下面那个错误.  3.WARNING: Nothing matches the include pattern ‘/usr/local/etc/php-fpm.d/*.co">
+<meta name="keywords" content="php,小百科,服务器相关技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在nginx下多个php版本共存 及php7 安装及出现的问题">
+<meta property="og:url" content="http://elickzhao.github.io/2016/11/在nginx下多个php版本共存 及php7 安装及出现的问题/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="在nginx下多个php版本的时候,需要启动两个php-fpm,在配置时php7把当前服务的配置放在了usr/local/etc/php-fpm.d/下了,默认里面有个default,不过需要改成 www.conf 否则就会出现下面那个错误.  3.WARNING: Nothing matches the include pattern ‘/usr/local/etc/php-fpm.d/*.co">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="在nginx下多个php版本共存 及php7 安装及出现的问题">
+<meta name="twitter:description" content="在nginx下多个php版本的时候,需要启动两个php-fpm,在配置时php7把当前服务的配置放在了usr/local/etc/php-fpm.d/下了,默认里面有个default,不过需要改成 www.conf 否则就会出现下面那个错误.  3.WARNING: Nothing matches the include pattern ‘/usr/local/etc/php-fpm.d/*.co">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> 在nginx下多个php版本共存 及php7 安装及出现的问题 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,180 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                在nginx下多个php版本共存 及php7 安装及出现的问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-15T23:19:32+08:00" content="2016-11-15">
+              2016-11-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/在nginx下多个php版本共存 及php7 安装及出现的问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/在nginx下多个php版本共存 及php7 安装及出现的问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在nginx下多个php版本的时候,需要启动两个php-fpm,在配置时php7把当前服务的配置放在了<code>usr/local/etc/php-fpm.d/</code>下了,默认里面有个default,不过需要改成 <code>www.conf</code> 否则就会出现下面那个错误.</p>
+<blockquote>
+<p>3.WARNING: Nothing matches the include pattern ‘/usr/local/etc/php-fpm.d/*.conf’ from /usr/local/etc/php-fpm.conf at line 125.<br>ERROR:. No pool defined at least one pool section must be specified in config file<br>ERROR: failed to post process the configuration<br>ERROR: FPM initialization failed</p>
+<p>solution:</p>
+<p>cp www.conf.default www.conf</p>
+</blockquote>
+<p>php.ini需要配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#这里的.sock位置 需要 ps aux | grep -i mysql 命令查询</span><br><span class="line">pdo_mysql.default_socket=/var/lib/mysql/mysqld.sock</span><br><span class="line">mysql.default_socket =/var/lib/mysql/mysqld.sock</span><br><span class="line">mysqli.default_socket =/var/lib/mysql/mysqld.sock</span><br></pre></td></tr></table></figure></p>
+<p>否则出现下面报错<br><code>SQLSTATE[HY000] [2002] No such file or directory</code></p>
+<p>安装php7 主要看下面的 <code>Linux环境PHP7.0安装</code></p>
+<p>编译时出现的问题,主要会报错一些插件没有安装,主要看下面的 <code>编译安装PHP 时遇到问题解决方法.</code><br>这里每次出现的报错不会相同,主要看你的linux发行版环境而定.</p>
+<p><a href="http://blog.csdn.net/21aspnet/article/details/47658127" target="_blank" rel="noopener">Linux环境Nginx安装多版本PHP</a><br><a href="http://www.cnblogs.com/z-ping/archive/2012/06/18/2553929.html" target="_blank" rel="noopener">编译安装PHP 时遇到问题解决方法.</a><br><a href="http://www.admpub.com/blog/?post=169" target="_blank" rel="noopener">解决error: xslt-config not found. Please reinstall the libxslt &gt;= 1.1.0 distribution</a><br><a href="http://blog.csdn.net/21aspnet/article/details/47708763" target="_blank" rel="noopener">Linux环境PHP7.0安装</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+            <a href="/tags/小百科/" rel="tag">#小百科</a>
+          
+            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/SQLSTATE[HY000] [2002] No such file or directory 报错处理/" rel="next" title="SQLSTATE[HY000] [2002] No such file or directory 报错处理">
+                <i class="fa fa-chevron-left"></i> SQLSTATE[HY000] [2002] No such file or directory 报错处理
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/css伪类 first child  伪元素   before /" rel="prev" title="css伪类 first-child  伪元素   before">
+                css伪类 first-child  伪元素   before <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +445,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/11/在nginx下多个php版本共存 及php7 安装及出现的问题/"
+           data-title="在nginx下多个php版本共存 及php7 安装及出现的问题" data-url="http://elickzhao.github.io/2016/11/在nginx下多个php版本共存 及php7 安装及出现的问题/">
       </div>
     
   </div>
@@ -312,8 +470,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +566,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +680,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

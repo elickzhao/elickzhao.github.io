@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,css,JavaScript," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="我自己的 因为和h-ui合用 所以有点问题 一些网上的写法不奏效 12345678910111213141516171819202122232425var form = layui.form;form.on(&apos;select(cid_1)&apos;, function (data) &amp;#123;    var cateid = $(&apos;#cateid&apos;).val();    $(&quot;cid&quot;).val(cate">
+<meta name="keywords" content="前端,css,JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="layui的 select组件二级联动">
+<meta property="og:url" content="http://elickzhao.github.io/2018/02/layui的 select组件二级联动/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="我自己的 因为和h-ui合用 所以有点问题 一些网上的写法不奏效 12345678910111213141516171819202122232425var form = layui.form;form.on(&apos;select(cid_1)&apos;, function (data) &amp;#123;    var cateid = $(&apos;#cateid&apos;).val();    $(&quot;cid&quot;).val(cate">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="layui的 select组件二级联动">
+<meta name="twitter:description" content="我自己的 因为和h-ui合用 所以有点问题 一些网上的写法不奏效 12345678910111213141516171819202122232425var form = layui.form;form.on(&apos;select(cid_1)&apos;, function (data) &amp;#123;    var cateid = $(&apos;#cateid&apos;).val();    $(&quot;cid&quot;).val(cate">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> layui的 select组件二级联动 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,174 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                layui的 select组件二级联动
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-02-01T11:52:10+08:00" content="2018-02-01">
+              2018-02-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/02/layui的 select组件二级联动/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/layui的 select组件二级联动/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>我自己的 因为和h-ui合用 所以有点问题 一些网上的写法不奏效</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> form = layui.form;</span><br><span class="line">form.on(<span class="string">'select(cid_1)'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> cateid = $(<span class="string">'#cateid'</span>).val();</span><br><span class="line">    $(<span class="string">"cid"</span>).val(cateid); </span><br><span class="line">    $.post(<span class="string">'&#123;:U("getcid")&#125;'</span>, &#123;</span><br><span class="line">        cateid: cateid,</span><br><span class="line">        <span class="keyword">async</span> :<span class="literal">false</span>,</span><br><span class="line">    &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (data.catelist != <span class="string">''</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> htmls = <span class="string">'&lt;option value=""&gt;二级分类&lt;/option&gt;'</span>;</span><br><span class="line">            <span class="keyword">var</span> cate = data.catelist;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; cate.length; i++) &#123;</span><br><span class="line">                htmls += <span class="string">'&lt;option value="'</span> + cate[i].id + <span class="string">'"&gt;-- '</span> + cate[i].name + <span class="string">'&lt;/option&gt;'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            $(<span class="string">'#cid'</span>).html(htmls);</span><br><span class="line">            $(<span class="string">'#catedesc'</span>).html(<span class="string">'&amp;nbsp;&amp;nbsp; * 必选项'</span>);</span><br><span class="line">            form.render();  <span class="comment">//这里只有这么写才可以 看来某些东西冲突了</span></span><br><span class="line">            <span class="comment">//form.render();// form.render('select', 'cid_2');  //其他渲染方式都无法渲染出内容来 虽然 select 里已经有东西了</span></span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            $(<span class="string">'#cid'</span>).html(<span class="string">'&lt;option value=""&gt;二级分类&lt;/option&gt;'</span>);</span><br><span class="line">            $(<span class="string">'#catedesc'</span>).html(<span class="string">'&amp;nbsp;&amp;nbsp; * 该分类下还没有二级分类，请先添加'</span>);</span><br><span class="line">            form.render();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="string">"json"</span>);</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>这是别人比较简洁的写法</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//下拉框  </span></span><br><span class="line"><span class="keyword">var</span> form = layui.form();  </span><br><span class="line"><span class="comment">//lay-filter="mch_id" 的值。 select()里的参数就是这个  lay-filter是放在select里的一个属性</span></span><br><span class="line">form.on(<span class="string">'select(mch_id)'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">var</span> mch_id = data.value;  </span><br><span class="line">    $.ajax(&#123;  </span><br><span class="line">        type:<span class="string">"POST"</span>,  </span><br><span class="line">        url:<span class="string">"&#123;:url('get_store')&#125;"</span>,  </span><br><span class="line">        dataType:<span class="string">"json"</span>,  </span><br><span class="line">        data:&#123;<span class="string">'mch_id'</span>:mch_id&#125;,  </span><br><span class="line">        success:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;  </span><br><span class="line">            <span class="comment">//empty() 方法从被选元素移除所有内容  </span></span><br><span class="line">            $(<span class="string">"select[name='store_id']"</span>).empty();  </span><br><span class="line">            <span class="keyword">var</span> html = <span class="string">"&lt;option value='0'&gt;请选择所属门店&lt;/option&gt;"</span>;  </span><br><span class="line">            $(e).each(<span class="function"><span class="keyword">function</span> (<span class="params">v, k</span>) </span>&#123;  </span><br><span class="line">                html += <span class="string">"&lt;option value='"</span> + k.id + <span class="string">"'&gt;"</span> + k.username + <span class="string">"&lt;/option&gt;"</span>;  </span><br><span class="line">            &#125;);  </span><br><span class="line">            <span class="comment">//把遍历的数据放到select表里面  </span></span><br><span class="line">            $(<span class="string">"select[name='store_id']"</span>).append(html);  </span><br><span class="line">            <span class="comment">//从新刷新了一下下拉框  </span></span><br><span class="line">            form.render(<span class="string">'select'</span>);      <span class="comment">//重新渲染</span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;)  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://fly.layui.com/jie/4875/" target="_blank" rel="noopener">基于 Layui form 组件的省市区级联的实现</a><br><a href="http://blog.csdn.net/weixin_39973810/article/details/78852130" target="_blank" rel="noopener">tp5与layui框架实现二级联动加分页效果</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/css文件报错Uncaught SyntaxError/" rel="next" title="css文件报错Uncaught SyntaxError Unexpected token">
+                <i class="fa fa-chevron-left"></i> css文件报错Uncaught SyntaxError Unexpected token
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/jquery 滚动到指定元素位置/" rel="prev" title="jquery 滚动到指定元素位置">
+                jquery 滚动到指定元素位置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +439,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2018/02/layui的 select组件二级联动/"
+           data-title="layui的 select组件二级联动" data-url="http://elickzhao.github.io/2018/02/layui的 select组件二级联动/">
       </div>
     
   </div>
@@ -312,8 +464,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +560,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">1.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +674,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

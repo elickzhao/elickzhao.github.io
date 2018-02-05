@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,node.js," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="废话先不多说,代码就是如下这么简单. 12345678910var express = require(&apos;express&apos;)var app = express()app.use(express.static(&apos;./dist&apos;)) //指定目录app.get(&apos;/&apos;, function (req, res) &amp;#123;  res.send(&apos;Hello World&apos;)&amp;#125;)app.list">
+<meta name="keywords" content="前端,node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node.js 自建简易服务">
+<meta property="og:url" content="http://elickzhao.github.io/2017/06/node.js 自建简易服务/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="废话先不多说,代码就是如下这么简单. 12345678910var express = require(&apos;express&apos;)var app = express()app.use(express.static(&apos;./dist&apos;)) //指定目录app.get(&apos;/&apos;, function (req, res) &amp;#123;  res.send(&apos;Hello World&apos;)&amp;#125;)app.list">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="node.js 自建简易服务">
+<meta name="twitter:description" content="废话先不多说,代码就是如下这么简单. 12345678910var express = require(&apos;express&apos;)var app = express()app.use(express.static(&apos;./dist&apos;)) //指定目录app.get(&apos;/&apos;, function (req, res) &amp;#123;  res.send(&apos;Hello World&apos;)&amp;#125;)app.list">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> node.js 自建简易服务 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,179 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                node.js 自建简易服务
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-06-14T23:35:18+08:00" content="2017-06-14">
+              2017-06-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/06/node.js 自建简易服务/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/node.js 自建简易服务/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>废话先不多说,代码就是如下这么简单.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line">app.use(express.static(<span class="string">'./dist'</span>)) <span class="comment">//指定目录</span></span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'Hello World'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
+<p>下面这个是参考文档里的写法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(<span class="string">"/public"</span>, express.static(__dirname + <span class="string">'/public'</span>));  <span class="comment">//访问路径写到一起了</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建服务端</span></span><br><span class="line">http.createServer(app).listen(<span class="string">'80'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'启动服务器完成'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>然后执行 <code>node app.js</code> 就可以启动服务器了. app.js 就是上面配置所保存的文件名.</p>
+<a id="more"></a>
+<p>上面用的是<code>express</code>,用<code>http-server</code>的话就更简单,不需要自己写配置直接用命令就可以启动了.<br>不过这个需要全局安装才行,要不不会有命令的.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果你的当前项目中存在 public 文件夹,那么默认静态目录会指定到 public</span></span><br><span class="line"><span class="comment">//如果没有 public 文件夹,那么静态目录就是 根目录</span></span><br><span class="line"><span class="comment">//所以要哪个目录充当静态服务器的根目录 就得进入哪个目录执行下面命令</span></span><br><span class="line">http-server -a <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> -p <span class="number">7070</span></span><br></pre></td></tr></table></figure>
+<p><strong>下面开始唠叨:</strong></p>
+<p>因为现在做动静分离的后台程序,所以需要前端的静态服务器.在本地时单击打开静态文件,有时因为所需插件原因.<br>也是无法打开的,必须放在静态服务器.所以这时就需要上面的东西了.<br>关于设置静态服务器的必要性 看看这里 <a href="https://segmentfault.com/q/1010000004050694?_ea=470962" target="_blank" rel="noopener">是否有必要为网站的静态资源设置一个单独的服务器?</a>能了解到不少东西.</p>
+<p>这两个搭建服务器的插件 <code>express</code>和 <code>http-server</code> 都得先安装才能用.不过呢 因为项目里有时用到别的插件.<br>比如 <code>webpace</code>的时候 <code>express</code>就不用特别安装了.因为已经包涵在里面.但是<code>http-server</code>使用的范围不是那么广,所以必须安装.</p>
+<p>还有就是下面参考文档里说,<code>http-server</code>比<code>express</code>要小巧,不过从下载的包来看,并不是如此.可能指的的是功能上吧. 而且<code>express</code>可以操作数据库,这可能对我要写的程序有点用处.</p>
+<p>##参考文档<br><a href="https://my.oschina.net/obullxl/blog/163049" target="_blank" rel="noopener">Node.js用6行代码1个JS文件搭建一个HTTP静态服务器</a><br><a href="http://yijiebuyi.com/blog/b0f6ddc56be457e13879a3ad105f561b.html" target="_blank" rel="noopener">随笔 http-server 快速创建node.js 静态服务器</a><br><a href="http://yijiebuyi.com/blog/359ff66c69934c178dfa8baa32427aef.html" target="_blank" rel="noopener">http-server Angular.js 后端node服务首选 轻量级替换 Express 解决方案</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/node-js/" rel="tag">#node.js</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/vue + iview后台实例问题总结  vue学习问题总结/" rel="next" title="vue + iview后台实例问题总结  vue学习问题总结">
+                <i class="fa fa-chevron-left"></i> vue + iview后台实例问题总结  vue学习问题总结
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/七牛,又拍云,阿里oss这类网站的了解/" rel="prev" title="七牛,又拍云,阿里oss这类网站的了解">
+                七牛,又拍云,阿里oss这类网站的了解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +444,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2017/06/node.js 自建简易服务/"
+           data-title="node.js 自建简易服务" data-url="http://elickzhao.github.io/2017/06/node.js 自建简易服务/">
       </div>
     
   </div>
@@ -312,8 +469,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +565,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +679,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

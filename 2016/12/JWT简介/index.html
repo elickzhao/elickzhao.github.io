@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php,小百科,laravel," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="客户端 token 只存简单的数据，如 userId 。永不过期，除非服务端返回 403 状态码。  当 token 进来时，校验，解析出 userId ，从缓存（如 redis ）获得 userData ，若缓存存在，更新过期时间。  若缓存没有命中，从数据库加载返回同时存入缓存，设置过期时间。  基于安全考虑，可在 token 中再加入一个 version 字段，在第 2 步时校验该段。当">
+<meta name="keywords" content="php,小百科,laravel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JWT简介">
+<meta property="og:url" content="http://elickzhao.github.io/2016/12/JWT简介/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="客户端 token 只存简单的数据，如 userId 。永不过期，除非服务端返回 403 状态码。  当 token 进来时，校验，解析出 userId ，从缓存（如 redis ）获得 userData ，若缓存存在，更新过期时间。  若缓存没有命中，从数据库加载返回同时存入缓存，设置过期时间。  基于安全考虑，可在 token 中再加入一个 version 字段，在第 2 步时校验该段。当">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="JWT简介">
+<meta name="twitter:description" content="客户端 token 只存简单的数据，如 userId 。永不过期，除非服务端返回 403 状态码。  当 token 进来时，校验，解析出 userId ，从缓存（如 redis ）获得 userData ，若缓存存在，更新过期时间。  若缓存没有命中，从数据库加载返回同时存入缓存，设置过期时间。  基于安全考虑，可在 token 中再加入一个 version 字段，在第 2 步时校验该段。当">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> JWT简介 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,178 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JWT简介
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-30T22:23:17+08:00" content="2016-12-30">
+              2016-12-30
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/JWT简介/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/JWT简介/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<ol>
+<li>客户端 token 只存简单的数据，如 userId 。永不过期，除非服务端返回 403 状态码。 </li>
+<li>当 token 进来时，校验，解析出 userId ，从缓存（如 redis ）获得 userData ，若缓存存在，更新过期时间。 </li>
+<li>若缓存没有命中，从数据库加载返回同时存入缓存，设置过期时间。 </li>
+<li>基于安全考虑，可在 token 中再加入一个 version 字段，在第 2 步时校验该段。当改密码或其它需要将所有已登录的客户端重登时只需更新 version 字段，并清空缓存即可。<br>以上，客户端无需主动刷新，也无需定期更换 token ，只有在服务端声明 token 无效时抛弃即可，同时里面也不会包含太多的敏感信息（ jwt 只是 base64 编码，随手都可以解析数据出来，不应将敏感数据放在此处），数据量少 token 相对也短些，对传输也有好处；服务端可完全控制 token 的有效性，在必要的情况下可自主 revoke 已颁发的 token 。</li>
+</ol>
+</blockquote>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://www.tuicool.com/articles/R7Rj6r3" target="_blank" rel="noopener">JWT 简介</a><br><a href="https://zhuanlan.zhihu.com/p/22531819?refer=lsxiao" target="_blank" rel="noopener">从零实现Lumen-JWT扩展包(序):前因</a><br><a href="http://blog.csdn.net/hooloo/article/details/49714259" target="_blank" rel="noopener">Lumen上使用Dingo/Api做API开发时用JWT-Auth做认证的实现</a><br><a href="http://laravelacademy.org/post/3640.html" target="_blank" rel="noopener">Laravel 5 中使用 JWT（Json Web Token） 实现基于API的用户认证</a><br><a href="http://www.tuicool.com/articles/me6jua" target="_blank" rel="noopener">什么是JWT – JSON WEB TOKEN</a><br><a href="http://www.haomou.net/2014/08/13/2014_web_token/" target="_blank" rel="noopener">使用json web token</a><br><a href="http://blog.csdn.net/hooloo/article/details/50649712" target="_blank" rel="noopener"> Laravel (Lumen) 中使用JWT-Auth刷新token的问题</a><br><a href="https://www.itlipeng.cn/?p=764" target="_blank" rel="noopener">自定义中间件（Middleware）监听 Jwt-auth 身份认证（Laravel）</a><br><a href="http://blog.csdn.net/qq_28666081/article/details/52188549" target="_blank" rel="noopener"> Laravel实现dingo+JWT api接口之实战篇</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+            <a href="/tags/小百科/" rel="tag">#小百科</a>
+          
+            <a href="/tags/laravel/" rel="tag">#laravel</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/极棒的jquery动画切换引擎插件Velocity.js/" rel="next" title="极棒的jquery动画切换引擎插件Velocity.js">
+                <i class="fa fa-chevron-left"></i> 极棒的jquery动画切换引擎插件Velocity.js
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/2016最后一天的纪念/" rel="prev" title="2016最后一天的纪念">
+                2016最后一天的纪念 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +443,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/12/JWT简介/"
+           data-title="JWT简介" data-url="http://elickzhao.github.io/2016/12/JWT简介/">
       </div>
     
   </div>
@@ -312,8 +468,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +564,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">1.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +678,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

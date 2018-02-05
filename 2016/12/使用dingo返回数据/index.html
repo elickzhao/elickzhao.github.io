@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="laravel,dingo," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="简介使用dingo返回数据,一开始有点懵,现在开始有点明晰了. 详细方法一用Dingo的Transformer. 其实这两种写法都可以 用Transformer()更简洁和灵活一些.因为Transformer()不仅可以利用 return $ECUser-&amp;gt;attributesToArray(); 将属性转换成数组还可以添加和转换数据库中没有的字段,还可以用 include 做类似关联表的作">
+<meta name="keywords" content="laravel,dingo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用dingo返回数据">
+<meta property="og:url" content="http://elickzhao.github.io/2016/12/使用dingo返回数据/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="简介使用dingo返回数据,一开始有点懵,现在开始有点明晰了. 详细方法一用Dingo的Transformer. 其实这两种写法都可以 用Transformer()更简洁和灵活一些.因为Transformer()不仅可以利用 return $ECUser-&amp;gt;attributesToArray(); 将属性转换成数组还可以添加和转换数据库中没有的字段,还可以用 include 做类似关联表的作">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="使用dingo返回数据">
+<meta name="twitter:description" content="简介使用dingo返回数据,一开始有点懵,现在开始有点明晰了. 详细方法一用Dingo的Transformer. 其实这两种写法都可以 用Transformer()更简洁和灵活一些.因为Transformer()不仅可以利用 return $ECUser-&amp;gt;attributesToArray(); 将属性转换成数组还可以添加和转换数据库中没有的字段,还可以用 include 做类似关联表的作">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> 使用dingo返回数据 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,180 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用dingo返回数据
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-19T23:22:35+08:00" content="2016-12-19">
+              2016-12-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/使用dingo返回数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/使用dingo返回数据/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>使用dingo返回数据,一开始有点懵,现在开始有点明晰了.</p>
+<h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><p><strong>方法一</strong><br>用Dingo的Transformer. 其实这两种写法都可以 用Transformer()更简洁和灵活一些.<br>因为Transformer()不仅可以利用 <code>return $ECUser-&gt;attributesToArray();</code> 将属性转换成数组<br>还可以添加和转换数据库中没有的字段,还可以用 <code>include</code> 做类似关联表的作用,具体看这里: <a href="https://www.zybuluo.com/mdeditor#553839" target="_blank" rel="noopener">Dingo Transformers 的使用(Fractal)</a><br>所以这个很灵活,可以在这个类里添加更多的操作,当然只是返回array的话,还是稍显麻烦因为还得建立个文件.</p>
+<p><strong>补充:</strong><br>Dingo返回数据几种形式:</p>
+<p>Responding With An Array 响应一个数组<br><code>return $this-&gt;response-&gt;array($user-&gt;toArray());</code></p>
+<p>Responding With A Single Item 响应一个元素<br><code>return $this-&gt;response-&gt;item($user, new UserTransformer);</code></p>
+<p>Responding With A Collection Of Items 响应一个元素集合<br><code>return $this-&gt;response-&gt;collection($users, new UserTransformer);</code></p>
+<p>Responding With Paginated Items 分页响应<br><code>return $this-&gt;response-&gt;paginator($users, new UserTransformer);</code></p>
+<p><a href="https://github.com/liyu001989/dingo-api-wiki-zh/blob/master/Responses.md" target="_blank" rel="noopener">更多看这里……..</a></p>
+<a id="more"></a>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$cat = Category::where([[<span class="string">'parent_id'</span>, $cid], [<span class="string">'is_show'</span>, <span class="number">1</span>]])-&gt;select(<span class="string">'cat_id'</span>, <span class="string">'cat_name'</span>, <span class="string">'parent_id'</span>, <span class="string">'style'</span>)-&gt;orderBy(<span class="string">'sort_order'</span>)-&gt;get();</span><br><span class="line"><span class="comment">//用dingo的response就是省了加json头这个步骤了</span></span><br><span class="line"><span class="comment">//看来不仅如此啊 加上返回的是一个数组 data[&#123;取出的数据&#125;] 如果不用就返回&#123;取出的数据&#125;</span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">$this</span>-&gt;response-&gt;collection($cat, <span class="keyword">new</span> CategoryTransformer());</span><br></pre></td></tr></table></figure>
+<p><strong>方法二</strong><br>直接用array开发是更快一些,因为不用去建立文件.<br>这里是利用的Dingo的reponse并不是laravel的,所以要看清</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这里返回一定要是toArray()</span></span><br><span class="line">$wallet = ECUser::where(<span class="string">'user_id'</span>,$id)-&gt;select(<span class="string">'user_money'</span>,<span class="string">'pay_points'</span>)-&gt;first()-&gt;toArray();</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">$this</span>-&gt;response-&gt;array($wallet);</span><br></pre></td></tr></table></figure>
+<p><strong>方法三</strong><br>完全用laravel来返回 json, 不用插件来做.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$wallet = ECUser::where(<span class="string">'user_id'</span>,$id)-&gt;select(<span class="string">'user_money'</span>,<span class="string">'pay_points'</span>)-&gt;first()-&gt;toArray();</span><br><span class="line"></span><br><span class="line"><span class="comment">//上面那个用的是dingo的response和下面这个不一样,下面的是laravel的</span></span><br><span class="line"><span class="comment">//这两个是有区别的 dingo的只有array()没有json, laravel的正好相反,有json()没有array() 但他们的结果是一样的</span></span><br><span class="line"><span class="keyword">return</span> response()-&gt;json($wallet);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/laravel/" rel="tag">#laravel</a>
+          
+            <a href="/tags/dingo/" rel="tag">#dingo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/Dingo Transformers 的使用(Fractal)/" rel="next" title="Dingo Transformers 的使用(Fractal)">
+                <i class="fa fa-chevron-left"></i> Dingo Transformers 的使用(Fractal)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/JS 数组的 push 与 concat 区别/" rel="prev" title="JS 数组的 push 与 concat 区别">
+                JS 数组的 push 与 concat 区别 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +445,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/12/使用dingo返回数据/"
+           data-title="使用dingo返回数据" data-url="http://elickzhao.github.io/2016/12/使用dingo返回数据/">
       </div>
     
   </div>
@@ -312,8 +470,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +566,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详细"><span class="nav-number">2.</span> <span class="nav-text">详细</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +680,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js,node.js,MongoDB,sqlite," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="打算用vue开发个单机小程序,于是这个数据库选择就是个问题了.看到这个小程序 notepad 他是用的 localStorage 不过这个存储有大小限制 不太适合我的要求.于是,就看到了SqLite与MongoDB, 这两个各有优点,确实不好选. MongoDB: 这个与Node.js联系紧密,速度很快,不过据说特别占空间,而且好像是运行在内存中,如果要保存在硬盘还需要特别操作,没用过所以具体如何">
+<meta name="keywords" content="js,node.js,MongoDB,sqlite">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单机js小程序数据库选择 SqLite与MongoDB之间">
+<meta property="og:url" content="http://elickzhao.github.io/2017/02/单机js小程序数据库选择 SqLite与MongoDB之间/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="打算用vue开发个单机小程序,于是这个数据库选择就是个问题了.看到这个小程序 notepad 他是用的 localStorage 不过这个存储有大小限制 不太适合我的要求.于是,就看到了SqLite与MongoDB, 这两个各有优点,确实不好选. MongoDB: 这个与Node.js联系紧密,速度很快,不过据说特别占空间,而且好像是运行在内存中,如果要保存在硬盘还需要特别操作,没用过所以具体如何">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="单机js小程序数据库选择 SqLite与MongoDB之间">
+<meta name="twitter:description" content="打算用vue开发个单机小程序,于是这个数据库选择就是个问题了.看到这个小程序 notepad 他是用的 localStorage 不过这个存储有大小限制 不太适合我的要求.于是,就看到了SqLite与MongoDB, 这两个各有优点,确实不好选. MongoDB: 这个与Node.js联系紧密,速度很快,不过据说特别占空间,而且好像是运行在内存中,如果要保存在硬盘还需要特别操作,没用过所以具体如何">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> 单机js小程序数据库选择 SqLite与MongoDB之间 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,175 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                单机js小程序数据库选择 SqLite与MongoDB之间
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-08T21:21:07+08:00" content="2017-02-08">
+              2017-02-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/单机js小程序数据库选择 SqLite与MongoDB之间/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/单机js小程序数据库选择 SqLite与MongoDB之间/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>打算用vue开发个单机小程序,于是这个数据库选择就是个问题了.<br>看到这个小程序 <a href="https://github.com/lin-xin/notepad" target="_blank" rel="noopener">notepad</a> 他是用的 <code>localStorage</code> 不过这个存储有大小限制 不太适合我的要求.<br>于是,就看到了SqLite与MongoDB, 这两个各有优点,确实不好选.</p>
+<p><strong>MongoDB</strong>: 这个与Node.js联系紧密,速度很快,不过据说特别占空间,而且好像是运行在内存中,如果要保存在硬盘还需要特别操作,没用过所以具体如何不清楚.</p>
+<p><strong>SqLite</strong>: 小巧精悍,据说一般用于手机程序和小程序,但是他是单线程用于硬盘,所以速度比不上MongoDB,但是占用空间小,而且可以使用sql语句,所以用起来比较简单.</p>
+<p>经过考虑,原本打算用SqLite因为这个比较符合我的要求,但是因为从来没接触过MongoDB,所以这次就用MongoDB尝试下.不好用的情况下,就换回SqLite.</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag">#js</a>
+          
+            <a href="/tags/node-js/" rel="tag">#node.js</a>
+          
+            <a href="/tags/MongoDB/" rel="tag">#MongoDB</a>
+          
+            <a href="/tags/sqlite/" rel="tag">#sqlite</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/js,node与MongoDB使用/" rel="next" title="js,node与MongoDB使用">
+                <i class="fa fa-chevron-left"></i> js,node与MongoDB使用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/vuex学习小记 /" rel="prev" title="vuex学习小记">
+                vuex学习小记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +440,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2017/02/单机js小程序数据库选择 SqLite与MongoDB之间/"
+           data-title="单机js小程序数据库选择 SqLite与MongoDB之间" data-url="http://elickzhao.github.io/2017/02/单机js小程序数据库选择 SqLite与MongoDB之间/">
       </div>
     
   </div>
@@ -312,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +561,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +675,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

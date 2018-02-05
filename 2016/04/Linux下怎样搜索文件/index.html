@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="使用linux系统难免会忘记文件所在的位置，可以使用以下命令对系统中的文件进行搜索。搜索文件的命令为”find“；”locate“；”whereis“；”which“；”type“  findlinux下最强大的搜索命令为”find“。它的格式为 find &amp;lt;指定目录&amp;gt; &amp;lt;指定条件&amp;gt; &amp;lt;指定动作&amp;gt;；比如使用find命令搜索在根目录下的所有interfaces文">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux下怎样搜索文件">
+<meta property="og:url" content="http://elickzhao.github.io/2016/04/Linux下怎样搜索文件/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="使用linux系统难免会忘记文件所在的位置，可以使用以下命令对系统中的文件进行搜索。搜索文件的命令为”find“；”locate“；”whereis“；”which“；”type“  findlinux下最强大的搜索命令为”find“。它的格式为 find &amp;lt;指定目录&amp;gt; &amp;lt;指定条件&amp;gt; &amp;lt;指定动作&amp;gt;；比如使用find命令搜索在根目录下的所有interfaces文">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="Linux下怎样搜索文件">
+<meta name="twitter:description" content="使用linux系统难免会忘记文件所在的位置，可以使用以下命令对系统中的文件进行搜索。搜索文件的命令为”find“；”locate“；”whereis“；”which“；”type“  findlinux下最强大的搜索命令为”find“。它的格式为 find &amp;lt;指定目录&amp;gt; &amp;lt;指定条件&amp;gt; &amp;lt;指定动作&amp;gt;；比如使用find命令搜索在根目录下的所有interfaces文">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> Linux下怎样搜索文件 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,175 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Linux下怎样搜索文件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-30T21:39:59+08:00" content="2016-04-30">
+              2016-04-30
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/Linux下怎样搜索文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/Linux下怎样搜索文件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>使用linux系统难免会忘记文件所在的位置，可以使用以下命令对系统中的文件进行搜索。搜索文件的命令为”find“；”locate“；”whereis“；”which“；”type“</p>
+</blockquote>
+<h1 id="find"><a href="#find" class="headerlink" title="find"></a>find</h1><p>linux下最强大的搜索命令为”find“。<br>它的格式为 <code>find &lt;指定目录&gt; &lt;指定条件&gt; &lt;指定动作&gt;</code>；<br>比如使用find命令搜索在根目录下的所有interfaces文件所在位置，<br>命令格式为 <code>find / -name  &#39;interfaces&#39;</code></p>
+<p>查找当前目录下以@开头的文件或者目录，搜索深度为一级也就是只在当前目录找，不进入子目录<br><code>find . -maxdepth 1 -name &quot;@*&quot;</code></p>
+<a id="more"></a>
+<h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p>使用locate搜索linux系统中的文件，它比find命令快。<br>因为它查询的是数据库(/var/lib/locatedb)，数据库包含本地所有的文件信息。<br>使用locate命令在根目录下搜索interfaces文件的命令为 <code>locate interfaces</code></p>
+<h1 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a>whereis</h1><p>使用”whereis“命令可以搜索linux系统中的所有可执行文件即二进制文件。<br>使用whereis命令搜索grep二进制文件的命令为 <code>whereis grep</code>。</p>
+<h1 id="which"><a href="#which" class="headerlink" title="which"></a>which</h1><p>使用which命令查看系统命令是否存在，并返回系统命令所在的位置。<br>使用which命令查看grep命令是否存在以及存在的目录的命令为 <code>which grep</code>。</p>
+<h1 id="type"><a href="#type" class="headerlink" title="type"></a>type</h1><p>使用type命令查看系统中的某个命令是否为系统自带的命令。<br>使用type命令查看cd命令是否为系统自带的命令；查看grep 是否为系统自带的命令。<br><code>type cd</code> <code>type grep</code></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/PHP 获取服务器详细信息代码/" rel="next" title="PHP 获取服务器详细信息代码">
+                <i class="fa fa-chevron-left"></i> PHP 获取服务器详细信息代码
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/常用的apt-get命令/" rel="prev" title="常用的apt-get命令">
+                常用的apt-get命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +440,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/04/Linux下怎样搜索文件/"
+           data-title="Linux下怎样搜索文件" data-url="http://elickzhao.github.io/2016/04/Linux下怎样搜索文件/">
       </div>
     
   </div>
@@ -312,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +561,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#find"><span class="nav-number">1.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#locate"><span class="nav-number">2.</span> <span class="nav-text">locate</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#whereis"><span class="nav-number">3.</span> <span class="nav-text">whereis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#which"><span class="nav-number">4.</span> <span class="nav-text">which</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#type"><span class="nav-number">5.</span> <span class="nav-text">type</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +675,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

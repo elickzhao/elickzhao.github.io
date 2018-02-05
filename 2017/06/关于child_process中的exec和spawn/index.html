@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js,小百科,node.js," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="这是篇转发,因为原文写的实在是太明白了. http://cnodejs.org/topic/507285c101d0b80148f7c538  开始学习child_process模块的时候以为spawn可以直接运行命令, 后来发现这是一个小陷阱就拿出来和大家分享一下. 先说下我碰到的情况由于在windos下写的所以根据docs上的例子我就写出了这么一句代码:”require(“child_pro">
+<meta name="keywords" content="js,小百科,node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于child_process中的exec和spawn">
+<meta property="og:url" content="http://elickzhao.github.io/2017/06/关于child_process中的exec和spawn/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="这是篇转发,因为原文写的实在是太明白了. http://cnodejs.org/topic/507285c101d0b80148f7c538  开始学习child_process模块的时候以为spawn可以直接运行命令, 后来发现这是一个小陷阱就拿出来和大家分享一下. 先说下我碰到的情况由于在windos下写的所以根据docs上的例子我就写出了这么一句代码:”require(“child_pro">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="关于child_process中的exec和spawn">
+<meta name="twitter:description" content="这是篇转发,因为原文写的实在是太明白了. http://cnodejs.org/topic/507285c101d0b80148f7c538  开始学习child_process模块的时候以为spawn可以直接运行命令, 后来发现这是一个小陷阱就拿出来和大家分享一下. 先说下我碰到的情况由于在windos下写的所以根据docs上的例子我就写出了这么一句代码:”require(“child_pro">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> 关于child_process中的exec和spawn | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,178 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于child_process中的exec和spawn
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-06-19T21:41:49+08:00" content="2017-06-19">
+              2017-06-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/06/关于child_process中的exec和spawn/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/关于child_process中的exec和spawn/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>这是篇转发,因为原文写的实在是太明白了. <a href="http://cnodejs.org/topic/507285c101d0b80148f7c538" target="_blank" rel="noopener">http://cnodejs.org/topic/507285c101d0b80148f7c538</a></p>
+</blockquote>
+<p>开始学习child_process模块的时候以为spawn可以直接运行命令, 后来发现这是一个小陷阱就拿出来和大家分享一下.</p>
+<p>先说下我碰到的情况由于在windos下写的所以根据docs上的例子我就写出了这么一句代码:”require(“child_process”).spawn(“dir”), 这么写是会有错误的,用error接受到的数据是没有此文件. 而用exec就不会有问题,于是得到了以前的猜想.</p>
+<p>大家都知道在linux下, ls命令对应的是一个文件, 而在windows下是做为cmd的内置命令的. 所以像我那样写是会报错.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">于是我查看了child_process的源码发现spawn是这样定义的<span class="keyword">var</span> spawn = exports.spawn = <span class="function"><span class="keyword">function</span>(<span class="params">file, args, options</span>); 也就是说他传入的应该是一个文件, 例如<span class="title">ping</span>, <span class="title">cmd</span>等. 而<span class="title">exec</span>的源码中有一段这样的代码:</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"> <span class="title">if</span> (<span class="params">process.platform === <span class="string">'win32'</span></span>) </span>&#123;</span><br><span class="line">file = <span class="string">'cmd.exe'</span>;</span><br><span class="line">args = [<span class="string">'/s'</span>, <span class="string">'/c'</span>, <span class="string">'"'</span> + command + <span class="string">'"'</span>];</span><br><span class="line"><span class="comment">// Make a shallow copy before patching so we don't clobber the user's</span></span><br><span class="line"><span class="comment">// options object.</span></span><br><span class="line">options = util._extend(&#123;&#125;, options);</span><br><span class="line">options.windowsVerbatimArguments = <span class="literal">true</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  file = <span class="string">'/bin/sh'</span>;</span><br><span class="line">  args = [<span class="string">'-c'</span>, command];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以想使用内置命令可以直接使用exec或者把spawn改成spawn(“cmd.exe”,[“\s”, “\c”, “dir”]);</p>
+<p>总结起来就是spawn是调用一个文件! 不要被docs上的child_process.spawn(command, [args], [options])中的command给骗了</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag">#js</a>
+          
+            <a href="/tags/小百科/" rel="tag">#小百科</a>
+          
+            <a href="/tags/node-js/" rel="tag">#node.js</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/七牛,又拍云,阿里oss这类网站的了解/" rel="next" title="七牛,又拍云,阿里oss这类网站的了解">
+                <i class="fa fa-chevron-left"></i> 七牛,又拍云,阿里oss这类网站的了解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/nodejs 的 cross-env 的使用及介绍/" rel="prev" title="nodejs 的 cross-env 的使用及介绍">
+                nodejs 的 cross-env 的使用及介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +443,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2017/06/关于child_process中的exec和spawn/"
+           data-title="关于child_process中的exec和spawn" data-url="http://elickzhao.github.io/2017/06/关于child_process中的exec和spawn/">
       </div>
     
   </div>
@@ -312,8 +468,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +564,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +678,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

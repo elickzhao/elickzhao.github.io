@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php,laravel," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="前言发现两个不错的语音包,caouecs/Laravel-lang和overtrue/laravel-lang.第一个是第二个的基础,只是做了一下自动化 caouecs/Laravel-lang其实使用很简单,就如下所说,把项目下载到项目里,然后把要使用的语言包,放到resources\lang里,然后改写config\app.php里的语言设置就ok了">
+<meta name="keywords" content="php,laravel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel-lang 多语言插件">
+<meta property="og:url" content="http://elickzhao.github.io/2016/06/Laravel-lang 多语言插件/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="前言发现两个不错的语音包,caouecs/Laravel-lang和overtrue/laravel-lang.第一个是第二个的基础,只是做了一下自动化 caouecs/Laravel-lang其实使用很简单,就如下所说,把项目下载到项目里,然后把要使用的语言包,放到resources\lang里,然后改写config\app.php里的语言设置就ok了">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="Laravel-lang 多语言插件">
+<meta name="twitter:description" content="前言发现两个不错的语音包,caouecs/Laravel-lang和overtrue/laravel-lang.第一个是第二个的基础,只是做了一下自动化 caouecs/Laravel-lang其实使用很简单,就如下所说,把项目下载到项目里,然后把要使用的语言包,放到resources\lang里,然后改写config\app.php里的语言设置就ok了">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> Laravel-lang 多语言插件 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,211 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Laravel-lang 多语言插件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-10T21:47:26+08:00" content="2016-06-10">
+              2016-06-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/php开发/" itemprop="url" rel="index">
+                    <span itemprop="name">php开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/Laravel-lang 多语言插件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/Laravel-lang 多语言插件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>发现两个不错的语音包,caouecs/Laravel-lang和overtrue/laravel-lang.第一个是第二个的基础,只是做了一下自动化
+</code></pre><h3 id="caouecs-Laravel-lang"><a href="#caouecs-Laravel-lang" class="headerlink" title="caouecs/Laravel-lang"></a>caouecs/Laravel-lang</h3><p>其实使用很简单,就如下所说,把项目下载到项目里,然后把要使用的语言包,放到<code>resources\lang</code>里,然后改写<code>config\app.php</code>里的语言设置就ok了</p>
+<a id="more"></a>
+<p>仓库地址:<br><a href="https://github.com/caouecs/Laravel-lang" target="_blank" rel="noopener">https://github.com/caouecs/Laravel-lang</a></p>
+<blockquote>
+<p>Via Composer<br>For Laravel 5.* : add “caouecs/laravel-lang”: “~3.0” in your composer.json in “require”<br>For Laravel 5 : add “caouecs/laravel4-lang”: “~2.0” in your composer.json in “require”<br>For Laravel 4 : add “caouecs/laravel4-lang”: “~1.0” in your composer.json in “require”<br>Do “composer update”<br>Files of languages are in “vendor/caouecs/laravel-lang” directory<br>Copy the folders of languages that you want, in app/lang (resources/lang in laravel 5) folder of your application Laravel</p>
+<p>Via GitHub<br>Clone the GitHub repository : git clone <a href="https://github.com/caouecs/Laravel-lang.git" target="_blank" rel="noopener">https://github.com/caouecs/Laravel-lang.git</a><br>Or download the zip file<br>Choose the branch:<br>laravel4 for Laravel4 project<br>master for Laravel5 project<br>Copy the folders of languages that you want, in app/lang folder of your application Laravel</p>
+</blockquote>
+<h3 id="overtrue-laravel-lang"><a href="#overtrue-laravel-lang" class="headerlink" title="overtrue/laravel-lang"></a>overtrue/laravel-lang</h3><p>这个也很简单</p>
+<ul>
+<li><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer require &quot;overtrue/laravel-lang:~3.0&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置</p>
+</li>
+</ul>
+<p>完成上面的操作后，将项目文件 config/app.php 中的下一行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Illuminate\Translation\TranslationServiceProvider::class,</span><br></pre></td></tr></table></figure></p>
+<p>替换为：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Overtrue\LaravelLang\TranslationServiceProvider::class,</span><br></pre></td></tr></table></figure></p>
+<p>修改项目语言 config/app.php：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'locale'</span> =&gt; <span class="string">'zh-CN'</span>,</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ php artisan lang:publish zh-CN,zh-HK,th,tk</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这样就会自动把语音包放到lang下面了</p>
+<p>参考文档:<br><a href="https://github.com/overtrue/laravel-lang/blob/master/README_CN.md" target="_blank" rel="noopener">项目说明文档</a><br><a href="https://github.com/overtrue/laravel-lang" target="_blank" rel="noopener">项目仓库</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+            <a href="/tags/laravel/" rel="tag">#laravel</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/laravel-breadcrumbs 面包屑插件/" rel="next" title="laravel-breadcrumbs 面包屑插件">
+                <i class="fa fa-chevron-left"></i> laravel-breadcrumbs 面包屑插件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/larave后台日志插件/" rel="prev" title="larave后台日志插件">
+                larave后台日志插件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +476,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/06/Laravel-lang 多语言插件/"
+           data-title="Laravel-lang 多语言插件" data-url="http://elickzhao.github.io/2016/06/Laravel-lang 多语言插件/">
       </div>
     
   </div>
@@ -312,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +597,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#caouecs-Laravel-lang"><span class="nav-number">1.1.</span> <span class="nav-text">caouecs/Laravel-lang</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#overtrue-laravel-lang"><span class="nav-number">1.2.</span> <span class="nav-text">overtrue/laravel-lang</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +711,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

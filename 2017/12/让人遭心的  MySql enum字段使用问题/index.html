@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="小百科,mysql," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="今天在改程序的时候遇到了 enum字段 这个东西果真奇葩.怎么搜索都搜索不到.后来查了资料才搞懂.这个字段是 mysql独有 其他数据库都没有的 所以用了他就别想换了他的唯一优点就是控制大小,因为他是类似数组形式保存的 所以数量是可控的但也造成了搜索时候的问题. 直接搜索的时候有可能搜索的是按key来搜不是保存在字段里value 唉… 据下面文档说 他的key是从1开始 所以搜不到0但是我遇到更奇">
+<meta name="keywords" content="小百科,mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让人遭心的  MySql enum字段使用问题">
+<meta property="og:url" content="http://elickzhao.github.io/2017/12/让人遭心的  MySql enum字段使用问题/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="今天在改程序的时候遇到了 enum字段 这个东西果真奇葩.怎么搜索都搜索不到.后来查了资料才搞懂.这个字段是 mysql独有 其他数据库都没有的 所以用了他就别想换了他的唯一优点就是控制大小,因为他是类似数组形式保存的 所以数量是可控的但也造成了搜索时候的问题. 直接搜索的时候有可能搜索的是按key来搜不是保存在字段里value 唉… 据下面文档说 他的key是从1开始 所以搜不到0但是我遇到更奇">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="让人遭心的  MySql enum字段使用问题">
+<meta name="twitter:description" content="今天在改程序的时候遇到了 enum字段 这个东西果真奇葩.怎么搜索都搜索不到.后来查了资料才搞懂.这个字段是 mysql独有 其他数据库都没有的 所以用了他就别想换了他的唯一优点就是控制大小,因为他是类似数组形式保存的 所以数量是可控的但也造成了搜索时候的问题. 直接搜索的时候有可能搜索的是按key来搜不是保存在字段里value 唉… 据下面文档说 他的key是从1开始 所以搜不到0但是我遇到更奇">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> 让人遭心的  MySql enum字段使用问题 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,172 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                让人遭心的  MySql enum字段使用问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-14T16:44:08+08:00" content="2017-12-14">
+              2017-12-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/12/让人遭心的  MySql enum字段使用问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/让人遭心的  MySql enum字段使用问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天在改程序的时候遇到了 enum字段 这个东西果真奇葩.怎么搜索都搜索不到.<br>后来查了资料才搞懂.<br>这个字段是 mysql独有 其他数据库都没有的 所以用了他就别想换了<br>他的唯一优点就是控制大小,因为他是类似数组形式保存的 所以数量是可控的<br>但也造成了搜索时候的问题. 直接搜索的时候有可能搜索的是按key来搜不是保存在字段里value 唉…</p>
+<p>据下面文档说 他的key是从1开始 所以搜不到0<br><del>但是我遇到更奇葩的事 就算我按key=1 来搜索也搜不到 0 这个值. 而其他两个 1 和 2 全能搜到</del><br>妈蛋 原来人家说的是对的 只不过数据库形式我没仔细看错了 搜索3就出来了<br>数据库形式 是这样的  [‘1’=&gt;1,’2’=&gt;’2’,’3’=&gt;0]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM lr_order WHERE back = 3;  //这是按key搜索 匹配出来的 全是 back=0</span><br></pre></td></tr></table></figure></p>
+<p>如果想按值搜索怎么做? 加上单引号就行了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM lr_order WHERE back = &apos;0&apos;;  //这是按value搜索 匹配出来的 全是 back=0</span><br></pre></td></tr></table></figure></p>
+<p>这个破东西的确烦,可能框架都没法用.所以建立数据库的时候,还是用tinyint算了</p>
+<p>##参考文档<br><a href="http://blog.csdn.net/kkikiako/article/details/49746791" target="_blank" rel="noopener">MySql enum字段使用问题</a><br><a href="http://www.jb51.net/article/53426.htm" target="_blank" rel="noopener">要慎用mysql的enum字段的原因</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/小百科/" rel="tag">#小百科</a>
+          
+            <a href="/tags/mysql/" rel="tag">#mysql</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/php自动加载原理/" rel="next" title="php自动加载原理">
+                <i class="fa fa-chevron-left"></i> php自动加载原理
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/composer 删不掉的全局包 /" rel="prev" title="composer 删不掉的全局包">
+                composer 删不掉的全局包 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +437,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2017/12/让人遭心的  MySql enum字段使用问题/"
+           data-title="让人遭心的  MySql enum字段使用问题" data-url="http://elickzhao.github.io/2017/12/让人遭心的  MySql enum字段使用问题/">
       </div>
     
   </div>
@@ -312,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +558,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +672,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

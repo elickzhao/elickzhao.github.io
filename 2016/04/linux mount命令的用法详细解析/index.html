@@ -1,0 +1,928 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|SourceCodePro-Bold:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="elickzhao's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="挂接命令(mount)首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。命令格式：mount [-t vfstype] [-o options] device dir其中：  -t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：光盘或光盘镜像：iso9660DOS fat16文件系统：msdo">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux mount命令的用法详细解析">
+<meta property="og:url" content="http://elickzhao.github.io/2016/04/linux mount命令的用法详细解析/index.html">
+<meta property="og:site_name" content="elickzhao&#39;s Blog">
+<meta property="og:description" content="挂接命令(mount)首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。命令格式：mount [-t vfstype] [-o options] device dir其中：  -t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：光盘或光盘镜像：iso9660DOS fat16文件系统：msdo">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux mount命令的用法详细解析">
+<meta name="twitter:description" content="挂接命令(mount)首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。命令格式：mount [-t vfstype] [-o options] device dir其中：  -t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：光盘或光盘镜像：iso9660DOS fat16文件系统：msdo">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6231321221577836000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> linux mount命令的用法详细解析 | elickzhao's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">elickzhao's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">与其临渊羡鱼 不如退而结网!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                linux mount命令的用法详细解析
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-21T23:52:53+08:00" content="2016-04-21">
+              2016-04-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/服务器端/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/linux mount命令的用法详细解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/linux mount命令的用法详细解析/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="挂接命令-mount"><a href="#挂接命令-mount" class="headerlink" title="挂接命令(mount)"></a>挂接命令(mount)</h1><p>首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。<br>命令格式：mount [-t vfstype] [-o options] device dir<br>其中：</p>
+<ol>
+<li>-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：<br>光盘或光盘镜像：iso9660<br>DOS fat16文件系统：msdos<br>Windows 9x fat32文件系统：vfat<br>Windows NT ntfs文件系统：ntfs<br>Mount Windows文件网络共享：smbfs<br>UNIX(LINUX) 文件网络共享：nfs<br>VirtualBox 文件网络共享: vboxsf</li>
+<li>-o options 主要用来描述设备或档案的挂接方式。常用的参数有：<br>loop：用来把一个文件当成硬盘分区挂接上系统<br>ro：采用只读方式挂接设备<br>rw：采用读写方式挂接设备<br>iocharset：指定访问文件系统所用字符集</li>
+<li>device 要挂接(mount)的设备。</li>
+<li>dir设备在系统上的挂接点(mount point)。<a id="more"></a>
+</li>
+</ol>
+<h1 id="挂接光盘镜像文件"><a href="#挂接光盘镜像文件" class="headerlink" title="挂接光盘镜像文件"></a>挂接光盘镜像文件</h1><ol>
+<li><p>从光盘制作光盘镜像文件。将光盘放入光驱，执行下面的命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cp /dev/cdrom /home/sunky/mydisk.iso 或</span><br><span class="line">$ dd <span class="keyword">if</span>=/dev/cdrom of=/home/sunky/mydisk.iso</span><br><span class="line"><span class="comment"># 注：执行上面的任何一条命令都可将当前光驱里的光盘制作成光盘镜像文件/home/sunky/mydisk.iso</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将文件和目录制作成光盘镜像文件，执行下面的命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkisofs -r -J -V mydisk -o /home/sunky/mydisk.iso /home/sunky/ mydir</span><br><span class="line"><span class="comment"># 注：这条命令将/home/sunky/mydir目录下所有的目录和文件制作成光盘镜像文件/home/sunky/mydisk.iso，光盘卷标为：mydisk</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>光盘镜像文件的挂接(mount)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /mnt/vcdrom</span><br><span class="line"><span class="comment"># 注：建立一个目录用来作挂接点(mount point)</span></span><br><span class="line"></span><br><span class="line">$ mount -o loop -t iso9660 /home/sunky/mydisk.iso /mnt/vcdrom</span><br><span class="line"><span class="comment"># 注：使用/mnt/vcdrom就可以访问盘镜像文件mydisk.iso里的所有文件了。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="挂接移动硬盘"><a href="#挂接移动硬盘" class="headerlink" title="挂接移动硬盘"></a>挂接移动硬盘</h1><p>对linux系统而言，USB接口的移动硬盘是当作SCSI设备对待的。插入移动硬盘之前，应先用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root at pldyrouter /]#  fdisk -l</span><br></pre></td></tr></table></figure></p>
+<p>接好移动硬盘后，再用fdisk –l 或 more<br>/proc/partitions查看系统的硬盘和硬盘分区情况.应该可以发现多了一个SCSI硬盘/dev/sdc和它的两个磁盘分区/dev/sdc1?、/dev/sdc2,其中/dev/sdc5是/dev/sdc2分区的逻辑分区。我们可以使用下面的命令挂接/dev/sdc1和/dev/sdc5。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$mkdir</span> -p /mnt/usbhd1</span><br><span class="line"><span class="variable">$mkdir</span> -p /mnt/usbhd2</span><br><span class="line"><span class="comment"># 注：建立目录用来作挂接点(mount point)</span></span><br><span class="line"></span><br><span class="line">$ mount -t ntfs /dev/sdc1 /mnt/usbhd1</span><br><span class="line">$ mount -t vfat /dev/sdc5 /mnt/usbhd2</span><br><span class="line"><span class="comment"># 注：对ntfs格式的磁盘分区应使用-t ntfs 参数，对fat32格式的磁盘分区应使用-t vfat参数。若汉字文件名显示为乱码或不显示，可以使用下面的命令格式。</span></span><br><span class="line"></span><br><span class="line">$ mount -t ntfs -o iocharset=cp936 /dev/sdc1 /mnt/usbhd1</span><br><span class="line">$ mount -t vfat -o iocharset=cp936 /dev/sdc5 /mnt/usbhd2</span><br><span class="line"><span class="comment"># linux系统下使用fdisk分区命令和mkfs文件系统创建命令可以将移动硬盘的分区制作成linux系统所特有的ext2、ext3格式。这样，在linux下使用就更方便了。使用下面的命令直接挂接即可。</span></span><br><span class="line"></span><br><span class="line">$ mount /dev/sdc1 /mnt/usbhd1</span><br></pre></td></tr></table></figure>
+<h1 id="挂接U盘"><a href="#挂接U盘" class="headerlink" title="挂接U盘"></a>挂接U盘</h1><p>和USB接口的移动硬盘一样对linux系统而言U盘也是当作SCSI设备对待的。使用方法和移动硬盘完全一样。插入U盘之前，应先用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root at pldyrouter root]<span class="comment">#  fdisk -l</span></span><br></pre></td></tr></table></figure></p>
+<p>插入U盘后，再用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root at pldyrouter root]<span class="comment">#  fdisk -l</span></span><br></pre></td></tr></table></figure></p>
+<p>系统多了一个SCSI硬盘/dev/sdd和一个磁盘分区/dev/sdd1,/dev/sdd1就是我们要挂接的U盘。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p /mnt/usb</span><br><span class="line"><span class="comment"># 注：建立一个目录用来作挂接点(mount point)</span></span><br><span class="line">$ mount -t vfat /dev/sdd1 /mnt/usb</span><br><span class="line"><span class="comment"># 注：现在可以通过/mnt/usb来访问U盘了, 若汉字文件名显示为乱码或不显示，可以使用下面的命令。</span></span><br><span class="line">$ mount -t vfat -o iocharset=cp936 /dev/sdd1 /mnt/usb</span><br></pre></td></tr></table></figure></p>
+<h1 id="挂接Windows文件共享"><a href="#挂接Windows文件共享" class="headerlink" title="挂接Windows文件共享"></a>挂接Windows文件共享</h1><p>Windows网络共享的核心是SMB/CIFS，在linux下要挂接(mount)windows的磁盘共享，就必须安装和使用samba 软件包。现在流行的linux发行版绝大多数已经包含了samba软件包，如果安装linux系统时未安装samba请首先安装samba。当然也可以到 www.samba.org网站下载……新的版本是3.0.10版。<br>当windows系统共享设置好以后，就可以在linux客户端挂接(mount)了，具体操作如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir –p /mnt/samba</span><br><span class="line"><span class="comment"># 注：建立一个目录用来作挂接点(mount point)</span></span><br><span class="line">$ mount -t smbfs -o username=administrator,password=pldy123 //10.140.133.23/c$ /mnt/samba</span><br><span class="line"><span class="comment"># 注：administrator 和 pldy123 是ip地址为10.140.133.23</span></span><br></pre></td></tr></table></figure></p>
+<p>windows计算机的一个用户名和密码，c$是这台计算机的一个磁盘共享<br>如此就可以在linux系统上通过/mnt/samba来访问windows系统磁盘上的文件了。以上操作在redhat as server 3、redflag server 4.1、suse server 9以及windows NT 4.0、windows 2000、windows xp、windows 2003环境下测试通过。</p>
+<h1 id="挂接UNIX系统NFS文件共享"><a href="#挂接UNIX系统NFS文件共享" class="headerlink" title="挂接UNIX系统NFS文件共享"></a>挂接UNIX系统NFS文件共享</h1><p>类似于windows的网络共享，UNIX(Linux)系统也有自己的网络共享，那就是NFS(网络文件系统)，下面我们就以SUN Solaris2.8和REDHAT as server 3 为例简单介绍一下在linux下如何mount nfs网络共享。<br>在linux客户端挂接(mount)NFS磁盘共享之前，必须先配置好NFS服务端。</p>
+<ol>
+<li><p>Solaris系统NFS服务端配置方法如下：</p>
+<ul>
+<li><p>修改 /etc/dfs/dfstab, 增加共享目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">share -F nfs -o rw /<span class="built_in">export</span>/home/sunky</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动nfs服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /etc/init.d/nfs.server start</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NFS服务启动以后，也可以使用下面的命令增加新的共享</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ share /<span class="built_in">export</span>/home/sunky1</span><br><span class="line">$ share /<span class="built_in">export</span>/home/sunky2</span><br><span class="line"><span class="comment"># 注：/export/home/sunky和/export/home/sunky1是准备共享的目录</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>linux系统NFS服务端配置方法如下：</p>
+<ul>
+<li><p>修改 /etc/exports,增加共享目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">export</span>/home/sunky 10.140.133.23(rw)</span><br><span class="line">/<span class="built_in">export</span>/home/sunky1 *(rw)</span><br><span class="line">/<span class="built_in">export</span>/home/sunky2 linux-client(rw)</span><br><span class="line"><span class="comment"># 注：/export/home/目录下的sunky、sunky1、sunky2是准备共享的目录，10.140.133.23、*、 linux-client是被允许挂接此共享linux客户机的IP地址或主机名。如果要使用主机名linux-client必须在服务端主机 /etc/hosts文件里增加linux-client主机ip定义。格式如下：</span></span><br><span class="line">10.140.133.23 linux-client</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动与停止NFS服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/etc/rc.d/init.d/portmap start (在REDHAT中PORTMAP是默认启动的)</span><br><span class="line">/etc/rc.d/init.d/nfs start 启动NFS服务</span><br><span class="line">/etc/rc.d/init.d/nfs stop 停止NFS服务</span><br><span class="line"><span class="comment"># 注：若修改/etc/export文件增加新的共享，应先停止NFS服务，再启动NFS服务方能使新增加的共享起作用。使用命令exportfs -rv也可以达到同样的效果。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>linux客户端挂接(mount)其他linux系统或UNIX系统的NFS共享</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir –p /mnt/nfs</span><br><span class="line"><span class="comment"># 注：建立一个目录用来作挂接点(mount point)</span></span><br><span class="line">$ mount -t nfs -o rw 10.140.133.9:/<span class="built_in">export</span>/home/sunky /mnt/nfs</span><br><span class="line"><span class="comment"># 注：这里我们假设10.140.133.9是NFS服务端的主机IP地址，当然这里也可以使用主机名，但必须在本机/etc/hosts文件里增加服务端ip定义。/export/home/sunky为服务端共享的目录。</span></span><br><span class="line">如此就可以在linux客户端通过/mnt/nfs来访问其它linux系统或UNIX系统以NFS方式共享出来的文件了。以上操作在 redhat as server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>redflag server4.1、suse server 9以及Solaris 7、Solaris 8、Solaris 9 for x86&amp;sparc环境下测试通过</p>
+</li>
+</ol>
+<h1 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h1><p>linux加载光驱<br>（1）使用光驱前，要先mount一下：＃mount /dev/cdrom /mnt/cdrom，然后您就可以进入/mnt/cdrom目录下读取光盘内容了；</p>
+<p>（2）当您想退出光盘时，须使用umout命令，否则光驱就会一直处于死锁状态：＃umount /mnt/cdrom。</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/Dockerfile VOLUME 和 -v 的区别/" rel="next" title="Dockerfile VOLUME 和 -v 的区别">
+                <i class="fa fa-chevron-left"></i> Dockerfile VOLUME 和 -v 的区别
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/用docker搭建laravel环境 (Docker for the Laravel framework)/" rel="prev" title="用docker搭建laravel环境 (Docker for the Laravel framework)">
+                用docker搭建laravel环境 (Docker for the Laravel framework) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/linux mount命令的用法详细解析/"
+           data-title="linux mount命令的用法详细解析" data-url="http://elickzhao.github.io/2016/04/linux mount命令的用法详细解析/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/image/touxiang.jpg"
+               alt="elickzhao" />
+          <p class="site-author-name" itemprop="name">elickzhao</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">63</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://elickzhao.github.io/" target="_blank" title="LinkLabel">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  LinkLabel
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/elickzhao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="2004015545" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接命令-mount"><span class="nav-number">1.</span> <span class="nav-text">挂接命令(mount)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接光盘镜像文件"><span class="nav-number">2.</span> <span class="nav-text">挂接光盘镜像文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接移动硬盘"><span class="nav-number">3.</span> <span class="nav-text">挂接移动硬盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接U盘"><span class="nav-number">4.</span> <span class="nav-text">挂接U盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接Windows文件共享"><span class="nav-number">5.</span> <span class="nav-text">挂接Windows文件共享</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挂接UNIX系统NFS文件共享"><span class="nav-number">6.</span> <span class="nav-text">挂接UNIX系统NFS文件共享</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补充："><span class="nav-number">7.</span> <span class="nav-text">补充：</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">elickzhao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"elickblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+
+</body>
+</html>

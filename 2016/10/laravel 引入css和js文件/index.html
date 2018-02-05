@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php,laravel," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="前言  一般情况下是不会有问题的,类似这样 bootstrap/css/bootstrap.min.css 或者 /bootstrap/css/bootstrap.min.css,当网站使用域名的时候后者不会出错,可是当使用本地测试时,是在http://localhost/Admin/public/admin/这样一个路径,就会出现加载位置出错. 说明  解决方法有几个 (没办法只能这么写,双括号">
+<meta name="keywords" content="php,laravel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel 引入css和js文件">
+<meta property="og:url" content="http://elickzhao.github.io/2016/10/laravel 引入css和js文件/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="前言  一般情况下是不会有问题的,类似这样 bootstrap/css/bootstrap.min.css 或者 /bootstrap/css/bootstrap.min.css,当网站使用域名的时候后者不会出错,可是当使用本地测试时,是在http://localhost/Admin/public/admin/这样一个路径,就会出现加载位置出错. 说明  解决方法有几个 (没办法只能这么写,双括号">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="laravel 引入css和js文件">
+<meta name="twitter:description" content="前言  一般情况下是不会有问题的,类似这样 bootstrap/css/bootstrap.min.css 或者 /bootstrap/css/bootstrap.min.css,当网站使用域名的时候后者不会出错,可是当使用本地测试时,是在http://localhost/Admin/public/admin/这样一个路径,就会出现加载位置出错. 说明  解决方法有几个 (没办法只能这么写,双括号">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> laravel 引入css和js文件 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,190 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                laravel 引入css和js文件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-13T18:52:50+08:00" content="2016-10-13">
+              2016-10-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/php开发/" itemprop="url" rel="index">
+                    <span itemprop="name">php开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/laravel 引入css和js文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/laravel 引入css和js文件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  一般情况下是不会有问题的,类似这样 <code>bootstrap/css/bootstrap.min.css</code> 或者 <code>/bootstrap/css/bootstrap.min.css</code>,当网站使用域名的时候后者不会出错,可是当使用本地测试时,是在<code>http://localhost/Admin/public/admin/</code>这样一个路径,就会出现加载位置出错.</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  解决方法有几个 (没办法只能这么写,双括号 和 hexo冲突)</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## .env文件加入`APP_URL`参数 在模版里读取 env('APP_URL')</span></span><br><span class="line">&#123;&#123; env(<span class="string">'APP_URL'</span>) &#125;&#125;<span class="string">"/libs/font-awesome/4.5.0/css/font-awesome.min.css"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 使用帮助函数 `asset()` 这个应该算是比较正统做法 但有个问题不知道在域名下是否正确,我没测试过</span></span><br><span class="line">&#123;&#123; asset(<span class="string">'/bootstrap/css/bootstrap.min.css'</span>) &#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">## 还有他原本的形式是这样的</span></span><br><span class="line">&#123;&#123; URL::asset(<span class="string">'//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'</span>) &#125;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 还有个一个HtmlBuilder 这个需要安装 `composer require illuminate/html 5.*` 然后这么使用</span></span><br><span class="line">&#123;!!Html::style(<span class="string">'css/style.css'</span>)!!&#125;</span><br><span class="line">&#123;!!Html::script(<span class="string">'js/script.js'</span>)!!&#125;</span><br><span class="line"><span class="comment">## 这挺好不用自己写那么一长串了,这个5.1里我有,5.2还没有整理</span></span><br></pre></td></tr></table></figure>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://wenda.golaravel.com/question/828" target="_blank" rel="noopener">Laravel5如何在*.blade.php引用css/js文件</a><br><a href="http://www.cnblogs.com/ziyouchutuwenwu/p/4269715.html" target="_blank" rel="noopener">laravel加载js和css等资源</a><br><a href="http://laravelacademy.org/post/3672.html" target="_blank" rel="noopener">Laravel 5 中使用 HtmlBuilder 及 URL::asset() 引入站内或站外的 css 和 js 文件</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+            <a href="/tags/laravel/" rel="tag">#laravel</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/解决 Gravatar 被墙导致无法显示的问题/" rel="next" title="解决 Gravatar 被墙导致无法显示的问题">
+                <i class="fa fa-chevron-left"></i> 解决 Gravatar 被墙导致无法显示的问题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/vue.js 中国好教程/" rel="prev" title="vue.js 中国好教程">
+                vue.js 中国好教程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +455,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/10/laravel 引入css和js文件/"
+           data-title="laravel 引入css和js文件" data-url="http://elickzhao.github.io/2016/10/laravel 引入css和js文件/">
       </div>
     
   </div>
@@ -312,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +576,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">3.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +690,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,小百科,css," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="简单说明float原来一直以为float是平面的,浮动就是左右偏移在平面上运动,其实是错的,浮动是立体的,记得用火狐浏览器的debug工具,有一项就是能看到立体的样子.所以当设置浮动后,这个层的宽高就不在瘦父层级的限制了,因为他是立体的,他实际是飘在父层级上.所以需要清浮动才可以让他继续接受父层级的控制,这里就需要overflow:hidden overflow:hidden所以说 overflo">
+<meta name="keywords" content="前端,小百科,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS的float正确理解及overflowhidden 属性详细解释">
+<meta property="og:url" content="http://elickzhao.github.io/2016/07/CSS的float正确理解及overflowhidden 属性详细解释/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="简单说明float原来一直以为float是平面的,浮动就是左右偏移在平面上运动,其实是错的,浮动是立体的,记得用火狐浏览器的debug工具,有一项就是能看到立体的样子.所以当设置浮动后,这个层的宽高就不在瘦父层级的限制了,因为他是立体的,他实际是飘在父层级上.所以需要清浮动才可以让他继续接受父层级的控制,这里就需要overflow:hidden overflow:hidden所以说 overflo">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="CSS的float正确理解及overflowhidden 属性详细解释">
+<meta name="twitter:description" content="简单说明float原来一直以为float是平面的,浮动就是左右偏移在平面上运动,其实是错的,浮动是立体的,记得用火狐浏览器的debug工具,有一项就是能看到立体的样子.所以当设置浮动后,这个层的宽高就不在瘦父层级的限制了,因为他是立体的,他实际是飘在父层级上.所以需要清浮动才可以让他继续接受父层级的控制,这里就需要overflow:hidden overflow:hidden所以说 overflo">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> CSS的float正确理解及overflowhidden 属性详细解释 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,191 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS的float正确理解及overflowhidden 属性详细解释
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-03T19:01:18+08:00" content="2016-07-03">
+              2016-07-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/CSS的float正确理解及overflowhidden 属性详细解释/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/CSS的float正确理解及overflowhidden 属性详细解释/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p><strong>float</strong><br>原来一直以为float是平面的,浮动就是左右偏移在平面上运动,其实是错的,浮动是立体的,<br>记得用火狐浏览器的debug工具,有一项就是能看到立体的样子.<br>所以当设置浮动后,这个层的宽高就不在瘦父层级的限制了,因为他是立体的,他实际是飘在父层级上.<br>所以需要清浮动才可以让他继续接受父层级的控制,这里就需要<code>overflow:hidden</code></p>
+<p><strong>overflow:hidden</strong><br>所以说 <code>overflow:hidden</code> 并不是我们原以为的简单只是把多出的内容隐藏,他还有个引申的功能就是清理浮动<br>所以当你使用float的时候一定要加上这个,要不然容易造成margin的偏移,或者使用padding解决这个问题.或者是子层级不受控制超出了父层级.</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://jingyan.baidu.com/article/d45ad148e2a7f969552b80ae.html" target="_blank" rel="noopener">CSS 的overflow:hidden 属性详细解释</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/小百科/" rel="tag">#小百科</a>
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/js一些隐式写法 !0 !!0 viod 0/" rel="next" title="js一些隐式写法 !0 !!0 viod 0">
+                <i class="fa fa-chevron-left"></i> js一些隐式写法 !0 !!0 viod 0
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/laravel Middleware中间件解析/" rel="prev" title="laravel Middleware中间件解析">
+                laravel Middleware中间件解析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +456,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/07/CSS的float正确理解及overflowhidden 属性详细解释/"
+           data-title="CSS的float正确理解及overflowhidden 属性详细解释" data-url="http://elickzhao.github.io/2016/07/CSS的float正确理解及overflowhidden 属性详细解释/">
       </div>
     
   </div>
@@ -312,8 +481,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +577,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单说明"><span class="nav-number">1.</span> <span class="nav-text">简单说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">2.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +691,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -1,0 +1,863 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|SourceCodePro-Bold:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="php,IDE," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="elickzhao's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="使用在用IDE开发的时候,验证php代码的错误和标准格式化. 这是遇到了几个插件.在用VSCode的时候安装了 php-cs-fixer这个配置很简单只要用 composer 安装  php-cs-fixer  然后配置 php.exe 的位置就可以使用了  在使用 sublime 的时候 安装了 phpcs 和 phpmd安装也是用 composer 这个配置就繁琐点了  配置如下">
+<meta name="keywords" content="php,IDE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php格式化插件 phpcs php-cs-fixer phpmd">
+<meta property="og:url" content="http://elickzhao.github.io/2017/12/php格式化插件 phpcs php-cs-fixer phpmd/index.html">
+<meta property="og:site_name" content="elickzhao&#39;s Blog">
+<meta property="og:description" content="使用在用IDE开发的时候,验证php代码的错误和标准格式化. 这是遇到了几个插件.在用VSCode的时候安装了 php-cs-fixer这个配置很简单只要用 composer 安装  php-cs-fixer  然后配置 php.exe 的位置就可以使用了  在使用 sublime 的时候 安装了 phpcs 和 phpmd安装也是用 composer 这个配置就繁琐点了  配置如下">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php格式化插件 phpcs php-cs-fixer phpmd">
+<meta name="twitter:description" content="使用在用IDE开发的时候,验证php代码的错误和标准格式化. 这是遇到了几个插件.在用VSCode的时候安装了 php-cs-fixer这个配置很简单只要用 composer 安装  php-cs-fixer  然后配置 php.exe 的位置就可以使用了  在使用 sublime 的时候 安装了 phpcs 和 phpmd安装也是用 composer 这个配置就繁琐点了  配置如下">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6231321221577836000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> php格式化插件 phpcs php-cs-fixer phpmd | elickzhao's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">elickzhao's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">与其临渊羡鱼 不如退而结网!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                php格式化插件 phpcs php-cs-fixer phpmd
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-26T19:46:03+08:00" content="2017-12-26">
+              2017-12-26
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/12/php格式化插件 phpcs php-cs-fixer phpmd/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/php格式化插件 phpcs php-cs-fixer phpmd/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在用IDE开发的时候,验证php代码的错误和标准格式化.</p>
+<p>这是遇到了几个插件.在用VSCode的时候安装了 <code>php-cs-fixer</code><br>这个配置很简单只要用 <code>composer</code> 安装  <code>php-cs-fixer</code>  然后配置 php.exe 的位置就可以使用了 </p>
+<p>在使用 <code>sublime</code> 的时候 安装了 <code>phpcs</code> 和 <code>phpmd</code><br>安装也是用 <code>composer</code> 这个配置就繁琐点了  配置如下</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // Plugin settings</span><br><span class="line"></span><br><span class="line">    // Turn the debug output on/off</span><br><span class="line">    &quot;show_debug&quot;: false,</span><br><span class="line"></span><br><span class="line">    // Which file types (file extensions), do you want the plugin to</span><br><span class="line">    // execute for</span><br><span class="line">    &quot;extensions_to_execute&quot;: [&quot;php&quot;],</span><br><span class="line"></span><br><span class="line">    // Do we need to blacklist any sub extensions from extensions_to_execute</span><br><span class="line">    // An example would be [&quot;twig.php&quot;]</span><br><span class="line">    &quot;extensions_to_blacklist&quot;: [],</span><br><span class="line"></span><br><span class="line">    // Execute the sniffer on file save</span><br><span class="line">    &quot;phpcs_execute_on_save&quot;: true,</span><br><span class="line"></span><br><span class="line">    // Show the error list after save.</span><br><span class="line">    &quot;phpcs_show_errors_on_save&quot;: true,</span><br><span class="line"></span><br><span class="line">    // Show the errors in the gutter</span><br><span class="line">    &quot;phpcs_show_gutter_marks&quot;: true,</span><br><span class="line"></span><br><span class="line">    // Show outline for errors</span><br><span class="line">    &quot;phpcs_outline_for_errors&quot;: true,</span><br><span class="line"></span><br><span class="line">    // Show the errors in the status bar</span><br><span class="line">    &quot;phpcs_show_errors_in_status&quot;: true,</span><br><span class="line"></span><br><span class="line">    // Show the errors in the quick panel so you can then goto line</span><br><span class="line">    &quot;phpcs_show_quick_panel&quot;: true,</span><br><span class="line"></span><br><span class="line">    // The path to the php executable.</span><br><span class="line">    // Needed for windows, or anyone who doesn&apos;t/can&apos;t make phars</span><br><span class="line">    // executable. Avoid setting this if at all possible</span><br><span class="line">    &quot;phpcs_php_prefix_path&quot;: &quot;F:\\phpStudy\\php\\php-7.1.12-nts\\php.exe&quot;,</span><br><span class="line"></span><br><span class="line">    // Options include:</span><br><span class="line">    // - Sniffer</span><br><span class="line">    // - Fixer</span><br><span class="line">    // - MessDetector</span><br><span class="line">    // - CodeBeautifier</span><br><span class="line">    //</span><br><span class="line">    // This will prepend the application with the path to php</span><br><span class="line">    // Needed for windows, or anyone who doesn&apos;t/can&apos;t make phars</span><br><span class="line">    // executable. Avoid setting this if at all possible</span><br><span class="line">    &quot;phpcs_commands_to_php_prefix&quot;: [],</span><br><span class="line"></span><br><span class="line">    // What color to stylise the icon</span><br><span class="line">    // https://www.sublimetext.com/docs/3/api_reference.html#sublime.View</span><br><span class="line">    // add_regions</span><br><span class="line">    &quot;phpcs_icon_scope_color&quot;: &quot;comment&quot;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // PHP_CodeSniffer settings</span><br><span class="line"></span><br><span class="line">    // Do you want to run the phpcs checker?</span><br><span class="line">    &quot;phpcs_sniffer_run&quot;: true,</span><br><span class="line"></span><br><span class="line">    // Execute the sniffer on file save</span><br><span class="line">    &quot;phpcs_command_on_save&quot;: true,</span><br><span class="line"></span><br><span class="line">    // It seems python/sublime cannot always find the phpcs application</span><br><span class="line">    // If empty, then use PATH version of phpcs, else use the set value</span><br><span class="line">    &quot;phpcs_executable_path&quot;: &quot;C:\\Users\\elick\\AppData\\Roaming\\Composer\\vendor\\bin\\phpcs.bat&quot;,</span><br><span class="line"></span><br><span class="line">    // Additional arguments you can specify into the application</span><br><span class="line">    //</span><br><span class="line">    // Example:</span><br><span class="line">    // &#123;</span><br><span class="line">    //     &quot;--standard&quot;: &quot;PEAR&quot;,</span><br><span class="line">    //     &quot;-n&quot;</span><br><span class="line">    // &#125;</span><br><span class="line">    &quot;phpcs_additional_args&quot;: &#123;</span><br><span class="line">        &quot;--standard&quot;: &quot;PSR2&quot;,</span><br><span class="line">        &quot;-n&quot;: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // PHP-CS-Fixer settings</span><br><span class="line"></span><br><span class="line">    // Fix the issues on save</span><br><span class="line">    &quot;php_cs_fixer_on_save&quot;: false,</span><br><span class="line"></span><br><span class="line">    // Show the quick panel</span><br><span class="line">    &quot;php_cs_fixer_show_quick_panel&quot;: false,</span><br><span class="line"></span><br><span class="line">    // Path to where you have the php-cs-fixer installed</span><br><span class="line">    &quot;php_cs_fixer_executable_path&quot;: &quot;C:\\Users\\elick\\AppData\\Roaming\\Composer\\vendor\\bin\\php-cs-fixer.bat&quot;,</span><br><span class="line"></span><br><span class="line">    // Additional arguments you can specify into the application</span><br><span class="line">    &quot;php_cs_fixer_additional_args&quot;: &#123;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // phpcbf settings</span><br><span class="line"></span><br><span class="line">    // Fix the issues on save</span><br><span class="line">    &quot;phpcbf_on_save&quot;: false,</span><br><span class="line"></span><br><span class="line">    // Show the quick panel</span><br><span class="line">    &quot;phpcbf_show_quick_panel&quot;: false,</span><br><span class="line"></span><br><span class="line">    // Path to where you have the phpcbf installed</span><br><span class="line">    &quot;phpcbf_executable_path&quot;: &quot;&quot;phpcbf_executable_path&quot;: &quot;C:\\Users\\elick\\AppData\\Roaming\\Composer\\vendor\\bin\phpcbf.bat&quot;,</span><br><span class="line"></span><br><span class="line">    // Additional arguments you can specify into the application</span><br><span class="line">    //</span><br><span class="line">    // Example:</span><br><span class="line">    // &#123;</span><br><span class="line">    //     &quot;--level&quot;: &quot;all&quot;</span><br><span class="line">    // &#125;</span><br><span class="line">    &quot;phpcbf_additional_args&quot;: &#123;</span><br><span class="line">        &quot;--standard&quot;: &quot;PSR2&quot;,</span><br><span class="line">        &quot;-n&quot;: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // PHP Linter settings</span><br><span class="line"></span><br><span class="line">    // Are we going to run php -l over the file?</span><br><span class="line">    &quot;phpcs_linter_run&quot;: true,</span><br><span class="line"></span><br><span class="line">    // Execute the linter on file save</span><br><span class="line">    &quot;phpcs_linter_command_on_save&quot;: true,</span><br><span class="line"></span><br><span class="line">    // It seems python/sublime cannot always find the php application</span><br><span class="line">    // If empty, then use PATH version of php, else use the set value</span><br><span class="line">    &quot;phpcs_php_path&quot;: &quot;F:\\phpStudy\\php\\php-7.1.12-nts\\php.exe&quot;,</span><br><span class="line"></span><br><span class="line">    // What is the regex for the linter? Has to provide a named match for &apos;message&apos; and &apos;line&apos;</span><br><span class="line">    &quot;phpcs_linter_regex&quot;: &quot;(?P&lt;message&gt;.*) on line (?P&lt;line&gt;\\d+)&quot;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // PHP Mess Detector settings</span><br><span class="line"></span><br><span class="line">    // Execute phpmd</span><br><span class="line">    &quot;phpmd_run&quot;: false,</span><br><span class="line"></span><br><span class="line">    // Execute the phpmd on file save</span><br><span class="line">    &quot;phpmd_command_on_save&quot;: true,</span><br><span class="line"></span><br><span class="line">    // It seems python/sublime cannot always find the phpmd application</span><br><span class="line">    // If empty, then use PATH version of phpmd, else use the set value</span><br><span class="line">    &quot;phpmd_executable_path&quot;: &quot;C:\\Users\\elick\\AppData\\Roaming\\Composer\\vendor\\bin\\phpmd.bat&quot;,</span><br><span class="line"></span><br><span class="line">    // Additional arguments you can specify into the application</span><br><span class="line">    //</span><br><span class="line">    // Example:</span><br><span class="line">    // &#123;</span><br><span class="line">    //     &quot;codesize,unusedcode&quot;</span><br><span class="line">    // &#125;</span><br><span class="line">    &quot;phpmd_additional_args&quot;: &#123;</span><br><span class="line">        &quot;codesize,unusedcode,naming&quot;: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // PHP Scheck settings</span><br><span class="line"></span><br><span class="line">    // Execute scheck</span><br><span class="line">    &quot;scheck_run&quot;: false,</span><br><span class="line"></span><br><span class="line">    // Execute the scheck on file save</span><br><span class="line">    &quot;scheck_command_on_save&quot;: false,</span><br><span class="line"></span><br><span class="line">    // It seems python/sublime cannot always find the scheck application</span><br><span class="line">    // If empty, then use PATH version of scheck, else use the set value</span><br><span class="line">    &quot;scheck_executable_path&quot;: &quot;&quot;,</span><br><span class="line"></span><br><span class="line">    // Additional arguments you can specify into the application</span><br><span class="line">    //</span><br><span class="line">    //Example:</span><br><span class="line">    //&#123;</span><br><span class="line">    //  &quot;-php_stdlib&quot; : &quot;/path/to/pfff&quot;,</span><br><span class="line">    //  &quot;-strict&quot; : &quot;&quot;</span><br><span class="line">    //&#125;</span><br><span class="line">    &quot;scheck_additional_args&quot;: &#123;</span><br><span class="line">        &quot;-strict&quot; : &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>说一下 <code>phpcs</code> <code>php-cs-fixer</code> <code>phpmd</code> 都是干什么用的</p>
+<p><strong>phpcs :</strong>该包的作用是用指定的代码规范（默认使用PEAR规范，可指定使用PSR1，PSR2或自己制定的规范）来检查代码是否符合规范</p>
+<p><strong>phpcbf :</strong> phpcs自带了PHP Code Beautifier（phpcbf）用来修复不规范的代码 等同于 <code>php-cs-fixer</code></p>
+<p><strong>php-cs-fixer :</strong> 修复不规范代码 作用等同于 <code>phpcbf</code> 只不过规则好像稍有区别</p>
+<p><strong>phpmd :</strong>  提示潜在的BUG, 有待改进的代码（比如过短变量名长度等）, 过于复杂的表达式, 定义但未使用的变量、方法、属性）, 使用未定义的变量</p>
+<p><strong>sublime-phpcs :</strong> sublime-phpcs 插件中各种功能（错误提示，代码格式化) 提供了把这些功能包在sublime中使用的界面。</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://blog.csdn.net/cyaspnet/article/details/51773331" target="_blank" rel="noopener">PHP代码规范与质量检查工具PHPCS,PHPMD的安装与配置</a><br><a href="http://blog.csdn.net/he426100/article/details/76573038" target="_blank" rel="noopener">sublime安装PHPcs（PHPcodesniffer）代码规范提示插件</a><br><a href="http://www.uedbox.com/macos-install-sublime-phpcs/" target="_blank" rel="noopener">MacOS Sublime Text 3 安装使用 sublime-phpcs 插件指南</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+            <a href="/tags/IDE/" rel="tag">#IDE</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/小程序本地存储实例/" rel="next" title="小程序本地存储实例">
+                <i class="fa fa-chevron-left"></i> 小程序本地存储实例
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/sublime text 插件 PlainTasks 任务计划/" rel="prev" title="sublime text 插件 PlainTasks 任务计划">
+                sublime text 插件 PlainTasks 任务计划 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/12/php格式化插件 phpcs php-cs-fixer phpmd/"
+           data-title="php格式化插件 phpcs php-cs-fixer phpmd" data-url="http://elickzhao.github.io/2017/12/php格式化插件 phpcs php-cs-fixer phpmd/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/image/touxiang.jpg"
+               alt="elickzhao" />
+          <p class="site-author-name" itemprop="name">elickzhao</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">63</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://elickzhao.github.io/" target="_blank" title="LinkLabel">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  LinkLabel
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/elickzhao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="2004015545" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">1.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">3.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">elickzhao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"elickblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+
+</body>
+</html>

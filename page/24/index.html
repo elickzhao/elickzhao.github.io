@@ -88,17 +88,13 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta property="og:url" content="http://elickzhao.github.io/page/24/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
 
 
 
@@ -116,13 +112,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +133,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -263,21 +255,567 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div id="posts" class="posts-expand">
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/jQuery Easing 简单讲解/" itemprop="url">
+                  jQuery Easing 简单讲解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-08T22:58:30+08:00" content="2017-01-08">
+              2017-01-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/jQuery Easing 简单讲解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/jQuery Easing 简单讲解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>( ′◔ ‸◔`) 以前看过这个,不过时间长了,就记不清了. easing就是模拟物理动作模型.从图片来看就更清楚了.<br><a href="http://www.runoob.com/jqueryui/api-easings.html" target="_blank" rel="noopener">http://www.runoob.com/jqueryui/api-easings.html</a>在这里能看到,每个动作的演示,点击每个图片就能看到了</p>
+<p><img src="http://www.gbin1.com/technology/javascript/20121017-js-css-easing-websites/1.jpg" alt=""></p>
+<p>easing参数可选的值就有以下32种：</p>
+<ol>
+<li>linear</li>
+<li>swing</li>
+<li>easeInQuad</li>
+<li>easeOutQuad</li>
+<li>easeInOutQuad</li>
+<li>easeInCubic</li>
+<li>easeOutCubic</li>
+<li>easeInOutCubic</li>
+<li>easeInQuart</li>
+<li>easeOutQuart</li>
+<li>easeInOutQuart</li>
+<li>easeInQuint</li>
+<li>easeOutQuint</li>
+<li>easeInOutQuint</li>
+<li>easeInExpo</li>
+<li>easeOutExpo</li>
+<li>easeInOutExpo</li>
+<li>easeInSine</li>
+<li>easeOutSine</li>
+<li>easeInOutSine</li>
+<li>easeInCirc</li>
+<li>easeOutCirc</li>
+<li>easeInOutCirc</li>
+<li>easeInElastic</li>
+<li>easeOutElastic</li>
+<li>easeInOutElastic</li>
+<li>easeInBack</li>
+<li>easeOutBack</li>
+<li>easeInOutBack</li>
+<li>easeInBounce</li>
+<li>easeOutBounce</li>
+<li>easeInOutBounce</li>
+</ol>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://blog.sina.com.cn/s/blog_70a3539f0102v8az.html" target="_blank" rel="noopener">jQuery Easing 使用方法及其图解 </a><br><a href="http://api.jqueryui.com/easings/" target="_blank" rel="noopener">官网动作演示</a><br><a href="http://www.gbin1.com/technology/javascript/20121017-js-css-easing-websites/" target="_blank" rel="noopener">帮助你更好理解javascript中easing功能的网站 - Easings.net</a><br><a href="http://www.runoob.com/jqueryui/api-easings.html" target="_blank" rel="noopener">jQuery UI API - Easings</a></p>
+
+          
+        
+      
+    </div>
     
-  </div>
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/Nginx服务器端解决font字体文件跨域/" itemprop="url">
+                  Nginx服务器端解决font字体文件跨域
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-07T22:32:45+08:00" content="2017-01-07">
+              2017-01-07
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/Nginx服务器端解决font字体文件跨域/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/Nginx服务器端解决font字体文件跨域/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://blog.sina.com.cn/s/blog_6ad624380102vlp0.html" target="_blank" rel="noopener">Nginx服务器端解决font字体文件跨域</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/Atom插件推荐/" itemprop="url">
+                  Atom插件推荐
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-06T22:48:56+08:00" content="2017-01-06">
+              2017-01-06
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/Atom插件推荐/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/Atom插件推荐/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>下面的文章都有具体介绍了,就不一一写了,感觉比较常用或者比较易忘的记录一下.</p>
+<p><strong>sync-settings</strong><br>插件备份、按键绑定备份<br><a href="https://atom.io/packages/sync-settings" target="_blank" rel="noopener">插件主页面</a><br>安装主页已经写了,最核心的是需要注册一个gist用于同步的仓库,这个在Github主页里能找到,gist好像是一个用于文本同步的东西.<br>这个是安装时的难点,使用就很简单了,把名字写上后,每次打开atom都会同步插件的.</p>
+<blockquote>
+<p>今天在另一个电脑上安装了,看来还是的记录下才行,没想象中那么容易</p>
+</blockquote>
+<p><strong>安装</strong><br>只需要填入 Personal Access Token 和 Gist ID 就可以了<br>Personal Access Token : <code>91c2f32691fee3e264df51417a3a8f40f7d7850b</code><br>Gist ID  : <code>b65042216cbcb67891be5dbcc34c0edf</code></p>
+<p><strong>使用</strong><br>这里差点弄错.<br>如果是备份的话,就点扩展包里菜单的 <code>sync-settings:backup</code><br>恢复就用扩展包里菜单的 <code>sync-settings:restore</code></p>
+<p>所以在新装电脑中点 <code>sync-settings:restore</code> 就能同步了,千万不要点 <code>sync-settings:backup</code></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://blog.csdn.net/zsl10/article/details/51822715" target="_blank" rel="noopener">ATOM基础教程一ATOM插件推荐(4)</a><br><a href="http://blog.csdn.net/column/details/atom-tutorial.html" target="_blank" rel="noopener">Atom 基础教程</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/HTTP访问控制(CORS)/" itemprop="url">
+                  HTTP访问控制(CORS)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-05T22:12:31+08:00" content="2017-01-05">
+              2017-01-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/HTTP访问控制(CORS)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/HTTP访问控制(CORS)/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.web-tinker.com/article/20961.html" target="_blank" rel="noopener">使用 Access-Control-Max-Age 来缓存 CORS 配置</a><br><a href="http://zawa.iteye.com/blog/1868108" target="_blank" rel="noopener">使用withCredentials发送跨域请求凭据</a><br><a href="http://www.tuicool.com/articles/7FVnMz" target="_blank" rel="noopener">Access-Control-Allow-Origin与跨域</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="noopener">HTTP访问控制(CORS)</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/Nginx下装laravel /" itemprop="url">
+                  nginx 下装laravel
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-04T23:14:51+08:00" content="2017-01-04">
+              2017-01-04
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/Nginx下装laravel /#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/Nginx下装laravel /" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>nginx 配置时 一定要做路由转换,因为laravel使用的是简洁版路由.apache因为在public目录里有 .htaccess所以不用管了, nginx就得自己配置了.</p>
+<p>把这句添加进去就哦了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    try_files $uri $uri/ /index.php?$query_string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://segmentfault.com/q/1010000002422408" target="_blank" rel="noopener">Laravel Nginx 除 / 外所有路由 404</a><br><a href="https://laravel.com/docs/5.0/installation#pretty-urls" target="_blank" rel="noopener">官方文档</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -285,14 +823,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
-      </div>
-    
-  </div>
-
 
         </div>
         

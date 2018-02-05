@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js," />
 
 
 
@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="今天遇到这个 !~id.indexOf(&amp;#39;category-detail&amp;#39;) 以前没碰到过,不是很理解.后来一查明白了,这是位移运算符. 运算符就是完成操作的一系列符号，它有七类：赋值运算符 =,+=,-=,*=,/=,%=,&amp;lt;&amp;lt;=,&amp;gt;&amp;gt;=,|=,&amp;amp;=、算术运算符 +,-,*,/,++,--,%、比较运算符 &amp;gt;,&amp;lt;,&amp;lt;=,&amp;gt;=">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中的 ~ 运算符">
+<meta property="og:url" content="http://elickzhao.github.io/2016/12/js中的 ~ 运算符/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="今天遇到这个 !~id.indexOf(&amp;#39;category-detail&amp;#39;) 以前没碰到过,不是很理解.后来一查明白了,这是位移运算符. 运算符就是完成操作的一系列符号，它有七类：赋值运算符 =,+=,-=,*=,/=,%=,&amp;lt;&amp;lt;=,&amp;gt;&amp;gt;=,|=,&amp;amp;=、算术运算符 +,-,*,/,++,--,%、比较运算符 &amp;gt;,&amp;lt;,&amp;lt;=,&amp;gt;=">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="js中的 ~ 运算符">
+<meta name="twitter:description" content="今天遇到这个 !~id.indexOf(&amp;#39;category-detail&amp;#39;) 以前没碰到过,不是很理解.后来一查明白了,这是位移运算符. 运算符就是完成操作的一系列符号，它有七类：赋值运算符 =,+=,-=,*=,/=,%=,&amp;lt;&amp;lt;=,&amp;gt;&amp;gt;=,|=,&amp;amp;=、算术运算符 +,-,*,/,++,--,%、比较运算符 &amp;gt;,&amp;lt;,&amp;lt;=,&amp;gt;=">
 
 
 
@@ -116,13 +117,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> js中的 ~ 运算符 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +261,169 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                js中的 ~ 运算符
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-11T22:31:54+08:00" content="2016-12-11">
+              2016-12-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/js中的 ~ 运算符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/js中的 ~ 运算符/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天遇到这个 <code>!~id.indexOf(&#39;category-detail&#39;)</code> 以前没碰到过,不是很理解.后来一查明白了,这是位移运算符.</p>
+<p><strong>运算符就是完成操作的一系列符号，它有七类</strong>：<br>赋值运算符 <code>=,+=,-=,*=,/=,%=,&lt;&lt;=,&gt;&gt;=,|=,&amp;=</code>、<br>算术运算符 <code>+,-,*,/,++,--,%</code>、<br>比较运算符 <code>&gt;,&lt;,&lt;=,&gt;=,==,===,!=,!==</code>、<br>逻辑运算符 <code>||,&amp;&amp;,!</code>、<br>条件运算   <code>?:</code>、<br>位移运算符 <code>|,&amp;,&lt;&lt;,&gt;&gt;,~,^</code><br>字符串运算符 <code>+</code>。</p>
+<p>看下面例子更容易理解些,就不用多解释了</p>
+<iframe width="100%" height="380" src="http://code.hcharts.cn/test123/dMe0in/share/result,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag">#js</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/Windows 系统下设置Nodejs NPM全局路径/" rel="next" title="Windows 系统下设置Nodejs NPM全局路径">
+                <i class="fa fa-chevron-left"></i> Windows 系统下设置Nodejs NPM全局路径
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/vue + webpack 学习简介/" rel="prev" title="vue + webpack 学习简介">
+                vue + webpack 学习简介 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +434,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/12/js中的 ~ 运算符/"
+           data-title="js中的 ~ 运算符" data-url="http://elickzhao.github.io/2016/12/js中的 ~ 运算符/">
       </div>
     
   </div>
@@ -312,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +555,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +669,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

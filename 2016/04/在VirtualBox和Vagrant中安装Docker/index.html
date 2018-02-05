@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="服务器相关技术,linux,vagrant," />
 
 
 
@@ -88,17 +88,20 @@
 
 
 
-<meta name="description" content="404 | HelloDog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="elickzhao&#39;s Blog">
-<meta property="og:url" content="http://elickzhao.github.io/404.html">
+<meta name="description" content="参考文章在VirtualBox和Vagrant中安装DockerOSX下使用vagrant和docker管理创建虚拟环境Vagrant简介和安装配置使用 Vagrant 搭建本地开发环境的教程使用 Vagrant 和 Docker 在一个 VM 中进行开发1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境Vagrant运行Docker的几种方法vagrant在windows下的使">
+<meta name="keywords" content="服务器相关技术,linux,vagrant">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在VirtualBox和Vagrant中安装Docker">
+<meta property="og:url" content="http://elickzhao.github.io/2016/04/在VirtualBox和Vagrant中安装Docker/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="404 | HelloDog">
+<meta property="og:description" content="参考文章在VirtualBox和Vagrant中安装DockerOSX下使用vagrant和docker管理创建虚拟环境Vagrant简介和安装配置使用 Vagrant 搭建本地开发环境的教程使用 Vagrant 和 Docker 在一个 VM 中进行开发1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境Vagrant运行Docker的几种方法vagrant在windows下的使">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://elickzhao.github.io/image/16-4/1.png">
 <meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elickzhao&#39;s Blog">
-<meta name="twitter:description" content="404 | HelloDog">
+<meta name="twitter:title" content="在VirtualBox和Vagrant中安装Docker">
+<meta name="twitter:description" content="参考文章在VirtualBox和Vagrant中安装DockerOSX下使用vagrant和docker管理创建虚拟环境Vagrant简介和安装配置使用 Vagrant 搭建本地开发环境的教程使用 Vagrant 和 Docker 在一个 VM 中进行开发1+1&amp;gt;2:用Docker和Vagrant构建简洁高效开发环境Vagrant运行Docker的几种方法vagrant在windows下的使">
+<meta name="twitter:image" content="http://elickzhao.github.io/image/16-4/1.png">
 
 
 
@@ -116,13 +119,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-     | elickzhao's Blog
-  
-</title>
+  <title> 在VirtualBox和Vagrant中安装Docker | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,17 +263,204 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <html>
-<head>
-<meta charset="UTF-8">
-<title>404 | HelloDog</title>                                                                                              
-</head>
-<body>
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
-</body>
-</html>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                在VirtualBox和Vagrant中安装Docker
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-14T01:18:48+08:00" content="2016-04-14">
+              2016-04-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/服务器端/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/在VirtualBox和Vagrant中安装Docker/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/在VirtualBox和Vagrant中安装Docker/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="http://www.jdon.com/artichect/docker-install.html" target="_blank" rel="noopener">在VirtualBox和Vagrant中安装Docker</a><br><a href="http://www.tuicool.com/articles/V36R3y" target="_blank" rel="noopener">OSX下使用vagrant和docker管理创建虚拟环境</a><br><a href="http://rmingwang.com/vagrant-commands-and-config.html" target="_blank" rel="noopener">Vagrant简介和安装配置</a><br><a href="http://ninghao.net/blog/1566" target="_blank" rel="noopener">使用 Vagrant 搭建本地开发环境的教程</a><br><a href="http://www.oschina.net/translate/unsuck-your-vagrant-developing-in-one-vm-with-vagrant-and-docker" target="_blank" rel="noopener">使用 Vagrant 和 Docker 在一个 VM 中进行开发</a><br><a href="http://cloud.51cto.com/art/201503/470256_all.htm" target="_blank" rel="noopener">1+1&gt;2:用Docker和Vagrant构建简洁高效开发环境</a><br><a href="http://blog.sina.com.cn/s/blog_72ef7bea0102vucz.html" target="_blank" rel="noopener">Vagrant运行Docker的几种方法</a><br><a href="http://www.cnblogs.com/ac1985482/p/4029315.html" target="_blank" rel="noopener">vagrant在windows下的使用</a><br><a href="http://www.blogjava.net/yongboy/archive/2013/08/26/403325.html" target="_blank" rel="noopener">服务器操作系统CoreOS初体验</a><br><a href="http://betacz.com/series/%E5%BD%93%E6%B5%81%E6%B5%AA%E8%80%85%28Vagrant%29%E9%81%87%E8%A7%81%E7%A0%81%E5%A4%B4%E5%B7%A5%E4%BA%BA%28Docker%29/" target="_blank" rel="noopener">‘当流浪者(Vagrant)遇见码头工人(Docker)’系列</a></p>
+<a id="more"></a>
+<h1 id="自我理解"><a href="#自我理解" class="headerlink" title="自我理解"></a>自我理解</h1><p>用boot2docker启动docker 容器一直会卡在 <code>default: Syncing folders to the host VM...</code> 看了下<a href="https://www.vagrantup.com/docs/docker/basics.html" target="_blank" rel="noopener">官方文档</a></p>
+<blockquote>
+<p>Synced folder note: Vagrant will attempt to use the “best” synced folder implementation it can. For boot2docker, this is often rsync. In this case, make sure you have rsync installed on your host machine. Vagrant will give you a human-friendly error message if it is not.</p>
+</blockquote>
+<p><del>这尿性是要安装一个rsync的同步软件 这鸟东西安装起来蛮麻烦的 而且基本用不到 所以不装了  毕竟就算是生产环境肯定用不到这个 linux版本 所以开发的时候还得装别的版本 以达到和生产环境同步 所以算了<br>直接搞个 CoreOS 这个试试吧 这个挺新的比较有趣</del><br>最后还是测试了rsync这个软件,因为使用CoreOS加载docker镜像 也会出现卡在同步文件夹那 所以看来问题不在boot2docker </p>
+<h1 id="得到升华"><a href="#得到升华" class="headerlink" title="得到升华"></a>得到升华</h1><p><strong>我找到个方法 可以解决这个问题 但是并不是十全十美的方法</strong><br>就是屏蔽同步文件夹<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.synced_folder <span class="string">"."</span>, <span class="string">"/vagrant"</span>, disabled: <span class="literal">true</span>  <span class="meta">#这一句就是</span></span><br><span class="line">  config.vm.provider <span class="string">"docker"</span> <span class="keyword">do</span> |d|</span><br><span class="line">    d.image = <span class="string">"tknerr/baseimage-ubuntu:14.04"</span></span><br><span class="line">    d.has_ssh = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">#这句是新加的</span></span><br><span class="line">    <span class="meta">#d.vagrant_machine = "dockerhost" </span></span><br><span class="line">   	<span class="meta">#d.vagrant_vagrantfile = "../coreos/Vagrantfile"</span></span><br><span class="line">    <span class="meta">#config.vm.box = "coreos-stable" </span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  config.vm.provision <span class="string">"shell"</span>, inline: <span class="string">"echo 'hello docker!'"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="惊喜发现"><a href="#惊喜发现" class="headerlink" title="惊喜发现"></a>惊喜发现</h2><p><strong>这个简直太省地方了:</strong> 利用boot2docker 加载 tknerr/baseimage-ubuntu:14.04 这个基础镜像 最后生成的虚拟机才有400M coreOS是900M多  而Homestead 已经是2.67G了<br><img src="/image/16-4/1.png" alt="hello"></p>
+<p>而且使用的box也非常省 boot2docker只有20M而已</p>
+<h2 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h2><p><strong>C:\Users\elick.vagrant.d</strong> 这是vagrant的根目录 最主要有两个目录</p>
+<ul>
+<li>boxes<br> 这个是存放box的目录,所有你下载的各种box都在这里 </li>
+<li>data<br> 这个是存放host的一些信息的地方<ul>
+<li>docker-host<br>  这个就是用docker,而没有加载box的时候 自动下载的boot2docker</li>
+<li>machine-index<br>  存着建立多少个host和host状态的信息 就是那个index 如果在virtualbox删除了host 这里还显示可以在这里手动删了</li>
+</ul>
+</li>
+</ul>
+<p><strong>C:\Users\elick\VirtualBox VMs</strong> 就是virtualbox存放虚拟机的位置</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/服务器相关技术/" rel="tag">#服务器相关技术</a>
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+            <a href="/tags/vagrant/" rel="tag">#vagrant</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/解决ln -s 软链接产生Too many levels of symbolic links错误/" rel="prev" title="解决ln -s 软链接产生Too many levels of symbolic links错误">
+                解决ln -s 软链接产生Too many levels of symbolic links错误 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -287,8 +471,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="404.html"
-           data-title="" data-url="http://elickzhao.github.io/404.html">
+      <div class="ds-thread" data-thread-key="2016/04/在VirtualBox和Vagrant中安装Docker/"
+           data-title="在VirtualBox和Vagrant中安装Docker" data-url="http://elickzhao.github.io/2016/04/在VirtualBox和Vagrant中安装Docker/">
       </div>
     
   </div>
@@ -312,8 +496,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/touxiang.jpg"
@@ -399,6 +592,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自我理解"><span class="nav-number">2.</span> <span class="nav-text">自我理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#得到升华"><span class="nav-number">3.</span> <span class="nav-text">得到升华</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#惊喜发现"><span class="nav-number">3.1.</span> <span class="nav-text">惊喜发现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录说明"><span class="nav-number">3.2.</span> <span class="nav-text">目录说明</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +706,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
