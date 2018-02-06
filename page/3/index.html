@@ -278,6 +278,108 @@
             
               
                 
+                <a class="post-title-link" href="/2018/01/THINKPHP 清空数据缓存方法/" itemprop="url">
+                  THINKPHP 清空数据缓存方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-01-26T22:37:48+08:00" content="2018-01-26">
+              2018-01-26
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/01/THINKPHP 清空数据缓存方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/THINKPHP 清空数据缓存方法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$cache = <span class="keyword">new</span> \Think\Cache;</span><br><span class="line"><span class="comment">//第一个参数为 缓存类型 这里是从配置里读取  第二个参数为清理的文件夹 因为默认清理的是 Temp 这里修改成Cache</span></span><br><span class="line"><span class="keyword">echo</span> $cache-&gt;getInstance(C(<span class="string">'DATA_CACHE_TYPE'</span>), [<span class="string">'temp'</span>=&gt;CACHE_PATH])-&gt;clear();</span><br><span class="line"><span class="comment">//如果是清理Temp 直接不用参数就可以用了 不用这么麻烦</span></span><br><span class="line"><span class="comment">//$cache-&gt;getInstance()-&gt;clear();</span></span><br></pre></td></tr></table></figure>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://blog.csdn.net/chenzhuyu/article/details/51713966" target="_blank" rel="noopener">THINKPHP 清空数据缓存方法</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/01/momentjs 自己使用例子/" itemprop="url">
                   momentjs 自己使用例子
                 </a>
@@ -685,109 +787,6 @@
 </tr>
 </tbody>
 </table>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/01/mysql查找固定时间端数据 本周 上周/" itemprop="url">
-                  mysql查找固定时间端数据 本周 上周...
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-01-15T22:29:06+08:00" content="2018-01-15">
-              2018-01-15
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2018/01/mysql查找固定时间端数据 本周 上周/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/mysql查找固定时间端数据 本周 上周/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>mysql有很多关于时间截取的方法,不过呢数据格式必须date形式的,不过我现在用的int保存时间戳的方式.<br>以前记得好像date形式有什么缺点 现在给忘记了 以后遇到再记录下吧.</p>
-<p>函数类似这种 这次是没法测试 以后数据库可以参考下 好像这种更优化一些<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT OrderId,DATE_SUB(OrderDate,INTERVAL 5 DAY) AS SubtractDate FROM Orders</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.w3cschool.cn/mysql/func-date-sub.html" target="_blank" rel="noopener">MySQL DATE_SUB() 函数</a><br><a href="http://blog.csdn.net/wocjj/article/details/7415253" target="_blank" rel="noopener">mysql获取昨天的时间</a><br><a href="http://www.thinkphp.cn/topic/47049.html" target="_blank" rel="noopener">MySQL查询本周、上周、本月、上个月份数据的sql代码</a></p>
 
           
         

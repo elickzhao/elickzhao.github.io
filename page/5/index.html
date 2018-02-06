@@ -278,6 +278,118 @@
             
               
                 
+                <a class="post-title-link" href="/2018/01/js的Object.assign()复制属性详解/" itemprop="url">
+                  js的Object.assign()复制属性详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-01-08T23:39:33+08:00" content="2018-01-08">
+              2018-01-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/01/js的Object.assign()复制属性详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/js的Object.assign()复制属性详解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简单描述"><a href="#简单描述" class="headerlink" title="简单描述"></a>简单描述</h2><p><strong>Object.assign()</strong> 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.assign(target, ...sources)</span><br><span class="line"><span class="comment">//target 目标对象</span></span><br><span class="line"><span class="comment">//...sources 源对象</span></span><br><span class="line"><span class="comment">//返回 目标对象</span></span><br></pre></td></tr></table></figure>
+<p><strong>描述:</strong></p>
+<blockquote>
+<p>如果目标对象中的属性具有相同的键，则属性将被源中的属性覆盖。后来的源的属性将类似地覆盖早先的属性。</p>
+<p>Object.assign 方法只会拷贝源对象自身的并且可枚举的属性到目标对象。该方法使用源对象的[[Get]]和目标对象的[[Set]]，所以它会调用相关 getter 和 setter。因此，它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含getter，这可能使其不适合将新属性合并到原型中。为了将属性定义（包括其可枚举性）复制到原型，应使用Object.getOwnPropertyDescriptor()和Object.defineProperty() 。</p>
+<p>String类型和 Symbol 类型的属性都会被拷贝。</p>
+<p>在出现错误的情况下，例如，如果属性不可写，会引发TypeError，如果在引发错误之前添加了任何属性，则可以更改target对象。</p>
+<p>注意，Object.assign 会跳过那些值为 null 或 undefined 的源对象。</p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/01/js的Object.assign()复制属性详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/01/小程序转发功能/" itemprop="url">
                   小程序转发功能
                 </a>
@@ -650,113 +762,6 @@
               阅读全文 &raquo;
             </a>
           </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/sublime text 插件 PlainTasks 任务计划/" itemprop="url">
-                  sublime text 插件 PlainTasks 任务计划
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-12-27T22:50:01+08:00" content="2017-12-27">
-              2017-12-27
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/12/sublime text 插件 PlainTasks 任务计划/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/sublime text 插件 PlainTasks 任务计划/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>还没正式开始使用 所以先记录几篇文章</p>
-<p>哦 对了 因为字体原因 会造成图标不显示的问题 下面有具体解决方法 <code>Sublime Text 3的PlainTasks插件</code> 这篇文章.</p>
-<p>这里简单说下,一 是改字体,改系统字体或者插件字体. 二 是把option后面能看到的图标 放到前面使用</p>
-<p>说一下问题 自定义设置 <code>open_tasks_bullet</code> 和 <code>done_tasks_bullet</code> 如果这两个改了,就会出现 进度条无法显示的问题, 因为每次完成一个任务会直接把任务当作取消来算了.<br>但是问题在于有时系统不会显示默认的字体.<br>这里就必须改写 <code>&quot;font_face&quot;: &quot;Microsoft YaHei&quot;,</code> 雅黑还算好看点,所以现在暂且用这个.并用默认图标</p>
-<p>已经用了sublime的同步设置,下面保存这个其实没什么太多意义,不过还是保存一份吧<br><strong>自己的配置</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"open_tasks_bullet"</span>: <span class="string">"☐"</span>, <span class="comment">// options: - | ❍ | ❑ | ■ | □ | ☐ | ▪ | ▫ | – | — | ≡ | → | › | [ ]</span></span><br><span class="line">  <span class="string">"done_tasks_bullet"</span>: <span class="string">"✔"</span>, <span class="comment">// options: + | ✓ | ✔ | √ | [x]</span></span><br><span class="line">  <span class="string">"cancelled_tasks_bullet"</span>: <span class="string">"✘"</span>, <span class="comment">// options: x | ✘ | [-]</span></span><br><span class="line">  <span class="string">"before_tasks_bullet_margin"</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="string">"date_format"</span>: <span class="string">"(%y-%m-%d %H:%M)"</span>,</span><br><span class="line">  <span class="string">"done_tag"</span>: <span class="literal">true</span>, <span class="comment">// related to @cancelled as well</span></span><br><span class="line">  <span class="string">"project_tag"</span>: <span class="literal">true</span>, <span class="comment">// if true - postfix archived task with project tag, if false - prefix</span></span><br><span class="line">  <span class="string">"archive_name"</span>: <span class="string">"Archive:"</span>, <span class="comment">// make sure it is the unique project name within your todo files</span></span><br><span class="line">  <span class="string">"new_on_top"</span>: <span class="literal">true</span>, <span class="comment">// how to sort archived tasks</span></span><br><span class="line">  <span class="string">"show_remain_due"</span>: <span class="literal">false</span>, <span class="comment">// in Sublime 3, show remain or overdue time under due tags</span></span><br><span class="line">  <span class="comment">//按理说这是这进度条设计啊</span></span><br><span class="line">  <span class="string">"stats_format"</span>:<span class="string">"$n/$a done ($percent%) $progress Last task @done $last"</span>,</span><br><span class="line">  <span class="comment">//"stats_format":"□$o [√]$d  ≡$a",</span></span><br><span class="line">  <span class="string">"bar_full"</span>: <span class="string">"■"</span>,</span><br><span class="line">  <span class="string">"bar_empty"</span>: <span class="string">"□"</span>, <span class="comment">// empty cell for progress-bar in status-bar, for more details see Custom Statistics in README</span></span><br><span class="line">  <span class="string">"replace_stats_chars"</span>: [[<span class="string">" ■"</span>, <span class="string">" [="</span>], [<span class="string">"■"</span>, <span class="string">"="</span>], [<span class="string">"▫"</span>, <span class="string">" ] "</span>], [<span class="string">"▫"</span>, <span class="string">" "</span>]],</span><br><span class="line">  </span><br><span class="line">  <span class="string">"color_scheme"</span>: <span class="string">"Packages/PlainTasks/tasks.hidden-tmTheme"</span>,</span><br><span class="line">    <span class="comment">// other bundled schemes:</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-dark.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-eighties-colored.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-eighties-dark.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-gray.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-monokai.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-solarized-dark.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-solarized-light.hidden-tmTheme</span></span><br><span class="line">  <span class="comment">// "font_size": 11,</span></span><br><span class="line">  <span class="comment">// "font_face": "Consolas",</span></span><br><span class="line">  <span class="string">"draw_indent_guides"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">"line_numbers"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">"gutter"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"margin"</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="string">"tab_size"</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="string">"translate_tabs_to_spaces"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"use_tab_stops"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">"match_brackets"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">"fold_buttons"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"fade_fold_buttons"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">"extensions"</span>:</span><br><span class="line">  [</span><br><span class="line">    <span class="string">"TODO"</span>,</span><br><span class="line">    <span class="string">"todo"</span>,</span><br><span class="line">    <span class="string">"todolist"</span>,</span><br><span class="line">    <span class="string">"taskpaper"</span>,</span><br><span class="line">    <span class="string">"tasks"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"font_face"</span>: <span class="string">"Microsoft YaHei"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://blog.csdn.net/etimechen/article/details/50730150" target="_blank" rel="noopener">SublimeText 插件 - PlainTasks使用方法</a><br><a href="https://zhuanlan.zhihu.com/p/20832754" target="_blank" rel="noopener">Sublime Text 3的PlainTasks插件</a><br><a href="http://blog.csdn.net/ljw_josie/article/details/73122997" target="_blank" rel="noopener">SublimeText3 插件PlainTasks（Todo-list）的使用方法</a><br><a href="http://blog.csdn.net/yuenushan/article/details/50041283" target="_blank" rel="noopener">SublimeText 插件 - PlainTasks使用方法</a></p>
-
-          
         
       
     </div>
