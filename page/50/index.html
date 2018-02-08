@@ -278,6 +278,122 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/自己的docker开发环境 -- 自我版/" itemprop="url">
+                  自己的docker开发环境 -- 自我版
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-04T17:49:40+08:00" content="2016-05-04">
+              2016-05-04
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/自己的docker开发环境 -- 自我版/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/自己的docker开发环境 -- 自我版/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>这世界变化快啊 我刚学会这个 又出新东西了<br><a href="http://www.csdn.net/article/2014-12-24/2823292-Docker-Kubernetes" target="_blank" rel="noopener">基于Kubernetes构建Docker集群管理详解</a><br><a href="http://www.open-open.com/lib/view/open1428540315869.html#" target="_blank" rel="noopener">Docker Machine + Compose + Swarm</a><br><a href="http://os.51cto.com/art/201411/456204.htm" target="_blank" rel="noopener">让Docker功能更强大的10个开源工具</a><br><a href="http://elickzhao.github.io/2016/05/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%20--link%20%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E/">连接容器 –link 简要说明</a></p>
+<h1 id="懒人的最爱-–-下载快速用"><a href="#懒人的最爱-–-下载快速用" class="headerlink" title="懒人的最爱 – 下载快速用"></a>懒人的最爱 – 下载快速用</h1><p>为了方便急用的同志们,把仓库和配置方法放在最前面,如果想学习的请往下看</p>
+<ul>
+<li>仓库地址: <a href="https://github.com/elickzhao/docker-study" target="_blank" rel="noopener">https://github.com/elickzhao/docker-study</a></li>
+<li>配置方法</li>
+</ul>
+<ol>
+<li><p>进入<code>dockerfiles</code>目录, 修改配置文件<code>docker-compose.yml</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">data:</span><br><span class="line">  build: ./data</span><br><span class="line">  volumes: </span><br><span class="line">    - <span class="string">"/c/Users/elick/myapp:/data:rw"</span> <span class="comment">#这里修改 '/c/Users/elick/myapp' 为你主机上要共享的目录</span></span><br><span class="line">  privileged: <span class="literal">true</span> </span><br><span class="line">mysql:</span><br><span class="line">  build: ./mysql</span><br><span class="line">  volumes_from:</span><br><span class="line">    - data</span><br><span class="line">  volumes: </span><br><span class="line">    - <span class="string">"/c/Users/elick/myapp/db/mysql:/var/lib/mysql"</span>  <span class="comment">#这里修改 '/c/Users/elick/myapp' 为你主机上要共享的目录</span></span><br><span class="line">  environment:</span><br><span class="line">    - MYSQL_ROOT_PASSWORD=123456 <span class="comment">#根据你的需要修改数据库密码</span></span><br><span class="line">  ports:</span><br><span class="line">    - <span class="string">"3306:3306"</span>   <span class="comment">#根据需要修改数据库端口</span></span><br><span class="line">php:  </span><br><span class="line">  build: ./php</span><br><span class="line">  expose:</span><br><span class="line">    - <span class="string">"9000"</span></span><br><span class="line">  volumes_from:</span><br><span class="line">    - data</span><br><span class="line">  links:</span><br><span class="line">    - mysql</span><br><span class="line">  privileged: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">nginx:  </span><br><span class="line">  build: ./nginx</span><br><span class="line">  volumes_from:</span><br><span class="line">    - data</span><br><span class="line">  volumes:</span><br><span class="line">    - <span class="string">"/c/Users/elick/myapp/nginx/nginx.conf:/etc/nginx/nginx.conf"</span> <span class="comment">#这里修改 '/c/Users/elick/myapp' 为你主机上要共享的目录</span></span><br><span class="line">  links:</span><br><span class="line">    - php:php</span><br><span class="line">  ports:</span><br><span class="line">    - <span class="string">"80:80"</span>   <span class="comment">#根据需要修改web服务器端口</span></span><br><span class="line">  privileged: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 <code>docker-composer up</code> 建立并启动容器 </p>
+</li>
+<li>如果除了data容器 全部启动的话 并且浏览localhost也没错的话 那么你就拥有了最新的php环境了</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/自己的docker开发环境 -- 自我版/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/Github 更新标签/" itemprop="url">
                   Github 更新标签
                 </a>
@@ -685,116 +801,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/常用的apt-get命令/" itemprop="url">
-                  常用的apt-get命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-01T00:15:51+08:00" content="2016-05-01">
-              2016-05-01
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/常用的apt-get命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/常用的apt-get命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>apt-get update</strong>：在修改/etc/apt/sources.list或者/etc/apt/preferences之后运行该命令。此外您需要定期运行这一命令以确保您的软件包列表是最新的。</p>
-<p><strong>apt-get install packagename</strong>：安装一个新软件包</p>
-<p><strong>apt-get remove packagename</strong>：卸载一个已安装的软件包（保留配置文件）</p>
-<p><strong>apt-get remove package - - purge</strong>: 删除包，包括删除配置文件等 </p>
-<p><strong>apt-get clean</strong>：这个命令会把安装的软件的备份也删除，不过这样不会影响软件的使用的。</p>
-<p><strong>apt-get upgrade</strong>：更新所有已安装的软件包</p>
-<p><strong>apt-get dist-upgrade</strong>：将系统升级到新版本</p>
-<p><strong>apt-cache search package</strong> 搜索包 </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/常用的apt-get命令/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -840,7 +846,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

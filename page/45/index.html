@@ -278,6 +278,130 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/laravel 安装 (windows)/" itemprop="url">
+                  laravel 安装 (windows)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-29T21:05:10+08:00" content="2016-05-29">
+              2016-05-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/php开发/" itemprop="url" rel="index">
+                    <span itemprop="name">php开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/laravel 安装 (windows)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/laravel 安装 (windows)/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>第一步 安装composer</strong><br> 从这里 <a href="https://getcomposer.org/download/" target="_blank" rel="noopener">https://getcomposer.org/download/</a> 后直接安装即可 切记需先安装php 并且版本支持做开发项目</p>
+<p><strong>第二步 配置composer镜像仓库</strong><br><figure class="highlight plain"><figcaption><span>config -g repo.packagist composer</span><a href="https://packagist.phpcomposer.com```" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入这行代码即可 你可以在任意位置打开命令窗口输入 这样就是全局配置 </span><br><span class="line">当如你也可以进入项目根目录 在那里打开命令窗口输入 这样就是那个项目的配置而不是全局的 以后开发项目年还有选择的机会</span><br><span class="line"></span><br><span class="line">**第三步 安装laravel**</span><br><span class="line">```composer create-project laravel/laravel myapp --prefer-dist</span><br></pre></td></tr></table></figure></p>
+<p>使用这句就可以创建新的项目 myapp为指定目录<br>如果遇到报错 请用 <figure class="highlight plain"><figcaption><span>selfupdate``` 更新一下 然后尝试安装</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">以上你的laravel项目已经建立完成 那么动手写吧</span><br><span class="line"></span><br><span class="line">**必要补充**</span><br><span class="line">你也可以使用laravel安装器 然后通过安装器来建立新的项目</span><br><span class="line">```composer global require &quot;laravel/installer=~1.1&quot;</span><br></pre></td></tr></table></figure></p>
+<p>使用上面代码安装laravel安装器并确保 <em>C:\Users\ <code>你用户名</code>\AppData\Roaming\Composer\vendor\bin</em><br>或者 <em>C:\ProgramData\ComposerSetup\bin</em> 因为我当前机器的系统环境变量是这里<br>下面有<code>laravel.bat</code>这个文件<br>接下来你就可以使用<br><code>laravel new blog</code>来建立项目了 blog为你的项目名</p>
+<p>好了 就是这些 开始码代码吧</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/Laravel项目 基本开发流程/" itemprop="url">
                   Laravel项目 基本开发流程
                 </a>
@@ -769,134 +893,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/XSS 和 CSRF 跨站攻击/" itemprop="url">
-                  XSS 和 CSRF 跨站攻击
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-25T23:13:42+08:00" content="2016-05-25">
-              2016-05-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/php开发/" itemprop="url" rel="index">
-                    <span itemprop="name">php开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/XSS 和 CSRF 跨站攻击/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/XSS 和 CSRF 跨站攻击/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>xss 编辑</strong><br>跨站脚本攻击(Cross Site Scripting)，为不和层叠样式表(Cascading Style Sheets, CSS)的缩写混淆，故将跨站脚本攻击缩写为XSS。恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的特殊目的</p>
-<blockquote>
-<p>主要防范:<br>过滤客户提交内容,不能信任客户提交内容.目前来看chrome浏览器能够自己屏蔽这个问题.IE还是不行,还得需要强壮的代码.</p>
-</blockquote>
-<p><strong>CSRF</strong><br>CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比XSS更具危险性。</p>
-<blockquote>
-<p>主要防范:<br>CSRF主要是伪装请求,所以只要确认不是本站请求,就可以很好的化解这个问题.对于每个表单提交都有个token,然后提交的地址再去验证这个token就可以了</p>
-</blockquote>
-<p>参考文献:<br><a href="http://blog.csdn.net/smstong/article/details/43561607" target="_blank" rel="noopener">XSS跨站脚本攻击过程最简单演示</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -942,7 +938,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

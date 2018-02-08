@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title><![CDATA[thinphp 循环嵌套if 不输出的问题]]></title>
+      <url>http://elickzhao.github.io/2018/02/thinphp%20%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97if%20%E4%B8%8D%E8%BE%93%E5%87%BA%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<p>这个以前应该是遇到过,不过很久不用都忘记了.这次就记录下吧.免得以后没处查去.</p>
+<p>原因很简单 当双重循环 <strong>volist</strong> 的时候, 如果做两重循环的判断.<br>这是就不能用简写的 <code>$vo.id</code> 这种形式了 必须用数组的形式 <code>$vo[&#39;id&#39;]</code><br>这样就ok了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"lay-search"</span> <span class="attr">name</span>=<span class="string">"cateid"</span> <span class="attr">id</span>=<span class="string">"cateid"</span> <span class="attr">lay-filter</span>=<span class="string">"cid_1"</span> <span class="attr">lay-search</span> <span class="attr">lay-verify</span>=<span class="string">"cateid"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>&gt;</span>所有分类<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>请选择<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">volist</span> <span class="attr">name</span>=<span class="string">"cate_list"</span> <span class="attr">id</span>=<span class="string">"v"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">condition</span>=<span class="string">"$v.tid eq 1"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">"&#123;$v.name&#125;"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">volist</span> <span class="attr">name</span>=<span class="string">"cate_list"</span> <span class="attr">id</span>=<span class="string">"vo"</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- 注意这里 这里用的是数组形式 --&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">if</span> <span class="attr">condition</span>=<span class="string">"$vo['tid'] == $v['id']"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"&#123;$vo.id&#125;"</span>&gt;</span>&#123;$vo.name&#125;<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">volist</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">volist</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 小百科 </tag>
+            
+            <tag> php </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[各个浏览器隐藏滚动条]]></title>
       <url>http://elickzhao.github.io/2018/02/%E5%90%84%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1%20/</url>
       <content type="html"><![CDATA[<p><strong>注意:</strong><br>html是可以替换成别的任何类名的<br>还有就是 火狐是只能隐藏 却不能滚动  剩下两个都可以<br>有的说这么写 <code>::-webkit-scrollbar{display:none}</code> 但是完全不好使<br>至于火狐滚动的问题 以后再想办法吧</p>
@@ -5134,9 +5153,9 @@
         
         <tags>
             
-            <tag> 日志 </tag>
-            
             <tag> 心情随笔 </tag>
+            
+            <tag> 日志 </tag>
             
         </tags>
         

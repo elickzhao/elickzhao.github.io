@@ -278,6 +278,116 @@
             
               
                 
+                <a class="post-title-link" href="/2017/01/Velocity.js简单介绍/" itemprop="url">
+                  Velocity.js简单介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-09T22:36:53+08:00" content="2017-01-09">
+              2017-01-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/Velocity.js简单介绍/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/Velocity.js简单介绍/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Velocity 是一个简单易用、高性能、功能丰富的轻量级JS动画库。它能和 jQuery 完美协作，并和$.animate()有相同的 API， 但它不依赖 jQuery，可单独使用。 Velocity 不仅包含了 $.animate() 的全部功能， 还拥有：颜色动画、转换动画(transforms)、循环、 缓动、SVG 动画、和 滚动动画 等特色功能。</p>
+<p>它比 $.animate() 更快更流畅，性能甚至高于 CSS3 animation， 是 jQuery 和 CSS3 transition 的最佳组合，它支持所有现代浏览器，最低可兼容到 IE8 和 Android 2.3。</p>
+<p>Velocity 目前已被数以千计的公司使用在自己的项目中，包括 WhatsApp, Tumblr, Windows, Samsung, Uber 等，这里 Libscore.com 统计了哪些站点正使用 velocity.js。</p>
+<p><strong>参数概述和基础写法</strong><br>Velocity 接收一组 css 属性键值对 (css map) 作为它的第一个参数，该参数作为动画效果的最终属性。第二个参数是可选参数 为动画的额外配置项。下面为参数的写法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$element.velocity(&#123;</span><br><span class="line">    width: <span class="string">"500px"</span>,        <span class="comment">// 动画属性 宽度到 "500px" 的动画</span></span><br><span class="line">    property2: value2      <span class="comment">// 属性示例</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">    <span class="comment">/* Velocity 动画配置项的默认值 */</span></span><br><span class="line">    duration: <span class="number">400</span>,         <span class="comment">// 动画执行时间</span></span><br><span class="line">    easing: <span class="string">"swing"</span>,       <span class="comment">// 缓动效果</span></span><br><span class="line">    queue: <span class="string">""</span>,             <span class="comment">// 队列</span></span><br><span class="line">    begin: <span class="literal">undefined</span>,      <span class="comment">// 动画开始时的回调函数</span></span><br><span class="line">    progress: <span class="literal">undefined</span>,   <span class="comment">// 动画执行中的回调函数（该函数会随着动画执行被不断触发）</span></span><br><span class="line">    complete: <span class="literal">undefined</span>,   <span class="comment">// 动画结束时的回调函数</span></span><br><span class="line">    display: <span class="literal">undefined</span>,    <span class="comment">// 动画结束时设置元素的 css display 属性</span></span><br><span class="line">    visibility: <span class="literal">undefined</span>, <span class="comment">// 动画结束时设置元素的 css visibility 属性</span></span><br><span class="line">    loop: <span class="literal">false</span>,           <span class="comment">// 循环</span></span><br><span class="line">    delay: <span class="literal">false</span>,          <span class="comment">// 延迟</span></span><br><span class="line">    mobileHA: <span class="literal">true</span>         <span class="comment">// 移动端硬件加速（默认开启）</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>简单就说这些吧,具体看下面例子.更多的看参考文档,因为很难在简单篇幅里简单解释完全,以后遇到什么问题再补充,还有就是这里还需要一点 <code>easing</code> 的东西,这可以看<a href="http://elickzhao.github.io/2017/01/jQuery%20Easing%20%E7%AE%80%E5%8D%95%E8%AE%B2%E8%A7%A3/">以前的文章</a>.</p>
+<iframe width="100%" height="380" src="https://code.hcharts.cn/test123/I4Vflc/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://www.open-open.com/lib/view/open1435212597935.html" target="_blank" rel="noopener">Velocity.js介绍</a><br><a href="http://www.mrfront.com/docs/velocity.js/index.html" target="_blank" rel="noopener">Velocity.js中文文档</a><br><a href="http://codepen.io/collection/tIjGb/" target="_blank" rel="noopener">Velocity ui 动作样式</a><br><a href="http://www.jqcool.net/jquery-velocity.html" target="_blank" rel="noopener">极棒的jquery动画切换引擎插件Velocity.js</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/01/jQuery Easing 简单讲解/" itemprop="url">
                   jQuery Easing 简单讲解
                 </a>
@@ -706,109 +816,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/Nginx下装laravel /" itemprop="url">
-                  nginx 下装laravel
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-04T23:14:51+08:00" content="2017-01-04">
-              2017-01-04
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/01/Nginx下装laravel /#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/Nginx下装laravel /" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>nginx 配置时 一定要做路由转换,因为laravel使用的是简洁版路由.apache因为在public目录里有 .htaccess所以不用管了, nginx就得自己配置了.</p>
-<p>把这句添加进去就哦了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    try_files $uri $uri/ /index.php?$query_string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://segmentfault.com/q/1010000002422408" target="_blank" rel="noopener">Laravel Nginx 除 / 外所有路由 404</a><br><a href="https://laravel.com/docs/5.0/installation#pretty-urls" target="_blank" rel="noopener">官方文档</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -854,7 +861,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -278,6 +278,110 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/js中的 ~ 运算符/" itemprop="url">
+                  js中的 ~ 运算符
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-11T22:31:54+08:00" content="2016-12-11">
+              2016-12-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/js中的 ~ 运算符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/js中的 ~ 运算符/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天遇到这个 <code>!~id.indexOf(&#39;category-detail&#39;)</code> 以前没碰到过,不是很理解.后来一查明白了,这是位移运算符.</p>
+<p><strong>运算符就是完成操作的一系列符号，它有七类</strong>：<br>赋值运算符 <code>=,+=,-=,*=,/=,%=,&lt;&lt;=,&gt;&gt;=,|=,&amp;=</code>、<br>算术运算符 <code>+,-,*,/,++,--,%</code>、<br>比较运算符 <code>&gt;,&lt;,&lt;=,&gt;=,==,===,!=,!==</code>、<br>逻辑运算符 <code>||,&amp;&amp;,!</code>、<br>条件运算   <code>?:</code>、<br>位移运算符 <code>|,&amp;,&lt;&lt;,&gt;&gt;,~,^</code><br>字符串运算符 <code>+</code>。</p>
+<p>看下面例子更容易理解些,就不用多解释了</p>
+<iframe width="100%" height="380" src="http://code.hcharts.cn/test123/dMe0in/share/result,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/Windows 系统下设置Nodejs NPM全局路径/" itemprop="url">
                   Windows 系统下设置Nodejs NPM全局路径
                 </a>
@@ -693,108 +797,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/一个计算php页面运行时间的函数/" itemprop="url">
-                  一个计算php页面运行时间的函数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-02T22:46:40+08:00" content="2016-12-02">
-              2016-12-02
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/一个计算php页面运行时间的函数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/一个计算php页面运行时间的函数/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>代码片段</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">@ 计算php程序运行时间</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">microtime_float</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">list</span>($usec, $sec) = explode(” “, microtime());</span><br><span class="line"><span class="keyword">return</span> ((float)$usec + (float)$sec);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//开始计时，放在头部</span></span><br><span class="line">$starttime = microtime_float();</span><br><span class="line"><span class="comment">//结束计时，放在最底部</span></span><br><span class="line">$runtime = number_format((microtime_float() – $starttime), <span class="number">4</span>).<span class="string">'s'</span>;</span><br><span class="line"><span class="comment">//输出</span></span><br><span class="line"><span class="keyword">echo</span> ‘RunTime:<span class="string">'.$runtime;</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -840,7 +842,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

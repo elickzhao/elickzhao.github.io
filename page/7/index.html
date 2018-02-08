@@ -278,6 +278,111 @@
             
               
                 
+                <a class="post-title-link" href="/2017/12/让人遭心的  MySql enum字段使用问题/" itemprop="url">
+                  让人遭心的  MySql enum字段使用问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-14T16:44:08+08:00" content="2017-12-14">
+              2017-12-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/12/让人遭心的  MySql enum字段使用问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/让人遭心的  MySql enum字段使用问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天在改程序的时候遇到了 enum字段 这个东西果真奇葩.怎么搜索都搜索不到.<br>后来查了资料才搞懂.<br>这个字段是 mysql独有 其他数据库都没有的 所以用了他就别想换了<br>他的唯一优点就是控制大小,因为他是类似数组形式保存的 所以数量是可控的<br>但也造成了搜索时候的问题. 直接搜索的时候有可能搜索的是按key来搜不是保存在字段里value 唉…</p>
+<p>据下面文档说 他的key是从1开始 所以搜不到0<br><del>但是我遇到更奇葩的事 就算我按key=1 来搜索也搜不到 0 这个值. 而其他两个 1 和 2 全能搜到</del><br>妈蛋 原来人家说的是对的 只不过数据库形式我没仔细看错了 搜索3就出来了<br>数据库形式 是这样的  [‘1’=&gt;1,’2’=&gt;’2’,’3’=&gt;0]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM lr_order WHERE back = 3;  //这是按key搜索 匹配出来的 全是 back=0</span><br></pre></td></tr></table></figure></p>
+<p>如果想按值搜索怎么做? 加上单引号就行了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM lr_order WHERE back = &apos;0&apos;;  //这是按value搜索 匹配出来的 全是 back=0</span><br></pre></td></tr></table></figure></p>
+<p>这个破东西的确烦,可能框架都没法用.所以建立数据库的时候,还是用tinyint算了</p>
+<p>##参考文档<br><a href="http://blog.csdn.net/kkikiako/article/details/49746791" target="_blank" rel="noopener">MySql enum字段使用问题</a><br><a href="http://www.jb51.net/article/53426.htm" target="_blank" rel="noopener">要慎用mysql的enum字段的原因</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/11/php自动加载原理/" itemprop="url">
                   php自动加载原理
                 </a>
@@ -697,161 +802,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/08/vue一些特别有用的插件/" itemprop="url">
-                  vue一些特别有用的插件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-08-31T23:13:12+08:00" content="2017-08-31">
-              2017-08-31
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/08/vue一些特别有用的插件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/vue一些特别有用的插件/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Vue相关网站参考："><a href="#Vue相关网站参考：" class="headerlink" title="Vue相关网站参考："></a>Vue相关网站参考：</h2><p>　　<strong>Vue中文帮助网站</strong>：<a href="http://cn.vuejs.org/" target="_blank" rel="noopener">http://cn.vuejs.org/</a></p>
-<p>　　<strong>Vue github开源地址</strong>：<a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">https://github.com/vuejs/vue</a></p>
-<p>　　<strong>Vue.js专业中文社区</strong>：<a href="http://www.vue-js.com/" target="_blank" rel="noopener">http://www.vue-js.com/</a></p>
-<p>　　<strong>前端开发Vue相关</strong>：<a href="http://www.opendigg.com/tags/front-vue" target="_blank" rel="noopener">http://www.opendigg.com/tags/front-vue</a></p>
-<p>　　<strong>本文开源地址</strong>：<a href="https://github.com/yonghu86/awesome-github-vue" target="_blank" rel="noopener">https://github.com/yonghu86/awesome-github-vue</a></p>
-<p>　　本文主要是收集与整理Vue相关的开源资料，以供需要的朋友参考。主要包含以下几方面的内容：</p>
-<p>　　UI组件、开发框架、实用库、服务端、辅助工具、应用实例、Demo示例</p>
-<h2 id="构建插件"><a href="#构建插件" class="headerlink" title="构建插件"></a>构建插件</h2><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/annnhan/vue-spa-template" target="_blank" rel="noopener">vue-spa-template</a></td>
-<td>构建vue全家桶,Github说明很详细.<a href="http://www.cnblogs.com/axl234/p/6808599.html" target="_blank" rel="noopener">参考文档:基于 vue 全家桶的 spa 项目脚手架</a></td>
-</tr>
-<tr>
-<td><a href="https://github.com/SimulatedGREG/electron-vue" target="_blank" rel="noopener">electron-vue</a></td>
-<td>构建electron时用的</td>
-</tr>
-<tr>
-<td><a href="https://github.com/ElemeFE/cooking/blob/master/README_zh-cn.md" target="_blank" rel="noopener">cooking</a></td>
-<td>vue特别简单的构建工具,不过东西可能没有上面vue-spa-template那么全. <a href="https://cookingjs.github.io/zh-cn/intro.html" target="_blank" rel="noopener">中文文档</a></td>
-</tr>
-<tr>
-<td><a href="https://github.com/Metnew/vue-element-starter" target="_blank" rel="noopener">Vue-Element-Starter</a></td>
-<td>vue启动页.这个已经有了个后台框架的样子了.基本的东西已经弄好,可以快速开发了</td>
-</tr>
-<tr>
-<td><a href="https://github.com/cristijora/vue-paper-dashboard" target="_blank" rel="noopener">Vue Paper Dashboard</a></td>
-<td>这个真的很漂亮 就是不能用作大型后台</td>
-</tr>
-<tr>
-<td><a href="https://github.com/vue-bulma/vue-admin" target="_blank" rel="noopener">Vue Admin Panel Framework</a></td>
-<td>vue和buluma的后台好像是重复两个啊</td>
-</tr>
-<tr>
-<td><a href="https://github.com/misterGF/CoPilot" target="_blank" rel="noopener">CoPilot  </a></td>
-<td>这个也不错 是AdminLTE模板做的</td>
-</tr>
-<tr>
-<td><a href="https://github.com/mrholek/CoreUI-Free-Bootstrap-Admin-Template" target="_blank" rel="noopener">CoreUI-Free-Bootstrap-Admin-Template</a></td>
-<td>这个也不错 是CoreUI模板做的</td>
-</tr>
-<tr>
-<td><a href="https://github.com/epicmaxco/vuestic-admin" target="_blank" rel="noopener">Vuestic Admin Dashboard</a></td>
-<td>这个也不错 是 Bootstrap 4.模板做的</td>
-</tr>
-</tbody>
-</table>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/08/vue一些特别有用的插件/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -897,7 +847,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

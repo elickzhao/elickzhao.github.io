@@ -278,6 +278,116 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/使用dingo返回数据/" itemprop="url">
+                  使用dingo返回数据
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-19T23:22:35+08:00" content="2016-12-19">
+              2016-12-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/使用dingo返回数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/使用dingo返回数据/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>使用dingo返回数据,一开始有点懵,现在开始有点明晰了.</p>
+<h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><p><strong>方法一</strong><br>用Dingo的Transformer. 其实这两种写法都可以 用Transformer()更简洁和灵活一些.<br>因为Transformer()不仅可以利用 <code>return $ECUser-&gt;attributesToArray();</code> 将属性转换成数组<br>还可以添加和转换数据库中没有的字段,还可以用 <code>include</code> 做类似关联表的作用,具体看这里: <a href="https://www.zybuluo.com/mdeditor#553839" target="_blank" rel="noopener">Dingo Transformers 的使用(Fractal)</a><br>所以这个很灵活,可以在这个类里添加更多的操作,当然只是返回array的话,还是稍显麻烦因为还得建立个文件.</p>
+<p><strong>补充:</strong><br>Dingo返回数据几种形式:</p>
+<p>Responding With An Array 响应一个数组<br><code>return $this-&gt;response-&gt;array($user-&gt;toArray());</code></p>
+<p>Responding With A Single Item 响应一个元素<br><code>return $this-&gt;response-&gt;item($user, new UserTransformer);</code></p>
+<p>Responding With A Collection Of Items 响应一个元素集合<br><code>return $this-&gt;response-&gt;collection($users, new UserTransformer);</code></p>
+<p>Responding With Paginated Items 分页响应<br><code>return $this-&gt;response-&gt;paginator($users, new UserTransformer);</code></p>
+<p><a href="https://github.com/liyu001989/dingo-api-wiki-zh/blob/master/Responses.md" target="_blank" rel="noopener">更多看这里……..</a></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/使用dingo返回数据/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/Dingo Transformers 的使用(Fractal)/" itemprop="url">
                   Dingo Transformers 的使用(Fractal)
                 </a>
@@ -694,110 +804,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/js中的 ~ 运算符/" itemprop="url">
-                  js中的 ~ 运算符
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-11T22:31:54+08:00" content="2016-12-11">
-              2016-12-11
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/js中的 ~ 运算符/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/js中的 ~ 运算符/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天遇到这个 <code>!~id.indexOf(&#39;category-detail&#39;)</code> 以前没碰到过,不是很理解.后来一查明白了,这是位移运算符.</p>
-<p><strong>运算符就是完成操作的一系列符号，它有七类</strong>：<br>赋值运算符 <code>=,+=,-=,*=,/=,%=,&lt;&lt;=,&gt;&gt;=,|=,&amp;=</code>、<br>算术运算符 <code>+,-,*,/,++,--,%</code>、<br>比较运算符 <code>&gt;,&lt;,&lt;=,&gt;=,==,===,!=,!==</code>、<br>逻辑运算符 <code>||,&amp;&amp;,!</code>、<br>条件运算   <code>?:</code>、<br>位移运算符 <code>|,&amp;,&lt;&lt;,&gt;&gt;,~,^</code><br>字符串运算符 <code>+</code>。</p>
-<p>看下面例子更容易理解些,就不用多解释了</p>
-<iframe width="100%" height="380" src="http://code.hcharts.cn/test123/dMe0in/share/result,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -843,7 +849,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

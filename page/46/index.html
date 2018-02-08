@@ -278,6 +278,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/XSS 和 CSRF 跨站攻击/" itemprop="url">
+                  XSS 和 CSRF 跨站攻击
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-25T23:13:42+08:00" content="2016-05-25">
+              2016-05-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/php开发/" itemprop="url" rel="index">
+                    <span itemprop="name">php开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/XSS 和 CSRF 跨站攻击/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/XSS 和 CSRF 跨站攻击/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>xss 编辑</strong><br>跨站脚本攻击(Cross Site Scripting)，为不和层叠样式表(Cascading Style Sheets, CSS)的缩写混淆，故将跨站脚本攻击缩写为XSS。恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的特殊目的</p>
+<blockquote>
+<p>主要防范:<br>过滤客户提交内容,不能信任客户提交内容.目前来看chrome浏览器能够自己屏蔽这个问题.IE还是不行,还得需要强壮的代码.</p>
+</blockquote>
+<p><strong>CSRF</strong><br>CSRF（Cross-site request forgery跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，并且攻击方式几乎相左。XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比XSS更具危险性。</p>
+<blockquote>
+<p>主要防范:<br>CSRF主要是伪装请求,所以只要确认不是本站请求,就可以很好的化解这个问题.对于每个表单提交都有个token,然后提交的地址再去验证这个token就可以了</p>
+</blockquote>
+<p>参考文献:<br><a href="http://blog.csdn.net/smstong/article/details/43561607" target="_blank" rel="noopener">XSS跨站脚本攻击过程最简单演示</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/laravel 简单自定义个artisan命令/" itemprop="url">
                   laravel 简单自定义个artisan命令
                 </a>
@@ -761,132 +889,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/前端开发环境简介/" itemprop="url">
-                  前端开发环境简介
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-16T22:08:57+08:00" content="2016-05-16">
-              2016-05-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端技术/" itemprop="url" rel="index">
-                    <span itemprop="name">前端技术</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/前端开发环境简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/前端开发环境简介/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>这篇文章 只是简单介绍 几个框架的主要作用,并不涉及详细用法.</p>
-<h1 id="npm-老大中的老大"><a href="#npm-老大中的老大" class="headerlink" title="npm 老大中的老大"></a>npm 老大中的老大</h1><p>npm 不用多说什么 这是一切基础中的基础</p>
-<h1 id="yeoman-快速构建项目目录"><a href="#yeoman-快速构建项目目录" class="headerlink" title="yeoman 快速构建项目目录"></a>yeoman 快速构建项目目录</h1><p>其实很多项目开发的时候,目录结构及需要的插件都有一定规律.所以yeoman是解放懒人的又一利器.他的主要作用就是,当你开始一个新项目时不用自己再手动各个目录和安装那些插件,一切都为你准备好,只要一个命令 <code>yo</code>找到你要开发项目,接下来只需等待yeoman帮你建立好所需的一切</p>
-<h1 id="bower-找轮子利器"><a href="#bower-找轮子利器" class="headerlink" title="bower 找轮子利器"></a>bower 找轮子利器</h1><p>自己遭轮子虽然有成就感,不过别人写好的东西又何必再去浪费时间.所以bower又是懒人必不可少的.之所以选择bower是因为比npm搜索跟人性化,对我来说目前是这样,我更喜欢bower</p>
-<h1 id="gulp-让你更专注的写东西-其他的事情交给gulp吧"><a href="#gulp-让你更专注的写东西-其他的事情交给gulp吧" class="headerlink" title="gulp 让你更专注的写东西 其他的事情交给gulp吧"></a>gulp 让你更专注的写东西 其他的事情交给gulp吧</h1><p>bower是需要实现一些功能的时候去搜索这个功能的插件,比如slider. 而gulp所用的插件是为了给你开发带来便利,并不是你网页上的功能.比如压缩css,js. 比如 sass直接编译好显示.这些都是提供你写代码时的方便.有了gulp 我就不在需要dw了,用sublime就好了.</p>
-<hr>
-<p>#参考文章:<br><a href="http://www.ruanyifeng.com/blog/2014/09/package-management.html" target="_blank" rel="noopener">前端模块管理器简介</a><br><a href="http://blog.jobbole.com/65399/" target="_blank" rel="noopener">Yeoman官方教程：用Yeoman和AngularJS做Web应用</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -932,7 +934,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

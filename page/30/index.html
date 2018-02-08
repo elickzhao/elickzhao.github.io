@@ -278,6 +278,116 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/JSON.parse()和JSON.stringify()/" itemprop="url">
+                  JSON.parse()和JSON.stringify()
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-25T22:32:11+08:00" content="2016-11-25">
+              2016-11-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/JSON.parse()和JSON.stringify()/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/JSON.parse()和JSON.stringify()/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>parse用于从一个字符串中解析出json对象,如</p>
+<pre><code>var str = &apos;{&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;age&quot;:&quot;23&quot;}&apos;
+</code></pre><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">JSON.parse(str)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Object</span><br><span class="line"></span><br><span class="line">age: &quot;23&quot;</span><br><span class="line">name: &quot;huangxiaojian&quot;</span><br><span class="line">__proto__: Object</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：单引号写在{}外，每个属性名都必须用双引号，否则会抛出异常。</p>
+<hr>
+<p>stringify()用于从一个对象解析出字符串，如</p>
+<pre><code>var a = {a:1,b:2}
+</code></pre><p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JSON.stringify(a)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot;&#123;&quot;a&quot;:1,&quot;b&quot;:2&#125;&quot;</span><br></pre></td></tr></table></figure>
+<p>参考文档<br><a href="http://blog.csdn.net/wangxiaohu__/article/details/7254598" target="_blank" rel="noopener">JSON.parse()和JSON.stringify()</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" target="_blank" rel="noopener"> MDN JSON.parse()</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/YUM常用命令详解/" itemprop="url">
                   服务器相关技术
                 </a>
@@ -766,125 +876,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/SQLSTATE[HY000] [2002] No such file or directory 报错处理/" itemprop="url">
-                  SQLSTATE[HY000] [2002] No such file or directory 报错处理
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-11T23:01:49+08:00" content="2016-11-11">
-              2016-11-11
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/SQLSTATE[HY000] [2002] No such file or directory 报错处理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/SQLSTATE[HY000] [2002] No such file or directory 报错处理/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在装lumen时突然出现了这个错误,主要是因为多个版本php共存,新装的php7配置php.ini时,没有把<code>*.default_socket</code>设置上而造成无法连接数据库的问题.</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ul>
-<li>首先说明这个是在使用nginx时,必须使用php-fpm时出现的.</li>
-<li><p>现在找到 <code>socket</code> 的位置. 使用命令 <code>ps aux | grep -i mysql</code> 看到如下结果</p>
-<blockquote>
-<p>mysql    12388  0.0  0.2 390744 44636 pts/0    Sl   14:02   0:01 /opt/mysql/product/bin/mysqld –basedir=/opt/mysql/product –datadir=/opt/mysql/product/data –plugin-dir=/opt/mysql/product/lib/plugin –user=mysql –log-error=/opt/mysql/product/data/oracle1.err –pid-file=/opt/mysql/product/data/oracle1.pid –<strong>socket</strong>=/var/lib/mysql/mysqld.sock –port=3306  <code>这就是位置</code></p>
-</blockquote>
-</li>
-<li><p>然后打开 <code>php.ini</code> 添加 <code>/var/lib/mysql/mysqld.sock</code> 默认为空</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// mysql.default_socket =  // php7里已经没有了这个</span><br><span class="line">pdo_mysql.default_socket=/var/lib/mysql/mysqld.sock // 默认是空的,这个就是新添加的地址</span><br><span class="line">mysqli.default_socket =/var/lib/mysql/mysqld.sock</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后重启 <code>php-fpm</code> 就解决了.</p>
-</li>
-</ul>
-<h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><ul>
-<li>php7 以后就不实用<code>mysql</code>这个驱动了 而使用<code>mysqlnd</code> 所以你在<code>phpinfo()</code>里不会再看到mysql项</li>
-<li>重启<code>php-fpm</code> 需要用 <code>ps aux|grep php</code> 命令查看 <code>php-fpm</code> 的 pid,然后 <code>kill pid</code>.这里注意啊 要是多个<code>php-fpm</code>一定要看配置文件位置,不要删错了.</li>
-</ul>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://www.th7.cn/db/mysql/201412/83563.shtml" target="_blank" rel="noopener">YII2数据库操作出现类似Database Exception</a><br><a href="http://www.cnblogs.com/AloneSword/p/3188012.html" target="_blank" rel="noopener">安装roundcube 时出现 “DSN (write): NOT OK(SQLSTATE[HY000] [2002] No such file or directory)”</a><br><a href="https://segmentfault.com/q/1010000004241965" target="_blank" rel="noopener">php7不支持mysql扩展，如何使用mysqlnd?</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -930,7 +921,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

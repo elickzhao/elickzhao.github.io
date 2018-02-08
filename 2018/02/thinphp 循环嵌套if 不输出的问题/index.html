@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="小百科,js," />
+  <meta name="keywords" content="小百科,php," />
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="let 和 var 是一样的用于定义,最主要的是 let 是javascript 严格模式. 主要区别如下:  作用范围不一样, var是全局的, let是局部的. 而且使用严格模式,文件开头一定要声明 ‘use strict’; 否则会报错. 还有必须先声明再使用. 在同一作用域,重复声明会报错.  参考文档深入浅出ES6（十四）：let和const在JavaScript ES6中使用let和c">
-<meta name="keywords" content="小百科,js">
+<meta name="description" content="这个以前应该是遇到过,不过很久不用都忘记了.这次就记录下吧.免得以后没处查去. 原因很简单 当双重循环 volist 的时候, 如果做两重循环的判断.这是就不能用简写的 $vo.id 这种形式了 必须用数组的形式 $vo[&amp;#39;id&amp;#39;]这样就ok了 12345678910111213141516&amp;lt;select class=&quot;lay-search&quot; name=&quot;cateid&quot; id">
+<meta name="keywords" content="小百科,php">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js中let和var定义变量的区别 const 说明">
-<meta property="og:url" content="http://elickzhao.github.io/2016/10/js中let和var定义变量的区别 const 说明/index.html">
+<meta property="og:title" content="thinphp 循环嵌套if 不输出的问题">
+<meta property="og:url" content="http://elickzhao.github.io/2018/02/thinphp 循环嵌套if 不输出的问题/index.html">
 <meta property="og:site_name" content="elickzhao&#39;s Blog">
-<meta property="og:description" content="let 和 var 是一样的用于定义,最主要的是 let 是javascript 严格模式. 主要区别如下:  作用范围不一样, var是全局的, let是局部的. 而且使用严格模式,文件开头一定要声明 ‘use strict’; 否则会报错. 还有必须先声明再使用. 在同一作用域,重复声明会报错.  参考文档深入浅出ES6（十四）：let和const在JavaScript ES6中使用let和c">
+<meta property="og:description" content="这个以前应该是遇到过,不过很久不用都忘记了.这次就记录下吧.免得以后没处查去. 原因很简单 当双重循环 volist 的时候, 如果做两重循环的判断.这是就不能用简写的 $vo.id 这种形式了 必须用数组的形式 $vo[&amp;#39;id&amp;#39;]这样就ok了 12345678910111213141516&amp;lt;select class=&quot;lay-search&quot; name=&quot;cateid&quot; id">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-04T07:05:37.000Z">
+<meta property="og:updated_time" content="2018-02-08T14:17:03.911Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js中let和var定义变量的区别 const 说明">
-<meta name="twitter:description" content="let 和 var 是一样的用于定义,最主要的是 let 是javascript 严格模式. 主要区别如下:  作用范围不一样, var是全局的, let是局部的. 而且使用严格模式,文件开头一定要声明 ‘use strict’; 否则会报错. 还有必须先声明再使用. 在同一作用域,重复声明会报错.  参考文档深入浅出ES6（十四）：let和const在JavaScript ES6中使用let和c">
+<meta name="twitter:title" content="thinphp 循环嵌套if 不输出的问题">
+<meta name="twitter:description" content="这个以前应该是遇到过,不过很久不用都忘记了.这次就记录下吧.免得以后没处查去. 原因很简单 当双重循环 volist 的时候, 如果做两重循环的判断.这是就不能用简写的 $vo.id 这种形式了 必须用数组的形式 $vo[&amp;#39;id&amp;#39;]这样就ok了 12345678910111213141516&amp;lt;select class=&quot;lay-search&quot; name=&quot;cateid&quot; id">
 
 
 
@@ -117,7 +117,7 @@
   };
 </script>
 
-  <title> js中let和var定义变量的区别 const 说明 | elickzhao's Blog </title>
+  <title> thinphp 循环嵌套if 不输出的问题 | elickzhao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +280,7 @@
             
             
               
-                js中let和var定义变量的区别 const 说明
+                thinphp 循环嵌套if 不输出的问题
               
             
           </h1>
@@ -292,38 +292,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-27T22:33:41+08:00" content="2016-10-27">
-              2016-10-27
+            <time itemprop="dateCreated" datetime="2018-02-08T22:16:17+08:00" content="2018-02-08">
+              2018-02-08
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端技术/" itemprop="url" rel="index">
-                    <span itemprop="name">前端技术</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/js中let和var定义变量的区别 const 说明/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/js中let和var定义变量的区别 const 说明/" itemprop="commentsCount"></span>
+                <a href="/2018/02/thinphp 循环嵌套if 不输出的问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/02/thinphp 循环嵌套if 不输出的问题/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -346,15 +327,9 @@
       
 
       
-        <p><strong>let</strong> 和 <strong>var</strong> 是一样的用于定义,最主要的是 <strong>let</strong> 是javascript 严格模式.</p>
-<p><strong>主要区别如下:</strong></p>
-<ul>
-<li>作用范围不一样, <strong>var</strong>是全局的, <strong>let</strong>是局部的.</li>
-<li>而且使用严格模式,文件开头一定要声明 <strong>‘use strict’;</strong> 否则会报错.</li>
-<li>还有必须先声明再使用.</li>
-<li>在同一作用域,重复声明会报错.</li>
-</ul>
-<p><a href="http://blog.csdn.net/nfer_zhuang/article/details/48781671" target="_blank" rel="noopener">参考文档</a><br><a href="http://www.infoq.com/cn/articles/es6-in-depth-let-and-const/" target="_blank" rel="noopener">深入浅出ES6（十四）：let和const</a><br><a href="http://www.tuicool.com/articles/zEruqm" target="_blank" rel="noopener">在JavaScript ES6中使用let和const定义变量</a></p>
+        <p>这个以前应该是遇到过,不过很久不用都忘记了.这次就记录下吧.免得以后没处查去.</p>
+<p>原因很简单 当双重循环 <strong>volist</strong> 的时候, 如果做两重循环的判断.<br>这是就不能用简写的 <code>$vo.id</code> 这种形式了 必须用数组的形式 <code>$vo[&#39;id&#39;]</code><br>这样就ok了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"lay-search"</span> <span class="attr">name</span>=<span class="string">"cateid"</span> <span class="attr">id</span>=<span class="string">"cateid"</span> <span class="attr">lay-filter</span>=<span class="string">"cid_1"</span> <span class="attr">lay-search</span> <span class="attr">lay-verify</span>=<span class="string">"cateid"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>&gt;</span>所有分类<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>请选择<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">volist</span> <span class="attr">name</span>=<span class="string">"cate_list"</span> <span class="attr">id</span>=<span class="string">"v"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">condition</span>=<span class="string">"$v.tid eq 1"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">"&#123;$v.name&#125;"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">volist</span> <span class="attr">name</span>=<span class="string">"cate_list"</span> <span class="attr">id</span>=<span class="string">"vo"</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- 注意这里 这里用的是数组形式 --&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">if</span> <span class="attr">condition</span>=<span class="string">"$vo['tid'] == $v['id']"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"&#123;$vo.id&#125;"</span>&gt;</span>&#123;$vo.name&#125;<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">volist</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">volist</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -377,7 +352,7 @@
           
             <a href="/tags/小百科/" rel="tag">#小百科</a>
           
-            <a href="/tags/js/" rel="tag">#js</a>
+            <a href="/tags/php/" rel="tag">#php</a>
           
         </div>
       
@@ -386,17 +361,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/php 里面 class 用法/" rel="next" title="php 里面 class 用法">
-                <i class="fa fa-chevron-left"></i> php 里面 class 用法
+              <a href="/2018/02/各个浏览器隐藏滚动条 /" rel="next" title="各个浏览器隐藏滚动条">
+                <i class="fa fa-chevron-left"></i> 各个浏览器隐藏滚动条
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/apiDoc安装与使用说明/" rel="prev" title="apidoc安装与使用说明">
-                apidoc安装与使用说明 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -460,8 +431,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/js中let和var定义变量的区别 const 说明/"
-           data-title="js中let和var定义变量的区别 const 说明" data-url="http://elickzhao.github.io/2016/10/js中let和var定义变量的区别 const 说明/">
+      <div class="ds-thread" data-thread-key="2018/02/thinphp 循环嵌套if 不输出的问题/"
+           data-title="thinphp 循环嵌套if 不输出的问题" data-url="http://elickzhao.github.io/2018/02/thinphp 循环嵌套if 不输出的问题/">
       </div>
     
   </div>

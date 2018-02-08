@@ -278,6 +278,110 @@
             
               
                 
+                <a class="post-title-link" href="/2017/12/小程序动画效果使用 /" itemprop="url">
+                  小程序动画效果使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-28T20:16:40+08:00" content="2017-12-28">
+              2017-12-28
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/12/小程序动画效果使用 /#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/小程序动画效果使用 /" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>这个动画能实现基本功能.不过还是挺费劲的.<br>但现在还有个问题没有解决.<br>就是循环的时候 每个items加上动画 如何让他单个执行 这个还没想好</p>
+<p><strong>js</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    markers: [&#123;</span><br><span class="line">      id: 0,</span><br><span class="line">      latitude: 28.0369400000,</span><br><span class="line">      longitude: 120.6492300000,</span><br><span class="line">      width: 20,</span><br><span class="line">      height: 20,</span><br><span class="line">      title: &quot;欧美佳化妆美甲祛斑纹绣店&quot;</span><br><span class="line">    &#125;],</span><br><span class="line">    animationData: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: function () &#123;</span><br><span class="line">    // 页面渲染完成</span><br><span class="line">    //实例化一个动画</span><br><span class="line">    this.animation = wx.createAnimation(&#123;</span><br><span class="line">      // 动画持续时间，单位ms，默认值 400</span><br><span class="line">      duration: 1000,</span><br><span class="line">      /**</span><br><span class="line">       * http://cubic-bezier.com/#0,0,.58,1  </span><br><span class="line">       *  linear  动画一直较为均匀</span><br><span class="line">       *  ease    从匀速到加速在到匀速</span><br><span class="line">       *  ease-in 缓慢到匀速</span><br><span class="line">       *  ease-in-out 从缓慢到匀速再到缓慢</span><br><span class="line">       * </span><br><span class="line">       *  http://www.tuicool.com/articles/neqMVr</span><br><span class="line">       *  step-start 动画一开始就跳到 100% 直到动画持续时间结束 一闪而过</span><br><span class="line">       *  step-end   保持 0% 的样式直到动画持续时间结束        一闪而过</span><br><span class="line">       */</span><br><span class="line">      timingFunction: &apos;ease&apos;,</span><br><span class="line">      // 延迟多长时间开始</span><br><span class="line">      delay: 100,</span><br><span class="line">      /**</span><br><span class="line">       * 以什么为基点做动画  效果自己演示</span><br><span class="line">       * left,center right是水平方向取值，对应的百分值为left=0%;center=50%;right=100%</span><br><span class="line">       * top center bottom是垂直方向的取值，其中top=0%;center=50%;bottom=100%</span><br><span class="line">       */</span><br><span class="line">      transformOrigin: &apos;center top 0&apos;,</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        console.log(res)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    setTimeout(function () &#123;</span><br><span class="line">      this.rotate();</span><br><span class="line">    &#125;.bind(this), 200)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line"> * 放大显示</span><br><span class="line"> */</span><br><span class="line">  rotate: function () &#123;</span><br><span class="line">    //放大显示后并恢复</span><br><span class="line">    //  //现在唯一的问题是 如果在循环里绑定相同的动画 却是单一执行呢 唉....</span><br><span class="line">    // this.animation.rotate(150).step()</span><br><span class="line">    this.animation.opacity(1).scale(1.5, 1.5).step().scale(1, 1).step();</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      //输出动画</span><br><span class="line">      animation: this.animation.export()</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/12/小程序动画效果使用 /#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/12/sublime text 插件 PlainTasks 任务计划/" itemprop="url">
                   sublime text 插件 PlainTasks 任务计划
                 </a>
@@ -684,111 +788,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/让人遭心的  MySql enum字段使用问题/" itemprop="url">
-                  让人遭心的  MySql enum字段使用问题
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-12-14T16:44:08+08:00" content="2017-12-14">
-              2017-12-14
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/12/让人遭心的  MySql enum字段使用问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/让人遭心的  MySql enum字段使用问题/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天在改程序的时候遇到了 enum字段 这个东西果真奇葩.怎么搜索都搜索不到.<br>后来查了资料才搞懂.<br>这个字段是 mysql独有 其他数据库都没有的 所以用了他就别想换了<br>他的唯一优点就是控制大小,因为他是类似数组形式保存的 所以数量是可控的<br>但也造成了搜索时候的问题. 直接搜索的时候有可能搜索的是按key来搜不是保存在字段里value 唉…</p>
-<p>据下面文档说 他的key是从1开始 所以搜不到0<br><del>但是我遇到更奇葩的事 就算我按key=1 来搜索也搜不到 0 这个值. 而其他两个 1 和 2 全能搜到</del><br>妈蛋 原来人家说的是对的 只不过数据库形式我没仔细看错了 搜索3就出来了<br>数据库形式 是这样的  [‘1’=&gt;1,’2’=&gt;’2’,’3’=&gt;0]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM lr_order WHERE back = 3;  //这是按key搜索 匹配出来的 全是 back=0</span><br></pre></td></tr></table></figure></p>
-<p>如果想按值搜索怎么做? 加上单引号就行了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM lr_order WHERE back = &apos;0&apos;;  //这是按value搜索 匹配出来的 全是 back=0</span><br></pre></td></tr></table></figure></p>
-<p>这个破东西的确烦,可能框架都没法用.所以建立数据库的时候,还是用tinyint算了</p>
-<p>##参考文档<br><a href="http://blog.csdn.net/kkikiako/article/details/49746791" target="_blank" rel="noopener">MySql enum字段使用问题</a><br><a href="http://www.jb51.net/article/53426.htm" target="_blank" rel="noopener">要慎用mysql的enum字段的原因</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -834,7 +833,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">266</span>
+              <span class="site-state-item-count">267</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
