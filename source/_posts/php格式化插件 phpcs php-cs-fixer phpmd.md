@@ -1,3 +1,12 @@
+---
+title: php格式化插件 phpcs php-cs-fixer phpmd
+date: 2018-02-05 23:28:53
+tags: IDE
+categories: 前端技术
+---
+
+
+
 ## 使用
 
 在用IDE开发的时候,验证php代码的错误和标准格式化.
