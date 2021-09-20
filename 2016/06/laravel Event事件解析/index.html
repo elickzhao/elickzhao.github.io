@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860924" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227203" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860924" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860924"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227203" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227203"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1933,8 +1933,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  Event事件总是晕晕的,反复看了几遍,终于纠正了我的惯性思维,我一直认为监听类是起到监听作用.其实错了,事件类是相当于触发,监听某个动作.而监听类是响应这个动作的具体操作.从另一个方面讲,监听类其实监听的是事件类的触发.这下就清晰点了.下面把整个事件所需要的文件都简单说明下.</p>
-<h2 id="简要说明"><a href="#简要说明" class="headerlink" title="简要说明"></a>简要说明</h2><p><strong>laravel事件的主要文件</strong></p>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>  Event事件总是晕晕的,反复看了几遍,终于纠正了我的惯性思维,我一直认为监听类是起到监听作用.其实错了,事件类是相当于触发,监听某个动作.而监听类是响应这个动作的具体操作.从另一个方面讲,监听类其实监听的是事件类的触发.这下就清晰点了.下面把整个事件所需要的文件都简单说明下.</p>
+</div><h2 id="简要说明"><a href="#简要说明" class="headerlink" title="简要说明"></a>简要说明</h2><div class="story post-story"><p><strong>laravel事件的主要文件</strong></p>
 <ol>
 <li>Event.php (创建事件类,这个文件最主要的作用就是注入,其他的功能暂时没发现)</li>
 <li>Listener.php (创建监听类,这个文件的主要作用就是响应事件类,当事件触发了进行响应操作)</li>
@@ -1942,7 +1942,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <span id="more"></span>
 
-<p><img src="/image/16-6/4.svg" class="lazyload" data-srcset="/image/16-6/4.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p><img src="/image/16-6/4.svg" class="lazyload" data-srcset="/image/16-6/4.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <p><strong>编写事件流程</strong></p>
 <ol>
 <li>注册事件-监听器 (也就是在EventServiceProvider里关联相关事件类和监听类)</li>
@@ -1951,8 +1951,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>定义监听器类</li>
 <li>触发事件<br>详细看下面的文档</li>
 </ol>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="http://laravelacademy.org/post/1889.html">Laravel 5.1 定义事件、事件监听器以及触发事件实例教程</a></p>
+</div><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="http://laravelacademy.org/post/1889.html">Laravel 5.1 定义事件、事件监听器以及触发事件实例教程</a></p>
 
+</div>
   </div>
   
   
@@ -2091,6 +2092,7 @@ EventServiceProvider.php (关联事件与监听的文件)
         <a class='prev' href='/2016/06/phpstudy%202016%E9%85%8D%E7%BD%AE/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>phpstudy 2016配置</p>
           <p class='content'>因为这版更新了php7 所以需要VC10和VC14 这个百度查下载就可以了 但要记住一定要X86的 光装64位的是不好使的
+
 </p>
         </a>
       
@@ -2541,8 +2543,8 @@ EventServiceProvider.php (关联事件与监听的文件)
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860924')
-      volantis.js('/js/message.js?time=1632106860924', () => {
+      volantis.css('/css/message.css?time=1632107227203')
+      volantis.js('/js/message.js?time=1632107227203', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2586,8 +2588,8 @@ EventServiceProvider.php (关联事件与监听的文件)
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860924')
-      volantis.js('/js/message.js?time=1632106860924', () => {
+      volantis.css('/css/message.css?time=1632107227203')
+      volantis.js('/js/message.js?time=1632107227203', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2843,7 +2845,7 @@ EventServiceProvider.php (关联事件与监听的文件)
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860924')
+    volantis.js('/js/rightMenu.js?time=1632107227203')
   </script>
 
 
@@ -2857,19 +2859,19 @@ EventServiceProvider.php (关联事件与监听的文件)
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860924")
+        volantis.js("/js/plugins/sites.js?time=1632107227203")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860924")
+        volantis.js("/js/plugins/friends.js?time=1632107227203")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860924")
+        volantis.js("/js/plugins/contributors.js?time=1632107227203")
       }
     
   };
@@ -2985,7 +2987,7 @@ EventServiceProvider.php (关联事件与监听的文件)
 
 
 
-<script src="/js/app.js?time=1632106860924.js"></script>
+<script src="/js/app.js?time=1632107227203.js"></script>
 
 
 <!-- optional -->
@@ -2998,7 +3000,7 @@ EventServiceProvider.php (关联事件与监听的文件)
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860924");
+    return volantis.js("/js/search/hexo.js?time=1632107227203");
   }
 
   function loadSearchService() {

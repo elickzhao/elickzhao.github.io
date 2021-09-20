@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860708" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227155" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860708" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860708"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227155" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227155"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1932,15 +1932,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  js的数组和php有些不同,他的定义方法,自定义下标只有一种方法 <code>var arr[&#39;a&#39;] = 1</code>,不能像php一样 <code>$arr = [&#39;a&#39;=&gt;1]</code>,还有种没有下标的自定义方法 就是下面方法一那种方法</p>
-<h2 id="方法一：直接定义并且初始化，这种遇到数量少的情况可以用"><a href="#方法一：直接定义并且初始化，这种遇到数量少的情况可以用" class="headerlink" title="方法一：直接定义并且初始化，这种遇到数量少的情况可以用"></a>方法一：直接定义并且初始化，这种遇到数量少的情况可以用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var _TheArray = [[&quot;0-1&quot;,&quot;0-2&quot;],[&quot;1-1&quot;,&quot;1-2&quot;],[&quot;2-1&quot;,&quot;2-2&quot;]]</span><br></pre></td></tr></table></figure>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>  js的数组和php有些不同,他的定义方法,自定义下标只有一种方法 <code>var arr[&#39;a&#39;] = 1</code>,不能像php一样 <code>$arr = [&#39;a&#39;=&gt;1]</code>,还有种没有下标的自定义方法 就是下面方法一那种方法</p>
+</div><h2 id="方法一：直接定义并且初始化，这种遇到数量少的情况可以用"><a href="#方法一：直接定义并且初始化，这种遇到数量少的情况可以用" class="headerlink" title="方法一：直接定义并且初始化，这种遇到数量少的情况可以用"></a>方法一：直接定义并且初始化，这种遇到数量少的情况可以用</h2><div class="story post-story"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var _TheArray = [[&quot;0-1&quot;,&quot;0-2&quot;],[&quot;1-1&quot;,&quot;1-2&quot;],[&quot;2-1&quot;,&quot;2-2&quot;]]</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
-<h2 id="方法二：未知长度的二维数组"><a href="#方法二：未知长度的二维数组" class="headerlink" title="方法二：未知长度的二维数组"></a>方法二：未知长度的二维数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tArray = <span class="keyword">new</span> <span class="built_in">Array</span>();   <span class="comment">//先声明一维</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> k=<span class="number">0</span>;k&lt;i;k++)&#123; <span class="comment">//一维长度为i,i为变量，可以根据实际情况改变</span></span><br><span class="line"> tArray[k]=<span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//声明二维，每一个一维数组里面的一个元素都是一个数组；</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;p;j++)&#123; <span class="comment">//一维数组里面每个元素数组可以包含的数量p，p也是一个变量；</span></span><br><span class="line">  tArray[k][j]=<span class="string">&quot;&quot;</span>; <span class="comment">//这里将变量初始化，我这边统一初始化为空，后面在用所需的值覆盖里面的值</span></span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div><h2 id="方法二：未知长度的二维数组"><a href="#方法二：未知长度的二维数组" class="headerlink" title="方法二：未知长度的二维数组"></a>方法二：未知长度的二维数组</h2><div class="story post-story"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tArray = <span class="keyword">new</span> <span class="built_in">Array</span>();   <span class="comment">//先声明一维</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> k=<span class="number">0</span>;k&lt;i;k++)&#123; <span class="comment">//一维长度为i,i为变量，可以根据实际情况改变</span></span><br><span class="line"> tArray[k]=<span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//声明二维，每一个一维数组里面的一个元素都是一个数组；</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;p;j++)&#123; <span class="comment">//一维数组里面每个元素数组可以包含的数量p，p也是一个变量；</span></span><br><span class="line">  tArray[k][j]=<span class="string">&quot;&quot;</span>; <span class="comment">//这里将变量初始化，我这边统一初始化为空，后面在用所需的值覆盖里面的值</span></span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>给定义的数组传入所需的值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tArray[<span class="number">6</span>][<span class="number">1</span>]=<span class="number">5</span>；<span class="comment">//这样就可以将5的值传入到数组中，覆盖初始化的空</span></span><br></pre></td></tr></table></figure>
-<h2 id="方法三：在这之前，以上两者方法都有问题，方法二，每次定义都初始化了，虽然后面可以动态修改，但是还是不方法"><a href="#方法三：在这之前，以上两者方法都有问题，方法二，每次定义都初始化了，虽然后面可以动态修改，但是还是不方法" class="headerlink" title="方法三：在这之前，以上两者方法都有问题，方法二，每次定义都初始化了，虽然后面可以动态修改，但是还是不方法"></a>方法三：在这之前，以上两者方法都有问题，方法二，每次定义都初始化了，虽然后面可以动态修改，但是还是不方法</h2><p>所以我尝试了一种动态传入值到数组的方法</p>
+</div><h2 id="方法三：在这之前，以上两者方法都有问题，方法二，每次定义都初始化了，虽然后面可以动态修改，但是还是不方法"><a href="#方法三：在这之前，以上两者方法都有问题，方法二，每次定义都初始化了，虽然后面可以动态修改，但是还是不方法" class="headerlink" title="方法三：在这之前，以上两者方法都有问题，方法二，每次定义都初始化了，虽然后面可以动态修改，但是还是不方法"></a>方法三：在这之前，以上两者方法都有问题，方法二，每次定义都初始化了，虽然后面可以动态修改，但是还是不方法</h2><div class="story post-story"><p>所以我尝试了一种动态传入值到数组的方法</p>
 <p>ps:一些在实践过程中遇到的数组有趣的现象<br>本来以为二维数组可以像下面这样直接传入值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="number">0</span>;a&lt;i;a++)&#123;</span><br><span class="line">tArray[a]=(matArray[a],addArray[a]); <span class="comment">//matArray[a]和addArray[a]是两个数组，这两个数组直接传入tArray[a]中</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>结果是tArray[a]中收到的是后面一个数组的值，matArray[a]的内容被忽略的，如果换一个位置，matArray[a]在后面，则传入的是addArray[a]的值。</p>
@@ -1948,9 +1948,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=[<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="keyword">var</span> b=[];</span><br><span class="line">b[<span class="number">0</span>]=a;<span class="comment">//把数组a作为b数组的元素传入b数组中</span></span><br><span class="line">alert(b[<span class="number">0</span>][<span class="number">1</span>]);  <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
 <p>上面是最简单的二维数组，<br>上面例子换种写法：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b=[];</span><br><span class="line">b[<span class="number">0</span>]=[<span class="number">1</span>,<span class="number">2</span>];<span class="comment">//把数组[1,2]作为b数组的元素传入b数组中</span></span><br><span class="line">alert(b[<span class="number">0</span>][<span class="number">1</span>]);  <span class="comment">//2</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">//可以看出上面的b[0]=[1,2]是可以用的</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="number">0</span>;a&lt;i;a++)&#123;</span><br><span class="line">tArray[a]=[ matArray[a],addArray[a] ];  上面例子中的（）修改为[] 就可以成功的组成一个二维数组了</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="总结：方法三："><a href="#总结：方法三：" class="headerlink" title="总结：方法三："></a>总结：方法三：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="number">0</span>;a&lt;i;a++)&#123;</span><br><span class="line">tArray[a]=[ aArray[a],bArray[a],cArray[a]]; 还可以增加dArray[a],eArray[a]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</div><h2 id="总结：方法三："><a href="#总结：方法三：" class="headerlink" title="总结：方法三："></a>总结：方法三：</h2><div class="story post-story"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="number">0</span>;a&lt;i;a++)&#123;</span><br><span class="line">tArray[a]=[ aArray[a],bArray[a],cArray[a]]; 还可以增加dArray[a],eArray[a]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>这种情况适用于已知几个数组，把他们组合成一个二维数组情况</p>
 
+</div>
   </div>
   
   
@@ -2082,6 +2083,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class='next' href='/2016/07/laravel%20Middleware%E4%B8%AD%E9%97%B4%E4%BB%B6%E8%A7%A3%E6%9E%90/'>
           <p class='title'>laravel Middleware中间件解析<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>:分割 要传递给中间件的参数,多个参数用,分割
+
 </p>
         </a>
       
@@ -2526,8 +2528,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860708')
-      volantis.js('/js/message.js?time=1632106860708', () => {
+      volantis.css('/css/message.css?time=1632107227155')
+      volantis.js('/js/message.js?time=1632107227155', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2571,8 +2573,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860708')
-      volantis.js('/js/message.js?time=1632106860708', () => {
+      volantis.css('/css/message.css?time=1632107227155')
+      volantis.js('/js/message.js?time=1632107227155', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2828,7 +2830,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860708')
+    volantis.js('/js/rightMenu.js?time=1632107227155')
   </script>
 
 
@@ -2842,19 +2844,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860708")
+        volantis.js("/js/plugins/sites.js?time=1632107227155")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860708")
+        volantis.js("/js/plugins/friends.js?time=1632107227155")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860708")
+        volantis.js("/js/plugins/contributors.js?time=1632107227155")
       }
     
   };
@@ -2970,7 +2972,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106860708.js"></script>
+<script src="/js/app.js?time=1632107227155.js"></script>
 
 
 <!-- optional -->
@@ -2983,7 +2985,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860708");
+    return volantis.js("/js/search/hexo.js?time=1632107227155");
   }
 
   function loadSearchService() {

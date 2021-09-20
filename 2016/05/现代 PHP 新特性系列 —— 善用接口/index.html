@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106861120" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227255" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106861120" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106861120"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227255" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227255"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1935,13 +1935,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>接口一直让我很晕,下面这篇文章有了很好的说明.<br><a target="_blank" rel="noopener" href="http://laravelacademy.org/post/4246.html">现代 PHP 新特性系列（二） —— 善用接口</a><br>这里我就再简单化下,以便我能快速记忆.</p>
 <hr>
-<h1 id="简要说明"><a href="#简要说明" class="headerlink" title="简要说明"></a>简要说明</h1><h2 id="接口说直观点就是模具-或者说API"><a href="#接口说直观点就是模具-或者说API" class="headerlink" title="接口说直观点就是模具,或者说API"></a>接口说直观点就是模具,或者说API</h2><ul>
+<h1 id="简要说明"><a href="#简要说明" class="headerlink" title="简要说明"></a>简要说明</h1><h2 id="接口说直观点就是模具-或者说API"><a href="#接口说直观点就是模具-或者说API" class="headerlink" title="接口说直观点就是模具,或者说API"></a>接口说直观点就是模具,或者说API</h2><div class="story post-story"><ul>
 <li><p>API说<br>说他像API,是因为他提出来所有功能.你知道接口有什么,你就知道你能做什么了</p>
 </li>
 <li><p>模具说<br>说他像模具,是因为接口的功能是统一的,一致的.但是实现的方法可以不同.就像你做一个花瓶的模具,但是根据填充的材料不同,可以做出不同的花瓶.什么玻璃的,陶瓷的,珐琅的.虽然他们长的都一个样.</p>
 </li>
 </ul>
-<h2 id="接口的作用"><a href="#接口的作用" class="headerlink" title="接口的作用"></a>接口的作用</h2><p>所以接口的作用,就是解耦.</p>
+</div><h2 id="接口的作用"><a href="#接口的作用" class="headerlink" title="接口的作用"></a>接口的作用</h2><div class="story post-story"><p>所以接口的作用,就是解耦.</p>
 <p>比如一个DB类流程:</p>
 <ul>
 <li>DB操作类,根据DB接口提供的功能,进行具体功能开发.</li>
@@ -1950,7 +1950,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <span id="more"></span>
 
-<p><strong>大致如下图:</strong><br><img src="/image/16-5/interface.svg" class="lazyload" data-srcset="/image/16-5/interface.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="接口流程图"></p>
+<p><strong>大致如下图:</strong><br><img src="/image/16-5/interface.svg" class="lazyload" data-srcset="/image/16-5/interface.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="接口流程图"></p>
 <p><strong>代码参考 用的不是DB的例子</strong><br><strong>Store类</strong></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Illuminate</span>\<span class="title">Contracts</span>\<span class="title">Cache</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Store</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Retrieve an item from the cache by key.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  string|array  $key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> mixed</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params"><span class="variable">$key</span></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Retrieve multiple items from the cache by key.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * Items not found in the cache will have a null value.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  array  $keys</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> array</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">many</span>(<span class="params"><span class="keyword">array</span> <span class="variable">$keys</span></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Store an item in the cache for a given number of minutes.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  string  $key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  mixed   $value</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  int     $minutes</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> void</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">put</span>(<span class="params"><span class="variable">$key</span>, <span class="variable">$value</span>, <span class="variable">$minutes</span></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Store multiple items in the cache for a given number of minutes.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  array  $values</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  int  $minutes</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> void</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">putMany</span>(<span class="params"><span class="keyword">array</span> <span class="variable">$values</span>, <span class="variable">$minutes</span></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Increment the value of an item in the cache.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  string  $key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  mixed   $value</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> int|bool</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">increment</span>(<span class="params"><span class="variable">$key</span>, <span class="variable">$value</span> = <span class="number">1</span></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Decrement the value of an item in the cache.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  string  $key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  mixed   $value</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> int|bool</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">decrement</span>(<span class="params"><span class="variable">$key</span>, <span class="variable">$value</span> = <span class="number">1</span></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Store an item in the cache indefinitely.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  string  $key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  mixed   $value</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> void</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">forever</span>(<span class="params"><span class="variable">$key</span>, <span class="variable">$value</span></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Remove an item from the cache.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  string  $key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> bool</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">forget</span>(<span class="params"><span class="variable">$key</span></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Remove all items from the cache.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> void</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">flush</span>(<span class="params"></span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the cache key prefix.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getPrefix</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1964,6 +1964,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Tests</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Contracts</span>\<span class="title">Cache</span>\<span class="title">Store</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CacheStore</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$store</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params">Store <span class="variable">$store</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;store = <span class="variable">$store</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params"><span class="variable">$key</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;store-&gt;get(<span class="variable">$key</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">put</span>(<span class="params"><span class="variable">$key</span>, <span class="variable">$value</span>, <span class="variable">$minutes</span>=<span class="number">1</span></span>)  </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;store-&gt;put(<span class="variable">$key</span>, <span class="variable">$value</span>, <span class="variable">$minutes</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">forget</span>(<span class="params"><span class="variable">$key</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;store-&gt;forever(<span class="variable">$key</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">flush</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;store-&gt;flush();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>使用CacheStore类</strong></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$memcached</span> = <span class="keyword">new</span> \Memcached();</span><br><span class="line"><span class="variable">$memcached</span>-&gt;addServer(<span class="string">&#x27;localhost&#x27;</span>,<span class="number">11211</span>);</span><br><span class="line"><span class="variable">$memcachedCache</span> = <span class="keyword">new</span> MemcachedStore(<span class="variable">$memcached</span>);</span><br><span class="line"><span class="variable">$cacheStore</span> = <span class="keyword">new</span> CacheStore(<span class="variable">$memcachedCache</span>);</span><br><span class="line"><span class="variable">$cacheStore</span>-&gt;put(<span class="string">&#x27;site&#x27;</span>,<span class="string">&#x27;http://LaravelAcademy.org&#x27;</span>);</span><br><span class="line">dd(<span class="variable">$cacheStore</span>-&gt;get(<span class="string">&#x27;site&#x27;</span>));</span><br></pre></td></tr></table></figure>
+</div>
   </div>
   
   
@@ -2586,8 +2587,8 @@ bo...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861120')
-      volantis.js('/js/message.js?time=1632106861120', () => {
+      volantis.css('/css/message.css?time=1632107227255')
+      volantis.js('/js/message.js?time=1632107227255', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2631,8 +2632,8 @@ bo...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861120')
-      volantis.js('/js/message.js?time=1632106861120', () => {
+      volantis.css('/css/message.css?time=1632107227255')
+      volantis.js('/js/message.js?time=1632107227255', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2888,7 +2889,7 @@ bo...</p>
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106861120')
+    volantis.js('/js/rightMenu.js?time=1632107227255')
   </script>
 
 
@@ -2902,19 +2903,19 @@ bo...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106861120")
+        volantis.js("/js/plugins/sites.js?time=1632107227255")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106861120")
+        volantis.js("/js/plugins/friends.js?time=1632107227255")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106861120")
+        volantis.js("/js/plugins/contributors.js?time=1632107227255")
       }
     
   };
@@ -3030,7 +3031,7 @@ bo...</p>
 
 
 
-<script src="/js/app.js?time=1632106861120.js"></script>
+<script src="/js/app.js?time=1632107227255.js"></script>
 
 
 <!-- optional -->
@@ -3043,7 +3044,7 @@ bo...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106861120");
+    return volantis.js("/js/search/hexo.js?time=1632107227255");
   }
 
   function loadSearchService() {

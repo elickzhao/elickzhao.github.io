@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106859790" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226935" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106859790" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106859790"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226935" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226935"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1937,7 +1937,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>注意:</strong> 如果一个类没有基于任何接口那么就没有必要将其绑定到容器。容器并不需要被告知如何构建对象，因为它会使用 PHP 的反射服务自动解析出具体的对象。(?后面这个明白意思,但不知道怎么做)</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="Provider-服务提供者"><a href="#Provider-服务提供者" class="headerlink" title="Provider (服务提供者)"></a>Provider (服务提供者)</h2><h3 id="主要作用就是绑定服务到容器中-看下面例子"><a href="#主要作用就是绑定服务到容器中-看下面例子" class="headerlink" title="主要作用就是绑定服务到容器中,看下面例子."></a>主要作用就是绑定服务到容器中,看下面例子.</h3><blockquote>
+<h2 id="Provider-服务提供者"><a href="#Provider-服务提供者" class="headerlink" title="Provider (服务提供者)"></a>Provider (服务提供者)</h2><div class="story post-story"><h3 id="主要作用就是绑定服务到容器中-看下面例子"><a href="#主要作用就是绑定服务到容器中-看下面例子" class="headerlink" title="主要作用就是绑定服务到容器中,看下面例子."></a>主要作用就是绑定服务到容器中,看下面例子.</h3><blockquote>
 <p>在一个服务提供者中，可以通过 $this-&gt;app 变量访问容器，然后使用 bind 方法注册一个绑定，该方法需要两个参数，第一个参数是我们想要注册的类名或接口名称，第二个参数是返回类的实例的闭包</p>
 </blockquote>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Providers</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Riak</span>\<span class="title">Connection</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Support</span>\<span class="title">ServiceProvider</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RiakServiceProvider</span> <span class="keyword">extends</span> <span class="title">ServiceProvider</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 在容器中注册绑定。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> void</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">register</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;   <span class="comment">//这是5.3写法</span></span><br><span class="line">        <span class="keyword">$this</span>-&gt;app-&gt;singleton(Connection::class, <span class="function"><span class="keyword">function</span> (<span class="params"><span class="variable">$app</span></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Connection(config(<span class="string">&#x27;riak&#x27;</span>));</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">//5.2以前这么写 $this-&gt;app-&gt;singleton(&#x27;Riak\Contracts\Connection&#x27;, function ($app)&#123;...&#125;</span></span><br><span class="line">        <span class="comment">// Connection::class 返回的就是命名空间字符串(可以看另一个我的文章),所以跟5.2是一样的.  </span></span><br><span class="line">        <span class="comment">//这里千万注意&#x27;Riak\Contracts\Connection&#x27;是个字符串,相当于在容器中定义了一个名字并把实例赋值给了这个名字.</span></span><br><span class="line">        <span class="comment">//并没有其他更高深的含义</span></span><br><span class="line">        <span class="comment">//所以只要在 config/app 下的provider数组里 注册一下就可以使用了</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1964,10 +1964,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Contracts</span>\<span class="title">EventPusher</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 创建一个新的类实例</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  EventPusher  $pusher</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> void</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params">EventPusher <span class="variable">$pusher</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">$this</span>-&gt;pusher = <span class="variable">$pusher</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//当然还可以手动调用 </span></span><br><span class="line">    <span class="variable">$fooBar</span> = <span class="keyword">$this</span>-&gt;app-&gt;make(<span class="string">&#x27;FooBar&#x27;</span>);</span><br><span class="line">    <span class="comment">//其次，你可以以数组方式访问容器，因为其实现了 PHP 的 ArrayAccess 接口：</span></span><br><span class="line">    <span class="variable">$fooBar</span> = <span class="keyword">$this</span>-&gt;app[<span class="string">&#x27;FooBar&#x27;</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="容器说明"><a href="#容器说明" class="headerlink" title="容器说明"></a>容器说明</h2><p>容器很简单 就是$this-&gt;app 或者帮助函数app()获得就是laravel实例 里面就是容器</p>
-<h2 id="门面说明"><a href="#门面说明" class="headerlink" title="门面说明"></a>门面说明</h2><p>有空具体写一下, 门面有两个情形,一种是Cache类的,一种是Config类的. Config比较简单就是实现了一个接口,然后关联一个服务. 而且好像是laravel自动加载的,不需要手动在config/app的数组里添加.<br>但是Cache就不同了,他必须在config/app里手动添加.而且他还有一个服务提供者Provider,在容器里的’cache’其实首先指定的是这个Provider,并不像Config那么简单直接指向服务了.</p>
+</div><h2 id="容器说明"><a href="#容器说明" class="headerlink" title="容器说明"></a>容器说明</h2><div class="story post-story"><p>容器很简单 就是$this-&gt;app 或者帮助函数app()获得就是laravel实例 里面就是容器</p>
+</div><h2 id="门面说明"><a href="#门面说明" class="headerlink" title="门面说明"></a>门面说明</h2><div class="story post-story"><p>有空具体写一下, 门面有两个情形,一种是Cache类的,一种是Config类的. Config比较简单就是实现了一个接口,然后关联一个服务. 而且好像是laravel自动加载的,不需要手动在config/app的数组里添加.<br>但是Cache就不同了,他必须在config/app里手动添加.而且他还有一个服务提供者Provider,在容器里的’cache’其实首先指定的是这个Provider,并不像Config那么简单直接指向服务了.</p>
 <p>这是门面类, 这里的’cache’是容器里的实例. 这个在Config/app的alias里.  但你会发现Cache绑定容器的Provider,帮的’cache’是个管理类. 但是Config却找不到这个Provider在哪里.他只有简单的继承了一个接口就完了.</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cache</span> <span class="keyword">extends</span> <span class="title">Facade</span></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取组件注册名称</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getFacadeAccessor</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;cache&#x27;</span>; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div>
   </div>
   
   
@@ -2577,8 +2578,8 @@ node.js 自身升级123456789# node有一个模块叫n（这名字可够短的�
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106859790')
-      volantis.js('/js/message.js?time=1632106859790', () => {
+      volantis.css('/css/message.css?time=1632107226935')
+      volantis.js('/js/message.js?time=1632107226935', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2622,8 +2623,8 @@ node.js 自身升级123456789# node有一个模块叫n（这名字可够短的�
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106859790')
-      volantis.js('/js/message.js?time=1632106859790', () => {
+      volantis.css('/css/message.css?time=1632107226935')
+      volantis.js('/js/message.js?time=1632107226935', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2879,7 +2880,7 @@ node.js 自身升级123456789# node有一个模块叫n（这名字可够短的�
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106859790')
+    volantis.js('/js/rightMenu.js?time=1632107226935')
   </script>
 
 
@@ -2893,19 +2894,19 @@ node.js 自身升级123456789# node有一个模块叫n（这名字可够短的�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106859790")
+        volantis.js("/js/plugins/sites.js?time=1632107226935")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106859790")
+        volantis.js("/js/plugins/friends.js?time=1632107226935")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106859790")
+        volantis.js("/js/plugins/contributors.js?time=1632107226935")
       }
     
   };
@@ -3021,7 +3022,7 @@ node.js 自身升级123456789# node有一个模块叫n（这名字可够短的�
 
 
 
-<script src="/js/app.js?time=1632106859790.js"></script>
+<script src="/js/app.js?time=1632107226935.js"></script>
 
 
 <!-- optional -->
@@ -3034,7 +3035,7 @@ node.js 自身升级123456789# node有一个模块叫n（这名字可够短的�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106859790");
+    return volantis.js("/js/search/hexo.js?time=1632107226935");
   }
 
   function loadSearchService() {

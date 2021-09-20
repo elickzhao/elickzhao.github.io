@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106858672" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226685" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106858672" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106858672"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226685" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226685"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1928,6 +1928,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p><strong>test.wxml</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--动态获取数据--&gt;</span><br><span class="line">&lt;text&gt;&#123;&#123;storageContent&#125;&#125;&lt;/text&gt;</span><br><span class="line">&lt;!--存--&gt;</span><br><span class="line">&lt;button type=&quot;primary&quot; bindtap=&quot;listenerStorageSave&quot;&gt;storage存储信息会在text上显示&lt;/button&gt;</span><br><span class="line">&lt;!--取--&gt;</span><br><span class="line">&lt;button type=&quot;primary&quot; bindtap=&quot;listenerStorageGet&quot;&gt;获取storage存储的信息&lt;/button&gt;</span><br><span class="line">&lt;!--清--&gt;</span><br><span class="line">&lt;button type=&quot;warn&quot; bindtap=&quot;listenerStorageClear&quot;&gt;清楚异步存储数据&lt;/button&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;text&gt;&#123;&#123;storageSyncContent&#125;&#125;&lt;/text&gt;</span><br><span class="line">&lt;button type=&quot;primary&quot; bindtap=&quot;listenerStorageSyncSave&quot;&gt;storageSync存储信息会在text上显示&lt;/button&gt;</span><br><span class="line">&lt;button type=&quot;primary&quot; bindtap=&quot;listenerStorageSyncGet&quot;&gt;获取storageSync存储信息&lt;/button&gt;</span><br><span class="line">&lt;button type=&quot;warn&quot; bindtap=&quot;listenerStorageSyncClear&quot;&gt;清除同步存储数据&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
   </div>
   
   
@@ -2485,8 +2486,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858672')
-      volantis.js('/js/message.js?time=1632106858672', () => {
+      volantis.css('/css/message.css?time=1632107226685')
+      volantis.js('/js/message.js?time=1632107226685', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2530,8 +2531,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858672')
-      volantis.js('/js/message.js?time=1632106858672', () => {
+      volantis.css('/css/message.css?time=1632107226685')
+      volantis.js('/js/message.js?time=1632107226685', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2787,7 +2788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106858672')
+    volantis.js('/js/rightMenu.js?time=1632107226685')
   </script>
 
 
@@ -2801,19 +2802,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106858672")
+        volantis.js("/js/plugins/sites.js?time=1632107226685")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106858672")
+        volantis.js("/js/plugins/friends.js?time=1632107226685")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106858672")
+        volantis.js("/js/plugins/contributors.js?time=1632107226685")
       }
     
   };
@@ -2929,7 +2930,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106858672.js"></script>
+<script src="/js/app.js?time=1632107226685.js"></script>
 
 
 <!-- optional -->
@@ -2942,7 +2943,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106858672");
+    return volantis.js("/js/search/hexo.js?time=1632107226685");
   }
 
   function loadSearchService() {

@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860321" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227058" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860321" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860321"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227058" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227058"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1934,13 +1934,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>大家都有用过各种类型的浏览器，每种浏览器都有自己的特色，本人拙见，在我用过的浏览器当中，我是最喜欢Chrome的，因为它对于调试脚本及前端设计调试都有它比其它浏览器有过之而无不及的地方。可能大家对console.log会有一定的了解，心里难免会想调试的时候用alert不就行了，干嘛还要用console.log这么一长串的字符串来替代alert输出信息呢，下面我就介绍一些调试的入门技巧，让你爱上console.log</p>
-<p>先的简单介绍一下chrome的控制台，打开chrome浏览器，按f12就可以轻松的打开控制台<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5dsyh4j211y0k6q7k.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5dsyh4j211y0k6q7k.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p>先的简单介绍一下chrome的控制台，打开chrome浏览器，按f12就可以轻松的打开控制台<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5dsyh4j211y0k6q7k.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5dsyh4j211y0k6q7k.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <span id="more"></span>
 
-<p>大家可以看到控制台里面有一首诗还有其它信息，如果想清空控制台，可以点击左上角那个<img src="http://images.cnitblog.com/blog/457824/201411/230851146562060.png" class="lazyload" data-srcset="http://images.cnitblog.com/blog/457824/201411/230851146562060.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" >来清空，当然也可以通过在控制台输入console.clear()来实现清空控制台信息。如下图所示<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t5c40imj20il04jgm4.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t5c40imj20il04jgm4.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p>大家可以看到控制台里面有一首诗还有其它信息，如果想清空控制台，可以点击左上角那个<img src="http://images.cnitblog.com/blog/457824/201411/230851146562060.png" class="lazyload" data-srcset="http://images.cnitblog.com/blog/457824/201411/230851146562060.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" >来清空，当然也可以通过在控制台输入console.clear()来实现清空控制台信息。如下图所示<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t5c40imj20il04jgm4.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t5c40imj20il04jgm4.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <p>现在假设一个场景，如果一个数组里面有成百上千的元素，但是你想知道每个元素具体的值，这时候想想如果你用alert那将是多惨的一件事情，因为alert阻断线程运行，你不点击alert框的确定按钮下一个alert就不会出现。</p>
-<p>下面我们用console.log来替换，感受一下它的魅力。<br><img src="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t5bd0ymj20o905jabn.jpg" class="lazyload" data-srcset="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t5bd0ymj20o905jabn.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
-<p>看了上面这张图，是不是认识到log的强大之处了，下面我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用。<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5ae765j20ea0cimz7.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5ae765j20ea0cimz7.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p>下面我们用console.log来替换，感受一下它的魅力。<br><img src="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t5bd0ymj20o905jabn.jpg" class="lazyload" data-srcset="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t5bd0ymj20o905jabn.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
+<p>看了上面这张图，是不是认识到log的强大之处了，下面我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用。<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5ae765j20ea0cimz7.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5ae765j20ea0cimz7.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <p>目前控制台方法和属性有：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&quot;$$&quot;</span>, <span class="string">&quot;$x&quot;</span>, <span class="string">&quot;dir&quot;</span>, <span class="string">&quot;dirxml&quot;</span>, <span class="string">&quot;keys&quot;</span>, <span class="string">&quot;values&quot;</span>, <span class="string">&quot;profile&quot;</span>, <span class="string">&quot;profileEnd&quot;</span>, <span class="string">&quot;monitorEvents&quot;</span>, <span class="string">&quot;unmonitorEvents&quot;</span>, <span class="string">&quot;inspect&quot;</span>, <span class="string">&quot;copy&quot;</span>, <span class="string">&quot;clear&quot;</span>, <span class="string">&quot;getEventListeners&quot;</span>, <span class="string">&quot;undebug&quot;</span>, <span class="string">&quot;monitor&quot;</span>, <span class="string">&quot;unmonitor&quot;</span>, <span class="string">&quot;table&quot;</span>, <span class="string">&quot;$0&quot;</span>, <span class="string">&quot;$1&quot;</span>, <span class="string">&quot;$2&quot;</span>, <span class="string">&quot;$3&quot;</span>, <span class="string">&quot;$4&quot;</span>, <span class="string">&quot;$_&quot;</span>]</span><br></pre></td></tr></table></figure>
 
@@ -1958,16 +1958,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p><strong>console.debug</strong>用于输出调试信息</p>
 </li>
 </ol>
-<p>用图来说话<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t59n8uej209w03mdfx.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t59n8uej209w03mdfx.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p>用图来说话<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t59n8uej209w03mdfx.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t59n8uej209w03mdfx.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <p>console对象的上面5种方法，都可以使用printf风格的占位符。不过，占位符的种类比较少，<strong>只支持字符（%s）、整数（%d或%i）、浮点数（%f）和对象（%o）</strong>四种。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;%d年%d月%d日&quot;</span>,<span class="number">2011</span>,<span class="number">3</span>,<span class="number">26</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;圆周率是%f&quot;</span>,<span class="number">3.1415926</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t58xe0jj20f9037aao.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t58xe0jj20f9037aao.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t58xe0jj20f9037aao.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t58xe0jj20f9037aao.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <p><strong>%o</strong>占位符，可以用来查看一个对象内部情况</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dog = &#123;&#125;;</span><br><span class="line">dog.name = <span class="string">&quot;大毛&quot;</span>;</span><br><span class="line">dog.color = <span class="string">&quot;黄色&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;%o&quot;</span>, dog);</span><br></pre></td></tr></table></figure>
-<p><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6tbbgxqfj2095043jrr.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6tbbgxqfj2095043jrr.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6tbbgxqfj2095043jrr.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6tbbgxqfj2095043jrr.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <ol start="6">
 <li><strong>console.dirxml</strong>用来显示网页的某个节点（node）所包含的html/xml代码<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">&quot;mytable&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>A<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>A<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>A<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>bbb<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>ccc<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>333<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>222<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span></span><br><span class="line">&lt;/body&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="keyword">var</span> mytable = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;mytable&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="built_in">console</span>.dirxml(mytable);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6tc9egt1j209807kq3e.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6tc9egt1j209807kq3e.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></li>
+<img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6tc9egt1j209807kq3e.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6tc9egt1j209807kq3e.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></li>
 </ol>
 <ol start="7">
 <li><p><strong>console.group</strong> 输出一组信息的开头</p>
@@ -1976,26 +1976,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ol>
 <p>看你需求选择不同的输出方法来使用，如果上述四个方法再配合group和groupEnd方法来一起使用就可以输入各种各样的不同形式的输出信息。</p>
-<p><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6tdedmvnj20ec04iq38.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6tdedmvnj20ec04iq38.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6tdedmvnj20ec04iq38.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6tdedmvnj20ec04iq38.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <p>哈哈，是不是觉得很神奇呀！</p>
 <ol start="9">
-<li><strong>console.assert</strong> 对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t587ydgj20gx03ddgg.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t587ydgj20gx03ddgg.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></li>
+<li><strong>console.assert</strong> 对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t587ydgj20gx03ddgg.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t587ydgj20gx03ddgg.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></li>
 </ol>
 <ol start="10">
-<li><strong>console.count</strong>（这个方法非常实用哦）当你想统计代码被执行的次数<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t57cdldj20e306c75a.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t57cdldj20e306c75a.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></li>
+<li><strong>console.count</strong>（这个方法非常实用哦）当你想统计代码被执行的次数<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t57cdldj20e306c75a.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t57cdldj20e306c75a.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></li>
 </ol>
 <ol start="11">
-<li><strong>console.dir</strong> (这个方法是我经常使用的 可不知道比for in方便了多少) 直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t56i2p8j20ew0avab2.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t56i2p8j20ew0avab2.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></li>
+<li><strong>console.dir</strong> (这个方法是我经常使用的 可不知道比for in方便了多少) 直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t56i2p8j20ew0avab2.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t56i2p8j20ew0avab2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></li>
 </ol>
 <ol start="12">
 <li><p><strong>console.time</strong> 计时开始</p>
 </li>
-<li><p><strong>console.timeEnd</strong>  计时结束（看了下面的图你瞬间就感受到它的厉害了）<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t55rxtej20e808ndhq.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t55rxtej20e808ndhq.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<li><p><strong>console.timeEnd</strong>  计时结束（看了下面的图你瞬间就感受到它的厉害了）<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t55rxtej20e808ndhq.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t55rxtej20e808ndhq.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 </li>
-<li><p><strong>console.profile</strong>和<strong>console.profileEnd</strong>配合一起使用来查看CPU使用相关信息<br><img src="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t54ndn6j20e906b0tr.jpg" class="lazyload" data-srcset="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t54ndn6j20e906b0tr.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<li><p><strong>console.profile</strong>和<strong>console.profileEnd</strong>配合一起使用来查看CPU使用相关信息<br><img src="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t54ndn6j20e906b0tr.jpg" class="lazyload" data-srcset="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t54ndn6j20e906b0tr.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 </li>
 </ol>
-<p>在Profiles面板里面查看就可以看到cpu相关使用信息<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t53grshj20iw05vab0.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t53grshj20iw05vab0.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p>在Profiles面板里面查看就可以看到cpu相关使用信息<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t53grshj20iw05vab0.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t53grshj20iw05vab0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <ol start="15">
 <li><p><strong>console.timeLine</strong>和<strong>console.timeLineEnd</strong>配合一起记录一段时间轴</p>
 </li>
@@ -2007,36 +2007,37 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <ol>
 <li><p><strong>方向键盘的上下键</strong>，大家一用就知晓。比如用上键就相当于使用上次在控制台的输入符号</p>
 </li>
-<li><p>**$_**命令返回最近一次表达式执行的结果，功能跟按向上的方向键再回车是一样的<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t52eylvj20f604sdg3.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t52eylvj20f604sdg3.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<li><p>**$_**命令返回最近一次表达式执行的结果，功能跟按向上的方向键再回车是一样的<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t52eylvj20f604sdg3.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t52eylvj20f604sdg3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 </li>
 </ol>
 <p>上面的$_需要领悟其奥义才能使用得当，而$0~$4则代表了最近5个你选择过的DOM节点。</p>
-<p>什么意思？在页面右击选择审查元素，然后在弹出来的DOM结点树上面随便点选，这些被点过的节点会被记录下来，而$0会返回最近一次点选的DOM结点，以此类推，$1返回的是上上次点选的DOM节点，最多保存了5个，如果不够5个，则返回undefined。<br><img src="http://ww1.sinaimg.cn/large/6941baebjw1eo6t51jeohg20n80cntdf.gif" class="lazyload" data-srcset="http://ww1.sinaimg.cn/large/6941baebjw1eo6t51jeohg20n80cntdf.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p>什么意思？在页面右击选择审查元素，然后在弹出来的DOM结点树上面随便点选，这些被点过的节点会被记录下来，而$0会返回最近一次点选的DOM结点，以此类推，$1返回的是上上次点选的DOM节点，最多保存了5个，如果不够5个，则返回undefined。<br><img src="http://ww1.sinaimg.cn/large/6941baebjw1eo6t51jeohg20n80cntdf.gif" class="lazyload" data-srcset="http://ww1.sinaimg.cn/large/6941baebjw1eo6t51jeohg20n80cntdf.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <ol start="3">
-<li><strong>Chrome 控制台中原生支持类jQuery的选择器</strong>也就是说你可以用$加上熟悉的css选择器来选择DOM节点<br><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4zmpnyj20zo0bojvq.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4zmpnyj20zo0bojvq.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></li>
+<li><strong>Chrome 控制台中原生支持类jQuery的选择器</strong>也就是说你可以用$加上熟悉的css选择器来选择DOM节点<br><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4zmpnyj20zo0bojvq.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4zmpnyj20zo0bojvq.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></li>
 </ol>
 <ol start="4">
-<li><strong>copy</strong>通过此命令可以将在控制台获取到的内容复制到剪贴板<br><img src="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t4y2o5uj20fi03f3ys.jpg" class="lazyload" data-srcset="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t4y2o5uj20fi03f3ys.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></li>
+<li><strong>copy</strong>通过此命令可以将在控制台获取到的内容复制到剪贴板<br><img src="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t4y2o5uj20fi03f3ys.jpg" class="lazyload" data-srcset="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t4y2o5uj20fi03f3ys.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></li>
 </ol>
 <p>（哈哈 刚刚从控制台复制的body里面的html可以任意粘贴到哪 比如记事本  是不是觉得功能很强大）</p>
 <ol start="5">
-<li><strong>keys和values</strong> 前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组<br><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4wuki6j20du05umxv.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4wuki6j20du05umxv.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></li>
+<li><strong>keys和values</strong> 前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组<br><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4wuki6j20du05umxv.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4wuki6j20du05umxv.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></li>
 </ol>
-<p>说到这，不免想起console.table方法了<br><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4vy093j210y0gzgnj.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4vy093j210y0gzgnj.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p>说到这，不免想起console.table方法了<br><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4vy093j210y0gzgnj.jpg" class="lazyload" data-srcset="http://ww2.sinaimg.cn/mw690/6941baebjw1eo6t4vy093j210y0gzgnj.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <ol start="6">
 <li><strong>monitor &amp; unmonitor</strong></li>
 </ol>
-<p>monitor(function)，它接收一个函数名作为参数，比如function a,每次a被执行了，都会在控制台输出一条信息，里面包含了函数的名称a及执行时所传入的参数。<br>而unmonitor(function)便是用来停止这一监听。<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t4uttxoj20f405c74y.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t4uttxoj20f405c74y.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p>monitor(function)，它接收一个函数名作为参数，比如function a,每次a被执行了，都会在控制台输出一条信息，里面包含了函数的名称a及执行时所传入的参数。<br>而unmonitor(function)便是用来停止这一监听。<br><img src="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t4uttxoj20f405c74y.jpg" class="lazyload" data-srcset="http://ww4.sinaimg.cn/mw690/6941baebjw1eo6t4uttxoj20f405c74y.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <p>看了这张图，应该明白了，也就是说在monitor和unmonitor中间的代码，执行的时候会在控制台输出一条信息，里面包含了函数的名称a及执行时所传入的参数。当解除监视（也就是执行unmonitor时）就不再在控制台输出信息了。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment">// 简单理解就是 document.querySelector 而已。</span></span><br><span class="line">$$ <span class="comment">// 简单理解就是 document.querySelectorAll 而已。</span></span><br><span class="line">$_ <span class="comment">// 是上一个表达式的值</span></span><br><span class="line">$<span class="number">0</span>-$<span class="number">4</span> <span class="comment">// 是最近5个Elements面板选中的DOM元素，待会会讲。</span></span><br><span class="line">dir <span class="comment">// 其实就是 console.dir</span></span><br><span class="line">keys <span class="comment">// 取对象的键名, 返回键名组成的数组</span></span><br><span class="line">values <span class="comment">// 去对象的值, 返回值组成的数组</span></span><br></pre></td></tr></table></figure>
 
 
 <p>下面看一下console.log的一些技巧</p>
-<p><strong>1、重写console.log 改变输出文字的样式</strong><br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t4txwawj20nt06xjtd.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t4txwawj20nt06xjtd.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
-<p><strong>2、利用控制台输出图片</strong><br><img src="http://ww4.sinaimg.cn/large/6941baebjw1eo6t4tc4szg20mc080758.gif" class="lazyload" data-srcset="http://ww4.sinaimg.cn/large/6941baebjw1eo6t4tc4szg20mc080758.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
-<p><strong>3、指定输出文字的样式</strong><br><img src="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t4s44kvj210b04zq56.jpg" class="lazyload" data-srcset="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t4s44kvj210b04zq56.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
-<p>最后说一下chrome控制台一个简单的操作，如何查看页面元素，看下图就知道了<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t4r4nc2j20os0amwh5.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t4r4nc2j20os0amwh5.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="This is a picture without description" ></p>
+<p><strong>1、重写console.log 改变输出文字的样式</strong><br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t4txwawj20nt06xjtd.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t4txwawj20nt06xjtd.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
+<p><strong>2、利用控制台输出图片</strong><br><img src="http://ww4.sinaimg.cn/large/6941baebjw1eo6t4tc4szg20mc080758.gif" class="lazyload" data-srcset="http://ww4.sinaimg.cn/large/6941baebjw1eo6t4tc4szg20mc080758.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
+<p><strong>3、指定输出文字的样式</strong><br><img src="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t4s44kvj210b04zq56.jpg" class="lazyload" data-srcset="http://ww3.sinaimg.cn/mw690/6941baebjw1eo6t4s44kvj210b04zq56.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
+<p>最后说一下chrome控制台一个简单的操作，如何查看页面元素，看下图就知道了<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t4r4nc2j20os0amwh5.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t4r4nc2j20os0amwh5.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" ></p>
 <p>你在控制台简单操作一遍就知道了，是不是觉得很简单！</p>
+
 
   </div>
   
@@ -2599,8 +2600,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860321')
-      volantis.js('/js/message.js?time=1632106860321', () => {
+      volantis.css('/css/message.css?time=1632107227058')
+      volantis.js('/js/message.js?time=1632107227058', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2644,8 +2645,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860321')
-      volantis.js('/js/message.js?time=1632106860321', () => {
+      volantis.css('/css/message.css?time=1632107227058')
+      volantis.js('/js/message.js?time=1632107227058', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2901,7 +2902,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860321')
+    volantis.js('/js/rightMenu.js?time=1632107227058')
   </script>
 
 
@@ -2915,19 +2916,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860321")
+        volantis.js("/js/plugins/sites.js?time=1632107227058")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860321")
+        volantis.js("/js/plugins/friends.js?time=1632107227058")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860321")
+        volantis.js("/js/plugins/contributors.js?time=1632107227058")
       }
     
   };
@@ -3043,7 +3044,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106860321.js"></script>
+<script src="/js/app.js?time=1632107227058.js"></script>
 
 
 <!-- optional -->
@@ -3056,7 +3057,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860321");
+    return volantis.js("/js/search/hexo.js?time=1632107227058");
   }
 
   function loadSearchService() {

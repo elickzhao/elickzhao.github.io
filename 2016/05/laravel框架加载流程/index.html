@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106861125" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227258" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1529,8 +1529,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106861125" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106861125"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227258" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227258"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1931,7 +1931,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p><img src="/image/16-5/bootstrap.svg" class="lazyload" data-srcset="/image/16-5/bootstrap.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="启动流程"></p>
+    <p><img src="/image/16-5/bootstrap.svg" class="lazyload" data-srcset="/image/16-5/bootstrap.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="启动流程"></p>
 <span id="more"></span>
 
 <p><strong>public/index.php</strong></p>
@@ -1950,7 +1950,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>所有服务提供者加载完毕后,把request请求转移给router路由器<br>经过router分派给route(路由)或者controller,并运行中间件处理后返回response(响应)</p>
 </blockquote>
-<p><img src="/image/16-5/2.svg" class="lazyload" data-srcset="/image/16-5/2.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="启动流程"></p>
+<p><img src="/image/16-5/2.svg" class="lazyload" data-srcset="/image/16-5/2.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="启动流程"></p>
 <p>整个启动流程,主要涉及的几个文件如下<br>public/index.php,bootstrap/app.php,app/Http/Kernel.php,<br>除了Kernel另外两个文件去掉注释,基本很简洁</p>
 <p><strong>public/index.php</strong></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入composer自动加载程序</span></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span>.<span class="string">&#x27;/../bootstrap/autoload.php&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//启动框架,生成应用程序</span></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">require_once</span> <span class="keyword">__DIR__</span>.<span class="string">&#x27;/../bootstrap/app.php&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运行应用程序,接收Request请求</span></span><br><span class="line"><span class="variable">$kernel</span> = <span class="variable">$app</span>-&gt;make(Illuminate\Contracts\Http\Kernel::class);</span><br><span class="line"></span><br><span class="line"><span class="comment">//经过路由器分发到路由,控制器,中间件的处理返回Response</span></span><br><span class="line"><span class="variable">$response</span> = <span class="variable">$kernel</span>-&gt;handle(</span><br><span class="line">    <span class="variable">$request</span> = Illuminate\Http\Request::capture()</span><br><span class="line">);</span><br><span class="line"><span class="comment">//发送响应到浏览器</span></span><br><span class="line"><span class="variable">$response</span>-&gt;send();</span><br><span class="line"><span class="comment">//销毁请求与响应</span></span><br><span class="line"><span class="variable">$kernel</span>-&gt;terminate(<span class="variable">$request</span>, <span class="variable">$response</span>);</span><br></pre></td></tr></table></figure>
@@ -1976,6 +1976,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p> 响应请求</p>
 </li>
 </ul>
+
 
   </div>
   
@@ -2535,8 +2536,8 @@ API说说他...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861125')
-      volantis.js('/js/message.js?time=1632106861125', () => {
+      volantis.css('/css/message.css?time=1632107227258')
+      volantis.js('/js/message.js?time=1632107227258', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2580,8 +2581,8 @@ API说说他...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861125')
-      volantis.js('/js/message.js?time=1632106861125', () => {
+      volantis.css('/css/message.css?time=1632107227258')
+      volantis.js('/js/message.js?time=1632107227258', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2837,7 +2838,7 @@ API说说他...</p>
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106861125')
+    volantis.js('/js/rightMenu.js?time=1632107227258')
   </script>
 
 
@@ -2851,19 +2852,19 @@ API说说他...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106861125")
+        volantis.js("/js/plugins/sites.js?time=1632107227258")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106861125")
+        volantis.js("/js/plugins/friends.js?time=1632107227258")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106861125")
+        volantis.js("/js/plugins/contributors.js?time=1632107227258")
       }
     
   };
@@ -2979,7 +2980,7 @@ API说说他...</p>
 
 
 
-<script src="/js/app.js?time=1632106861125.js"></script>
+<script src="/js/app.js?time=1632107227258.js"></script>
 
 
 <!-- optional -->
@@ -2992,7 +2993,7 @@ API说说他...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106861125");
+    return volantis.js("/js/search/hexo.js?time=1632107227258");
   }
 
   function loadSearchService() {

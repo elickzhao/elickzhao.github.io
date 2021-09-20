@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860316" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227055" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1532,8 +1532,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860316" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860316"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227055" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227055"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1924,8 +1924,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在装lumen时突然出现了这个错误,主要是因为多个版本php共存,新装的php7配置php.ini时,没有把<code>*.default_socket</code>设置上而造成无法连接数据库的问题.</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ul>
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><div class="story post-story"><p>在装lumen时突然出现了这个错误,主要是因为多个版本php共存,新装的php7配置php.ini时,没有把<code>*.default_socket</code>设置上而造成无法连接数据库的问题.</p>
+</div><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><div class="story post-story"><ul>
 <li><p>首先说明这个是在使用nginx时,必须使用php-fpm时出现的.</p>
 </li>
 <li><p>现在找到 <code>socket</code> 的位置. 使用命令 <code>ps aux | grep -i mysql</code> 看到如下结果</p>
@@ -1938,12 +1938,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>然后重启 <code>php-fpm</code> 就解决了.</p>
 </li>
 </ul>
-<h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><ul>
+</div><h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><div class="story post-story"><ul>
 <li>php7 以后就不实用<code>mysql</code>这个驱动了 而使用<code>mysqlnd</code> 所以你在<code>phpinfo()</code>里不会再看到mysql项</li>
 <li>重启<code>php-fpm</code> 需要用 <code>ps aux|grep php</code> 命令查看 <code>php-fpm</code> 的 pid,然后 <code>kill pid</code>.这里注意啊 要是多个<code>php-fpm</code>一定要看配置文件位置,不要删错了.</li>
 </ul>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="http://www.th7.cn/db/mysql/201412/83563.shtml">YII2数据库操作出现类似Database Exception</a><br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/AloneSword/p/3188012.html">安装roundcube 时出现 “DSN (write): NOT OK(SQLSTATE[HY000] [2002] No such file or directory)”</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000004241965">php7不支持mysql扩展，如何使用mysqlnd?</a></p>
+</div><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="http://www.th7.cn/db/mysql/201412/83563.shtml">YII2数据库操作出现类似Database Exception</a><br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/AloneSword/p/3188012.html">安装roundcube 时出现 “DSN (write): NOT OK(SQLSTATE[HY000] [2002] No such file or directory)”</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000004241965">php7不支持mysql扩展，如何使用mysqlnd?</a></p>
 
+</div>
   </div>
   
   
@@ -2513,8 +2514,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860316')
-      volantis.js('/js/message.js?time=1632106860316', () => {
+      volantis.css('/css/message.css?time=1632107227055')
+      volantis.js('/js/message.js?time=1632107227055', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2558,8 +2559,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860316')
-      volantis.js('/js/message.js?time=1632106860316', () => {
+      volantis.css('/css/message.css?time=1632107227055')
+      volantis.js('/js/message.js?time=1632107227055', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2815,7 +2816,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860316')
+    volantis.js('/js/rightMenu.js?time=1632107227055')
   </script>
 
 
@@ -2829,19 +2830,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860316")
+        volantis.js("/js/plugins/sites.js?time=1632107227055")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860316")
+        volantis.js("/js/plugins/friends.js?time=1632107227055")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860316")
+        volantis.js("/js/plugins/contributors.js?time=1632107227055")
       }
     
   };
@@ -2957,7 +2958,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106860316.js"></script>
+<script src="/js/app.js?time=1632107227055.js"></script>
 
 
 <!-- optional -->
@@ -2970,7 +2971,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860316");
+    return volantis.js("/js/search/hexo.js?time=1632107227055");
   }
 
   function loadSearchService() {

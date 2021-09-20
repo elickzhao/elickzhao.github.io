@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860040" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226992" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860040" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860040"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226992" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226992"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1923,8 +1923,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>使用dingo返回数据,一开始有点懵,现在开始有点明晰了.</p>
-<h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><p><strong>方法一</strong><br>用Dingo的Transformer. 其实这两种写法都可以 用Transformer()更简洁和灵活一些.<br>因为Transformer()不仅可以利用 <code>return $ECUser-&gt;attributesToArray();</code> 将属性转换成数组<br>还可以添加和转换数据库中没有的字段,还可以用 <code>include</code> 做类似关联表的作用,具体看这里: <a target="_blank" rel="noopener" href="https://www.zybuluo.com/mdeditor#553839">Dingo Transformers 的使用(Fractal)</a><br>所以这个很灵活,可以在这个类里添加更多的操作,当然只是返回array的话,还是稍显麻烦因为还得建立个文件.</p>
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><div class="story post-story"><p>使用dingo返回数据,一开始有点懵,现在开始有点明晰了.</p>
+</div><h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><div class="story post-story"><p><strong>方法一</strong><br>用Dingo的Transformer. 其实这两种写法都可以 用Transformer()更简洁和灵活一些.<br>因为Transformer()不仅可以利用 <code>return $ECUser-&gt;attributesToArray();</code> 将属性转换成数组<br>还可以添加和转换数据库中没有的字段,还可以用 <code>include</code> 做类似关联表的作用,具体看这里: <a target="_blank" rel="noopener" href="https://www.zybuluo.com/mdeditor#553839">Dingo Transformers 的使用(Fractal)</a><br>所以这个很灵活,可以在这个类里添加更多的操作,当然只是返回array的话,还是稍显麻烦因为还得建立个文件.</p>
 <p><strong>补充:</strong><br>Dingo返回数据几种形式:</p>
 <p>Responding With An Array 响应一个数组<br><code>return $this-&gt;response-&gt;array($user-&gt;toArray());</code></p>
 <p>Responding With A Single Item 响应一个元素<br><code>return $this-&gt;response-&gt;item($user, new UserTransformer);</code></p>
@@ -1940,6 +1940,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p><strong>方法三</strong><br>完全用laravel来返回 json, 不用插件来做.</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$wallet</span> = ECUser::where(<span class="string">&#x27;user_id&#x27;</span>,<span class="variable">$id</span>)-&gt;select(<span class="string">&#x27;user_money&#x27;</span>,<span class="string">&#x27;pay_points&#x27;</span>)-&gt;first()-&gt;toArray();</span><br><span class="line"></span><br><span class="line"><span class="comment">//上面那个用的是dingo的response和下面这个不一样,下面的是laravel的</span></span><br><span class="line"><span class="comment">//这两个是有区别的 dingo的只有array()没有json, laravel的正好相反,有json()没有array() 但他们的结果是一样的</span></span><br><span class="line"><span class="keyword">return</span> response()-&gt;json(<span class="variable">$wallet</span>);</span><br></pre></td></tr></table></figure>
+</div>
   </div>
   
   
@@ -2534,8 +2535,8 @@ concat() 方法用...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860040')
-      volantis.js('/js/message.js?time=1632106860040', () => {
+      volantis.css('/css/message.css?time=1632107226992')
+      volantis.js('/js/message.js?time=1632107226992', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2579,8 +2580,8 @@ concat() 方法用...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860040')
-      volantis.js('/js/message.js?time=1632106860040', () => {
+      volantis.css('/css/message.css?time=1632107226992')
+      volantis.js('/js/message.js?time=1632107226992', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2836,7 +2837,7 @@ concat() 方法用...</p>
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860040')
+    volantis.js('/js/rightMenu.js?time=1632107226992')
   </script>
 
 
@@ -2850,19 +2851,19 @@ concat() 方法用...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860040")
+        volantis.js("/js/plugins/sites.js?time=1632107226992")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860040")
+        volantis.js("/js/plugins/friends.js?time=1632107226992")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860040")
+        volantis.js("/js/plugins/contributors.js?time=1632107226992")
       }
     
   };
@@ -2978,7 +2979,7 @@ concat() 方法用...</p>
 
 
 
-<script src="/js/app.js?time=1632106860040.js"></script>
+<script src="/js/app.js?time=1632107226992.js"></script>
 
 
 <!-- optional -->
@@ -2991,7 +2992,7 @@ concat() 方法用...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860040");
+    return volantis.js("/js/search/hexo.js?time=1632107226992");
   }
 
   function loadSearchService() {

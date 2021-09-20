@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106858350" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226631" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106858350" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106858350"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226631" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226631"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1925,8 +1925,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDate</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">        <span class="attr">async</span> :<span class="literal">false</span>,<span class="comment">//取消异步 否则result赋值失败 </span></span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;/index.php/Admin/Page/orderChartsData.html&#x27;</span>,</span><br><span class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">            <span class="comment">//console.log(res);</span></span><br><span class="line">            result = res;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">error</span>: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/u014225431/article/details/51451498">通过ajax给js成员变量赋值问题</a></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/u014225431/article/details/51451498">通过ajax给js成员变量赋值问题</a></p>
 
+</div>
   </div>
   
   
@@ -2498,8 +2499,8 @@ function t(obj) {    changeGroupBtn(obj);  ...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858349')
-      volantis.js('/js/message.js?time=1632106858349', () => {
+      volantis.css('/css/message.css?time=1632107226631')
+      volantis.js('/js/message.js?time=1632107226631', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2543,8 +2544,8 @@ function t(obj) {    changeGroupBtn(obj);  ...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858349')
-      volantis.js('/js/message.js?time=1632106858349', () => {
+      volantis.css('/css/message.css?time=1632107226631')
+      volantis.js('/js/message.js?time=1632107226631', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2800,7 +2801,7 @@ function t(obj) {    changeGroupBtn(obj);  ...</p>
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106858349')
+    volantis.js('/js/rightMenu.js?time=1632107226631')
   </script>
 
 
@@ -2814,19 +2815,19 @@ function t(obj) {    changeGroupBtn(obj);  ...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106858349")
+        volantis.js("/js/plugins/sites.js?time=1632107226631")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106858349")
+        volantis.js("/js/plugins/friends.js?time=1632107226631")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106858349")
+        volantis.js("/js/plugins/contributors.js?time=1632107226631")
       }
     
   };
@@ -2942,7 +2943,7 @@ function t(obj) {    changeGroupBtn(obj);  ...</p>
 
 
 
-<script src="/js/app.js?time=1632106858350.js"></script>
+<script src="/js/app.js?time=1632107226631.js"></script>
 
 
 <!-- optional -->
@@ -2955,7 +2956,7 @@ function t(obj) {    changeGroupBtn(obj);  ...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106858350");
+    return volantis.js("/js/search/hexo.js?time=1632107226631");
   }
 
   function loadSearchService() {

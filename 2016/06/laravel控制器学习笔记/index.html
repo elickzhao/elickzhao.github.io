@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106861007" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227227" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106861007" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106861007"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227227" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227227"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1935,6 +1935,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <p><strong>一些私有属性说明</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//注册成功后挑战地址</span><br><span class="line">protected $redirectPath = &#x27;/&#x27;;</span><br><span class="line">//登录成功后跳转地址</span><br><span class="line">protected $loginPath = &#x27;/&#x27;;</span><br><span class="line">//但是有个问题当登录成功后 还是进入auth/login的时候 还是会默认跳转到/home路径下</span><br><span class="line"></span><br><span class="line">//重置密码后跳转路径</span><br><span class="line">protected $redirectTo = &#x27;/dashboard&#x27;;</span><br><span class="line">//设置这个属性就可以设置登录验证的字段</span><br><span class="line">protected $username = &#x27;name&#x27;;</span><br><span class="line"></span><br><span class="line">//自定义登录模版位置</span><br><span class="line">protected $loginView = &#x27;admin.auth.login&#x27;;</span><br><span class="line">//自定义注册模版位置</span><br><span class="line">protected $registerView = &#x27;admin.auth.register&#x27;;</span><br><span class="line">//这个自定义验证配置项 在config/auth.php 但是这是5.2属性 5.1没有  </span><br><span class="line">//这个可以坐到对前台会员登录和后台管理员登录 分离管理</span><br><span class="line">protected $guard = &#x27;admin&#x27;;</span><br></pre></td></tr></table></figure>
+
 
 
   </div>
@@ -2494,8 +2495,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861007')
-      volantis.js('/js/message.js?time=1632106861007', () => {
+      volantis.css('/css/message.css?time=1632107227227')
+      volantis.js('/js/message.js?time=1632107227227', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2539,8 +2540,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861007')
-      volantis.js('/js/message.js?time=1632106861007', () => {
+      volantis.css('/css/message.css?time=1632107227227')
+      volantis.js('/js/message.js?time=1632107227227', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2796,7 +2797,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106861007')
+    volantis.js('/js/rightMenu.js?time=1632107227227')
   </script>
 
 
@@ -2810,19 +2811,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106861007")
+        volantis.js("/js/plugins/sites.js?time=1632107227227")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106861007")
+        volantis.js("/js/plugins/friends.js?time=1632107227227")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106861007")
+        volantis.js("/js/plugins/contributors.js?time=1632107227227")
       }
     
   };
@@ -2938,7 +2939,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106861007.js"></script>
+<script src="/js/app.js?time=1632107227227.js"></script>
 
 
 <!-- optional -->
@@ -2951,7 +2952,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106861007");
+    return volantis.js("/js/search/hexo.js?time=1632107227227");
   }
 
   function loadSearchService() {

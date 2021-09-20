@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106861639" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227385" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1532,8 +1532,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106861639" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106861639"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227385" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227385"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1944,9 +1944,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><del>这尿性是要安装一个rsync的同步软件 这鸟东西安装起来蛮麻烦的 而且基本用不到 所以不装了  毕竟就算是生产环境肯定用不到这个 linux版本 所以开发的时候还得装别的版本 以达到和生产环境同步 所以算了<br>直接搞个 CoreOS 这个试试吧 这个挺新的比较有趣</del><br>最后还是测试了rsync这个软件,因为使用CoreOS加载docker镜像 也会出现卡在同步文件夹那 所以看来问题不在boot2docker </p>
 <h1 id="得到升华"><a href="#得到升华" class="headerlink" title="得到升华"></a>得到升华</h1><p><strong>我找到个方法 可以解决这个问题 但是并不是十全十美的方法</strong><br>就是屏蔽同步文件夹</p>
 <figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.synced_folder <span class="string">&quot;.&quot;</span>, <span class="string">&quot;/vagrant&quot;</span>, disabled: <span class="literal">true</span>  #这一句就是</span><br><span class="line">  config.vm.provider <span class="string">&quot;docker&quot;</span> <span class="keyword">do</span> |d|</span><br><span class="line">    d.image = <span class="string">&quot;tknerr/baseimage-ubuntu:14.04&quot;</span></span><br><span class="line">    d.has_ssh = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    #这句是新加的</span><br><span class="line">    #d.vagrant_machine = <span class="string">&quot;dockerhost&quot;</span> </span><br><span class="line">   	#d.vagrant_vagrantfile = <span class="string">&quot;../coreos/Vagrantfile&quot;</span></span><br><span class="line">    #config.vm.box = <span class="string">&quot;coreos-stable&quot;</span> </span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  config.vm.provision <span class="string">&quot;shell&quot;</span>, inline: <span class="string">&quot;echo &#x27;hello docker!&#x27;&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<h2 id="惊喜发现"><a href="#惊喜发现" class="headerlink" title="惊喜发现"></a>惊喜发现</h2><p><strong>这个简直太省地方了:</strong> 利用boot2docker 加载 tknerr/baseimage-ubuntu:14.04 这个基础镜像 最后生成的虚拟机才有400M coreOS是900M多  而Homestead 已经是2.67G了<br><img src="/image/16-4/1.png" class="lazyload" data-srcset="/image/16-4/1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="hello"></p>
+<h2 id="惊喜发现"><a href="#惊喜发现" class="headerlink" title="惊喜发现"></a>惊喜发现</h2><div class="story post-story"><p><strong>这个简直太省地方了:</strong> 利用boot2docker 加载 tknerr/baseimage-ubuntu:14.04 这个基础镜像 最后生成的虚拟机才有400M coreOS是900M多  而Homestead 已经是2.67G了<br><img src="/image/16-4/1.png" class="lazyload" data-srcset="/image/16-4/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="hello"></p>
 <p>而且使用的box也非常省 boot2docker只有20M而已</p>
-<h2 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h2><p><strong>C:\Users\elick.vagrant.d</strong> 这是vagrant的根目录 最主要有两个目录</p>
+</div><h2 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h2><div class="story post-story"><p><strong>C:\Users\elick.vagrant.d</strong> 这是vagrant的根目录 最主要有两个目录</p>
 <ul>
 <li>boxes<br> 这个是存放box的目录,所有你下载的各种box都在这里 </li>
 <li>data<br> 这个是存放host的一些信息的地方<ul>
@@ -1957,6 +1957,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p><strong>C:\Users\elick\VirtualBox VMs</strong> 就是virtualbox存放虚拟机的位置</p>
 
+</div>
   </div>
   
   
@@ -2525,8 +2526,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861639')
-      volantis.js('/js/message.js?time=1632106861639', () => {
+      volantis.css('/css/message.css?time=1632107227385')
+      volantis.js('/js/message.js?time=1632107227385', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2570,8 +2571,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861639')
-      volantis.js('/js/message.js?time=1632106861639', () => {
+      volantis.css('/css/message.css?time=1632107227385')
+      volantis.js('/js/message.js?time=1632107227385', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2827,7 +2828,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106861639')
+    volantis.js('/js/rightMenu.js?time=1632107227385')
   </script>
 
 
@@ -2841,19 +2842,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106861639")
+        volantis.js("/js/plugins/sites.js?time=1632107227385")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106861639")
+        volantis.js("/js/plugins/friends.js?time=1632107227385")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106861639")
+        volantis.js("/js/plugins/contributors.js?time=1632107227385")
       }
     
   };
@@ -2969,7 +2970,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106861639.js"></script>
+<script src="/js/app.js?time=1632107227385.js"></script>
 
 
 <!-- optional -->
@@ -2982,7 +2983,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106861639");
+    return volantis.js("/js/search/hexo.js?time=1632107227385");
   }
 
   function loadSearchService() {

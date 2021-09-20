@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860976" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227220" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860976" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860976"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227220" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227220"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1933,9 +1933,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>最近需要做后台所以找到这个插件.下面的文章内容稍微有点老,但大致讲解的没问题,还是结合项目仓库一起看就明白很多了.
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><pre><code>最近需要做后台所以找到这个插件.下面的文章内容稍微有点老,但大致讲解的没问题,还是结合项目仓库一起看就明白很多了.
 </code></pre>
-<h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p>  针对那篇文章没有提到的东西简单说明下</p>
+</div><h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><div class="story post-story"><p>  针对那篇文章没有提到的东西简单说明下</p>
 <ul>
 <li><p>注意引入文件,升级后很多名称变了,所以一定要参考文档.</p>
 <span id="more"></span>
@@ -1950,8 +1950,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">Route::get(<span class="string">&#x27;add&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// Cache为file时 会出现Cache不支持tag的错误</span></span><br><span class="line">    <span class="comment">//换成array就好了</span></span><br><span class="line">    <span class="variable">$admin</span> = <span class="keyword">new</span> Role;</span><br><span class="line">    <span class="variable">$admin</span>-&gt;name = <span class="string">&#x27;Admin&#x27;</span>;</span><br><span class="line">    <span class="variable">$admin</span>-&gt;save();</span><br><span class="line"></span><br><span class="line">    <span class="variable">$owner</span> = <span class="keyword">new</span> Role;</span><br><span class="line">    <span class="variable">$owner</span>-&gt;name = <span class="string">&#x27;Owner&#x27;</span>;</span><br><span class="line">    <span class="variable">$owner</span>-&gt;save();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="variable">$manageUsers</span> = <span class="keyword">new</span> Permission();</span><br><span class="line">    <span class="variable">$manageUsers</span>-&gt;name = <span class="string">&#x27;manage_users&#x27;</span>;</span><br><span class="line">    <span class="variable">$manageUsers</span>-&gt;display_name = <span class="string">&#x27;Manage Users&#x27;</span>;</span><br><span class="line">    <span class="variable">$manageUsers</span>-&gt;save();</span><br><span class="line"></span><br><span class="line">    <span class="variable">$managePosts</span> = <span class="keyword">new</span> Permission();</span><br><span class="line">    <span class="variable">$managePosts</span>-&gt;name = <span class="string">&#x27;manage_posts&#x27;</span>;</span><br><span class="line">    <span class="variable">$managePosts</span>-&gt;display_name = <span class="string">&#x27;Manage Posts&#x27;</span>;</span><br><span class="line">    <span class="variable">$managePosts</span>-&gt;save();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//给用户组增加权限</span></span><br><span class="line">    <span class="comment">//从这个版本的文档来看 好像更喜欢用 attachPermission($managePosts) 这种简洁的写法</span></span><br><span class="line">    <span class="variable">$owner</span>-&gt;perms()-&gt;sync(<span class="keyword">array</span>(<span class="variable">$managePosts</span>-&gt;id, <span class="variable">$manageUsers</span>-&gt;id));</span><br><span class="line">    <span class="comment">//还可以这么写</span></span><br><span class="line">    <span class="comment">//$admin-&gt;attachPermissions($manageUsers,$managePosts);</span></span><br><span class="line">    </span><br><span class="line">    <span class="variable">$admin</span>-&gt;perms()-&gt;sync(<span class="keyword">array</span>(<span class="variable">$managePosts</span>-&gt;id));</span><br><span class="line">    <span class="comment">//还可以这么写</span></span><br><span class="line">    <span class="comment">//$admin-&gt;attachPermission($managePosts);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取用户</span></span><br><span class="line">    <span class="variable">$user</span> = User::where(<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;=&#x27;</span>,<span class="string">&#x27;elick&#x27;</span>)-&gt;first();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 可以使用 Entrust 提供的便捷方法用户授权</span></span><br><span class="line">    <span class="comment">// 注: 参数可以为 Role 对象, 数组, 或者 ID</span></span><br><span class="line">        <span class="variable">$user</span>-&gt;attachRole( <span class="variable">$admin</span> );</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 或者使用 Eloquent 自带的对象关系赋值</span></span><br><span class="line">        <span class="comment">//$user-&gt;roles()-&gt;attach( $admin-&gt;id ); // id only</span></span><br><span class="line"></span><br><span class="line">    <span class="variable">$a</span> = <span class="variable">$user</span>-&gt;hasRole(<span class="string">&quot;Owner&quot;</span>);    <span class="comment">// false</span></span><br><span class="line">    <span class="variable">$b</span> = <span class="variable">$user</span>-&gt;hasRole(<span class="string">&quot;Admin&quot;</span>);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">    <span class="variable">$c</span> = <span class="variable">$user</span>-&gt;can(<span class="string">&quot;manage_posts&quot;</span>); <span class="comment">// true</span></span><br><span class="line">    <span class="variable">$d</span> = <span class="variable">$user</span>-&gt;can(<span class="string">&quot;manage_users&quot;</span>); <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">    dump(<span class="variable">$a</span>);dump(<span class="variable">$b</span>);dump(<span class="variable">$c</span>);dump(<span class="variable">$d</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//can 和hasRole也能接收数组 一个对全都对</span></span><br><span class="line">    <span class="variable">$user</span>-&gt;hasRole([<span class="string">&#x27;owner&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>]);       <span class="comment">// true</span></span><br><span class="line">    <span class="variable">$user</span>-&gt;can([<span class="string">&#x27;edit-user&#x27;</span>, <span class="string">&#x27;create-post&#x27;</span>]); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//如果想要两个参数同为真才行,可以用第三个参数</span></span><br><span class="line">    <span class="variable">$user</span>-&gt;hasRole([<span class="string">&#x27;owner&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>]);             <span class="comment">// true</span></span><br><span class="line">    <span class="variable">$user</span>-&gt;hasRole([<span class="string">&#x27;owner&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>], <span class="literal">true</span>);       <span class="comment">// false, user does not have admin role</span></span><br><span class="line">    <span class="variable">$user</span>-&gt;can([<span class="string">&#x27;edit-user&#x27;</span>, <span class="string">&#x27;create-post&#x27;</span>]);       <span class="comment">// true</span></span><br><span class="line">    <span class="variable">$user</span>-&gt;can([<span class="string">&#x27;edit-user&#x27;</span>, <span class="string">&#x27;create-post&#x27;</span>], <span class="literal">true</span>); <span class="comment">// false, user does not have edit-user permission</span></span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">Route::get(<span class="string">&#x27;test&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$user</span> = User::where(<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;=&#x27;</span>,<span class="string">&#x27;elick&#x27;</span>)-&gt;first();</span><br><span class="line">    <span class="variable">$a</span> = <span class="variable">$user</span>-&gt;ability([<span class="string">&#x27;Admin&#x27;</span>,<span class="string">&#x27;Owner&#x27;</span>], [<span class="string">&#x27;manage_posts&#x27;</span>,<span class="string">&#x27;manage_users&#x27;</span>]);</span><br><span class="line">    dump(<span class="variable">$a</span>);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-<h2 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h2><p><a target="_blank" rel="noopener" href="https://github.com/Zizaco/entrust">项目地址:https://github.com/Zizaco/entrust</a><br><a target="_blank" rel="noopener" href="https://phphub.org/topics/166">Entrust - Laravel 用户权限系统解决方案</a></p>
+</div><h2 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://github.com/Zizaco/entrust">项目地址:https://github.com/Zizaco/entrust</a><br><a target="_blank" rel="noopener" href="https://phphub.org/topics/166">Entrust - Laravel 用户权限系统解决方案</a></p>
 
+</div>
   </div>
   
   
@@ -2537,8 +2538,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860976')
-      volantis.js('/js/message.js?time=1632106860976', () => {
+      volantis.css('/css/message.css?time=1632107227220')
+      volantis.js('/js/message.js?time=1632107227220', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2582,8 +2583,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860976')
-      volantis.js('/js/message.js?time=1632106860976', () => {
+      volantis.css('/css/message.css?time=1632107227220')
+      volantis.js('/js/message.js?time=1632107227220', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2839,7 +2840,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860976')
+    volantis.js('/js/rightMenu.js?time=1632107227220')
   </script>
 
 
@@ -2853,19 +2854,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860976")
+        volantis.js("/js/plugins/sites.js?time=1632107227220")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860976")
+        volantis.js("/js/plugins/friends.js?time=1632107227220")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860976")
+        volantis.js("/js/plugins/contributors.js?time=1632107227220")
       }
     
   };
@@ -2981,7 +2982,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106860976.js"></script>
+<script src="/js/app.js?time=1632107227220.js"></script>
 
 
 <!-- optional -->
@@ -2994,7 +2995,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860976");
+    return volantis.js("/js/search/hexo.js?time=1632107227220");
   }
 
   function loadSearchService() {

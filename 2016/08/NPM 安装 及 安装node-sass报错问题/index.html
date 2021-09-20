@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860558" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227122" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1532,8 +1532,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860558" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860558"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227122" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227122"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1944,11 +1944,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>NPM -v 查看版本 是否安装成功</li>
 </ol>
 <hr>
-<h2 id="再次安装心得"><a href="#再次安装心得" class="headerlink" title="再次安装心得"></a>再次安装心得</h2><p>npm已经是附带安装,所以不用再像上面那样手动安装npm.<br>不过默认安装的npm默认安装模块位置在<code>C:\Users\elick\AppData\Roaming</code>这个下面,不像手动安装是在nodejs目录里,而且自动安装的版本也比较低.<br>所以选择手动安装也不错.不过必须先得写在已经安装好的npm <code>npm uninstall npm</code></p>
+<h2 id="再次安装心得"><a href="#再次安装心得" class="headerlink" title="再次安装心得"></a>再次安装心得</h2><div class="story post-story"><p>npm已经是附带安装,所以不用再像上面那样手动安装npm.<br>不过默认安装的npm默认安装模块位置在<code>C:\Users\elick\AppData\Roaming</code>这个下面,不像手动安装是在nodejs目录里,而且自动安装的版本也比较低.<br>所以选择手动安装也不错.不过必须先得写在已经安装好的npm <code>npm uninstall npm</code></p>
 <hr>
 <p>在windows下开发真是麻烦重重,还的需要安装python,还得需要安装c++.比如说要用node-sass 就得必须用这两个. 而要开发socket.io和ionic都需要这个</p>
-<h2 id="第三次安装"><a href="#第三次安装" class="headerlink" title="第三次安装"></a>第三次安装</h2><p>有时网上克隆下来的项目,还是有错误问题.又一次遇到了node-sass,这次用cnpm居然就可以了.所以可能上次安装的问题也是因为这个,有机会下次测试下.</p>
+</div><h2 id="第三次安装"><a href="#第三次安装" class="headerlink" title="第三次安装"></a>第三次安装</h2><div class="story post-story"><p>有时网上克隆下来的项目,还是有错误问题.又一次遇到了node-sass,这次用cnpm居然就可以了.所以可能上次安装的问题也是因为这个,有机会下次测试下.</p>
 
+</div>
   </div>
   
   
@@ -2521,8 +2522,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860558')
-      volantis.js('/js/message.js?time=1632106860558', () => {
+      volantis.css('/css/message.css?time=1632107227121')
+      volantis.js('/js/message.js?time=1632107227121', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2566,8 +2567,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860558')
-      volantis.js('/js/message.js?time=1632106860558', () => {
+      volantis.css('/css/message.css?time=1632107227121')
+      volantis.js('/js/message.js?time=1632107227121', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2823,7 +2824,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860558')
+    volantis.js('/js/rightMenu.js?time=1632107227121')
   </script>
 
 
@@ -2837,19 +2838,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860558")
+        volantis.js("/js/plugins/sites.js?time=1632107227121")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860558")
+        volantis.js("/js/plugins/friends.js?time=1632107227121")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860558")
+        volantis.js("/js/plugins/contributors.js?time=1632107227121")
       }
     
   };
@@ -2965,7 +2966,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106860558.js"></script>
+<script src="/js/app.js?time=1632107227122.js"></script>
 
 
 <!-- optional -->
@@ -2978,7 +2979,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860558");
+    return volantis.js("/js/search/hexo.js?time=1632107227121");
   }
 
   function loadSearchService() {

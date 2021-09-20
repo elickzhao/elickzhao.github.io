@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106859248" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226806" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106859248" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106859248"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226806" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226806"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1923,9 +1923,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="vue组件模版编写规则"><a href="#vue组件模版编写规则" class="headerlink" title="vue组件模版编写规则"></a>vue组件模版编写规则</h2><p><strong>main.vue</strong> 在组件里 所有的样式必须放在一个 <code>&lt;div&gt;&lt;/div&gt;</code> 标签里 否则会出错.<br> 这个标签可以指定 默认为 <code>class=index</code> 这个看教程时已经知道,只是做的时候又给忘记了</p>
+    <h2 id="vue组件模版编写规则"><a href="#vue组件模版编写规则" class="headerlink" title="vue组件模版编写规则"></a>vue组件模版编写规则</h2><div class="story post-story"><p><strong>main.vue</strong> 在组件里 所有的样式必须放在一个 <code>&lt;div&gt;&lt;/div&gt;</code> 标签里 否则会出错.<br> 这个标签可以指定 默认为 <code>class=index</code> 这个看教程时已经知道,只是做的时候又给忘记了</p>
 <hr>
-<h2 id="vue组件开始之前执行组件方法的方法-呵呵"><a href="#vue组件开始之前执行组件方法的方法-呵呵" class="headerlink" title="vue组件开始之前执行组件方法的方法.呵呵"></a>vue组件开始之前执行组件方法的方法.呵呵</h2><ol>
+</div><h2 id="vue组件开始之前执行组件方法的方法-呵呵"><a href="#vue组件开始之前执行组件方法的方法-呵呵" class="headerlink" title="vue组件开始之前执行组件方法的方法.呵呵"></a>vue组件开始之前执行组件方法的方法.呵呵</h2><div class="story post-story"><ol>
 <li><p><strong>Vue.nextTick(function () {   })</strong></p>
 <blockquote>
 <p>在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。 因为有的插件需要操作DOM 但是DOM还没创建出来时 会出现问题  <strong>这个也是如此无法用this</strong> <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000008570874">我理解的关于Vue.nextTick()的正确使用</a></p>
@@ -1959,13 +1959,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>6.这三个的加载顺序很有趣, beforeRouteEnter -&gt; Vue.nextTick -&gt; created 看来created是创建组件的时候</p>
 <p>7.<del>放在export default {}的js代码也会被执行的,而且好像是页面渲染完成后执行的.</del> <strong>这句当时不知道怎么写的,好像是错了.</strong> 这里只能放,函数和属性,是没法使用js代码段的</p>
 <hr>
-<h2 id="老插件及不能用NPM安装的插件引用"><a href="#老插件及不能用NPM安装的插件引用" class="headerlink" title="老插件及不能用NPM安装的插件引用"></a>老插件及不能用NPM安装的插件引用</h2><p>用<strong>webpack</strong>创建的项目,引用这种插件很费事.而且不能用CND,也许能用只是我没找到方法.<br>看下面的文章,有好几个方法,不过都很麻烦.<br>不过我发现好像直接用 <code>import particlesJS from &#39;../libs/particles.js&#39;;</code><br>也是能找到正确位置的,但是否可用没测试 以后再说吧.</p>
+</div><h2 id="老插件及不能用NPM安装的插件引用"><a href="#老插件及不能用NPM安装的插件引用" class="headerlink" title="老插件及不能用NPM安装的插件引用"></a>老插件及不能用NPM安装的插件引用</h2><div class="story post-story"><p>用<strong>webpack</strong>创建的项目,引用这种插件很费事.而且不能用CND,也许能用只是我没找到方法.<br>看下面的文章,有好几个方法,不过都很麻烦.<br>不过我发现好像直接用 <code>import particlesJS from &#39;../libs/particles.js&#39;;</code><br>也是能找到正确位置的,但是否可用没测试 以后再说吧.</p>
 <p>下面这个方法是我现在用的.<br><code>var particlesJS = require(&#39;exports-loader?window.particlesJS!../libs/particles.js&#39;);</code><br>记住一定用 <strong>npm</strong> 安装 <strong>exports-loader</strong>  这样就可以使用自己下载的插件了.<br>而且还解决了另外一个问题.以为<strong>particlesJS</strong>是个老插件,他没有现代的模块方式开发,所以用<strong>npm</strong>安装了,<strong>import</strong>了也是无法使用的.所以必须用<strong>exports-loader</strong>转换一下,这样<strong>particlesJS</strong>的方法就可用了.</p>
 <p>参考文档<br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000007020623">如何在 vue 项目里正确地引用 jquery 和 jquery-ui的插件</a></p>
 <hr>
-<h2 id="插件的选择-有些插件不可以用"><a href="#插件的选择-有些插件不可以用" class="headerlink" title="插件的选择,有些插件不可以用."></a>插件的选择,有些插件不可以用.</h2><p>这次就遇到了这个问题.<br>一 有可能是插件太老,引用后无法使用.会提示这个不是方法.<br>二 就是这个插件写的有问题,使用时是个类必须new 比如 <code>new Particleground.particle(&#39;#canvas&#39;, options);</code> 这个不是方法,所以无法自动执行,必须放在vue的方法里触发才可以.幸好如上面讲到的,<br>用vue-router里的钩子程序能触发 所以就一点用都没有了. 至于这个插件的写法以后研究下.</p>
+</div><h2 id="插件的选择-有些插件不可以用"><a href="#插件的选择-有些插件不可以用" class="headerlink" title="插件的选择,有些插件不可以用."></a>插件的选择,有些插件不可以用.</h2><div class="story post-story"><p>这次就遇到了这个问题.<br>一 有可能是插件太老,引用后无法使用.会提示这个不是方法.<br>二 就是这个插件写的有问题,使用时是个类必须new 比如 <code>new Particleground.particle(&#39;#canvas&#39;, options);</code> 这个不是方法,所以无法自动执行,必须放在vue的方法里触发才可以.幸好如上面讲到的,<br>用vue-router里的钩子程序能触发 所以就一点用都没有了. 至于这个插件的写法以后研究下.</p>
 <hr>
-<h2 id="webpace打包后单击静态文件显示空白内容"><a href="#webpace打包后单击静态文件显示空白内容" class="headerlink" title="webpace打包后单击静态文件显示空白内容"></a>webpace打包后单击静态文件显示空白内容</h2><p>看到 <code>&lt;router-view&gt;&lt;/router-view&gt;</code> 加载内容为空.判断为这个插件出问题了.</p>
+</div><h2 id="webpace打包后单击静态文件显示空白内容"><a href="#webpace打包后单击静态文件显示空白内容" class="headerlink" title="webpace打包后单击静态文件显示空白内容"></a>webpace打包后单击静态文件显示空白内容</h2><div class="story post-story"><p>看到 <code>&lt;router-view&gt;&lt;/router-view&gt;</code> 加载内容为空.判断为这个插件出问题了.</p>
 <p>最后发现,是 <code>vue-router</code> 的配置,<code>mode</code> 这个有三个选项 <code>&quot;hash&quot; | &quot;history&quot; | &quot;abstract&quot;</code><br>必须选择 <code>hash</code>,否则的话必须用静态服务器访问才行,单击打开文件是不行的.<br><code>history</code>的 url路径会美观不少,不过就是必须用静态服务器了</p>
 <p><strong>注意:</strong></p>
 <ol>
@@ -1975,38 +1975,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 路由配置</span></span><br><span class="line"><span class="keyword">const</span> RouterConfig = &#123;</span><br><span class="line">    <span class="attr">mode</span>: <span class="string">&#x27;hash&#x27;</span>,   <span class="comment">//哦 的确如此 必须用hash才能打包成静态页</span></span><br><span class="line">    <span class="attr">routes</span>: Routers</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="Node-js-Api方式使用"><a href="#Node-js-Api方式使用" class="headerlink" title="Node.js Api方式使用"></a>Node.js Api方式使用</h2><p>就是把命令行模式,转换写到程序里.不过这个方式写起来太复杂了<br>哦 热启动还有一点 如果不行这么写 <code>entry: [&quot;webpack-dev-server/client?http://localhost:8080&quot;],</code></p>
+</div><h2 id="Node-js-Api方式使用"><a href="#Node-js-Api方式使用" class="headerlink" title="Node.js Api方式使用"></a>Node.js Api方式使用</h2><div class="story post-story"><p>就是把命令行模式,转换写到程序里.不过这个方式写起来太复杂了<br>哦 热启动还有一点 如果不行这么写 <code>entry: [&quot;webpack-dev-server/client?http://localhost:8080&quot;],</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> compiler = webpack(rendererConfig)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//就到这里吧 热更新也做了 可惜就是不自动刷新浏览器</span></span><br><span class="line"> <span class="comment">//[WDS] App hot update... (执行到这里就不走了)</span></span><br><span class="line"> <span class="comment">//dev-server.js:45 [HMR] Checking for updates on the server... (就差这一句 不知道为啥)</span></span><br><span class="line"> <span class="comment">//这个写法真心没有命令行简单啊</span></span><br><span class="line"> <span class="keyword">const</span> server = <span class="keyword">new</span> WebpackDevServer(</span><br><span class="line">   compiler,</span><br><span class="line">   &#123;</span><br><span class="line">     <span class="attr">contentBase</span>: path.join(__dirname, <span class="string">&#x27;../&#x27;</span>),</span><br><span class="line">     <span class="attr">quiet</span>: <span class="literal">true</span>,</span><br><span class="line">     <span class="attr">publicPath</span>: <span class="string">&#x27;/dist/&#x27;</span>,</span><br><span class="line">     <span class="attr">hot</span>: <span class="literal">true</span>,</span><br><span class="line">     <span class="attr">compress</span>: <span class="literal">true</span>,</span><br><span class="line">     <span class="attr">historyApiFallback</span>: <span class="literal">true</span>,</span><br><span class="line">     <span class="function"><span class="title">setup</span>(<span class="params">app, ctx</span>)</span> &#123;</span><br><span class="line">       app.use(hotMiddleware)</span><br><span class="line">       ctx.middleware.waitUntilValid(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">         resolve()</span><br><span class="line">       &#125;)</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> )</span><br><span class="line"> server.listen(<span class="number">8080</span>)</span><br></pre></td></tr></table></figure>
 
 <p><a href="http://elickzhao.github.io/2017/06/webpack-dev-server%20%E7%9A%84%20Node.js%20Api%E6%96%B9%E5%BC%8F%E5%92%8CCLI%20%E6%96%B9%E5%BC%8F%20%E4%B8%A4%E7%A7%8D%E7%94%A8%E6%B3%95/">webpack-dev-server 的 Node.js Api方式和CLI 方式 两种用法</a></p>
 <hr>
-<h2 id="webpack输出文件设置"><a href="#webpack输出文件设置" class="headerlink" title="webpack输出文件设置"></a>webpack输出文件设置</h2><p>这里 <code>path</code>已经设置<code>publicPath</code>不设置也可以,设置的话有可能出现引入错误<br><code>filename</code> 也不用设置位置了.这样直接全部生成在 <code>dist</code> 目录下<br>如果<code>publicPath</code>设置了,css和js会保存在那里.但是html会在根目录</p>
+</div><h2 id="webpack输出文件设置"><a href="#webpack输出文件设置" class="headerlink" title="webpack输出文件设置"></a>webpack输出文件设置</h2><div class="story post-story"><p>这里 <code>path</code>已经设置<code>publicPath</code>不设置也可以,设置的话有可能出现引入错误<br><code>filename</code> 也不用设置位置了.这样直接全部生成在 <code>dist</code> 目录下<br>如果<code>publicPath</code>设置了,css和js会保存在那里.但是html会在根目录</p>
 <p><strong>注意</strong>: <del>总是忘记啊 <strong>json</strong> 配置文件里是不能添加注释的 否则会报错</del> 是 <strong>package.json</strong> 注释会报错</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">output: &#123;</span><br><span class="line">    <span class="attr">path</span>: path.join(__dirname, <span class="string">&#x27;./dist&#x27;</span>)</span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">output</span>: &#123;</span><br><span class="line">    <span class="attr">publicPath</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&#x27;[name].[hash].js&#x27;</span>,</span><br><span class="line">    <span class="attr">chunkFilename</span>: <span class="string">&#x27;[name].[hash].chunk.js&#x27;</span></span><br><span class="line">&#125;,</span><br><span class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">        <span class="attr">filename</span>: <span class="string">&#x27;index_prod.html&#x27;</span>,</span><br><span class="line">        <span class="attr">template</span>: <span class="string">&#x27;./src/template/index.ejs&#x27;</span>,</span><br><span class="line">        <span class="attr">inject</span>: <span class="literal">false</span></span><br><span class="line">    &#125;)    </span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="在iview里build和dev模版"><a href="#在iview里build和dev模版" class="headerlink" title="在iview里build和dev模版"></a>在iview里build和dev模版</h2><p>在iview里dev的时候用的是根目录的 <strong>index.html</strong> 因为dev的时候是css等静态文件是不加版本号<br>所以可以在<strong>index.html</strong>里写死 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;/dist/main.js&quot;&gt;&lt;/script&gt;</code></p>
+</div><h2 id="在iview里build和dev模版"><a href="#在iview里build和dev模版" class="headerlink" title="在iview里build和dev模版"></a>在iview里build和dev模版</h2><div class="story post-story"><p>在iview里dev的时候用的是根目录的 <strong>index.html</strong> 因为dev的时候是css等静态文件是不加版本号<br>所以可以在<strong>index.html</strong>里写死 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;/dist/main.js&quot;&gt;&lt;/script&gt;</code></p>
 <p>在build的时候,用的是 <code>src/template/index.ejs</code> 所以这里必须加这个 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%= htmlWebpackPlugin.files.js[1] %&gt;&quot;&gt;&lt;/script&gt;</code> 否则就无法添加带版本号的静态文件了</p>
 <p>所以 在iview里 build 和 dev 是分开的. 他们的 <code>config</code>文件也不一样所以修改时要注意</p>
 <hr>
-<h2 id="这里需要修改啊"><a href="#这里需要修改啊" class="headerlink" title="这里需要修改啊"></a>这里需要修改啊</h2><p>现在遇到的问题是我的 粒子插件的配置文件遇到了跨域请求问题. 而且他不能自动拷贝到<code>dist</code>目录下.<br>虽然报错写着这个,目录没有这个文件,可是拷过去依然没用</p>
+</div><h2 id="这里需要修改啊"><a href="#这里需要修改啊" class="headerlink" title="这里需要修改啊"></a>这里需要修改啊</h2><div class="story post-story"><p>现在遇到的问题是我的 粒子插件的配置文件遇到了跨域请求问题. 而且他不能自动拷贝到<code>dist</code>目录下.<br>虽然报错写着这个,目录没有这个文件,可是拷过去依然没用</p>
 <hr>
-<h2 id="版本号插件输出信息问题"><a href="#版本号插件输出信息问题" class="headerlink" title="版本号插件输出信息问题"></a>版本号插件输出信息问题</h2><p>因为在做 <strong>electron</strong> 的时候,打包时需要用个效果插件.但是<code>process</code>其他信息都不会输出,唯独这个会输出个信息,应该是那里有问题,但是并影响使用,所以到现在也没仔细研究.就算 <strong>webpack</strong>  的显示进度 也会被他打断.</p>
+</div><h2 id="版本号插件输出信息问题"><a href="#版本号插件输出信息问题" class="headerlink" title="版本号插件输出信息问题"></a>版本号插件输出信息问题</h2><div class="story post-story"><p>因为在做 <strong>electron</strong> 的时候,打包时需要用个效果插件.但是<code>process</code>其他信息都不会输出,唯独这个会输出个信息,应该是那里有问题,但是并影响使用,所以到现在也没仔细研究.就算 <strong>webpack</strong>  的显示进度 也会被他打断.</p>
 <p><strong>这个以后有空解决下吧</strong></p>
 <p><del>还有一点是在强调下,json不能有注释. 唉 总忘记</del> 这句是错的是 <strong>package.json</strong>不能有注释</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">    test: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">    loader: <span class="string">&#x27;vue-loader&#x27;</span>,</span><br><span class="line">    <span class="attr">options</span>: &#123;</span><br><span class="line">        <span class="attr">loaders</span>: &#123;</span><br><span class="line">            <span class="attr">css</span>: ExtractTextPlugin.extract(&#123;</span><br><span class="line">                <span class="attr">use</span>: [<span class="string">&#x27;css-loader&#x27;</span>, <span class="string">&#x27;autoprefixer-loader&#x27;</span>], <span class="comment">//加这个 autoprefixer-loader 就报错  有个输出 以后再考虑吧 反正现在可以用了 就是不是最完美样子</span></span><br><span class="line">                <span class="comment">//use: [&#x27;css-loader&#x27;],</span></span><br><span class="line">                <span class="attr">fallback</span>: <span class="string">&#x27;vue-style-loader&#x27;</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">      &#123;</span><br><span class="line">    <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</span><br><span class="line">    use: ExtractTextPlugin.extract(&#123;    <span class="comment">//这里去除这个插件就会找不到带版本号的插件了</span></span><br><span class="line">        <span class="attr">use</span>: [<span class="string">&#x27;css-loader?minimize&#x27;</span>, <span class="string">&#x27;autoprefixer-loader&#x27;</span>],  <span class="comment">// 这个也是 这个autoprefixer-loader 好像是版本选择</span></span><br><span class="line">        <span class="comment">//use: [&#x27;css-loader?minimize&#x27;],  </span></span><br><span class="line">        <span class="attr">fallback</span>: <span class="string">&#x27;style-loader&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="简易服务器返回静态文件这么写"><a href="#简易服务器返回静态文件这么写" class="headerlink" title="简易服务器返回静态文件这么写"></a>简易服务器返回静态文件这么写</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line"> <span class="comment">//res.send(&#x27;Hello World&#x27;)     //这里注意下因为生成的静态页不是index.html标准名称 所以不会显示</span></span><br><span class="line">  res.sendFile( path.join(__dirname,  <span class="string">&#x27;./dist/index_prod.html&#x27;</span>))    <span class="comment">//一定是绝对路径</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</div><h2 id="简易服务器返回静态文件这么写"><a href="#简易服务器返回静态文件这么写" class="headerlink" title="简易服务器返回静态文件这么写"></a>简易服务器返回静态文件这么写</h2><div class="story post-story"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line"> <span class="comment">//res.send(&#x27;Hello World&#x27;)     //这里注意下因为生成的静态页不是index.html标准名称 所以不会显示</span></span><br><span class="line">  res.sendFile( path.join(__dirname,  <span class="string">&#x27;./dist/index_prod.html&#x27;</span>))    <span class="comment">//一定是绝对路径</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="使用-yarn-千万要注意"><a href="#使用-yarn-千万要注意" class="headerlink" title="使用 yarn 千万要注意"></a>使用 yarn 千万要注意</h2><p><code>yarn</code> 虽然速度比 <code>npm</code> 快很多,但总会出现莫名其妙的问题.我有个项目前两天运行正常,今天再打开一大堆报错.说各种文件找不到<br>用 <code>yarn</code> 重装一遍也不行,没办法用 <code>npm</code>重装 一切都好了</p>
+</div><h2 id="使用-yarn-千万要注意"><a href="#使用-yarn-千万要注意" class="headerlink" title="使用 yarn 千万要注意"></a>使用 yarn 千万要注意</h2><div class="story post-story"><p><code>yarn</code> 虽然速度比 <code>npm</code> 快很多,但总会出现莫名其妙的问题.我有个项目前两天运行正常,今天再打开一大堆报错.说各种文件找不到<br>用 <code>yarn</code> 重装一遍也不行,没办法用 <code>npm</code>重装 一切都好了</p>
 <p>所以 用<code>yarn</code>千万要小心, 要不项目一开始就用,千万别中间再用</p>
 <hr>
-<h2 id="webpack复制指定目录到dist生成目录"><a href="#webpack复制指定目录到dist生成目录" class="headerlink" title="webpack复制指定目录到dist生成目录"></a>webpack复制指定目录到dist生成目录</h2><p>使用这个插件<a target="_blank" rel="noopener" href="https://github.com/kevlened/copy-webpack-plugin">copy-webpack-plugin</a>就ok了<br>用法很简单</p>
+</div><h2 id="webpack复制指定目录到dist生成目录"><a href="#webpack复制指定目录到dist生成目录" class="headerlink" title="webpack复制指定目录到dist生成目录"></a>webpack复制指定目录到dist生成目录</h2><div class="story post-story"><p>使用这个插件<a target="_blank" rel="noopener" href="https://github.com/kevlened/copy-webpack-plugin">copy-webpack-plugin</a>就ok了<br>用法很简单</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> CopyWebpackPlugin = <span class="built_in">require</span>(<span class="string">&#x27;copy-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> CopyWebpackPlugin([&#123;    <span class="comment">//还有就是这个参数必须是数组才行,哪怕只有一个</span></span><br><span class="line">            <span class="attr">from</span>:<span class="string">&#x27;./src/assets&#x27;</span>,</span><br><span class="line">            <span class="attr">to</span>:<span class="string">&#x27;assets&#x27;</span> <span class="comment">//因为上面已经有了输出路径,所以不需要写两次了</span></span><br><span class="line">        &#125;]),</span><br><span class="line">        ......</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="vue报错-template-or-render-function-not-defined"><a href="#vue报错-template-or-render-function-not-defined" class="headerlink" title="vue报错 template or render function not defined"></a>vue报错 template or render function not defined</h2><p><strong>问题产生:</strong> <a target="_blank" rel="noopener" href="http://cn.vuejs.org/v2/guide/installation.html#%E7%8B%AC%E7%AB%8B%E6%9E%84%E5%BB%BA-vs-%E8%BF%90%E8%A1%8C%E6%97%B6%E6%9E%84%E5%BB%BA">独立构建-vs-运行时构建</a> 这就是问题根源,webpack运行的不是完整vue,所以不包含解析<code>template</code>.这里需要在<code>webpack</code>设置里天上这句.        </p>
+</div><h2 id="vue报错-template-or-render-function-not-defined"><a href="#vue报错-template-or-render-function-not-defined" class="headerlink" title="vue报错 template or render function not defined"></a>vue报错 template or render function not defined</h2><div class="story post-story"><p><strong>问题产生:</strong> <a target="_blank" rel="noopener" href="http://cn.vuejs.org/v2/guide/installation.html#%E7%8B%AC%E7%AB%8B%E6%9E%84%E5%BB%BA-vs-%E8%BF%90%E8%A1%8C%E6%97%B6%E6%9E%84%E5%BB%BA">独立构建-vs-运行时构建</a> 这就是问题根源,webpack运行的不是完整vue,所以不包含解析<code>template</code>.这里需要在<code>webpack</code>设置里天上这句.        </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias: &#123;</span><br><span class="line">            <span class="string">&#x27;vue&#x27;</span>: <span class="string">&#x27;vue/dist/vue.esm.js&#x27;</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 <p>有的地方说是 <code>vue.common.js</code> 其实一样看下面官方说明<br><a target="_blank" rel="noopener" href="https://vuefe.cn/v2/guide/installation.html#%E4%B8%8D%E5%90%8C%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E7%9A%84%E8%A7%A3%E9%87%8A%E8%AF%B4%E6%98%8E">不同构建版本的解释说明</a></p>
 <p><strong>问题解决:</strong><br>但是我这个不是这么解决的,这还多亏了,vue-router里的提示</p>
@@ -2016,6 +2016,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>下面两个文章都不错,第一个讲解的非常深入,第二个是最开始的解决办法,现在好像不实用了,不过也可以了解下问题的起因.</p>
 <p><a target="_blank" rel="noopener" href="http://blog.csdn.net/csdn_yudong/article/details/59109902">从一个奇怪的错误出发理解 Vue 基本概念</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000007099099?_ea=1236628">vue2.0组件注册的问题</a></p>
 
+</div>
   </div>
   
   
@@ -2643,8 +2644,8 @@ mounted: function (){}
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106859248')
-      volantis.js('/js/message.js?time=1632106859248', () => {
+      volantis.css('/css/message.css?time=1632107226806')
+      volantis.js('/js/message.js?time=1632107226806', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2688,8 +2689,8 @@ mounted: function (){}
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106859248')
-      volantis.js('/js/message.js?time=1632106859248', () => {
+      volantis.css('/css/message.css?time=1632107226806')
+      volantis.js('/js/message.js?time=1632107226806', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2945,7 +2946,7 @@ mounted: function (){}
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106859248')
+    volantis.js('/js/rightMenu.js?time=1632107226806')
   </script>
 
 
@@ -2959,19 +2960,19 @@ mounted: function (){}
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106859248")
+        volantis.js("/js/plugins/sites.js?time=1632107226806")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106859248")
+        volantis.js("/js/plugins/friends.js?time=1632107226806")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106859248")
+        volantis.js("/js/plugins/contributors.js?time=1632107226806")
       }
     
   };
@@ -3087,7 +3088,7 @@ mounted: function (){}
 
 
 
-<script src="/js/app.js?time=1632106859248.js"></script>
+<script src="/js/app.js?time=1632107226806.js"></script>
 
 
 <!-- optional -->
@@ -3100,7 +3101,7 @@ mounted: function (){}
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106859248");
+    return volantis.js("/js/search/hexo.js?time=1632107226806");
   }
 
   function loadSearchService() {

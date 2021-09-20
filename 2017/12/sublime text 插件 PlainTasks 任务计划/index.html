@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106858641" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226681" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106858641" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106858641"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226681" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226681"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1928,8 +1928,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>说一下问题 自定义设置 <code>open_tasks_bullet</code> 和 <code>done_tasks_bullet</code> 如果这两个改了,就会出现 进度条无法显示的问题, 因为每次完成一个任务会直接把任务当作取消来算了.<br>但是问题在于有时系统不会显示默认的字体.<br>这里就必须改写 <code>&quot;font_face&quot;: &quot;Microsoft YaHei&quot;,</code> 雅黑还算好看点,所以现在暂且用这个.并用默认图标</p>
 <p>已经用了sublime的同步设置,下面保存这个其实没什么太多意义,不过还是保存一份吧<br><strong>自己的配置</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;open_tasks_bullet&quot;</span>: <span class="string">&quot;☐&quot;</span>, <span class="comment">// options: - | ❍ | ❑ | ■ | □ | ☐ | ▪ | ▫ | – | — | ≡ | → | › | [ ]</span></span><br><span class="line">  <span class="string">&quot;done_tasks_bullet&quot;</span>: <span class="string">&quot;✔&quot;</span>, <span class="comment">// options: + | ✓ | ✔ | √ | [x]</span></span><br><span class="line">  <span class="string">&quot;cancelled_tasks_bullet&quot;</span>: <span class="string">&quot;✘&quot;</span>, <span class="comment">// options: x | ✘ | [-]</span></span><br><span class="line">  <span class="string">&quot;before_tasks_bullet_margin&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="string">&quot;date_format&quot;</span>: <span class="string">&quot;(%y-%m-%d %H:%M)&quot;</span>,</span><br><span class="line">  <span class="string">&quot;done_tag&quot;</span>: <span class="literal">true</span>, <span class="comment">// related to @cancelled as well</span></span><br><span class="line">  <span class="string">&quot;project_tag&quot;</span>: <span class="literal">true</span>, <span class="comment">// if true - postfix archived task with project tag, if false - prefix</span></span><br><span class="line">  <span class="string">&quot;archive_name&quot;</span>: <span class="string">&quot;Archive:&quot;</span>, <span class="comment">// make sure it is the unique project name within your todo files</span></span><br><span class="line">  <span class="string">&quot;new_on_top&quot;</span>: <span class="literal">true</span>, <span class="comment">// how to sort archived tasks</span></span><br><span class="line">  <span class="string">&quot;show_remain_due&quot;</span>: <span class="literal">false</span>, <span class="comment">// in Sublime 3, show remain or overdue time under due tags</span></span><br><span class="line">  <span class="comment">//按理说这是这进度条设计啊</span></span><br><span class="line">  <span class="string">&quot;stats_format&quot;</span>:<span class="string">&quot;$n/$a done ($percent%) $progress Last task @done $last&quot;</span>,</span><br><span class="line">  <span class="comment">//&quot;stats_format&quot;:&quot;□$o [√]$d  ≡$a&quot;,</span></span><br><span class="line">  <span class="string">&quot;bar_full&quot;</span>: <span class="string">&quot;■&quot;</span>,</span><br><span class="line">  <span class="string">&quot;bar_empty&quot;</span>: <span class="string">&quot;□&quot;</span>, <span class="comment">// empty cell for progress-bar in status-bar, for more details see Custom Statistics in README</span></span><br><span class="line">  <span class="string">&quot;replace_stats_chars&quot;</span>: [[<span class="string">&quot; ■&quot;</span>, <span class="string">&quot; [=&quot;</span>], [<span class="string">&quot;■&quot;</span>, <span class="string">&quot;=&quot;</span>], [<span class="string">&quot;▫&quot;</span>, <span class="string">&quot; ] &quot;</span>], [<span class="string">&quot;▫&quot;</span>, <span class="string">&quot; &quot;</span>]],</span><br><span class="line">  </span><br><span class="line">  <span class="string">&quot;color_scheme&quot;</span>: <span class="string">&quot;Packages/PlainTasks/tasks.hidden-tmTheme&quot;</span>,</span><br><span class="line">    <span class="comment">// other bundled schemes:</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-dark.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-eighties-colored.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-eighties-dark.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-gray.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-monokai.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-solarized-dark.hidden-tmTheme</span></span><br><span class="line">    <span class="comment">//   Packages/PlainTasks/tasks-solarized-light.hidden-tmTheme</span></span><br><span class="line">  <span class="comment">// &quot;font_size&quot;: 11,</span></span><br><span class="line">  <span class="comment">// &quot;font_face&quot;: &quot;Consolas&quot;,</span></span><br><span class="line">  <span class="string">&quot;draw_indent_guides&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">&quot;line_numbers&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">&quot;gutter&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;margin&quot;</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="string">&quot;tab_size&quot;</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="string">&quot;translate_tabs_to_spaces&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;use_tab_stops&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">&quot;match_brackets&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">&quot;fold_buttons&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;fade_fold_buttons&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">&quot;extensions&quot;</span>:</span><br><span class="line">  [</span><br><span class="line">    <span class="string">&quot;TODO&quot;</span>,</span><br><span class="line">    <span class="string">&quot;todo&quot;</span>,</span><br><span class="line">    <span class="string">&quot;todolist&quot;</span>,</span><br><span class="line">    <span class="string">&quot;taskpaper&quot;</span>,</span><br><span class="line">    <span class="string">&quot;tasks&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;font_face&quot;</span>: <span class="string">&quot;Microsoft YaHei&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/etimechen/article/details/50730150">SublimeText 插件 - PlainTasks使用方法</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20832754">Sublime Text 3的PlainTasks插件</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/ljw_josie/article/details/73122997">SublimeText3 插件PlainTasks（Todo-list）的使用方法</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/yuenushan/article/details/50041283">SublimeText 插件 - PlainTasks使用方法</a></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="http://blog.csdn.net/etimechen/article/details/50730150">SublimeText 插件 - PlainTasks使用方法</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20832754">Sublime Text 3的PlainTasks插件</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/ljw_josie/article/details/73122997">SublimeText3 插件PlainTasks（Todo-list）的使用方法</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/yuenushan/article/details/50041283">SublimeText 插件 - PlainTasks使用方法</a></p>
 
+</div>
   </div>
   
   
@@ -2502,8 +2503,8 @@ js
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858641')
-      volantis.js('/js/message.js?time=1632106858641', () => {
+      volantis.css('/css/message.css?time=1632107226681')
+      volantis.js('/js/message.js?time=1632107226681', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2547,8 +2548,8 @@ js
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858641')
-      volantis.js('/js/message.js?time=1632106858641', () => {
+      volantis.css('/css/message.css?time=1632107226681')
+      volantis.js('/js/message.js?time=1632107226681', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2804,7 +2805,7 @@ js
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106858641')
+    volantis.js('/js/rightMenu.js?time=1632107226681')
   </script>
 
 
@@ -2818,19 +2819,19 @@ js
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106858641")
+        volantis.js("/js/plugins/sites.js?time=1632107226681")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106858641")
+        volantis.js("/js/plugins/friends.js?time=1632107226681")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106858641")
+        volantis.js("/js/plugins/contributors.js?time=1632107226681")
       }
     
   };
@@ -2946,7 +2947,7 @@ js
 
 
 
-<script src="/js/app.js?time=1632106858641.js"></script>
+<script src="/js/app.js?time=1632107226681.js"></script>
 
 
 <!-- optional -->
@@ -2959,7 +2960,7 @@ js
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106858641");
+    return volantis.js("/js/search/hexo.js?time=1632107226681");
   }
 
   function loadSearchService() {

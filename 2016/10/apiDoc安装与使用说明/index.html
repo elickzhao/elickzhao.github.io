@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860368" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227072" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860368" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860368"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227072" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227072"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1935,11 +1935,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>多个版本很简单 只要把注释里的<code>@apiVersion 0.1.0</code>修改一下就可以了. 使用生成命令时,记得一定要在版本的上一级目录才可以.<code>apidoc -i  app/Http/Controllers/Api -o public/apidoc</code> 这里Api目录下面有 v1和v2两个目录.还有记得修改<code>apidoc.json</code>里的 <code>version</code> 要不默认显示的还是老版本</p>
 </li>
 </ul>
-<h2 id="参数解释"><a href="#参数解释" class="headerlink" title="参数解释"></a>参数解释</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">@api &#123;method&#125; path [title]</span><br><span class="line">  只有使用@api标注的注释块才会在解析之后生成文档，title会被解析为导航菜单(@apiGroup)下的小菜单</span><br><span class="line">  method可以有空格，如&#123;POST GET&#125;</span><br><span class="line">@apiGroup name</span><br><span class="line">  分组名称，被解析为导航栏菜单</span><br><span class="line">@apiName name</span><br><span class="line">  接口名称，在同一个@apiGroup下，名称相同的@api通过@apiVersion区分，否者后面@api会覆盖前面定义的@api</span><br><span class="line">@apiDescription text</span><br><span class="line">  接口描述，支持html语法</span><br><span class="line">@apiVersion verison</span><br><span class="line">  接口版本，major.minor.patch的形式</span><br><span class="line"></span><br><span class="line">@apiIgnore [hint]</span><br><span class="line">  apidoc会忽略使用@apiIgnore标注的接口，hint为描述</span><br><span class="line">@apiSampleRequest url</span><br><span class="line">  接口测试地址以供测试，发送请求时，@api method必须为POST/GET等其中一种</span><br><span class="line"></span><br><span class="line">@apiDefine name [title] [description]</span><br><span class="line">  定义一个注释块(不包含@api)，配合@apiUse使用可以引入注释块</span><br><span class="line">  在@apiDefine内部不可以使用@apiUse</span><br><span class="line">@apiUse name</span><br><span class="line">  引入一个@apiDefine的注释块</span><br><span class="line"></span><br><span class="line">@apiParam [(group)] [&#123;type&#125;] [field=defaultValue] [description]</span><br><span class="line">@apiHeader [(group)] [&#123;type&#125;] [field=defaultValue] [description]</span><br><span class="line">@apiError [(group)] [&#123;type&#125;] field [description]</span><br><span class="line">@apiSuccess [(group)] [&#123;type&#125;] field [description]</span><br><span class="line">  用法基本类似，分别描述请求参数、头部，响应错误和成功</span><br><span class="line">  group表示参数的分组，type表示类型(不能有空格)，入参可以定义默认值(不能有空格)</span><br><span class="line">@apiParamExample [&#123;type&#125;] [title] example</span><br><span class="line">@apiHeaderExample [&#123;type&#125;] [title] example</span><br><span class="line">@apiErrorExample [&#123;type&#125;] [title] example</span><br><span class="line">@apiSuccessExample [&#123;type&#125;] [title] example</span><br><span class="line">  用法完全一致，但是type表示的是example的语言类型</span><br><span class="line">  example书写成什么样就会解析成什么样，所以最好是书写的时候注意格式化，(许多编辑器都有列模式，可以使用列模式快速对代码添加*号)</span><br><span class="line"></span><br><span class="line">@apiPermission name</span><br><span class="line">  name必须独一无二，描述@api的访问权限，如admin/anyone</span><br></pre></td></tr></table></figure>
+<h2 id="参数解释"><a href="#参数解释" class="headerlink" title="参数解释"></a>参数解释</h2><div class="story post-story"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">@api &#123;method&#125; path [title]</span><br><span class="line">  只有使用@api标注的注释块才会在解析之后生成文档，title会被解析为导航菜单(@apiGroup)下的小菜单</span><br><span class="line">  method可以有空格，如&#123;POST GET&#125;</span><br><span class="line">@apiGroup name</span><br><span class="line">  分组名称，被解析为导航栏菜单</span><br><span class="line">@apiName name</span><br><span class="line">  接口名称，在同一个@apiGroup下，名称相同的@api通过@apiVersion区分，否者后面@api会覆盖前面定义的@api</span><br><span class="line">@apiDescription text</span><br><span class="line">  接口描述，支持html语法</span><br><span class="line">@apiVersion verison</span><br><span class="line">  接口版本，major.minor.patch的形式</span><br><span class="line"></span><br><span class="line">@apiIgnore [hint]</span><br><span class="line">  apidoc会忽略使用@apiIgnore标注的接口，hint为描述</span><br><span class="line">@apiSampleRequest url</span><br><span class="line">  接口测试地址以供测试，发送请求时，@api method必须为POST/GET等其中一种</span><br><span class="line"></span><br><span class="line">@apiDefine name [title] [description]</span><br><span class="line">  定义一个注释块(不包含@api)，配合@apiUse使用可以引入注释块</span><br><span class="line">  在@apiDefine内部不可以使用@apiUse</span><br><span class="line">@apiUse name</span><br><span class="line">  引入一个@apiDefine的注释块</span><br><span class="line"></span><br><span class="line">@apiParam [(group)] [&#123;type&#125;] [field=defaultValue] [description]</span><br><span class="line">@apiHeader [(group)] [&#123;type&#125;] [field=defaultValue] [description]</span><br><span class="line">@apiError [(group)] [&#123;type&#125;] field [description]</span><br><span class="line">@apiSuccess [(group)] [&#123;type&#125;] field [description]</span><br><span class="line">  用法基本类似，分别描述请求参数、头部，响应错误和成功</span><br><span class="line">  group表示参数的分组，type表示类型(不能有空格)，入参可以定义默认值(不能有空格)</span><br><span class="line">@apiParamExample [&#123;type&#125;] [title] example</span><br><span class="line">@apiHeaderExample [&#123;type&#125;] [title] example</span><br><span class="line">@apiErrorExample [&#123;type&#125;] [title] example</span><br><span class="line">@apiSuccessExample [&#123;type&#125;] [title] example</span><br><span class="line">  用法完全一致，但是type表示的是example的语言类型</span><br><span class="line">  example书写成什么样就会解析成什么样，所以最好是书写的时候注意格式化，(许多编辑器都有列模式，可以使用列模式快速对代码添加*号)</span><br><span class="line"></span><br><span class="line">@apiPermission name</span><br><span class="line">  name必须独一无二，描述@api的访问权限，如admin/anyone</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="http://apidocjs.com/#demo">官方网站</a><br><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/bb5a4f5e588a">Web API文档生成工具apidoc</a></p>
+</div><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="http://apidocjs.com/#demo">官方网站</a><br><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/bb5a4f5e588a">Web API文档生成工具apidoc</a></p>
 
+</div>
   </div>
   
   
@@ -2514,8 +2515,8 @@ swoole， C扩展实现的PHP异步并行网络通信框架，可以重新定义
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860368')
-      volantis.js('/js/message.js?time=1632106860368', () => {
+      volantis.css('/css/message.css?time=1632107227072')
+      volantis.js('/js/message.js?time=1632107227072', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2559,8 +2560,8 @@ swoole， C扩展实现的PHP异步并行网络通信框架，可以重新定义
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860368')
-      volantis.js('/js/message.js?time=1632106860368', () => {
+      volantis.css('/css/message.css?time=1632107227072')
+      volantis.js('/js/message.js?time=1632107227072', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2816,7 +2817,7 @@ swoole， C扩展实现的PHP异步并行网络通信框架，可以重新定义
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860368')
+    volantis.js('/js/rightMenu.js?time=1632107227072')
   </script>
 
 
@@ -2830,19 +2831,19 @@ swoole， C扩展实现的PHP异步并行网络通信框架，可以重新定义
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860368")
+        volantis.js("/js/plugins/sites.js?time=1632107227072")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860368")
+        volantis.js("/js/plugins/friends.js?time=1632107227072")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860368")
+        volantis.js("/js/plugins/contributors.js?time=1632107227072")
       }
     
   };
@@ -2958,7 +2959,7 @@ swoole， C扩展实现的PHP异步并行网络通信框架，可以重新定义
 
 
 
-<script src="/js/app.js?time=1632106860368.js"></script>
+<script src="/js/app.js?time=1632107227072.js"></script>
 
 
 <!-- optional -->
@@ -2971,7 +2972,7 @@ swoole， C扩展实现的PHP异步并行网络通信框架，可以重新定义
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860368");
+    return volantis.js("/js/search/hexo.js?time=1632107227072");
   }
 
   function loadSearchService() {

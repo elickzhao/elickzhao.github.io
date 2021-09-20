@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860140" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227011" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860140" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860140"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227011" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227011"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1922,17 +1922,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我因为手动安装npm造成系统里存在两个npm,而nodejs自带npm全局包位置不是很喜欢,所以手动改一下.下面是文章里写的办法,我用命令可以改,不知道他为啥非得改文件.</p>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>我因为手动安装npm造成系统里存在两个npm,而nodejs自带npm全局包位置不是很喜欢,所以手动改一下.下面是文章里写的办法,我用命令可以改,不知道他为啥非得改文件.</p>
 <h3 id="第二次安装"><a href="#第二次安装" class="headerlink" title="第二次安装"></a>第二次安装</h3><p>这次安装也出现了下面文章说的使用命令安装不上的问题,通过命令查看配置文件 <code>npm config ls -l</code> 原来是 <code>C:\Program Files</code> 这个空格的问题.使用命令后,用户配置文件<code>C:\Users\elick\.npmrc</code>里面记录的就是<code>C:\Program</code>没有后面的目录了.所以我直接改了用户配置文件,而没想下面文章写的改写全局配置.<br>我安装的路径<code>C:\Program Files\nodejs</code> 这个路径里<code>node_modules</code>就是放npm的默认位置,而且全局的命令也在这个目录下,所以更新npm就直接替换了.所以想来这个应该就是默认配置目录</p>
-<h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p>查看配置命令<br><code>npm config ls -l</code></p>
+</div><h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><div class="story post-story"><p>查看配置命令<br><code>npm config ls -l</code></p>
 <p>Windows下的Nodejs npm路径是appdata，很不爽，想改回来，但是在cmd下执行以下命令也无效</p>
 <p>npm config set cache “C:\Program Files\nodejs\node_cache”</p>
 <p>npm config set prefix “C:\Program Files\nodejs”</p>
 <p>最后在nodejs的安装目录中找到node_modules\npm.npmrc文件</p>
 <p>修改如下即可：</p>
 <p>prefix = D:\nodejs\node_global<br>cache = D:\nodejs\node_global</p>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/picaso/p/3848209.html">Windows 系统下设置Nodejs NPM全局路径</a></p>
+</div><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/picaso/p/3848209.html">Windows 系统下设置Nodejs NPM全局路径</a></p>
 
+</div>
   </div>
   
   
@@ -2504,8 +2505,8 @@ Auth::guard($guard) 试图从本地缓存中获取保护 官方直译是这么�
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860140')
-      volantis.js('/js/message.js?time=1632106860140', () => {
+      volantis.css('/css/message.css?time=1632107227011')
+      volantis.js('/js/message.js?time=1632107227011', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2549,8 +2550,8 @@ Auth::guard($guard) 试图从本地缓存中获取保护 官方直译是这么�
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860140')
-      volantis.js('/js/message.js?time=1632106860140', () => {
+      volantis.css('/css/message.css?time=1632107227011')
+      volantis.js('/js/message.js?time=1632107227011', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2806,7 +2807,7 @@ Auth::guard($guard) 试图从本地缓存中获取保护 官方直译是这么�
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860140')
+    volantis.js('/js/rightMenu.js?time=1632107227011')
   </script>
 
 
@@ -2820,19 +2821,19 @@ Auth::guard($guard) 试图从本地缓存中获取保护 官方直译是这么�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860140")
+        volantis.js("/js/plugins/sites.js?time=1632107227011")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860140")
+        volantis.js("/js/plugins/friends.js?time=1632107227011")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860140")
+        volantis.js("/js/plugins/contributors.js?time=1632107227011")
       }
     
   };
@@ -2948,7 +2949,7 @@ Auth::guard($guard) 试图从本地缓存中获取保护 官方直译是这么�
 
 
 
-<script src="/js/app.js?time=1632106860140.js"></script>
+<script src="/js/app.js?time=1632107227011.js"></script>
 
 
 <!-- optional -->
@@ -2961,7 +2962,7 @@ Auth::guard($guard) 试图从本地缓存中获取保护 官方直译是这么�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860140");
+    return volantis.js("/js/search/hexo.js?time=1632107227011");
   }
 
   function loadSearchService() {

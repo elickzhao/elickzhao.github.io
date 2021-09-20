@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106861618" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227379" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106861618" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106861618"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227379" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227379"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1937,12 +1937,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>命令解析:<br>  docker -d 后台执行 -p 转发端口</p>
 </blockquote>
-<p>  <img src="/image/16-4/2.png" class="lazyload" data-srcset="/image/16-4/2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="虚拟机转发端口"></p>
+<p>  <img src="/image/16-4/2.png" class="lazyload" data-srcset="/image/16-4/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="虚拟机转发端口"></p>
 <span id="more"></span>
 
-<h1 id="boot2docker数据卷问题"><a href="#boot2docker数据卷问题" class="headerlink" title="boot2docker数据卷问题"></a>boot2docker数据卷问题</h1><p>  这个就更恶心了,使用在windows下的boot2docker命令行就会报错,只有进入virtualbox 使用命令 <code>docker run -dp 8080:8080 --name test1 -v /c/Users/elick/www:/var/www elick/php</code>才可以 真是醉了<br>  <strong>需要注意的一点:</strong> boot2docker建立的虚拟机有个自启动共享目录 <code>c/Users C:\Users</code> 在虚拟机里的根目录下能看到这个目录 所以windows上的目录的根目录是/c/开始的<br><img src="/image/16-4/3.png" class="lazyload" data-srcset="/image/16-4/3.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="共享目录"></p>
+<h1 id="boot2docker数据卷问题"><a href="#boot2docker数据卷问题" class="headerlink" title="boot2docker数据卷问题"></a>boot2docker数据卷问题</h1><p>  这个就更恶心了,使用在windows下的boot2docker命令行就会报错,只有进入virtualbox 使用命令 <code>docker run -dp 8080:8080 --name test1 -v /c/Users/elick/www:/var/www elick/php</code>才可以 真是醉了<br>  <strong>需要注意的一点:</strong> boot2docker建立的虚拟机有个自启动共享目录 <code>c/Users C:\Users</code> 在虚拟机里的根目录下能看到这个目录 所以windows上的目录的根目录是/c/开始的<br><img src="/image/16-4/3.png" class="lazyload" data-srcset="/image/16-4/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="共享目录"></p>
 <h1 id="boot2docker使用总结"><a href="#boot2docker使用总结" class="headerlink" title="boot2docker使用总结"></a>boot2docker使用总结</h1><p>  从上面两点来看,虽然省略了配置vagrantfile的麻烦,但是还得去弄虚拟机从这点看,貌似还不如使用vagrant来的简单些</p>
 <h1 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h1><p><a target="_blank" rel="noopener" href="http://avnpc.com/pages/build-php-develop-env-by-docker">Docker在PHP项目开发环境中的应用</a><br><a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/uYzeAnz">{译} 深入理解 Docker Volume（一）</a><br><a target="_blank" rel="noopener" href="http://my.oschina.net/mfk123/blog/292425">Dockers 快速学习（四）Docker 容器的使用</a><br><a target="_blank" rel="noopener" href="http://www.linuxdown.net/install/soft/2016/0303/4906.html">Docker安装_Ubuntu 15.10 &amp; 14.04 LTS上安装和管理Docker</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/halcyonbaby/article/details/46884605">Docker exec与Docker attach</a><br><a target="_blank" rel="noopener" href="http://blog.chinaunix.net/uid-10915175-id-4443127.html">Docker之常用命令</a><br><a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/7V7vYn">Docker学习笔记(2)–Docker常用命令</a><br><a target="_blank" rel="noopener" href="http://tech.uc.cn/?p=2726">利用Docker构建开发环境</a><br><a target="_blank" rel="noopener" href="http://snoopyxdy.blog.163.com/blog/static/6011744020147187542090">利用docker快速部署应用</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/junjun16818/article/details/30655543">Docker volume使用</a><br><a target="_blank" rel="noopener" href="http://my.oschina.net/piorcn/blog/324202">Docker学习—挂载本地目录</a></p>
+
 
   </div>
   
@@ -2531,8 +2532,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861618')
-      volantis.js('/js/message.js?time=1632106861618', () => {
+      volantis.css('/css/message.css?time=1632107227379')
+      volantis.js('/js/message.js?time=1632107227379', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2576,8 +2577,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861618')
-      volantis.js('/js/message.js?time=1632106861618', () => {
+      volantis.css('/css/message.css?time=1632107227379')
+      volantis.js('/js/message.js?time=1632107227379', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2833,7 +2834,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106861618')
+    volantis.js('/js/rightMenu.js?time=1632107227379')
   </script>
 
 
@@ -2847,19 +2848,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106861618")
+        volantis.js("/js/plugins/sites.js?time=1632107227379")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106861618")
+        volantis.js("/js/plugins/friends.js?time=1632107227379")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106861618")
+        volantis.js("/js/plugins/contributors.js?time=1632107227379")
       }
     
   };
@@ -2975,7 +2976,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106861618.js"></script>
+<script src="/js/app.js?time=1632107227379.js"></script>
 
 
 <!-- optional -->
@@ -2988,7 +2989,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106861618");
+    return volantis.js("/js/search/hexo.js?time=1632107227379");
   }
 
   function loadSearchService() {

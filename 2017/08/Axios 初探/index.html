@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106858985" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226743" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106858985" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106858985"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226743" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226743"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1934,8 +1934,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ajaxUrl = env === <span class="string">&#x27;development&#x27;</span> ?</span><br><span class="line">    <span class="string">&#x27;http://127.0.0.1:3000&#x27;</span> :</span><br><span class="line">    env === <span class="string">&#x27;production&#x27;</span> ?</span><br><span class="line">    <span class="string">&#x27;https://www.url.com&#x27;</span> :</span><br><span class="line">    <span class="string">&#x27;https://debug.url.com&#x27;</span>;</span><br><span class="line"></span><br><span class="line">util.ajax = axios.create(&#123;</span><br><span class="line">    <span class="attr">baseURL</span>: ajaxUrl,</span><br><span class="line">    <span class="attr">timeout</span>: <span class="number">30000</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//这样使用  这样就不用每次都写那个很长的请求地址了</span></span><br><span class="line">    Util.ajax.get(<span class="string">&#x27;users&#x27;</span>, &#123;  <span class="comment">//只能用get 是请求 post是创建</span></span><br><span class="line">        <span class="attr">params</span>: &#123;</span><br><span class="line">        <span class="attr">user</span>: <span class="built_in">this</span>.formInline.user,</span><br><span class="line">        <span class="attr">password</span>: <span class="built_in">this</span>.formInline.password</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/eMb2yuY">Axios全攻略</a><br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/Upton/p/6180512.html">axios基本用法</a></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/eMb2yuY">Axios全攻略</a><br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/Upton/p/6180512.html">axios基本用法</a></p>
 
+</div>
   </div>
   
   
@@ -2506,8 +2507,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858985')
-      volantis.js('/js/message.js?time=1632106858985', () => {
+      volantis.css('/css/message.css?time=1632107226742')
+      volantis.js('/js/message.js?time=1632107226742', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2551,8 +2552,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858985')
-      volantis.js('/js/message.js?time=1632106858985', () => {
+      volantis.css('/css/message.css?time=1632107226742')
+      volantis.js('/js/message.js?time=1632107226742', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2808,7 +2809,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106858985')
+    volantis.js('/js/rightMenu.js?time=1632107226742')
   </script>
 
 
@@ -2822,19 +2823,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106858985")
+        volantis.js("/js/plugins/sites.js?time=1632107226742")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106858985")
+        volantis.js("/js/plugins/friends.js?time=1632107226742")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106858985")
+        volantis.js("/js/plugins/contributors.js?time=1632107226742")
       }
     
   };
@@ -2950,7 +2951,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106858985.js"></script>
+<script src="/js/app.js?time=1632107226743.js"></script>
 
 
 <!-- optional -->
@@ -2963,7 +2964,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106858985");
+    return volantis.js("/js/search/hexo.js?time=1632107226743");
   }
 
   function loadSearchService() {

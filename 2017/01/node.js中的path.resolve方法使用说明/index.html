@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106859837" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226943" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106859837" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106859837"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226943" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226943"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1926,13 +1926,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>方法说明：<br>将参数 to 位置的字符解析到一个绝对路径里。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path.resolve([from ...], to)</span><br></pre></td></tr></table></figure>
 
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>当使用插件不在标准路径的时候,可以使用这个函数方便的引入.</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><div class="story post-story"><p>当使用插件不在标准路径的时候,可以使用这个函数方便的引入.</p>
 <hr>
 <p><strong>由于该方法属于path模块，使用前需要引入path模块（var path= require(“path”) ）</strong><br><strong>接收参数：</strong><br>from                     源路径<br>to                         将被解析到绝对路径的字符串</p>
 <p><strong>例子：</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">path.resolve(<span class="string">&#x27;/foo/bar&#x27;</span>, <span class="string">&#x27;./baz&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment">// returns</span></span><br><span class="line"> </span><br><span class="line"><span class="string">&#x27;/foo/bar/baz&#x27;</span></span><br><span class="line"> </span><br><span class="line">path.resolve(<span class="string">&#x27;/foo/bar&#x27;</span>, <span class="string">&#x27;/tmp/file/&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment">// returns</span></span><br><span class="line"> </span><br><span class="line"><span class="string">&#x27;/tmp/file&#x27;</span></span><br><span class="line"> </span><br><span class="line">path.resolve(<span class="string">&#x27;wwwroot&#x27;</span>, <span class="string">&#x27;static_files/png/&#x27;</span>, <span class="string">&#x27;../gif/image.gif&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment">// if currently in /home/myself/node, it returns</span></span><br><span class="line"> </span><br><span class="line"><span class="string">&#x27;/home/myself/node/wwwroot/static_files/gif/image.gif&#x27;</span></span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="http://www.jb51.net/article/58295.htm">node.js中的path.resolve方法使用说明</a></p>
 
+</div>
   </div>
   
   
@@ -2505,8 +2506,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106859837')
-      volantis.js('/js/message.js?time=1632106859837', () => {
+      volantis.css('/css/message.css?time=1632107226943')
+      volantis.js('/js/message.js?time=1632107226943', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2550,8 +2551,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106859837')
-      volantis.js('/js/message.js?time=1632106859837', () => {
+      volantis.css('/css/message.css?time=1632107226943')
+      volantis.js('/js/message.js?time=1632107226943', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2807,7 +2808,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106859837')
+    volantis.js('/js/rightMenu.js?time=1632107226943')
   </script>
 
 
@@ -2821,19 +2822,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106859837")
+        volantis.js("/js/plugins/sites.js?time=1632107226943")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106859837")
+        volantis.js("/js/plugins/friends.js?time=1632107226943")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106859837")
+        volantis.js("/js/plugins/contributors.js?time=1632107226943")
       }
     
   };
@@ -2949,7 +2950,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106859837.js"></script>
+<script src="/js/app.js?time=1632107226943.js"></script>
 
 
 <!-- optional -->
@@ -2962,7 +2963,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106859837");
+    return volantis.js("/js/search/hexo.js?time=1632107226943");
   }
 
   function loadSearchService() {

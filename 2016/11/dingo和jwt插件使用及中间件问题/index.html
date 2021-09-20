@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860224" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227037" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860224" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860224"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227037" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227037"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1922,11 +1922,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在使用的时候,对一个中间件找不到位置.头疼不已,经过一顿寻找终于搞明白了,这里记录下,因为虽然注释了,不过几天后又蒙圈了.前后台一起搞真是玩自己啊.</p>
-<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//routes</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 这里用的中间件 并不是app.php里注册的那个 &#x27;auth&#x27; =&gt; App\Http\Middleware\Authenticate::class,</span></span><br><span class="line">    <span class="comment">// 而是dinggo的api里的middleware就是Auth. 如果用app.php那个会无法验证过期的.</span></span><br><span class="line">    <span class="comment">// 这个注册和jwt一样 都是在 LumenServiceProvider 里完成的 所以不注意会找不到</span></span><br><span class="line">    <span class="variable">$api</span>-&gt;group([<span class="string">&#x27;middleware&#x27;</span> =&gt; <span class="string">&#x27;api.auth&#x27;</span>], <span class="function"><span class="keyword">function</span> (<span class="params"><span class="variable">$api</span></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// USER</span></span><br><span class="line">        <span class="comment">// my detail</span></span><br><span class="line">        <span class="variable">$api</span>-&gt;get(<span class="string">&#x27;user&#x27;</span>, [</span><br><span class="line">            <span class="string">&#x27;as&#x27;</span> =&gt; <span class="string">&#x27;user.show&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;uses&#x27;</span> =&gt; <span class="string">&#x27;UserController@userShow&#x27;</span>,</span><br><span class="line">        ]);</span><br><span class="line">    .......</span><br><span class="line"></span><br><span class="line">------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//app</span></span><br><span class="line"></span><br><span class="line">    <span class="variable">$app</span>-&gt;routeMiddleware([</span><br><span class="line">        <span class="string">&#x27;auth&#x27;</span> =&gt; App\Http\Middleware\Authenticate::class,</span><br><span class="line">        <span class="string">&#x27;cors&#x27;</span> =&gt; App\Http\Middleware\Cors::class,</span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">------------</span><br><span class="line"></span><br><span class="line"><span class="comment">// Dingo\Api\Provider\LumenServiceProvider</span></span><br><span class="line"></span><br><span class="line">     <span class="keyword">$this</span>-&gt;app-&gt;routeMiddleware([</span><br><span class="line">        <span class="string">&#x27;api.auth&#x27;</span> =&gt; Auth::class,</span><br><span class="line">        <span class="string">&#x27;api.throttle&#x27;</span> =&gt; RateLimit::class,</span><br><span class="line">        <span class="string">&#x27;api.controllers&#x27;</span> =&gt; PrepareController::class,</span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><div class="story post-story"><p>在使用的时候,对一个中间件找不到位置.头疼不已,经过一顿寻找终于搞明白了,这里记录下,因为虽然注释了,不过几天后又蒙圈了.前后台一起搞真是玩自己啊.</p>
+</div><h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><div class="story post-story"><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//routes</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 这里用的中间件 并不是app.php里注册的那个 &#x27;auth&#x27; =&gt; App\Http\Middleware\Authenticate::class,</span></span><br><span class="line">    <span class="comment">// 而是dinggo的api里的middleware就是Auth. 如果用app.php那个会无法验证过期的.</span></span><br><span class="line">    <span class="comment">// 这个注册和jwt一样 都是在 LumenServiceProvider 里完成的 所以不注意会找不到</span></span><br><span class="line">    <span class="variable">$api</span>-&gt;group([<span class="string">&#x27;middleware&#x27;</span> =&gt; <span class="string">&#x27;api.auth&#x27;</span>], <span class="function"><span class="keyword">function</span> (<span class="params"><span class="variable">$api</span></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// USER</span></span><br><span class="line">        <span class="comment">// my detail</span></span><br><span class="line">        <span class="variable">$api</span>-&gt;get(<span class="string">&#x27;user&#x27;</span>, [</span><br><span class="line">            <span class="string">&#x27;as&#x27;</span> =&gt; <span class="string">&#x27;user.show&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;uses&#x27;</span> =&gt; <span class="string">&#x27;UserController@userShow&#x27;</span>,</span><br><span class="line">        ]);</span><br><span class="line">    .......</span><br><span class="line"></span><br><span class="line">------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//app</span></span><br><span class="line"></span><br><span class="line">    <span class="variable">$app</span>-&gt;routeMiddleware([</span><br><span class="line">        <span class="string">&#x27;auth&#x27;</span> =&gt; App\Http\Middleware\Authenticate::class,</span><br><span class="line">        <span class="string">&#x27;cors&#x27;</span> =&gt; App\Http\Middleware\Cors::class,</span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">------------</span><br><span class="line"></span><br><span class="line"><span class="comment">// Dingo\Api\Provider\LumenServiceProvider</span></span><br><span class="line"></span><br><span class="line">     <span class="keyword">$this</span>-&gt;app-&gt;routeMiddleware([</span><br><span class="line">        <span class="string">&#x27;api.auth&#x27;</span> =&gt; Auth::class,</span><br><span class="line">        <span class="string">&#x27;api.throttle&#x27;</span> =&gt; RateLimit::class,</span><br><span class="line">        <span class="string">&#x27;api.controllers&#x27;</span> =&gt; PrepareController::class,</span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 
-<h2 id="一点小启示"><a href="#一点小启示" class="headerlink" title="一点小启示"></a>一点小启示</h2><p>通过dingo和jwt使用有一点小启示.就是服务提供者会在boot()里注册一些中间件或者扩展auth的guards驱动.<br>看代码吧,说也说不清,估计过几天又会看不懂的.</p>
+</div><h2 id="一点小启示"><a href="#一点小启示" class="headerlink" title="一点小启示"></a>一点小启示</h2><div class="story post-story"><p>通过dingo和jwt使用有一点小启示.就是服务提供者会在boot()里注册一些中间件或者扩展auth的guards驱动.<br>看代码吧,说也说不清,估计过几天又会看不懂的.</p>
 <p>app.php</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// dingo/api</span></span><br><span class="line"><span class="variable">$app</span>-&gt;register(Dingo\Api\Provider\LumenServiceProvider::class);</span><br><span class="line"><span class="comment">//jwt  </span></span><br><span class="line"><span class="variable">$app</span>-&gt;register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);</span><br></pre></td></tr></table></figure>
 
@@ -1939,6 +1939,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>config/auth</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> [</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;defaults&#x27;</span> =&gt; [</span><br><span class="line">        <span class="string">&#x27;guard&#x27;</span> =&gt; env(<span class="string">&#x27;AUTH_GUARD&#x27;</span>, <span class="string">&#x27;api&#x27;</span>),</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;guards&#x27;</span> =&gt; [</span><br><span class="line">        <span class="string">&#x27;api&#x27;</span> =&gt; [</span><br><span class="line">            <span class="string">&#x27;driver&#x27;</span> =&gt; <span class="string">&#x27;jwt&#x27;</span>,  <span class="comment">//就是这个了,这就是上面注册的</span></span><br><span class="line">            <span class="string">&#x27;provider&#x27;</span> =&gt; <span class="string">&#x27;users&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">    ],</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+</div>
   </div>
   
   
@@ -2515,8 +2516,8 @@ var str = &#39;&#123;&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;a...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860224')
-      volantis.js('/js/message.js?time=1632106860224', () => {
+      volantis.css('/css/message.css?time=1632107227037')
+      volantis.js('/js/message.js?time=1632107227037', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2560,8 +2561,8 @@ var str = &#39;&#123;&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;a...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860224')
-      volantis.js('/js/message.js?time=1632106860224', () => {
+      volantis.css('/css/message.css?time=1632107227037')
+      volantis.js('/js/message.js?time=1632107227037', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2817,7 +2818,7 @@ var str = &#39;&#123;&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;a...</p>
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860224')
+    volantis.js('/js/rightMenu.js?time=1632107227037')
   </script>
 
 
@@ -2831,19 +2832,19 @@ var str = &#39;&#123;&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;a...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860224")
+        volantis.js("/js/plugins/sites.js?time=1632107227037")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860224")
+        volantis.js("/js/plugins/friends.js?time=1632107227037")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860224")
+        volantis.js("/js/plugins/contributors.js?time=1632107227037")
       }
     
   };
@@ -2959,7 +2960,7 @@ var str = &#39;&#123;&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;a...</p>
 
 
 
-<script src="/js/app.js?time=1632106860224.js"></script>
+<script src="/js/app.js?time=1632107227037.js"></script>
 
 
 <!-- optional -->
@@ -2972,7 +2973,7 @@ var str = &#39;&#123;&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;a...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860224");
+    return volantis.js("/js/search/hexo.js?time=1632107227037");
   }
 
   function loadSearchService() {

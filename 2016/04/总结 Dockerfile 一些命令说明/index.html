@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106861472" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227349" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106861472" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106861472"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227349" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227349"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1967,7 +1967,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这个可能是 和 RUN最大区别 RUN是生成容器时执行一次,还有个区别就是 ENTRYPOINT 和 CMD 一样只执行最后一个  RUN是可以执行多次的<br><del>有一次使用sed命令时 RUN可以用 ENTRYPOINT 虽然能生成容器但是却启动不起来 那次用的Docker-composer 所以也不知道和那个是否有关</del></p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@tankywoo-docker:~# cat Dockerfile</span><br><span class="line">FROM ubuntu</span><br><span class="line">ENTRYPOINT echo &quot;Welcome!&quot;</span><br><span class="line"></span><br><span class="line">root@tankywoo-docker:~# docker run 62fda5e450d5</span><br><span class="line">Welcome!</span><br></pre></td></tr></table></figure>
-<p>启动几次执行几次 最上面 Step 7 哪行命令<br><img src="/image/16-4/6.png" class="lazyload" data-srcset="/image/16-4/6.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="启动执行ENTRYPOINT"></p>
+<p>启动几次执行几次 最上面 Step 7 哪行命令<br><img src="/image/16-4/6.png" class="lazyload" data-srcset="/image/16-4/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="启动执行ENTRYPOINT"></p>
 <blockquote>
 <p><strong>简要说明:</strong><br>RUN是在building image时会运行的指令, 在Dockerfile中可以写多条RUN指令.<br>CMD和ENTRYPOINT则是在运行container 时会运行的指令, 都只能写一条, 如果写了多条, 则最后一条生效.<br>CMD和ENTRYPOINT的区别是:<br>CMD在运行时会被command覆盖, ENTRYPOINT不会被运行时的command覆盖, 但是也可以指定.</p>
 </blockquote>
@@ -2005,6 +2005,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>使用此dockerfile生成的image新建container，可以通过 docker inspect 看到这个环境变量:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">root@tankywoo-docker:~# docker inspect 49bfc7a9817f</span><br><span class="line">    ...</span><br><span class="line">    &quot;Env&quot;: [</span><br><span class="line">        &quot;name=tanky&quot;,</span><br><span class="line">        &quot;HOME=/&quot;,</span><br><span class="line">        &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span><br><span class="line">    ],</span><br><span class="line">    ...</span><br><span class="line">```    </span><br><span class="line">里面的name=tanky就是设置的。</span><br><span class="line"></span><br><span class="line">也可以通过在docker run时设置或修改环境变量:</span><br></pre></td></tr></table></figure>
 <p>docker run -i -t –env name=”tanky” ubuntu:newtest /bin/bash<br>```</p>
+
 
   </div>
   
@@ -2613,8 +2614,8 @@ window...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861472')
-      volantis.js('/js/message.js?time=1632106861472', () => {
+      volantis.css('/css/message.css?time=1632107227349')
+      volantis.js('/js/message.js?time=1632107227349', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2658,8 +2659,8 @@ window...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861472')
-      volantis.js('/js/message.js?time=1632106861472', () => {
+      volantis.css('/css/message.css?time=1632107227349')
+      volantis.js('/js/message.js?time=1632107227349', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2915,7 +2916,7 @@ window...</p>
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106861472')
+    volantis.js('/js/rightMenu.js?time=1632107227349')
   </script>
 
 
@@ -2929,19 +2930,19 @@ window...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106861472")
+        volantis.js("/js/plugins/sites.js?time=1632107227349")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106861472")
+        volantis.js("/js/plugins/friends.js?time=1632107227349")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106861472")
+        volantis.js("/js/plugins/contributors.js?time=1632107227349")
       }
     
   };
@@ -3057,7 +3058,7 @@ window...</p>
 
 
 
-<script src="/js/app.js?time=1632106861472.js"></script>
+<script src="/js/app.js?time=1632107227349.js"></script>
 
 
 <!-- optional -->
@@ -3070,7 +3071,7 @@ window...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106861472");
+    return volantis.js("/js/search/hexo.js?time=1632107227349");
   }
 
   function loadSearchService() {

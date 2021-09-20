@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860205" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227031" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860205" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860205"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227031" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227031"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1929,6 +1929,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grep -r blog.jianghang.name /etc/nginx/conf.d/</span><br></pre></td></tr></table></figure>
 <p>参数 -r 是指明确要求搜索子目录，此处的目录就是/etc/nginx/conf.d/ ，因为我知道配置文件都是在这个目录下，所以用了 -r 参数。如果不知道具体目录，可以用 * 代替，其实就是正则表达式啦。这里不细讲。<br>找到了出现 blog.jianghang.name 的文件之后，就将设置不正确的地方该正确吧。</p>
 <p>记住一个域名只能有一个对应的目录，一个目录可以有多个对应的域名。</p>
+
 
   </div>
   
@@ -2488,8 +2489,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860205')
-      volantis.js('/js/message.js?time=1632106860205', () => {
+      volantis.css('/css/message.css?time=1632107227031')
+      volantis.js('/js/message.js?time=1632107227031', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2533,8 +2534,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860205')
-      volantis.js('/js/message.js?time=1632106860205', () => {
+      volantis.css('/css/message.css?time=1632107227031')
+      volantis.js('/js/message.js?time=1632107227031', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2790,7 +2791,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860205')
+    volantis.js('/js/rightMenu.js?time=1632107227031')
   </script>
 
 
@@ -2804,19 +2805,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860205")
+        volantis.js("/js/plugins/sites.js?time=1632107227031")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860205")
+        volantis.js("/js/plugins/friends.js?time=1632107227031")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860205")
+        volantis.js("/js/plugins/contributors.js?time=1632107227031")
       }
     
   };
@@ -2932,7 +2933,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106860205.js"></script>
+<script src="/js/app.js?time=1632107227031.js"></script>
 
 
 <!-- optional -->
@@ -2945,7 +2946,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860205");
+    return volantis.js("/js/search/hexo.js?time=1632107227031");
   }
 
   function loadSearchService() {

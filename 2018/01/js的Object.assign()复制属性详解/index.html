@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106858509" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226663" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106858509" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106858509"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226663" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226663"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1923,7 +1923,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简单描述"><a href="#简单描述" class="headerlink" title="简单描述"></a>简单描述</h2><p><strong>Object.assign()</strong> 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。</p>
+    <h2 id="简单描述"><a href="#简单描述" class="headerlink" title="简单描述"></a>简单描述</h2><div class="story post-story"><p><strong>Object.assign()</strong> 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.assign(target, ...sources)</span><br><span class="line"><span class="comment">//target 目标对象</span></span><br><span class="line"><span class="comment">//...sources 源对象</span></span><br><span class="line"><span class="comment">//返回 目标对象</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>描述:</strong></p>
@@ -1944,7 +1944,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p><strong>简单实例</strong></p>
+</div><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><div class="story post-story"><p><strong>简单实例</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> copy = <span class="built_in">Object</span>.assign(&#123;&#125;, obj);</span><br><span class="line"><span class="built_in">console</span>.log(copy); <span class="comment">// &#123; a: 1 &#125;</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>深拷贝问题</strong><br>针对深拷贝，需要使用其他方法，因为 Object.assign()拷贝的是属性值。假如源对象的属性值是一个指向对象的引用，它也只拷贝那个引用值。</p>
@@ -1958,8 +1958,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o1 = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">1</span>, <span class="attr">c</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> o2 = &#123; <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> o3 = &#123; <span class="attr">c</span>: <span class="number">3</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.assign(&#123;&#125;, o1, o2, o3);</span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123; a: 1, b: 2, c: 3 &#125;</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>更多内容参考下面 MDN文档吧 那里实在是太全了 没必要都复制一遍了</strong></p>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">MDN Object.assign()</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/waiterwaiter/article/details/50267787">javascript之Object.assign()痛点</a></p>
+</div><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">MDN Object.assign()</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/waiterwaiter/article/details/50267787">javascript之Object.assign()痛点</a></p>
 
+</div>
   </div>
   
   
@@ -2586,8 +2587,8 @@ String类型和 Symbol 类型的属性都会被拷贝。
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858509')
-      volantis.js('/js/message.js?time=1632106858509', () => {
+      volantis.css('/css/message.css?time=1632107226663')
+      volantis.js('/js/message.js?time=1632107226663', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2631,8 +2632,8 @@ String类型和 Symbol 类型的属性都会被拷贝。
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858509')
-      volantis.js('/js/message.js?time=1632106858509', () => {
+      volantis.css('/css/message.css?time=1632107226663')
+      volantis.js('/js/message.js?time=1632107226663', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2888,7 +2889,7 @@ String类型和 Symbol 类型的属性都会被拷贝。
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106858509')
+    volantis.js('/js/rightMenu.js?time=1632107226663')
   </script>
 
 
@@ -2902,19 +2903,19 @@ String类型和 Symbol 类型的属性都会被拷贝。
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106858509")
+        volantis.js("/js/plugins/sites.js?time=1632107226663")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106858509")
+        volantis.js("/js/plugins/friends.js?time=1632107226663")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106858509")
+        volantis.js("/js/plugins/contributors.js?time=1632107226663")
       }
     
   };
@@ -3030,7 +3031,7 @@ String类型和 Symbol 类型的属性都会被拷贝。
 
 
 
-<script src="/js/app.js?time=1632106858509.js"></script>
+<script src="/js/app.js?time=1632107226663.js"></script>
 
 
 <!-- optional -->
@@ -3043,7 +3044,7 @@ String类型和 Symbol 类型的属性都会被拷贝。
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106858509");
+    return volantis.js("/js/search/hexo.js?time=1632107226663");
   }
 
   function loadSearchService() {

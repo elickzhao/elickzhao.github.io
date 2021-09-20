@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860525" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227111" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860525" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860525"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227111" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227111"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1933,15 +1933,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  一般情况下是不会有问题的,类似这样 <code>bootstrap/css/bootstrap.min.css</code> 或者 <code>/bootstrap/css/bootstrap.min.css</code>,当网站使用域名的时候后者不会出错,可是当使用本地测试时,是在<code>http://localhost/Admin/public/admin/</code>这样一个路径,就会出现加载位置出错.</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  解决方法有几个 (没办法只能这么写,双括号 和 hexo冲突)</p>
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><p>  一般情况下是不会有问题的,类似这样 <code>bootstrap/css/bootstrap.min.css</code> 或者 <code>/bootstrap/css/bootstrap.min.css</code>,当网站使用域名的时候后者不会出错,可是当使用本地测试时,是在<code>http://localhost/Admin/public/admin/</code>这样一个路径,就会出现加载位置出错.</p>
+</div><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><div class="story post-story"><p>  解决方法有几个 (没办法只能这么写,双括号 和 hexo冲突)</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## .env文件加入`APP_URL`参数 在模版里读取 env(&#x27;APP_URL&#x27;)</span></span><br><span class="line">&#123;&#123; env(<span class="string">&#x27;APP_URL&#x27;</span>) &#125;&#125;<span class="string">&quot;/libs/font-awesome/4.5.0/css/font-awesome.min.css&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 使用帮助函数 `asset()` 这个应该算是比较正统做法 但有个问题不知道在域名下是否正确,我没测试过</span></span><br><span class="line">&#123;&#123; asset(<span class="string">&#x27;/bootstrap/css/bootstrap.min.css&#x27;</span>) &#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">## 还有他原本的形式是这样的</span></span><br><span class="line">&#123;&#123; URL::asset(<span class="string">&#x27;//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css&#x27;</span>) &#125;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 还有个一个HtmlBuilder 这个需要安装 `composer require illuminate/html 5.*` 然后这么使用</span></span><br><span class="line">&#123;!!Html::style(<span class="string">&#x27;css/style.css&#x27;</span>)!!&#125;</span><br><span class="line">&#123;!!Html::script(<span class="string">&#x27;js/script.js&#x27;</span>)!!&#125;</span><br><span class="line"><span class="comment">## 这挺好不用自己写那么一长串了,这个5.1里我有,5.2还没有整理</span></span><br></pre></td></tr></table></figure>
 
 
 
 
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="http://wenda.golaravel.com/question/828">Laravel5如何在*.blade.php引用css/js文件</a><br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/ziyouchutuwenwu/p/4269715.html">laravel加载js和css等资源</a><br><a target="_blank" rel="noopener" href="http://laravelacademy.org/post/3672.html">Laravel 5 中使用 HtmlBuilder 及 URL::asset() 引入站内或站外的 css 和 js 文件</a></p>
+</div><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="http://wenda.golaravel.com/question/828">Laravel5如何在*.blade.php引用css/js文件</a><br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/ziyouchutuwenwu/p/4269715.html">laravel加载js和css等资源</a><br><a target="_blank" rel="noopener" href="http://laravelacademy.org/post/3672.html">Laravel 5 中使用 HtmlBuilder 及 URL::asset() 引入站内或站外的 css 和 js 文件</a></p>
 
+</div>
   </div>
   
   
@@ -2062,6 +2063,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class='prev' href='/2016/10/vue.js%20%E4%B8%AD%E5%9B%BD%E5%A5%BD%E6%95%99%E7%A8%8B/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>vue.js 中国好教程</p>
           <p class='content'>Vue.js教程浅谈Vue.jsvue.js学习笔记1 – 搭建vue.js本地开发框架vuejs-learn
+
 </p>
         </a>
       
@@ -2514,8 +2516,8 @@ Gravatar是Globally Recognized Avatar的缩写,是gravatar推出的一项服务�
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860525')
-      volantis.js('/js/message.js?time=1632106860525', () => {
+      volantis.css('/css/message.css?time=1632107227111')
+      volantis.js('/js/message.js?time=1632107227111', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2559,8 +2561,8 @@ Gravatar是Globally Recognized Avatar的缩写,是gravatar推出的一项服务�
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860525')
-      volantis.js('/js/message.js?time=1632106860525', () => {
+      volantis.css('/css/message.css?time=1632107227111')
+      volantis.js('/js/message.js?time=1632107227111', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2816,7 +2818,7 @@ Gravatar是Globally Recognized Avatar的缩写,是gravatar推出的一项服务�
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860525')
+    volantis.js('/js/rightMenu.js?time=1632107227111')
   </script>
 
 
@@ -2830,19 +2832,19 @@ Gravatar是Globally Recognized Avatar的缩写,是gravatar推出的一项服务�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860525")
+        volantis.js("/js/plugins/sites.js?time=1632107227111")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860525")
+        volantis.js("/js/plugins/friends.js?time=1632107227111")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860525")
+        volantis.js("/js/plugins/contributors.js?time=1632107227111")
       }
     
   };
@@ -2958,7 +2960,7 @@ Gravatar是Globally Recognized Avatar的缩写,是gravatar推出的一项服务�
 
 
 
-<script src="/js/app.js?time=1632106860525.js"></script>
+<script src="/js/app.js?time=1632107227111.js"></script>
 
 
 <!-- optional -->
@@ -2971,7 +2973,7 @@ Gravatar是Globally Recognized Avatar的缩写,是gravatar推出的一项服务�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860525");
+    return volantis.js("/js/search/hexo.js?time=1632107227111");
   }
 
   function loadSearchService() {

@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106861543" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227365" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106861543" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106861543"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227365" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227365"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1950,6 +1950,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>那就列举一种需要在不同容器之间共享且不需要在本地修改的情况。</p>
 <p>首先，我们先了解容器中获取动态数据的方式：<br>1、本地提供，挂载到容器<br>2、远程提供，从远程下载<br>3、生成提供，在容器内部生成</p>
 <p>后面两种命令都不需要在本地修改，但是他们生成的动态数据却可能需要共享。<br>下载命令，比如git clone直接从git服务器拉取代码，不需要挂载本地文件夹。<br>生成命令，比如jekyll（静态网站生成器），你可能挂载一个代码文件夹，然后build目录里生成的静态网页文件需要提供给Apache服务器，那么你需要指定build目录为VOLUME。</p>
+
 
   </div>
   
@@ -2507,8 +2508,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861543')
-      volantis.js('/js/message.js?time=1632106861543', () => {
+      volantis.css('/css/message.css?time=1632107227365')
+      volantis.js('/js/message.js?time=1632107227365', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2552,8 +2553,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861543')
-      volantis.js('/js/message.js?time=1632106861543', () => {
+      volantis.css('/css/message.css?time=1632107227365')
+      volantis.js('/js/message.js?time=1632107227365', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2809,7 +2810,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106861543')
+    volantis.js('/js/rightMenu.js?time=1632107227365')
   </script>
 
 
@@ -2823,19 +2824,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106861543")
+        volantis.js("/js/plugins/sites.js?time=1632107227365")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106861543")
+        volantis.js("/js/plugins/friends.js?time=1632107227365")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106861543")
+        volantis.js("/js/plugins/contributors.js?time=1632107227365")
       }
     
   };
@@ -2951,7 +2952,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106861543.js"></script>
+<script src="/js/app.js?time=1632107227365.js"></script>
 
 
 <!-- optional -->
@@ -2964,7 +2965,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106861543");
+    return volantis.js("/js/search/hexo.js?time=1632107227365");
   }
 
   function loadSearchService() {

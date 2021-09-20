@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106858473" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226654" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1531,8 +1531,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106858473" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106858473"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226654" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226654"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1925,6 +1925,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <p>今天用到Carbon这个时间类,不过<strong>TP3.2</strong>不使用 <code>composer</code> 所以加载起来比较费劲.<br>按<a target="_blank" rel="noopener" href="https://www.kancloud.cn/manual/thinkphp/1701">官方说法</a>放在 <code>/thinkphp/Library</code> 下的都可以自动加载.<br>其实呢,需要命名空间与目录一致,而且文件名必须是 <code>*.class.php</code> 这大多数第三方库是满足不了的<br>所以只好手动加载了</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Admin</span>\<span class="title">Controller</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Think</span>\<span class="title">Controller</span>;</span><br><span class="line"><span class="comment">//import(&quot;Vendor.Carbon.Carbon&quot;);   //这两种加载文件的方法都可以</span></span><br><span class="line">vendor(<span class="string">&quot;Carbon.Carbon&quot;</span>);</span><br><span class="line"><span class="keyword">use</span> <span class="title">Carbon</span>\<span class="title">Carbon</span>;  <span class="comment">//使用了 Carbon 命名空间 那么下面使用的时候 就不需要每次都加了</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IndexController</span> <span class="keyword">extends</span> <span class="title">PublicController</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">//***********************************</span></span><br><span class="line">    <span class="comment">// iframe式显示菜单和index页</span></span><br><span class="line">    <span class="comment">//**********************************</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//这是另一个第三方库 微信支付 </span></span><br><span class="line">        <span class="comment">//不过呢 这个库比较早 没有命名空间</span></span><br><span class="line">        <span class="comment">//所以使用的时候 必须用\空间  也就是 \WxPayUnifiedOrder() 这种形式使用</span></span><br><span class="line">        <span class="comment">//这是需要注意的地方 没有命名空间都得这么使用</span></span><br><span class="line">        <span class="variable">$b</span> = vendor(<span class="string">&quot;wxpay.wxpay&quot;</span>);</span><br><span class="line">        <span class="variable">$input</span> = <span class="keyword">new</span> \WxPayUnifiedOrder();</span><br><span class="line">        dump(<span class="variable">$input</span>);</span><br><span class="line"></span><br><span class="line">        printf(<span class="string">&quot;Now: %s&quot;</span>, Carbon::now());   <span class="comment">//这里因为上面使用 use 可以这么简写</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//如果头部没有用use的话,在这里使用必须写完整的命名空间才行</span></span><br><span class="line">        vendor(<span class="string">&quot;Carbon.Carbon&quot;</span>);</span><br><span class="line">        printf(<span class="string">&quot;Now: %s&quot;</span>, \Carbon\Carbon::now());</span><br><span class="line">        <span class="keyword">exit</span>();</span><br><span class="line">        .....</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
   </div>
   
   
@@ -2482,8 +2483,8 @@ wxss
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858473')
-      volantis.js('/js/message.js?time=1632106858473', () => {
+      volantis.css('/css/message.css?time=1632107226654')
+      volantis.js('/js/message.js?time=1632107226654', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2527,8 +2528,8 @@ wxss
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858473')
-      volantis.js('/js/message.js?time=1632106858473', () => {
+      volantis.css('/css/message.css?time=1632107226654')
+      volantis.js('/js/message.js?time=1632107226654', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2784,7 +2785,7 @@ wxss
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106858473')
+    volantis.js('/js/rightMenu.js?time=1632107226654')
   </script>
 
 
@@ -2798,19 +2799,19 @@ wxss
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106858473")
+        volantis.js("/js/plugins/sites.js?time=1632107226654")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106858473")
+        volantis.js("/js/plugins/friends.js?time=1632107226654")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106858473")
+        volantis.js("/js/plugins/contributors.js?time=1632107226654")
       }
     
   };
@@ -2926,7 +2927,7 @@ wxss
 
 
 
-<script src="/js/app.js?time=1632106858473.js"></script>
+<script src="/js/app.js?time=1632107226654.js"></script>
 
 
 <!-- optional -->
@@ -2939,7 +2940,7 @@ wxss
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106858473");
+    return volantis.js("/js/search/hexo.js?time=1632107226654");
   }
 
   function loadSearchService() {

@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106861065" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227243" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1532,8 +1532,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106861065" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106861065"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227243" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227243"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1935,20 +1935,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>[TOC]</p>
-<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址:"></a>项目地址:</h2><p><a target="_blank" rel="noopener" href="https://github.com/mailru/FileAPI">https://github.com/mailru/FileAPI</a></p>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址:"></a>项目地址:</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://github.com/mailru/FileAPI">https://github.com/mailru/FileAPI</a></p>
 <hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>原本打算是操作本地文件,如打开文件,新建文件,保存文件.但好像js是无法坐到这些的.
+</div><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="story post-story"><pre><code>原本打算是操作本地文件,如打开文件,新建文件,保存文件.但好像js是无法坐到这些的.
 只能通过一些特别的手段达到一定的效果而已.
 这个组件就是搜索时找到的,主要是通过上传时得到文件一些信息,他主要用作图片上传,
 文件上传时获得相关内容.而且他还能操作摄像头用于头像.
 并且他还有个jquery的插件,主要用处也是上传头像时的相关操作.
 </code></pre>
  <span id="more"></span>   
-<h2 id="一些经验"><a href="#一些经验" class="headerlink" title="一些经验"></a>一些经验</h2><pre><code>因为不符合我的需求所以没太深入研究,只是测试下了获得上传文件内容.
+</div><h2 id="一些经验"><a href="#一些经验" class="headerlink" title="一些经验"></a>一些经验</h2><div class="story post-story"><pre><code>因为不符合我的需求所以没太深入研究,只是测试下了获得上传文件内容.
 把项目下载下来后,把下个文件放在根目录里就可以了.
 还有一点注意,必须放在php环境里,要不会出错.
 </code></pre>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge,chrome=1&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html; charset=utf-8&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;user-scalable=no, width=400, initial-scale=0.8, maximum-scale=0.8&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-mobile-web-app-capable&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yes&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-mobile-web-app-status-bar-style&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yes&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;format-detection&quot;</span> <span class="attr">content</span>=<span class="string">&quot;email=no&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;HandheldFriendly&quot;</span> <span class="attr">content</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">		<span class="comment">// Объект настройки</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> FileAPI = &#123;</span></span><br><span class="line"><span class="javascript">			<span class="attr">debug</span>: <span class="literal">true</span>, <span class="comment">// режим отладки</span></span></span><br><span class="line"><span class="javascript">			<span class="attr">staticPath</span>: <span class="string">&#x27;./&#x27;</span> <span class="comment">// путь до флешек</span></span></span><br><span class="line"><span class="javascript">		&#125;;</span></span><br><span class="line"><span class="javascript">	</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;dist/FileAPI.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&#x27;my-input&#x27;</span> <span class="attr">id</span>=<span class="string">&#x27;singleFile&#x27;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">	(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		FileAPI.event.on(singleFile,<span class="string">&#x27;change&#x27;</span> ,<span class="function"><span class="keyword">function</span> (<span class="params">evt<span class="comment">/**Event*/</span></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		  <span class="comment">// Retrieve file list</span></span></span><br><span class="line"><span class="javascript">		  <span class="keyword">var</span> files = FileAPI.getFiles(singleFile);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">				<span class="keyword">if</span>( files.length )&#123;</span></span><br><span class="line"><span class="javascript">					FileAPI.each(files, <span class="function"><span class="keyword">function</span> (<span class="params">file</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">						FileAPI.readAsText(file, <span class="string">&quot;utf-8&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">evt<span class="comment">/**Object*/</span></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">						  <span class="keyword">if</span>( evt.type == <span class="string">&#x27;load&#x27;</span> )&#123;</span></span><br><span class="line"><span class="javascript">						    <span class="comment">// Success</span></span></span><br><span class="line"><span class="javascript">						     <span class="keyword">var</span> text = evt.result;</span></span><br><span class="line"><span class="javascript">						     <span class="comment">//console.log(text);</span></span></span><br><span class="line"><span class="javascript">						     alert(text);</span></span><br><span class="line"><span class="javascript">						  &#125; <span class="keyword">else</span> <span class="keyword">if</span>( evt.type ==<span class="string">&#x27;progress&#x27;</span> )&#123;</span></span><br><span class="line"><span class="javascript">						    <span class="keyword">var</span> pr = evt.loaded/evt.total * <span class="number">100</span>;</span></span><br><span class="line"><span class="javascript">						    <span class="built_in">console</span>.log(pr);</span></span><br><span class="line"><span class="javascript">						  &#125; </span></span><br><span class="line"><span class="javascript">						&#125;);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">					&#125;);</span></span><br><span class="line"><span class="javascript">				&#125;</span></span><br><span class="line"><span class="javascript">		&#125;);</span></span><br><span class="line"><span class="javascript">	&#125;)();</span></span><br><span class="line"><span class="javascript">	</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
   </div>
   
   
@@ -2556,8 +2557,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861065')
-      volantis.js('/js/message.js?time=1632106861065', () => {
+      volantis.css('/css/message.css?time=1632107227243')
+      volantis.js('/js/message.js?time=1632107227243', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2601,8 +2602,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106861065')
-      volantis.js('/js/message.js?time=1632106861065', () => {
+      volantis.css('/css/message.css?time=1632107227243')
+      volantis.js('/js/message.js?time=1632107227243', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2858,7 +2859,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106861065')
+    volantis.js('/js/rightMenu.js?time=1632107227243')
   </script>
 
 
@@ -2872,19 +2873,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106861065")
+        volantis.js("/js/plugins/sites.js?time=1632107227243")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106861065")
+        volantis.js("/js/plugins/friends.js?time=1632107227243")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106861065")
+        volantis.js("/js/plugins/contributors.js?time=1632107227243")
       }
     
   };
@@ -3000,7 +3001,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106861065.js"></script>
+<script src="/js/app.js?time=1632107227243.js"></script>
 
 
 <!-- optional -->
@@ -3013,7 +3014,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106861065");
+    return volantis.js("/js/search/hexo.js?time=1632107227243");
   }
 
   function loadSearchService() {

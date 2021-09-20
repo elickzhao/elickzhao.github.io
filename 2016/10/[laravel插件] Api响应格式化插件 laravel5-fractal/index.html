@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860425" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227089" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860425" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860425"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227089" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227089"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1932,10 +1932,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>这个插件用到的是 <strong>Fractal</strong>,并把它与 <strong>laravel</strong> 结合.使 <strong>larvel</strong> 响应请求时有美化的格式,不用每个都去手动改写.<br>例如,数据库里的表名往往是简称或英文.但是你返回给程序时,最好直接就能用,而不用再一次进行操作,并且可以添加没有记录在数据库里的数据.</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从数据里读出的数据</span></span><br><span class="line"><span class="variable">$books</span> = [</span><br><span class="line">	[</span><br><span class="line">		<span class="string">&#x27;id&#x27;</span> =&gt; <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;title&#x27;</span> =&gt; <span class="string">&#x27;Hogfather&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;yr&#x27;</span> =&gt; <span class="string">&#x27;1998&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;author_name&#x27;</span> =&gt; <span class="string">&#x27;Philip K Dick&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;author_email&#x27;</span> =&gt; <span class="string">&#x27;philip@example.org&#x27;</span>,</span><br><span class="line">	],</span><br><span class="line">	[</span><br><span class="line">		<span class="string">&#x27;id&#x27;</span> =&gt; <span class="string">&#x27;2&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;title&#x27;</span> =&gt; <span class="string">&#x27;Game Of Kill Everyone&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;yr&#x27;</span> =&gt; <span class="string">&#x27;2014&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;author_name&#x27;</span> =&gt; <span class="string">&#x27;George R. R. Satan&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;author_email&#x27;</span> =&gt; <span class="string">&#x27;george@example.org&#x27;</span>,</span><br><span class="line">	]</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//模版</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">transform</span>(<span class="params"><span class="variable">$books</span></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>      =&gt; (<span class="keyword">int</span>) <span class="variable">$book</span>[<span class="string">&#x27;id&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;title&#x27;</span>   =&gt; <span class="variable">$book</span>[<span class="string">&#x27;title&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;year&#x27;</span>    =&gt; (<span class="keyword">int</span>) <span class="variable">$book</span>[<span class="string">&#x27;yr&#x27;</span>],     <span class="comment">// 把数据库不标准的命名改成可读性强的</span></span><br><span class="line">        <span class="string">&#x27;author&#x27;</span>  =&gt; [                      <span class="comment">// 整理在author下 数据库是没有这个层级关系的</span></span><br><span class="line">        	<span class="string">&#x27;name&#x27;</span>  =&gt; <span class="variable">$book</span>[<span class="string">&#x27;author_name&#x27;</span>],</span><br><span class="line">        	<span class="string">&#x27;email&#x27;</span> =&gt; <span class="variable">$book</span>[<span class="string">&#x27;author_email&#x27;</span>],</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;links&#x27;</span>   =&gt; [                  <span class="comment">// 连接这种东西就完全没必要存在数据库里 直接组合就成了</span></span><br><span class="line">            [</span><br><span class="line">                <span class="string">&#x27;rel&#x27;</span> =&gt; <span class="string">&#x27;self&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;uri&#x27;</span> =&gt; <span class="string">&#x27;/books/&#x27;</span>.<span class="variable">$book</span>[<span class="string">&#x27;id&#x27;</span>],</span><br><span class="line">            ]</span><br><span class="line">        ]</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样返回就好了 就是有一定格式的数据了 省着写程序了</span></span><br><span class="line"><span class="keyword">return</span> Fractal::collection(<span class="variable">$users</span>, <span class="keyword">new</span> UserTransformer);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><div class="story post-story"><p>这个插件用到的是 <strong>Fractal</strong>,并把它与 <strong>laravel</strong> 结合.使 <strong>larvel</strong> 响应请求时有美化的格式,不用每个都去手动改写.<br>例如,数据库里的表名往往是简称或英文.但是你返回给程序时,最好直接就能用,而不用再一次进行操作,并且可以添加没有记录在数据库里的数据.</p>
+</div><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><div class="story post-story"><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从数据里读出的数据</span></span><br><span class="line"><span class="variable">$books</span> = [</span><br><span class="line">	[</span><br><span class="line">		<span class="string">&#x27;id&#x27;</span> =&gt; <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;title&#x27;</span> =&gt; <span class="string">&#x27;Hogfather&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;yr&#x27;</span> =&gt; <span class="string">&#x27;1998&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;author_name&#x27;</span> =&gt; <span class="string">&#x27;Philip K Dick&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;author_email&#x27;</span> =&gt; <span class="string">&#x27;philip@example.org&#x27;</span>,</span><br><span class="line">	],</span><br><span class="line">	[</span><br><span class="line">		<span class="string">&#x27;id&#x27;</span> =&gt; <span class="string">&#x27;2&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;title&#x27;</span> =&gt; <span class="string">&#x27;Game Of Kill Everyone&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;yr&#x27;</span> =&gt; <span class="string">&#x27;2014&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;author_name&#x27;</span> =&gt; <span class="string">&#x27;George R. R. Satan&#x27;</span>,</span><br><span class="line">		<span class="string">&#x27;author_email&#x27;</span> =&gt; <span class="string">&#x27;george@example.org&#x27;</span>,</span><br><span class="line">	]</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//模版</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">transform</span>(<span class="params"><span class="variable">$books</span></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>      =&gt; (<span class="keyword">int</span>) <span class="variable">$book</span>[<span class="string">&#x27;id&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;title&#x27;</span>   =&gt; <span class="variable">$book</span>[<span class="string">&#x27;title&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;year&#x27;</span>    =&gt; (<span class="keyword">int</span>) <span class="variable">$book</span>[<span class="string">&#x27;yr&#x27;</span>],     <span class="comment">// 把数据库不标准的命名改成可读性强的</span></span><br><span class="line">        <span class="string">&#x27;author&#x27;</span>  =&gt; [                      <span class="comment">// 整理在author下 数据库是没有这个层级关系的</span></span><br><span class="line">        	<span class="string">&#x27;name&#x27;</span>  =&gt; <span class="variable">$book</span>[<span class="string">&#x27;author_name&#x27;</span>],</span><br><span class="line">        	<span class="string">&#x27;email&#x27;</span> =&gt; <span class="variable">$book</span>[<span class="string">&#x27;author_email&#x27;</span>],</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;links&#x27;</span>   =&gt; [                  <span class="comment">// 连接这种东西就完全没必要存在数据库里 直接组合就成了</span></span><br><span class="line">            [</span><br><span class="line">                <span class="string">&#x27;rel&#x27;</span> =&gt; <span class="string">&#x27;self&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;uri&#x27;</span> =&gt; <span class="string">&#x27;/books/&#x27;</span>.<span class="variable">$book</span>[<span class="string">&#x27;id&#x27;</span>],</span><br><span class="line">            ]</span><br><span class="line">        ]</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样返回就好了 就是有一定格式的数据了 省着写程序了</span></span><br><span class="line"><span class="keyword">return</span> Fractal::collection(<span class="variable">$users</span>, <span class="keyword">new</span> UserTransformer);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+</div><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><div class="story post-story"><ul>
 <li><p>首先去建立个模版,使用命令 <code>php artisan make:transformer</code> 这个命令会建立一个目录 <code>App\Transfomers\ </code> 把所有的模版都放在下面</p>
 </li>
 <li><p>紧接着修改模版到你想输出的样式</p>
@@ -1945,8 +1945,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>填写数据使用模版</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单个数据使用 item</span></span><br><span class="line"><span class="variable">$user</span> = User::find(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> Fractal::item(<span class="variable">$user</span>, <span class="keyword">new</span> UserTransformer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多个数据使用 collection</span></span><br><span class="line"><span class="variable">$users</span> = User::get(); <span class="comment">// $users = User::paginate();</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> Fractal::collection(<span class="variable">$users</span>, <span class="keyword">new</span> UserTransformer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果想用数组这么写</span></span><br><span class="line">Fractal::collection(<span class="variable">$user</span>, <span class="keyword">new</span> UserTransformer)-&gt;getArray();</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="https://github.com/Cyvelnet/laravel5-fractal">Cyvelnet/laravel5-fractal</a><br><a target="_blank" rel="noopener" href="http://fractal.thephpleague.com/simple-example/">Fractal</a></p>
+</div><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://github.com/Cyvelnet/laravel5-fractal">Cyvelnet/laravel5-fractal</a><br><a target="_blank" rel="noopener" href="http://fractal.thephpleague.com/simple-example/">Fractal</a></p>
 
+</div>
   </div>
   
   
@@ -2517,8 +2518,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860425')
-      volantis.js('/js/message.js?time=1632106860425', () => {
+      volantis.css('/css/message.css?time=1632107227089')
+      volantis.js('/js/message.js?time=1632107227089', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2562,8 +2563,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860425')
-      volantis.js('/js/message.js?time=1632106860425', () => {
+      volantis.css('/css/message.css?time=1632107227089')
+      volantis.js('/js/message.js?time=1632107227089', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2819,7 +2820,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860425')
+    volantis.js('/js/rightMenu.js?time=1632107227089')
   </script>
 
 
@@ -2833,19 +2834,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860425")
+        volantis.js("/js/plugins/sites.js?time=1632107227089")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860425")
+        volantis.js("/js/plugins/friends.js?time=1632107227089")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860425")
+        volantis.js("/js/plugins/contributors.js?time=1632107227089")
       }
     
   };
@@ -2961,7 +2962,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106860425.js"></script>
+<script src="/js/app.js?time=1632107227089.js"></script>
 
 
 <!-- optional -->
@@ -2974,7 +2975,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860425");
+    return volantis.js("/js/search/hexo.js?time=1632107227089");
   }
 
   function loadSearchService() {

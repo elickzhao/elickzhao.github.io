@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106858754" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226695" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106858754" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106858754"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226695" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226695"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1939,6 +1939,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>所以只要有个单独的文件写这些注册的类的地址,然后只要引入这一个文件就好了<br>以后可以扩展那个文件了<br>这样就可以实现所有的自动加载.<br>也就是我最初的疑问,还以为只要use 类 就能自己加载呢 其实是两码事 没那么智能 呵呵<br>而且命名空间和存放文件地址也未必是一定相对应的,比如最上面第一个例子 Superman的命名空间和地址就不是对应的</p>
 
+
   </div>
   
   
@@ -2081,6 +2082,7 @@ Superman.php
           <p class='title'>Nuxt.js - Vue.js 通用应用框架<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>其实主要看官方文档就可以了,非常之详尽而且是中文.以后遇到问题,或者容易忘记的点再记录下吧
 ##参考文档官方文档Vue 基于 NUXT 的 SSR
+
 </p>
         </a>
       
@@ -2511,8 +2513,8 @@ Superman.php
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858754')
-      volantis.js('/js/message.js?time=1632106858754', () => {
+      volantis.css('/css/message.css?time=1632107226695')
+      volantis.js('/js/message.js?time=1632107226695', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2556,8 +2558,8 @@ Superman.php
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106858754')
-      volantis.js('/js/message.js?time=1632106858754', () => {
+      volantis.css('/css/message.css?time=1632107226695')
+      volantis.js('/js/message.js?time=1632107226695', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2813,7 +2815,7 @@ Superman.php
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106858754')
+    volantis.js('/js/rightMenu.js?time=1632107226695')
   </script>
 
 
@@ -2827,19 +2829,19 @@ Superman.php
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106858754")
+        volantis.js("/js/plugins/sites.js?time=1632107226695")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106858754")
+        volantis.js("/js/plugins/friends.js?time=1632107226695")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106858754")
+        volantis.js("/js/plugins/contributors.js?time=1632107226695")
       }
     
   };
@@ -2955,7 +2957,7 @@ Superman.php
 
 
 
-<script src="/js/app.js?time=1632106858754.js"></script>
+<script src="/js/app.js?time=1632107226695.js"></script>
 
 
 <!-- optional -->
@@ -2968,7 +2970,7 @@ Superman.php
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106858754");
+    return volantis.js("/js/search/hexo.js?time=1632107226695");
   }
 
   function loadSearchService() {

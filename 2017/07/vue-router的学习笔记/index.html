@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106859036" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226755" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106859036" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106859036"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226755" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226755"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1937,8 +1937,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.....</span><br><span class="line"></span><br><span class="line">    &lt;i-col :span=&quot;spanLeft&quot; class=&quot;layout-menu-left&quot;&gt;</span><br><span class="line">        &lt;Menu active-name=&quot;1&quot; theme=&quot;light&quot; width=&quot;auto&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;layout-logo-left&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;logo-lg&quot; v-show=&quot;spanLeft == 4&quot;&gt;</span><br><span class="line">                    &lt;b&gt;Admin&lt;/b&gt;LTE</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">                &lt;span class=&quot;logo-mini&quot; v-show=&quot;spanLeft == 1&quot;&gt;</span><br><span class="line">                    &lt;b&gt;LTE&lt;/b&gt;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;Menu-item name=&quot;1&quot;&gt;</span><br><span class="line">                &lt;!-- 这里链接一定是 /main/这个下面的子链接 虽然在配置里没这么写  --&gt;</span><br><span class="line">                &lt;router-link to=&quot;/main/sub1&quot; &gt;   </span><br><span class="line">                    &lt;Icon type=&quot;ios-navigate&quot; :size=&quot;iconSize&quot;&gt;&lt;/Icon&gt;</span><br><span class="line">                    &lt;span class=&quot;layout-text&quot; v-show=&quot;spanLeft == 4&quot;&gt;选项 1选项&lt;/span&gt;</span><br><span class="line">                &lt;/router-link&gt;</span><br><span class="line">            &lt;/Menu-item&gt;</span><br><span class="line">            &lt;Menu-item name=&quot;2&quot;&gt;</span><br><span class="line">                &lt;router-link to=&quot;/main/sub2&quot;&gt;</span><br><span class="line">                    &lt;Icon type=&quot;ios-keypad&quot; :size=&quot;iconSize&quot;&gt;&lt;/Icon&gt;</span><br><span class="line">                    &lt;span class=&quot;layout-text&quot;&gt;选项 2&lt;/span&gt;</span><br><span class="line">                &lt;/router-link&gt;</span><br><span class="line">            &lt;/Menu-item&gt;</span><br><span class="line">            &lt;Menu-item name=&quot;3&quot;&gt;</span><br><span class="line">                &lt;router-link to=&quot;/main/sub3&quot;&gt;</span><br><span class="line">                    &lt;Icon type=&quot;ios-analytics&quot; :size=&quot;iconSize&quot;&gt;&lt;/Icon&gt;</span><br><span class="line">                    &lt;span class=&quot;layout-text&quot;&gt;选项 3&lt;/span&gt;</span><br><span class="line">                &lt;/router-link&gt;</span><br><span class="line">            &lt;/Menu-item&gt;</span><br><span class="line">        &lt;/Menu&gt;</span><br><span class="line">    &lt;/i-col&gt;</span><br><span class="line">    </span><br><span class="line">    ........</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">            &lt;div class=&quot;layout-content-main&quot;&gt;</span><br><span class="line">                &lt;!-- 这里显示子页面 --&gt;</span><br><span class="line">                &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
 
 
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="https://router.vuejs.org/zh-cn/essentials/getting-started.html">官方文档</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000007825106">Vue-router2.0学习笔记</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000007837361">vue-router带你出坑</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/sinat_17775997/article/details/52549123">Vue.js——vue-router 60分钟快速入门</a> <code>这个是老版文章只能做参考了</code><br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/wisewrong/p/6277262.html">Vue 爬坑之路（三）—— 使用 vue-router 跳转页面</a></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://router.vuejs.org/zh-cn/essentials/getting-started.html">官方文档</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000007825106">Vue-router2.0学习笔记</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000007837361">vue-router带你出坑</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/sinat_17775997/article/details/52549123">Vue.js——vue-router 60分钟快速入门</a> <code>这个是老版文章只能做参考了</code><br><a target="_blank" rel="noopener" href="http://www.cnblogs.com/wisewrong/p/6277262.html">Vue 爬坑之路（三）—— 使用 vue-router 跳转页面</a></p>
 
+</div>
   </div>
   
   
@@ -2511,8 +2512,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106859036')
-      volantis.js('/js/message.js?time=1632106859036', () => {
+      volantis.css('/css/message.css?time=1632107226755')
+      volantis.js('/js/message.js?time=1632107226755', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2556,8 +2557,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106859036')
-      volantis.js('/js/message.js?time=1632106859036', () => {
+      volantis.css('/css/message.css?time=1632107226755')
+      volantis.js('/js/message.js?time=1632107226755', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2813,7 +2814,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106859036')
+    volantis.js('/js/rightMenu.js?time=1632107226755')
   </script>
 
 
@@ -2827,19 +2828,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106859036")
+        volantis.js("/js/plugins/sites.js?time=1632107226755")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106859036")
+        volantis.js("/js/plugins/friends.js?time=1632107226755")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106859036")
+        volantis.js("/js/plugins/contributors.js?time=1632107226755")
       }
     
   };
@@ -2955,7 +2956,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106859036.js"></script>
+<script src="/js/app.js?time=1632107226755.js"></script>
 
 
 <!-- optional -->
@@ -2968,7 +2969,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106859036");
+    return volantis.js("/js/search/hexo.js?time=1632107226755");
   }
 
   function loadSearchService() {

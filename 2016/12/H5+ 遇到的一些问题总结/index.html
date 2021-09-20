@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860004" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107226983" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1532,8 +1532,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860004" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860004"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107226983" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226983"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1924,22 +1924,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="chrome调试-必须在配置文件里打开调试的选项-遇到显示手机不显示页面-说明安卓4-4以下系统-白屏是因为必须翻墙"><a href="#chrome调试-必须在配置文件里打开调试的选项-遇到显示手机不显示页面-说明安卓4-4以下系统-白屏是因为必须翻墙" class="headerlink" title="chrome调试,必须在配置文件里打开调试的选项.遇到显示手机不显示页面,说明安卓4.4以下系统.白屏是因为必须翻墙"></a>chrome调试,必须在配置文件里打开调试的选项.遇到显示手机不显示页面,说明安卓4.4以下系统.白屏是因为必须翻墙</h2><hr>
-<h2 id="调用入口页面-也就是首页-可使用下面方法"><a href="#调用入口页面-也就是首页-可使用下面方法" class="headerlink" title="调用入口页面,也就是首页.可使用下面方法."></a>调用入口页面,也就是首页.可使用下面方法.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 查找应用首页窗口对象</span><br><span class="line">var h=plus.webview.getWebviewById( plus.runtime.appid );</span><br></pre></td></tr></table></figure>
+    <h2 id="chrome调试-必须在配置文件里打开调试的选项-遇到显示手机不显示页面-说明安卓4-4以下系统-白屏是因为必须翻墙"><a href="#chrome调试-必须在配置文件里打开调试的选项-遇到显示手机不显示页面-说明安卓4-4以下系统-白屏是因为必须翻墙" class="headerlink" title="chrome调试,必须在配置文件里打开调试的选项.遇到显示手机不显示页面,说明安卓4.4以下系统.白屏是因为必须翻墙"></a>chrome调试,必须在配置文件里打开调试的选项.遇到显示手机不显示页面,说明安卓4.4以下系统.白屏是因为必须翻墙</h2><div class="story post-story"><hr>
+</div><h2 id="调用入口页面-也就是首页-可使用下面方法"><a href="#调用入口页面-也就是首页-可使用下面方法" class="headerlink" title="调用入口页面,也就是首页.可使用下面方法."></a>调用入口页面,也就是首页.可使用下面方法.</h2><div class="story post-story"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 查找应用首页窗口对象</span><br><span class="line">var h=plus.webview.getWebviewById( plus.runtime.appid );</span><br></pre></td></tr></table></figure>
 
 
 <hr>
-<h2 id="预加载时-id和url都必须的设置-要不真机调试时不会出错-打包后会出现空页面-这次遇到的就是id忘记加了"><a href="#预加载时-id和url都必须的设置-要不真机调试时不会出错-打包后会出现空页面-这次遇到的就是id忘记加了" class="headerlink" title="预加载时,id和url都必须的设置.要不真机调试时不会出错.打包后会出现空页面.这次遇到的就是id忘记加了"></a>预加载时,id和url都必须的设置.要不真机调试时不会出错.打包后会出现空页面.这次遇到的就是id忘记加了</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mui.init(&#123;</span><br><span class="line">  preloadPages:[</span><br><span class="line">    &#123;</span><br><span class="line">      id:preload-page-id,</span><br><span class="line">      url:prelaod-page-url,</span><br><span class="line">      styles:&#123;&#125;,//窗口参数</span><br><span class="line">      extras:&#123;&#125;,//自定义扩展参数</span><br><span class="line">      subpages:[&#123;&#125;,&#123;&#125;]//预加载页面的子页面</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  preloadLimit:5//预加载窗口数量限制(一旦超出,先进先出)默认不限制</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</div><h2 id="预加载时-id和url都必须的设置-要不真机调试时不会出错-打包后会出现空页面-这次遇到的就是id忘记加了"><a href="#预加载时-id和url都必须的设置-要不真机调试时不会出错-打包后会出现空页面-这次遇到的就是id忘记加了" class="headerlink" title="预加载时,id和url都必须的设置.要不真机调试时不会出错.打包后会出现空页面.这次遇到的就是id忘记加了"></a>预加载时,id和url都必须的设置.要不真机调试时不会出错.打包后会出现空页面.这次遇到的就是id忘记加了</h2><div class="story post-story"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mui.init(&#123;</span><br><span class="line">  preloadPages:[</span><br><span class="line">    &#123;</span><br><span class="line">      id:preload-page-id,</span><br><span class="line">      url:prelaod-page-url,</span><br><span class="line">      styles:&#123;&#125;,//窗口参数</span><br><span class="line">      extras:&#123;&#125;,//自定义扩展参数</span><br><span class="line">      subpages:[&#123;&#125;,&#123;&#125;]//预加载页面的子页面</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  preloadLimit:5//预加载窗口数量限制(一旦超出,先进先出)默认不限制</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="类点击事件这么写-一定要先选类的外层-然后在选要点击的类"><a href="#类点击事件这么写-一定要先选类的外层-然后在选要点击的类" class="headerlink" title="类点击事件这么写,一定要先选类的外层,然后在选要点击的类."></a>类点击事件这么写,一定要先选类的外层,然后在选要点击的类.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">					&lt;div class=&quot;mui-slider-item&quot;&gt;</span><br><span class="line">						&lt;a href=&quot;javascript:;&quot;&gt;</span><br><span class="line">							&lt;img src=&quot;img/start1.png&quot; id=&quot;_d1&quot;&gt;</span><br><span class="line">							&lt;p class=&quot;jump&quot; &gt;&lt;/p&gt;</span><br><span class="line">						&lt;/a&gt;</span><br><span class="line">					&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">//js</span><br><span class="line">// .on的第二个参数为选择器 与.addEventListener()不一样 .addEventListener第二个参数为回调函数了.</span><br><span class="line">		mui(&#x27;.mui-slider-item&#x27;).on(&#x27;tap&#x27;,&#x27;.jump&#x27;,function()&#123;</span><br><span class="line">			redirect();</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
+</div><h2 id="类点击事件这么写-一定要先选类的外层-然后在选要点击的类"><a href="#类点击事件这么写-一定要先选类的外层-然后在选要点击的类" class="headerlink" title="类点击事件这么写,一定要先选类的外层,然后在选要点击的类."></a>类点击事件这么写,一定要先选类的外层,然后在选要点击的类.</h2><div class="story post-story"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">					&lt;div class=&quot;mui-slider-item&quot;&gt;</span><br><span class="line">						&lt;a href=&quot;javascript:;&quot;&gt;</span><br><span class="line">							&lt;img src=&quot;img/start1.png&quot; id=&quot;_d1&quot;&gt;</span><br><span class="line">							&lt;p class=&quot;jump&quot; &gt;&lt;/p&gt;</span><br><span class="line">						&lt;/a&gt;</span><br><span class="line">					&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">//js</span><br><span class="line">// .on的第二个参数为选择器 与.addEventListener()不一样 .addEventListener第二个参数为回调函数了.</span><br><span class="line">		mui(&#x27;.mui-slider-item&#x27;).on(&#x27;tap&#x27;,&#x27;.jump&#x27;,function()&#123;</span><br><span class="line">			redirect();</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="子webview的监听"><a href="#子webview的监听" class="headerlink" title="子webview的监听"></a>子webview的监听</h2><p>一定要等到webview创建好后,并且显示了.才能创建监听否则会报错的.还有一定要写在 <code>mui.plusReady(function() &#123;&#125;)</code> 里否则也会报错</p>
+</div><h2 id="子webview的监听"><a href="#子webview的监听" class="headerlink" title="子webview的监听"></a>子webview的监听</h2><div class="story post-story"><p>一定要等到webview创建好后,并且显示了.才能创建监听否则会报错的.还有一定要写在 <code>mui.plusReady(function() &#123;&#125;)</code> 里否则也会报错</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mui.plusReady(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	currentWebview = plus.webview.currentWebview();</span><br><span class="line">	main = plus.webview.currentWebview().opener();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//currentWebview的监听只能写在这里 写在外面就会报错</span></span><br><span class="line">	currentWebview.addEventListener(<span class="string">&#x27;maskClick&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		mui.fire(main, <span class="string">&quot;menu:swipeleft&quot;</span>);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//外面只能是整个窗口的监听,不过因为webview是嵌套的,</span></span><br><span class="line"><span class="comment">//mask只是作用在当期webview,所以用window是不起作用的</span></span><br><span class="line">   <span class="built_in">window</span>.addEventListener(<span class="string">&quot;swipeleft&quot;</span>, closeMenu);</span><br><span class="line">   <span class="comment">//子页面没有创建,监听会报错</span></span><br><span class="line"><span class="comment">//curSub.addEventListener(&#x27;maskClick&#x27;, closeMenu());</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="mask一些问题"><a href="#mask一些问题" class="headerlink" title="mask一些问题"></a>mask一些问题</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遮罩子页面	按照文档说法应该子页面也遮罩为啥我这个不行呢</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* mask: (String 类型 )窗口的遮罩</span></span><br><span class="line"><span class="comment">*用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，</span></span><br><span class="line"><span class="comment">* 并且截获webview的所有触屏事件，此时Webview窗口的点击操作会触发maskClick事件。</span></span><br><span class="line"><span class="comment">* 字符串类型，可取值： rgba格式字符串，定义纯色遮罩层样式，</span></span><br><span class="line"><span class="comment">* 如&quot;rgba(0,0,0,0.5)&quot;，表示黑色半透明； &quot;none&quot;，表示不使用遮罩层； 默认值为&quot;none&quot;，即无遮罩层。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//这是用的很笨的方法 在主页面里使用子页面遮罩</span></span><br><span class="line"><span class="comment">//					curSub.setStyle(&#123;</span></span><br><span class="line"><span class="comment">//						mask:&#x27;rgba(0,0,0,.3)&#x27;</span></span><br><span class="line"><span class="comment">//					&#125;)</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 这个是当侧滑栏出现时,主页面绘制 mask,这个绘制的mask就能把apeend的子页面遮盖住</span></span><br><span class="line">		mainWebView.setStyle(&#123;</span><br><span class="line">			<span class="attr">left</span>: <span class="string">&#x27;70%&#x27;</span>,</span><br><span class="line">			<span class="attr">mask</span>: <span class="string">&#x27;rgba(0,0,0,.3)&#x27;</span>,</span><br><span class="line">			<span class="attr">transition</span>: &#123;</span><br><span class="line">					<span class="attr">duration</span>: <span class="number">150</span> <span class="comment">//动画持续时间</span></span><br><span class="line">			&#125;</span><br><span class="line">        <span class="comment">//但是这个绘制的mask不知道如何监听滑动,只能监听点击</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//还有个生成mask的方法是这个</span></span><br><span class="line">        mask = mui.createMask(_closeMenu);  <span class="comment">// _closeMenu是回调函数,当点击时候如何操作</span></span><br><span class="line">        mask.show();    <span class="comment">//显示遮罩  //这个遮罩支持滑动监听 而且默认关闭menu 但有个问题子页面不能遮罩上</span></span><br><span class="line">        mask.close();   <span class="comment">//关闭遮罩</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div><h2 id="mask一些问题"><a href="#mask一些问题" class="headerlink" title="mask一些问题"></a>mask一些问题</h2><div class="story post-story"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遮罩子页面	按照文档说法应该子页面也遮罩为啥我这个不行呢</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* mask: (String 类型 )窗口的遮罩</span></span><br><span class="line"><span class="comment">*用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，</span></span><br><span class="line"><span class="comment">* 并且截获webview的所有触屏事件，此时Webview窗口的点击操作会触发maskClick事件。</span></span><br><span class="line"><span class="comment">* 字符串类型，可取值： rgba格式字符串，定义纯色遮罩层样式，</span></span><br><span class="line"><span class="comment">* 如&quot;rgba(0,0,0,0.5)&quot;，表示黑色半透明； &quot;none&quot;，表示不使用遮罩层； 默认值为&quot;none&quot;，即无遮罩层。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//这是用的很笨的方法 在主页面里使用子页面遮罩</span></span><br><span class="line"><span class="comment">//					curSub.setStyle(&#123;</span></span><br><span class="line"><span class="comment">//						mask:&#x27;rgba(0,0,0,.3)&#x27;</span></span><br><span class="line"><span class="comment">//					&#125;)</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 这个是当侧滑栏出现时,主页面绘制 mask,这个绘制的mask就能把apeend的子页面遮盖住</span></span><br><span class="line">		mainWebView.setStyle(&#123;</span><br><span class="line">			<span class="attr">left</span>: <span class="string">&#x27;70%&#x27;</span>,</span><br><span class="line">			<span class="attr">mask</span>: <span class="string">&#x27;rgba(0,0,0,.3)&#x27;</span>,</span><br><span class="line">			<span class="attr">transition</span>: &#123;</span><br><span class="line">					<span class="attr">duration</span>: <span class="number">150</span> <span class="comment">//动画持续时间</span></span><br><span class="line">			&#125;</span><br><span class="line">        <span class="comment">//但是这个绘制的mask不知道如何监听滑动,只能监听点击</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//还有个生成mask的方法是这个</span></span><br><span class="line">        mask = mui.createMask(_closeMenu);  <span class="comment">// _closeMenu是回调函数,当点击时候如何操作</span></span><br><span class="line">        mask.show();    <span class="comment">//显示遮罩  //这个遮罩支持滑动监听 而且默认关闭menu 但有个问题子页面不能遮罩上</span></span><br><span class="line">        mask.close();   <span class="comment">//关闭遮罩</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+</div>
   </div>
   
   
@@ -2060,6 +2061,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <a class='prev' href='/2016/12/centos%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8A%A0%E5%9B%BA/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>centos 服务器加固</p>
           <p class='content'>CentOS下SSH端口修改CentOS防火墙iptables的配置方法详解
+
 </p>
         </a>
       
@@ -2510,8 +2512,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860004')
-      volantis.js('/js/message.js?time=1632106860004', () => {
+      volantis.css('/css/message.css?time=1632107226983')
+      volantis.js('/js/message.js?time=1632107226983', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2555,8 +2557,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860004')
-      volantis.js('/js/message.js?time=1632106860004', () => {
+      volantis.css('/css/message.css?time=1632107226983')
+      volantis.js('/js/message.js?time=1632107226983', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2812,7 +2814,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860004')
+    volantis.js('/js/rightMenu.js?time=1632107226983')
   </script>
 
 
@@ -2826,19 +2828,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860004")
+        volantis.js("/js/plugins/sites.js?time=1632107226983")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860004")
+        volantis.js("/js/plugins/friends.js?time=1632107226983")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860004")
+        volantis.js("/js/plugins/contributors.js?time=1632107226983")
       }
     
   };
@@ -2954,7 +2956,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<script src="/js/app.js?time=1632106860004.js"></script>
+<script src="/js/app.js?time=1632107226983.js"></script>
 
 
 <!-- optional -->
@@ -2967,7 +2969,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860004");
+    return volantis.js("/js/search/hexo.js?time=1632107226983");
   }
 
   function loadSearchService() {

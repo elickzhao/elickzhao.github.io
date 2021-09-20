@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860607" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227131" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1532,8 +1532,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860607" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860607"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227131" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227131"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1934,7 +1934,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="一些总结吧"><a href="#一些总结吧" class="headerlink" title="一些总结吧"></a>一些总结吧</h2><ul>
+    <h2 id="一些总结吧"><a href="#一些总结吧" class="headerlink" title="一些总结吧"></a>一些总结吧</h2><div class="story post-story"><ul>
 <li><p><strong>父组件和子组件之间通信用广播:</strong> vue可以用多种方法实现组件间沟通,比如用一个属性,<br>不过这必须用上同步 <code>:test.sync</code> 要不然子组件的状态父组件不知道.<br>但是这有个问题就是不利于解耦,捆绑太紧密了不能复用了,所以还是用广播.<br>不过还是有个小小的疑问,如果两个同名事件怎么办呢?? 按文档里说是第一个,那可能是父组件加载子组件的顺序吧<br>我想可能是这样的,如果存在同名的话,那就得手动调整顺序,我感觉最好不要同名.</p>
 </li>
 <li><p><strong>v-bind:fields=”columns” 绑定解释:</strong> 有时用简写就比较懵,简单记忆下: 如果原有属性就是绑定属性到vue属性.如果不是自带属性,那就是组件自定义的.比如 <code>:fields=&quot;columns&quot; </code> 这里就是一个. fields 子组件 : columns 父组件. 反正等号后面都是当前组件的.可以看下面例子.</p>
@@ -1964,6 +1964,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>例子:</strong></p>
 <iframe width="80%" height="500" src="//jsfiddle.net/elick/s03Lk51x/2/embedded/result,js,html,css" frameborder="0"></iframe>
 
+</div>
   </div>
   
   
@@ -2105,6 +2106,7 @@ v-bind:fields=”columns” 绑定解释: 有时用简写就比较懵,简单记�
         <a class='next' href='/2016/07/Atom%20%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/'>
           <p class='title'>Atom 使用小技巧<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>Atom使用纪要Atom 编辑器快捷键列表汇总整理
+
 </p>
         </a>
       
@@ -2549,8 +2551,8 @@ v-bind:fields=”columns” 绑定解释: 有时用简写就比较懵,简单记�
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860607')
-      volantis.js('/js/message.js?time=1632106860607', () => {
+      volantis.css('/css/message.css?time=1632107227131')
+      volantis.js('/js/message.js?time=1632107227131', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2594,8 +2596,8 @@ v-bind:fields=”columns” 绑定解释: 有时用简写就比较懵,简单记�
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860607')
-      volantis.js('/js/message.js?time=1632106860607', () => {
+      volantis.css('/css/message.css?time=1632107227131')
+      volantis.js('/js/message.js?time=1632107227131', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2851,7 +2853,7 @@ v-bind:fields=”columns” 绑定解释: 有时用简写就比较懵,简单记�
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860607')
+    volantis.js('/js/rightMenu.js?time=1632107227131')
   </script>
 
 
@@ -2865,19 +2867,19 @@ v-bind:fields=”columns” 绑定解释: 有时用简写就比较懵,简单记�
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860607")
+        volantis.js("/js/plugins/sites.js?time=1632107227131")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860607")
+        volantis.js("/js/plugins/friends.js?time=1632107227131")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860607")
+        volantis.js("/js/plugins/contributors.js?time=1632107227131")
       }
     
   };
@@ -2993,7 +2995,7 @@ v-bind:fields=”columns” 绑定解释: 有时用简写就比较懵,简单记�
 
 
 
-<script src="/js/app.js?time=1632106860607.js"></script>
+<script src="/js/app.js?time=1632107227131.js"></script>
 
 
 <!-- optional -->
@@ -3006,7 +3008,7 @@ v-bind:fields=”columns” 绑定解释: 有时用简写就比较懵,简单记�
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860607");
+    return volantis.js("/js/search/hexo.js?time=1632107227131");
   }
 
   function loadSearchService() {

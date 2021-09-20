@@ -20,7 +20,7 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632106860171" as="style">
+  <link rel="preload" href="/css/style.css?time=1632107227022" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1530,8 +1530,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632106860171" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632106860171"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632107227022" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107227022"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1922,7 +1922,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="类是什么"><a href="#类是什么" class="headerlink" title="类是什么"></a>类是什么</h2><p>类是抽象的一个定义,只是定义不能用.<br><strong>class.php</strong></p>
+    <h2 id="类是什么"><a href="#类是什么" class="headerlink" title="类是什么"></a>类是什么</h2><div class="story post-story"><p>类是抽象的一个定义,只是定义不能用.<br><strong>class.php</strong></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>    </span><br><span class="line"></span><br><span class="line"><span class="comment">//枪的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">gun</span></span>&#123;</span><br><span class="line">    <span class="comment">// 弹匣不同的枪有不同弹匣和装弹数量</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$magazine</span> =<span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化弹夹,也就是给抢上弹夹</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span>  <span class="title">__construct</span>(<span class="params"><span class="keyword">int</span> <span class="variable">$magazine</span>=<span class="number">0</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;magazine = <span class="variable">$magazine</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//开火,单发点射.消耗弹夹子弹量.</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">fire</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;magazine--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getMagazine</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;magazine;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//游戏开始 先买一把AWP</span></span><br><span class="line"><span class="comment">//echo &#x27;I am AWP&#x27;;  //有趣带 , 的 echo 前面不能有 echo 否则不显示</span></span><br><span class="line"><span class="variable">$AWP</span> = <span class="keyword">new</span> gun(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Use AWP\n&quot;</span>,<span class="variable">$AWP</span>-&gt;getMagazine(),<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="variable">$AWP</span>-&gt;fire();</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$AWP</span>-&gt;getMagazine(),<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//再买一把AK</span></span><br><span class="line"><span class="variable">$AK47</span> = <span class="keyword">new</span> gun(<span class="number">30</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Use AK\n&quot;</span>,<span class="variable">$AK47</span>-&gt;getMagazine(),<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="variable">$AK47</span>-&gt;fire();</span><br><span class="line"><span class="variable">$AK47</span>-&gt;fire();</span><br><span class="line"><span class="variable">$AK47</span>-&gt;fire();</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$AK47</span>-&gt;getMagazine(),<span class="string">&quot;\n&quot;</span>;</span><br></pre></td></tr></table></figure>
 <p>运行命令 <code>php class.php</code> 得输出结果</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Use AWP</span><br><span class="line">10</span><br><span class="line">9</span><br><span class="line">Use AK</span><br><span class="line">30</span><br><span class="line">27</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1930,6 +1930,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>从上面的例子可以看出,类和类的实例是一个什么样的关系.<br>类就是一项事物的抽象总结.他是个概念,不能用于实际操作,只是定义了一类物品统一的属性与功能.<br>上面<code>枪</code>类的属性就是<code>弹夹</code>,功能就是<code>开火</code>.<br>而实例呢就是真家伙了.利用类<code>枪</code>类这个图纸,做出了<code>AWP</code>和<code>AK</code>.这两个是两个家伙,虽然有共同的属性和方法,但是他们的确是两个家伙,所以开火以后剩余的子弹数是不一样的.所以说为什么<code>类</code>是个图纸,如果两个地方用到类,属性是同一个那岂不完蛋.<br><strong>所以要记住,类是图纸,实例才是工具</strong></p>
 </blockquote>
 
+</div>
   </div>
   
   
@@ -2501,8 +2502,8 @@ webpace.bas...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860171')
-      volantis.js('/js/message.js?time=1632106860171', () => {
+      volantis.css('/css/message.css?time=1632107227022')
+      volantis.js('/js/message.js?time=1632107227022', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2546,8 +2547,8 @@ webpace.bas...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632106860171')
-      volantis.js('/js/message.js?time=1632106860171', () => {
+      volantis.css('/css/message.css?time=1632107227022')
+      volantis.js('/js/message.js?time=1632107227022', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2803,7 +2804,7 @@ webpace.bas...</p>
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632106860171')
+    volantis.js('/js/rightMenu.js?time=1632107227022')
   </script>
 
 
@@ -2817,19 +2818,19 @@ webpace.bas...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632106860171")
+        volantis.js("/js/plugins/sites.js?time=1632107227022")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632106860171")
+        volantis.js("/js/plugins/friends.js?time=1632107227022")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632106860171")
+        volantis.js("/js/plugins/contributors.js?time=1632107227022")
       }
     
   };
@@ -2945,7 +2946,7 @@ webpace.bas...</p>
 
 
 
-<script src="/js/app.js?time=1632106860171.js"></script>
+<script src="/js/app.js?time=1632107227022.js"></script>
 
 
 <!-- optional -->
@@ -2958,7 +2959,7 @@ webpace.bas...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632106860171");
+    return volantis.js("/js/search/hexo.js?time=1632107227022");
   }
 
   function loadSearchService() {
