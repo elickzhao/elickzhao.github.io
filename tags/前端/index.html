@@ -1,0 +1,4295 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/1.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+      <meta name="robots" content="index,follow">
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>Tag: 前端 - elickzhao&#39;s Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="elickzhao's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
+
+  
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" media="print" onload="this.media='all'">
+  
+
+
+  <!-- import link -->
+  
+
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+    <!-- 脚本懒加载函数 -->
+    <script>
+      function loadScript(src, cb) {
+        var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+        var script = document.createElement('script');
+        script.setAttribute('type','text/javascript');
+        if (cb) script.onload = cb;
+        script.setAttribute('src', src);
+        HEAD.appendChild(script);
+      }
+       </script>
+    
+</head>
+
+<body>
+  <header class="l_header auto shadow floatable blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://picup.heson10.com/img/upyun/hesonlogoyasuo.gif'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fal fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-search fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fal fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guestbook/
+                  
+                  
+                  
+                    id="guestbook"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fal fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fal fa-microphone-alt fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://box.heson10.com
+                  
+                  
+                  
+                    id="https:boxheson10com"
+                  >
+                  <i class='fal fa-heart fa-fw'></i>宝盒
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fal fa-paper-plane fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://yf.heson10.com/
+                  
+                  
+                  
+                    id="https:yfheson10com"
+                  >
+                  <i class='fal fa-donate fa-fw'></i>要饭
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://tongji.baidu.com/web/10000238090/overview/index?siteId=15706250
+                  
+                  
+                  
+                    id="https:tongjibaiducomweb10000238090overviewindex?siteId=15706250"
+                  >
+                  <i class='fal fa-industry fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.heson10.com/atom.xml
+                  
+                  
+                  
+                    id="https:wwwheson10comatomxml"
+                  >
+                  <i class='fal fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://leancloud.heson10.com
+                  
+                  
+                  
+                    id="https:leancloudheson10com"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fal fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="搜索..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fal fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fal fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-search fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fal fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guestbook/
+                  
+                  
+                  
+                    id="guestbook"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fal fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fal fa-microphone-alt fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://box.heson10.com
+                  
+                  
+                  
+                    id="https:boxheson10com"
+                  >
+                  <i class='fal fa-heart fa-fw'></i>宝盒
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fal fa-paper-plane fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://yf.heson10.com/
+                  
+                  
+                  
+                    id="https:yfheson10com"
+                  >
+                  <i class='fal fa-donate fa-fw'></i>要饭
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://tongji.baidu.com/web/10000238090/overview/index?siteId=15706250
+                  
+                  
+                  
+                    id="https:tongjibaiducomweb10000238090overviewindex?siteId=15706250"
+                  >
+                  <i class='fal fa-industry fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.heson10.com/atom.xml
+                  
+                  
+                  
+                    id="https:wwwheson10comatomxml"
+                  >
+                  <i class='fal fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://leancloud.heson10.com
+                  
+                  
+                  
+                    id="https:leancloudheson10com"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper  featured' style="display: none;">
+        <canvas id="header_canvas" style="position:absolute;bottom:0;z-index: 1;" width="900" height="350"></canvas>
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://picup.heson10.com/img/upyun/home_top_bg.webp"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+      <img no-lazy class='logo' src='https://picup.heson10.com/img/upyun/heson10logo5.png'/>
+    
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              id="home">
+              <i class='fad fa-home fa-fw'></i><p>首页</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fad fa-archive fa-fw'></i><p>归档</p>
+            </a>
+          
+            <a href="/bb/"
+              
+              
+              id="bb">
+              <i class='fad fa-microphone-alt fa-fw'></i><p>说说</p>
+            </a>
+          
+            <a href="/links/"
+              
+              
+              id="links">
+              <i class='fad fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://box.heson10.com"
+              
+              
+              id="https:boxheson10com">
+              <i class='fad fa-heart fa-fw'></i><p>宝盒</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://yf.heson10.com/"
+              
+              
+              id="https:yfheson10com">
+              <i class='fad fa-donate fa-fw'></i><p>要饭</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://travellings.now.sh/"
+              
+              
+              id="https:travellingsnowsh">
+              <i class='fad fa-paper-plane fa-fw'></i><p>开往</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">false</div>
+  <div id="pjax-pageTitle"></div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+
+<aside class='l_side'>
+  <div style="margin-bottom: 16px;border-radius: 8px;" class='shadow floatable widget_author desktop'>
+    <div id="zuozhebg" class="newauthor"
+      style="background: url(https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png) center center no-repeat;background-size:cover">
+    </div>
+    <div class="relive_widget_v3">
+      <div class="box-author-info">
+        <div class="author-face">
+          <a href="/about" target="_blank" rel="nofollow" title="关于elickzhao">
+            <img no-lazy alt="" src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png"
+              class="avatar avatar-200 photo" height="200" width="200"> </a>
+        </div>
+        <div class="author-name">elickzhao</div>
+        <div id="author-one" class="author-one">
+          <script>
+            var binft = function (r) {
+              function t() {
+                return b[Math.floor(Math.random() * b.length)]
+              }
+              function e() {
+                return String.fromCharCode(94 * Math.random() + 33)
+              }
+              function n(r) {
+                for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                  var l = document.createElement("span");
+                  l.textContent = e(), l.style.color = t(), n.appendChild(l)
+                }
+                return n
+              }
+              function i() {
+                var t = o[c.skillI];
+                c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+              }
+              var l = "",
+                o = ["人生在勤，不索何获", "日日待明日,万事成蹉跎", "丈夫志四海，万里犹比邻", "还在看这里吗？", "能不能别看了？", "文章更精彩...."].map(function (r) {
+                  return r + ""
+                }),
+                a = 2,
+                g = 1,
+                s = 5,
+                d = 75,
+                b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+                c = {
+                  text: "",
+                  prefixP: -s,
+                  skillI: 0,
+                  skillP: 0,
+                  direction: "forward",
+                  delay: a,
+                  step: g
+                };
+              i()
+            };
+            binft(document.getElementById('author-one'));
+          </script>
+
+
+        </div>
+        <div class="site-state-wrap motion-element">
+          <nav class="site-state">
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+
+                <span class="site-state-item-count">268</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+  
+
+  
+  
+    
+    
+  
+
+  <section class="widget category shadow floatable desktop">
+    
+  <header>
+    
+      <a href='/categories/'><i class="fal fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/php%E5%BC%80%E5%8F%91/" href="/categories/php%E5%BC%80%E5%8F%91/"
+            id="categoriesphpE5BC80E58F91"
+            ><div class='name'>php开发</div><div class='badge'>(24)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"
+            id="categoriesE5898DE7ABAFE68A80E69CAF"
+            ><div class='name'>前端技术</div><div class='badge'>(39)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"
+            id="categoriesE69C8DE58AA1E599A8E79BB8E585B3E68A80E69CAF"
+            ><div class='name'>服务器相关技术</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"
+            id="categoriesE69C8DE58AA1E599A8E7ABAF"
+            ><div class='name'>服务器端</div><div class='badge'>(11)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%B5%8B%E8%AF%95/" href="/categories/%E6%B5%8B%E8%AF%95/"
+            id="categoriesE6B58BE8AF95"
+            ><div class='name'>测试</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+
+  
+    
+    
+
+<section class="widget text shadow floatable desktop">
+  
+  <header>
+    
+      <i class="fal fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <div id="hot-comments"></div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fal fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>268 篇</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>已运行时间：</div>
+          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
+        </div>
+        <script>
+          var BirthDay = new Date(new Date('2020/07/06'));
+          var today = new Date();
+          var timeold = (today.getTime() - BirthDay.getTime());
+          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
+          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
+        </script>
+      
+
+
+      
+        <div class="webinfo-item">
+          <div>本站总字数：</div>
+          <div>121.4k 字</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站访客数：</div>
+          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站总访问量：</div>
+          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>最后活动时间：</div>
+          
+            <div id="last-update" style="display: none;">Fri Sep 10 2021 00:35:16 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-09-10 日</div>
+          
+        </div>
+        
+        <script>
+          function timeago(dateTimeStamp) {
+              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
+              var hour = minute * 60;
+              var day = hour * 24;
+              var week = day * 7;
+              var month = day * 30;
+              var now = new Date().getTime(); //获取当前时间毫秒
+              var diffValue = now - dateTimeStamp; //时间差
+              if (diffValue < 0) {
+                  return;
+              }
+              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
+              var hourC = diffValue / hour;
+              var dayC = diffValue / day;
+              var weekC = diffValue / week;
+              var monthC = diffValue / month;
+              if (monthC >= 1 && monthC <= 3) {
+                  result = " " + parseInt(monthC) + " 月前"
+              } else if (weekC >= 1 && weekC <= 3) {
+                  result = " " + parseInt(weekC) + " 周前"
+              } else if (dayC >= 1 && dayC <= 6) {
+                  result = " " + parseInt(dayC) + " 天前"
+              } else if (hourC >= 1 && hourC <= 23) {
+                  result = " " + parseInt(hourC) + " 小时前"
+              } else if (minC >= 1 && minC <= 59) {
+                  result = " " + parseInt(minC) + " 分钟前"
+              } else if (diffValue >= 0 && diffValue <= minute) {
+                  result = "刚刚"
+              } else {
+                  var datetime = new Date();
+                  datetime.setTime(dateTimeStamp);
+                  var Nyear = datetime.getFullYear();
+                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+                  result = Nyear + "-" + Nmonth + "-" + Ndate
+              }
+              return result;
+          }
+          var lastUpDate = document.getElementById('last-update').innerHTML;
+          try {
+            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
+          } catch (error) {
+            document.getElementById('last-update-show').innerHTML = '2021-09-10 日';
+          }
+        </script>
+        
+      
+    </div>
+  </div>
+</section>
+
+  
+
+
+</aside>
+
+<div class='l_main'>
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/02/%E5%90%84%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1%20/">
+        各个浏览器隐藏滚动条
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        注意:html是可以替换成别的任何类名的还有就是 火狐是只能隐藏 却不能滚动  剩下两个都可以有的说这么写 ::-webkit-scrollbar&#123;display:none&#125; 但是完全不好使至于火狐滚动的问题 以后再想办法吧
+123456789101112&lt;style&gt;    html &#123;        /*隐藏滚动条，当IE下溢出，仍然可以滚动*/...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-02-05</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/02/%E5%90%84%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1%20/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/02/layui%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81%20%E8%87%AA%E5%AE%9A%E4%B9%89%E9%AA%8C%E8%AF%81%20select%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95/">
+        layui表单验证 自定义验证 select验证方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>这个东西还真是浪费了不少时间,网上一些文章写的吧 不知道是原来版本那么做 还是以讹传讹 反正都不太好用<br>只能大致参考下  好了 进入整体</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--  注意这里 lay-filter 是监听时 或者其他操作时用的 选取用的字段 类似jq的 $(&#x27;#id&#x27;)--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--  注意这里 lay-verify 是你自定义的验证规则名称 这个是必须 如果是简单验证 就写上预设值 就好了 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;city&quot;</span> <span class="attr">lay-filter</span>=<span class="string">&quot;city&quot;</span> <span class="attr">lay-verify</span>=<span class="string">&quot;city-verify&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;010&quot;</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;021&quot;</span> <span class="attr">disabled</span>&gt;</span>上海（禁用效果）<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;0571&quot;</span> <span class="attr">selected</span>&gt;</span>杭州<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span>    </span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 可以是submit提交按钮 也可以是普通按钮 但是呢 必须加上 lay-submit lay-filter=&quot;*&quot; 其中 lay-submit 也是不可少的  要不就检测不到提交事件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">name</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">lay-submit</span> <span class="attr">lay-filter</span>=<span class="string">&quot;*&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="comment">//第一步 写自定义规则</span></span></span><br><span class="line"><span class="javascript">form.verify(&#123;</span></span><br><span class="line"><span class="javascript">    <span class="attr">cateid</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (value == <span class="string">&quot;&quot;</span>) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> <span class="string">&quot;必须选择一级栏目&quot;</span>;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="attr">contact</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (value.length &lt; <span class="number">4</span>) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> <span class="string">&#x27;内容请输入至少4个字符&#x27;</span>;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="attr">phone</span>: [<span class="regexp">/^1[3|4|5|7|8]\d&#123;9&#125;$/</span>, <span class="string">&#x27;手机必须11位，只能是数字！&#x27;</span>],</span></span><br><span class="line"><span class="javascript">    <span class="attr">email</span>: [<span class="regexp">/^[a-z0-9._%-]+@([a-z0-9-]+\.)+[a-z]&#123;2,4&#125;$|^1[3|4|5|7|8]\d&#123;9&#125;$/</span>, <span class="string">&#x27;邮箱格式不对&#x27;</span>]</span></span><br><span class="line"><span class="javascript">&#125;);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="comment">//第二部 提交监听事件</span></span></span><br><span class="line"><span class="javascript"><span class="comment">//只有这样 验证才会执行  submit(*) 就是提交按钮的 lay-filter=&quot;*&quot; 这个可以自行更改</span></span></span><br><span class="line"><span class="javascript"><span class="comment">//其实回调函数 只是有其他操作要做的时候用的 如果只是验证的话 第二个参数可以不写</span></span></span><br><span class="line"><span class="javascript">form.on(<span class="string">&#x27;submit(*)&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    params = data.field;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//alert(JSON.stringify(params))</span></span></span><br><span class="line"><span class="javascript">    submit($, params);  <span class="comment">//这个是提交按钮 当验证通过后就提交</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line"><span class="javascript">&#125;)</span></span><br><span class="line"><span class="javascript"><span class="comment">//其实可以直接这么用</span></span></span><br><span class="line"><span class="javascript"><span class="comment">//form.on(&#x27;submit(*)&#x27;);</span></span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-02-04</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/02/layui%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81%20%E8%87%AA%E5%AE%9A%E4%B9%89%E9%AA%8C%E8%AF%81%20select%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/02/SyntaxError%20Unexpected%20token%20%E6%B3%A8%E6%84%8Fchrome%E6%8F%92%E4%BB%B6/">
+        SyntaxError-> Unexpected token "{" 注意chrome插件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天遇到个奇葩问题,有个js报错 结果出现位置居然在 &lt;!DOCTYPE HTML&gt; 这里.
+真是凌乱了.找了半天,把整个页面都删除了,还是报错了. 感觉可能并不是自己的问题.
+拿出火狐再看页面就没有错了. 后来发现居然是chrome的错 而且莫名的今天就坏了 前两天都没问题啊
+可能他们这个插件更新 然后浏览器 自己就更新吧 总之就是插件的问题 
+把文件名扔到百度 根本查不出是啥...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-02-03</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/02/SyntaxError%20Unexpected%20token%20%E6%B3%A8%E6%84%8Fchrome%E6%8F%92%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/02/layui%E7%9A%84%20select%E7%BB%84%E4%BB%B6%E4%BA%8C%E7%BA%A7%E8%81%94%E5%8A%A8/">
+        layui的 select组件二级联动
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        我自己的 因为和h-ui合用 所以有点问题 一些网上的写法不奏效
+12345678910111213141516171819202122232425var form = layui.form;form.on(&#x27;select(cid_1)&#x27;, function (data) &#123;    var cateid = $(&#x27;#cateid&#x27;).val(...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-02-01</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/02/layui%E7%9A%84%20select%E7%BB%84%E4%BB%B6%E4%BA%8C%E7%BA%A7%E8%81%94%E5%8A%A8/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/css%E6%96%87%E4%BB%B6%E6%8A%A5%E9%94%99Uncaught%20SyntaxError/">
+        css文件报错Uncaught SyntaxError Unexpected token
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        有时图省事 直接复制改写就会出现这个问题 所以要注意
+错误原因：错误代码改成
+
+复制粘贴害人不浅啊T_T
+
+参考文档css文件报错Uncaught SyntaxError: Unexpected token .
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-31</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/css%E6%96%87%E4%BB%B6%E6%8A%A5%E9%94%99Uncaught%20SyntaxError/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/momentjs%20%E8%87%AA%E5%B7%B1%E4%BD%BF%E7%94%A8%E4%BE%8B%E5%AD%90/">
+        momentjs 自己使用例子
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        下面例子是我用到的一些方法,其他的看文档吧 全的很这里主要说下怎么使用中文显示按下面引入 而且顺序不能变 还有就是注意moment引入的js 不是原版那个
+12https://cdn.bootcss.com/moment.js/2.20.1/moment-with-locales.min.jshttps://cdn.bootcss.com/moment.js/2.20.1/locale/zh...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-21</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/momentjs%20%E8%87%AA%E5%B7%B1%E4%BD%BF%E7%94%A8%E4%BE%8B%E5%AD%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/%E5%9C%A8%E6%94%B9%E5%86%99H-UI.admin%E6%89%80%E7%94%A8%E5%88%B0%E7%9A%84%E6%8F%92%E4%BB%B6/">
+        在改写H-UI.admin所用到的插件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+
+
+插件名
+说明
+
+
+
+sweetAlert
+Alert 美化插件
+
+
+sweetAlert2
+这是2代 效果更华丽些
+
+
+layer
+弹出框 这个和上面的 alert其实效果是差不多的
+
+
+artDialog
+这个是我好久以前就知道的,都忘记了 居然今天又看到了
+
+
+tipDialog
+这个居然不知道 原作者在哪里找到的 网上搜不到 也许自己写的?
+
+
+Simple Switch
+Sim...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-16</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/%E5%9C%A8%E6%94%B9%E5%86%99H-UI.admin%E6%89%80%E7%94%A8%E5%88%B0%E7%9A%84%E6%8F%92%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/SPA%E5%92%8CSSR%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%E7%AE%80%E4%BB%8B/">
+        SPA和SSR开发模式简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        SPA: SPA (Single-Page App) 单页面应用模式SSR: 意为 Server Side Rendering（服务端渲染）前后端都各自有自己的开发流程，构建工具，测试集合等等。前后端仅仅通过接口来编程，这个接口可能是JSON格式的RESTFul的接口，也可能是XML的，重点是后台只负责数据的提供和计算，而完全不处理展现。而前端则负责拿到数据，组织数据并展现的工作。这样结构清...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-28</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/SPA%E5%92%8CSSR%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/API%E5%BC%80%E5%8F%91%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86%E5%8F%8Amock%E6%95%B0%E6%8D%AE/">
+        API开发接口管理及mock数据
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这里总结了一些开发前后端分离,对于开发API的管理.不仅可以在没有后端搭建成的时候mock数据.而且可以管理接口及版本,并生成文档.这为开发及后续整理提供很大的方便.
+
+
+
+网站
+具有的特色
+
+
+
+DOClever
+这个平台有很好的介绍用的都是视频真是太贴心了教程.而且可以管理团队,项目分配,模拟数据,测试接口,版本管理.真的是功能十分丰富,这个也可以导入Swagger,只要导出json文件...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-27</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/API%E5%BC%80%E5%8F%91%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86%E5%8F%8Amock%E6%95%B0%E6%8D%AE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/%E5%89%8D%E7%AB%AF%E6%A8%A1%E6%8B%9F%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%20mock%20%E7%9A%84%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95/">
+        前端模拟本地数据 mock 的各种方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        json-server通过REST路由操作JSON文件数据库
+JSONPlaceholder用于测试和原型的简单假REST API服务器。
+fake-api-server跟JSONPlaceholder一样,是用于测试信息的测试服务器
+ssr这个和上面的 json-server 异曲同工之妙,这不过这个既可以当作静态网站服务器,也可以提供 本地数据mock 用于测试开发 这个可以配合mock...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-19</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/%E5%89%8D%E7%AB%AF%E6%A8%A1%E6%8B%9F%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%20mock%20%E7%9A%84%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/node.js%E5%8C%85%E5%A4%A7%E6%94%B6%E9%9B%86/">
+        node.js包大收集
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+
+
+包名
+简介
+图片
+
+
+
+multispinner
+在CLI模式下进度显示程序
+
+
+
+cfonts
+在CLI模式下输出各种拼接文字,只支持英文
+
+
+
+chalk
+在CLI模式下,设置字体颜色及背景颜色
+
+
+
+figures
+在CLI模式下,输出符号
+
+
+
+lowdb
+lowdb是一个基于lodash API的轻量级本地JSON数据库  (支持 Node.js , 浏览器 和 Electr...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-06</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/node.js%E5%8C%85%E5%A4%A7%E6%94%B6%E9%9B%86/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/07/GSAP%E7%9A%84TimelineMax%E6%97%B6%E9%97%B4%E8%BD%B4%E5%8F%8ATweenMax%E7%BC%93%E5%8A%A8%E5%AD%A6%E4%B9%A0%20/">
+        GSAP的TimelineMax时间轴及TweenMax缓动学习
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考文档TimelineMax系列学习文章TimelineMax：Tweening简介GSAP官方参考文档Easing缓动演示
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-07-26</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/07/GSAP%E7%9A%84TimelineMax%E6%97%B6%E9%97%B4%E8%BD%B4%E5%8F%8ATweenMax%E7%BC%93%E5%8A%A8%E5%AD%A6%E4%B9%A0%20/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/07/node.js%20%E8%87%AA%E5%BB%BA%E7%AE%80%E6%98%93%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+        node.js 自建简易服务器
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>废话先不多说,代码就是如下这么简单.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line">app.use(express.static(<span class="string">&#x27;./dist&#x27;</span>)) <span class="comment">//指定目录</span></span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//res.send(&#x27;Hello World&#x27;)     //这里注意下因为生成的静态页不是index.html标准名称 所以不会显示</span></span><br><span class="line">  res.sendFile( path.join(__dirname,  <span class="string">&#x27;./dist/index_prod.html&#x27;</span>))    <span class="comment">//这是返回静态页,注意啊一定要绝对路径</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-07-16</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/07/node.js%20%E8%87%AA%E5%BB%BA%E7%AE%80%E6%98%93%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/07/Mock.js%20%E6%A8%A1%E6%8B%9F%E9%9A%8F%E6%9C%BA%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE/">
+        Mock.js 模拟随机测试数据
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>这个东西用起来简单并且强大,不过现在可能不太流行了.因为这个配合jquery比较多.</p>
+<p>直接随机产生数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;http://mockjs.com/dist/mock.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">// 使用 Mock</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">var</span> data = Mock.mock(&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="string">&#x27;list|1-10&#x27;</span>: [&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="string">&#x27;id|+1&#x27;</span>: <span class="number">1</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;]</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">$(<span class="string">&#x27;&lt;pre&gt;&#x27;</span>).text(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">4</span>))</span></span></span><br><span class="line"><span class="javascript"><span class="xml">.appendTo(<span class="string">&#x27;body&#x27;</span>)</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;list&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;id&quot;: 1</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;id&quot;: 2</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;id&quot;: 3</span><br><span class="line">    &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-07-01</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/07/Mock.js%20%E6%A8%A1%E6%8B%9F%E9%9A%8F%E6%9C%BA%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/%E7%94%A8%20html5+js+css%20vue%20%E5%BC%80%E5%8F%91%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%20-Electron/">
+        用 html5+js+css vue 开发个桌面应用 -Electron
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p>想用js开发桌面现在有两个框架可以用 <strong>Electron</strong> 另外一个是 <strong>nwjs</strong>.<br>但感觉还是用 <strong>Electron</strong>比较好,因为现在一些流行的软件是那这个弄的,比如说我现在用的 <strong>Atom</strong> ,<strong>VSCode</strong> 这两个软件都非常好用,而且漂亮.<br>另外还有个原因是,他有中文文档.这样实在是方便太多了</p>
+<h2 id="编写"><a href="#编写" class="headerlink" title="编写"></a>编写</h2><p>这里主要编写个 <strong>Electron</strong> 启动配置文件.是 <code>package.json</code> 里的 <code>main</code> 字段的文件.<br><strong>注意</strong>：如果 main 字段没有在 package.json 声明，Electron会优先加载 index.js。<br>剩下的就是编写自己的程序了就行了.</p>
+<p>贴两个配置文件样本.<br>一 <strong>这是官方的例子</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; app, BrowserWindow &#125; = <span class="built_in">require</span>(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 保持一个对于 window 对象的全局引用，如果你不这样做，</span></span><br><span class="line"><span class="comment">// 当 JavaScript 对象被垃圾回收， window 会被自动地关闭</span></span><br><span class="line"><span class="keyword">let</span> win</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createWindow</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 创建浏览器窗口。</span></span><br><span class="line">    win = <span class="keyword">new</span> BrowserWindow(&#123; <span class="attr">width</span>: <span class="number">800</span>, <span class="attr">height</span>: <span class="number">600</span> &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 加载应用的 index.html。</span></span><br><span class="line">    win.loadURL(url.format(&#123;</span><br><span class="line">        <span class="attr">pathname</span>: path.join(__dirname, <span class="string">&#x27;dist/index_prod.html&#x27;</span>),</span><br><span class="line">        <span class="attr">protocol</span>: <span class="string">&#x27;file:&#x27;</span>,</span><br><span class="line">        <span class="attr">slashes</span>: <span class="literal">true</span></span><br><span class="line">    &#125;))</span><br><span class="line">    <span class="comment">//win.loadURL(&#x27;http://localhost:8080&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 打开开发者工具。</span></span><br><span class="line">    win.webContents.openDevTools();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当 window 被关闭，这个事件会被触发。</span></span><br><span class="line">    win.on(<span class="string">&#x27;closed&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 取消引用 window 对象，如果你的应用支持多窗口的话，</span></span><br><span class="line">        <span class="comment">// 通常会把多个 window 对象存放在一个数组里面，</span></span><br><span class="line">        <span class="comment">// 与此同时，你应该删除相应的元素。</span></span><br><span class="line">        win = <span class="literal">null</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Electron 会在初始化后并准备</span></span><br><span class="line"><span class="comment">// 创建浏览器窗口时，调用这个函数。</span></span><br><span class="line"><span class="comment">// 部分 API 在 ready 事件触发后才能使用。</span></span><br><span class="line">app.on(<span class="string">&#x27;ready&#x27;</span>, createWindow)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当全部窗口关闭时退出。</span></span><br><span class="line">app.on(<span class="string">&#x27;window-all-closed&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 在 macOS 上，除非用户用 Cmd + Q 确定地退出，</span></span><br><span class="line">    <span class="comment">// 否则绝大部分应用及其菜单栏会保持激活。</span></span><br><span class="line">    <span class="keyword">if</span> (process.platform !== <span class="string">&#x27;darwin&#x27;</span>) &#123;</span><br><span class="line">        app.quit()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;activate&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 在这文件，你可以续写应用剩下主进程代码。</span></span><br><span class="line">    <span class="comment">// 也可以拆分成几个文件，然后用 require 导入。</span></span><br><span class="line">    <span class="keyword">if</span> (win === <span class="literal">null</span>) &#123;</span><br><span class="line">        createWindow()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在这文件，你可以续写应用剩下主进程代码。</span></span><br><span class="line"><span class="comment">// 也可以拆分成几个文件，然后用 require 导入。</span></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-24</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/%E7%94%A8%20html5+js+css%20vue%20%E5%BC%80%E5%8F%91%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%20-Electron/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/webpack-dev-server%20%E7%9A%84%20Node.js%20Api%E6%96%B9%E5%BC%8F%E5%92%8CCLI%20%E6%96%B9%E5%BC%8F%20%E4%B8%A4%E7%A7%8D%E7%94%A8%E6%B3%95/">
+        webpack-dev-server 的 Node.js Api方式和CLI 方式 两种用法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        CLI 方式会比Node.js Api方式简单很多.Node.js Api方式 如果配置热启动 还需要配置 webpack.HotModuleReplacementPlugin 而且有时还得安装 webpack-hot-middleware 额外的插件
+还有需要特别注意的地方是 publicPath必填使用Node.js Api方式 结果还是不能自动更新.因为这个方法实在问题太多,最后还是使...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-22</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/webpack-dev-server%20%E7%9A%84%20Node.js%20Api%E6%96%B9%E5%BC%8F%E5%92%8CCLI%20%E6%96%B9%E5%BC%8F%20%E4%B8%A4%E7%A7%8D%E7%94%A8%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/nodejs%20%E7%9A%84%20cross-env%20%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BB%8B%E7%BB%8D/">
+        nodejs 的 cross-env 的使用及介绍
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这个小插件主要解决 windows 下 无法设置 NODE_ENV=development 这个东西. 因为程序可以根据 NODE的环境变量,做出不同选择.
+这个在 linux 下是可以设置的,但在 windows 下不行
+安装
+1npm install across-env --save-dev
+
+使用在package.json里,需要设置环境的地方加上这句就好了
+1cross-env N...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-21</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/nodejs%20%E7%9A%84%20cross-env%20%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BB%8B%E7%BB%8D/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/node.js%20%E8%87%AA%E5%BB%BA%E7%AE%80%E6%98%93%E6%9C%8D%E5%8A%A1/">
+        node.js 自建简易服务
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>废话先不多说,代码就是如下这么简单.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line">app.use(express.static(<span class="string">&#x27;./dist&#x27;</span>)) <span class="comment">//指定目录</span></span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;Hello World&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>下面这个是参考文档里的写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(<span class="string">&quot;/public&quot;</span>, express.static(__dirname + <span class="string">&#x27;/public&#x27;</span>));  <span class="comment">//访问路径写到一起了</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建服务端</span></span><br><span class="line">http.createServer(app).listen(<span class="string">&#x27;80&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;启动服务器完成&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>然后执行 <code>node app.js</code> 就可以启动服务器了. app.js 就是上面配置所保存的文件名.</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-14</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/node.js%20%E8%87%AA%E5%BB%BA%E7%AE%80%E6%98%93%E6%9C%8D%E5%8A%A1/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/codepen%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
+        codepen使用方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        嗯 现在基本用法都会了,如果忘记就看下面网站吧.有点复制了.以后遇到需要提醒的再写.
+哦 对了 现在快捷键已经和下面文章里写的不同了.如果想单独放大一个编辑栏,比如js的,就点右边的倒三角符号,然后能看到maxjsEditor 这个就是扩大编辑区域了.不过这个扩大了也没有jsbin用起来舒服.不过jsbin保存实在太恶心了.只是用Github的gist所以保存很烦.而且jsbin好像不能对外...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-11</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/codepen%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/JSFiddle%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">
+        JSFiddle使用说明
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        额.下面的文章写的超详细,真的不想再复制一遍了.这里就把菜单说明一下吧,因为这个总是糊涂.
+保存前保存后
+Save:
+将当前编辑的内容保存到服务器上，方便下次调用和分享。如果你只是想测试用的话是不需要保存的。
+Update：
+将当前的状态保存为一个版本。类似于版本控制，会在URL后面加上一个数字。之前的版本还会存在，方便后期调试。
+Fork:
+把现在的项目复制到一个新的文件当中。
+Base:...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-10</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/JSFiddle%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/three.js%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%B0%8F%E4%BE%8B%E5%AD%90/">
+        three.js学习及小例子
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        一个例子
+
+
+自己弄的小方块
+
+
+粒子波动
+
+
+参考文档three.js中文文档WebGL入门教程1 - 3D绘图基础知识
+学习文章three.js实现的波浪效果WebGL学习笔记-使用3D引擎threeJS实现星空粒子移动 第一篇就画一个球体吧Three.js基础探寻四——立方体、平面与球体
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-07</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/three.js%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%B0%8F%E4%BE%8B%E5%AD%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/%E5%89%8D%E7%AB%AF%E8%83%8C%E6%99%AF%E7%89%B9%E6%95%88%E6%80%BB%E7%BB%93%E4%B8%80%E6%B3%A2/">
+        前端背景特效总结一波
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p><a target="_blank" rel="noopener" href="https://alloyteam.github.io/curvejs/">魔幻线条curvejs</a> <code>这个感觉实用性不强</code></p>
+<p><a target="_blank" rel="noopener" href="https://www.zybuluo.com/mdeditor#">粒子特效插件particles-自己的文章</a><br><a target="_blank" rel="noopener" href="https://github.com/Barrior/JParticles">JParticles是多个特效的一个整合</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/kennethcachia/shape-shifter">shape-shifter 用粒子组成文字</a><br><a target="_blank" rel="noopener" href="http://www.kennethcachia.com/shape-shifter/">shape-shifter Demo</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/juliangarnier/anime">anime.js 动画库 </a> <code>其实跟上面的不同 但可以用这个做许多特效 而且例子不错</code></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/greensock/GreenSock-JS/">GreenSock-JS 动画库</a> <code>这个动画的例子真的很棒</code><br><a target="_blank" rel="noopener" href="https://greensock.com/examples-showcases">GreenSock-JS DEMO</a><br><a target="_blank" rel="noopener" href="http://www.w2bc.com/Article/9438">TweenMax的实例</a><br><a target="_blank" rel="noopener" href="http://www.jq22.com/code312">TweenMax的实例2</a></p>
+<blockquote>
+<p>看来TweenMax用来做菱形这个背景应该是很拿手的 有空可以看一下</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-03</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/%E5%89%8D%E7%AB%AF%E8%83%8C%E6%99%AF%E7%89%B9%E6%95%88%E6%80%BB%E7%BB%93%E4%B8%80%E6%B3%A2/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/particlesJS%20%E7%B2%92%E5%AD%90%E8%83%8C%E6%99%AF%E7%9A%84%E5%BA%93%20%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/">
+        particlesJS 粒子背景的库 使用简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <iframe width="100%" height="450" src="https://code.hcharts.cn/test123/rUMngq/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<p><strong>使用方法:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 动画容器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;particles-js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 库引入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;particles.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 配置及使用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;app.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css"><span class="comment">/*</span></span></span><br><span class="line"><span class="comment"><span class="css">这句很关键 如果不设置的话大小总会出现偏移的 不过按照官方的说应该是 #particles-js 也就是容器id 可不知道为啥是canvas类名</span></span></span><br><span class="line"><span class="comment"><span class="css">还有个问题就是我这个文件不知道从哪里来的,好像跟从官方复制的不一样,把Github上的复制到文件里就报错了</span></span></span><br><span class="line"><span class="comment"><span class="css">*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.particles-js-canvas-el</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="css">    <span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="css">    <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">    <span class="comment">/*z-index:-1;*/</span> <span class="comment">/*有的说这句必须加 要不会阻挡前面内容 不过我这次用的时候没出现 反而会多退后一层*/</span></span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意: 如果下次样式还出现偏移,就按原来官方的试试 使用#particles-js 写样式</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-02</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/particlesJS%20%E7%B2%92%E5%AD%90%E8%83%8C%E6%99%AF%E7%9A%84%E5%BA%93%20%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/05/%E6%89%93%E7%AE%97%E5%86%99%E4%B8%80%E4%B8%AAnodejs%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%20%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87/">
+        打算写一个nodejs发送请求 做的一些准备
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        如何从零开始写一个 Chrome 扩展？手把手教你开发chrome扩展一：开发Chrome Extenstion其实很简单node.js 操作Cookiesnodejs怎么设置cookie？Chrome浏览器查看cookie
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-05-19</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/05/%E6%89%93%E7%AE%97%E5%86%99%E4%B8%80%E4%B8%AAnodejs%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%20%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/04/%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90%E7%BD%91%E7%AB%99%E5%A4%A7%E6%94%B6%E9%9B%86/">
+        图片素材网站设计参考大收集
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        国外优秀图片:http://www.gettyimages.ca/
+酷站网老牌图片网http://www.zcool.com.cn/
+免费图片国外的 不错https://pixabay.com/
+超过389883 张免费照片和图片 (这次不知为啥打不开)cn.freeimages.com/
+提图网http://699pic.com/
+千图网http://www.58pic.com/
+昵图网w...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-04-26</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/04/%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90%E7%BD%91%E7%AB%99%E5%A4%A7%E6%94%B6%E9%9B%86/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/04/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%A4%A7%E6%80%BB%E7%BB%93/">
+        在线工具箱大总结
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        在线工具箱-大全在线工具箱开发工具箱前端网工具箱不知名网站工具箱
+
+RGB颜色查询对照表配色网配色表快速获取网站配色和字体
+
+大数据导航在线工具前端工具导航seeseed
+
+图像文件在线编辑工具在线应用图标生成工具gif制作与格式互换微信小编,产品,设计师工具箱PDF制作等工具箱API在线文档站在工具箱前端工具库程序员工具箱
+overapi.com  各种语言的API非常好查找有点像larv...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-04-13</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/04/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%A4%A7%E6%80%BB%E7%BB%93/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/js%E5%89%8D%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%A4%A7%E6%80%BB%E7%BB%93/">
+        js前端插件大总结
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        vue-markdown-loader
+vue插件 转换md文件成网页Github地址
+
+TheaterJS
+打字输入效果的插件Github地址
+
+cooking
+快速简易配置webpa 让你快速开始开发前端官方文档Github地址
+
+Layer
+layer是一款近年来备受青睐的web弹层组件官方网站
+
+SweetAlert2
+强大的纯Js模态消息对话框插件
+
+DEMO展示github地址
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-16</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/js%E5%89%8D%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%A4%A7%E6%80%BB%E7%BB%93/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/HTTP%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6(CORS)/">
+        HTTP访问控制(CORS)
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        使用 Access-Control-Max-Age 来缓存 CORS 配置使用withCredentials发送跨域请求凭据Access-Control-Allow-Origin与跨域HTTP访问控制(CORS)
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-05</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/HTTP%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6(CORS)/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/11/Chrome%20%E6%8E%A7%E5%88%B6%E5%8F%B0console%E7%9A%84%E7%94%A8%E6%B3%95/">
+        Chrome 控制台console的用法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>大家都有用过各种类型的浏览器，每种浏览器都有自己的特色，本人拙见，在我用过的浏览器当中，我是最喜欢Chrome的，因为它对于调试脚本及前端设计调试都有它比其它浏览器有过之而无不及的地方。可能大家对console.log会有一定的了解，心里难免会想调试的时候用alert不就行了，干嘛还要用console.log这么一长串的字符串来替代alert输出信息呢，下面我就介绍一些调试的入门技巧，让你爱上console.log</p>
+<p>先的简单介绍一下chrome的控制台，打开chrome浏览器，按f12就可以轻松的打开控制台<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5dsyh4j211y0k6q7k.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5dsyh4j211y0k6q7k.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-11-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/11/Chrome%20%E6%8E%A7%E5%88%B6%E5%8F%B0console%E7%9A%84%E7%94%A8%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/%E8%A7%A3%E5%86%B3%20Gravatar%20%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98/">
+        解决 Gravatar 被墙导致无法显示的问题
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Gravatar
+
+Gravatar是Globally Recognized Avatar的缩写,是gravatar推出的一项服务，意为“全球通用头像”。如果在Gravatar的服务器上放置了你自己的头像，那么在任何支持Gravatar的blog或者留言本上留言时，只要提供你与这个头像关联的email地址，就能够显示出你的Gravatar头像来
+
+
+使用未被墙的地址
+
+目前一共收集到 7 个...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-12</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/%E8%A7%A3%E5%86%B3%20Gravatar%20%E8%A2%AB%E5%A2%99%E5%AF%BC%E8%87%B4%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/webpace%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">
+        webpack 零基础教程
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <blockquote>
+<p>这套教材非常好 非常适合我.<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20367175">Webpack傻瓜式指南（一）</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20397902">Webpack傻瓜指南（二）开发和部署技巧</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20522487">Webpack傻瓜指南（三）和React配合开发</a></p>
+</blockquote>
+<p>不过有个小问题: 里面的方法不能加括号<code>app.appendChild(sub());</code> 这个应当这么写 <code>app.appendChild(sub);</code> 这个错误原因可能是他手误了 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//之前</span></span><br><span class="line"><span class="comment">//只需要 sub</span></span><br><span class="line"><span class="comment">//这个是CommonJS风格代码</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateText</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">&#x27;h2&#x27;</span>);</span><br><span class="line">	element.innerHTML = <span class="string">&quot;Hello hddddaa world&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> element;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = generateText();</span><br><span class="line"></span><br><span class="line">--------------------------------------------------------------------</span><br><span class="line"><span class="comment">//后面</span></span><br><span class="line"><span class="comment">// 所以需要sub()</span></span><br><span class="line"><span class="comment">//这个是ES6风格代码</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">&#x27;h2&#x27;</span>);</span><br><span class="line">  element.innerHTML = <span class="string">&quot;Hello h2 world hahaha&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> element;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-11</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/webpace%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/08/NPM%20%E5%AE%89%E8%A3%85%20%E5%8F%8A%20%E5%AE%89%E8%A3%85node-sass%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/">
+        NPM 安装 及 安装node-sass报错问题
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+这次安装是按照网上教程来的 不过好像有点老了 下次尝试新的  就是不用clone npm的git 因为看到现在下载的node.js里的node_modules里 就有了这个目录了 也许直接执行命令就好了
+
+
+下载node.js安装 如果没有git的话下载git安装 或者直接下载git://github.com/isaacs/npm.git  压缩包也可以
+git clone –recurs...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-08-01</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/08/NPM%20%E5%AE%89%E8%A3%85%20%E5%8F%8A%20%E5%AE%89%E8%A3%85node-sass%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/JSFiddle%20%E6%94%B9%E5%86%99%E5%B1%95%E7%A4%BA%E6%A0%87%E7%AD%BE/">
+        JSFiddle 改写展示标签
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言JSFiddle 是一个用于前端代码展示与分享的网站,可以在这里写代码并测试,同时写完后可以用连接分享在博客里展示给大家.在国内也有个类似网站 HCODE
+简单讲解  原有的标签顺序狠不好,JS文件在前显示结果在后.所以要改一下,把结果放在前面.  //jsfiddle.net/elick/s03Lk51x/embedded/result,js,html,css  其实很简单,embed...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-30</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/JSFiddle%20%E6%94%B9%E5%86%99%E5%B1%95%E7%A4%BA%E6%A0%87%E7%AD%BE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E6%A8%A1%E7%89%88%E5%A4%A7%E6%90%9C%E9%9B%86%20%E9%83%BD%E6%98%AF%E5%89%8D%E5%90%8E%E5%88%86%E7%A6%BB%E7%9A%84/">
+        后台管理模版大搜集 都是前后分离的
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p><a target="_blank" rel="noopener" href="https://github.com/gismall/vue-kit">Vue Start Kit:</a>  一个国内搞的用 Vue+Bulma UI 开发的后台模版.<del>不过我在本地测试时报错</del> 已经没问题了,必须用cnpm 安装node-sass才可以.<br><strong>Demo地址:</strong> <a target="_blank" rel="noopener" href="http://vue-kit.gismall.com/">http://vue-kit.gismall.com/</a><br><img src="https://github.com/gismall/vue-kit/raw/master/src/assets/img/screen-dashboard.png" class="lazyload" data-srcset="https://github.com/gismall/vue-kit/raw/master/src/assets/img/screen-dashboard.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E6%A8%A1%E7%89%88%E5%A4%A7%E6%90%9C%E9%9B%86%20%E9%83%BD%E6%98%AF%E5%89%8D%E5%90%8E%E5%88%86%E7%A6%BB%E7%9A%84/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/vue%20%E5%AD%A6%E4%B9%A0%E5%B0%8F%E4%BE%8B%E5%AD%90/">
+        vue 学习小例子
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="一些总结吧"><a href="#一些总结吧" class="headerlink" title="一些总结吧"></a>一些总结吧</h2><ul>
+<li><p><strong>父组件和子组件之间通信用广播:</strong> vue可以用多种方法实现组件间沟通,比如用一个属性,<br>不过这必须用上同步 <code>:test.sync</code> 要不然子组件的状态父组件不知道.<br>但是这有个问题就是不利于解耦,捆绑太紧密了不能复用了,所以还是用广播.<br>不过还是有个小小的疑问,如果两个同名事件怎么办呢?? 按文档里说是第一个,那可能是父组件加载子组件的顺序吧<br>我想可能是这样的,如果存在同名的话,那就得手动调整顺序,我感觉最好不要同名.</p>
+</li>
+<li><p><strong>v-bind:fields=”columns” 绑定解释:</strong> 有时用简写就比较懵,简单记忆下: 如果原有属性就是绑定属性到vue属性.如果不是自带属性,那就是组件自定义的.比如 <code>:fields=&quot;columns&quot; </code> 这里就是一个. fields 子组件 : columns 父组件. 反正等号后面都是当前组件的.可以看下面例子.</p>
+</li>
+</ul>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/vue%20%E5%AD%A6%E4%B9%A0%E5%B0%8F%E4%BE%8B%E5%AD%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/Atom%20%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+        Atom 使用小技巧
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Atom使用纪要Atom 编辑器快捷键列表汇总整理
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-23</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/Atom%20%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/%E9%9D%9E%E5%B8%B8%E7%81%AB%E7%9A%84js%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/">
+        非常火的js框架简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Vue.js: 轻量级js 数据驱动的组件，为现代化的 Web 界面而生.这类js框架都是应用比较大型功能类网站,有点类似webapp.或者单页面程序,比如我现在用的听歌浏览器插件. 他的做法是把某个功能开发成个组件,这个组件包括了模版,css,js,然后打包在一起.通过很多组件的组合,到达一个功能类网站,这样就非常的灵活了.这个主要针对pc端.
+
+参考文档官方网站对比其它框架Vue.js：...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/%E9%9D%9E%E5%B8%B8%E7%81%AB%E7%9A%84js%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/%E8%A7%A3%E5%86%B3%E8%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/">
+        解决老浏览器兼容问题
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言 现在框架都放弃了IE9以下的浏览器,不过中国的环境大家都知道的,没办法还是尽量满足吧.
+简介禁用IE兼容模式
+1234&lt;head&gt;  &lt;meta charset=&quot;utf-8&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;.....
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-14</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/%E8%A7%A3%E5%86%B3%E8%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/CSS%E7%9A%84float%E6%AD%A3%E7%A1%AE%E7%90%86%E8%A7%A3%E5%8F%8Aoverflowhidden%20%E5%B1%9E%E6%80%A7%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A/">
+        CSS的float正确理解及overflowhidden 属性详细解释
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        简单说明float原来一直以为float是平面的,浮动就是左右偏移在平面上运动,其实是错的,浮动是立体的,记得用火狐浏览器的debug工具,有一项就是能看到立体的样子.所以当设置浮动后,这个层的宽高就不在瘦父层级的限制了,因为他是立体的,他实际是飘在父层级上.所以需要清浮动才可以让他继续接受父层级的控制,这里就需要overflow:hidden
+overflow:hidden所以说 over...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-03</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/CSS%E7%9A%84float%E6%AD%A3%E7%A1%AE%E7%90%86%E8%A7%A3%E5%8F%8Aoverflowhidden%20%E5%B1%9E%E6%80%A7%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/margin-top%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3/">
+        margin-top失效的解决
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天遇到个很bug的问题.在chrome里当窗口很小的时候,一个div就会偏移,但是当用鼠标调正窗口,又会变好.而且只有在chrome下有这个问题,最后确认原来是margin-top失效的原因.<strong>再次说明:</strong> 上面那个问题,并没有因使用<code>overflow:hiden</code>而解决.只是放在火狐里这个bug不存在了.后来是通过删除了子容器的 <code>float:left</code> 解决的.但到底是哪里冲突还是不明白.但下面这些方法解决一些浮动漂移是有用的.</p>
+<h2 id="问题的解决"><a href="#问题的解决" class="headerlink" title="问题的解决"></a>问题的解决</h2><p>正统说法:</p>
+<blockquote>
+<p>1：“在CSS2.1中，水平的margin不会被折叠；垂直margin可能在一些盒模型中被折叠…”<br>2： 当第一个层浮动，而第二个没浮动层的margin会被压缩，详见–浮动元素后非浮动元素的margin的处理。</p>
+</blockquote>
+<p>一 如果是两个容器并列,一般出现问题,是因为第一个容器加了浮动,第二个没有加 所以造成第二个margin出问题.解决办法是在第二个容器前增加一个<code>&lt;divstyle=&quot;clear:both;&quot;&gt;&lt;/div&gt;</code>.像下面这样,或者给box2也增加float;</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-30</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/margin-top%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/JavaSript%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83%20%20AMD%E8%A7%84%E8%8C%83%E4%B8%8ECMD%E8%A7%84%E8%8C%83%E4%BB%8B%E7%BB%8D%20/">
+        JavaSript模块规范 AMD规范与CMD规范介绍
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+结合一些第三方模块构建工具，如CommonJS、RequireJS或者SeaJs，可以轻松实现代码的模块化。
+
+也就是说 这三个工具是组合各个组件的工具,最后打包成最后代码
+CommonJS 规范: 是同步加载模块AMD 规范: AMD（异步模块定义）是为浏览器环境设计的，因为 CommonJS 模块系统是同步加载的，当前浏览器环境还没有准备好同步加载模块的条件。
+前言 JavaSript...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/JavaSript%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83%20%20AMD%E8%A7%84%E8%8C%83%E4%B8%8ECMD%E8%A7%84%E8%8C%83%E4%BB%8B%E7%BB%8D%20/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/JS%20void%200%20%E8%A7%A3%E6%9E%90/">
+        JS void 0 解析
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言  在修改kod时遇到这个,不太了解作用于是查了下资料,详细看这里 JS魔法堂：从void 0 === undefined说起
+简单说下  在js函数里 return void 0 表示此函数无返回.  还有就是 undefined在JavaScript中并不属于保留字/关键字，因此在IE5.5~8中我们可以将其当作变量那样对其赋值（IE9+及其他现代浏览器中赋值给undefined将无...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/JS%20void%200%20%E8%A7%A3%E6%9E%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/JavaScript%E4%B8%AD%E7%9A%84%E9%80%97%E5%8F%B7/">
+        JavaScript中的逗号
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言  开发时突然遇到js语句里很多逗号,一下子搞蒙了.才想起来,没有仔细研究过这个东西.
+简单说明
+直白的说,没有return时,返回最左边结果,有return时返回最右边结果,当return最后一个参数为void 0,将只执行操作无返回
+
+《javascript权威指南(6版)》说逗号运算符（,）：先计算左边的操作数，然后计算右边的操作数，最后返回右操作数的值。比如 var a=(1+1...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-22</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/JavaScript%E4%B8%AD%E7%9A%84%E9%80%97%E5%8F%B7/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/Sea.js%20%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/">
+        Sea.js 模块开发插件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  现在大部分前端开发,都用npm或者bower.因为这样不仅升级组件方便,而且兼容性也能得到保障.但是对于简单开发来说,过于庞大的组件也是比较麻烦的.所以这个Sea.js还是有一定存在价值的.</p>
+<p>  我也是在KodExplorer里发现这个插件的.没有太多使用,所以这里就点一下,以便以后记住.如果需要用就看官方吧,里面文档很详细的.</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-02</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/Sea.js%20%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/05/js%20%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%20FileAPI/">
+        js 操作文件 FileAPI
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>[TOC]</p>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址:"></a>项目地址:</h2><p><a target="_blank" rel="noopener" href="https://github.com/mailru/FileAPI">https://github.com/mailru/FileAPI</a></p>
+<hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>原本打算是操作本地文件,如打开文件,新建文件,保存文件.但好像js是无法坐到这些的.
+只能通过一些特别的手段达到一定的效果而已.
+这个组件就是搜索时找到的,主要是通过上传时得到文件一些信息,他主要用作图片上传,
+文件上传时获得相关内容.而且他还能操作摄像头用于头像.
+并且他还有个jquery的插件,主要用处也是上传头像时的相关操作.
+</code></pre>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-05-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/05/js%20%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%20FileAPI/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/05/Editor.md%20Examples%20%E4%B8%8D%E9%94%99%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91MD%E6%96%87%E4%BB%B6%E5%B7%A5%E5%85%B7/">
+        Editor.md Examples 不错的在线编辑MD文件工具
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        项目主页:https://pandao.github.io/editor.md/
+
+先简单说两点:
+
+可以不借助php环境使用 因为主要基于js的
+但是有些插件却是必须使用php环境,比如 emoji,preformatted-text 这两个, 一个是标签 一个html图形
+目前来说他只能在线编辑,却不能保存和打开文件 这个我想加上
+
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-05-30</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/05/Editor.md%20Examples%20%E4%B8%8D%E9%94%99%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91MD%E6%96%87%E4%BB%B6%E5%B7%A5%E5%85%B7/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/05/bower%20%E7%AE%80%E4%BB%8B/">
+        bower 简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        详细内容 请参考这篇文章Bower的简单使用教程
+
+bower init 生成 bower.json 这个是项目安装的组件包bower --save XXX  这是本项目安装组件 并记录在bower.json
+bowerrc文件简单说明
+
+directory:是值第三方依赖包下载所在的位置proxy：在很多公司，为了保护公司内网的安全性，是需要配置这个代理的。所以这里一般要配置公司的代理ti...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-05-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/05/bower%20%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/05/bootstrap%20%E8%AF%A5%E6%AD%BB%E7%9A%84IE%E5%85%BC%E5%AE%B9/">
+        bootstrap 该死的IE兼容
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前面碎碎念真是不搞页面,不知道弄兼容如此的恶心.当然你一板一眼的写,能避免很多的麻烦,可是利用框架,插件来做,这是烦的要死了.
+这次利用了 yoesman+gulp+bower 快速搭建了个项目 其中还用到swiper插件 这个插件 3代主要面对手机 可是有些新特性 2代还没有 真是麻烦 用了3代 兼容性就有麻烦了.
+基本解决问题bower里有个很好的插件 bootstrap-ie8  bo...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-05-17</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/05/bootstrap%20%E8%AF%A5%E6%AD%BB%E7%9A%84IE%E5%85%BC%E5%AE%B9/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/05/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B/">
+        前端开发环境简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这篇文章 只是简单介绍 几个框架的主要作用,并不涉及详细用法.
+npm 老大中的老大npm 不用多说什么 这是一切基础中的基础
+yeoman 快速构建项目目录其实很多项目开发的时候,目录结构及需要的插件都有一定规律.所以yeoman是解放懒人的又一利器.他的主要作用就是,当你开始一个新项目时不用自己再手动各个目录和安装那些插件,一切都为你准备好,只要一个命令 yo找到你要开发项目,接下来只需...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-05-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/05/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+  
+
+
+    
+  
+</div>
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    
+    
+      
+        <div class='copyright'>
+        <p>Copyright © 2020 <a href="/">黑石博客</a></p>
+
+        </div>
+      
+    
+      
+        
+          <div><div><p>本站使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://volantis.js.org/" data-pjax-state="">Volantis</a> 作为主题 | 由 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/" data-pjax-state="">Hexo</a> 强力驱动</p> </div></div>
+        
+      
+    
+    
+  </footer>
+
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+
+  <script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+    pjax_scrollrebeal();
+  });
+</script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "填写邮箱会收到回复提示！粘贴图片可直接上传~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "xxxxxxxxxxx",
+      appKey: "xxxxxxxxxxxxxxxxx",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+      master: '[fc2c9b067f65c9e2d7057ba797f7cfca]',
+      friends: '[104e5bfa98048a2dac66f28ca4d4d846,e399c5e8f4b4b8b86fc88e2b5bd04497,32d39099d6da89788fe3827cb90b1eb7,a5c27d1df34fcd4d8195e7e7d16675d4,09c82fd631755bf5dbb04b4189225637,b548550ae129b82aa01b60e18ccbf141,6a565e6c47127afdd40d5d46089db2c5,4a713ec085a4431f15a8da0942656713&#34;,58bc3a8cecadf26a676e1b8f217698bc,aaf4fe5dd76d0a1390cbd08cdb16c05f,0a106ca9ec8d5e8a2d14f99e5b8bd863,3ecc56d90844b70e49d9f8a61e9cd98c,8a6f99e8ce4af26a93f20c0cbab8a186,5392ad0ec563aa56f6faf597ef966762,6bcf44de7033a4451f38d576fb6e6822,135ae111f8fcfeecc1ea1f06fde149ab]'
+    })
+  }
+
+  function newcomment() {
+
+function queryLeanCloud(k) {
+  let root = this;
+  let len = arguments.length;
+  if (len == 1) {
+    let notExist = new AV.Query("Comment");
+    notExist.doesNotExist('rid');
+    let isEmpty = new AV.Query("Comment");
+    isEmpty.equalTo('rid', '');
+    let q = AV.Query.or(notExist, isEmpty);
+    if (k === '*') q.exists('url');
+    else q.equalTo('url', decodeURI(k));
+    q.addDescending('createdAt');
+    q.addDescending('insertedAt');
+    return q;
+  } else {
+    let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+    let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+    return AV.Query.doCloudQuery(cql)
+  }
+}
+var valine = new Valine({
+      el: '#valine_container_ba',
+      notify: false,
+      verify: false,
+      app_id: 'xxxxxxxxxxx',
+      app_key: 'xxxxxxxxxxxxxxxxx',
+      placeholder: '发表您的意见，让我们一起交流，共同提高吧...',
+      serverURLs: 'https://xxxx'
+});
+
+//判断博主，heson改为自己的昵称
+function bozhu(e){
+    if (e == "heson"){
+        nick = e + '[博主]'
+        return nick;
+    } else {
+      return e
+    }
+}
+
+//判断网址
+function wangzhi(e){
+    http = e.slice(0,4)
+    https = e.slice(0,5)
+    if (http == "http" || https == "https" ){
+         return e
+    } else if (e == "" || e == null || e == undefined){
+      return e
+    } else {
+      e = 'http://'+ e
+      return e
+    }
+}
+
+
+
+
+//查询评论
+valine.Q('*').limit(7).find().then(function (comments) {
+  var hotComments = $("#hot-comments");
+  for (var i = 0; i < comments.length; i++) {
+    if (i === 0) {
+      console.log(comments[0]);
+    }
+    var nick = bozhu(comments[i]._serverData.nick);
+    var content = comments[i]._serverData.comment;
+    var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0, 50);
+    var url = comments[i]._serverData.url;
+    var link = wangzhi(comments[i]._serverData.link);
+    var updatedAt = timeago(comments[i].updatedAt);
+    var commentId = '#' + comments[i].id;
+    hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;发表于' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+  }
+});
+};
+
+
+
+  $(function () {
+    pjax_valine();
+    newcomment();
+  });
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'C1qWqsDatomXVctTafBuJADI-gzGzoHsz',
+    app_key: 'J4CujIoElz1Wo7yLUbY4SOO5',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://elickzhao.github.io' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://elickzhao.github.io' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://elickzhao.github.io' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/bb/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+        pjax_fancybox();
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+          newcomment();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,5463 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/1.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+      <meta name="robots" content="index,follow">
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>Tag: js - elickzhao&#39;s Blog</title>
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="elickzhao's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
+
+  
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" media="print" onload="this.media='all'">
+  
+
+
+  <!-- import link -->
+  
+
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+    <!-- 脚本懒加载函数 -->
+    <script>
+      function loadScript(src, cb) {
+        var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+        var script = document.createElement('script');
+        script.setAttribute('type','text/javascript');
+        if (cb) script.onload = cb;
+        script.setAttribute('src', src);
+        HEAD.appendChild(script);
+      }
+       </script>
+    
+</head>
+
+<body>
+  <header class="l_header auto shadow floatable blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://picup.heson10.com/img/upyun/hesonlogoyasuo.gif'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fal fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-search fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fal fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guestbook/
+                  
+                  
+                  
+                    id="guestbook"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fal fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fal fa-microphone-alt fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://box.heson10.com
+                  
+                  
+                  
+                    id="https:boxheson10com"
+                  >
+                  <i class='fal fa-heart fa-fw'></i>宝盒
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fal fa-paper-plane fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://yf.heson10.com/
+                  
+                  
+                  
+                    id="https:yfheson10com"
+                  >
+                  <i class='fal fa-donate fa-fw'></i>要饭
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://tongji.baidu.com/web/10000238090/overview/index?siteId=15706250
+                  
+                  
+                  
+                    id="https:tongjibaiducomweb10000238090overviewindex?siteId=15706250"
+                  >
+                  <i class='fal fa-industry fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.heson10.com/atom.xml
+                  
+                  
+                  
+                    id="https:wwwheson10comatomxml"
+                  >
+                  <i class='fal fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://leancloud.heson10.com
+                  
+                  
+                  
+                    id="https:leancloudheson10com"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fal fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="搜索..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fal fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fal fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-search fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fal fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guestbook/
+                  
+                  
+                  
+                    id="guestbook"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fal fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fal fa-microphone-alt fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://box.heson10.com
+                  
+                  
+                  
+                    id="https:boxheson10com"
+                  >
+                  <i class='fal fa-heart fa-fw'></i>宝盒
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fal fa-paper-plane fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://yf.heson10.com/
+                  
+                  
+                  
+                    id="https:yfheson10com"
+                  >
+                  <i class='fal fa-donate fa-fw'></i>要饭
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://tongji.baidu.com/web/10000238090/overview/index?siteId=15706250
+                  
+                  
+                  
+                    id="https:tongjibaiducomweb10000238090overviewindex?siteId=15706250"
+                  >
+                  <i class='fal fa-industry fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.heson10.com/atom.xml
+                  
+                  
+                  
+                    id="https:wwwheson10comatomxml"
+                  >
+                  <i class='fal fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://leancloud.heson10.com
+                  
+                  
+                  
+                    id="https:leancloudheson10com"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper  featured' style="display: none;">
+        <canvas id="header_canvas" style="position:absolute;bottom:0;z-index: 1;" width="900" height="350"></canvas>
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://picup.heson10.com/img/upyun/home_top_bg.webp"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+      <img no-lazy class='logo' src='https://picup.heson10.com/img/upyun/heson10logo5.png'/>
+    
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              id="home">
+              <i class='fad fa-home fa-fw'></i><p>首页</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fad fa-archive fa-fw'></i><p>归档</p>
+            </a>
+          
+            <a href="/bb/"
+              
+              
+              id="bb">
+              <i class='fad fa-microphone-alt fa-fw'></i><p>说说</p>
+            </a>
+          
+            <a href="/links/"
+              
+              
+              id="links">
+              <i class='fad fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://box.heson10.com"
+              
+              
+              id="https:boxheson10com">
+              <i class='fad fa-heart fa-fw'></i><p>宝盒</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://yf.heson10.com/"
+              
+              
+              id="https:yfheson10com">
+              <i class='fad fa-donate fa-fw'></i><p>要饭</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://travellings.now.sh/"
+              
+              
+              id="https:travellingsnowsh">
+              <i class='fad fa-paper-plane fa-fw'></i><p>开往</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">false</div>
+  <div id="pjax-pageTitle"></div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+
+<aside class='l_side'>
+  <div style="margin-bottom: 16px;border-radius: 8px;" class='shadow floatable widget_author desktop'>
+    <div id="zuozhebg" class="newauthor"
+      style="background: url(https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png) center center no-repeat;background-size:cover">
+    </div>
+    <div class="relive_widget_v3">
+      <div class="box-author-info">
+        <div class="author-face">
+          <a href="/about" target="_blank" rel="nofollow" title="关于elickzhao">
+            <img no-lazy alt="" src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png"
+              class="avatar avatar-200 photo" height="200" width="200"> </a>
+        </div>
+        <div class="author-name">elickzhao</div>
+        <div id="author-one" class="author-one">
+          <script>
+            var binft = function (r) {
+              function t() {
+                return b[Math.floor(Math.random() * b.length)]
+              }
+              function e() {
+                return String.fromCharCode(94 * Math.random() + 33)
+              }
+              function n(r) {
+                for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                  var l = document.createElement("span");
+                  l.textContent = e(), l.style.color = t(), n.appendChild(l)
+                }
+                return n
+              }
+              function i() {
+                var t = o[c.skillI];
+                c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+              }
+              var l = "",
+                o = ["人生在勤，不索何获", "日日待明日,万事成蹉跎", "丈夫志四海，万里犹比邻", "还在看这里吗？", "能不能别看了？", "文章更精彩...."].map(function (r) {
+                  return r + ""
+                }),
+                a = 2,
+                g = 1,
+                s = 5,
+                d = 75,
+                b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+                c = {
+                  text: "",
+                  prefixP: -s,
+                  skillI: 0,
+                  skillP: 0,
+                  direction: "forward",
+                  delay: a,
+                  step: g
+                };
+              i()
+            };
+            binft(document.getElementById('author-one'));
+          </script>
+
+
+        </div>
+        <div class="site-state-wrap motion-element">
+          <nav class="site-state">
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+
+                <span class="site-state-item-count">268</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+  
+
+  
+  
+    
+    
+  
+
+  <section class="widget category shadow floatable desktop">
+    
+  <header>
+    
+      <a href='/categories/'><i class="fal fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/php%E5%BC%80%E5%8F%91/" href="/categories/php%E5%BC%80%E5%8F%91/"
+            id="categoriesphpE5BC80E58F91"
+            ><div class='name'>php开发</div><div class='badge'>(24)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"
+            id="categoriesE5898DE7ABAFE68A80E69CAF"
+            ><div class='name'>前端技术</div><div class='badge'>(39)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"
+            id="categoriesE69C8DE58AA1E599A8E79BB8E585B3E68A80E69CAF"
+            ><div class='name'>服务器相关技术</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"
+            id="categoriesE69C8DE58AA1E599A8E7ABAF"
+            ><div class='name'>服务器端</div><div class='badge'>(11)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%B5%8B%E8%AF%95/" href="/categories/%E6%B5%8B%E8%AF%95/"
+            id="categoriesE6B58BE8AF95"
+            ><div class='name'>测试</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+
+  
+    
+    
+
+<section class="widget text shadow floatable desktop">
+  
+  <header>
+    
+      <i class="fal fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <div id="hot-comments"></div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fal fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>268 篇</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>已运行时间：</div>
+          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
+        </div>
+        <script>
+          var BirthDay = new Date(new Date('2020/07/06'));
+          var today = new Date();
+          var timeold = (today.getTime() - BirthDay.getTime());
+          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
+          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
+        </script>
+      
+
+
+      
+        <div class="webinfo-item">
+          <div>本站总字数：</div>
+          <div>121.4k 字</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站访客数：</div>
+          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站总访问量：</div>
+          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>最后活动时间：</div>
+          
+            <div id="last-update" style="display: none;">Fri Sep 10 2021 00:35:16 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-09-10 日</div>
+          
+        </div>
+        
+        <script>
+          function timeago(dateTimeStamp) {
+              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
+              var hour = minute * 60;
+              var day = hour * 24;
+              var week = day * 7;
+              var month = day * 30;
+              var now = new Date().getTime(); //获取当前时间毫秒
+              var diffValue = now - dateTimeStamp; //时间差
+              if (diffValue < 0) {
+                  return;
+              }
+              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
+              var hourC = diffValue / hour;
+              var dayC = diffValue / day;
+              var weekC = diffValue / week;
+              var monthC = diffValue / month;
+              if (monthC >= 1 && monthC <= 3) {
+                  result = " " + parseInt(monthC) + " 月前"
+              } else if (weekC >= 1 && weekC <= 3) {
+                  result = " " + parseInt(weekC) + " 周前"
+              } else if (dayC >= 1 && dayC <= 6) {
+                  result = " " + parseInt(dayC) + " 天前"
+              } else if (hourC >= 1 && hourC <= 23) {
+                  result = " " + parseInt(hourC) + " 小时前"
+              } else if (minC >= 1 && minC <= 59) {
+                  result = " " + parseInt(minC) + " 分钟前"
+              } else if (diffValue >= 0 && diffValue <= minute) {
+                  result = "刚刚"
+              } else {
+                  var datetime = new Date();
+                  datetime.setTime(dateTimeStamp);
+                  var Nyear = datetime.getFullYear();
+                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+                  result = Nyear + "-" + Nmonth + "-" + Ndate
+              }
+              return result;
+          }
+          var lastUpDate = document.getElementById('last-update').innerHTML;
+          try {
+            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
+          } catch (error) {
+            document.getElementById('last-update-show').innerHTML = '2021-09-10 日';
+          }
+        </script>
+        
+      
+    </div>
+  </div>
+</section>
+
+  
+
+
+</aside>
+
+<div class='l_main'>
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/02/layui%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81%20%E8%87%AA%E5%AE%9A%E4%B9%89%E9%AA%8C%E8%AF%81%20select%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95/">
+        layui表单验证 自定义验证 select验证方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>这个东西还真是浪费了不少时间,网上一些文章写的吧 不知道是原来版本那么做 还是以讹传讹 反正都不太好用<br>只能大致参考下  好了 进入整体</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--  注意这里 lay-filter 是监听时 或者其他操作时用的 选取用的字段 类似jq的 $(&#x27;#id&#x27;)--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--  注意这里 lay-verify 是你自定义的验证规则名称 这个是必须 如果是简单验证 就写上预设值 就好了 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;city&quot;</span> <span class="attr">lay-filter</span>=<span class="string">&quot;city&quot;</span> <span class="attr">lay-verify</span>=<span class="string">&quot;city-verify&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;010&quot;</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;021&quot;</span> <span class="attr">disabled</span>&gt;</span>上海（禁用效果）<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;0571&quot;</span> <span class="attr">selected</span>&gt;</span>杭州<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span>    </span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 可以是submit提交按钮 也可以是普通按钮 但是呢 必须加上 lay-submit lay-filter=&quot;*&quot; 其中 lay-submit 也是不可少的  要不就检测不到提交事件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">name</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">lay-submit</span> <span class="attr">lay-filter</span>=<span class="string">&quot;*&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="comment">//第一步 写自定义规则</span></span></span><br><span class="line"><span class="javascript">form.verify(&#123;</span></span><br><span class="line"><span class="javascript">    <span class="attr">cateid</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (value == <span class="string">&quot;&quot;</span>) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> <span class="string">&quot;必须选择一级栏目&quot;</span>;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="attr">contact</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (value.length &lt; <span class="number">4</span>) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> <span class="string">&#x27;内容请输入至少4个字符&#x27;</span>;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="attr">phone</span>: [<span class="regexp">/^1[3|4|5|7|8]\d&#123;9&#125;$/</span>, <span class="string">&#x27;手机必须11位，只能是数字！&#x27;</span>],</span></span><br><span class="line"><span class="javascript">    <span class="attr">email</span>: [<span class="regexp">/^[a-z0-9._%-]+@([a-z0-9-]+\.)+[a-z]&#123;2,4&#125;$|^1[3|4|5|7|8]\d&#123;9&#125;$/</span>, <span class="string">&#x27;邮箱格式不对&#x27;</span>]</span></span><br><span class="line"><span class="javascript">&#125;);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="comment">//第二部 提交监听事件</span></span></span><br><span class="line"><span class="javascript"><span class="comment">//只有这样 验证才会执行  submit(*) 就是提交按钮的 lay-filter=&quot;*&quot; 这个可以自行更改</span></span></span><br><span class="line"><span class="javascript"><span class="comment">//其实回调函数 只是有其他操作要做的时候用的 如果只是验证的话 第二个参数可以不写</span></span></span><br><span class="line"><span class="javascript">form.on(<span class="string">&#x27;submit(*)&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    params = data.field;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//alert(JSON.stringify(params))</span></span></span><br><span class="line"><span class="javascript">    submit($, params);  <span class="comment">//这个是提交按钮 当验证通过后就提交</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> <span class="literal">false</span>;</span></span><br><span class="line"><span class="javascript">&#125;)</span></span><br><span class="line"><span class="javascript"><span class="comment">//其实可以直接这么用</span></span></span><br><span class="line"><span class="javascript"><span class="comment">//form.on(&#x27;submit(*)&#x27;);</span></span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-02-04</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/02/layui%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81%20%E8%87%AA%E5%AE%9A%E4%B9%89%E9%AA%8C%E8%AF%81%20select%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/02/SyntaxError%20Unexpected%20token%20%E6%B3%A8%E6%84%8Fchrome%E6%8F%92%E4%BB%B6/">
+        SyntaxError-> Unexpected token "{" 注意chrome插件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天遇到个奇葩问题,有个js报错 结果出现位置居然在 &lt;!DOCTYPE HTML&gt; 这里.
+真是凌乱了.找了半天,把整个页面都删除了,还是报错了. 感觉可能并不是自己的问题.
+拿出火狐再看页面就没有错了. 后来发现居然是chrome的错 而且莫名的今天就坏了 前两天都没问题啊
+可能他们这个插件更新 然后浏览器 自己就更新吧 总之就是插件的问题 
+把文件名扔到百度 根本查不出是啥...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-02-03</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/02/SyntaxError%20Unexpected%20token%20%E6%B3%A8%E6%84%8Fchrome%E6%8F%92%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/02/jquery%20%E6%BB%9A%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE/">
+        jquery 滚动到指定元素位置
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天做表单验证,验证后想要跳到错误位置.原本打算用 focus() 可是用了 layui 根本定位不到这也是 layui 一个很大的弊端.  于是想到根据元素来跳转.
+1234567$(&#x27;html, body&#x27;).scrollTop(100);  //跳到指定位置   前面的参数也可以是id//动画跳转$(&#x27;html, body&#x27;).animate(&...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-02-02</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/02/jquery%20%E6%BB%9A%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/Echarts%20%E5%A4%9A%E8%A1%A8%E6%A0%B9%E6%8D%AE%E7%AA%97%E5%8F%A3%E5%A4%A7%E5%B0%8F%E8%87%AA%E5%8A%A8%E7%BC%A9%E6%94%BE/">
+        Echarts 多表根据窗口大小自动缩放
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        当只有一个图表的时候很简单只要这么写就搞定了
+1window.onresize = orderCharts.myChart.resize;
+
+当多个图表的时候,就会出现只有一个图表能自动缩放,这时就要这么写了.
+123456window.onresize = function () &#123;    orderCharts.myChart.resize(); //图表自适应窗口大小    ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-30</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/Echarts%20%E5%A4%9A%E8%A1%A8%E6%A0%B9%E6%8D%AE%E7%AA%97%E5%8F%A3%E5%A4%A7%E5%B0%8F%E8%87%AA%E5%8A%A8%E7%BC%A9%E6%94%BE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/jquery%20%E8%8E%B7%E5%8F%96onclick()%20%E5%BD%93%E5%89%8D%E7%82%B9%E5%87%BB%E5%AF%B9%E8%B1%A1/">
+        jquery 获取onclick() 当前点击对象
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        必须传入this. 而且在方法内使用时 记住不能用this这样就可以使用$获取当前对象了
+```js今日 
+function t(obj) {    changeGroupBtn(obj);    option.xAxis.data = dayArray;    option.series[0].data = getDate(getUrl, ‘today’);    myChart.setO...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-29</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/jquery%20%E8%8E%B7%E5%8F%96onclick()%20%E5%BD%93%E5%89%8D%E7%82%B9%E5%87%BB%E5%AF%B9%E8%B1%A1/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/%E9%80%9A%E8%BF%87ajax%E7%BB%99js%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC%E9%97%AE%E9%A2%98/">
+        通过ajax给js成员变量赋值问题
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        12345678910111213141516function getDate(url) &#123;    var result;    $.ajax(&#123;        type: &#x27;GET&#x27;,        async :false,//取消异步 否则result赋值失败         url: &#x27;/index.php/Admin/Page/or...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-28</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/%E9%80%9A%E8%BF%87ajax%E7%BB%99js%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC%E9%97%AE%E9%A2%98/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/momentjs%20%E8%87%AA%E5%B7%B1%E4%BD%BF%E7%94%A8%E4%BE%8B%E5%AD%90/">
+        momentjs 自己使用例子
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        下面例子是我用到的一些方法,其他的看文档吧 全的很这里主要说下怎么使用中文显示按下面引入 而且顺序不能变 还有就是注意moment引入的js 不是原版那个
+12https://cdn.bootcss.com/moment.js/2.20.1/moment-with-locales.min.jshttps://cdn.bootcss.com/moment.js/2.20.1/locale/zh...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-21</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/momentjs%20%E8%87%AA%E5%B7%B1%E4%BD%BF%E7%94%A8%E4%BE%8B%E5%AD%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/ECharts%20x%E5%9D%90%E6%A0%87%E7%B3%BB%E4%BD%BF%E7%94%A8%20time%20%E5%BD%A2%E5%BC%8F/">
+        ECharts x坐标系使用 time 形式
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        xAxis.type string[ default: ‘category’ ]坐标轴类型。可选：‘value’ 数值轴，适用于连续数据。‘category’ 类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据。‘time’ 时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-14</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/ECharts%20x%E5%9D%90%E6%A0%87%E7%B3%BB%E4%BD%BF%E7%94%A8%20time%20%E5%BD%A2%E5%BC%8F/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2018/01/js%E7%9A%84Object.assign()%E5%A4%8D%E5%88%B6%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/">
+        js的Object.assign()复制属性详解
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="简单描述"><a href="#简单描述" class="headerlink" title="简单描述"></a>简单描述</h2><p><strong>Object.assign()</strong> 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.assign(target, ...sources)</span><br><span class="line"><span class="comment">//target 目标对象</span></span><br><span class="line"><span class="comment">//...sources 源对象</span></span><br><span class="line"><span class="comment">//返回 目标对象</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>描述:</strong></p>
+<blockquote>
+<p>如果目标对象中的属性具有相同的键，则属性将被源中的属性覆盖。后来的源的属性将类似地覆盖早先的属性。</p>
+</blockquote>
+<blockquote>
+<p>Object.assign 方法只会拷贝源对象自身的并且可枚举的属性到目标对象。该方法使用源对象的[[Get]]和目标对象的[[Set]]，所以它会调用相关 getter 和 setter。因此，它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含getter，这可能使其不适合将新属性合并到原型中。为了将属性定义（包括其可枚举性）复制到原型，应使用Object.getOwnPropertyDescriptor()和Object.defineProperty() 。</p>
+</blockquote>
+<blockquote>
+<p>String类型和 Symbol 类型的属性都会被拷贝。</p>
+</blockquote>
+<blockquote>
+<p>在出现错误的情况下，例如，如果属性不可写，会引发TypeError，如果在引发错误之前添加了任何属性，则可以更改target对象。</p>
+</blockquote>
+<blockquote>
+<p>注意，Object.assign 会跳过那些值为 null 或 undefined 的源对象。</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2018-01-08</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2018/01/js%E7%9A%84Object.assign()%E5%A4%8D%E5%88%B6%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/12/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9D%97/">
+        小程序使用模块
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p><strong>模块定义</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// common.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHello</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span> !`</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayGoodbye</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Goodbye <span class="subst">$&#123;name&#125;</span> !`</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//需要用module.exports暴露出来</span></span><br><span class="line"><span class="built_in">module</span>.exports.sayHello = sayHello</span><br></pre></td></tr></table></figure>
+
+<p><strong>模块使用</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> common = <span class="built_in">require</span>(<span class="string">&#x27;common.js&#x27;</span>)</span><br><span class="line">Page(&#123;</span><br><span class="line">  <span class="attr">helloMINA</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    common.sayHello(<span class="string">&#x27;MINA&#x27;</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">goodbyeMINA</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    common.sayGoodbye(<span class="string">&#x27;MINA&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>以上是最简单的使用方法.这个方法有个好处就是那个函数知道出自那里.<br>下面的方法更现代一些,不过有个问题是,方法出自那里不会那么清晰.所以用的时候看着办吧.</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-12-31</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/12/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9D%97/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/09/%E5%89%8D%E7%AB%AF%E5%9B%BE%E6%A0%87%E6%8F%92%E4%BB%B6%E6%80%BB%E7%BB%93/">
+        前端图标插件总结
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+
+
+名称
+说明
+
+
+
+ECharts 
+百度出品,免费且十分强大,各种图表都有,唯一可能造成的问题就是因为支持的太多可能体积大些
+
+
+sChart.js 
+简单且易用,基本图表都有了.不过现在好像改名了叫chartjs中文文档,这个可以使用npm方式安装
+
+
+Highcharts
+这个的确很吊,但是呢收费,虽然说个人用户免费,但还不如用百度的Echarts比较安心
+
+
+EasyReport...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-09-01</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/09/%E5%89%8D%E7%AB%AF%E5%9B%BE%E6%A0%87%E6%8F%92%E4%BB%B6%E6%80%BB%E7%BB%93/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/vue%E4%B8%80%E4%BA%9B%E7%89%B9%E5%88%AB%E6%9C%89%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/">
+        vue一些特别有用的插件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="Vue相关网站参考："><a href="#Vue相关网站参考：" class="headerlink" title="Vue相关网站参考："></a>Vue相关网站参考：</h2><p>　　<strong>Vue中文帮助网站</strong>：<a target="_blank" rel="noopener" href="http://cn.vuejs.org/">http://cn.vuejs.org/</a></p>
+<p>　　<strong>Vue github开源地址</strong>：<a target="_blank" rel="noopener" href="https://github.com/vuejs/vue">https://github.com/vuejs/vue</a></p>
+<p>　　<strong>Vue.js专业中文社区</strong>：<a target="_blank" rel="noopener" href="http://www.vue-js.com/">http://www.vue-js.com/</a></p>
+<p>　　<strong>前端开发Vue相关</strong>：<a target="_blank" rel="noopener" href="http://www.opendigg.com/tags/front-vue">http://www.opendigg.com/tags/front-vue</a></p>
+<p>　　<strong>本文开源地址</strong>：<a target="_blank" rel="noopener" href="https://github.com/yonghu86/awesome-github-vue">https://github.com/yonghu86/awesome-github-vue</a></p>
+<p>　　本文主要是收集与整理Vue相关的开源资料，以供需要的朋友参考。主要包含以下几方面的内容：</p>
+<p>　　UI组件、开发框架、实用库、服务端、辅助工具、应用实例、Demo示例</p>
+<h2 id="构建插件"><a href="#构建插件" class="headerlink" title="构建插件"></a>构建插件</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/annnhan/vue-spa-template">vue-spa-template</a></td>
+<td>构建vue全家桶,Github说明很详细.<a target="_blank" rel="noopener" href="http://www.cnblogs.com/axl234/p/6808599.html">参考文档:基于 vue 全家桶的 spa 项目脚手架</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/SimulatedGREG/electron-vue">electron-vue</a></td>
+<td>构建electron时用的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/cooking/blob/master/README_zh-cn.md">cooking</a></td>
+<td>vue特别简单的构建工具,不过东西可能没有上面vue-spa-template那么全. <a target="_blank" rel="noopener" href="https://cookingjs.github.io/zh-cn/intro.html">中文文档</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Metnew/vue-element-starter">Vue-Element-Starter</a></td>
+<td>vue启动页.这个已经有了个后台框架的样子了.基本的东西已经弄好,可以快速开发了</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/cristijora/vue-paper-dashboard">Vue Paper Dashboard</a></td>
+<td>这个真的很漂亮 就是不能用作大型后台</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-bulma/vue-admin">Vue Admin Panel Framework</a></td>
+<td>vue和buluma的后台好像是重复两个啊</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/misterGF/CoPilot">CoPilot  </a></td>
+<td>这个也不错 是AdminLTE模板做的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/mrholek/CoreUI-Free-Bootstrap-Admin-Template">CoreUI-Free-Bootstrap-Admin-Template</a></td>
+<td>这个也不错 是CoreUI模板做的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/epicmaxco/vuestic-admin">Vuestic Admin Dashboard</a></td>
+<td>这个也不错 是 Bootstrap 4.模板做的</td>
+</tr>
+</tbody></table>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-31</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/vue%E4%B8%80%E4%BA%9B%E7%89%B9%E5%88%AB%E6%9C%89%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/%E5%89%8D%E7%AB%AF%E5%8A%A8%E7%94%BB%E5%8F%8A%E7%BB%98%E7%94%BB%E6%8F%92%E4%BB%B6%E6%80%BB%E7%BB%93/">
+        前端动画及绘画插件总结
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+
+
+名称
+说明
+
+
+
+two.js
+一个渲染器无关的适用于 web 的二维绘图 api 。
+
+
+paper.js
+是矢量图形脚本中的瑞士军刀 —— 使用 HTML5 Canvas 将 Scriptographer 移植到 JavaScript和浏览器
+
+
+three.js
+这没的说了,js里绘制3D的老大,只要技术强可以绘制各种东西,并且能做小游戏
+
+
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-29</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/%E5%89%8D%E7%AB%AF%E5%8A%A8%E7%94%BB%E5%8F%8A%E7%BB%98%E7%94%BB%E6%8F%92%E4%BB%B6%E6%80%BB%E7%BB%93/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/API%E5%BC%80%E5%8F%91%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86%E5%8F%8Amock%E6%95%B0%E6%8D%AE/">
+        API开发接口管理及mock数据
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这里总结了一些开发前后端分离,对于开发API的管理.不仅可以在没有后端搭建成的时候mock数据.而且可以管理接口及版本,并生成文档.这为开发及后续整理提供很大的方便.
+
+
+
+网站
+具有的特色
+
+
+
+DOClever
+这个平台有很好的介绍用的都是视频真是太贴心了教程.而且可以管理团队,项目分配,模拟数据,测试接口,版本管理.真的是功能十分丰富,这个也可以导入Swagger,只要导出json文件...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-27</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/API%E5%BC%80%E5%8F%91%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86%E5%8F%8Amock%E6%95%B0%E6%8D%AE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/Swagger%E7%AE%80%E4%BB%8B/">
+        Swagger简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>主要看这篇文章就行了 <a target="_blank" rel="noopener" href="https://www.gitbook.com/book/huangwenchao/swagger/details">Swagger从入门到精通</a> 虽然可能有些地方可能有老了,没讲到不过还是很实用,而且非常细致.</p>
+<p>剩下的看编辑器事例就好了,一下子就能看懂了 <a target="_blank" rel="noopener" href="http://editor.swagger.io/">官方在线编辑器</a></p>
+<p><strong>记录点一:</strong></p>
+<p>当请求操作时,有两种方式一种是路径请求,另一种是参数请求.两种表现形式不同.</p>
+<p><strong>参数请求</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// get(请求方式) /persons?pageSize=20&amp;pageNumber=2</span></span><br><span class="line">      <span class="attr">parameters</span>:</span><br><span class="line">       - name: pageSize</span><br><span class="line">         <span class="attr">in</span>: query      <span class="comment">//就是这里,这里query表示参数请求</span></span><br><span class="line">         <span class="attr">description</span>: <span class="built_in">Number</span> <span class="keyword">of</span> persons returned</span><br><span class="line">         <span class="attr">type</span>: integer</span><br><span class="line">       - name: pageNumber</span><br><span class="line">         <span class="attr">in</span>: query</span><br><span class="line">         <span class="attr">description</span>: Page number</span><br><span class="line">         <span class="attr">type</span>: integer</span><br></pre></td></tr></table></figure>
+
+<p><strong>路径请求</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// get(请求方式) /persons/&#123;username&#125;</span></span><br><span class="line">      <span class="attr">parameters</span>:</span><br><span class="line">        - name: username</span><br><span class="line">          <span class="attr">in</span>: path          <span class="comment">//这里path表示路径请求</span></span><br><span class="line">          <span class="attr">required</span>: <span class="literal">true</span>    <span class="comment">//这个表示路径参数必须填写,默认为false表示这个路径是可选填的</span></span><br><span class="line">          <span class="attr">description</span>: The person<span class="string">&#x27;s username</span></span><br><span class="line"><span class="string">          type: string</span></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-25</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/Swagger%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/%E5%89%8D%E7%AB%AF%E6%A8%A1%E6%8B%9F%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%20mock%20%E7%9A%84%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95/">
+        前端模拟本地数据 mock 的各种方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        json-server通过REST路由操作JSON文件数据库
+JSONPlaceholder用于测试和原型的简单假REST API服务器。
+fake-api-server跟JSONPlaceholder一样,是用于测试信息的测试服务器
+ssr这个和上面的 json-server 异曲同工之妙,这不过这个既可以当作静态网站服务器,也可以提供 本地数据mock 用于测试开发 这个可以配合mock...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-19</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/%E5%89%8D%E7%AB%AF%E6%A8%A1%E6%8B%9F%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%20mock%20%E7%9A%84%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/08/Axios%20%E5%88%9D%E6%8E%A2/">
+        Axios 初探
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        简单用法
+123456789101112/* 向具有指定ID的用户发出请求 *///其实和jq的ajax差不多 then 是成功返回执行其后任务,catch捕捉错误//其实就是 Promise 可以进行并发操作的 axios.all(iterable) 其实就是 promise.all()axios.get(&#x27;/user?ID=12345&#x27;)  .then(functio...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-08-01</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/08/Axios%20%E5%88%9D%E6%8E%A2/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/07/vue%E9%94%AE%E7%9B%98%E7%9B%91%E5%90%AC%E4%BA%8B%E4%BB%B6/">
+        vue键盘监听事件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p><strong>聚焦一个焦点,判断键值这么写</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/Vue.js&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">el</span>: <span class="string">&#x27;#box&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="attr">data</span>: &#123;&#125;,</span></span><br><span class="line"><span class="javascript">                <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="attr">show</span>: <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">if</span>(ev.keyCode==<span class="number">13</span>)&#123;</span></span><br><span class="line"><span class="javascript">                            alert(<span class="string">&#x27;你按了回车键！&#x27;</span>)</span></span><br><span class="line"><span class="javascript">                        &#125;</span></span><br><span class="line"><span class="javascript">                    &#125;</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;);</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> @<span class="attr">keyup</span>=<span class="string">&quot;show($event)&quot;</span>&gt;</span>    <span class="comment">&lt;!-- 这里 @keydown 也是可行的--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-07-29</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/07/vue%E9%94%AE%E7%9B%98%E7%9B%91%E5%90%AC%E4%BA%8B%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/07/GSAP%E7%9A%84TimelineMax%E6%97%B6%E9%97%B4%E8%BD%B4%E5%8F%8ATweenMax%E7%BC%93%E5%8A%A8%E5%AD%A6%E4%B9%A0%20/">
+        GSAP的TimelineMax时间轴及TweenMax缓动学习
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考文档TimelineMax系列学习文章TimelineMax：Tweening简介GSAP官方参考文档Easing缓动演示
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-07-26</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/07/GSAP%E7%9A%84TimelineMax%E6%97%B6%E9%97%B4%E8%BD%B4%E5%8F%8ATweenMax%E7%BC%93%E5%8A%A8%E5%AD%A6%E4%B9%A0%20/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/07/JavaScript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F(use%20strict)/">
+        JavaScript 严格模式(use strict)
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        “use strict” 指令在 JavaScript 1.8.5 (ECMAScript5) 中新增。它不是一条语句，但是是一个字面量表达式，在 JavaScript 旧版本中会被忽略。“use strict” 的目的是指定代码在严格条件下执行。
+会限制一些写法,并且提示一些错误.据说可以加速js的运行速度具体改进了那些内容可以看第二个文章.里面写的特别详细了.
+为什么使用”use str...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-07-02</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/07/JavaScript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F(use%20strict)/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/07/Mock.js%20%E6%A8%A1%E6%8B%9F%E9%9A%8F%E6%9C%BA%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE/">
+        Mock.js 模拟随机测试数据
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>这个东西用起来简单并且强大,不过现在可能不太流行了.因为这个配合jquery比较多.</p>
+<p>直接随机产生数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;http://mockjs.com/dist/mock.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">// 使用 Mock</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">var</span> data = Mock.mock(&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="string">&#x27;list|1-10&#x27;</span>: [&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="string">&#x27;id|+1&#x27;</span>: <span class="number">1</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;]</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">$(<span class="string">&#x27;&lt;pre&gt;&#x27;</span>).text(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">4</span>))</span></span></span><br><span class="line"><span class="javascript"><span class="xml">.appendTo(<span class="string">&#x27;body&#x27;</span>)</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;list&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;id&quot;: 1</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;id&quot;: 2</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;id&quot;: 3</span><br><span class="line">    &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-07-01</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/07/Mock.js%20%E6%A8%A1%E6%8B%9F%E9%9A%8F%E6%9C%BA%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/js%E7%BB%A7%E6%89%BF%20extend%20mixin/">
+        js继承 extend mixin
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这两个说有用也有用,说没用也没用,这是因为必须这个类支持这两个方法才能用,如果不支持是用不了的现在又有个什么Composition 不过这个还没来得及看
+mixin
+1234var _   = require(&#x27;lodash&#x27;);var _db = require(&#x27;lodash-id&#x27;);_.mixin(_db);
+
+extend
+12//_应该是l...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-27</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/js%E7%BB%A7%E6%89%BF%20extend%20mixin/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/%E7%94%A8%20html5+js+css%20vue%20%E5%BC%80%E5%8F%91%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%20-Electron/">
+        用 html5+js+css vue 开发个桌面应用 -Electron
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p>想用js开发桌面现在有两个框架可以用 <strong>Electron</strong> 另外一个是 <strong>nwjs</strong>.<br>但感觉还是用 <strong>Electron</strong>比较好,因为现在一些流行的软件是那这个弄的,比如说我现在用的 <strong>Atom</strong> ,<strong>VSCode</strong> 这两个软件都非常好用,而且漂亮.<br>另外还有个原因是,他有中文文档.这样实在是方便太多了</p>
+<h2 id="编写"><a href="#编写" class="headerlink" title="编写"></a>编写</h2><p>这里主要编写个 <strong>Electron</strong> 启动配置文件.是 <code>package.json</code> 里的 <code>main</code> 字段的文件.<br><strong>注意</strong>：如果 main 字段没有在 package.json 声明，Electron会优先加载 index.js。<br>剩下的就是编写自己的程序了就行了.</p>
+<p>贴两个配置文件样本.<br>一 <strong>这是官方的例子</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; app, BrowserWindow &#125; = <span class="built_in">require</span>(<span class="string">&#x27;electron&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 保持一个对于 window 对象的全局引用，如果你不这样做，</span></span><br><span class="line"><span class="comment">// 当 JavaScript 对象被垃圾回收， window 会被自动地关闭</span></span><br><span class="line"><span class="keyword">let</span> win</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createWindow</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 创建浏览器窗口。</span></span><br><span class="line">    win = <span class="keyword">new</span> BrowserWindow(&#123; <span class="attr">width</span>: <span class="number">800</span>, <span class="attr">height</span>: <span class="number">600</span> &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 加载应用的 index.html。</span></span><br><span class="line">    win.loadURL(url.format(&#123;</span><br><span class="line">        <span class="attr">pathname</span>: path.join(__dirname, <span class="string">&#x27;dist/index_prod.html&#x27;</span>),</span><br><span class="line">        <span class="attr">protocol</span>: <span class="string">&#x27;file:&#x27;</span>,</span><br><span class="line">        <span class="attr">slashes</span>: <span class="literal">true</span></span><br><span class="line">    &#125;))</span><br><span class="line">    <span class="comment">//win.loadURL(&#x27;http://localhost:8080&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 打开开发者工具。</span></span><br><span class="line">    win.webContents.openDevTools();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当 window 被关闭，这个事件会被触发。</span></span><br><span class="line">    win.on(<span class="string">&#x27;closed&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 取消引用 window 对象，如果你的应用支持多窗口的话，</span></span><br><span class="line">        <span class="comment">// 通常会把多个 window 对象存放在一个数组里面，</span></span><br><span class="line">        <span class="comment">// 与此同时，你应该删除相应的元素。</span></span><br><span class="line">        win = <span class="literal">null</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Electron 会在初始化后并准备</span></span><br><span class="line"><span class="comment">// 创建浏览器窗口时，调用这个函数。</span></span><br><span class="line"><span class="comment">// 部分 API 在 ready 事件触发后才能使用。</span></span><br><span class="line">app.on(<span class="string">&#x27;ready&#x27;</span>, createWindow)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当全部窗口关闭时退出。</span></span><br><span class="line">app.on(<span class="string">&#x27;window-all-closed&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 在 macOS 上，除非用户用 Cmd + Q 确定地退出，</span></span><br><span class="line">    <span class="comment">// 否则绝大部分应用及其菜单栏会保持激活。</span></span><br><span class="line">    <span class="keyword">if</span> (process.platform !== <span class="string">&#x27;darwin&#x27;</span>) &#123;</span><br><span class="line">        app.quit()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;activate&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 在这文件，你可以续写应用剩下主进程代码。</span></span><br><span class="line">    <span class="comment">// 也可以拆分成几个文件，然后用 require 导入。</span></span><br><span class="line">    <span class="keyword">if</span> (win === <span class="literal">null</span>) &#123;</span><br><span class="line">        createWindow()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在这文件，你可以续写应用剩下主进程代码。</span></span><br><span class="line"><span class="comment">// 也可以拆分成几个文件，然后用 require 导入。</span></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-24</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/%E7%94%A8%20html5+js+css%20vue%20%E5%BC%80%E5%8F%91%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%20-Electron/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/ES6%20%E6%96%B0%E5%87%BD%E6%95%B0%20Promise%20%E7%AE%80%E4%BB%8B/">
+        ES6 新函数 Promise 简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>这就是Promise的作用了，简单来讲，就是能把原来的回调写法分离出来，在异步操作执行完后，用链式调用的方式执行回调函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">runAsync</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//做一些异步操作</span></span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;执行完成&#x27;</span>);</span><br><span class="line">            <span class="comment">//执行成功后 执行这个回调</span></span><br><span class="line">            resolve(<span class="string">&#x27;随便什么数据&#x27;</span>);</span><br><span class="line">            <span class="comment">//reject是失败</span></span><br><span class="line">        &#125;, <span class="number">2000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> p;            </span><br><span class="line">&#125;</span><br><span class="line">runAsync().then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data+<span class="string">&#x27;-------&#x27;</span>);</span><br><span class="line">    <span class="comment">//后面可以用传过来的数据做些其他操作</span></span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>功能相同</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">runAsync</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;执行完成&#x27;</span>);</span><br><span class="line">        callback(<span class="string">&#x27;随便什么数据&#x27;</span>);</span><br><span class="line">    &#125;, <span class="number">2000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">runAsync(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>优点:</strong></p>
+<p>效果也是一样的，还费劲用Promise干嘛。那么问题来了，有多层回调该怎么办？如果callback也是一个异步操作，而且执行完后也需要有相应的回调函数，该怎么办呢？总不能再定义一个callback2，然后给callback传进去吧。而Promise的优势在于，可以在then方法中继续写Promise对象并返回，然后继续调用then来进行回调操作。</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-23</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/ES6%20%E6%96%B0%E5%87%BD%E6%95%B0%20Promise%20%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/%E5%85%B3%E4%BA%8Echild_process%E4%B8%AD%E7%9A%84exec%E5%92%8Cspawn/">
+        关于child_process中的exec和spawn
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+这是篇转发,因为原文写的实在是太明白了. http://cnodejs.org/topic/507285c101d0b80148f7c538
+
+开始学习child_process模块的时候以为spawn可以直接运行命令, 后来发现这是一个小陷阱就拿出来和大家分享一下.
+先说下我碰到的情况由于在windos下写的所以根据docs上的例子我就写出了这么一句代码:”require(“child_...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-19</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/%E5%85%B3%E4%BA%8Echild_process%E4%B8%AD%E7%9A%84exec%E5%92%8Cspawn/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/vue%20+%20iview%E5%90%8E%E5%8F%B0%E5%AE%9E%E4%BE%8B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%20%20vue%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+        vue + iview后台实例问题总结  vue学习问题总结
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="vue组件模版编写规则"><a href="#vue组件模版编写规则" class="headerlink" title="vue组件模版编写规则"></a>vue组件模版编写规则</h2><p><strong>main.vue</strong> 在组件里 所有的样式必须放在一个 <code>&lt;div&gt;&lt;/div&gt;</code> 标签里 否则会出错.<br> 这个标签可以指定 默认为 <code>class=index</code> 这个看教程时已经知道,只是做的时候又给忘记了</p>
+<hr>
+<h2 id="vue组件开始之前执行组件方法的方法-呵呵"><a href="#vue组件开始之前执行组件方法的方法-呵呵" class="headerlink" title="vue组件开始之前执行组件方法的方法.呵呵"></a>vue组件开始之前执行组件方法的方法.呵呵</h2><ol>
+<li><p><strong>Vue.nextTick(function () {   })</strong></p>
+<blockquote>
+<p>在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。 因为有的插件需要操作DOM 但是DOM还没创建出来时 会出现问题  <strong>这个也是如此无法用this</strong> <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000008570874">我理解的关于Vue.nextTick()的正确使用</a></p>
+</blockquote>
+</li>
+<li><p> <strong>created:function(){}</strong></p>
+<blockquote>
+<p>这个也可以的 这是钩子程序 但是这个时期 DOM没有创建出来</p>
+</blockquote>
+</li>
+<li><p><strong>mounted: function (){}</strong></p>
+<blockquote>
+<p>这个也是vue生命周期中一个钩子,这个就是加载完组件,生成了DOM的时候,所这个可以用,需要对DOM进行操作的程序可以放在这里执行</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 记性真是不好上一次还知道怎么用,下一次就又忘了 现在放在这</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">mounted</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        particlesJS(<span class="string">&#x27;particles-js&#x27;</span>, particles_config)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">methods</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-13</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/vue%20+%20iview%E5%90%8E%E5%8F%B0%E5%AE%9E%E4%BE%8B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%20%20vue%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/three.js%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%B0%8F%E4%BE%8B%E5%AD%90/">
+        three.js学习及小例子
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        一个例子
+
+
+自己弄的小方块
+
+
+粒子波动
+
+
+参考文档three.js中文文档WebGL入门教程1 - 3D绘图基础知识
+学习文章three.js实现的波浪效果WebGL学习笔记-使用3D引擎threeJS实现星空粒子移动 第一篇就画一个球体吧Three.js基础探寻四——立方体、平面与球体
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-07</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/three.js%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%B0%8F%E4%BE%8B%E5%AD%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/%E5%89%8D%E7%AB%AF%E8%83%8C%E6%99%AF%E7%89%B9%E6%95%88%E6%80%BB%E7%BB%93%E4%B8%80%E6%B3%A2/">
+        前端背景特效总结一波
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p><a target="_blank" rel="noopener" href="https://alloyteam.github.io/curvejs/">魔幻线条curvejs</a> <code>这个感觉实用性不强</code></p>
+<p><a target="_blank" rel="noopener" href="https://www.zybuluo.com/mdeditor#">粒子特效插件particles-自己的文章</a><br><a target="_blank" rel="noopener" href="https://github.com/Barrior/JParticles">JParticles是多个特效的一个整合</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/kennethcachia/shape-shifter">shape-shifter 用粒子组成文字</a><br><a target="_blank" rel="noopener" href="http://www.kennethcachia.com/shape-shifter/">shape-shifter Demo</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/juliangarnier/anime">anime.js 动画库 </a> <code>其实跟上面的不同 但可以用这个做许多特效 而且例子不错</code></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/greensock/GreenSock-JS/">GreenSock-JS 动画库</a> <code>这个动画的例子真的很棒</code><br><a target="_blank" rel="noopener" href="https://greensock.com/examples-showcases">GreenSock-JS DEMO</a><br><a target="_blank" rel="noopener" href="http://www.w2bc.com/Article/9438">TweenMax的实例</a><br><a target="_blank" rel="noopener" href="http://www.jq22.com/code312">TweenMax的实例2</a></p>
+<blockquote>
+<p>看来TweenMax用来做菱形这个背景应该是很拿手的 有空可以看一下</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-03</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/%E5%89%8D%E7%AB%AF%E8%83%8C%E6%99%AF%E7%89%B9%E6%95%88%E6%80%BB%E7%BB%93%E4%B8%80%E6%B3%A2/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/06/particlesJS%20%E7%B2%92%E5%AD%90%E8%83%8C%E6%99%AF%E7%9A%84%E5%BA%93%20%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/">
+        particlesJS 粒子背景的库 使用简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <iframe width="100%" height="450" src="https://code.hcharts.cn/test123/rUMngq/share/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<p><strong>使用方法:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 动画容器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;particles-js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 库引入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;particles.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 配置及使用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;app.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css"><span class="comment">/*</span></span></span><br><span class="line"><span class="comment"><span class="css">这句很关键 如果不设置的话大小总会出现偏移的 不过按照官方的说应该是 #particles-js 也就是容器id 可不知道为啥是canvas类名</span></span></span><br><span class="line"><span class="comment"><span class="css">还有个问题就是我这个文件不知道从哪里来的,好像跟从官方复制的不一样,把Github上的复制到文件里就报错了</span></span></span><br><span class="line"><span class="comment"><span class="css">*/</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.particles-js-canvas-el</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="css">    <span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="css">    <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">    <span class="comment">/*z-index:-1;*/</span> <span class="comment">/*有的说这句必须加 要不会阻挡前面内容 不过我这次用的时候没出现 反而会多退后一层*/</span></span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意: 如果下次样式还出现偏移,就按原来官方的试试 使用#particles-js 写样式</p>
+</blockquote>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-06-02</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/06/particlesJS%20%E7%B2%92%E5%AD%90%E8%83%8C%E6%99%AF%E7%9A%84%E5%BA%93%20%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/04/splice%E4%B8%8Eslice%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E5%BA%94%E7%94%A8/">
+        splice与slice的区别与应用
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        slice(开始位置,结束位置)     //选取元素  //返回选取元素splice(开始位置,要删除个数,替换元素[可选]) //删除一些元素   //不返回,会把原数组改变splice(开始位置,要删除个数,替换元素[可选]) 这个是删除后返回原数组 而slicen()根本不改变原数组 而是将选取赋予一个变量才行 var arr1 = arr.slicen(1,2);
+运行结果
+
+
+参...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-04-01</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/04/splice%E4%B8%8Eslice%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E5%BA%94%E7%94%A8/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/02/%E5%8D%95%E6%9C%BAjs%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E6%8B%A9%20SqLite%E4%B8%8EMongoDB%E4%B9%8B%E9%97%B4/">
+        单机js小程序数据库选择 SqLite与MongoDB之间
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        打算用vue开发个单机小程序,于是这个数据库选择就是个问题了.看到这个小程序 notepad 他是用的 localStorage 不过这个存储有大小限制 不太适合我的要求.于是,就看到了SqLite与MongoDB, 这两个各有优点,确实不好选.
+MongoDB: 这个与Node.js联系紧密,速度很快,不过据说特别占空间,而且好像是运行在内存中,如果要保存在硬盘还需要特别操作,没用过所以具...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-02-08</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/02/%E5%8D%95%E6%9C%BAjs%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E6%8B%A9%20SqLite%E4%B8%8EMongoDB%E4%B9%8B%E9%97%B4/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/02/js,node%E4%B8%8EMongoDB%E4%BD%BF%E7%94%A8/">
+        js,node与MongoDB使用
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        下面参考文档第一个,有详细的增删改查的方法,因为我暂时还没使用过所以先不写心得了.这里值得一提的是:原始的使用方法很是繁琐,这里有个推荐的插件是 Mongoose,这里安装也很简单,和其他node模块一样. npm install mongoose --save.可以尝试下.更多的mongoose使用看这里 ongoose文档.这篇文章也不错 Mongoose学习参考文档——基础篇
+参考文档...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-02-03</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/02/js,node%E4%B8%8EMongoDB%E4%BD%BF%E7%94%A8/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/Yarn%20%E6%9B%B4%E5%BF%AB%E7%9A%84js%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%20%E6%9B%BF%E6%8D%A2NPM/">
+        Yarn 更快的js套件管理 替换NPM
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+新一代戰神 Yarn 終於在昨天出爐了，Yarn 跟 Npm 一樣都是 JavaScript 套件版本管理工具，但是 Npm 令人詬病的是安裝都是非常的慢，快取機制用起來效果也不是很好，所以 Yarn 的出現解決了這些問題，透過 Yarn 安裝過的套件都會在家目錄產生 Cache (目錄在 ~/.yarn-cache/)，也就是只要安裝過一次，下次砍掉 node_modules 目錄重新安...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-31</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/Yarn%20%E6%9B%B4%E5%BF%AB%E7%9A%84js%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%20%E6%9B%BF%E6%8D%A2NPM/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/js%E5%89%8D%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%A4%A7%E6%80%BB%E7%BB%93/">
+        js前端插件大总结
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        vue-markdown-loader
+vue插件 转换md文件成网页Github地址
+
+TheaterJS
+打字输入效果的插件Github地址
+
+cooking
+快速简易配置webpa 让你快速开始开发前端官方文档Github地址
+
+Layer
+layer是一款近年来备受青睐的web弹层组件官方网站
+
+SweetAlert2
+强大的纯Js模态消息对话框插件
+
+DEMO展示github地址
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-16</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/js%E5%89%8D%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%A4%A7%E6%80%BB%E7%BB%93/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/webpack%E7%9A%84'Cannot%20find%20module%20'webpacklibnodeNodeTemplatePlugin'%E9%97%AE%E9%A2%98/">
+        webpack的'Cannot find module 'webpacklibnodeNodeTemplatePlugin'问题
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+第一步：npm config get prefix ，获取输出path C:\Users\jaxGu\AppData\Roaming\npm加上\node_modules用于第二步值
+
+第二步：添加系统环境变量：NODE_PATH:C:\Users\jaxGu\AppData\Roaming\npm\node_modules
+
+第三步：关掉命令行，重新打开。
+
+
+参考文档『奇葩问题集锦』C...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-11</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/webpack%E7%9A%84'Cannot%20find%20module%20'webpacklibnodeNodeTemplatePlugin'%E9%97%AE%E9%A2%98/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/node.js%E4%B8%AD%E7%9A%84path.resolve%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">
+        node.js中的path.resolve方法使用说明
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        方法说明：将参数 to 位置的字符解析到一个绝对路径里。
+1path.resolve([from ...], to)
+
+简介当使用插件不在标准路径的时候,可以使用这个函数方便的引入.
+
+由于该方法属于path模块，使用前需要引入path模块（var path= require(“path”) ）接收参数：from                     源路径to              ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-10</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/node.js%E4%B8%AD%E7%9A%84path.resolve%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/Velocity.js%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/">
+        Velocity.js简单介绍
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        简介Velocity 是一个简单易用、高性能、功能丰富的轻量级JS动画库。它能和 jQuery 完美协作，并和$.animate()有相同的 API， 但它不依赖 jQuery，可单独使用。 Velocity 不仅包含了 $.animate() 的全部功能， 还拥有：颜色动画、转换动画(transforms)、循环、 缓动、SVG 动画、和 滚动动画 等特色功能。
+它比 $.animate(...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-09</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/Velocity.js%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/jQuery%20Easing%20%E7%AE%80%E5%8D%95%E8%AE%B2%E8%A7%A3/">
+        jQuery Easing 简单讲解
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        简介( ′◔ ‸◔`) 以前看过这个,不过时间长了,就记不清了. easing就是模拟物理动作模型.从图片来看就更清楚了.http://www.runoob.com/jqueryui/api-easings.html在这里能看到,每个动作的演示,点击每个图片就能看到了
+
+easing参数可选的值就有以下32种：
+
+linear
+swing
+easeInQuad
+easeOutQuad
+eas...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-08</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/jQuery%20Easing%20%E7%AE%80%E5%8D%95%E8%AE%B2%E8%A7%A3/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/HTTP%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6(CORS)/">
+        HTTP访问控制(CORS)
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        使用 Access-Control-Max-Age 来缓存 CORS 配置使用withCredentials发送跨域请求凭据Access-Control-Allow-Origin与跨域HTTP访问控制(CORS)
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-05</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/HTTP%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6(CORS)/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/ECMAScript%20%E7%AE%80%E4%BB%8B/">
+        ECMAScript 简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言ECMAScript 6 简单来讲就是一个javascript的标准版本,和现用版本不是很相同.而且由于浏览器支持的不同,很多新写法都不支持.只有等标准化完成后,统一了才能更实用.现在一般的情况是用babel进行转化兼容使用,这个可以用webpace做到,不过最新可以用cooke做了.
+参考文档ECMAScript的基础概念ECMAScript 6简介
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-03</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/ECMAScript%20%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2017/01/webpace%20%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9%E8%AF%A6%E8%A7%A3/">
+        webpack 配置选项详解
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        官方现在已经有了中文,而且文档比较完善了,参考还是看官方吧webpace官方网站
+几个问题
+
+webpack-dev-server 不会生成文件到 output 目录里 而是生成到内存里
+webpack-dev-server 用命令行比Node.js Api方式简单太多了.Node.js Api方式还需要安装各种插件
+webpack-dev-server 各种配置解释参考官方文档 特别全
+
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2017-01-02</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2017/01/webpace%20%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9%E8%AF%A6%E8%A7%A3/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/%E6%9E%81%E6%A3%92%E7%9A%84jquery%E5%8A%A8%E7%94%BB%E5%88%87%E6%8D%A2%E5%BC%95%E6%93%8E%E6%8F%92%E4%BB%B6Velocity.js/">
+        极棒的jquery动画切换引擎插件Velocity.js
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Velocity.js是一款jquery动画引擎插件，它拥有与jquery中的$.animate()相同的API，还打包了颜色动画，转换，循环，easing效果，类动画、滚动等功能，因此大家可以像使用$.animate()方法一样使用velocity，您可以快速的上手velocity.js。简单点说：Velocity就是实现页面元素中的飞入，飞出，旋转、颜色变换，esaing效果的jquer...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-29</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/%E6%9E%81%E6%A3%92%E7%9A%84jquery%E5%8A%A8%E7%94%BB%E5%88%87%E6%8D%A2%E5%BC%95%E6%93%8E%E6%8F%92%E4%BB%B6Velocity.js/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/H5+%20%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+        H5+ 遇到的一些问题总结
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        chrome调试,必须在配置文件里打开调试的选项.遇到显示手机不显示页面,说明安卓4.4以下系统.白屏是因为必须翻墙
+调用入口页面,也就是首页.可使用下面方法.12// 查找应用首页窗口对象var h=plus.webview.getWebviewById( plus.runtime.appid );
+
+
+
+预加载时,id和url都必须的设置.要不真机调试时不会出错.打包后会出现空页面.这次...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-27</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/H5+%20%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/Babel%20%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/">
+        Babel 使用简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这个教程是单独使用,并不是和webpace配合的那种.这个视频讲的非常详细.但是这个视频比较早期了,所以有些东西已经不适用了.比如那个 browser.js 的位置,已经不在那里了.如果想用就用https://cdnjs.com/ 从外在引用好了.但是有个问题是报错了,不知道什么引起的.而且chrome浏览器已经支持一些方法了,根本不需要babel,IE是不行的.
+参考教程官方网站
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-26</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/Babel%20%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/JS%20%E6%95%B0%E7%BB%84%E7%9A%84%20push%20%E4%B8%8E%20concat%20%E5%8C%BA%E5%88%AB/">
+        JS 数组的 push 与 concat 区别
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。
+12var a = [1,2,3,4];a.push(5);  //a 现在是1,2,3,4,5
+
+concat() 方法用于连接两个或多个数组。该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。
+123456var a = [1,2,3,4];var b = [5,6];var c = a.concat(b);...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-25</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/JS%20%E6%95%B0%E7%BB%84%E7%9A%84%20push%20%E4%B8%8E%20concat%20%E5%8C%BA%E5%88%AB/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/vue2%20%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE%20props%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%94%B9%E5%8F%98/">
+        vue2 组件传递数据 props一些小改变
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        vue 和 vue2 在 props 使用上面有些不同,在 vue2 里,模版传递过去的值,必须在 html 标签里,否则不显示.而vue使用时没有这个限制.还有就是 &lt;child message=&quot;hello!&quot;&gt;&lt;/child&gt; 必须用双引号,单引号可能会出现问题.再有就是 这个表示的是传递一个字符串,如果要传vue内data数据,必须绑定 &...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-17</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/vue2%20%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE%20props%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%94%B9%E5%8F%98/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/cooking%20%E7%AE%80%E4%BB%8B%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">
+        cooking 简介 安装与使用
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+cooking 更易上手的前端构建工具
+
+cooking可以简单的配置一个webpace,而且中文文档很详细,的确是比配置webpace更简单.呵呵,接触构建工具比较晚. 发现一个比一个容易,gulp,webpace,cooking.新东西就是好啊.
+
+简单安装首先确保是在 NPM 3+, Node 4+, Python 2.7+ 环境下运行
+第一步：安装 cooking 命令行工具
+
+n...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-15</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/cooking%20%E7%AE%80%E4%BB%8B%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/vue%20+%20webpack%20%E5%AD%A6%E4%B9%A0%E7%AE%80%E4%BB%8B/">
+        vue + webpack 学习简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        一些经验自动刷新问题:用 vue-cli 建立的vue项目,配合 webpack 测试时, webpack 可以自动更新浏览器输出结果,但是 vue.js 的数据修改,是不会显示在浏览器中的,必须手动刷新才行.比如下面例子
+12345678910111213141516171819&lt;template&gt;  &lt;div class=&quot;hello&quot;&gt;   ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-14</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/vue%20+%20webpack%20%E5%AD%A6%E4%B9%A0%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/js%E4%B8%AD%E7%9A%84%20~%20%E8%BF%90%E7%AE%97%E7%AC%A6/">
+        js中的 ~ 运算符
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天遇到这个 !~id.indexOf(&#39;category-detail&#39;) 以前没碰到过,不是很理解.后来一查明白了,这是位移运算符.
+运算符就是完成操作的一系列符号，它有七类：赋值运算符 =,+=,-=,*=,/=,%=,&lt;&lt;=,&gt;&gt;=,|=,&amp;=、算术运算符 +,-,*,/,++,--,%、比较运算符 &gt;,&lt;,&lt;=,&g...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-11</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/js%E4%B8%AD%E7%9A%84%20~%20%E8%BF%90%E7%AE%97%E7%AC%A6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/12/vue-admin%20%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E9%94%99%20require%20not%20define%20%E8%A7%A3%E5%86%B3/">
+        vue-admin 启动服务器测试报错 require not define 解决
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        原因就是chart.js需要Chart.bundle.js支持. 不过 vue-admin 把chart.js设置成不解析依赖的了,所以就会报错.这个配置就在 79 行.
+webpace.base.conf.js
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-12-05</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/12/vue-admin%20%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E9%94%99%20require%20not%20define%20%E8%A7%A3%E5%86%B3/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/11/JSON.parse()%E5%92%8CJSON.stringify()/">
+        JSON.parse()和JSON.stringify()
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        parse用于从一个字符串中解析出json对象,如
+var str = &#39;&#123;&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;age&quot;:&quot;23&quot;&#125;&#39;
+
+结果：
+123456789JSON.parse(str)Objectage: &quot;23&quot;name: &quot...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-11-25</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/11/JSON.parse()%E5%92%8CJSON.stringify()/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/11/Chrome%20%E6%8E%A7%E5%88%B6%E5%8F%B0console%E7%9A%84%E7%94%A8%E6%B3%95/">
+        Chrome 控制台console的用法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>大家都有用过各种类型的浏览器，每种浏览器都有自己的特色，本人拙见，在我用过的浏览器当中，我是最喜欢Chrome的，因为它对于调试脚本及前端设计调试都有它比其它浏览器有过之而无不及的地方。可能大家对console.log会有一定的了解，心里难免会想调试的时候用alert不就行了，干嘛还要用console.log这么一长串的字符串来替代alert输出信息呢，下面我就介绍一些调试的入门技巧，让你爱上console.log</p>
+<p>先的简单介绍一下chrome的控制台，打开chrome浏览器，按f12就可以轻松的打开控制台<br><img src="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5dsyh4j211y0k6q7k.jpg" class="lazyload" data-srcset="http://ww1.sinaimg.cn/mw690/6941baebjw1eo6t5dsyh4j211y0k6q7k.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-11-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/11/Chrome%20%E6%8E%A7%E5%88%B6%E5%8F%B0console%E7%9A%84%E7%94%A8%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/%E6%89%8B%E6%9C%BAAPP%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/">
+        手机APP页面开发框架
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  这里只总结了一些只针对APP页面开发的框架.像妹子UI,ZUI,semantic-ui等一些既能开发pc端页面,也能开发APP页面的框架,就不在这里记录了. 可以看这里 <a target="_blank" rel="noopener" href="https://www.zybuluo.com/mdeditor#436892">不错的前台框架 总结 Semantic UI,slicy,Amaze ui 等等</a></p>
+<h2 id="总结介绍"><a href="#总结介绍" class="headerlink" title="总结介绍"></a>总结介绍</h2><p><strong>MUI:</strong> 这是个新的UI,应该是国产的.而且还有一整套解决方案.而且有个不错的IDE,所以这个以后可以试试.后台用的是自己的 HTML5+替代手机浏览器内核也就是增强版,Native.js为调用手机硬件的js插件</p>
+<blockquote>
+<p>参考文档<br><a target="_blank" rel="noopener" href="http://dev.dcloud.net.cn/mui/">MUI网站</a><br><a target="_blank" rel="noopener" href="http://www.dcloud.io/index.html">官方主网站</a></p>
+</blockquote>
+<p><strong>Ionic:</strong>  这个不光是个UI库 他和 AngularJS 结合特别深.所以可以算是一套APP解决方案.其他的 UI框架都必须用jquery,Zepto.js,React 等js框架才能使用.</p>
+<blockquote>
+<p>参考文档<br><a target="_blank" rel="noopener" href="http://www.ionic.wang/">官方网站</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/i348018533/article/details/47258449/"> Ionic开发实战</a><br><a target="_blank" rel="noopener" href="http://www.runoob.com/ionic/ionic-install.html">ionic 安装 | 菜鸟教程</a></p>
+</blockquote>
+<p><strong>framework7:</strong> 这个刚开是因为类似IOS原生页面受到瞩目,而且速度很快.现在也支持安卓,不过貌似不是那么特别好.</p>
+<blockquote>
+<p>参考文档<br><a target="_blank" rel="noopener" href="http://framework7.taobao.org/">官方网站</a></p>
+</blockquote>
+<p><strong>Mint UI:</strong> 基于 Vue.js 的移动端组件库 这个可以快速开发不过就是太简单了 不够好看<br><a target="_blank" rel="noopener" href="http://mint-ui.github.io/#!/zh-cn">官方网站</a></p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-29</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/%E6%89%8B%E6%9C%BAAPP%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/apiDoc%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">
+        apidoc安装与使用说明
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        安装很简单,全局安装这样就可以使用 apidoc 的命令了npm install apidoc -g 
+使用
+
+首先必须在项目根目录建立个 apidoc.json 的配置文件.里面大概这么写.
+1234567&#123;    &quot;name&quot;: &quot;lumen-api-demo&quot;,    &quot;version&quot;: &quot;0.1.0&q...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-28</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/apiDoc%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/js%E4%B8%ADlet%E5%92%8Cvar%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%20const%20%E8%AF%B4%E6%98%8E/">
+        js中let和var定义变量的区别 const 说明
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        let 和 var 是一样的用于定义,最主要的是 let 是javascript 严格模式.
+主要区别如下:
+
+作用范围不一样, var是全局的, let是局部的.
+而且使用严格模式,文件开头一定要声明 ‘use strict’; 否则会报错.
+还有必须先声明再使用.
+在同一作用域,重复声明会报错.
+
+参考文档深入浅出ES6（十四）：let和const在JavaScript ES6中使用le...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/js%E4%B8%ADlet%E5%92%8Cvar%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%20const%20%E8%AF%B4%E6%98%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/%E5%89%8D%E5%8F%B0%E5%B7%A5%E5%85%B7%E5%B0%8F%E6%8A%80%E5%B7%A7%20%E4%BD%BF%E7%94%A8%E5%88%AB%E4%BA%BA%E7%9A%84%E5%B7%A5%E5%85%B7%20node/">
+        前台工具小技巧 使用别人的工具 node
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        最近一直在高前端,所以难免会在Github上用别人的工具.但是现在好多高前端都用一些高大上的东西,node什么的还好说,前段用gulp,最近又开始流行webpace,真是时代潮流不好追啊.而且有些人文档写的很简略,再加上中国的网络情况,有时你弄下来却是各种的不好使.真是头疼.这里总结下别人的东西怎么用.
+
+先 npm install 把依赖都安装好
+最好先用npm install 如果有装不...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-20</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/%E5%89%8D%E5%8F%B0%E5%B7%A5%E5%85%B7%E5%B0%8F%E6%8A%80%E5%B7%A7%20%E4%BD%BF%E7%94%A8%E5%88%AB%E4%BA%BA%E7%9A%84%E5%B7%A5%E5%85%B7%20node/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
+        箭头函数 ()=>{....}
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        箭头函数 这是es6新建的 就是匿名函数的简写,当然还有些区别没有细研究. 第一个参数是本身的形参
+123456789101112131415config.map(nav =&gt; &#123;    if (nav.groups) &#123;      nav.groups.map(group =&gt; &#123;        group.list.map(page =&gt; ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-17</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/js%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">
+        js创建对象
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        12345678910111213141516171819202122232425262728293031323334353637383940function bb()&#123;    alert(&#x27;bb&#x27;);&#125;var b = new bb();function cc()&#123;    return 1;&#125;var dd=function()&#1...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/js%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/vue.js%20%E4%B8%AD%E5%9B%BD%E5%A5%BD%E6%95%99%E7%A8%8B/">
+        vue.js 中国好教程
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Vue.js教程浅谈Vue.jsvue.js学习笔记1 – 搭建vue.js本地开发框架vuejs-learn
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-14</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/vue.js%20%E4%B8%AD%E5%9B%BD%E5%A5%BD%E6%95%99%E7%A8%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/10/webpace%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">
+        webpack 零基础教程
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <blockquote>
+<p>这套教材非常好 非常适合我.<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20367175">Webpack傻瓜式指南（一）</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20397902">Webpack傻瓜指南（二）开发和部署技巧</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/20522487">Webpack傻瓜指南（三）和React配合开发</a></p>
+</blockquote>
+<p>不过有个小问题: 里面的方法不能加括号<code>app.appendChild(sub());</code> 这个应当这么写 <code>app.appendChild(sub);</code> 这个错误原因可能是他手误了 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//之前</span></span><br><span class="line"><span class="comment">//只需要 sub</span></span><br><span class="line"><span class="comment">//这个是CommonJS风格代码</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateText</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">&#x27;h2&#x27;</span>);</span><br><span class="line">	element.innerHTML = <span class="string">&quot;Hello hddddaa world&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> element;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = generateText();</span><br><span class="line"></span><br><span class="line">--------------------------------------------------------------------</span><br><span class="line"><span class="comment">//后面</span></span><br><span class="line"><span class="comment">// 所以需要sub()</span></span><br><span class="line"><span class="comment">//这个是ES6风格代码</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">&#x27;h2&#x27;</span>);</span><br><span class="line">  element.innerHTML = <span class="string">&quot;Hello h2 world hahaha&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> element;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-10-11</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/10/webpace%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E6%A8%A1%E7%89%88%E5%A4%A7%E6%90%9C%E9%9B%86%20%E9%83%BD%E6%98%AF%E5%89%8D%E5%90%8E%E5%88%86%E7%A6%BB%E7%9A%84/">
+        后台管理模版大搜集 都是前后分离的
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p><a target="_blank" rel="noopener" href="https://github.com/gismall/vue-kit">Vue Start Kit:</a>  一个国内搞的用 Vue+Bulma UI 开发的后台模版.<del>不过我在本地测试时报错</del> 已经没问题了,必须用cnpm 安装node-sass才可以.<br><strong>Demo地址:</strong> <a target="_blank" rel="noopener" href="http://vue-kit.gismall.com/">http://vue-kit.gismall.com/</a><br><img src="https://github.com/gismall/vue-kit/raw/master/src/assets/img/screen-dashboard.png" class="lazyload" data-srcset="https://github.com/gismall/vue-kit/raw/master/src/assets/img/screen-dashboard.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E6%A8%A1%E7%89%88%E5%A4%A7%E6%90%9C%E9%9B%86%20%E9%83%BD%E6%98%AF%E5%89%8D%E5%90%8E%E5%88%86%E7%A6%BB%E7%9A%84/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/vue%20%E5%AD%A6%E4%B9%A0%E5%B0%8F%E4%BE%8B%E5%AD%90/">
+        vue 学习小例子
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="一些总结吧"><a href="#一些总结吧" class="headerlink" title="一些总结吧"></a>一些总结吧</h2><ul>
+<li><p><strong>父组件和子组件之间通信用广播:</strong> vue可以用多种方法实现组件间沟通,比如用一个属性,<br>不过这必须用上同步 <code>:test.sync</code> 要不然子组件的状态父组件不知道.<br>但是这有个问题就是不利于解耦,捆绑太紧密了不能复用了,所以还是用广播.<br>不过还是有个小小的疑问,如果两个同名事件怎么办呢?? 按文档里说是第一个,那可能是父组件加载子组件的顺序吧<br>我想可能是这样的,如果存在同名的话,那就得手动调整顺序,我感觉最好不要同名.</p>
+</li>
+<li><p><strong>v-bind:fields=”columns” 绑定解释:</strong> 有时用简写就比较懵,简单记忆下: 如果原有属性就是绑定属性到vue属性.如果不是自带属性,那就是组件自定义的.比如 <code>:fields=&quot;columns&quot; </code> 这里就是一个. fields 子组件 : columns 父组件. 反正等号后面都是当前组件的.可以看下面例子.</p>
+</li>
+</ul>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/vue%20%E5%AD%A6%E4%B9%A0%E5%B0%8F%E4%BE%8B%E5%AD%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/%E9%9D%9E%E5%B8%B8%E7%81%AB%E7%9A%84js%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/">
+        非常火的js框架简介
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Vue.js: 轻量级js 数据驱动的组件，为现代化的 Web 界面而生.这类js框架都是应用比较大型功能类网站,有点类似webapp.或者单页面程序,比如我现在用的听歌浏览器插件. 他的做法是把某个功能开发成个组件,这个组件包括了模版,css,js,然后打包在一起.通过很多组件的组合,到达一个功能类网站,这样就非常的灵活了.这个主要针对pc端.
+
+参考文档官方网站对比其它框架Vue.js：...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/%E9%9D%9E%E5%B8%B8%E7%81%AB%E7%9A%84js%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/vue.js%E5%BC%80%E5%8F%91%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6Vue.js%20devtools%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+        vue.js开发扩展插件Vue.js devtools安装使用
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        仓库在这里
+重要提示:
+
+一定要完整版,因为精简版会把开发部分去掉,所以不支持这个.
+只支持chrome,所以去chrome商店去下载吧
+安装完成后,必须进入chrome扩展工具选项里,找到vue-devtools把下面的 允许访问文件网址 勾选上
+这样用F12打开开发工具栏,最后一项就能看到 vue-devtools的身影了.
+
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-17</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/vue.js%E5%BC%80%E5%8F%91%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6Vue.js%20devtools%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/%E8%A7%A3%E5%86%B3%E8%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/">
+        解决老浏览器兼容问题
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言 现在框架都放弃了IE9以下的浏览器,不过中国的环境大家都知道的,没办法还是尽量满足吧.
+简介禁用IE兼容模式
+1234&lt;head&gt;  &lt;meta charset=&quot;utf-8&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;.....
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-14</time>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/%E8%A7%A3%E5%86%B3%E8%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/js%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/">
+        js二维数组定义和初始化三种方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  js的数组和php有些不同,他的定义方法,自定义下标只有一种方法 <code>var arr[&#39;a&#39;] = 1</code>,不能像php一样 <code>$arr = [&#39;a&#39;=&gt;1]</code>,还有种没有下标的自定义方法 就是下面方法一那种方法</p>
+<h2 id="方法一：直接定义并且初始化，这种遇到数量少的情况可以用"><a href="#方法一：直接定义并且初始化，这种遇到数量少的情况可以用" class="headerlink" title="方法一：直接定义并且初始化，这种遇到数量少的情况可以用"></a>方法一：直接定义并且初始化，这种遇到数量少的情况可以用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var _TheArray = [[&quot;0-1&quot;,&quot;0-2&quot;],[&quot;1-1&quot;,&quot;1-2&quot;],[&quot;2-1&quot;,&quot;2-2&quot;]]</span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/js%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/07/js%E4%B8%80%E4%BA%9B%E9%9A%90%E5%BC%8F%E5%86%99%E6%B3%95%20!0%20!!0%20viod%200/">
+        js一些隐式写法 !0 !!0 viod 0
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言最近看别人的框架遇到一些别人的写法,虽然很直白,但是以前没遇到过,还是有点懵.不知道这种写法是遵从那那些编写规则,反正记录一下已被后面查找.
+简单说明123456789101112131415//其实这个很直白了 因为一般bool值 表示 ture 为 1 false 为 0!0 == true !!0 == false //但是 !0 === true 这是错的 恒等于 是不会转义类型...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-07-01</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/07/js%E4%B8%80%E4%BA%9B%E9%9A%90%E5%BC%8F%E5%86%99%E6%B3%95%20!0%20!!0%20viod%200/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/jquery%E5%A2%9E%E5%8A%A0css%E6%A0%B7%E5%BC%8F/">
+        jquery增加css样式
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言今天脑袋陷入了打结中,jquery改变样式.遇到一个什么情况,css是个元素样式,不是针对具体的某个类,并且后添加的样式,通过jquery无法找到,所以想改这个样式特别麻烦.
+解决与思考  jquery只能选定出现在DOM上的元素来更改他的css样式.为什么这么说呢,css的写法是这样的,一般先是定义一个根类,然后在子类再去分别定义特殊属性.如果这样的话,jquery能选择操作子类的样式...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-28</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/jquery%E5%A2%9E%E5%8A%A0css%E6%A0%B7%E5%BC%8F/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/js%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%B0%E6%9C%80%E5%90%8E%E5%87%A0%E4%BD%8D/">
+        js截取字符串到最后几位
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这里唯一要点是 substr() 是截取字符串,不过和php不同的是 第二个参数不能为负数,也就是不能倒着数.所以只能用字符串长度减去要减掉的长度,得到截取的位置
+12var uri = &#x27;F:\phpStudy\WWW\kod\static\js\lib\editormd\css&#x27;;uri.substr(0,(uri.length-11))
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/js%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%B0%E6%9C%80%E5%90%8E%E5%87%A0%E4%BD%8D/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/JavaSript%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83%20%20AMD%E8%A7%84%E8%8C%83%E4%B8%8ECMD%E8%A7%84%E8%8C%83%E4%BB%8B%E7%BB%8D%20/">
+        JavaSript模块规范 AMD规范与CMD规范介绍
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+结合一些第三方模块构建工具，如CommonJS、RequireJS或者SeaJs，可以轻松实现代码的模块化。
+
+也就是说 这三个工具是组合各个组件的工具,最后打包成最后代码
+CommonJS 规范: 是同步加载模块AMD 规范: AMD（异步模块定义）是为浏览器环境设计的，因为 CommonJS 模块系统是同步加载的，当前浏览器环境还没有准备好同步加载模块的条件。
+前言 JavaSript...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/JavaSript%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83%20%20AMD%E8%A7%84%E8%8C%83%E4%B8%8ECMD%E8%A7%84%E8%8C%83%E4%BB%8B%E7%BB%8D%20/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/JS%20void%200%20%E8%A7%A3%E6%9E%90/">
+        JS void 0 解析
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言  在修改kod时遇到这个,不太了解作用于是查了下资料,详细看这里 JS魔法堂：从void 0 === undefined说起
+简单说下  在js函数里 return void 0 表示此函数无返回.  还有就是 undefined在JavaScript中并不属于保留字/关键字，因此在IE5.5~8中我们可以将其当作变量那样对其赋值（IE9+及其他现代浏览器中赋值给undefined将无...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/JS%20void%200%20%E8%A7%A3%E6%9E%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/JavaScript%E4%B8%AD%E7%9A%84%E9%80%97%E5%8F%B7/">
+        JavaScript中的逗号
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前言  开发时突然遇到js语句里很多逗号,一下子搞蒙了.才想起来,没有仔细研究过这个东西.
+简单说明
+直白的说,没有return时,返回最左边结果,有return时返回最右边结果,当return最后一个参数为void 0,将只执行操作无返回
+
+《javascript权威指南(6版)》说逗号运算符（,）：先计算左边的操作数，然后计算右边的操作数，最后返回右操作数的值。比如 var a=(1+1...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-22</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/JavaScript%E4%B8%AD%E7%9A%84%E9%80%97%E5%8F%B7/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2016/06/Sea.js%20%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/">
+        Sea.js 模块开发插件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  现在大部分前端开发,都用npm或者bower.因为这样不仅升级组件方便,而且兼容性也能得到保障.但是对于简单开发来说,过于庞大的组件也是比较麻烦的.所以这个Sea.js还是有一定存在价值的.</p>
+<p>  我也是在KodExplorer里发现这个插件的.没有太多使用,所以这里就点一下,以便以后记住.如果需要用就看官方吧,里面文档很详细的.</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        <time>2016-06-02</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+        
+      </div>
+      
+        <div>
+            <a class='readmore' href='/2016/06/Sea.js%20%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+  
+
+
+    
+  
+</div>
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    
+    
+      
+        <div class='copyright'>
+        <p>Copyright © 2020 <a href="/">黑石博客</a></p>
+
+        </div>
+      
+    
+      
+        
+          <div><div><p>本站使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://volantis.js.org/" data-pjax-state="">Volantis</a> 作为主题 | 由 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/" data-pjax-state="">Hexo</a> 强力驱动</p> </div></div>
+        
+      
+    
+    
+  </footer>
+
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+
+  <script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+    pjax_scrollrebeal();
+  });
+</script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "填写邮箱会收到回复提示！粘贴图片可直接上传~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "xxxxxxxxxxx",
+      appKey: "xxxxxxxxxxxxxxxxx",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+      master: '[fc2c9b067f65c9e2d7057ba797f7cfca]',
+      friends: '[104e5bfa98048a2dac66f28ca4d4d846,e399c5e8f4b4b8b86fc88e2b5bd04497,32d39099d6da89788fe3827cb90b1eb7,a5c27d1df34fcd4d8195e7e7d16675d4,09c82fd631755bf5dbb04b4189225637,b548550ae129b82aa01b60e18ccbf141,6a565e6c47127afdd40d5d46089db2c5,4a713ec085a4431f15a8da0942656713&#34;,58bc3a8cecadf26a676e1b8f217698bc,aaf4fe5dd76d0a1390cbd08cdb16c05f,0a106ca9ec8d5e8a2d14f99e5b8bd863,3ecc56d90844b70e49d9f8a61e9cd98c,8a6f99e8ce4af26a93f20c0cbab8a186,5392ad0ec563aa56f6faf597ef966762,6bcf44de7033a4451f38d576fb6e6822,135ae111f8fcfeecc1ea1f06fde149ab]'
+    })
+  }
+
+  function newcomment() {
+
+function queryLeanCloud(k) {
+  let root = this;
+  let len = arguments.length;
+  if (len == 1) {
+    let notExist = new AV.Query("Comment");
+    notExist.doesNotExist('rid');
+    let isEmpty = new AV.Query("Comment");
+    isEmpty.equalTo('rid', '');
+    let q = AV.Query.or(notExist, isEmpty);
+    if (k === '*') q.exists('url');
+    else q.equalTo('url', decodeURI(k));
+    q.addDescending('createdAt');
+    q.addDescending('insertedAt');
+    return q;
+  } else {
+    let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+    let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+    return AV.Query.doCloudQuery(cql)
+  }
+}
+var valine = new Valine({
+      el: '#valine_container_ba',
+      notify: false,
+      verify: false,
+      app_id: 'xxxxxxxxxxx',
+      app_key: 'xxxxxxxxxxxxxxxxx',
+      placeholder: '发表您的意见，让我们一起交流，共同提高吧...',
+      serverURLs: 'https://xxxx'
+});
+
+//判断博主，heson改为自己的昵称
+function bozhu(e){
+    if (e == "heson"){
+        nick = e + '[博主]'
+        return nick;
+    } else {
+      return e
+    }
+}
+
+//判断网址
+function wangzhi(e){
+    http = e.slice(0,4)
+    https = e.slice(0,5)
+    if (http == "http" || https == "https" ){
+         return e
+    } else if (e == "" || e == null || e == undefined){
+      return e
+    } else {
+      e = 'http://'+ e
+      return e
+    }
+}
+
+
+
+
+//查询评论
+valine.Q('*').limit(7).find().then(function (comments) {
+  var hotComments = $("#hot-comments");
+  for (var i = 0; i < comments.length; i++) {
+    if (i === 0) {
+      console.log(comments[0]);
+    }
+    var nick = bozhu(comments[i]._serverData.nick);
+    var content = comments[i]._serverData.comment;
+    var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0, 50);
+    var url = comments[i]._serverData.url;
+    var link = wangzhi(comments[i]._serverData.link);
+    var updatedAt = timeago(comments[i].updatedAt);
+    var commentId = '#' + comments[i].id;
+    hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;发表于' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+  }
+});
+};
+
+
+
+  $(function () {
+    pjax_valine();
+    newcomment();
+  });
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'C1qWqsDatomXVctTafBuJADI-gzGzoHsz',
+    app_key: 'J4CujIoElz1Wo7yLUbY4SOO5',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://elickzhao.github.io' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://elickzhao.github.io' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://elickzhao.github.io' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/bb/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+        pjax_fancybox();
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+          newcomment();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>

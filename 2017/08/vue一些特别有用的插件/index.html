@@ -1,0 +1,3305 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/1.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>vue一些特别有用的插件 - elickzhao&#39;s Blog</title>
+  
+    <meta name="keywords" content="js,vue">
+  
+
+  
+    <meta name="description" content="Vue相关网站参考：　　Vue中文帮助网站：http://cn.vuejs.org/
+　　Vue github开源地址：https://github.com/vuejs/vue
+　　Vue.js专业中文社区：http://www.vue-js.com/
+　　前端开发Vue相关：http://www.opendig...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="elickzhao's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
+
+  
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" media="print" onload="this.media='all'">
+  
+
+
+  <!-- import link -->
+  
+
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+    <!-- 脚本懒加载函数 -->
+    <script>
+      function loadScript(src, cb) {
+        var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+        var script = document.createElement('script');
+        script.setAttribute('type','text/javascript');
+        if (cb) script.onload = cb;
+        script.setAttribute('src', src);
+        HEAD.appendChild(script);
+      }
+       </script>
+    
+</head>
+
+<body>
+  <header class="l_header auto shadow floatable blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://picup.heson10.com/img/upyun/hesonlogoyasuo.gif'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fal fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-search fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fal fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guestbook/
+                  
+                  
+                  
+                    id="guestbook"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fal fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fal fa-microphone-alt fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://box.heson10.com
+                  
+                  
+                  
+                    id="https:boxheson10com"
+                  >
+                  <i class='fal fa-heart fa-fw'></i>宝盒
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fal fa-paper-plane fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://yf.heson10.com/
+                  
+                  
+                  
+                    id="https:yfheson10com"
+                  >
+                  <i class='fal fa-donate fa-fw'></i>要饭
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://tongji.baidu.com/web/10000238090/overview/index?siteId=15706250
+                  
+                  
+                  
+                    id="https:tongjibaiducomweb10000238090overviewindex?siteId=15706250"
+                  >
+                  <i class='fal fa-industry fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.heson10.com/atom.xml
+                  
+                  
+                  
+                    id="https:wwwheson10comatomxml"
+                  >
+                  <i class='fal fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://leancloud.heson10.com
+                  
+                  
+                  
+                    id="https:leancloudheson10com"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fal fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="搜索..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fal fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fal fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-search fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fal fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guestbook/
+                  
+                  
+                  
+                    id="guestbook"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fal fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fal fa-microphone-alt fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://box.heson10.com
+                  
+                  
+                  
+                    id="https:boxheson10com"
+                  >
+                  <i class='fal fa-heart fa-fw'></i>宝盒
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fal fa-paper-plane fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://yf.heson10.com/
+                  
+                  
+                  
+                    id="https:yfheson10com"
+                  >
+                  <i class='fal fa-donate fa-fw'></i>要饭
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://tongji.baidu.com/web/10000238090/overview/index?siteId=15706250
+                  
+                  
+                  
+                    id="https:tongjibaiducomweb10000238090overviewindex?siteId=15706250"
+                  >
+                  <i class='fal fa-industry fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.heson10.com/atom.xml
+                  
+                  
+                  
+                    id="https:wwwheson10comatomxml"
+                  >
+                  <i class='fal fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://leancloud.heson10.com
+                  
+                  
+                  
+                    id="https:leancloudheson10com"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper post featured' style="display: none;">
+        <canvas id="header_canvas" style="position:absolute;bottom:0;z-index: 1;" width="900" height="350"></canvas>
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://picup.heson10.com/img/upyun/home_top_bg.webp"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+      <img no-lazy class='logo' src='https://picup.heson10.com/img/upyun/heson10logo5.png'/>
+    
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              id="home">
+              <i class='fad fa-home fa-fw'></i><p>首页</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fad fa-archive fa-fw'></i><p>归档</p>
+            </a>
+          
+            <a href="/bb/"
+              
+              
+              id="bb">
+              <i class='fad fa-microphone-alt fa-fw'></i><p>说说</p>
+            </a>
+          
+            <a href="/links/"
+              
+              
+              id="links">
+              <i class='fad fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://box.heson10.com"
+              
+              
+              id="https:boxheson10com">
+              <i class='fad fa-heart fa-fw'></i><p>宝盒</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://yf.heson10.com/"
+              
+              
+              id="https:yfheson10com">
+              <i class='fad fa-donate fa-fw'></i><p>要饭</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://travellings.now.sh/"
+              
+              
+              id="https:travellingsnowsh">
+              <i class='fad fa-paper-plane fa-fw'></i><p>开往</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">vue一些特别有用的插件</div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+<aside class='l_side'>
+  <div style="margin-bottom: 16px;border-radius: 8px;" class='shadow floatable widget_author desktop'>
+    <div id="zuozhebg" class="newauthor"
+      style="background: url(https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png) center center no-repeat;background-size:cover">
+    </div>
+    <div class="relive_widget_v3">
+      <div class="box-author-info">
+        <div class="author-face">
+          <a href="/about" target="_blank" rel="nofollow" title="关于elickzhao">
+            <img no-lazy alt="" src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png"
+              class="avatar avatar-200 photo" height="200" width="200"> </a>
+        </div>
+        <div class="author-name">elickzhao</div>
+        <div id="author-one" class="author-one">
+          <script>
+            var binft = function (r) {
+              function t() {
+                return b[Math.floor(Math.random() * b.length)]
+              }
+              function e() {
+                return String.fromCharCode(94 * Math.random() + 33)
+              }
+              function n(r) {
+                for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                  var l = document.createElement("span");
+                  l.textContent = e(), l.style.color = t(), n.appendChild(l)
+                }
+                return n
+              }
+              function i() {
+                var t = o[c.skillI];
+                c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+              }
+              var l = "",
+                o = ["人生在勤，不索何获", "日日待明日,万事成蹉跎", "丈夫志四海，万里犹比邻", "还在看这里吗？", "能不能别看了？", "文章更精彩...."].map(function (r) {
+                  return r + ""
+                }),
+                a = 2,
+                g = 1,
+                s = 5,
+                d = 75,
+                b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+                c = {
+                  text: "",
+                  prefixP: -s,
+                  skillI: 0,
+                  skillP: 0,
+                  direction: "forward",
+                  delay: a,
+                  step: g
+                };
+              i()
+            };
+            binft(document.getElementById('author-one'));
+          </script>
+
+
+        </div>
+        <div class="site-state-wrap motion-element">
+          <nav class="site-state">
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+
+                <span class="site-state-item-count">268</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+  
+
+  
+  
+    
+    
+  
+
+  <section class="widget category shadow floatable desktop">
+    
+  <header>
+    
+      <a href='/categories/'><i class="fal fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/php%E5%BC%80%E5%8F%91/" href="/categories/php%E5%BC%80%E5%8F%91/"
+            id="categoriesphpE5BC80E58F91"
+            ><div class='name'>php开发</div><div class='badge'>(24)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"
+            id="categoriesE5898DE7ABAFE68A80E69CAF"
+            ><div class='name'>前端技术</div><div class='badge'>(39)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"
+            id="categoriesE69C8DE58AA1E599A8E79BB8E585B3E68A80E69CAF"
+            ><div class='name'>服务器相关技术</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"
+            id="categoriesE69C8DE58AA1E599A8E7ABAF"
+            ><div class='name'>服务器端</div><div class='badge'>(11)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%B5%8B%E8%AF%95/" href="/categories/%E6%B5%8B%E8%AF%95/"
+            id="categoriesE6B58BE8AF95"
+            ><div class='name'>测试</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+
+  
+    
+    
+
+<section class="widget text shadow floatable desktop">
+  
+  <header>
+    
+      <i class="fal fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <div id="hot-comments"></div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fal fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>268 篇</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>已运行时间：</div>
+          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
+        </div>
+        <script>
+          var BirthDay = new Date(new Date('2020/07/06'));
+          var today = new Date();
+          var timeold = (today.getTime() - BirthDay.getTime());
+          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
+          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
+        </script>
+      
+
+
+      
+        <div class="webinfo-item">
+          <div>本站总字数：</div>
+          <div>121.4k 字</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站访客数：</div>
+          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站总访问量：</div>
+          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>最后活动时间：</div>
+          
+            <div id="last-update" style="display: none;">Fri Sep 10 2021 00:34:51 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-09-10 日</div>
+          
+        </div>
+        
+        <script>
+          function timeago(dateTimeStamp) {
+              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
+              var hour = minute * 60;
+              var day = hour * 24;
+              var week = day * 7;
+              var month = day * 30;
+              var now = new Date().getTime(); //获取当前时间毫秒
+              var diffValue = now - dateTimeStamp; //时间差
+              if (diffValue < 0) {
+                  return;
+              }
+              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
+              var hourC = diffValue / hour;
+              var dayC = diffValue / day;
+              var weekC = diffValue / week;
+              var monthC = diffValue / month;
+              if (monthC >= 1 && monthC <= 3) {
+                  result = " " + parseInt(monthC) + " 月前"
+              } else if (weekC >= 1 && weekC <= 3) {
+                  result = " " + parseInt(weekC) + " 周前"
+              } else if (dayC >= 1 && dayC <= 6) {
+                  result = " " + parseInt(dayC) + " 天前"
+              } else if (hourC >= 1 && hourC <= 23) {
+                  result = " " + parseInt(hourC) + " 小时前"
+              } else if (minC >= 1 && minC <= 59) {
+                  result = " " + parseInt(minC) + " 分钟前"
+              } else if (diffValue >= 0 && diffValue <= minute) {
+                  result = "刚刚"
+              } else {
+                  var datetime = new Date();
+                  datetime.setTime(dateTimeStamp);
+                  var Nyear = datetime.getFullYear();
+                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+                  result = Nyear + "-" + Nmonth + "-" + Ndate
+              }
+              return result;
+          }
+          var lastUpDate = document.getElementById('last-update').innerHTML;
+          try {
+            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
+          } catch (error) {
+            document.getElementById('last-update-show').innerHTML = '2021-09-10 日';
+          }
+        </script>
+        
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow floatable desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fal fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E5%8F%82%E8%80%83%EF%BC%9A"><span class="toc-text">Vue相关网站参考：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E6%8F%92%E4%BB%B6"><span class="toc-text">构建插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UI%E7%BB%84%E4%BB%B6"><span class="toc-text">UI组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6"><span class="toc-text">开发框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E5%BA%93"><span class="toc-text">实用库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-text">服务端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7"><span class="toc-text">辅助工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">应用实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo%E7%A4%BA%E4%BE%8B"><span class="toc-text">Demo示例</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+<div class='l_main'>
+  <article
+  class="article post white-box reveal md shadow floatable article-type-post"
+  id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        vue一些特别有用的插件
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png">
+    <p>Heson</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fal fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Aug 31, 2017</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="vue一些特别有用的插件" data-path="/2017/08/vue%E4%B8%80%E4%BA%9B%E7%89%B9%E5%88%AB%E6%9C%89%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/">
+        <i class="fal fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+
+  
+  <h2 id="Vue相关网站参考："><a href="#Vue相关网站参考：" class="headerlink" title="Vue相关网站参考："></a>Vue相关网站参考：</h2><p>　　<strong>Vue中文帮助网站</strong>：<a target="_blank" rel="noopener" href="http://cn.vuejs.org/">http://cn.vuejs.org/</a></p>
+<p>　　<strong>Vue github开源地址</strong>：<a target="_blank" rel="noopener" href="https://github.com/vuejs/vue">https://github.com/vuejs/vue</a></p>
+<p>　　<strong>Vue.js专业中文社区</strong>：<a target="_blank" rel="noopener" href="http://www.vue-js.com/">http://www.vue-js.com/</a></p>
+<p>　　<strong>前端开发Vue相关</strong>：<a target="_blank" rel="noopener" href="http://www.opendigg.com/tags/front-vue">http://www.opendigg.com/tags/front-vue</a></p>
+<p>　　<strong>本文开源地址</strong>：<a target="_blank" rel="noopener" href="https://github.com/yonghu86/awesome-github-vue">https://github.com/yonghu86/awesome-github-vue</a></p>
+<p>　　本文主要是收集与整理Vue相关的开源资料，以供需要的朋友参考。主要包含以下几方面的内容：</p>
+<p>　　UI组件、开发框架、实用库、服务端、辅助工具、应用实例、Demo示例</p>
+<h2 id="构建插件"><a href="#构建插件" class="headerlink" title="构建插件"></a>构建插件</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/annnhan/vue-spa-template">vue-spa-template</a></td>
+<td>构建vue全家桶,Github说明很详细.<a target="_blank" rel="noopener" href="http://www.cnblogs.com/axl234/p/6808599.html">参考文档:基于 vue 全家桶的 spa 项目脚手架</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/SimulatedGREG/electron-vue">electron-vue</a></td>
+<td>构建electron时用的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/cooking/blob/master/README_zh-cn.md">cooking</a></td>
+<td>vue特别简单的构建工具,不过东西可能没有上面vue-spa-template那么全. <a target="_blank" rel="noopener" href="https://cookingjs.github.io/zh-cn/intro.html">中文文档</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Metnew/vue-element-starter">Vue-Element-Starter</a></td>
+<td>vue启动页.这个已经有了个后台框架的样子了.基本的东西已经弄好,可以快速开发了</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/cristijora/vue-paper-dashboard">Vue Paper Dashboard</a></td>
+<td>这个真的很漂亮 就是不能用作大型后台</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-bulma/vue-admin">Vue Admin Panel Framework</a></td>
+<td>vue和buluma的后台好像是重复两个啊</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/misterGF/CoPilot">CoPilot  </a></td>
+<td>这个也不错 是AdminLTE模板做的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/mrholek/CoreUI-Free-Bootstrap-Admin-Template">CoreUI-Free-Bootstrap-Admin-Template</a></td>
+<td>这个也不错 是CoreUI模板做的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/epicmaxco/vuestic-admin">Vuestic Admin Dashboard</a></td>
+<td>这个也不错 是 Bootstrap 4.模板做的</td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<h2 id="UI组件"><a href="#UI组件" class="headerlink" title="UI组件"></a>UI组件</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/element">element</a>   ★9305</td>
+<td>饿了么出品的Vue2的web UI工具套件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/airyland/vux">Vux</a> ★6802</td>
+<td>基于Vue和WeUI的组件库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/mint-ui">mint-ui</a> ★4776</td>
+<td>- Vue 2的移动UI元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/iview/iview">iview</a> ★4458</td>
+<td>- 基于 Vuejs 的开源 UI 组件库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/JosephusPaye/Keen-UI">Keen-UI</a> ★2363</td>
+<td>- 轻量级的基本UI组件合集</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vuematerial/vue-material">vue-material</a> ★2207</td>
+<td>- 通过Vue Material和Vue 2建立精美的app应用</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/museui/muse-ui">muse-ui</a> ★1992</td>
+<td>- 三端样式一致的响应式 UI 库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vuetifyjs/vuetify">vuetify</a> ★1678</td>
+<td>- 为移动而生的Vue JS 2组件框架</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/wangdahoo/vonic">vonic</a> ★1494</td>
+<td>- 快速构建移动端单页应用</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/egoist/eme">eme</a> ★1390</td>
+<td>- 优雅的Markdown编辑器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/monterail/vue-multiselect">vue-multiselect</a> ★1166</td>
+<td>- Vue.js选择框解决方案</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ratiw/vue-table">vue-table</a> ★824</td>
+<td>- 简化数据表格</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/OYsun/VueCircleMenu">VueCircleMenu</a> ★776</td>
+<td>- 漂亮的vue圆环菜单</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Coffcer/vue-chat">vue-chat</a> ★748</td>
+<td>- vuejs和vuex及webpack的聊天示例</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/luojilab/radon-ui">radon-ui</a> ★633</td>
+<td>- 快速开发产品的Vue组件库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/MopTym/vue-waterfall">vue-waterfall</a> ★605</td>
+<td>- Vue.js的瀑布布局组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/myronliu347/vue-carbon">vue-carbon</a> ★595</td>
+<td>- 基于 vue 开发MD风格的移动端</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/FE-Driver/vue-beauty">vue-beauty</a> ★569</td>
+<td>- 由vue和ant design创建的优美UI组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/chenz24/vue-blu">vue-blu</a> ★557</td>
+<td>- 帮助你轻松创建web应用</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/taylorchen709/vueAdmin">vueAdmin</a> ★556</td>
+<td>- 基于vuejs2和element的简单的管理员模板</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vuejs/vue-syntax-highlight">vue-syntax-highlight</a> ★551</td>
+<td>- Sublime Text语法高亮</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/vue-infinite-scroll">vue-infinite-scroll</a> ★524</td>
+<td>- VueJS的无限滚动指令</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/David-Desmaisons/Vue.Draggable">Vue.Draggable</a> ★493</td>
+<td>- 实现拖放和视图模型数组同步</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/surmon-china/vue-awesome-swiper">vue-awesome-swiper</a> ★476</td>
+<td>- vue.js触摸滑动组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/jinzhe/vue-calendar">vue-calendar</a> ★465</td>
+<td>- 日期选择插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/pi0/bootstrap-vue">bootstrap-vue</a> ★458</td>
+<td>- 应用于Vuejs2的Twitter的Bootstrap 4组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/vue-swipe">vue-swipe</a> ★361</td>
+<td>- VueJS触摸滑块</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/vue-amap">vue-amap</a> ★346</td>
+<td>- 基于Vue 2和高德地图的地图组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/apertureless/vue-chartjs">vue-chartjs</a> ★333</td>
+<td>- vue中的Chartjs的封装</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hilongjw/vue-datepicker">vue-datepicker</a> ★331</td>
+<td>- 日历和日期选择组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/jrainlau/markcook">markcook</a> ★318</td>
+<td>- 好看的markdown编辑器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/GuillaumeLeclerc/vue-google-maps">vue-google-maps</a> ★287</td>
+<td>- 带有双向数据绑定Google地图组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hilongjw/vue-progressbar">vue-progressba</a>r ★248</td>
+<td>- vue轻量级进度条</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/alessiomaffeis/vue-picture-input">vue-picture-input</a> ★236</td>
+<td>- 移动友好的图片文件输入组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/PeachScript/vue-infinite-loading">vue-infinite-loading</a> ★224</td>
+<td>- VueJS的无限滚动插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/lian-yue/vue-upload-component">vue-upload-component</a> ★204</td>
+<td>- Vuejs文件上传组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Haixing-Hu/vue-datetime-picker">vue-datetime-picker</a> ★197</td>
+<td>- 日期时间选择控件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/wangdahoo/vue-scroller">vue-scroller</a> ★196</td>
+<td>- Vonic UI的功能性组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/icai/vue2-calendar">vue2-calendar</a> ★181</td>
+<td>- 支持lunar和日期事件的日期选择器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/surmon-china/vue-video-player">vue-video-playe</a>r ★178</td>
+<td>- VueJS视频及直播播放器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Wanderxx/vue-fullcalendar">vue-fullcalendar</a> ★176</td>
+<td>- 基于vue.js的全日历组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ccforward/rubik">rubik</a> ★170</td>
+<td>- 基于Vuejs2的开源 UI 组件库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/OYsun/VueStar">VueStar</a> ★169</td>
+<td>- 带星星动画的vue点赞按钮</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/egoist/vue-mugen-scroll">vue-mugen-scroll</a> ★167</td>
+<td>- 无限滚动组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/mint-ui/mint-loadmore">mint-loadmore</a> ★167</td>
+<td>- VueJS的双向下拉刷新组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/matfish2/vue-tables-2">vue-tables-2 </a>★162</td>
+<td>- 显示数据的bootstrap样式网格</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Akryum/vue-virtual-scroller">vue-virtual-scroller</a> ★158</td>
+<td>- 带任意数目数据的顺畅的滚动</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/SimonZhangITer/DataVisualization">DataVisualization</a> ★149</td>
+<td>- 数据可视化</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/surmon-china/vue-quill-editor">vue-quill-editor</a> ★149</td>
+<td>- 基于Quill适用于Vue2的富文本编辑器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hifarer/Vueditor">Vueditor</a> ★138</td>
+<td>- 所见即所得的编辑器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/PeakTai/vue-html5-editor">vue-html5-editor</a> ★132</td>
+<td>- html5所见即所得编辑器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/vue-msgbox">vue-msgbox</a> ★127</td>
+<td>- vuejs的消息框</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/warpcgd/vue-slider">vue-slider</a> ★126</td>
+<td>- vue 滑动组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Vanthink-UED/vue-core-image-upload">vue-core-image-upload</a> ★124</td>
+<td>- 轻量级的vue上传插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hilongjw/vue-slide">vue-slide</a> ★121</td>
+<td>- vue轻量级滑动组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/JALBAA/vue-lazyload-img">vue-lazyload-img</a> ★118</td>
+<td>- 移动优化的vue图片懒加载插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Alex-fun/vue-drag-and-drop-list">vue-drag-and-drop-list</a> ★114</td>
+<td>- 创建排序列表的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/MatteoGabriele/vue-progressive-image">vue-progressive-image</a> ★107</td>
+<td>- Vue的渐进图像加载插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vuwe/vuwe">vuwe</a> ★107</td>
+<td>- 基于微信WeUI所开发的专用于Vue2的组件库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/rowanwins/vue-dropzone">vue-dropzone</a> ★105</td>
+<td>- 用于文件上传的Vue组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hchstera/vue-charts">vue-charts</a> ★101</td>
+<td>- 轻松渲染一个图表</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/weilao/vue-swiper">vue-swiper</a> ★95</td>
+<td>- 易于使用的滑块组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/littlewin-wang/vue-images">vue-images</a> ★93</td>
+<td>- 显示一组图片的lightbox组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Wlada/vue-carousel-3d">vue-carousel-3d</a> ★91</td>
+<td>- VueJS的3D轮播组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/QingWei-Li/vue-region-picker">vue-region-picker</a> ★89</td>
+<td>- 选择中国的省份市和地区</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/cngu/vue-typer">vue-typer</a> ★89</td>
+<td>- 模拟用户输入选择和删除文本的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/NewDadaFE/vue-impression">vue-impression</a> ★88</td>
+<td>- 移动Vuejs2 UI元素</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/galenyuan/vue-datatable">vue-datatable</a> ★87</td>
+<td>- 使用Vuejs创建的DataTableView</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/santiblanko/vue-instant">vue-instant</a> ★86</td>
+<td>- 轻松创建自动提示的自定义搜索控件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hilongjw/vue-dragging">vue-dragging</a> ★86</td>
+<td>- 使元素可以拖拽</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/NightCatSama/vue-slider-component">vue-slider-component</a> ★85</td>
+<td>- 在vue1和vue2中使用滑块</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/BosNaufal/vue2-loading-bar">vue2-loading-bar</a> ★76</td>
+<td>- 最简单的仿Youtube加载条视图</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/weifeiyue/vue-datepicker">vue-datepicker</a> ★75</td>
+<td>- 漂亮的Vue日期选择器组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hilongjw/vue-video">vue-video</a> ★70</td>
+<td>- Vue.js的HTML5视频播放器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/vue-toast-mobile">vue-toast-mobile</a> ★68</td>
+<td>- VueJS的toast插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/dai-siki/vue-image-crop-upload">vue-image-crop-upload</a> ★67</td>
+<td>- vue图片剪裁上传组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Akryum/vue-tooltip">vue-tooltip</a> ★66</td>
+<td>- 带绑定信息提示的提示工具</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/weizhenye/vue-highcharts">vue-highcharts</a> ★66</td>
+<td>- HighCharts组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/surmon-china/vue-touch-ripple">vue-touch-ripple</a> ★62</td>
+<td>- vuejs的触摸ripple组件,点击后的效果</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Kocisov/coffeebreak">coffeebreak</a> ★61</td>
+<td>- 实时编辑CSS组件工具</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/coderdiaz/vue-datasource">vue-datasource</a> ★60</td>
+<td>- 创建VueJS动态表格</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/phoenixwong/vue2-timepicker">vue2-timepicker</a> ★60</td>
+<td>- 下拉时间选择器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Bubblings/vue-date-picker">vue-date-picker</a> ★59</td>
+<td>- VueJS日期选择器组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/BosNaufal/vue-scrollbar">vue-scrollbar</a> ★58</td>
+<td>- 最简单的滚动区域组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/CroudSupport/vue-quill">vue-quill</a> ★56</td>
+<td>- vue组件构建quill编辑器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/phanan/vue-google-signin-button">vue-google-signin-button</a> ★55</td>
+<td>- 导入谷歌登录按钮</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/MMF-FE/vue-svgicon">vue-svgico</a>n ★53</td>
+<td>- 创建svg图标组件的工具</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/bkzl/vue-float-label">vue-float-label</a> ★49</td>
+<td>- VueJS浮动标签模式</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Dafrok/vue-baidu-map">vue-baidu-map</a> ★46</td>
+<td>- 基于 Vue 2的百度地图组件库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/nicolasbeauvais/vue-social-sharing">vue-social-sharing</a> ★45</td>
+<td>- 社交分享组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/davidroyer/vue2-editor">vue2-editor</a> ★44</td>
+<td>- HTML编辑器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Ginhing/vue-tagsinput">vue-tagsinput</a> ★41</td>
+<td>- 基于VueJS的标签组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/shhdgit/vue-easy-slider">vue-easy-slider</a> ★41</td>
+<td>- Vue 2.x的滑块组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-bulma/datepicker">datepicker</a> ★38</td>
+<td>- 基于flatpickr的时间选择组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/miaolz123/vue-chart">vue-chart</a> ★37</td>
+<td>- 强大的高速的vue图表解析</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/yunyi1895/vue-music-master">vue-music-master</a> ★37</td>
+<td>- vue手机端网页音乐播放器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-bulma/handsontable">handsontable</a> ★35</td>
+<td>- 网页表格组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/F-loat/vue-simplemde">vue-simplemde</a> ★35</td>
+<td>- VueJS的Markdown编辑器组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/myronliu347/vue-popup-mixin">vue-popup-mixin</a> ★35</td>
+<td>- 用于管理弹出框的遮盖层</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/fangyongbao/cubeex">cubeex</a> ★33</td>
+<td>- 包含一套完整的移动UI</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/CroudSupport/vue-fullcalendar">vue-fullcalendar</a> ★32</td>
+<td>- vue FullCalendar封装</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/loujiayu/vue-material-design">vue-material-design</a> ★32</td>
+<td>- Vue MD风格组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/bbonnin/vue-morris">vue-morris</a> ★31</td>
+<td>- Vuejs组件封装Morrisjs库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/tianyong90/we-vue">we-vue</a> ★30</td>
+<td>- Vue2及weui1开发的组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/legeneek/vue-image-clip">vue-image-clip</a> ★29</td>
+<td>- 基于vue的图像剪辑组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/jbaysolutions/vue-bootstrap-table">vue-bootstrap-table</a> ★29</td>
+<td>- 可排序可检索的表格</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/wyzant-dev/vue-radial-progress">vue-radial-progress</a> ★28</td>
+<td>- Vue.js放射性进度条组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/staskjs/vue-slick">vue-slick</a> ★28</td>
+<td>- 实现流畅轮播框的vue组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/bajian/vue-pull-to-refresh">vue-pull-to-refresh</a> ★27</td>
+<td>- Vue2的上拉下拉</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/matfish2/vue-form-2">vue-form-2</a> ★26</td>
+<td>- 全面的HTML表单管理的解决方案</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-comps/vue-side-nav">vue-side-nav</a> ★26</td>
+<td>- 响应式的侧边导航 (这个一般)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/mint-ui/mint-indicator">mint-indicator</a> ★26</td>
+<td>- VueJS移动加载指示器插件 (没有demo不知道干啥的)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-bulma/chartjs">chartjs</a> ★24</td>
+<td>- Vue Bulma的chartjs组件 (这是组件之一 很少单独用)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/suguangwen/vue-scroll">vue-scroll</a> ★24</td>
+<td>- vue滚动</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/BosNaufal/vue-ripple">vue-ripple</a> ★24</td>
+<td>- 制作谷歌MD风格涟漪效果的Vue组件 (这跟上面的点击效果一样)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/icebob/vue-touch-keyboard">vue-touch-keyboard</a> ★22</td>
+<td>- VueJS虚拟键盘组件 (这个有点意思)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ankane/vue-chartkick">vue-chartkick</a> ★22</td>
+<td>- VueJS一行代码实现优美图表</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/lisiyizu/vue-ztree">vue-ztree</a> ★21</td>
+<td>- 用 vue 写的树层级组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/shiye515/vue-m-carousel">vue-m-carousel</a> ★20</td>
+<td>- vue 移动端轮播组件 (这个很一般 参考学习还行)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/dai-siki/vue-datepicker-simple">vue-datepicker-simple</a> ★20</td>
+<td>- 基于Vue的日期选择器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/alexqdjay/vue-tabs">vue-tabs</a> ★20</td>
+<td>- 多tab页轻型框架</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/aweiu/vue-verify-pop">vue-verify-pop</a> ★19</td>
+<td>- 带气泡提示的Vue校验插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-comps/vue-parallax">vue-parallax</a> ★15</td>
+<td>- 整洁的视觉效果</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/JackGit/vue-img-loader">vue-img-loader</a> ★14</td>
+<td>- 图片加载UI组件 (应该是不好用)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/eduardostuart/vue-typewriter">vue-typewriter</a> ★13</td>
+<td>- vue组件类型</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Teddy-Zhu/vue-smoothscroll">vue-smoothscrol</a>l ★12</td>
+<td>- smoothscroll的VueJS版本</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/xinxingyu/vue-city">vue-city</a> ★10</td>
+<td>- 城市选择器 (这个不错)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/weibangtuo/vue-tree">vue-tree</a> ★10</td>
+<td>- vue树视图组件 (这个不错)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Treri/vue-ios-alertview">vue-ios-alertview</a> ★8</td>
+<td>- iOS7+ 风格的alertview服务</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ibufu/dd-vue-component">dd-vue-component</a> ★7</td>
+<td>- 订单来了的公共组件库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/yeseason/paco-ui-vue">paco-ui-vue</a> ★7</td>
+<td>- PACOUI的vue组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/doodlewind/vue-cmap">vue-cmap</a> ★5</td>
+<td>- Vue China map可视化组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/steven5538/vue-button">vue-button</a> ★4</td>
+<td>- Vue按钮组件</td>
+</tr>
+</tbody></table>
+<h2 id="开发框架"><a href="#开发框架" class="headerlink" title="开发框架"></a>开发框架</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vuejs/vue">vue.js</a> ★45466</td>
+<td>- 流行的轻量高效的前端组件化方案</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/fundon/vue-admin">vue-admin</a> ★3222</td>
+<td>- Vue管理面板框架</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/SimulatedGREG/electron-vue">electron-vue</a> ★1273</td>
+<td>- Electron及VueJS快速启动样板</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/petervmeijgaard/vue-2.0-boilerplate">vue-2.0-boilerplate</a> ★241</td>
+<td>- Vue2单页应用样板​</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hanan198501/vue-spa-template">vue-spa-template</a> ★223</td>
+<td>- 前后端分离后的单页应用开发</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/nolimits4web/Framework7-Vue">Framework7-Vue</a> ★210</td>
+<td>- VueJS与Framework7结合</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/wangxg2016/vue-bulma">vue-bulma</a> ★132</td>
+<td>- 轻量级高性能MVVM Admin UI框架</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/rodzzlessa24/vue-webgulp">vue-webgulp</a> ★100</td>
+<td>- 仿VueJS Vue loader示例</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Metnew/vue-element-starter">vue-element-starter</a> ★34</td>
+<td>- vue启动页</td>
+</tr>
+</tbody></table>
+<h2 id="实用库"><a href="#实用库" class="headerlink" title="实用库"></a>实用库</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vuejs/vuex">vuex</a> ★5997</td>
+<td>- 专为 Vue.js 应用程序开</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/monterail/vuelidate">vuelidate</a> ★750</td>
+<td>- 简单轻量级的基于模块的Vue.js验证</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/zerqu/qingcheng">qingcheng</a> ★677</td>
+<td>- qingcheng主题 (不知道这个是干啥用的)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/vue-desktop">vue-desktop</a> ★461</td>
+<td>- 创建管理面板网站的UI库 (演示网站都没了 唉)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/declandewet/vue-meta">vue-meta</a> ★257</td>
+<td>- 管理app的meta信息</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/imcvampire/vue-axios">vue-axios</a> ★209</td>
+<td>- 将axios整合到</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/cenkai88/vue-svg-icon">vue-svg-icon</a> ★116</td>
+<td>- vue2的可变彩色svg图标方案</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/eddyerburgh/avoriaz">avoriaz</a> ★110</td>
+<td>- VueJS测试实用工具库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/lmk123/vue-framework7">vue-framework7</a> ★83</td>
+<td>- 结合VueJS使用的Framework7组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Coffcer/vue-bootstrap-modal">vue-bootstrap-modal</a> ★78</td>
+<td>- vue的Bootstrap样式组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/QingWei-Li/vuep">vuep</a> ★72</td>
+<td>- 用实时编辑和预览来渲染Vue组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Sopamo/vue-online">vue-online</a> ★67</td>
+<td>- reactive的在线和离线组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/yeyuqiudeng/vue-lazy-render">vue-lazy-render</a> ★66</td>
+<td>- 用于Vue组件的延迟渲染</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/apertureless/vue-password-strength-meter">vue-password-strength-meter</a> ★65</td>
+<td>- 交互式密码强度计 (这个不错)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/lynzz/element-admin">element-admin</a> ★57</td>
+<td>- 支持 vuecli 的 Element UI 的后台模板</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/SimulatedGREG/vue-electron">vue-electron</a> ★55</td>
+<td>- 将选择的API封装到Vue对象中的插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-bulma/cleave">vue-cleave</a> ★55</td>
+<td>- 基于cleave.js的Cleave组件 <a target="_blank" rel="noopener" href="http://nosir.github.io/cleave.js/">cleave.js演示</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/cklmercer/vue-events">vue-events</a> ★54</td>
+<td>- 简化事件的VueJS插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/iFgR/vue-shortkey">vue-shortkey</a> ★53</td>
+<td>- 应用于Vue.js的Vue-ShortKey 插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/kartsims/vue-cordova">vue-cordova</a> ★50</td>
+<td>- Cordova的VueJS插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/mlyknown/vue-gesture">vue-gesture</a> ★48</td>
+<td>- VueJS的手势事件插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/FranckFreiburger/http-vue-loader">http-vue-loader</a> ★46</td>
+<td>- 从html及js环境加载vue文件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/superman66/vue-qart">vue-qart</a> ★46</td>
+<td>- 用于qartjs的Vue2指令 生成二维码的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/gocanto/vuemit">vuemit</a> ★44</td>
+<td>- 处理VueJS事件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/icebob/vue-websocket">vue-websocket</a> ★42</td>
+<td>- VueJS的Websocket插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/pinguinjkeke/vue-local-storage">vue-local-storage</a> ★41</td>
+<td>- 具有类型支持的Vuejs本地储存插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ropbla9/vue-reactive-storage">vue-reactive-storage</a> ★35</td>
+<td>- vue插件的Reactive层,也是处理storage的</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/se-panfilov/vue-notifications">vue-notifications</a> ★32</td>
+<td>- 非阻塞 通知提示信息 库</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Coffcer/vue-lazy-component">vue-lazy-component</a> ★32</td>
+<td>- 懒加载组件或者元素的Vue指令</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/AStaroverov/v-media-query">v-media-query</a> ★32</td>
+<td>- vue中添加用于配合媒体查询的方法,  (其实是检测屏幕是否改变做出相应动作)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/dkfbasel/vuex-i18n">vuex-i18n</a> ★26</td>
+<td>- 定位插件  (这应该是多语言话的工具)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/David-Desmaisons/Vue.resize">Vue.resize</a> ★26</td>
+<td>- 检测HTML调整大小事件的vue指令</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/xanf/vuex-shared-mutations">vuex-shared-mutations</a> ★25</td>
+<td>- 分享某种Vuex mutations (这不太懂)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/BosNaufal/vue-file-base64">vue-file-base64</a> ★16</td>
+<td>- 将文件转换为Base64的vue组件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/imcvampire/vue-truncate-filter">vue-truncate-filter</a> ★9</td>
+<td>- 截断字符串的VueJS过滤器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/syropian/vue-input-autowidth">vue-input-autowidth</a> ★5</td>
+<td>- 基于内容自动调整文本输入的大小</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/yodfz/vue-lazyloadImg/blob/master/README.CN.md">vue-lazyloadImg</a> ★3</td>
+<td>- 图片懒加载插件</td>
+</tr>
+</tbody></table>
+<h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/nuxt/nuxt.js">nuxt.js</a> ★2743</td>
+<td>- 用于服务器渲染Vue app的最小化框架</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/danmademe/express-vue">express-vue</a> ★137</td>
+<td>- 简单的使用服务器端渲染vue.js</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ccforward/vue-ssr">Vue.js SSR Template</a> ★67</td>
+<td>- 非常简单的VueJS服务器端渲染模板</td>
+</tr>
+</tbody></table>
+<h2 id="辅助工具"><a href="#辅助工具" class="headerlink" title="辅助工具"></a>辅助工具</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/MiCottOn/DejaVue">DejaVue</a> ★543</td>
+<td>- Vuejs可视化及压力测试</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vue-play/vue-play">vue-play</a> ★445</td>
+<td>- 展示Vue组件的最小化框架</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/OYsun/vscode-VueHelper">vscode-VueHelper</a> ★185</td>
+<td>- 目前vscode最好的vue代码提示插件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/NetanelBasal/vue-generate-component">vue-generate-component</a> ★39</td>
+<td>- 轻松生成Vue js组件的CLI工具</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/xwpongithub/vue-multipage-cli">vue-multipage-cli</a> ★33</td>
+<td>- 简单的多页CLI</td>
+</tr>
+</tbody></table>
+<h2 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/phanan/koel">koel</a> ★7175</td>
+<td>- 基于网络的个人音频流媒体服务</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/pagekit/pagekit">pagekit</a> ★4021</td>
+<td>- 轻量级的CMS建站系统</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Vuedo/vuedo">vuedo</a> ★1040</td>
+<td>- 博客平台</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/jackhutu/jackblog-vue">jackblog-vue</a> ★943</td>
+<td>- 个人博客系统</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/lzxb/vue-cnode">vue-cnode</a> ★597</td>
+<td>- 重写vue版cnode社区</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ycwalker/CMS-of-Blog">CMS-of-Blog</a> ★405</td>
+<td>- 博客内容管理器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ciqulover/CMS-of-Blog">rss-reader</a> ★326</td>
+<td>- 简单的rss阅读器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ciqulover/CMS-of-Blog">vue-ghpages-blog</a> ★208</td>
+<td>- 依赖GitHub Pages无需本地生成的静态博客</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/wh469012917/swoole-vue-webim">swoole-vue-webim</a> ★97</td>
+<td>- Web版的聊天应用</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/surmon-china/surmon.me">vue-blog</a> ★33</td>
+<td>- 使用Vue2.0 和Vuex的vue-blog</td>
+</tr>
+</tbody></table>
+<h2 id="Demo示例"><a href="#Demo示例" class="headerlink" title="Demo示例"></a>Demo示例</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/shinygang/Vue-cnodejs">Vue-cnodejs</a> ★2113</td>
+<td>- 基于vue重写Cnodejs.org的webapp</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/javaSwing/NeteaseCloudWebApp">NeteaseCloudWebApp</a> ★1154</td>
+<td>- 高仿网易云音乐的webapp</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hilongjw/vue-zhihu-daily">vue-zhihu-daily</a> ★875</td>
+<td>- 知乎日报 with Vuejs</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/useryangtao/vue-wechat">vue-wechat</a> ★732</td>
+<td>- vue.js开发微信app界面</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/lzxb/vue2-demo">vue2-demo</a> ★699</td>
+<td>- 从零构建vue2 + vue-router + vuex 开发环境</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/liangxiaojuan/eleme">eleme</a> ★612</td>
+<td>- 高仿饿了么app商家详情</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/kenberkeley/vue-demo">vue-demo</a> ★575</td>
+<td>- vue简易留言板</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/zhengguorong/maizuo">maizuo</a> ★498</td>
+<td>- vue/vuex/redux仿卖座网</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Sioxas/vue-music">vue-music</a> ★485</td>
+<td>- Vue 音乐搜索播放</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/liangxiaojuan/vue-Meizi">vue-Meizi</a> ★394</td>
+<td>- vue最新实战项目</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/yatessss/zhihudaily-vue">zhihudaily-vue</a> ★386</td>
+<td>- 知乎日报web版</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/lavyun/vue-demo-kugouom/yatessss/zhihudaily-vue">vue-demo-kugou</a> ★310</td>
+<td>- vuejs仿写酷狗音乐webapp</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/canfoo/vue2.0-taopiaopiao">vue2.0-taopiaopiao</a> ★246</td>
+<td>- vue2.0与express构建淘票票页面</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/jiangjiu/vue-leancloud-blogom/canfoo/vue2.0-taopiaopiao">vue-leancloud-blog</a> ★239</td>
+<td>- 一个前后端完全分离的单页应用</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/superman66/vue2.x-douban">vue2.x-douban</a> ★188</td>
+<td>- Vue2实现简易豆瓣电影webApp</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ChuckCZC/vue-demo-maizuo">vue-demo-maizuo</a> ★188</td>
+<td>- 使用Vue2全家桶仿制卖座电影</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/liujians/vue-adminLte-vue-router">vue-adminLte-vue-router</a> ★162</td>
+<td>- vue和adminLte整合应用</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/superman66/vue-axios-github">vue-axios-github</a> ★157</td>
+<td>- 登录拦截登出功能</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/pomelo-chuan/Zhihu-Daily-Vue.js">Zhihu-Daily-Vue.js</a> ★134</td>
+<td>- Vuejs单页网页应用</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/CommanderXL/x-blog">x-blog</a> ★100</td>
+<td>- 开源的个人blog项目</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/xrr2016/vue-express-mongodb">vue-express-mongodb</a> ★96</td>
+<td>- 简单的前后端分离案例</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/secreter/websocket_chat">websocket_chat</a> ★91</td>
+<td>- 基于vue和websocket的多人在线聊天室</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/beidan/photoShare">photoShare</a> ★85</td>
+<td>- 基于图片分享的社交平台</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/lin-xin/notepad">notepad</a> ★77</td>
+<td>- 本地存储的记事本</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/elva2596/vueBlog">vueBlog</a> ★75</td>
+<td>- 前后端分离博客</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hql123/vue-ruby-china">vue-ruby-china</a> ★70</td>
+<td>- VueJS框架搭建的rubychina平台</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/littlewin-wang/Zhihu_Daily">Zhihu_Daily</a> ★70</td>
+<td>- 基于Vue和Nodejs的Web单页应用</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/vue-koa-demo">vue-koa-demo</a> ★60</td>
+<td>- 使用Vue2和Koa1的全栈demo</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/vincentSea/vue2.x-Cnode">vue2.x-Cnode</a> ★50</td>
+<td>- 基于vue全家桶的Cnode社区</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/WebCodeFarmer/houtai">houtai</a> ★44</td>
+<td>- 基于vue和Element的后台管理系统</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/zhoou/vue-cli-multipage-bootstrap">vue-cli-multipage-bootstrap</a> ★36</td>
+<td>- 将vue官方在线示例整合到组件中</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/GitaiQAQ/HyaReader">HyaReader</a> ★30</td>
+<td>- 移动友好的阅读器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/xrr2016/zhihu-daily">zhihu-daily</a> ★28</td>
+<td>- 轻松查看知乎日报内容</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Alex-xd/seeMusic">seeMusic</a> ★27</td>
+<td>- 跨平台云音乐播放器</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/Damonlw/vue-cnode">vue-cnode</a> ★22</td>
+<td>- 使用cNode社区提供的接口</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/sailengsi/sls-vuex2-demo">sls-vuex2-demo</a> ★20</td>
+<td>- vuex2商城购物车demo</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/youknowznm/vue-memo">vue-memo</a> ★7</td>
+<td>- 用 vue写的记事本应用</td>
+</tr>
+</tbody></table>
+
+  
+  
+  
+  <div class='footer'>
+    
+    
+    
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fal fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2017\08\API开发接口管理及mock数据\" title="API开发接口管理及mock数据" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">API开发接口管理及mock数据</span></a><a class="item" href="\2017\08\Axios 初探\" title="Axios 初探" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">Axios 初探</span></a><a class="item" href="\2016\12\cooking 简介 安装与使用\" title="cooking 简介 安装与使用" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">cooking 简介 安装与使用</span></a><a class="item" href="\2016\12\2016最后一天的纪念\" title="2016最后一天的纪念" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">2016最后一天的纪念</span></a></div></section></div>
+    
+    
+    <div class='copyright'>
+      <blockquote>
+        
+        
+        <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+        
+        
+        
+        <p>本文永久链接是：<a href=http://elickzhao.github.io/2017/08/vue%E4%B8%80%E4%BA%9B%E7%89%B9%E5%88%AB%E6%9C%89%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/>http://elickzhao.github.io/2017/08/vue%E4%B8%80%E4%BA%9B%E7%89%B9%E5%88%AB%E6%9C%89%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/</a></p>
+        
+        
+      </blockquote>
+    </div>
+    
+    
+  </div>
+  
+  
+  
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2018-02-04T15:05:37+08:00">
+  <a class='notlink'>
+    <i class="fal fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Feb 4, 2018</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fal fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vue/" rel="nofollow"><i class="fal fa-hashtag fa-fw" aria-hidden="true"></i><p>vue</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://elickzhao.github.io/2017/08/vue%E4%B8%80%E4%BA%9B%E7%89%B9%E5%88%AB%E6%9C%89%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/&title=vue一些特别有用的插件 - elickzhao's Blog&summary=Vue相关网站参考：　　Vue中文帮助网站：http://cn.vuejs.org/
+　　Vue github开源地址：https://github.com/vuejs/vue
+　　Vue.js专业中文社区：http://www.vue-js.com/
+　　前端开发Vue相关：http://www.opendigg.com/tags/front-vue
+　　本文开源地址：https://github.com/yonghu86/awesome-github-vue
+　　本文主要是收集与整理Vue相关的开源资料，以供需要的朋友参考。主要包含以下几方面的内容：
+　　UI组件、开发框架、实用库、服务端、辅助工具、应用实例、Demo示例
+构建插件
+
+
+名称
+说明
+
+
+
+vue-spa-template
+构建vue全家桶,Github说明很详细.参考文档:基于 vue 全家桶的 spa 项目脚手架
+
+
+electron-vue
+构建electron时用的
+
+
+cooking
+vue特别简单的构建工具,不过东西可能没有上面vue-spa-template那么全. 中文文档
+
+
+Vue-Element-Starter
+vue启动页.这个已经有了个后台框架的样子了.基本的东西已经弄好,可以快速开发了
+
+
+Vue Paper Dashboard
+这个真的很漂亮 就是不能用作大型后台
+
+
+Vue Admin Panel Framework
+vue和buluma的后台好像是重复两个啊
+
+
+CoPilot  
+这个也不错 是AdminLTE模板做的
+
+
+CoreUI-Free-Bootstrap-Admin-Template
+这个也不错 是CoreUI模板做的
+
+
+Vuestic Admin Dashboard
+这个也不错 是 Bootstrap 4.模板做的
+
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://elickzhao.github.io/2017/08/vue%E4%B8%80%E4%BA%9B%E7%89%B9%E5%88%AB%E6%9C%89%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/&title=vue一些特别有用的插件 - elickzhao's Blog&summary=Vue相关网站参考：　　Vue中文帮助网站：http://cn.vuejs.org/
+　　Vue github开源地址：https://github.com/vuejs/vue
+　　Vue.js专业中文社区：http://www.vue-js.com/
+　　前端开发Vue相关：http://www.opendigg.com/tags/front-vue
+　　本文开源地址：https://github.com/yonghu86/awesome-github-vue
+　　本文主要是收集与整理Vue相关的开源资料，以供需要的朋友参考。主要包含以下几方面的内容：
+　　UI组件、开发框架、实用库、服务端、辅助工具、应用实例、Demo示例
+构建插件
+
+
+名称
+说明
+
+
+
+vue-spa-template
+构建vue全家桶,Github说明很详细.参考文档:基于 vue 全家桶的 spa 项目脚手架
+
+
+electron-vue
+构建electron时用的
+
+
+cooking
+vue特别简单的构建工具,不过东西可能没有上面vue-spa-template那么全. 中文文档
+
+
+Vue-Element-Starter
+vue启动页.这个已经有了个后台框架的样子了.基本的东西已经弄好,可以快速开发了
+
+
+Vue Paper Dashboard
+这个真的很漂亮 就是不能用作大型后台
+
+
+Vue Admin Panel Framework
+vue和buluma的后台好像是重复两个啊
+
+
+CoPilot  
+这个也不错 是AdminLTE模板做的
+
+
+CoreUI-Free-Bootstrap-Admin-Template
+这个也不错 是CoreUI模板做的
+
+
+Vuestic Admin Dashboard
+这个也不错 是 Bootstrap 4.模板做的
+
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://elickzhao.github.io/2017/08/vue%E4%B8%80%E4%BA%9B%E7%89%B9%E5%88%AB%E6%9C%89%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/&title=vue一些特别有用的插件 - elickzhao's Blog&summary=Vue相关网站参考：　　Vue中文帮助网站：http://cn.vuejs.org/
+　　Vue github开源地址：https://github.com/vuejs/vue
+　　Vue.js专业中文社区：http://www.vue-js.com/
+　　前端开发Vue相关：http://www.opendigg.com/tags/front-vue
+　　本文开源地址：https://github.com/yonghu86/awesome-github-vue
+　　本文主要是收集与整理Vue相关的开源资料，以供需要的朋友参考。主要包含以下几方面的内容：
+　　UI组件、开发框架、实用库、服务端、辅助工具、应用实例、Demo示例
+构建插件
+
+
+名称
+说明
+
+
+
+vue-spa-template
+构建vue全家桶,Github说明很详细.参考文档:基于 vue 全家桶的 spa 项目脚手架
+
+
+electron-vue
+构建electron时用的
+
+
+cooking
+vue特别简单的构建工具,不过东西可能没有上面vue-spa-template那么全. 中文文档
+
+
+Vue-Element-Starter
+vue启动页.这个已经有了个后台框架的样子了.基本的东西已经弄好,可以快速开发了
+
+
+Vue Paper Dashboard
+这个真的很漂亮 就是不能用作大型后台
+
+
+Vue Admin Panel Framework
+vue和buluma的后台好像是重复两个啊
+
+
+CoPilot  
+这个也不错 是AdminLTE模板做的
+
+
+CoreUI-Free-Bootstrap-Admin-Template
+这个也不错 是CoreUI模板做的
+
+
+Vuestic Admin Dashboard
+这个也不错 是 Bootstrap 4.模板做的
+
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <div class="prev-next">
+    
+    <a class='prev' href='/2017/09/%E5%89%8D%E7%AB%AF%E5%9B%BE%E6%A0%87%E6%8F%92%E4%BB%B6%E6%80%BB%E7%BB%93/'>
+      <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>前端图标插件总结</p>
+      <p class='content'>
+
+
+名称
+说明
+
+
+
+ECharts 
+百度出品,免费且十分强大,各种图表都有,唯一可能造成的问题就是因为支持的太多可能体积大些
+
+
+sChart.js 
+简单且易用,基本图表都有了.不过现在...</p>
+    </a>
+    
+    
+    <a class='next' href='/2017/08/%E7%94%B5%E5%95%86%E4%BA%A7%E5%93%81%E7%9A%84SKU%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D/'>
+      <p class='title'>电商产品的SKU是什么意思<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+      <p class='content'>spu 和 sku 都是属性值的集合, 举个栗子
+一部 6S, 它身上有很多的属性和值. 比如 :
+
+毛重: 420.00 g
+产地: 中国大陆
+容量: 16G, 64G, 128G
+颜色: 银...</p>
+    </a>
+    
+  </div>
+  
+</article>
+
+
+
+
+  <article class="post white-box reveal shadow floatable" id="comments">
+    <p ct><i class='fal fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+</div>
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    
+    
+      
+        <div class='copyright'>
+        <p>Copyright © 2020 <a href="/">黑石博客</a></p>
+
+        </div>
+      
+    
+      
+        
+          <div><div><p>本站使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://volantis.js.org/" data-pjax-state="">Volantis</a> 作为主题 | 由 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/" data-pjax-state="">Hexo</a> 强力驱动</p> </div></div>
+        
+      
+    
+    
+  </footer>
+
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+
+  <script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+    pjax_scrollrebeal();
+  });
+</script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "填写邮箱会收到回复提示！粘贴图片可直接上传~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "xxxxxxxxxxx",
+      appKey: "xxxxxxxxxxxxxxxxx",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+      master: '[fc2c9b067f65c9e2d7057ba797f7cfca]',
+      friends: '[104e5bfa98048a2dac66f28ca4d4d846,e399c5e8f4b4b8b86fc88e2b5bd04497,32d39099d6da89788fe3827cb90b1eb7,a5c27d1df34fcd4d8195e7e7d16675d4,09c82fd631755bf5dbb04b4189225637,b548550ae129b82aa01b60e18ccbf141,6a565e6c47127afdd40d5d46089db2c5,4a713ec085a4431f15a8da0942656713&#34;,58bc3a8cecadf26a676e1b8f217698bc,aaf4fe5dd76d0a1390cbd08cdb16c05f,0a106ca9ec8d5e8a2d14f99e5b8bd863,3ecc56d90844b70e49d9f8a61e9cd98c,8a6f99e8ce4af26a93f20c0cbab8a186,5392ad0ec563aa56f6faf597ef966762,6bcf44de7033a4451f38d576fb6e6822,135ae111f8fcfeecc1ea1f06fde149ab]'
+    })
+  }
+
+  function newcomment() {
+
+function queryLeanCloud(k) {
+  let root = this;
+  let len = arguments.length;
+  if (len == 1) {
+    let notExist = new AV.Query("Comment");
+    notExist.doesNotExist('rid');
+    let isEmpty = new AV.Query("Comment");
+    isEmpty.equalTo('rid', '');
+    let q = AV.Query.or(notExist, isEmpty);
+    if (k === '*') q.exists('url');
+    else q.equalTo('url', decodeURI(k));
+    q.addDescending('createdAt');
+    q.addDescending('insertedAt');
+    return q;
+  } else {
+    let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+    let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+    return AV.Query.doCloudQuery(cql)
+  }
+}
+var valine = new Valine({
+      el: '#valine_container_ba',
+      notify: false,
+      verify: false,
+      app_id: 'xxxxxxxxxxx',
+      app_key: 'xxxxxxxxxxxxxxxxx',
+      placeholder: '发表您的意见，让我们一起交流，共同提高吧...',
+      serverURLs: 'https://xxxx'
+});
+
+//判断博主，heson改为自己的昵称
+function bozhu(e){
+    if (e == "heson"){
+        nick = e + '[博主]'
+        return nick;
+    } else {
+      return e
+    }
+}
+
+//判断网址
+function wangzhi(e){
+    http = e.slice(0,4)
+    https = e.slice(0,5)
+    if (http == "http" || https == "https" ){
+         return e
+    } else if (e == "" || e == null || e == undefined){
+      return e
+    } else {
+      e = 'http://'+ e
+      return e
+    }
+}
+
+
+
+
+//查询评论
+valine.Q('*').limit(7).find().then(function (comments) {
+  var hotComments = $("#hot-comments");
+  for (var i = 0; i < comments.length; i++) {
+    if (i === 0) {
+      console.log(comments[0]);
+    }
+    var nick = bozhu(comments[i]._serverData.nick);
+    var content = comments[i]._serverData.comment;
+    var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0, 50);
+    var url = comments[i]._serverData.url;
+    var link = wangzhi(comments[i]._serverData.link);
+    var updatedAt = timeago(comments[i].updatedAt);
+    var commentId = '#' + comments[i].id;
+    hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;发表于' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+  }
+});
+};
+
+
+
+  $(function () {
+    pjax_valine();
+    newcomment();
+  });
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'C1qWqsDatomXVctTafBuJADI-gzGzoHsz',
+    app_key: 'J4CujIoElz1Wo7yLUbY4SOO5',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://elickzhao.github.io' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://elickzhao.github.io' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://elickzhao.github.io' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/bb/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+        pjax_fancybox();
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+          newcomment();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>

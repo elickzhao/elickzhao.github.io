@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/1.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>vue + iview后台实例问题总结  vue学习问题总结 - elickzhao&#39;s Blog</title>
+  
+    <meta name="keywords" content="js,vue">
+  
+
+  
+    <meta name="description" content="vue组件模版编写规则main.vue 在组件里 所有的样式必须放在一个 &lt;div&gt;&lt;/div&gt; 标签里 否则会出错. 这个标签可以指定 默认为 class=index 这个看教程时已经知道,只是做的时候又给忘记了
+
+vue组件开始之前执行组件方法的方法.呵呵
+Vue.nextTick(f...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="elickzhao's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
+
+  
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" media="print" onload="this.media='all'">
+  
+
+
+  <!-- import link -->
+  
+
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+    <!-- 脚本懒加载函数 -->
+    <script>
+      function loadScript(src, cb) {
+        var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+        var script = document.createElement('script');
+        script.setAttribute('type','text/javascript');
+        if (cb) script.onload = cb;
+        script.setAttribute('src', src);
+        HEAD.appendChild(script);
+      }
+       </script>
+    
+</head>
+
+<body>
+  <header class="l_header auto shadow floatable blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://picup.heson10.com/img/upyun/hesonlogoyasuo.gif'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fal fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-search fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fal fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guestbook/
+                  
+                  
+                  
+                    id="guestbook"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fal fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fal fa-microphone-alt fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://box.heson10.com
+                  
+                  
+                  
+                    id="https:boxheson10com"
+                  >
+                  <i class='fal fa-heart fa-fw'></i>宝盒
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fal fa-paper-plane fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://yf.heson10.com/
+                  
+                  
+                  
+                    id="https:yfheson10com"
+                  >
+                  <i class='fal fa-donate fa-fw'></i>要饭
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://tongji.baidu.com/web/10000238090/overview/index?siteId=15706250
+                  
+                  
+                  
+                    id="https:tongjibaiducomweb10000238090overviewindex?siteId=15706250"
+                  >
+                  <i class='fal fa-industry fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.heson10.com/atom.xml
+                  
+                  
+                  
+                    id="https:wwwheson10comatomxml"
+                  >
+                  <i class='fal fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://leancloud.heson10.com
+                  
+                  
+                  
+                    id="https:leancloudheson10com"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fal fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="搜索..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fal fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fal fa-home fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-search fa-fw'></i>找文章
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fal fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guestbook/
+                  
+                  
+                  
+                    id="guestbook"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fal fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                  
+                  
+                  
+                    id="bb"
+                  >
+                  <i class='fal fa-microphone-alt fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://box.heson10.com
+                  
+                  
+                  
+                    id="https:boxheson10com"
+                  >
+                  <i class='fal fa-heart fa-fw'></i>宝盒
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://travellings.now.sh/
+                  
+                  
+                  
+                    id="https:travellingsnowsh"
+                  >
+                  <i class='fal fa-paper-plane fa-fw'></i>开往
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://yf.heson10.com/
+                  
+                  
+                  
+                    id="https:yfheson10com"
+                  >
+                  <i class='fal fa-donate fa-fw'></i>要饭
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://tongji.baidu.com/web/10000238090/overview/index?siteId=15706250
+                  
+                  
+                  
+                    id="https:tongjibaiducomweb10000238090overviewindex?siteId=15706250"
+                  >
+                  <i class='fal fa-industry fa-fw'></i>百度统计
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://www.heson10.com/atom.xml
+                  
+                  
+                  
+                    id="https:wwwheson10comatomxml"
+                  >
+                  <i class='fal fa-rss fa-fw'></i>RSS订阅
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://leancloud.heson10.com
+                  
+                  
+                  
+                    id="https:leancloudheson10com"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>评论管理
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper post featured' style="display: none;">
+        <canvas id="header_canvas" style="position:absolute;bottom:0;z-index: 1;" width="900" height="350"></canvas>
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://picup.heson10.com/img/upyun/home_top_bg.webp"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+      <img no-lazy class='logo' src='https://picup.heson10.com/img/upyun/heson10logo5.png'/>
+    
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              id="home">
+              <i class='fad fa-home fa-fw'></i><p>首页</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <i class='fad fa-archive fa-fw'></i><p>归档</p>
+            </a>
+          
+            <a href="/bb/"
+              
+              
+              id="bb">
+              <i class='fad fa-microphone-alt fa-fw'></i><p>说说</p>
+            </a>
+          
+            <a href="/links/"
+              
+              
+              id="links">
+              <i class='fad fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://box.heson10.com"
+              
+              
+              id="https:boxheson10com">
+              <i class='fad fa-heart fa-fw'></i><p>宝盒</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://yf.heson10.com/"
+              
+              
+              id="https:yfheson10com">
+              <i class='fad fa-donate fa-fw'></i><p>要饭</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://travellings.now.sh/"
+              
+              
+              id="https:travellingsnowsh">
+              <i class='fad fa-paper-plane fa-fw'></i><p>开往</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">vue + iview后台实例问题总结  vue学习问题总结</div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+<aside class='l_side'>
+  <div style="margin-bottom: 16px;border-radius: 8px;" class='shadow floatable widget_author desktop'>
+    <div id="zuozhebg" class="newauthor"
+      style="background: url(https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png) center center no-repeat;background-size:cover">
+    </div>
+    <div class="relive_widget_v3">
+      <div class="box-author-info">
+        <div class="author-face">
+          <a href="/about" target="_blank" rel="nofollow" title="关于elickzhao">
+            <img no-lazy alt="" src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png"
+              class="avatar avatar-200 photo" height="200" width="200"> </a>
+        </div>
+        <div class="author-name">elickzhao</div>
+        <div id="author-one" class="author-one">
+          <script>
+            var binft = function (r) {
+              function t() {
+                return b[Math.floor(Math.random() * b.length)]
+              }
+              function e() {
+                return String.fromCharCode(94 * Math.random() + 33)
+              }
+              function n(r) {
+                for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                  var l = document.createElement("span");
+                  l.textContent = e(), l.style.color = t(), n.appendChild(l)
+                }
+                return n
+              }
+              function i() {
+                var t = o[c.skillI];
+                c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+              }
+              var l = "",
+                o = ["人生在勤，不索何获", "日日待明日,万事成蹉跎", "丈夫志四海，万里犹比邻", "还在看这里吗？", "能不能别看了？", "文章更精彩...."].map(function (r) {
+                  return r + ""
+                }),
+                a = 2,
+                g = 1,
+                s = 5,
+                d = 75,
+                b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+                c = {
+                  text: "",
+                  prefixP: -s,
+                  skillI: 0,
+                  skillP: 0,
+                  direction: "forward",
+                  delay: a,
+                  step: g
+                };
+              i()
+            };
+            binft(document.getElementById('author-one'));
+          </script>
+
+
+        </div>
+        <div class="site-state-wrap motion-element">
+          <nav class="site-state">
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+
+                <span class="site-state-item-count">268</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+  
+
+  
+  
+    
+    
+  
+
+  <section class="widget category shadow floatable desktop">
+    
+  <header>
+    
+      <a href='/categories/'><i class="fal fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/php%E5%BC%80%E5%8F%91/" href="/categories/php%E5%BC%80%E5%8F%91/"
+            id="categoriesphpE5BC80E58F91"
+            ><div class='name'>php开发</div><div class='badge'>(24)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"
+            id="categoriesE5898DE7ABAFE68A80E69CAF"
+            ><div class='name'>前端技术</div><div class='badge'>(39)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/"
+            id="categoriesE69C8DE58AA1E599A8E79BB8E585B3E68A80E69CAF"
+            ><div class='name'>服务器相关技术</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/"
+            id="categoriesE69C8DE58AA1E599A8E7ABAF"
+            ><div class='name'>服务器端</div><div class='badge'>(11)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%B5%8B%E8%AF%95/" href="/categories/%E6%B5%8B%E8%AF%95/"
+            id="categoriesE6B58BE8AF95"
+            ><div class='name'>测试</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+
+  
+    
+    
+
+<section class="widget text shadow floatable desktop">
+  
+  <header>
+    
+      <i class="fal fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <div id="hot-comments"></div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fal fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>268 篇</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>已运行时间：</div>
+          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
+        </div>
+        <script>
+          var BirthDay = new Date(new Date('2020/07/06'));
+          var today = new Date();
+          var timeold = (today.getTime() - BirthDay.getTime());
+          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
+          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
+        </script>
+      
+
+
+      
+        <div class="webinfo-item">
+          <div>本站总字数：</div>
+          <div>121.4k 字</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站访客数：</div>
+          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站总访问量：</div>
+          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>最后活动时间：</div>
+          
+            <div id="last-update" style="display: none;">Fri Sep 10 2021 00:34:53 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-09-10 日</div>
+          
+        </div>
+        
+        <script>
+          function timeago(dateTimeStamp) {
+              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
+              var hour = minute * 60;
+              var day = hour * 24;
+              var week = day * 7;
+              var month = day * 30;
+              var now = new Date().getTime(); //获取当前时间毫秒
+              var diffValue = now - dateTimeStamp; //时间差
+              if (diffValue < 0) {
+                  return;
+              }
+              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
+              var hourC = diffValue / hour;
+              var dayC = diffValue / day;
+              var weekC = diffValue / week;
+              var monthC = diffValue / month;
+              if (monthC >= 1 && monthC <= 3) {
+                  result = " " + parseInt(monthC) + " 月前"
+              } else if (weekC >= 1 && weekC <= 3) {
+                  result = " " + parseInt(weekC) + " 周前"
+              } else if (dayC >= 1 && dayC <= 6) {
+                  result = " " + parseInt(dayC) + " 天前"
+              } else if (hourC >= 1 && hourC <= 23) {
+                  result = " " + parseInt(hourC) + " 小时前"
+              } else if (minC >= 1 && minC <= 59) {
+                  result = " " + parseInt(minC) + " 分钟前"
+              } else if (diffValue >= 0 && diffValue <= minute) {
+                  result = "刚刚"
+              } else {
+                  var datetime = new Date();
+                  datetime.setTime(dateTimeStamp);
+                  var Nyear = datetime.getFullYear();
+                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+                  result = Nyear + "-" + Nmonth + "-" + Ndate
+              }
+              return result;
+          }
+          var lastUpDate = document.getElementById('last-update').innerHTML;
+          try {
+            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
+          } catch (error) {
+            document.getElementById('last-update-show').innerHTML = '2021-09-10 日';
+          }
+        </script>
+        
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow floatable desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fal fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#vue%E7%BB%84%E4%BB%B6%E6%A8%A1%E7%89%88%E7%BC%96%E5%86%99%E8%A7%84%E5%88%99"><span class="toc-text">vue组件模版编写规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue%E7%BB%84%E4%BB%B6%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D%E6%89%A7%E8%A1%8C%E7%BB%84%E4%BB%B6%E6%96%B9%E6%B3%95%E7%9A%84%E6%96%B9%E6%B3%95-%E5%91%B5%E5%91%B5"><span class="toc-text">vue组件开始之前执行组件方法的方法.呵呵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%81%E6%8F%92%E4%BB%B6%E5%8F%8A%E4%B8%8D%E8%83%BD%E7%94%A8NPM%E5%AE%89%E8%A3%85%E7%9A%84%E6%8F%92%E4%BB%B6%E5%BC%95%E7%94%A8"><span class="toc-text">老插件及不能用NPM安装的插件引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9-%E6%9C%89%E4%BA%9B%E6%8F%92%E4%BB%B6%E4%B8%8D%E5%8F%AF%E4%BB%A5%E7%94%A8"><span class="toc-text">插件的选择,有些插件不可以用.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpace%E6%89%93%E5%8C%85%E5%90%8E%E5%8D%95%E5%87%BB%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%98%BE%E7%A4%BA%E7%A9%BA%E7%99%BD%E5%86%85%E5%AE%B9"><span class="toc-text">webpace打包后单击静态文件显示空白内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-js-Api%E6%96%B9%E5%BC%8F%E4%BD%BF%E7%94%A8"><span class="toc-text">Node.js Api方式使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E8%AE%BE%E7%BD%AE"><span class="toc-text">webpack输出文件设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8iview%E9%87%8Cbuild%E5%92%8Cdev%E6%A8%A1%E7%89%88"><span class="toc-text">在iview里build和dev模版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E5%95%8A"><span class="toc-text">这里需要修改啊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%8F%B7%E6%8F%92%E4%BB%B6%E8%BE%93%E5%87%BA%E4%BF%A1%E6%81%AF%E9%97%AE%E9%A2%98"><span class="toc-text">版本号插件输出信息问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E6%98%93%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%94%E5%9B%9E%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E8%BF%99%E4%B9%88%E5%86%99"><span class="toc-text">简易服务器返回静态文件这么写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-yarn-%E5%8D%83%E4%B8%87%E8%A6%81%E6%B3%A8%E6%84%8F"><span class="toc-text">使用 yarn 千万要注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack%E5%A4%8D%E5%88%B6%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95%E5%88%B0dist%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95"><span class="toc-text">webpack复制指定目录到dist生成目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue%E6%8A%A5%E9%94%99-template-or-render-function-not-defined"><span class="toc-text">vue报错 template or render function not defined</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+<div class='l_main'>
+  <article
+  class="article post white-box reveal md shadow floatable article-type-post"
+  id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        vue + iview后台实例问题总结  vue学习问题总结
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/heson525/pic@master/pic/avatar03.png">
+    <p>Heson</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fal fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 13, 2017</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="vue + iview后台实例问题总结  vue学习问题总结" data-path="/2017/06/vue%20+%20iview%E5%90%8E%E5%8F%B0%E5%AE%9E%E4%BE%8B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%20%20vue%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+        <i class="fal fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+
+  
+  <h2 id="vue组件模版编写规则"><a href="#vue组件模版编写规则" class="headerlink" title="vue组件模版编写规则"></a>vue组件模版编写规则</h2><p><strong>main.vue</strong> 在组件里 所有的样式必须放在一个 <code>&lt;div&gt;&lt;/div&gt;</code> 标签里 否则会出错.<br> 这个标签可以指定 默认为 <code>class=index</code> 这个看教程时已经知道,只是做的时候又给忘记了</p>
+<hr>
+<h2 id="vue组件开始之前执行组件方法的方法-呵呵"><a href="#vue组件开始之前执行组件方法的方法-呵呵" class="headerlink" title="vue组件开始之前执行组件方法的方法.呵呵"></a>vue组件开始之前执行组件方法的方法.呵呵</h2><ol>
+<li><p><strong>Vue.nextTick(function () {   })</strong></p>
+<blockquote>
+<p>在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。 因为有的插件需要操作DOM 但是DOM还没创建出来时 会出现问题  <strong>这个也是如此无法用this</strong> <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000008570874">我理解的关于Vue.nextTick()的正确使用</a></p>
+</blockquote>
+</li>
+<li><p> <strong>created:function(){}</strong></p>
+<blockquote>
+<p>这个也可以的 这是钩子程序 但是这个时期 DOM没有创建出来</p>
+</blockquote>
+</li>
+<li><p><strong>mounted: function (){}</strong></p>
+<blockquote>
+<p>这个也是vue生命周期中一个钩子,这个就是加载完组件,生成了DOM的时候,所这个可以用,需要对DOM进行操作的程序可以放在这里执行</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 记性真是不好上一次还知道怎么用,下一次就又忘了 现在放在这</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">mounted</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        particlesJS(<span class="string">&#x27;particles-js&#x27;</span>, particles_config)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">methods</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+<span id="more"></span>
+
+<p>4.<strong>beforeRouteEnter(to, from, next) {}</strong></p>
+<blockquote>
+<p>这是vue-router的一个钩子,在进入路由之前调用一个函数,这个也是可行的,这个有时会有问题 如果路由没跳转,那么就不会执行了 <strong>但是无法执行组件的方法,因为this是不存在的</strong><br>用另一个方法就可以使用组件内部的方法了,<strong>而且更神器的是插件居然执行了</strong>. <code>new Particleground.particle(&#39;#canvas&#39;, options);</code> 这个插件一直不执行的,只有触发他所在的方法<code>handleStart()</code>才会执行.</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">beforeRouteEnter</span>(<span class="params">to, <span class="keyword">from</span>, next</span>)</span> &#123;</span><br><span class="line">    next(<span class="function"><span class="params">vm</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 通过 `vm` 访问组件实例</span></span><br><span class="line">        vm.handleStart()</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,   <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="function"><span class="title">handleStart</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> options = &#123;</span><br><span class="line">            <span class="attr">color</span>: <span class="string">&#x27;#FFF&#x27;</span>, <span class="comment">//[&#x27;#2d8cf0&#x27;, &#x27;#19be6b&#x27;, &#x27;#ff9900&#x27;, &#x27;#ed3f14&#x27;],</span></span><br><span class="line">            <span class="attr">num</span>: <span class="number">100</span>,</span><br><span class="line">            <span class="attr">range</span>: <span class="number">300</span>,</span><br><span class="line">            <span class="attr">linewidth</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">maxSpeed</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">maxR</span>: <span class="number">5</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//这个就更奇葩了.因为是类 不是函数 结果必须在方法里靠点击才能运行 其他的一概不执行 而且他运行也不像文档里写的必须引入particles.js 也够怪的</span></span><br><span class="line">        <span class="keyword">new</span> Particleground.particle(<span class="string">&#x27;#canvas&#x27;</span>, options);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;cccccccccccccc&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.又找到个办法可以使用 <code>new Particleground.particle(&#39;#canvas&#39;, options);</code>就是这么些</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> options = &#123;</span><br><span class="line">    <span class="attr">color</span>: <span class="string">&#x27;#FFF&#x27;</span>, <span class="comment">//[&#x27;#2d8cf0&#x27;, &#x27;#19be6b&#x27;, &#x27;#ff9900&#x27;, &#x27;#ed3f14&#x27;],</span></span><br><span class="line">    <span class="attr">num</span>: <span class="number">100</span>,</span><br><span class="line">    <span class="attr">proximity</span>:<span class="number">100</span>,  <span class="comment">//点点连线距离,只有两点小于这个距离才会连线,值太大的话连线会很密的</span></span><br><span class="line">    <span class="attr">range</span>: <span class="number">1300</span>,    <span class="comment">//点点连线的范围 值越大范围越大 太小的话即使达到距离 也有些点不连线</span></span><br><span class="line">    <span class="attr">linewidth</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">maxSpeed</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">maxR</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="attr">lineShape</span>:<span class="string">&#x27;cube&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这个效果和上面的 beforeRouteEnter(to, from, next) &#123;&#125; 是一直的 而且我这次升级了 Particleground</span></span><br><span class="line"><span class="comment">//现在叫JParticles 参数更多了一些</span></span><br><span class="line"><span class="comment">//呵呵 又发现个区别啊  document.ready 就不可以 只能用 window.onload</span></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">new</span> JParticles.particle(<span class="string">&#x27;#canvas&#x27;</span>, options);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>6.这三个的加载顺序很有趣, beforeRouteEnter -&gt; Vue.nextTick -&gt; created 看来created是创建组件的时候</p>
+<p>7.<del>放在export default {}的js代码也会被执行的,而且好像是页面渲染完成后执行的.</del> <strong>这句当时不知道怎么写的,好像是错了.</strong> 这里只能放,函数和属性,是没法使用js代码段的</p>
+<hr>
+<h2 id="老插件及不能用NPM安装的插件引用"><a href="#老插件及不能用NPM安装的插件引用" class="headerlink" title="老插件及不能用NPM安装的插件引用"></a>老插件及不能用NPM安装的插件引用</h2><p>用<strong>webpack</strong>创建的项目,引用这种插件很费事.而且不能用CND,也许能用只是我没找到方法.<br>看下面的文章,有好几个方法,不过都很麻烦.<br>不过我发现好像直接用 <code>import particlesJS from &#39;../libs/particles.js&#39;;</code><br>也是能找到正确位置的,但是否可用没测试 以后再说吧.</p>
+<p>下面这个方法是我现在用的.<br><code>var particlesJS = require(&#39;exports-loader?window.particlesJS!../libs/particles.js&#39;);</code><br>记住一定用 <strong>npm</strong> 安装 <strong>exports-loader</strong>  这样就可以使用自己下载的插件了.<br>而且还解决了另外一个问题.以为<strong>particlesJS</strong>是个老插件,他没有现代的模块方式开发,所以用<strong>npm</strong>安装了,<strong>import</strong>了也是无法使用的.所以必须用<strong>exports-loader</strong>转换一下,这样<strong>particlesJS</strong>的方法就可用了.</p>
+<p>参考文档<br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000007020623">如何在 vue 项目里正确地引用 jquery 和 jquery-ui的插件</a></p>
+<hr>
+<h2 id="插件的选择-有些插件不可以用"><a href="#插件的选择-有些插件不可以用" class="headerlink" title="插件的选择,有些插件不可以用."></a>插件的选择,有些插件不可以用.</h2><p>这次就遇到了这个问题.<br>一 有可能是插件太老,引用后无法使用.会提示这个不是方法.<br>二 就是这个插件写的有问题,使用时是个类必须new 比如 <code>new Particleground.particle(&#39;#canvas&#39;, options);</code> 这个不是方法,所以无法自动执行,必须放在vue的方法里触发才可以.幸好如上面讲到的,<br>用vue-router里的钩子程序能触发 所以就一点用都没有了. 至于这个插件的写法以后研究下.</p>
+<hr>
+<h2 id="webpace打包后单击静态文件显示空白内容"><a href="#webpace打包后单击静态文件显示空白内容" class="headerlink" title="webpace打包后单击静态文件显示空白内容"></a>webpace打包后单击静态文件显示空白内容</h2><p>看到 <code>&lt;router-view&gt;&lt;/router-view&gt;</code> 加载内容为空.判断为这个插件出问题了.</p>
+<p>最后发现,是 <code>vue-router</code> 的配置,<code>mode</code> 这个有三个选项 <code>&quot;hash&quot; | &quot;history&quot; | &quot;abstract&quot;</code><br>必须选择 <code>hash</code>,否则的话必须用静态服务器访问才行,单击打开文件是不行的.<br><code>history</code>的 url路径会美观不少,不过就是必须用静态服务器了</p>
+<p><strong>注意:</strong></p>
+<ol>
+<li>在用本地服务器测试的时候. 用<code>nodejs</code>写的简易服务器,必须装载 <code>express</code>模块.<br>我这里并没有把<code>express</code>装到全局里,所以在其他目录是不好用的.但是项目目录里因为<code>webpace</code>使用了<code>express</code>,所以没有特别装也没问题.</li>
+<li>用 <code>phpstudy </code>充当服务器的时候,必须指定域名.如果不指定域名的话也是一片空白的.</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 路由配置</span></span><br><span class="line"><span class="keyword">const</span> RouterConfig = &#123;</span><br><span class="line">    <span class="attr">mode</span>: <span class="string">&#x27;hash&#x27;</span>,   <span class="comment">//哦 的确如此 必须用hash才能打包成静态页</span></span><br><span class="line">    <span class="attr">routes</span>: Routers</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Node-js-Api方式使用"><a href="#Node-js-Api方式使用" class="headerlink" title="Node.js Api方式使用"></a>Node.js Api方式使用</h2><p>就是把命令行模式,转换写到程序里.不过这个方式写起来太复杂了<br>哦 热启动还有一点 如果不行这么写 <code>entry: [&quot;webpack-dev-server/client?http://localhost:8080&quot;],</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> compiler = webpack(rendererConfig)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//就到这里吧 热更新也做了 可惜就是不自动刷新浏览器</span></span><br><span class="line"> <span class="comment">//[WDS] App hot update... (执行到这里就不走了)</span></span><br><span class="line"> <span class="comment">//dev-server.js:45 [HMR] Checking for updates on the server... (就差这一句 不知道为啥)</span></span><br><span class="line"> <span class="comment">//这个写法真心没有命令行简单啊</span></span><br><span class="line"> <span class="keyword">const</span> server = <span class="keyword">new</span> WebpackDevServer(</span><br><span class="line">   compiler,</span><br><span class="line">   &#123;</span><br><span class="line">     <span class="attr">contentBase</span>: path.join(__dirname, <span class="string">&#x27;../&#x27;</span>),</span><br><span class="line">     <span class="attr">quiet</span>: <span class="literal">true</span>,</span><br><span class="line">     <span class="attr">publicPath</span>: <span class="string">&#x27;/dist/&#x27;</span>,</span><br><span class="line">     <span class="attr">hot</span>: <span class="literal">true</span>,</span><br><span class="line">     <span class="attr">compress</span>: <span class="literal">true</span>,</span><br><span class="line">     <span class="attr">historyApiFallback</span>: <span class="literal">true</span>,</span><br><span class="line">     <span class="function"><span class="title">setup</span>(<span class="params">app, ctx</span>)</span> &#123;</span><br><span class="line">       app.use(hotMiddleware)</span><br><span class="line">       ctx.middleware.waitUntilValid(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">         resolve()</span><br><span class="line">       &#125;)</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> )</span><br><span class="line"> server.listen(<span class="number">8080</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://elickzhao.github.io/2017/06/webpack-dev-server%20%E7%9A%84%20Node.js%20Api%E6%96%B9%E5%BC%8F%E5%92%8CCLI%20%E6%96%B9%E5%BC%8F%20%E4%B8%A4%E7%A7%8D%E7%94%A8%E6%B3%95/">webpack-dev-server 的 Node.js Api方式和CLI 方式 两种用法</a></p>
+<hr>
+<h2 id="webpack输出文件设置"><a href="#webpack输出文件设置" class="headerlink" title="webpack输出文件设置"></a>webpack输出文件设置</h2><p>这里 <code>path</code>已经设置<code>publicPath</code>不设置也可以,设置的话有可能出现引入错误<br><code>filename</code> 也不用设置位置了.这样直接全部生成在 <code>dist</code> 目录下<br>如果<code>publicPath</code>设置了,css和js会保存在那里.但是html会在根目录</p>
+<p><strong>注意</strong>: <del>总是忘记啊 <strong>json</strong> 配置文件里是不能添加注释的 否则会报错</del> 是 <strong>package.json</strong> 注释会报错</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">output: &#123;</span><br><span class="line">    <span class="attr">path</span>: path.join(__dirname, <span class="string">&#x27;./dist&#x27;</span>)</span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">output</span>: &#123;</span><br><span class="line">    <span class="attr">publicPath</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&#x27;[name].[hash].js&#x27;</span>,</span><br><span class="line">    <span class="attr">chunkFilename</span>: <span class="string">&#x27;[name].[hash].chunk.js&#x27;</span></span><br><span class="line">&#125;,</span><br><span class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">        <span class="attr">filename</span>: <span class="string">&#x27;index_prod.html&#x27;</span>,</span><br><span class="line">        <span class="attr">template</span>: <span class="string">&#x27;./src/template/index.ejs&#x27;</span>,</span><br><span class="line">        <span class="attr">inject</span>: <span class="literal">false</span></span><br><span class="line">    &#125;)    </span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="在iview里build和dev模版"><a href="#在iview里build和dev模版" class="headerlink" title="在iview里build和dev模版"></a>在iview里build和dev模版</h2><p>在iview里dev的时候用的是根目录的 <strong>index.html</strong> 因为dev的时候是css等静态文件是不加版本号<br>所以可以在<strong>index.html</strong>里写死 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;/dist/main.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>在build的时候,用的是 <code>src/template/index.ejs</code> 所以这里必须加这个 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%= htmlWebpackPlugin.files.js[1] %&gt;&quot;&gt;&lt;/script&gt;</code> 否则就无法添加带版本号的静态文件了</p>
+<p>所以 在iview里 build 和 dev 是分开的. 他们的 <code>config</code>文件也不一样所以修改时要注意</p>
+<hr>
+<h2 id="这里需要修改啊"><a href="#这里需要修改啊" class="headerlink" title="这里需要修改啊"></a>这里需要修改啊</h2><p>现在遇到的问题是我的 粒子插件的配置文件遇到了跨域请求问题. 而且他不能自动拷贝到<code>dist</code>目录下.<br>虽然报错写着这个,目录没有这个文件,可是拷过去依然没用</p>
+<hr>
+<h2 id="版本号插件输出信息问题"><a href="#版本号插件输出信息问题" class="headerlink" title="版本号插件输出信息问题"></a>版本号插件输出信息问题</h2><p>因为在做 <strong>electron</strong> 的时候,打包时需要用个效果插件.但是<code>process</code>其他信息都不会输出,唯独这个会输出个信息,应该是那里有问题,但是并影响使用,所以到现在也没仔细研究.就算 <strong>webpack</strong>  的显示进度 也会被他打断.</p>
+<p><strong>这个以后有空解决下吧</strong></p>
+<p><del>还有一点是在强调下,json不能有注释. 唉 总忘记</del> 这句是错的是 <strong>package.json</strong>不能有注释</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">    test: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">    loader: <span class="string">&#x27;vue-loader&#x27;</span>,</span><br><span class="line">    <span class="attr">options</span>: &#123;</span><br><span class="line">        <span class="attr">loaders</span>: &#123;</span><br><span class="line">            <span class="attr">css</span>: ExtractTextPlugin.extract(&#123;</span><br><span class="line">                <span class="attr">use</span>: [<span class="string">&#x27;css-loader&#x27;</span>, <span class="string">&#x27;autoprefixer-loader&#x27;</span>], <span class="comment">//加这个 autoprefixer-loader 就报错  有个输出 以后再考虑吧 反正现在可以用了 就是不是最完美样子</span></span><br><span class="line">                <span class="comment">//use: [&#x27;css-loader&#x27;],</span></span><br><span class="line">                <span class="attr">fallback</span>: <span class="string">&#x27;vue-style-loader&#x27;</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">      &#123;</span><br><span class="line">    <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</span><br><span class="line">    use: ExtractTextPlugin.extract(&#123;    <span class="comment">//这里去除这个插件就会找不到带版本号的插件了</span></span><br><span class="line">        <span class="attr">use</span>: [<span class="string">&#x27;css-loader?minimize&#x27;</span>, <span class="string">&#x27;autoprefixer-loader&#x27;</span>],  <span class="comment">// 这个也是 这个autoprefixer-loader 好像是版本选择</span></span><br><span class="line">        <span class="comment">//use: [&#x27;css-loader?minimize&#x27;],  </span></span><br><span class="line">        <span class="attr">fallback</span>: <span class="string">&#x27;style-loader&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="简易服务器返回静态文件这么写"><a href="#简易服务器返回静态文件这么写" class="headerlink" title="简易服务器返回静态文件这么写"></a>简易服务器返回静态文件这么写</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line"> <span class="comment">//res.send(&#x27;Hello World&#x27;)     //这里注意下因为生成的静态页不是index.html标准名称 所以不会显示</span></span><br><span class="line">  res.sendFile( path.join(__dirname,  <span class="string">&#x27;./dist/index_prod.html&#x27;</span>))    <span class="comment">//一定是绝对路径</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="使用-yarn-千万要注意"><a href="#使用-yarn-千万要注意" class="headerlink" title="使用 yarn 千万要注意"></a>使用 yarn 千万要注意</h2><p><code>yarn</code> 虽然速度比 <code>npm</code> 快很多,但总会出现莫名其妙的问题.我有个项目前两天运行正常,今天再打开一大堆报错.说各种文件找不到<br>用 <code>yarn</code> 重装一遍也不行,没办法用 <code>npm</code>重装 一切都好了</p>
+<p>所以 用<code>yarn</code>千万要小心, 要不项目一开始就用,千万别中间再用</p>
+<hr>
+<h2 id="webpack复制指定目录到dist生成目录"><a href="#webpack复制指定目录到dist生成目录" class="headerlink" title="webpack复制指定目录到dist生成目录"></a>webpack复制指定目录到dist生成目录</h2><p>使用这个插件<a target="_blank" rel="noopener" href="https://github.com/kevlened/copy-webpack-plugin">copy-webpack-plugin</a>就ok了<br>用法很简单</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> CopyWebpackPlugin = <span class="built_in">require</span>(<span class="string">&#x27;copy-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> CopyWebpackPlugin([&#123;    <span class="comment">//还有就是这个参数必须是数组才行,哪怕只有一个</span></span><br><span class="line">            <span class="attr">from</span>:<span class="string">&#x27;./src/assets&#x27;</span>,</span><br><span class="line">            <span class="attr">to</span>:<span class="string">&#x27;assets&#x27;</span> <span class="comment">//因为上面已经有了输出路径,所以不需要写两次了</span></span><br><span class="line">        &#125;]),</span><br><span class="line">        ......</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="vue报错-template-or-render-function-not-defined"><a href="#vue报错-template-or-render-function-not-defined" class="headerlink" title="vue报错 template or render function not defined"></a>vue报错 template or render function not defined</h2><p><strong>问题产生:</strong> <a target="_blank" rel="noopener" href="http://cn.vuejs.org/v2/guide/installation.html#%E7%8B%AC%E7%AB%8B%E6%9E%84%E5%BB%BA-vs-%E8%BF%90%E8%A1%8C%E6%97%B6%E6%9E%84%E5%BB%BA">独立构建-vs-运行时构建</a> 这就是问题根源,webpack运行的不是完整vue,所以不包含解析<code>template</code>.这里需要在<code>webpack</code>设置里天上这句.        </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias: &#123;</span><br><span class="line">            <span class="string">&#x27;vue&#x27;</span>: <span class="string">&#x27;vue/dist/vue.esm.js&#x27;</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p>有的地方说是 <code>vue.common.js</code> 其实一样看下面官方说明<br><a target="_blank" rel="noopener" href="https://vuefe.cn/v2/guide/installation.html#%E4%B8%8D%E5%90%8C%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E7%9A%84%E8%A7%A3%E9%87%8A%E8%AF%B4%E6%98%8E">不同构建版本的解释说明</a></p>
+<p><strong>问题解决:</strong><br>但是我这个不是这么解决的,这还多亏了,vue-router里的提示</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">components:&#123;</span><br><span class="line">    <span class="comment">//原本应该这么写  ff:require([&#x27;./aa.vue&#x27;]) 就可以了 不知道这个 resolve 是哪里起的作用以后查查</span></span><br><span class="line">    <span class="attr">ff</span>:<span class="function">(<span class="params">resolve</span>) =&gt;</span> <span class="built_in">require</span>([<span class="string">&#x27;./aa.vue&#x27;</span>], resolve)  <span class="comment">//这么写组件就可以用了</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>下面两个文章都不错,第一个讲解的非常深入,第二个是最开始的解决办法,现在好像不实用了,不过也可以了解下问题的起因.</p>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/csdn_yudong/article/details/59109902">从一个奇怪的错误出发理解 Vue 基本概念</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000007099099?_ea=1236628">vue2.0组件注册的问题</a></p>
+
+  
+  
+  
+  <div class='footer'>
+    
+    
+    
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fal fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2017\08\API开发接口管理及mock数据\" title="API开发接口管理及mock数据" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">API开发接口管理及mock数据</span></a><a class="item" href="\2017\08\Axios 初探\" title="Axios 初探" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">Axios 初探</span></a><a class="item" href="\2016\12\cooking 简介 安装与使用\" title="cooking 简介 安装与使用" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">cooking 简介 安装与使用</span></a><a class="item" href="\2016\12\2016最后一天的纪念\" title="2016最后一天的纪念" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">2016最后一天的纪念</span></a></div></section></div>
+    
+    
+    <div class='copyright'>
+      <blockquote>
+        
+        
+        <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+        
+        
+        
+        <p>本文永久链接是：<a href=http://elickzhao.github.io/2017/06/vue%20+%20iview%E5%90%8E%E5%8F%B0%E5%AE%9E%E4%BE%8B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%20%20vue%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/>http://elickzhao.github.io/2017/06/vue%20+%20iview%E5%90%8E%E5%8F%B0%E5%AE%9E%E4%BE%8B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%20%20vue%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</a></p>
+        
+        
+      </blockquote>
+    </div>
+    
+    
+  </div>
+  
+  
+  
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2018-02-04T15:05:37+08:00">
+  <a class='notlink'>
+    <i class="fal fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Feb 4, 2018</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fal fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vue/" rel="nofollow"><i class="fal fa-hashtag fa-fw" aria-hidden="true"></i><p>vue</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://elickzhao.github.io/2017/06/vue%20+%20iview%E5%90%8E%E5%8F%B0%E5%AE%9E%E4%BE%8B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%20%20vue%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/&title=vue + iview后台实例问题总结  vue学习问题总结 - elickzhao's Blog&summary=vue组件模版编写规则main.vue 在组件里 所有的样式必须放在一个 &lt;div&gt;&lt;/div&gt; 标签里 否则会出错. 这个标签可以指定 默认为 class=index 这个看教程时已经知道,只是做的时候又给忘记了
+
+vue组件开始之前执行组件方法的方法.呵呵
+Vue.nextTick(function () {   })
+
+在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。 因为有的插件需要操作DOM 但是DOM还没创建出来时 会出现问题  这个也是如此无法用this 我理解的关于Vue.nextTick()的正确使用
+
+
+ created:function(){}
+
+这个也可以的 这是钩子程序 但是这个时期 DOM没有创建出来
+
+
+mounted: function (){}
+
+这个也是vue生命周期中一个钩子,这个就是加载完组件,生成了DOM的时候,所这个可以用,需要对DOM进行操作的程序可以放在这里执行
+
+
+
+12345678// 记性真是不好上一次还知道怎么用,下一次就又忘了 现在放在这export default &#123;    mounted: function () &#123;        particlesJS(&#x27;particles-js&#x27;, particles_config)    &#125;,    methods: &#123;    ...    &#125;"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://elickzhao.github.io/2017/06/vue%20+%20iview%E5%90%8E%E5%8F%B0%E5%AE%9E%E4%BE%8B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%20%20vue%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/&title=vue + iview后台实例问题总结  vue学习问题总结 - elickzhao's Blog&summary=vue组件模版编写规则main.vue 在组件里 所有的样式必须放在一个 &lt;div&gt;&lt;/div&gt; 标签里 否则会出错. 这个标签可以指定 默认为 class=index 这个看教程时已经知道,只是做的时候又给忘记了
+
+vue组件开始之前执行组件方法的方法.呵呵
+Vue.nextTick(function () {   })
+
+在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。 因为有的插件需要操作DOM 但是DOM还没创建出来时 会出现问题  这个也是如此无法用this 我理解的关于Vue.nextTick()的正确使用
+
+
+ created:function(){}
+
+这个也可以的 这是钩子程序 但是这个时期 DOM没有创建出来
+
+
+mounted: function (){}
+
+这个也是vue生命周期中一个钩子,这个就是加载完组件,生成了DOM的时候,所这个可以用,需要对DOM进行操作的程序可以放在这里执行
+
+
+
+12345678// 记性真是不好上一次还知道怎么用,下一次就又忘了 现在放在这export default &#123;    mounted: function () &#123;        particlesJS(&#x27;particles-js&#x27;, particles_config)    &#125;,    methods: &#123;    ...    &#125;"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://elickzhao.github.io/2017/06/vue%20+%20iview%E5%90%8E%E5%8F%B0%E5%AE%9E%E4%BE%8B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%20%20vue%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/&title=vue + iview后台实例问题总结  vue学习问题总结 - elickzhao's Blog&summary=vue组件模版编写规则main.vue 在组件里 所有的样式必须放在一个 &lt;div&gt;&lt;/div&gt; 标签里 否则会出错. 这个标签可以指定 默认为 class=index 这个看教程时已经知道,只是做的时候又给忘记了
+
+vue组件开始之前执行组件方法的方法.呵呵
+Vue.nextTick(function () {   })
+
+在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。 因为有的插件需要操作DOM 但是DOM还没创建出来时 会出现问题  这个也是如此无法用this 我理解的关于Vue.nextTick()的正确使用
+
+
+ created:function(){}
+
+这个也可以的 这是钩子程序 但是这个时期 DOM没有创建出来
+
+
+mounted: function (){}
+
+这个也是vue生命周期中一个钩子,这个就是加载完组件,生成了DOM的时候,所这个可以用,需要对DOM进行操作的程序可以放在这里执行
+
+
+
+12345678// 记性真是不好上一次还知道怎么用,下一次就又忘了 现在放在这export default &#123;    mounted: function () &#123;        particlesJS(&#x27;particles-js&#x27;, particles_config)    &#125;,    methods: &#123;    ...    &#125;"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+  <div class="prev-next">
+    
+    <a class='prev' href='/2017/06/node.js%20%E8%87%AA%E5%BB%BA%E7%AE%80%E6%98%93%E6%9C%8D%E5%8A%A1/'>
+      <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>node.js 自建简易服务</p>
+      <p class='content'>废话先不多说,代码就是如下这么简单.
+1234567891011var express = require(&#x27;express&#x27;)var app = express()app....</p>
+    </a>
+    
+    
+    <a class='next' href='/2017/06/npm%E5%AE%89%E8%A3%85%E6%97%B6%E6%8A%A5%E9%94%99%20%E5%8D%B4%E6%97%A0%E6%98%8E%E7%A1%AE%E6%8F%90%E7%A4%BA%E7%9A%84%E5%8E%9F%E5%9B%A0/'>
+      <p class='title'>npm安装时报错 却无明确提示的原因<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+      <p class='content'>唉 今天又遇到了.只不过是自己脑袋短路了.我想使用 element-ui 结果创建个项目文件夹也叫 element-ui.所以进去之后 如何 npm i element-ui -S 都不好使.后...</p>
+    </a>
+    
+  </div>
+  
+</article>
+
+
+
+
+  <article class="post white-box reveal shadow floatable" id="comments">
+    <p ct><i class='fal fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+</div>
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    
+    
+      
+        <div class='copyright'>
+        <p>Copyright © 2020 <a href="/">黑石博客</a></p>
+
+        </div>
+      
+    
+      
+        
+          <div><div><p>本站使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://volantis.js.org/" data-pjax-state="">Volantis</a> 作为主题 | 由 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/" data-pjax-state="">Hexo</a> 强力驱动</p> </div></div>
+        
+      
+    
+    
+  </footer>
+
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+
+
+  <script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+    pjax_scrollrebeal();
+  });
+</script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "填写邮箱会收到回复提示！粘贴图片可直接上传~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "xxxxxxxxxxx",
+      appKey: "xxxxxxxxxxxxxxxxx",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+      master: '[fc2c9b067f65c9e2d7057ba797f7cfca]',
+      friends: '[104e5bfa98048a2dac66f28ca4d4d846,e399c5e8f4b4b8b86fc88e2b5bd04497,32d39099d6da89788fe3827cb90b1eb7,a5c27d1df34fcd4d8195e7e7d16675d4,09c82fd631755bf5dbb04b4189225637,b548550ae129b82aa01b60e18ccbf141,6a565e6c47127afdd40d5d46089db2c5,4a713ec085a4431f15a8da0942656713&#34;,58bc3a8cecadf26a676e1b8f217698bc,aaf4fe5dd76d0a1390cbd08cdb16c05f,0a106ca9ec8d5e8a2d14f99e5b8bd863,3ecc56d90844b70e49d9f8a61e9cd98c,8a6f99e8ce4af26a93f20c0cbab8a186,5392ad0ec563aa56f6faf597ef966762,6bcf44de7033a4451f38d576fb6e6822,135ae111f8fcfeecc1ea1f06fde149ab]'
+    })
+  }
+
+  function newcomment() {
+
+function queryLeanCloud(k) {
+  let root = this;
+  let len = arguments.length;
+  if (len == 1) {
+    let notExist = new AV.Query("Comment");
+    notExist.doesNotExist('rid');
+    let isEmpty = new AV.Query("Comment");
+    isEmpty.equalTo('rid', '');
+    let q = AV.Query.or(notExist, isEmpty);
+    if (k === '*') q.exists('url');
+    else q.equalTo('url', decodeURI(k));
+    q.addDescending('createdAt');
+    q.addDescending('insertedAt');
+    return q;
+  } else {
+    let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+    let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+    return AV.Query.doCloudQuery(cql)
+  }
+}
+var valine = new Valine({
+      el: '#valine_container_ba',
+      notify: false,
+      verify: false,
+      app_id: 'xxxxxxxxxxx',
+      app_key: 'xxxxxxxxxxxxxxxxx',
+      placeholder: '发表您的意见，让我们一起交流，共同提高吧...',
+      serverURLs: 'https://xxxx'
+});
+
+//判断博主，heson改为自己的昵称
+function bozhu(e){
+    if (e == "heson"){
+        nick = e + '[博主]'
+        return nick;
+    } else {
+      return e
+    }
+}
+
+//判断网址
+function wangzhi(e){
+    http = e.slice(0,4)
+    https = e.slice(0,5)
+    if (http == "http" || https == "https" ){
+         return e
+    } else if (e == "" || e == null || e == undefined){
+      return e
+    } else {
+      e = 'http://'+ e
+      return e
+    }
+}
+
+
+
+
+//查询评论
+valine.Q('*').limit(7).find().then(function (comments) {
+  var hotComments = $("#hot-comments");
+  for (var i = 0; i < comments.length; i++) {
+    if (i === 0) {
+      console.log(comments[0]);
+    }
+    var nick = bozhu(comments[i]._serverData.nick);
+    var content = comments[i]._serverData.comment;
+    var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0, 50);
+    var url = comments[i]._serverData.url;
+    var link = wangzhi(comments[i]._serverData.link);
+    var updatedAt = timeago(comments[i].updatedAt);
+    var commentId = '#' + comments[i].id;
+    hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;发表于' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+  }
+});
+};
+
+
+
+  $(function () {
+    pjax_valine();
+    newcomment();
+  });
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'C1qWqsDatomXVctTafBuJADI-gzGzoHsz',
+    app_key: 'J4CujIoElz1Wo7yLUbY4SOO5',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://elickzhao.github.io' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://elickzhao.github.io' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://elickzhao.github.io' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              if (pv.getAttribute('data-path') == window.location.pathname) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/bb/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+        pjax_fancybox();
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+          newcomment();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>
