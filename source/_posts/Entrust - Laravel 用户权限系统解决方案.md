@@ -1,8 +1,11 @@
 ---
 title: Entrust - Laravel 用户权限系统解决方案
-date: 2016-06-08 21:48:22
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 61259
+date: 2016-06-08 21:48:22
 ---
 
 

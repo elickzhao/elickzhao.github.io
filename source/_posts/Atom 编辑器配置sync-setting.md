@@ -1,8 +1,13 @@
 ---
 title: Atom 编辑器配置sync-setting
-date: 2016-10-18 22:49:16
-tags: [atom,Git,小百科,IDE ]
+tags:
+  - atom
+  - Git
+  - 小百科
+  - IDE
 categories: 前端技术
+abbrlink: 33737
+date: 2016-10-18 22:49:16
 ---
 
 ## sync-settings简介

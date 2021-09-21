@@ -1,8 +1,11 @@
 ---
 title: laravel Event事件解析
-date: 2016-06-14 22:43:47
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 59652
+date: 2016-06-14 22:43:47
 ---
 
 ## 前言

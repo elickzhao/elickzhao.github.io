@@ -1,7 +1,8 @@
 ---
 title: 极棒的jquery动画切换引擎插件Velocity.js
-date: 2016-12-29 22:24:49
 tags: js
+abbrlink: 51307
+date: 2016-12-29 22:24:49
 categories:
 ---
 

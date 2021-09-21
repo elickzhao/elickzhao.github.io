@@ -1,8 +1,11 @@
 ---
 title: 现代 PHP 新特性系列 —— 善用接口
-date: 2016-05-26 18:24:15
-tags: [php,laravel]
+tags:
+  - php
+  - laravel
 categories: php开发
+abbrlink: 8269
+date: 2016-05-26 18:24:15
 ---
 
 # 前言

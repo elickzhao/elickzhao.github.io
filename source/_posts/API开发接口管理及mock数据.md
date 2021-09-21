@@ -1,7 +1,12 @@
 ---
 title: API开发接口管理及mock数据
+tags:
+  - 前端
+  - js
+  - vue
+  - php
+abbrlink: 33826
 date: 2017-08-27 23:21:41
-tags: [前端,js,vue,php]
 categories:
 ---
 

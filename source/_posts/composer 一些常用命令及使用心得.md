@@ -1,7 +1,10 @@
 ---
 title: composer 一些常用命令及使用心得
+tags:
+  - php
+  - composer
+abbrlink: 5880
 date: 2016-05-06 17:30:51
-tags: [php,composer]
 categories:
 ---
 

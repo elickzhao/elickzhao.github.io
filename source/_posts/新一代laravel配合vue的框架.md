@@ -1,7 +1,10 @@
 ---
 title: 新一代laravel配合vue的框架
+tags:
+  - php
+  - laravel
+abbrlink: 46223
 date: 2017-05-13 20:58:36
-tags: [php,laravel]
 categories:
 ---
 

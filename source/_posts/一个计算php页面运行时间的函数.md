@@ -1,7 +1,10 @@
 ---
 title: 一个计算php页面运行时间的函数
+tags:
+  - php
+  - 小百科
+abbrlink: 43233
 date: 2016-12-02 22:46:40
-tags: [php,小百科]
 categories:
 ---
 

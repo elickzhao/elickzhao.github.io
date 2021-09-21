@@ -1,7 +1,10 @@
 ---
 title: github删除fork项目
+tags:
+  - Git
+  - 小百科
+abbrlink: 64622
 date: 2016-06-08 12:13:43
-tags: [Git,小百科]
 categories:
 ---
 

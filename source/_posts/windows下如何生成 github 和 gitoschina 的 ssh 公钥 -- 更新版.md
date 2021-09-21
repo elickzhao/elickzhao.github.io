@@ -1,7 +1,10 @@
 ---
 title: windows下如何生成 github 和 gitoschina 的 ssh 公钥 -- 更新版
+tags:
+  - Git
+  - ssh
+abbrlink: 21178
 date: 2016-05-01 20:54:10
-tags: [Git,ssh]
 categories:
 ---
 

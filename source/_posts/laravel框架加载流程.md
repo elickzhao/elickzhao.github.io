@@ -1,8 +1,11 @@
 ---
 title: laravel框架加载流程
-date: 2016-05-26 00:30:10
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 25866
+date: 2016-05-26 00:30:10
 ---
 
 

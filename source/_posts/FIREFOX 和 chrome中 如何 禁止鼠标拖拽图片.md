@@ -1,8 +1,9 @@
 ---
 title: FIREFOX 和 chrome中 如何 禁止鼠标拖拽图片
-date: 2016-05-14 00:01:58
 tags: 小百科
 categories: 前端技术
+abbrlink: 15497
+date: 2016-05-14 00:01:58
 ---
 
 ##三种办法

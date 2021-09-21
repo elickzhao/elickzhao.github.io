@@ -1,7 +1,8 @@
 ---
 title: linux sed 批量替换字符串
-date: 2016-04-27 22:25:04
 tags: linux
+abbrlink: 61786
+date: 2016-04-27 22:25:04
 categories:
 ---
 

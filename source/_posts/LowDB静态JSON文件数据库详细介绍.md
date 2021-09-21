@@ -1,7 +1,8 @@
 ---
-title:  LowDB静态JSON文件数据库详细介绍
-date: 2017-07-09 22:12:51
+title: LowDB静态JSON文件数据库详细介绍
 tags: node.js
+abbrlink: 32077
+date: 2017-07-09 22:12:51
 categories:
 ---
 

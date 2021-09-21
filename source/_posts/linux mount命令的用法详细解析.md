@@ -1,6 +1,8 @@
+---
 title: linux mount命令的用法详细解析
 tags: linux
 categories: 服务器端
+abbrlink: 26927
 date: 2016-04-21 23:52:53
 ---
 # 挂接命令(mount)

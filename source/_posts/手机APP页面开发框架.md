@@ -1,7 +1,11 @@
 ---
 title: 手机APP页面开发框架
+tags:
+  - APP
+  - css
+  - js
+abbrlink: 40870
 date: 2016-10-29 23:33:58
-tags: [APP,css,js]
 categories:
 ---
 

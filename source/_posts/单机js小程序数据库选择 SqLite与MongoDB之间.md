@@ -1,7 +1,12 @@
 ---
 title: 单机js小程序数据库选择 SqLite与MongoDB之间
+tags:
+  - js
+  - node.js
+  - MongoDB
+  - sqlite
+abbrlink: 5307
 date: 2017-02-08 21:21:07
-tags: [js,node.js,MongoDB,sqlite]
 categories:
 ---
 

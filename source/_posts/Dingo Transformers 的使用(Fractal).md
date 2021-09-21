@@ -1,7 +1,8 @@
 ---
 title: Dingo Transformers 的使用(Fractal)
-date: 2016-12-18 22:47:45
 tags: laravel dingo
+abbrlink: 42699
+date: 2016-12-18 22:47:45
 categories:
 ---
 

@@ -1,7 +1,11 @@
 ---
 title: Yarn 更快的js套件管理 替换NPM
+tags:
+  - js
+  - npm
+  - node.js
+abbrlink: 63668
 date: 2017-01-31 22:03:51
-tags: [js,npm,node.js]
 categories:
 ---
 

@@ -1,8 +1,12 @@
 ---
 title: bootstrap 该死的IE兼容
-date: 2016-05-17 21:18:46
-tags: [bootstrap,前端,浏览器兼容]
+tags:
+  - bootstrap
+  - 前端
+  - 浏览器兼容
 categories: 前端技术
+abbrlink: 64778
+date: 2016-05-17 21:18:46
 ---
 
 # 前面碎碎念

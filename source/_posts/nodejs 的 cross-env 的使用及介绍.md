@@ -1,7 +1,10 @@
 ---
 title: nodejs 的 cross-env 的使用及介绍
+tags:
+  - node.js
+  - 前端
+abbrlink: 5135
 date: 2017-06-21 23:11:58
-tags: [node.js,前端]
 categories:
 ---
 

@@ -1,7 +1,11 @@
+---
 title: Dockerfile VOLUME 和 -v 的区别
-date: 2016-04-21 21:27:05
-tags: ['docker','服务器相关技术']
+tags:
+  - docker
+  - 服务器相关技术
 categories: 服务器端
+abbrlink: 11749
+date: 2016-04-21 21:27:05
 ---
 
 

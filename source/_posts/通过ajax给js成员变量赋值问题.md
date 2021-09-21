@@ -1,7 +1,10 @@
 ---
 title: 通过ajax给js成员变量赋值问题
+tags:
+  - js
+  - 小百科
+abbrlink: 6570
 date: 2018-01-28 22:57:37
-tags: [js,小百科]
 categories:
 ---
 

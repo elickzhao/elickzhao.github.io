@@ -1,7 +1,12 @@
 ---
 title: 前端模拟本地数据 mock 的各种方法
+tags:
+  - 前端
+  - js
+  - node.js
+  - mock
+abbrlink: 52628
 date: 2017-08-19 21:40:01
-tags: [前端,js,node.js,mock]
 categories:
 ---
 

@@ -1,8 +1,12 @@
 ---
 title: Linux系统如何查看版本信息
-date: 2016-06-06 15:41:04
-tags: [小百科,服务器相关技术,linux]
+tags:
+  - 小百科
+  - 服务器相关技术
+  - linux
 categories: 服务器端
+abbrlink: 52205
+date: 2016-06-06 15:41:04
 ---
 
 [Linux系统如何查看版本信息](http://jingyan.baidu.com/article/7908e85c725159af481ad2f7.html)

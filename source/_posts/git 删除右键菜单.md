@@ -1,7 +1,8 @@
 ---
 title: git 删除右键菜单
-date: 2016-05-04 22:06:10
 tags: Git
+abbrlink: 34506
+date: 2016-05-04 22:06:10
 categories:
 ---
 

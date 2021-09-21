@@ -1,8 +1,12 @@
 ---
 title: margin-top失效的解决
-date: 2016-06-30 21:47:30
-tags: [css,前端,小百科]
+tags:
+  - css
+  - 前端
+  - 小百科
 categories: 前端技术
+abbrlink: 31632
+date: 2016-06-30 21:47:30
 ---
 
 ## 前言

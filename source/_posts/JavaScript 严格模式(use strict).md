@@ -1,7 +1,10 @@
 ---
 title: JavaScript 严格模式(use strict)
+tags:
+  - 小百科
+  - js
+abbrlink: 22831
 date: 2017-07-02 20:13:29
-tags: [小百科,js]
 categories:
 ---
 

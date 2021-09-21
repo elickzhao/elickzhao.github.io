@@ -1,8 +1,11 @@
 ---
 title: laravel-breadcrumbs 面包屑插件
-date: 2016-06-10 15:44:07
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 51662
+date: 2016-06-10 15:44:07
 ---
 
 ## 前言

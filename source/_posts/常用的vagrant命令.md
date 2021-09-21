@@ -1,9 +1,11 @@
+---
 title: 常用的vagrant命令
 tags:
   - 服务器相关技术
   - vagrant
 categories:
   - 服务器端
+abbrlink: 35457
 date: 2016-04-20 22:28:00
 ---
 

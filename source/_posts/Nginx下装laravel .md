@@ -1,7 +1,11 @@
 ---
-title: nginx 下装laravel 
+title: nginx 下装laravel
+tags:
+  - 服务器相关技术
+  - nginx
+  - laravel
+abbrlink: 39399
 date: 2017-01-04 23:14:51
-tags: [服务器相关技术,nginx,laravel]
 categories:
 ---
 

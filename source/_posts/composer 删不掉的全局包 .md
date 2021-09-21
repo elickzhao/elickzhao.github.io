@@ -1,7 +1,8 @@
 ---
-title: composer 删不掉的全局包 
-date: 2017-12-18 22:18:40
+title: composer 删不掉的全局包
 tags: composer
+abbrlink: 58242
+date: 2017-12-18 22:18:40
 categories:
 ---
 

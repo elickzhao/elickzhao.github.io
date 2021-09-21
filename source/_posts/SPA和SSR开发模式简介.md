@@ -1,7 +1,10 @@
 ---
 title: SPA和SSR开发模式简介
+tags:
+  - 前端
+  - node.js
+abbrlink: 20827
 date: 2017-08-28 23:06:41
-tags: [前端,node.js]
 categories:
 ---
 

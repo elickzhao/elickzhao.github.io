@@ -1,7 +1,10 @@
 ---
 title: js中let和var定义变量的区别
+tags:
+  - JavaScript
+  - 小百科
+abbrlink: 51012
 date: 2016-10-15 21:02:46
-tags: [JavaScript,小百科]
 categories:
 ---
 

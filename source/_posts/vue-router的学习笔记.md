@@ -1,7 +1,8 @@
 ---
 title: vue-router的学习笔记
-date: 2017-07-18 23:24:37
 tags: vue
+abbrlink: 60925
+date: 2017-07-18 23:24:37
 categories:
 ---
 

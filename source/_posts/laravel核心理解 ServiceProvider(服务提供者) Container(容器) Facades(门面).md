@@ -1,7 +1,10 @@
 ---
 title: laravel核心理解 ServiceProvider(服务提供者) Container(容器) Facades(门面)
+tags:
+  - laravel
+  - php
+abbrlink: 32821
 date: 2017-01-13 22:33:21
-tags: [laravel,php]
 categories:
 ---
 

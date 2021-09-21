@@ -1,7 +1,11 @@
+---
 title: 总结 Dockerfile 一些命令说明
-date: 2016-04-27 23:44:57
-tags: [docker,服务器相关技术]
+tags:
+  - docker
+  - 服务器相关技术
 categories: 服务器端
+abbrlink: 112
+date: 2016-04-27 23:44:57
 ---
 
 >Dockerfile是一个镜像的表示，可以通过Dockerfile来描述构建镜像的步骤，并自动构建一个容器

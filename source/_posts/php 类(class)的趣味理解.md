@@ -1,7 +1,8 @@
 ---
-title:  php 类(class)的趣味理解
-date: 2016-12-03 22:43:22
+title: php 类(class)的趣味理解
 tags: php
+abbrlink: 39802
+date: 2016-12-03 22:43:22
 categories:
 ---
 

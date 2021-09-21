@@ -1,7 +1,11 @@
 ---
-title: 不错的前台框架 总结 Semantic UI,slicy,Amaze ui 等等
+title: '不错的前台框架 总结 Semantic UI,slicy,Amaze ui 等等'
+tags:
+  - css
+  - 前端技术
+  - 前台框架
+abbrlink: 41457
 date: 2017-01-15 22:07:43
-tags: [css,前端技术,前台框架]
 categories:
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: php 抽象类的用法 (abstract)
-date: 2016-10-25 22:31:25
 tags: php
+abbrlink: 4132
+date: 2016-10-25 22:31:25
 categories:
 ---
 

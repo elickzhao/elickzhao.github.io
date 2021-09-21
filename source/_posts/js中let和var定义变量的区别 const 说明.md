@@ -1,8 +1,11 @@
 ---
 title: js中let和var定义变量的区别 const 说明
-date: 2016-10-27 22:33:41
-tags: [js,小百科]
+tags:
+  - js
+  - 小百科
 categories: 前端技术
+abbrlink: 49385
+date: 2016-10-27 22:33:41
 ---
 
 

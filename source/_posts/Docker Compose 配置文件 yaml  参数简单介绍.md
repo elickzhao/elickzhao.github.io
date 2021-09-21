@@ -1,7 +1,8 @@
 ---
 title: Docker Compose 配置文件 yaml  参数简单介绍
-date: 2016-05-02 23:35:58
 tags: docker
+abbrlink: 22562
+date: 2016-05-02 23:35:58
 categories:
 ---
 

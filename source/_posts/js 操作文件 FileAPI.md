@@ -1,8 +1,12 @@
 ---
 title: js 操作文件 FileAPI
-date: 2016-05-31 18:27:46
-tags: [JavaScript,前端,小百科]
+tags:
+  - JavaScript
+  - 前端
+  - 小百科
 categories: 前端技术
+abbrlink: 28836
+date: 2016-05-31 18:27:46
 ---
 [TOC]
 

@@ -1,8 +1,9 @@
 ---
 title: js创建对象
-date: 2016-10-15 23:31:45
 tags: js
 categories: 前端技术
+abbrlink: 25823
+date: 2016-10-15 23:31:45
 ---
 
 ```js

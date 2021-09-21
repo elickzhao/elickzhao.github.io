@@ -1,7 +1,10 @@
 ---
 title: VirtualBox虚拟机 修改分辨率
+tags:
+  - linux
+  - VirtualBox
+abbrlink: 65195
 date: 2016-06-13 15:42:01
-tags: [linux,VirtualBox]
 categories:
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: 解决 Gravatar 被墙导致无法显示的问题
-date: 2016-10-12 22:59:15
 tags: 前端
 categories: 前端技术
+abbrlink: 29465
+date: 2016-10-12 22:59:15
 ---
 
 **Gravatar**

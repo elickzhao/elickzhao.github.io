@@ -1,8 +1,11 @@
 ---
 title: gulp学习
-date: 2016-05-09 00:19:49
-tags: [npm,gulp]
+tags:
+  - npm
+  - gulp
 categories: 前端技术
+abbrlink: 63029
+date: 2016-05-09 00:19:49
 ---
 
 简单说下gulp使用流程

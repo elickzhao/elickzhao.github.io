@@ -1,7 +1,10 @@
 ---
 title: multispinner 使用简介
+tags:
+  - node.js
+  - 小百科
+abbrlink: 11700
 date: 2017-07-10 20:55:01
-tags: [node.js,小百科]
 categories:
 ---
 

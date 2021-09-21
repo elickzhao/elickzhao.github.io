@@ -1,7 +1,11 @@
 ---
-title: windows 下安装VirtualBox , Vagrant 和 Homestead
+title: 'windows 下安装VirtualBox , Vagrant 和 Homestead'
+tags:
+  - vagrant
+  - 服务器相关技术
+  - laravel
+abbrlink: 8691
 date: 2016-05-04 18:54:01
-tags: [vagrant,服务器相关技术,laravel]
 categories:
 ---
 

@@ -1,8 +1,11 @@
 ---
 title: laravel 包开发的一些思路
-date: 2016-05-21 22:52:28
-tags: [php,laravel]
+tags:
+  - php
+  - laravel
 categories: php开发
+abbrlink: 448
+date: 2016-05-21 22:52:28
 ---
 
 

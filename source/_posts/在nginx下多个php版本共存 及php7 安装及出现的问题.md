@@ -1,7 +1,11 @@
 ---
 title: 在nginx下多个php版本共存 及php7 安装及出现的问题
+tags:
+  - php
+  - 服务器相关技术
+  - 小百科
+abbrlink: 4986
 date: 2016-11-15 23:19:32
-tags: [php,服务器相关技术,小百科]
 categories:
 ---
 

@@ -1,7 +1,10 @@
 ---
 title: jquery 获取onclick() 当前点击对象
+tags:
+  - js
+  - 小百科
+abbrlink: 47275
 date: 2018-01-29 14:41:31
-tags: [js,小百科]
 categories:
 ---
 

@@ -1,8 +1,12 @@
 ---
 title: JS void 0 解析
-date: 2016-06-23 22:39:50
-tags: [js,前端,小百科]
+tags:
+  - js
+  - 前端
+  - 小百科
 categories: 前端技术
+abbrlink: 18183
+date: 2016-06-23 22:39:50
 ---
 
 ## 前言

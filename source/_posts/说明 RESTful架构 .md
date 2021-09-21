@@ -1,7 +1,8 @@
 ---
-title: 说明 -- RESTful架构 
-date: 2016-06-29 22:19:42
+title: 说明 -- RESTful架构
 tags: 小百科
+abbrlink: 23415
+date: 2016-06-29 22:19:42
 categories:
 ---
 

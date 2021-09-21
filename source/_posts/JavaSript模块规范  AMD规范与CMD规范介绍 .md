@@ -1,8 +1,11 @@
 ---
 title: JavaSript模块规范 AMD规范与CMD规范介绍
-date: 2016-06-24 23:35:33
-tags: [js,前端]
+tags:
+  - js
+  - 前端
 categories: 前端技术
+abbrlink: 65080
+date: 2016-06-24 23:35:33
 ---
 
 >结合一些第三方模块构建工具，如CommonJS、RequireJS或者SeaJs，可以轻松实现代码的模块化。

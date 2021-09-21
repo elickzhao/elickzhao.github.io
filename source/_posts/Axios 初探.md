@@ -1,7 +1,10 @@
 ---
 title: Axios 初探
+tags:
+  - js
+  - vue
+abbrlink: 42492
 date: 2017-08-01 20:07:38
-tags: [js,vue]
 categories:
 ---
 

@@ -1,8 +1,12 @@
 ---
 title: NPM 安装 及 安装node-sass报错问题
-date: 2016-08-01 20:40:53
-tags: [前端,node.js,npm]
+tags:
+  - 前端
+  - node.js
+  - npm
 categories: 前端技术
+abbrlink: 14914
+date: 2016-08-01 20:40:53
 ---
 
 

@@ -1,8 +1,11 @@
 ---
 title: vue.js 中国好教程
-date: 2016-10-14 22:09:29
-tags: [js,vue]
+tags:
+  - js
+  - vue
 categories: 前端技术
+abbrlink: 26127
+date: 2016-10-14 22:09:29
 ---
 
 [Vue.js教程](https://github.com/keepfool/vue-tutorials)

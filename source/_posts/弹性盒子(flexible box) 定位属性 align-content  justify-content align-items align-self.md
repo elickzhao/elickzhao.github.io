@@ -1,7 +1,10 @@
 ---
 title: 弹性盒子(flexible box) 定位属性 align-content  justify-content align-items align-self
+tags:
+  - css
+  - 小百科
+abbrlink: 63615
 date: 2017-07-06 23:25:48
-tags: [css,小百科]
 categories:
 ---
 

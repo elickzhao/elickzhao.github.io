@@ -1,7 +1,10 @@
 ---
 title: three.js学习及小例子
+tags:
+  - js
+  - 前端
+abbrlink: 29892
 date: 2017-06-07 22:32:01
-tags: [js,前端]
 categories:
 ---
 

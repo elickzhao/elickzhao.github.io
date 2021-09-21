@@ -1,7 +1,11 @@
 ---
-title:  SSR老技术 新学问....
+title: SSR老技术 新学问....
+tags:
+  - SSR
+  - 杂学
+  - 其他
+abbrlink: 26610
 date: 2017-03-31 22:50:21
-tags: [SSR,杂学,其他]
 categories:
 ---
 

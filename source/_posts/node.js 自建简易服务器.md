@@ -1,7 +1,10 @@
 ---
 title: node.js 自建简易服务器
+tags:
+  - node.js
+  - 前端
+abbrlink: 4607
 date: 2017-07-16 22:45:54
-tags: [node.js,前端]
 categories:
 ---
 废话先不多说,代码就是如下这么简单.

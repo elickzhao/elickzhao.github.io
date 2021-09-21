@@ -1,7 +1,8 @@
 ---
 title: VSCode 常用快捷键
-date: 2017-03-24 22:11:36
 tags: IDE
+abbrlink: 34434
+date: 2017-03-24 22:11:36
 categories:
 ---
 

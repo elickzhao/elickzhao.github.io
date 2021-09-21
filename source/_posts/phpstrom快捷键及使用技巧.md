@@ -1,8 +1,12 @@
 ---
 title: phpstrom快捷键及使用技巧
-date: 2016-05-09 15:05:58
-tags: [phpstorm,php,ide]
+tags:
+  - phpstorm
+  - php
+  - ide
 categories: php开发
+abbrlink: 39042
+date: 2016-05-09 15:05:58
 ---
 
 

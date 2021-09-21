@@ -1,7 +1,11 @@
 ---
 title: 三星note2 wifi无法搜索 刷机
+tags:
+  - 玩机技巧
+  - 其他
+  - 杂学
+abbrlink: 26009
 date: 2017-03-28 22:32:45
-tags: [玩机技巧,其他,杂学]
 categories:
 ---
 

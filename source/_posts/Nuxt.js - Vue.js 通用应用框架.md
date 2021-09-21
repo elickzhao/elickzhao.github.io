@@ -1,7 +1,8 @@
 ---
 title: Nuxt.js - Vue.js 通用应用框架
-date: 2017-09-07 23:13:43
 tags: vue
+abbrlink: 22668
+date: 2017-09-07 23:13:43
 categories:
 ---
 

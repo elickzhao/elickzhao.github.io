@@ -1,8 +1,9 @@
 ---
 title: php 函数学习
-date: 2016-06-01 23:21:40
 tags: php
 categories: php开发
+abbrlink: 62936
+date: 2016-06-01 23:21:40
 ---
 
 **查看练习地址**:

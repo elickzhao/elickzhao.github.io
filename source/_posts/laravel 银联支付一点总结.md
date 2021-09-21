@@ -1,8 +1,9 @@
 ---
 title: laravel 银联支付一点总结
-date: 2016-05-15 22:08:05
 tags: laravel
 categories: php开发
+abbrlink: 8997
+date: 2016-05-15 22:08:05
 ---
 
 - 第一步开通测试

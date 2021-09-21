@@ -1,7 +1,8 @@
 ---
 title: dingo和jwt插件使用及中间件问题
-date: 2016-11-26 23:42:54
 tags: laravel
+abbrlink: 2812
+date: 2016-11-26 23:42:54
 categories:
 ---
 

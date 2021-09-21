@@ -1,7 +1,11 @@
 ---
 title: webpack-dev-server 的 Node.js Api方式和CLI 方式 两种用法
+tags:
+  - node.js
+  - 前端
+  - webpack
+abbrlink: 64787
 date: 2017-06-22 22:40:27
-tags: [node.js,前端,webpack]
 categories:
 ---
 

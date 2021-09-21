@@ -1,8 +1,9 @@
 ---
 title: 服务器相关技术
+categories: 服务器相关技术
+abbrlink: 9563
 date: 2016-11-20 22:32:46
 tags:
-categories: 服务器相关技术
 ---
 yum是一个用于管理rpm包的后台程序，用python写成，可以非常方便的解决rpm的依赖关系。在建立好yum服务器后，yum客户端可以通过 http、ftp方式获得软件包，并使用方便的命令直接管理、更新所有的rpm包，甚至包括kernel的更新。它也可以理解为红旗环境下的apt管理工具。
 

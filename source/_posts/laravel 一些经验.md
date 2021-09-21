@@ -1,7 +1,10 @@
 ---
-title:  laravel 一些经验
-date: 2016-12-9 21:06:18
-tags: [php,laravel]
+title: laravel 一些经验
+tags:
+  - php
+  - laravel
+abbrlink: 18893
+date: 2016-12-09 21:06:18
 categories:
 ---
 

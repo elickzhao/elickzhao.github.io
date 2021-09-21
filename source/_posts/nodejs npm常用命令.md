@@ -1,8 +1,11 @@
 ---
 title: nodejs npm常用命令
-date: 2016-05-06 22:47:16
-tags: [npm,node.js]
+tags:
+  - npm
+  - node.js
 categories: 前端技术
+abbrlink: 41231
+date: 2016-05-06 22:47:16
 ---
 
 **npm search <name>** 搜索包

@@ -1,7 +1,12 @@
 ---
 title: webpack的'Cannot find module 'webpacklibnodeNodeTemplatePlugin'问题
+tags:
+  - js
+  - webpack
+  - node.js
+  - 小百科
+abbrlink: 64367
 date: 2017-01-11 20:55:10
-tags: [js,webpack,node.js,小百科]
 categories:
 ---
 

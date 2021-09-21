@@ -1,7 +1,10 @@
 ---
 title: vue.js开发扩展插件Vue.js devtools安装使用
+tags:
+  - js
+  - vue
+abbrlink: 42259
 date: 2016-07-17 22:31:36
-tags: [js,vue]
 categories:
 ---
 

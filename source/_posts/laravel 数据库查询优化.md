@@ -1,7 +1,10 @@
 ---
 title: laravel 数据库查询优化
+tags:
+  - laravel
+  - php
+abbrlink: 25255
 date: 2016-12-01 23:28:44
-tags: [laravel,php]
 categories:
 ---
 

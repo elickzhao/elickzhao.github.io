@@ -1,8 +1,11 @@
 ---
-title:  Laravel项目 基本开发流程
-date: 2016-05-28 22:20:20
-tags: [php,laravel]
+title: Laravel项目 基本开发流程
+tags:
+  - php
+  - laravel
 categories: php开发
+abbrlink: 17343
+date: 2016-05-28 22:20:20
 ---
 
 

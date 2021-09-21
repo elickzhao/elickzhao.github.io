@@ -1,8 +1,11 @@
 ---
 title: PHP 扩展模块 POSIX 和 PCNTL
-date: 2016-06-18 20:51:57
-tags: [php,小百科]
+tags:
+  - php
+  - 小百科
 categories: php开发
+abbrlink: 10420
+date: 2016-06-18 20:51:57
 ---
 
 

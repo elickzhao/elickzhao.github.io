@@ -1,8 +1,11 @@
 ---
 title: js一些隐式写法 !0 !!0 viod 0
-date: 2016-07-01 23:28:45
-tags: [js,小百科 ]
+tags:
+  - js
+  - 小百科
 categories: 前端技术
+abbrlink: 9736
+date: 2016-07-01 23:28:45
 ---
 
 ## 前言

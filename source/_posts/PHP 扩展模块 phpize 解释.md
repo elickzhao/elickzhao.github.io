@@ -1,7 +1,10 @@
 ---
 title: PHP 扩展模块 phpize 解释
+tags:
+  - php
+  - 小百科
+abbrlink: 56095
 date: 2016-06-19 21:48:04
-tags: [php,小百科]
 categories:
 ---
 ## 简介

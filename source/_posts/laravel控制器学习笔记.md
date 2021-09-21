@@ -1,8 +1,11 @@
 ---
 title: laravel控制器学习笔记
-date: 2016-06-05 23:54:43
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 60311
+date: 2016-06-05 23:54:43
 ---
 
 

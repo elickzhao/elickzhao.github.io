@@ -1,7 +1,8 @@
 ---
 title: 手机APP开发真机测试难题
-date: 2017-04-12 23:08:39
 tags: APP
+abbrlink: 1501
+date: 2017-04-12 23:08:39
 categories:
 ---
 

@@ -1,7 +1,11 @@
 ---
 title: JWT简介
+tags:
+  - laravel
+  - php
+  - 小百科
+abbrlink: 5051
 date: 2016-12-30 22:23:17
-tags: [laravel,php,小百科]
 categories:
 ---
 

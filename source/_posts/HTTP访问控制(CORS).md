@@ -1,7 +1,10 @@
 ---
 title: HTTP访问控制(CORS)
+tags:
+  - 前端
+  - js
+abbrlink: 58633
 date: 2017-01-05 22:12:31
-tags: [前端,js]
 categories:
 ---
 

@@ -1,7 +1,11 @@
 ---
 title: 关于child_process中的exec和spawn
+tags:
+  - node.js
+  - js
+  - 小百科
+abbrlink: 5481
 date: 2017-06-19 21:41:49
-tags: [node.js,js,小百科]
 categories:
 ---
 

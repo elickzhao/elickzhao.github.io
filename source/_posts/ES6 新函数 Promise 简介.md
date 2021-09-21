@@ -1,7 +1,10 @@
 ---
 title: ES6 新函数 Promise 简介
+tags:
+  - js
+  - 小百科
+abbrlink: 34787
 date: 2017-06-23 22:38:40
-tags: [js,小百科]
 categories:
 ---
 

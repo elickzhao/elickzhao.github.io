@@ -1,7 +1,11 @@
 ---
 title: Postman发送带cookie的http请求
+tags:
+  - 小百科
+  - chrome
+  - postman
+abbrlink: 35670
 date: 2017-03-03 21:28:49
-tags: [小百科,chrome,postman]
 categories:
 ---
 

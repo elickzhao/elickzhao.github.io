@@ -1,7 +1,8 @@
 ---
 title: VSCode 自定义代码块  snippet
-date: 2017-05-29 22:33:53
 tags: IDE
+abbrlink: 58614
+date: 2017-05-29 22:33:53
 categories:
 ---
 

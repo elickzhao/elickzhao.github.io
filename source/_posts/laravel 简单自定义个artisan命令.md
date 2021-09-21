@@ -1,8 +1,11 @@
 ---
 title: laravel 简单自定义个artisan命令
-date: 2016-05-24 00:11:59
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 50420
+date: 2016-05-24 00:11:59
 ---
 
 ###参考 artisan make:model 而写的 make:view 新建blade模版

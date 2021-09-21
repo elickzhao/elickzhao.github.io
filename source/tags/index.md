@@ -1,6 +1,5 @@
 ---
-title: tags
-date: 2016-04-17 11:28:37
-type: "tags"
-comments: false
+layout: tag
+index: true
+title: 所有标签
 ---

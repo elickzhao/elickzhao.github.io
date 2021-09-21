@@ -1,8 +1,11 @@
 ---
-title:  PHP 扩展模块 PECL 解释
-date: 2016-06-17 11:05:36
-tags: [php,小百科]
+title: PHP 扩展模块 PECL 解释
+tags:
+  - php
+  - 小百科
 categories: php开发
+abbrlink: 62571
+date: 2016-06-17 11:05:36
 ---
 ## 简介
 

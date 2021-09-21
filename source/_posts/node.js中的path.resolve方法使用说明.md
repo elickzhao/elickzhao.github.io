@@ -1,7 +1,10 @@
 ---
 title: node.js中的path.resolve方法使用说明
+tags:
+  - js
+  - node.js
+abbrlink: 33891
 date: 2017-01-10 19:57:01
-tags: [js,node.js]
 categories:
 ---
 

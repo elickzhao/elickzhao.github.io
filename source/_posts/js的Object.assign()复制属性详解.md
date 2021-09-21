@@ -1,7 +1,10 @@
 ---
 title: js的Object.assign()复制属性详解
+tags:
+  - js
+  - 小百科
+abbrlink: 61807
 date: 2018-01-08 23:39:33
-tags: [js,小百科]
 categories:
 ---
 

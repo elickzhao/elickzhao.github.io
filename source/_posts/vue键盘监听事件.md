@@ -1,7 +1,10 @@
 ---
 title: vue键盘监听事件
+tags:
+  - js
+  - vue
+abbrlink: 38944
 date: 2017-07-29 21:58:02
-tags: [js,vue]
 categories:
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: github开博客
-date: 2016-05-10 22:09:12
 tags: Git
+abbrlink: 28675
+date: 2016-05-10 22:09:12
 categories:
 ---
 

@@ -1,7 +1,10 @@
 ---
 title: (laravel插件) laravel-backup 备份插件
+tags:
+  - laravel
+  - laravel插件
+abbrlink: 3132
 date: 2016-10-23 22:31:25
-tags: [laravel,laravel插件]
 categories:
 ---
 

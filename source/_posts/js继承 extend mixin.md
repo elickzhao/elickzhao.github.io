@@ -1,7 +1,10 @@
 ---
 title: js继承 extend mixin
+tags:
+  - js
+  - node.js
+abbrlink: 21744
 date: 2017-06-27 23:13:20
-tags: [js,node.js]
 categories:
 ---
 

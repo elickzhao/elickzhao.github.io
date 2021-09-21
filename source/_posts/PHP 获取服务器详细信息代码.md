@@ -1,6 +1,10 @@
-title:  PHP 获取服务器详细信息代码
+---
+title: PHP 获取服务器详细信息代码
+tags:
+  - php
+  - linux
+abbrlink: 31447
 date: 2016-04-29 23:37:15
-tags: [php,linux]
 ---
 
 >说明一下为什么写这个.因为docker的link时需要取得环境变量里面的mysql容器的IP地址,所以想用php取得容器的环境变量.原本想用 `$_ENV[]` 发现没有内容 原来需要修改 **php.ini** 里面 `variables_order = "EGPCS"`

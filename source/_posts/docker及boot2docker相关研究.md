@@ -1,8 +1,11 @@
 ---
 title: docker及boot2docker相关研究
-date: 2016-04-18 23:51:49
-tags: [服务器相关技术,docker]
+tags:
+  - 服务器相关技术
+  - docker
 categories: 服务器端
+abbrlink: 42929
+date: 2016-04-18 23:51:49
 ---
 # boot2docker转发端口问题
   这是个很恶心的问题 因为boot2docker还是依赖与virtualbox 所以虽然使用命令 `docker run -dp 8080:8080 php`进行转发 但是还需要修改虚拟机的端口转发才可以 

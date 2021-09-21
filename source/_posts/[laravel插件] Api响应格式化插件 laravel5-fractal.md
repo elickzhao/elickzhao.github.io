@@ -1,8 +1,9 @@
 ---
 title: (laravel插件) Api响应格式化插件 laravel5-fractal
-date: 2016-10-21 22:31:25
-tags:  laravel
+tags: laravel
 categories: 前端技术
+abbrlink: 32860
+date: 2016-10-21 22:31:25
 ---
 
 ## 简介

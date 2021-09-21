@@ -1,7 +1,10 @@
 ---
 title: 使用dingo返回数据
+tags:
+  - laravel
+  - dingo
+abbrlink: 43450
 date: 2016-12-19 23:22:35
-tags: [laravel,dingo]
 categories:
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: linux各个发行版简介
-date: 2016-07-22 22:30:42
 tags: linux
+abbrlink: 2091
+date: 2016-07-22 22:30:42
 categories:
 ---
 

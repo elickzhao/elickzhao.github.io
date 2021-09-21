@@ -1,8 +1,12 @@
 ---
 title: webpack 零基础教程
-date: 2016-10-11 21:43:17
-tags: [js,前端,webpack]
+tags:
+  - js
+  - 前端
+  - webpack
 categories: 前端技术
+abbrlink: 43650
+date: 2016-10-11 21:43:17
 ---
 
 

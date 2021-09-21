@@ -1,7 +1,11 @@
 ---
 title: Atom 使用小技巧
+tags:
+  - 前端
+  - 小百科
+  - IDE
+abbrlink: 37625
 date: 2016-07-23 21:27:52
-tags: [前端,小百科,IDE ]
 categories:
 ---
 

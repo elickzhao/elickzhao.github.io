@@ -1,9 +1,13 @@
 ---
 title: 在VirtualBox和Vagrant中安装Docker
-date: 2016-04-14 01:18:48
 comments: true
 categories: 服务器端
-tags: [linux,服务器相关技术,vagrant]
+tags:
+  - linux
+  - 服务器相关技术
+  - vagrant
+abbrlink: 34978
+date: 2016-04-14 01:18:48
 ---
 
 # 参考文章

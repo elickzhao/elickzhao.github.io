@@ -1,6 +1,5 @@
 ---
-title: categories
-date: 2016-04-17 11:32:56
-type: "categories"
-comments: false
+layout: category
+index: true
+title: 所有分类
 ---

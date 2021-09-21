@@ -1,7 +1,8 @@
 ---
 title: ECMAScript 简介
-date: 2017-01-03 22:37:37
 tags: js
+abbrlink: 46923
+date: 2017-01-03 22:37:37
 categories:
 ---
 

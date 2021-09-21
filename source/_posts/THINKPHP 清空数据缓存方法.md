@@ -1,7 +1,10 @@
 ---
 title: THINKPHP 清空数据缓存方法
+tags:
+  - php
+  - 小百科
+abbrlink: 52921
 date: 2018-01-26 22:37:48
-tags: [php,小百科]
 categories:
 ---
 

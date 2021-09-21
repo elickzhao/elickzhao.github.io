@@ -1,7 +1,10 @@
 ---
 title: hexo迁移别的电脑步骤
+tags:
+  - hexo
+  - 小百科
+abbrlink: 44192
 date: 2017-01-29 22:08:17
-tags: [hexo,小百科]
 categories:
 ---
 

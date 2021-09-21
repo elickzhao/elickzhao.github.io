@@ -1,8 +1,9 @@
 ---
 title: npm package.json 配置说明
-date: 2016-05-08 23:06:01
 tags: npm
 categories: 前端技术
+abbrlink: 60093
+date: 2016-05-08 23:06:01
 ---
 
 

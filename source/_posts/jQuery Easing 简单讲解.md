@@ -1,7 +1,11 @@
 ---
 title: jQuery Easing 简单讲解
+tags:
+  - js
+  - jquery
+  - easing
+abbrlink: 7741
 date: 2017-01-08 22:58:30
-tags: [js,jquery,easing]
 categories:
 ---
 

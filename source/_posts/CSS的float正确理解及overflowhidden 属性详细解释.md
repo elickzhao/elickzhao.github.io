@@ -1,8 +1,12 @@
 ---
 title: CSS的float正确理解及overflowhidden 属性详细解释
-date: 2016-07-03 19:01:18
-tags: [css,小百科,前端]
+tags:
+  - css
+  - 小百科
+  - 前端
 categories: 前端技术
+abbrlink: 23006
+date: 2016-07-03 19:01:18
 ---
 
 ## 简单说明

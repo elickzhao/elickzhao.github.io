@@ -1,7 +1,10 @@
 ---
 title: thinphp 循环嵌套if 不输出的问题
+tags:
+  - php
+  - 小百科
+abbrlink: 53245
 date: 2018-02-08 22:16:17
-tags: [php,小百科]
 categories:
 ---
 这个以前应该是遇到过,不过很久不用都忘记了.这次就记录下吧.免得以后没处查去.

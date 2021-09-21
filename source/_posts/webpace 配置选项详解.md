@@ -1,7 +1,10 @@
 ---
 title: webpack 配置选项详解
+tags:
+  - js
+  - webpack
+abbrlink: 1414
 date: 2017-01-02 21:13:05
-tags: [js,webpack]
 categories:
 ---
 官方现在已经有了中文,而且文档比较完善了,参考还是看官方吧

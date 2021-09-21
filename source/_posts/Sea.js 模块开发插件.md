@@ -1,8 +1,12 @@
 ---
 title: Sea.js 模块开发插件
-date: 2016-06-02 22:26:58
-tags: [js,前端,小百科]
+tags:
+  - js
+  - 前端
+  - 小百科
 categories: 前端技术
+abbrlink: 34544
+date: 2016-06-02 22:26:58
 ---
 
 ## 前言

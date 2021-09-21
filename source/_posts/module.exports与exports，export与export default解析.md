@@ -1,7 +1,10 @@
 ---
 title: module.exports与exports，export与export default解析
+tags:
+  - JavaScript
+  - node.js
+abbrlink: 49841
 date: 2017-07-08 21:13:07
-tags: [JavaScript,node.js]
 categories:
 ---
 

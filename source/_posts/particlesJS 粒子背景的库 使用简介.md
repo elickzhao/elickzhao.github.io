@@ -1,7 +1,10 @@
 ---
 title: particlesJS 粒子背景的库 使用简介
+tags:
+  - 前端
+  - js
+abbrlink: 60541
 date: 2017-06-02 23:28:06
-tags: [前端,js]
 categories:
 ---
 

@@ -1,7 +1,11 @@
 ---
 title: layui的 select组件二级联动
+tags:
+  - 前端
+  - JavaScript
+  - css
+abbrlink: 53693
 date: 2018-02-01 11:52:10
-tags: [前端,JavaScript,css]
 categories:
 ---
 

@@ -1,7 +1,10 @@
 ---
 title: css文件报错Uncaught SyntaxError Unexpected token
+tags:
+  - css
+  - 前端
+abbrlink: 61701
 date: 2018-01-31 18:47:50
-tags: [css,前端]
 categories:
 ---
 

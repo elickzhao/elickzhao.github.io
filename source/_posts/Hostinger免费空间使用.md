@@ -1,7 +1,11 @@
 ---
 title: Hostinger免费空间使用
+tags:
+  - 杂学
+  - 日志
+  - 其他
+abbrlink: 1920
 date: 2017-04-09 22:53:17
-tags: [杂学,日志,其他]
 categories:
 ---
 

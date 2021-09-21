@@ -1,7 +1,10 @@
 ---
 title: 使用composer 报错提示 Failed to decode response zlib_decode() data error
+tags:
+  - composer
+  - 小百科
+abbrlink: 14095
 date: 2016-10-24 22:37:31
-tags: [composer,小百科]
 categories:
 ---
 

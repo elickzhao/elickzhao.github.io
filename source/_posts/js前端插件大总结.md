@@ -1,7 +1,11 @@
 ---
 title: js前端插件大总结
+tags:
+  - js
+  - 小百科
+  - 前端
+abbrlink: 22740
 date: 2017-01-16 22:36:41
-tags: [js,小百科,前端]
 categories:
 ---
 

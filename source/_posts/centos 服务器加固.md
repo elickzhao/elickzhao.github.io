@@ -1,7 +1,8 @@
 ---
 title: centos 服务器加固
-date: 2016-12-28 22:36:47
 tags: 服务器相关技术
+abbrlink: 32132
+date: 2016-12-28 22:36:47
 categories:
 ---
 

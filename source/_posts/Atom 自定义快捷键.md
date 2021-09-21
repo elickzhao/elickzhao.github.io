@@ -1,7 +1,8 @@
 ---
-title:  Atom 自定义快捷键
-date: 2017-05-28 23:09:28
+title: Atom 自定义快捷键
 tags: IDE
+abbrlink: 24289
+date: 2017-05-28 23:09:28
 categories:
 ---
 

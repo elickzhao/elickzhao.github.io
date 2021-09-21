@@ -1,7 +1,11 @@
 ---
 title: Mock.js 模拟随机测试数据
+tags:
+  - js
+  - 前端
+  - mock
+abbrlink: 28504
 date: 2017-07-01 22:22:56
-tags: [js,前端,mock]
 categories:
 ---
 

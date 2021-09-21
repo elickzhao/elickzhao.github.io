@@ -1,7 +1,8 @@
 ---
 title: php自动加载原理
-date: 2017-11-27 21:44:41
 tags: php
+abbrlink: 17636
+date: 2017-11-27 21:44:41
 categories:
 ---
 

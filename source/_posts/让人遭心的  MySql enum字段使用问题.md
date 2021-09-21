@@ -1,7 +1,10 @@
 ---
 title: 让人遭心的  MySql enum字段使用问题
+tags:
+  - mysql
+  - 小百科
+abbrlink: 3378
 date: 2017-12-14 16:44:08
-tags: [mysql,小百科]
 categories:
 ---
 今天在改程序的时候遇到了 enum字段 这个东西果真奇葩.怎么搜索都搜索不到.

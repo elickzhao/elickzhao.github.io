@@ -1,8 +1,11 @@
 ---
 title: linux下tree命令
-date: 2016-05-27 12:47:57
-tags: [小百科,linux]
+tags:
+  - 小百科
+  - linux
 categories: 服务器端
+abbrlink: 17709
+date: 2016-05-27 12:47:57
 ---
 
 ## 前言

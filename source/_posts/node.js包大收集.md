@@ -1,7 +1,11 @@
 ---
 title: node.js包大收集
+tags:
+  - node.js
+  - 前端
+  - npm
+abbrlink: 28984
 date: 2017-08-06 21:05:05
-tags: [node.js,前端,npm]
 categories:
 ---
 

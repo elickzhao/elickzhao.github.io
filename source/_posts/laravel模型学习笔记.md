@@ -1,8 +1,11 @@
 ---
 title: laravel模型学习笔记
-date: 2016-06-04 22:55:09
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 22324
+date: 2016-06-04 22:55:09
 ---
 
 

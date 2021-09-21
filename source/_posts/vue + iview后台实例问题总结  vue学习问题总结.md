@@ -1,7 +1,10 @@
 ---
 title: vue + iview后台实例问题总结  vue学习问题总结
+tags:
+  - vue
+  - js
+abbrlink: 5080
 date: 2017-06-13 23:20:45
-tags: [vue,js]
 categories:
 ---
 

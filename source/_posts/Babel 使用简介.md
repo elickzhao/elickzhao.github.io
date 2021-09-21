@@ -1,7 +1,8 @@
 ---
 title: Babel 使用简介
-date: 2016-12-26 20:40:49
 tags: js
+abbrlink: 14992
+date: 2016-12-26 20:40:49
 categories:
 ---
 

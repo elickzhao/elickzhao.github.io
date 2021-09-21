@@ -1,7 +1,10 @@
 ---
 title: TP 3.2加载第三方库文件
+tags:
+  - php
+  - 小百科
+abbrlink: 49237
 date: 2018-01-13 19:10:37
-tags: [php,小百科]
 categories:
 ---
 

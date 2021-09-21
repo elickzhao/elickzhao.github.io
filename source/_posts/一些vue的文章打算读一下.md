@@ -1,7 +1,11 @@
 ---
 title: 一些vue的文章打算读一下
+tags:
+  - vue
+  - 小百科
+  - 待读
+abbrlink: 38982
 date: 2017-09-02 22:53:51
-tags: [vue,小百科,待读]
 categories:
 ---
 

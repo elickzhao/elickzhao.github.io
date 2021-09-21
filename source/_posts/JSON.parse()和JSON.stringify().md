@@ -1,7 +1,8 @@
 ---
 title: JSON.parse()和JSON.stringify()
-date: 2016-11-25 22:32:11
 tags: js
+abbrlink: 64298
+date: 2016-11-25 22:32:11
 categories:
 ---
 parse用于从一个字符串中解析出json对象,如

@@ -1,7 +1,8 @@
 ---
 title: vue及vue-router程序的title修改
-date: 2017-07-22 14:02:38
 tags: vue
+abbrlink: 38232
+date: 2017-07-22 14:02:38
 categories:
 ---
 

@@ -1,8 +1,11 @@
 ---
 title: larave后台日志插件
-date: 2016-06-12 21:59:46
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 44326
+date: 2016-06-12 21:59:46
 ---
 
 

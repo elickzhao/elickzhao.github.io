@@ -1,7 +1,10 @@
 ---
 title: cooking 简介 安装与使用
+tags:
+  - js
+  - vue
+abbrlink: 65230
 date: 2016-12-15 22:56:11
-tags: [js,vue]
 categories:
 ---
 

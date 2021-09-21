@@ -1,7 +1,11 @@
 ---
 title: layui表单验证 自定义验证 select验证方法
+tags:
+  - 前端
+  - css
+  - js
+abbrlink: 30851
 date: 2018-02-04 14:28:43
-tags:   [前端,css,js]
 categories:
 ---
 

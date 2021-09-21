@@ -1,8 +1,11 @@
 ---
-title: php 重载相关魔法函数 __get()，__set()，__isset() , __unset()  __call() __callStatic
-date: 2016-06-20 22:32:59
-tags: [php,小百科]
+title: 'php 重载相关魔法函数 __get()，__set()，__isset() , __unset()  __call() __callStatic'
+tags:
+  - php
+  - 小百科
 categories: php开发
+abbrlink: 32143
+date: 2016-06-20 22:32:59
 ---
 
 ## 前言

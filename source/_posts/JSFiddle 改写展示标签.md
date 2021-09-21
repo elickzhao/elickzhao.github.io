@@ -1,8 +1,11 @@
 ---
-title:  JSFiddle 改写展示标签
-date: 2016-07-30 21:34:19
-tags: [小百科,前端]
+title: JSFiddle 改写展示标签
+tags:
+  - 小百科
+  - 前端
 categories: 前端技术
+abbrlink: 62634
+date: 2016-07-30 21:34:19
 ---
 
 ## 前言

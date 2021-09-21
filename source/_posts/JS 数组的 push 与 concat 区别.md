@@ -1,7 +1,10 @@
 ---
 title: JS 数组的 push 与 concat 区别
+tags:
+  - js
+  - 小百科
+abbrlink: 19805
 date: 2016-12-25 21:38:47
-tags: [js,小百科]
 categories:
 ---
 

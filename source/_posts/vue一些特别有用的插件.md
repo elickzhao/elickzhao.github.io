@@ -1,7 +1,10 @@
 ---
 title: vue一些特别有用的插件
+tags:
+  - js
+  - vue
+abbrlink: 31340
 date: 2017-08-31 23:13:12
-tags: [js,vue]
 categories:
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: Windows 系统下设置Nodejs NPM全局路径
-date: 2016-12-10 22:11:45
 tags: npm
+abbrlink: 59197
+date: 2016-12-10 22:11:45
 categories:
 ---
 

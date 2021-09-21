@@ -1,6 +1,8 @@
+---
 title: composer 一些使用记录
-date: 2016-04-19 01:01:32
 tags: composer
+abbrlink: 44986
+date: 2016-04-19 01:01:32
 ---
 ```
 composer selfupdate                      

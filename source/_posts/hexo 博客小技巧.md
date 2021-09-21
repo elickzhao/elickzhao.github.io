@@ -1,7 +1,8 @@
 ---
 title: hexo 博客小技巧
-date: 2016-07-31 22:32:55
 tags: 小百科
+abbrlink: 59594
+date: 2016-07-31 22:32:55
 categories:
 ---
 

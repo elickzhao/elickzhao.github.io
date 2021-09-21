@@ -1,8 +1,11 @@
 ---
 title: laravel 安装 (windows)
-date: 2016-05-29 21:05:10
-tags: [php,laravel]
+tags:
+  - php
+  - laravel
 categories: php开发
+abbrlink: 41895
+date: 2016-05-29 21:05:10
 ---
 **第一步 安装composer**
  从这里 https://getcomposer.org/download/ 后直接安装即可 切记需先安装php 并且版本支持做开发项目

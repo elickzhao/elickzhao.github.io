@@ -1,7 +1,10 @@
 ---
 title: splice与slice的区别与应用
+tags:
+  - js
+  - 小百科
+abbrlink: 13906
 date: 2017-04-01 22:40:11
-tags: [js,小百科]
 categories:
 ---
 

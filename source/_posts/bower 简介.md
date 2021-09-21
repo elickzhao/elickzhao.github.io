@@ -1,8 +1,11 @@
 ---
 title: bower 简介
-date: 2016-05-18 16:00:08
-tags: [bower,前端]
+tags:
+  - bower
+  - 前端
 categories: 前端技术
+abbrlink: 41361
+date: 2016-05-18 16:00:08
 ---
 
 详细内容 请参考这篇文章

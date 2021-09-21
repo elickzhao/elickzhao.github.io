@@ -1,8 +1,9 @@
 ---
 title: php格式化插件 phpcs php-cs-fixer phpmd
-date: 2018-02-05 23:28:53
 tags: IDE
 categories: 前端技术
+abbrlink: 37224
+date: 2018-02-05 23:28:53
 ---
 
 

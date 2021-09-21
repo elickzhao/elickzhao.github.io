@@ -1,7 +1,8 @@
 ---
-title: 替代cmd的程序cmder,Gow,PowerCMD,ConsoleZ等等
-date: 2016-07-15 23:23:27
+title: '替代cmd的程序cmder,Gow,PowerCMD,ConsoleZ等等'
 tags: 小百科
+abbrlink: 20190
+date: 2016-07-15 23:23:27
 categories:
 ---
 

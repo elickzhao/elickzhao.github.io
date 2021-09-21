@@ -1,7 +1,10 @@
 ---
 title: vue2 组件传递数据 props一些小改变
+tags:
+  - js
+  - vue
+abbrlink: 13026
 date: 2016-12-17 22:15:52
-tags: [js,vue]
 categories:
 ---
 

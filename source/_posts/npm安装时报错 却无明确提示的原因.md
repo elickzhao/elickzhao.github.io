@@ -1,7 +1,10 @@
 ---
 title: npm安装时报错 却无明确提示的原因
+tags:
+  - npm
+  - 小百科
+abbrlink: 48641
 date: 2017-06-12 22:45:23
-tags: [npm,小百科]
 categories:
 ---
 

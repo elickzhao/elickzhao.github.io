@@ -1,7 +1,8 @@
 ---
-title:  winSCP 不允许拖拽问题
-date: 2016-11-03 12:30:08
+title: winSCP 不允许拖拽问题
 tags: 小百科
+abbrlink: 41025
+date: 2016-11-03 12:30:08
 categories:
 ---
 

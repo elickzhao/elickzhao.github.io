@@ -1,7 +1,11 @@
 ---
-title: js,node与MongoDB使用
+title: 'js,node与MongoDB使用'
+tags:
+  - js
+  - MongoDB
+  - NoSql
+abbrlink: 58241
 date: 2017-02-03 21:39:40
-tags: [js,MongoDB,NoSql]
 categories:
 ---
 

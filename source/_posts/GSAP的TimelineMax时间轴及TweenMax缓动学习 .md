@@ -1,7 +1,10 @@
 ---
 title: GSAP的TimelineMax时间轴及TweenMax缓动学习
+tags:
+  - js
+  - 前端
+abbrlink: 52065
 date: 2017-07-26 22:55:58
-tags: [js,前端]
 categories:
 ---
 

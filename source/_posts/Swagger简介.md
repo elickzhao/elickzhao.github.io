@@ -1,7 +1,10 @@
 ---
 title: Swagger简介
+tags:
+  - js
+  - node.js
+abbrlink: 62342
 date: 2017-08-25 17:41:59
-tags: [js,node.js]
 categories:
 ---
 

@@ -1,7 +1,11 @@
 ---
-title: SQLSTATE[HY000] [2002] No such file or directory 报错处理
+title: 'SQLSTATE[HY000] [2002] No such file or directory 报错处理'
+tags:
+  - php
+  - laravel
+  - 小百科
+abbrlink: 59222
 date: 2016-11-11 23:01:49
-tags: [php,laravel,小百科]
 categories:
 ---
 

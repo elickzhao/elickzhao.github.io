@@ -1,7 +1,10 @@
 ---
 title: Atom插件推荐
+tags:
+  - IDE
+  - atom
+abbrlink: 11024
 date: 2017-01-06 22:48:56
-tags: [IDE,atom]
 categories:
 ---
 

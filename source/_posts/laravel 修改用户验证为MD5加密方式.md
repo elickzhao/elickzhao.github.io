@@ -1,7 +1,8 @@
 ---
 title: laravel 修改用户验证为MD5加密方式
-date: 2016-11-28 23:00:16
 tags: laravel
+abbrlink: 60712
+date: 2016-11-28 23:00:16
 categories:
 ---
 

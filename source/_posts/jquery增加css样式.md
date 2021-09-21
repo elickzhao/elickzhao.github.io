@@ -1,8 +1,9 @@
 ---
 title: jquery增加css样式
-date: 2016-06-28 16:38:07
 tags: js
 categories: 前端技术
+abbrlink: 39731
+date: 2016-06-28 16:38:07
 ---
 
 ## 前言

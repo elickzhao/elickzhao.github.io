@@ -1,8 +1,11 @@
 ---
 title: laravel 引入css和js文件
-date: 2016-10-13 18:52:50
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 21253
+date: 2016-10-13 18:52:50
 ---
 
 ## 前言

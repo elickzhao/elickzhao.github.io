@@ -1,7 +1,10 @@
 ---
 title: ubuntu 个人安装软件 全局命令
+tags:
+  - ubuntu
+  - linux
+abbrlink: 22021
 date: 2016-06-25 21:58:09
-tags: [ubuntu,linux]
 categories:
 ---
 

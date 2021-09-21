@@ -1,7 +1,10 @@
 ---
 title: 一些应该知道的php框架
+tags:
+  - php
+  - 小百科
+abbrlink: 34062
 date: 2017-08-26 21:38:21
-tags: [php,小百科]
 categories:
 ---
 

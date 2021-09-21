@@ -1,8 +1,12 @@
 ---
 title: JavaScript中的逗号
-date: 2016-06-22 12:08:04
-tags: [js,前端,小百科]
+tags:
+  - js
+  - 前端
+  - 小百科
 categories: 前端技术
+abbrlink: 26551
+date: 2016-06-22 12:08:04
 ---
 
 

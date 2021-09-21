@@ -1,7 +1,10 @@
 ---
 title: sync-setting 无法同步问题
+tags:
+  - Git
+  - 小百科
+abbrlink: 57649
 date: 2017-02-23 17:11:39
-tags: [Git,小百科]
 categories:
 ---
 

@@ -1,7 +1,8 @@
 ---
-title: vuex学习小记 
-date: 2017-02-15 22:15:53
+title: vuex学习小记
 tags: vue
+abbrlink: 30359
+date: 2017-02-15 22:15:53
 categories:
 ---
 

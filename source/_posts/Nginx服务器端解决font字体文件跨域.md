@@ -1,7 +1,8 @@
 ---
 title: Nginx服务器端解决font字体文件跨域
-date: 2017-01-07 22:32:45
 tags: 服务器相关技术
+abbrlink: 23437
+date: 2017-01-07 22:32:45
 categories:
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: Velocity.js简单介绍
-date: 2017-01-09 22:36:53
 tags: js
+abbrlink: 37714
+date: 2017-01-09 22:36:53
 categories:
 ---
 

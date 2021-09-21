@@ -1,7 +1,11 @@
 ---
 title: Echarts 多表根据窗口大小自动缩放
+tags:
+  - js
+  - 小百科
+  - Echarts
+abbrlink: 46810
 date: 2018-01-30 22:54:50
-tags: [js,小百科,Echarts]
 categories:
 ---
 

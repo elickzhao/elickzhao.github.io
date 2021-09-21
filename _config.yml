@@ -9,6 +9,8 @@ description:
 author: elickzhao
 language: zh-Hans
 timezone:
+# favicon: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico
+favicon: http://www.icosky.com/icon/ico/Movie%20%26%20TV/Wall-E/My%20computer.ico
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -31,7 +33,7 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+# external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -63,8 +65,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
-
+# theme: volantis-heson
+theme: volantis
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -103,3 +105,25 @@ feed:
 search:
   path: search.xml
   field: post
+
+
+# import:
+#   meta:
+#     - <meta name="msapplication-TileColor" content="#ffffff">
+#     - <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/browserconfig.xml">
+#     - <meta name="theme-color" content="#ffffff">
+#   link:
+#     - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+#     - <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon-32x32.png">
+#     - <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon-16x16.png">
+#     - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/site.webmanifest">
+#     - <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/safari-pinned-tab.svg" color="#5bbad5">
+#     - <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon.ico">
+import:
+  # link:
+  #   - <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/InfiniteYinux/cloud@2.44/Hexo/themeConfig/matery.css" />
+  script:
+    # - <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    # - <script src="https://gitee.com/elick/blogimage/raw/master/img/new.js"></script>
+    - <script src="https://ritzy-tartan-crush.glitch.me/test/new.js"></script>
+    

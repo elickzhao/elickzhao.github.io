@@ -1,7 +1,10 @@
 ---
 title: 常用的apt-get命令
+tags:
+  - linux
+  - ubuntu
+abbrlink: 34698
 date: 2016-05-01 00:15:51
-tags: [linux,ubuntu]
 categories:
 ---
 

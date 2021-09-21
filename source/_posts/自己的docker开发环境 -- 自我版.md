@@ -1,6 +1,10 @@
+---
 title: 自己的docker开发环境 -- 自我版
+tags:
+  - docker
+  - 服务器相关技术
+abbrlink: 34274
 date: 2016-05-04 17:49:40
-tags: [docker,服务器相关技术]
 categories:
 ---
 

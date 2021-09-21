@@ -1,6 +1,8 @@
-﻿title: 连接容器 --link 简要说明
-date: 2016-05-2 23:40:34
-tags:  docker
+---
+title: 连接容器 --link 简要说明
+tags: docker
+abbrlink: 18335
+date: 2016-05-02 23:40:34
 ---
 
 [docker容器互联的两种方式](http://blog.csdn.net/halcyonbaby/article/details/42112325)

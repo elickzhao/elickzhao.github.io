@@ -1,8 +1,11 @@
 ---
 title: Emmet：HTMLCSS 简明介绍
-date: 2016-05-13 01:03:28
-tags: [Emmet,小百科]
+tags:
+  - Emmet
+  - 小百科
 categories: 前端技术
+abbrlink: 19317
+date: 2016-05-13 01:03:28
 ---
 
 

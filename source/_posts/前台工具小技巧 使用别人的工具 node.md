@@ -1,8 +1,11 @@
 ---
 title: 前台工具小技巧 使用别人的工具 node
-date: 2016-10-20 22:31:14
-tags: [node.js,js]
+tags:
+  - node.js
+  - js
 categories: 前端技术
+abbrlink: 50871
+date: 2016-10-20 22:31:14
 ---
 
 

@@ -1,9 +1,11 @@
+---
 title: Docker常用命令
 tags:
   - docker
   - 服务器相关技术
 categories:
   - 服务器端
+abbrlink: 7569
 date: 2016-04-19 00:42:00
 ---
 

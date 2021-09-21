@@ -1,7 +1,10 @@
 ---
-title: Nginxconflicting server name  0.0.0.080, ignored
+title: 'Nginxconflicting server name  0.0.0.080, ignored'
+tags:
+  - 小百科
+  - 服务器相关技术
+abbrlink: 5402
 date: 2016-11-29 23:13:56
-tags: [小百科,服务器相关技术]
 categories:
 ---
 

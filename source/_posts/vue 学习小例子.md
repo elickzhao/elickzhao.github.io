@@ -1,8 +1,12 @@
 ---
 title: vue 学习小例子
-date: 2016-07-25 12:04:12
-tags: [vue,前端,js]
+tags:
+  - vue
+  - 前端
+  - js
 categories: 前端技术
+abbrlink: 22029
+date: 2016-07-25 12:04:12
 ---
 
 ## 一些总结吧

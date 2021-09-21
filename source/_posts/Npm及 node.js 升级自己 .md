@@ -1,8 +1,12 @@
 ---
-title: npm 及 node.js 升级自己 
-date: 2017-01-12 12:38:53
-tags: [npm,node.js,小百科]
+title: npm 及 node.js 升级自己
+tags:
+  - npm
+  - node.js
+  - 小百科
 categories: 前端技术
+abbrlink: 38400
+date: 2017-01-12 12:38:53
 ---
 
 # npm 自身升级

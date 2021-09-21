@@ -1,8 +1,11 @@
 ---
 title: Laravel-lang 多语言插件
-date: 2016-06-10 21:47:26
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 6371
+date: 2016-06-10 21:47:26
 ---
 
 ## 前言

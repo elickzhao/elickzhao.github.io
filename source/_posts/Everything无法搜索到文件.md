@@ -1,7 +1,11 @@
 ---
 title: Everything无法搜索到文件
+tags:
+  - 其他
+  - 杂学
+  - 小百科
+abbrlink: 55446
 date: 2017-04-03 19:28:02
-tags: [其他,杂学,小百科]
 categories:
 ---
 

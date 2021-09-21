@@ -1,6 +1,10 @@
+---
 title: 应用TortoiseGit为github账号添加SSH keys
+tags:
+  - Git
+  - ssh
+abbrlink: 24878
 date: 2016-04-19 18:35:30
-tags: [Git,ssh]
 ---
 
 **呵呵 我算是比较懒的 不过避免重复造轮子这种降低效率的事 还是直接引入别人写得详细的文章吧**

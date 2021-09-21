@@ -1,8 +1,9 @@
 ---
 title: php 隐藏下载地址
-date: 2016-07-19 23:38:37
 tags: php
 categories: php开发
+abbrlink: 16360
+date: 2016-07-19 23:38:37
 ---
 
 php下载时不想让别人看到真实的下载地址?怎样隐藏下载文件的真实地址?

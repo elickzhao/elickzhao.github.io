@@ -1,7 +1,10 @@
 ---
 title: apidoc安装与使用说明
+tags:
+  - js
+  - npm
+abbrlink: 46578
 date: 2016-10-28 22:31:25
-tags: [js,npm]
 categories:
 ---
 安装很简单,全局安装这样就可以使用 **apidoc** 的命令了

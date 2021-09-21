@@ -1,8 +1,11 @@
 ---
 title: gulp使用bower下组件
-date: 2016-05-11 00:59:14
-tags: [gulp,bower]
+tags:
+  - gulp
+  - bower
 categories: 前端技术
+abbrlink: 63195
+date: 2016-05-11 00:59:14
 ---
 
 我的项目使用 yeoman 生成的目录 自带gulpfile.js

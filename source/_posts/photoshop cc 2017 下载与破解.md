@@ -1,7 +1,10 @@
 ---
 title: photoshop cc 2017 下载与破解
+tags:
+  - 日志
+  - 软件
+abbrlink: 58019
 date: 2017-03-07 20:24:55
-tags: [日志,软件]
 categories:
 ---
 

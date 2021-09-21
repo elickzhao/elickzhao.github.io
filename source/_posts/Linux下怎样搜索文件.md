@@ -1,6 +1,8 @@
+---
 title: Linux下怎样搜索文件
-date: 2016-04-30 21:39:59
 tags: linux
+abbrlink: 15145
+date: 2016-04-30 21:39:59
 categories:
 ---
 

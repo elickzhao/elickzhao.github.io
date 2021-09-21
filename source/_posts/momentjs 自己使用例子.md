@@ -1,7 +1,10 @@
 ---
 title: momentjs 自己使用例子
+tags:
+  - js
+  - 前端
+abbrlink: 10313
 date: 2018-01-21 23:32:00
-tags: [js,前端]
 categories:
 ---
 

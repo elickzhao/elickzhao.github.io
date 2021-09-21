@@ -1,8 +1,12 @@
 ---
 title: 用docker搭建laravel环境 (Docker for the Laravel framework)
-date: 2016-04-25 23:54:28
-tags: [docker,laravel,服务器相关技术]
+tags:
+  - docker
+  - laravel
+  - 服务器相关技术
 categories: 服务器端
+abbrlink: 65384
+date: 2016-04-25 23:54:28
 ---
 
 # 前言

@@ -1,8 +1,11 @@
 ---
 title: laravel插件记录
-date: 2016-06-09 00:56:13
-tags: [laravel,php]
+tags:
+  - laravel
+  - php
 categories: php开发
+abbrlink: 61446
+date: 2016-06-09 00:56:13
 ---
 
 ## 前言

@@ -1,7 +1,11 @@
 ---
 title: vue + webpack 学习简介
+tags:
+  - js
+  - vue
+  - webpack
+abbrlink: 63288
 date: 2016-12-14 23:34:24
-tags: [js,vue,webpack]
 categories:
 ---
 

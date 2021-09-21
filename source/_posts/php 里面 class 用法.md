@@ -1,7 +1,8 @@
 ---
 title: php 里面 class 用法
-date: 2016-10-26 22:31:24
 tags: php
+abbrlink: 56184
+date: 2016-10-26 22:31:24
 categories:
 ---
 

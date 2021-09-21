@@ -1,7 +1,8 @@
 ---
 title: 微信小程序使用自定义icon
-date: 2018-01-12 23:53:39
 tags: 小程序
+abbrlink: 50479
+date: 2018-01-12 23:53:39
 categories:
 ---
 

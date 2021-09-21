@@ -1,8 +1,11 @@
 ---
 title: XSS 和 CSRF 跨站攻击
-date: 2016-05-25 23:13:42
-tags: [XSS,CSRF]
+tags:
+  - XSS
+  - CSRF
 categories: php开发
+abbrlink: 5737
+date: 2016-05-25 23:13:42
 ---
 
 

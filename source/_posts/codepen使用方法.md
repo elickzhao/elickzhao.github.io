@@ -1,7 +1,10 @@
 ---
 title: codepen使用方法
+tags:
+  - 前端
+  - IDE
+abbrlink: 47164
 date: 2017-06-11 22:34:05
-tags: [前端,IDE]
 categories:
 ---
 

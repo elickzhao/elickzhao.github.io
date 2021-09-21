@@ -1,7 +1,11 @@
 ---
-title:  SyntaxError-> Unexpected token "{" 注意chrome插件
+title: 'SyntaxError-> Unexpected token "{" 注意chrome插件'
+tags:
+  - js
+  - 前端
+  - 小百科
+abbrlink: 58166
 date: 2018-02-03 20:02:20
-tags:  [js,前端,小百科 ]
 categories:
 ---
 
