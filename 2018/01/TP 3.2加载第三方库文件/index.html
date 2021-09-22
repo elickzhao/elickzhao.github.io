@@ -20,13 +20,13 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632107226654" as="style">
+  <link rel="preload" href="/css/style.css?time=1632327951958" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>TP 3.2加载第三方库文件 - elickzhao's Blog</title>
-  <meta name="keywords" content="php,小百科,undefined">
+  <meta name="keywords" content="小百科,php,undefined">
   <meta name="description" content="今天用到Carbon这个时间类,不过TP3.2不使用 composer 所以加载起来比较费劲.按官方说法放在 &#x2F;thinkphp&#x2F;Library 下的都可以自动加载.其实呢,需要命名空间与目录一致,而且文件名必须是 *.class.php 这大多数第三方库是满足不了的所以只好手动加载了 12345678910111213141516171819202122232425262728293031323">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TP 3.2加载第三方库文件">
@@ -38,8 +38,8 @@
 <meta property="article:published_time" content="2018-01-13T11:10:37.000Z">
 <meta property="article:modified_time" content="2021-09-09T16:34:45.050Z">
 <meta property="article:author" content="elickzhao">
-<meta property="article:tag" content="php">
 <meta property="article:tag" content="小百科">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -701,12 +701,76 @@ button {
   font-size: 0.9375rem;
 }
 .cover-wrapper.search .bottom .menu .list-h a:hover,
-.cover-wrapper.search .bottom .menu .list-h a.active,
 .cover-wrapper.search .bottom .menu .list-h a:active {
   opacity: 1;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
 }
 @font-face {
   font-family: 'UbuntuMono';
@@ -1531,8 +1595,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632107226654" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226654"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632327951958" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632327951958"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1816,7 +1880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://api.ixiaowai.cn/gqapi/gqapi.php"></div>
+  <div id="parallax-window"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -1841,7 +1905,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <p>文档</p>
+              <i class='fas fa-inbox fa-fw'></i><p>文档</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              active-action="action-categories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
             </a>
           
         
@@ -1972,8 +2050,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/php/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>php</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>小百科</p></a></div>
-  <span hidden itemprop="keywords">php 小百科</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>小百科</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/php/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>php</p></a></div>
+  <span hidden itemprop="keywords">小百科 php</span>
 
 
         
@@ -2483,8 +2561,8 @@ wxss
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632107226654')
-      volantis.js('/js/message.js?time=1632107226654', () => {
+      volantis.css('/css/message.css?time=1632327951958')
+      volantis.js('/js/message.js?time=1632327951958', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2528,8 +2606,8 @@ wxss
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632107226654')
-      volantis.js('/js/message.js?time=1632107226654', () => {
+      volantis.css('/css/message.css?time=1632327951958')
+      volantis.js('/js/message.js?time=1632327951958', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2785,7 +2863,7 @@ wxss
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632107226654')
+    volantis.js('/js/rightMenu.js?time=1632327951958')
   </script>
 
 
@@ -2799,19 +2877,19 @@ wxss
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632107226654")
+        volantis.js("/js/plugins/sites.js?time=1632327951958")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632107226654")
+        volantis.js("/js/plugins/friends.js?time=1632327951958")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632107226654")
+        volantis.js("/js/plugins/contributors.js?time=1632327951958")
       }
     
   };
@@ -2927,7 +3005,7 @@ wxss
 
 
 
-<script src="/js/app.js?time=1632107226654.js"></script>
+<script src="/js/app.js?time=1632327951958.js"></script>
 
 
 <!-- optional -->
@@ -2940,7 +3018,7 @@ wxss
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632107226654");
+    return volantis.js("/js/search/hexo.js?time=1632327951958");
   }
 
   function loadSearchService() {
@@ -3002,6 +3080,54 @@ wxss
 
 
 
+
+
+  <script>
+  var imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp"];
+  var index = 0;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 1500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      let IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '10000');
+    }
+  }
+
+  function next_parallax() {
+    
+      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
+        return
+      }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('/js/parallax.js?time=1632327951958').then(()=>{
+      parallax()
+    })
+    volantis.pjax.push(next_parallax);
+  }
+</script>
 
 
 
@@ -3184,7 +3310,7 @@ wxss
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"elickzhao's Blog","url":"http://elickzhao.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":null},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://elickzhao.github.io/","name":"elickzhao's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://elickzhao.github.io/2018/01/TP 3.2加载第三方库文件/","name":"TP 3.2加载第三方库文件"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"TP 3.2加载第三方库文件","description":"","datePublished":"2018-01-13T11:10:37.000Z","dateModified":"2021-09-09T16:34:45.050Z","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://elickzhao.github.io/2018/01/TP%203.2%E5%8A%A0%E8%BD%BD%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%96%87%E4%BB%B6/"},"author":{"@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/"},"publisher":{"@type":"Organization","name":"elickzhao's Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://elickzhao.github.io/2018/01/TP%203.2%E5%8A%A0%E8%BD%BD%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%96%87%E4%BB%B6/","wordCount":0,"keywords":"php,小百科","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"elickzhao's Blog","url":"http://elickzhao.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":null},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://elickzhao.github.io/","name":"elickzhao's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://elickzhao.github.io/2018/01/TP 3.2加载第三方库文件/","name":"TP 3.2加载第三方库文件"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"TP 3.2加载第三方库文件","description":"","datePublished":"2018-01-13T11:10:37.000Z","dateModified":"2021-09-09T16:34:45.050Z","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://elickzhao.github.io/2018/01/TP%203.2%E5%8A%A0%E8%BD%BD%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%96%87%E4%BB%B6/"},"author":{"@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/"},"publisher":{"@type":"Organization","name":"elickzhao's Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://elickzhao.github.io/2018/01/TP%203.2%E5%8A%A0%E8%BD%BD%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%96%87%E4%BB%B6/","wordCount":0,"keywords":"小百科,php","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

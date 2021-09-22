@@ -20,13 +20,13 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632107226784" as="style">
+  <link rel="preload" href="/css/style.css?time=1632327952295" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>用 html5+js+css vue 开发个桌面应用 -Electron - elickzhao's Blog</title>
-  <meta name="keywords" content="前端,js,vue,小百科,node.js,Electron,undefined">
+  <meta name="keywords" content="前端,小百科,js,vue,node.js,Electron,undefined">
   <meta name="description" content="简单说明想用js开发桌面现在有两个框架可以用 Electron 另外一个是 nwjs.但感觉还是用 Electron比较好,因为现在一些流行的软件是那这个弄的,比如说我现在用的 Atom ,VSCode 这两个软件都非常好用,而且漂亮.另外还有个原因是,他有中文文档.这样实在是方便太多了 编写这里主要编写个 Electron 启动配置文件.是 package.json 里的 main 字段的文件.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用 html5+js+css vue 开发个桌面应用 -Electron">
@@ -39,9 +39,9 @@
 <meta property="article:modified_time" content="2021-09-09T16:34:45.702Z">
 <meta property="article:author" content="elickzhao">
 <meta property="article:tag" content="前端">
+<meta property="article:tag" content="小百科">
 <meta property="article:tag" content="js">
 <meta property="article:tag" content="vue">
-<meta property="article:tag" content="小百科">
 <meta property="article:tag" content="node.js">
 <meta property="article:tag" content="Electron">
 <meta name="twitter:card" content="summary">
@@ -705,12 +705,76 @@ button {
   font-size: 0.9375rem;
 }
 .cover-wrapper.search .bottom .menu .list-h a:hover,
-.cover-wrapper.search .bottom .menu .list-h a.active,
 .cover-wrapper.search .bottom .menu .list-h a:active {
   opacity: 1;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
 }
 @font-face {
   font-family: 'UbuntuMono';
@@ -1535,8 +1599,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632107226784" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226784"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632327952295" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632327952295"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1820,7 +1884,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://api.ixiaowai.cn/gqapi/gqapi.php"></div>
+  <div id="parallax-window"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -1845,7 +1909,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <p>文档</p>
+              <i class='fas fa-inbox fa-fw'></i><p>文档</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              active-action="action-categories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
             </a>
           
         
@@ -2037,8 +2115,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%89%8D%E7%AB%AF/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>前端</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>小百科</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/node-js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>node.js</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Electron/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Electron</p></a></div>
-  <span hidden itemprop="keywords">前端 js vue 小百科 node.js Electron</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%89%8D%E7%AB%AF/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>前端</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>小百科</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/node-js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>node.js</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Electron/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Electron</p></a></div>
+  <span hidden itemprop="keywords">前端 小百科 js vue node.js Electron</span>
 
 
         
@@ -2572,8 +2650,8 @@ mixin
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632107226784')
-      volantis.js('/js/message.js?time=1632107226784', () => {
+      volantis.css('/css/message.css?time=1632327952295')
+      volantis.js('/js/message.js?time=1632327952295', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2617,8 +2695,8 @@ mixin
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632107226784')
-      volantis.js('/js/message.js?time=1632107226784', () => {
+      volantis.css('/css/message.css?time=1632327952295')
+      volantis.js('/js/message.js?time=1632327952295', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2874,7 +2952,7 @@ mixin
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632107226784')
+    volantis.js('/js/rightMenu.js?time=1632327952295')
   </script>
 
 
@@ -2888,19 +2966,19 @@ mixin
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632107226784")
+        volantis.js("/js/plugins/sites.js?time=1632327952295")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632107226784")
+        volantis.js("/js/plugins/friends.js?time=1632327952295")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632107226784")
+        volantis.js("/js/plugins/contributors.js?time=1632327952295")
       }
     
   };
@@ -3016,7 +3094,7 @@ mixin
 
 
 
-<script src="/js/app.js?time=1632107226784.js"></script>
+<script src="/js/app.js?time=1632327952295.js"></script>
 
 
 <!-- optional -->
@@ -3029,7 +3107,7 @@ mixin
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632107226784");
+    return volantis.js("/js/search/hexo.js?time=1632327952295");
   }
 
   function loadSearchService() {
@@ -3091,6 +3169,54 @@ mixin
 
 
 
+
+
+  <script>
+  var imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp"];
+  var index = 0;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 1500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      let IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '10000');
+    }
+  }
+
+  function next_parallax() {
+    
+      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
+        return
+      }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('/js/parallax.js?time=1632327952295').then(()=>{
+      parallax()
+    })
+    volantis.pjax.push(next_parallax);
+  }
+</script>
 
 
 
@@ -3273,7 +3399,7 @@ mixin
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"elickzhao's Blog","url":"http://elickzhao.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":null},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://elickzhao.github.io/","name":"elickzhao's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://elickzhao.github.io/2017/06/用 html5+js+css vue 开发个桌面应用 -Electron/","name":"用 html5+js+css vue 开发个桌面应用 -Electron"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"用 html5+js+css vue 开发个桌面应用 -Electron","description":"简单说明想用js开发桌面现在有两个框架可以用 Electron 另外一个是 nwjs.但感觉还是用 Electron比较好,因为现在一些流行的软件是那这个弄的,比如说我现在用的 Atom ,VSCode 这两个软件都非常好用,而且漂亮.另外还有个原因是,他有中文文档.这样实在是方便太多了\n编写这里主要编写个 Electron 启动配置文件.是 package.json 里的 main 字段的文件.注意：如果 main 字段没有在 package.json 声明，Electron会优先加载 index.js。剩下的就是编写自己的程序了就行了.\n贴两个配置文件样本.一 这是官方的例子\n1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556const &#123; app, BrowserWindow &#125; = require(&#x27;electron&#x27;)const path = require(&#x27;path&#x27;);const url = require(&#x27;url&#x27;)// 保持一个对于 window 对象的全局引用，如果你不这样做，// 当 JavaScript 对象被垃圾回收， window 会被自动地关闭let winfunction createWindow() &#123;    // 创建浏览器窗口。    win = new BrowserWindow(&#123; width: 800, height: 600 &#125;)    // 加载应用的 index.html。    win.loadURL(url.format(&#123;        pathname: path.join(__dirname, &#x27;dist/index_prod.html&#x27;),        protocol: &#x27;file:&#x27;,        slashes: true    &#125;))    //win.loadURL(&#x27;http://localhost:8080&#x27;)    // 打开开发者工具。    win.webContents.openDevTools();    // 当 window 被关闭，这个事件会被触发。    win.on(&#x27;closed&#x27;, () =&gt; &#123;        // 取消引用 window 对象，如果你的应用支持多窗口的话，        // 通常会把多个 window 对象存放在一个数组里面，        // 与此同时，你应该删除相应的元素。        win = null    &#125;)&#125;// Electron 会在初始化后并准备// 创建浏览器窗口时，调用这个函数。// 部分 API 在 ready 事件触发后才能使用。app.on(&#x27;ready&#x27;, createWindow)// 当全部窗口关闭时退出。app.on(&#x27;window-all-closed&#x27;, () =&gt; &#123;    // 在 macOS 上，除非用户用 Cmd + Q 确定地退出，    // 否则绝大部分应用及其菜单栏会保持激活。    if (process.platform !== &#x27;darwin&#x27;) &#123;        app.quit()    &#125;&#125;)app.on(&#x27;activate&#x27;, () =&gt; &#123;    // 在这文件，你可以续写应用剩下主进程代码。    // 也可以拆分成几个文件，然后用 require 导入。    if (win === null) &#123;        createWindow()    &#125;&#125;)// 在这文件，你可以续写应用剩下主进程代码。// 也可以拆分成几个文件，然后用 require 导入。","datePublished":"2017-06-24T13:01:43.000Z","dateModified":"2021-09-09T16:34:45.702Z","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://elickzhao.github.io/2017/06/%E7%94%A8%20html5+js+css%20vue%20%E5%BC%80%E5%8F%91%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%20-Electron/"},"author":{"@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/"},"publisher":{"@type":"Organization","name":"elickzhao's Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://elickzhao.github.io/2017/06/%E7%94%A8%20html5+js+css%20vue%20%E5%BC%80%E5%8F%91%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%20-Electron/","wordCount":1797,"keywords":"前端,js,vue,小百科,node.js,Electron","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"elickzhao's Blog","url":"http://elickzhao.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":null},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://elickzhao.github.io/","name":"elickzhao's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://elickzhao.github.io/2017/06/用 html5+js+css vue 开发个桌面应用 -Electron/","name":"用 html5+js+css vue 开发个桌面应用 -Electron"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"用 html5+js+css vue 开发个桌面应用 -Electron","description":"简单说明想用js开发桌面现在有两个框架可以用 Electron 另外一个是 nwjs.但感觉还是用 Electron比较好,因为现在一些流行的软件是那这个弄的,比如说我现在用的 Atom ,VSCode 这两个软件都非常好用,而且漂亮.另外还有个原因是,他有中文文档.这样实在是方便太多了\n编写这里主要编写个 Electron 启动配置文件.是 package.json 里的 main 字段的文件.注意：如果 main 字段没有在 package.json 声明，Electron会优先加载 index.js。剩下的就是编写自己的程序了就行了.\n贴两个配置文件样本.一 这是官方的例子\n1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556const &#123; app, BrowserWindow &#125; = require(&#x27;electron&#x27;)const path = require(&#x27;path&#x27;);const url = require(&#x27;url&#x27;)// 保持一个对于 window 对象的全局引用，如果你不这样做，// 当 JavaScript 对象被垃圾回收， window 会被自动地关闭let winfunction createWindow() &#123;    // 创建浏览器窗口。    win = new BrowserWindow(&#123; width: 800, height: 600 &#125;)    // 加载应用的 index.html。    win.loadURL(url.format(&#123;        pathname: path.join(__dirname, &#x27;dist/index_prod.html&#x27;),        protocol: &#x27;file:&#x27;,        slashes: true    &#125;))    //win.loadURL(&#x27;http://localhost:8080&#x27;)    // 打开开发者工具。    win.webContents.openDevTools();    // 当 window 被关闭，这个事件会被触发。    win.on(&#x27;closed&#x27;, () =&gt; &#123;        // 取消引用 window 对象，如果你的应用支持多窗口的话，        // 通常会把多个 window 对象存放在一个数组里面，        // 与此同时，你应该删除相应的元素。        win = null    &#125;)&#125;// Electron 会在初始化后并准备// 创建浏览器窗口时，调用这个函数。// 部分 API 在 ready 事件触发后才能使用。app.on(&#x27;ready&#x27;, createWindow)// 当全部窗口关闭时退出。app.on(&#x27;window-all-closed&#x27;, () =&gt; &#123;    // 在 macOS 上，除非用户用 Cmd + Q 确定地退出，    // 否则绝大部分应用及其菜单栏会保持激活。    if (process.platform !== &#x27;darwin&#x27;) &#123;        app.quit()    &#125;&#125;)app.on(&#x27;activate&#x27;, () =&gt; &#123;    // 在这文件，你可以续写应用剩下主进程代码。    // 也可以拆分成几个文件，然后用 require 导入。    if (win === null) &#123;        createWindow()    &#125;&#125;)// 在这文件，你可以续写应用剩下主进程代码。// 也可以拆分成几个文件，然后用 require 导入。","datePublished":"2017-06-24T13:01:43.000Z","dateModified":"2021-09-09T16:34:45.702Z","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://elickzhao.github.io/2017/06/%E7%94%A8%20html5+js+css%20vue%20%E5%BC%80%E5%8F%91%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%20-Electron/"},"author":{"@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/"},"publisher":{"@type":"Organization","name":"elickzhao's Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://elickzhao.github.io/2017/06/%E7%94%A8%20html5+js+css%20vue%20%E5%BC%80%E5%8F%91%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%20-Electron/","wordCount":1797,"keywords":"前端,小百科,js,vue,node.js,Electron","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

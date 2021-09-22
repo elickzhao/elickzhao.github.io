@@ -20,13 +20,13 @@
   <meta content="elickzhao&#39;s Blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1632107226663" as="style">
+  <link rel="preload" href="/css/style.css?time=1632327951985" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>js的Object.assign()复制属性详解 - elickzhao's Blog</title>
-  <meta name="keywords" content="js,小百科,undefined">
+  <meta name="keywords" content="小百科,js,undefined">
   <meta name="description" content="简单描述Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。 1234Object.assign(target, ...sources)&#x2F;&#x2F;target 目标对象&#x2F;&#x2F;...sources 源对象&#x2F;&#x2F;返回 目标对象  描述:  如果目标对象中的属性具有相同的键，则属性将被源中的属性覆盖。后来的源的属性将类似地覆盖早先的属性。   Objec">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js的Object.assign()复制属性详解">
@@ -38,8 +38,8 @@
 <meta property="article:published_time" content="2018-01-08T15:39:33.000Z">
 <meta property="article:modified_time" content="2021-09-09T16:34:45.232Z">
 <meta property="article:author" content="elickzhao">
-<meta property="article:tag" content="js">
 <meta property="article:tag" content="小百科">
+<meta property="article:tag" content="js">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -701,12 +701,76 @@ button {
   font-size: 0.9375rem;
 }
 .cover-wrapper.search .bottom .menu .list-h a:hover,
-.cover-wrapper.search .bottom .menu .list-h a.active,
 .cover-wrapper.search .bottom .menu .list-h a:active {
   opacity: 1;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
 }
 @font-face {
   font-family: 'UbuntuMono';
@@ -1531,8 +1595,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1632107226663" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1632107226663"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1632327951985" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1632327951985"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1816,7 +1880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://api.ixiaowai.cn/gqapi/gqapi.php"></div>
+  <div id="parallax-window"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -1841,7 +1905,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <p>文档</p>
+              <i class='fas fa-inbox fa-fw'></i><p>文档</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              active-action="action-categories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
             </a>
           
         
@@ -2007,8 +2085,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>小百科</p></a></div>
-  <span hidden itemprop="keywords">js 小百科</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B0%8F%E7%99%BE%E7%A7%91/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>小百科</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div>
+  <span hidden itemprop="keywords">小百科 js</span>
 
 
         
@@ -2587,8 +2665,8 @@ String类型和 Symbol 类型的属性都会被拷贝。
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632107226663')
-      volantis.js('/js/message.js?time=1632107226663', () => {
+      volantis.css('/css/message.css?time=1632327951985')
+      volantis.js('/js/message.js?time=1632327951985', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -2632,8 +2710,8 @@ String类型和 Symbol 类型的属性都会被拷贝。
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1632107226663')
-      volantis.js('/js/message.js?time=1632107226663', () => {
+      volantis.css('/css/message.css?time=1632327951985')
+      volantis.js('/js/message.js?time=1632327951985', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -2889,7 +2967,7 @@ String类型和 Symbol 类型的属性都会被拷贝。
     
       volantis.APlayerController = {};
     
-    volantis.js('/js/rightMenu.js?time=1632107226663')
+    volantis.js('/js/rightMenu.js?time=1632327951985')
   </script>
 
 
@@ -2903,19 +2981,19 @@ String类型和 Symbol 类型的属性都会被拷贝。
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1632107226663")
+        volantis.js("/js/plugins/sites.js?time=1632327951985")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1632107226663")
+        volantis.js("/js/plugins/friends.js?time=1632327951985")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1632107226663")
+        volantis.js("/js/plugins/contributors.js?time=1632327951985")
       }
     
   };
@@ -3031,7 +3109,7 @@ String类型和 Symbol 类型的属性都会被拷贝。
 
 
 
-<script src="/js/app.js?time=1632107226663.js"></script>
+<script src="/js/app.js?time=1632327951985.js"></script>
 
 
 <!-- optional -->
@@ -3044,7 +3122,7 @@ String类型和 Symbol 类型的属性都会被拷贝。
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1632107226663");
+    return volantis.js("/js/search/hexo.js?time=1632327951985");
   }
 
   function loadSearchService() {
@@ -3106,6 +3184,54 @@ String类型和 Symbol 类型的属性都会被拷贝。
 
 
 
+
+
+  <script>
+  var imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp"];
+  var index = 0;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 1500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      let IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '10000');
+    }
+  }
+
+  function next_parallax() {
+    
+      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
+        return
+      }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('/js/parallax.js?time=1632327951985').then(()=>{
+      parallax()
+    })
+    volantis.pjax.push(next_parallax);
+  }
+</script>
 
 
 
@@ -3288,7 +3414,7 @@ String类型和 Symbol 类型的属性都会被拷贝。
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"elickzhao's Blog","url":"http://elickzhao.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":null},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://elickzhao.github.io/","name":"elickzhao's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://elickzhao.github.io/2018/01/js的Object.assign()复制属性详解/","name":"js的Object.assign()复制属性详解"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"js的Object.assign()复制属性详解","description":"简单描述Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。\n1234Object.assign(target, ...sources)//target 目标对象//...sources 源对象//返回 目标对象\n\n描述:\n\n如果目标对象中的属性具有相同的键，则属性将被源中的属性覆盖。后来的源的属性将类似地覆盖早先的属性。\n\n\nObject.assign 方法只会拷贝源对象自身的并且可枚举的属性到目标对象。该方法使用源对象的[[Get]]和目标对象的[[Set]]，所以它会调用相关 getter 和 setter。因此，它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含getter，这可能使其不适合将新属性合并到原型中。为了将属性定义（包括其可枚举性）复制到原型，应使用Object.getOwnPropertyDescriptor()和Object.defineProperty() 。\n\n\nString类型和 Symbol 类型的属性都会被拷贝。\n\n\n在出现错误的情况下，例如，如果属性不可写，会引发TypeError，如果在引发错误之前添加了任何属性，则可以更改target对象。\n\n\n注意，Object.assign 会跳过那些值为 null 或 undefined 的源对象。\n","datePublished":"2018-01-08T15:39:33.000Z","dateModified":"2021-09-09T16:34:45.232Z","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://elickzhao.github.io/2018/01/js%E7%9A%84Object.assign()%E5%A4%8D%E5%88%B6%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/"},"author":{"@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/"},"publisher":{"@type":"Organization","name":"elickzhao's Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://elickzhao.github.io/2018/01/js%E7%9A%84Object.assign()%E5%A4%8D%E5%88%B6%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/","wordCount":581,"keywords":"js,小百科","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"elickzhao's Blog","url":"http://elickzhao.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":null},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://elickzhao.github.io/","name":"elickzhao's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://elickzhao.github.io/2018/01/js的Object.assign()复制属性详解/","name":"js的Object.assign()复制属性详解"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"js的Object.assign()复制属性详解","description":"简单描述Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。\n1234Object.assign(target, ...sources)//target 目标对象//...sources 源对象//返回 目标对象\n\n描述:\n\n如果目标对象中的属性具有相同的键，则属性将被源中的属性覆盖。后来的源的属性将类似地覆盖早先的属性。\n\n\nObject.assign 方法只会拷贝源对象自身的并且可枚举的属性到目标对象。该方法使用源对象的[[Get]]和目标对象的[[Set]]，所以它会调用相关 getter 和 setter。因此，它分配属性，而不仅仅是复制或定义新的属性。如果合并源包含getter，这可能使其不适合将新属性合并到原型中。为了将属性定义（包括其可枚举性）复制到原型，应使用Object.getOwnPropertyDescriptor()和Object.defineProperty() 。\n\n\nString类型和 Symbol 类型的属性都会被拷贝。\n\n\n在出现错误的情况下，例如，如果属性不可写，会引发TypeError，如果在引发错误之前添加了任何属性，则可以更改target对象。\n\n\n注意，Object.assign 会跳过那些值为 null 或 undefined 的源对象。\n","datePublished":"2018-01-08T15:39:33.000Z","dateModified":"2021-09-09T16:34:45.232Z","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://elickzhao.github.io/2018/01/js%E7%9A%84Object.assign()%E5%A4%8D%E5%88%B6%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/"},"author":{"@type":"Person","name":"elickzhao","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"http://elickzhao.github.io/"},"publisher":{"@type":"Organization","name":"elickzhao's Blog","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://elickzhao.github.io/2018/01/js%E7%9A%84Object.assign()%E5%A4%8D%E5%88%B6%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/","wordCount":581,"keywords":"小百科,js","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

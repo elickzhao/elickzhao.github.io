@@ -435,6 +435,55 @@ article#tag .all-tags ul li span {
 article#tag .all-tags ul li span:before {
   content: 'x';
 }
+#post-calendar {
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 16px;
+  -webkit-border-radius: 8px;
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.chip .tag-length {
+  margin-left: 5px;
+  margin-right: -2px;
+  font-size: 0.5rem;
+}
+.chip-default .tag-length {
+  color: #e91e63;
+  margin-top: 1px;
+}
+.chip-active .tag-length {
+  color: #fff;
+}
+.chip-container .tag-chips {
+  margin: 1rem auto 0.5rem;
+  max-width: 850px;
+  text-align: center;
+}
+.chip-container .chip {
+  margin: 10px 10px;
+  padding: 19px 14px;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-inline-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-inline-flex /* NEW - Chrome */;
+  display: inline-flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: inline-flex;
+  line-height: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.12);
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.12);
+  z-index: 0;
+}
+.chip-container .chip:hover {
+  color: #fff;
+  background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+}
 .article {
   color: var(--color-p);
   word-wrap: break-word;
