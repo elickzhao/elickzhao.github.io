@@ -107,6 +107,22 @@ search:
   field: post
 
 
+# 统计图表，支持发布文章统计、发布日历、Top标签统计、分类统计、分类雷达。
+# see https://www.npmjs.com/package/hexo-butterfly-charts
+charts:
+  enable: true # 是否启用功能
+  postsChart:
+    title: 文章发布统计 # 设置文章发布统计的标题，默认为空
+    interval: 1 # 横坐标间隔
+  tagsChart:
+    title: Top 10 标签统计 # 设置标签统计的标题，默认为空
+    interval: 1 # 横坐标间隔
+  postsCalendar_Title: #文章发布日历 # 设置发布日历的标题，默认为空
+  categoriesChart_Title: # 设置分类统计的标题，默认为空
+  categoriesRadar_Title: # 设置分类雷达的标题，默认为空
+
+
+
 # import:
 #   meta:
 #     - <meta name="msapplication-TileColor" content="#ffffff">
@@ -125,5 +141,6 @@ import:
   script:
     # - <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
     # - <script src="https://gitee.com/elick/blogimage/raw/master/img/new.js"></script>
-    - <script src="https://ritzy-tartan-crush.glitch.me/test/new.js"></script>
+    # - <script src="https://cdn.jsdelivr.net/gh/elickzhao/ImgHosting/img/%E7%83%9F%E8%8A%B1.js"></script>
+    # - <script src="https://cdn.jsdelivr.net/gh/apache/echarts/dist/echarts.js"></script>
     

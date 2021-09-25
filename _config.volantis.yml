@@ -100,6 +100,9 @@ cover:
     - name: 标签
       icon: fas fa-tags
       url: tags/
+    - name: 归档
+      icon: fas fa-history
+      url: /archives/
     # - name: 帮助
     #   icon: #
     #   img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
@@ -407,21 +410,21 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
-      shape: rectangle # circle, rectangle
+      avatar: https://gitee.com/elick/blogimage/raw/master/img/main_logo.png
+      shape: circle # circle, rectangle
       url: /about/
-      title:
+      title: 杂闻广记
       subtitle:
-      jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
+      jinrishici: 醉后不知天在水，满船清梦压星河。 # Poetry Today. You can set a string, and it will be displayed when loading fails.
       social:
         - icon: fas fa-rss
           url: /atom.xml
         - icon: fas fa-envelope
-          url: mailto:me@xxx.com
+          url: mailto:xwiwi@126.com
         - icon: fab fa-github
-          url: https://github.com/volantis-x/
-        - icon: fas fa-headphones-alt
-          url: /
+          url: https://github.com/elickzhao
+        - icon: fas fa-gamepad
+          url: https://play.wo1wan.com/nextgame/pc/#/
     # ---------------------------------------
     # toc widget (valid only in articles)
     toc:

@@ -1,6 +1,8 @@
 ---
 title: 电商产品的SKU是什么意思
-tags: '小百科,杂学'
+tags: 
+	- 小百科 
+	- 杂学
 abbrlink: 39519
 date: 2017-08-30 19:18:37
 categories:
